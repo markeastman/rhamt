@@ -22,6 +22,9 @@ public class NavigationController {
     @GetMapping("/config")
     String getConfig() { return "config"; }
 
+    @GetMapping("/applications")
+    String getApplications() { return "applications"; }
+
     @GetMapping("/executions")
     String getExecutions(HttpSession session) {
         session.removeAttribute("selectedExecution");

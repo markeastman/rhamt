@@ -30,12 +30,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="/" class="navbar-brand nav-item-pf-header" style="height:100%;">RH Application Migration Toolkit</a>
+        <a href="/" class="navbar-brand nav-item-pf-header" style="line-height:29px;">RH Application Migration Toolkit</a>
         <ul class="nav navbar-nav navbar-left navbar-iconic navbar-utility">
 
             <li th:if="${session.selectedProject != null}" class="dropdown">
                 <a href="#0" class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Project One <span class="caret"></span>
+                    Project One<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="/selectProject/2">Project Two</a></li>
@@ -48,9 +48,9 @@
                     12 Nov 2017 @ 08:10:12 <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><a href="#0">11 Nov 2017 @ 18:02:02</a></li>
-                    <li><a href="#0">11 Nov 2017 @ 14:02:02</a></li>
-                    <li><a href="#0">10 Oct 2017 @ 11:43:23</a></li>
+                    <li><a href="/execution/1/applications">11 Nov 2017 @ 18:02:02</a></li>
+                    <li><a href="/execution/1/applications">11 Nov 2017 @ 14:02:02</a></li>
+                    <li><a href="/execution/1/applications">10 Oct 2017 @ 11:43:23</a></li>
                     <li><a href="/executions">All Executions</a></li>
                 </ul>
             </li>
@@ -95,9 +95,9 @@
                 <span class="list-group-item-value">Project Applications</span>
             </a>
         </li>
-        <li class="list-group-item " >
+        <li class="list-group-item active" >
             <a href="/executions">
-                <span class="list-group-item-value">Analysis Executions</span>
+                <span class="list-group-item-value">Analysis Results</span>
             </a>
 
         </li>
@@ -106,103 +106,9 @@
                 <span class="list-group-item-value">Analysis Config</span>
             </a>
         </li>
-
-        <!--li class="list-group-item secondary-nav-item-pf" data-target="#project-secondary">
-            <a href="#0">
-                <span class="list-group-item-value">Project</span>
-            </a>
-            <div id="project-secondary" class="nav-pf-secondary-nav">
-                <ul class="list-group">
-                    <li class="list-group-item active " >
-                        <a href="/config">
-                            <span class="list-group-item-value">Analysis Config</span>
-                        </a>
-                    </li>
-                    <li class="list-group-item " >
-                        <a href="/applications">
-                            <span class="list-group-item-value">Project Applications</span>
-                        </a>
-
-                    </li>
-                    <li class="list-group-item " >
-                        <a href="/executions">
-                            <span class="list-group-item-value">Analysis Executions</span>
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
-
-        </li-->
-
     </ul>
 
 </nav>
-<!--nav th:if="${session.selectedProject != null}" class="nav-pf-vertical">
-    <ul>
-                <li >
-                    <span class="white"
-                       role="buttonx" data-toggle="collapsex"
-                       href="#project-secondary"
-                       aria-expanded="true"
-                       aria-controls="project-secondary">
-                        Project
-                    </span>
-                    <ul id="project-secondary">
-                        <li>
-                            <a class="white" href="/config">Analysis Config</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/executions">Analysis Executions</a>
-                        </li>
-                    </ul>
-                </li>
-                <li th:if="${session.selectedExecution != null}">
-                    <span class="white"
-                       role="buttonx" data-toggle="collapsex"
-                       href="#execution-secondary"
-                       aria-expanded="true"
-                       aria-controls="execution-secondary">
-                        Analysis Execution #00001
-                    </span>
-                    <ul id="execution-secondary">
-                        <li>
-                            <a class="white" href="/execution/1/applications">All Applications</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/report_index_RHQ_Enterprise_Server_EAR.html">Dashboard</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/migration_issues.1.html">Issues</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/ApplicationDetails_RHQ_Enterprise_Server_EAR.html">Details</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/dependency_report_RHQ_Enterprise_Server_EAR.html">Dependencies</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/remotereport_RHQ_Enterprise_Server_EAR.html">Remote Services</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/ejbreport_RHQ_Enterprise_Server_EAR.html">EJBs</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/jpa_RHQ_Enterprise_Server_EAR.html">JPA</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/server_resources_RHQ_Enterprise_Server_EAR.html">Server Resources</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/hardcoded_ipsRHQ_Enterprise_Server_EAR.html">Hardcoded IPs</a>
-                        </li>
-                        <li>
-                            <a class="white" href="/execution/1/reports/ignoredfiles_RHQ_Enterprise_Server_EAR.html">Ignored Files</a>
-                        </li>
-                    </ul>
-                </li>
-    </ul>
-</--nav><!--{ % endif % }-->
 
 <div class="container-fluid container-pf-nav-pf-vertical">
     <div layout:fragment="content">

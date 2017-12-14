@@ -9,7 +9,8 @@
 
 <body>
 <th:block layout:fragment="content">
-    <div th:if="${session.selectedProject == null}">
+    <h2>Projects</h2>
+   <div th:if="${session.selectedProject == null}">
         <table border="solid 1 navy" style="width:80%;">
             <thead>
             <th>Project</th>
