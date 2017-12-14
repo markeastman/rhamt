@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MeasurementScheduleManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/measurement/MeasurementScheduleManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.measurement;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.Map.Entry;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.IgnoreDependency;
+import org.jetbrains.annotations.Nullable;
+import org.rhq.core.db.DatabaseType;
+import org.rhq.core.db.DatabaseTypeFactory;
+import org.rhq.core.db.H2DatabaseType;
+import org.rhq.core.db.OracleDatabaseType;
+import org.rhq.core.db.PostgresqlDatabaseType;
+import org.rhq.core.db.SQLServerDatabaseType;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.criteria.MeasurementScheduleCriteria;
+import org.rhq.core.domain.measurement.DataType;
+import org.rhq.core.domain.measurement.DisplayType;
+import org.rhq.core.domain.measurement.MeasurementCategory;
+import org.rhq.core.domain.measurement.MeasurementDefinition;
+import org.rhq.core.domain.measurement.MeasurementSchedule;
+import org.rhq.core.domain.measurement.MeasurementScheduleRequest;
+import org.rhq.core.domain.measurement.NumericType;
+import org.rhq.core.domain.measurement.ResourceMeasurementScheduleRequest;
+import org.rhq.core.domain.measurement.composite.MeasurementScheduleComposite;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.OrderingField;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.domain.util.CriteriaQueryGenerator.AuthorizationTokenType;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.core.util.jdbc.JDBCUtil;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.authz.RequiredPermissions;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementException;
+import org.rhq.enterprise.server.measurement.MeasurementNotFoundException;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerRemote;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeNotFoundException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.system.SystemManagerLocal;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+@Stateless
+@Resource(
+   name = &quot;RHQ_DS&quot;,
+   mappedName = &quot;java:/RHQDS&quot;
+)
+public class MeasurementScheduleManagerBean implements MeasurementScheduleManagerLocal, MeasurementScheduleManagerRemote {
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;,
+      mappedName = &quot;java:/RHQDS&quot;
+   )
+   private DataSource dataSource;
+   @EJB
+   @IgnoreDependency
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   @IgnoreDependency
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   @IgnoreDependency
+   private ResourceTypeManagerLocal resourceTypeManager;
+   @EJB
+   private MeasurementScheduleManagerLocal measurementScheduleManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private SystemManagerLocal systemManager;
+   private final Log log = LogFactory.getLog(MeasurementScheduleManagerBean.class);
+
+   public Set findSchedulesForResourceAndItsDescendants(int[] resourceIds, boolean getDescendents) {
+      HashSet allSchedules = new HashSet();
+      this.getSchedulesForResourceAndItsDescendants(resourceIds, allSchedules, getDescendents);
+      return allSchedules;
+   }
+
+   public AgentClient getAgentClientForSchedule(MeasurementSchedule sched) {
+      org.rhq.core.domain.resource.Resource pRes = sched.getResource();
+      Agent agent = pRes.getAgent();
+      AgentClient ac = this.agentManager.getAgentClient(agent);
+      return ac;
+   }
+
+   public MeasurementSchedule getScheduleById(int scheduleId) {
+      MeasurementSchedule ms;
+      try {
+         ms = (MeasurementSchedule)this.entityManager.find(MeasurementSchedule.class, Integer.valueOf(scheduleId));
+      } catch (NoResultException var4) {
+         ms = null;
+      }
+
+      return ms;
+   }
+
+   public List findSchedulesByIds(int[] scheduleIds) {
+      if(scheduleIds != null &amp;&amp; scheduleIds.length != 0) {
+         Query q = this.entityManager.createNamedQuery(&quot;MeasurementSchedule.findByIds&quot;);
+         q.setParameter(&quot;ids&quot;, ArrayUtils.wrapInList(scheduleIds));
+         List ret = q.getResultList();
+         return ret;
+      } else {
+         return new ArrayList();
+      }
+   }
+
+   public MeasurementSchedule getScheduleById(Subject subject, int scheduleId) {
+      MeasurementSchedule schedule = (MeasurementSchedule)this.entityManager.find(MeasurementSchedule.class, Integer.valueOf(scheduleId));
+      if(schedule == null) {
+         return null;
+      } else if(!this.authorizationManager.canViewResource(subject, schedule.getResource().getId())) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view measurementSchedule[id=&quot; + scheduleId + &quot;]&quot;);
+      } else {
+         schedule.getDefinition().getId();
+         return schedule;
+      }
+   }
+
+   public MeasurementSchedule updateSchedule(Subject subject, MeasurementSchedule schedule) {
+      MeasurementSchedule attached = (MeasurementSchedule)this.entityManager.find(MeasurementSchedule.class, Integer.valueOf(schedule.getId()));
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_MEASUREMENTS, attached.getResource().getId())) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view measurementSchedule[id=&quot; + schedule.getId() + &quot;]&quot;);
+      } else {
+         this.verifyMinimumCollectionInterval(schedule);
+         return (MeasurementSchedule)this.entityManager.merge(schedule);
+      }
+   }
+
+   private void verifyMinimumCollectionInterval(MeasurementSchedule schedule) {
+      schedule.setInterval(this.verifyMinimumCollectionInterval(schedule.getInterval()));
+   }
+
+   private long verifyMinimumCollectionInterval(long collectionInterval) {
+      return collectionInterval &lt; 30000L?30000L:collectionInterval;
+   }
+
+   public List findSchedulesByResourceIdsAndDefinitionId(Subject subject, int[] resourceIds, int definitionId) {
+      return this.findSchedulesByResourcesAndDefinitions(subject, resourceIds, new int[]{definitionId});
+   }
+
+   private List findSchedulesByResourcesAndDefinitions(Subject subject, int[] resourceIds, int[] definitionIds) {
+      int[] query = resourceIds;
+      int results = resourceIds.length;
+
+      for(int i$ = 0; i$ &lt; results; ++i$) {
+         int resourceId = query[i$];
+         if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+            throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view metric schedules for resource[id=&quot; + resourceId + &quot;]&quot;);
+         }
+      }
+
+      Query var8 = this.entityManager.createNamedQuery(&quot;MeasurementSchedule.findByResourceIdsAndDefinitionIds&quot;);
+      var8.setParameter(&quot;definitionIds&quot;, ArrayUtils.wrapInList(definitionIds));
+      var8.setParameter(&quot;resourceIds&quot;, ArrayUtils.wrapInList(resourceIds));
+      List var9 = var8.getResultList();
+      return var9;
+   }
+
+   public MeasurementSchedule getSchedule(Subject subject, int resourceId, int definitionId, boolean attachBaseline) throws MeasurementNotFoundException {
+      try {
+         List nre = this.findSchedulesByResourcesAndDefinitions(subject, new int[]{resourceId}, new int[]{definitionId});
+         if(nre.size() != 1) {
+            throw new MeasurementException(&quot;Could not find measurementSchedule[resourceId=&quot; + resourceId + &quot;, definitionId=&quot; + definitionId + &quot;]&quot;);
+         } else {
+            MeasurementSchedule schedule = (MeasurementSchedule)nre.get(0);
+            if(attachBaseline &amp;&amp; schedule.getBaseline() != null) {
+               schedule.getBaseline().getId();
+            }
+
+            return schedule;
+         }
+      } catch (NoResultException var7) {
+         throw new MeasurementNotFoundException(var7);
+      }
+   }
+
+   public PageList findSchedulesForAutoGroup(Subject subject, int parentId, int childType, PageControl pageControl) {
+      List resources = this.resourceGroupManager.findResourcesForAutoGroup(subject, parentId, childType);
+      Iterator resType = resources.iterator();
+
+      org.rhq.core.domain.resource.Resource definitions;
+      do {
+         if(!resType.hasNext()) {
+            ResourceType resType1;
+            try {
+               resType1 = this.resourceTypeManager.getResourceTypeById(subject, childType);
+            } catch (ResourceTypeNotFoundException var10) {
+               ArrayList compList = new ArrayList();
+               PageList result = new PageList(compList, pageControl);
+               return result;
+            }
+
+            Set definitions1 = resType1.getMetricDefinitions();
+            return this.getCurrentMeasurementSchedulesForResourcesAndType(pageControl, resources, resType1, definitions1);
+         }
+
+         definitions = (org.rhq.core.domain.resource.Resource)resType.next();
+      } while(this.authorizationManager.canViewResource(subject, definitions.getId()));
+
+      throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view metric schedules for autoGroup[parentResourceId=&quot; + parentId + &quot;, resourceTypeId=&quot; + childType + &quot;], root cause: does not have permission to view resource[id=&quot; + definitions.getId() + &quot;]&quot;);
+   }
+
+   public PageList findSchedulesForCompatibleGroup(Subject subject, int groupId, PageControl pageControl) {
+      if(!this.authorizationManager.canViewResource(subject, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view metric schedules for resourceGroup[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+         Set resources = group.getExplicitResources();
+         ResourceType resType = group.getResourceType();
+         Set definitions = resType.getMetricDefinitions();
+         return this.getCurrentMeasurementSchedulesForResourcesAndType(pageControl, resources, resType, definitions);
+      }
+   }
+
+   PageList getCurrentMeasurementSchedulesForResourcesAndType(PageControl pageControl, Collection resources, ResourceType resType, Set definitions) {
+      Connection conn = null;
+      PreparedStatement ps = null;
+      ResultSet resultSet = null;
+      DatabaseType type = this.systemManager.getDatabaseType();
+      String queryString;
+      if(!(type instanceof PostgresqlDatabaseType) &amp;&amp; !(type instanceof H2DatabaseType)) {
+         if(!(type instanceof OracleDatabaseType) &amp;&amp; !(type instanceof SQLServerDatabaseType)) {
+            throw new IllegalArgumentException(&quot;unknown database type, imlement this: &quot; + type.toString());
+         }
+
+         queryString = &quot;select defi.id, defi.display_name, defi.description, defi.category, defi.data_type, coMin, coMax, coAny, coAll  from RHQ_measurement_def defi,  (    select d.id as did,  min(s.coll_interval) as coMin, max(s.coll_interval) as coMax, min(s.enabled) as coAny, max(s.enabled) as coAll    from RHQ_MEASUREMENT_SCHED s,  RHQ_measurement_def d    where s.definition = d.id      and d.id IN (@@DEFINITIONS@@)      and s.resource_id IN (@@RESOURCES@@)    group by d.id  )  where defi.id = did order by defi.display_name&quot;;
+      } else {
+         queryString = &quot;select defi.id, defi.display_name, defi.description,defi.category,defi.data_type, foo.coMin, foo.coMax, foo.coAny, foo.coAll  from RHQ_measurement_def defi,  (    select d.id as did, min(s.coll_interval) as coMin, max(s.coll_interval) as coMax, bool_or(s.enabled) as coAny, bool_and(s.enabled) as coAll    from RHQ_MEASUREMENT_SCHED s,  RHQ_measurement_def d    where s.definition = d.id      and d.id IN (@@DEFINITIONS@@)      and s.resource_id IN (@@RESOURCES@@)    group by d.id  ) as foo  where defi.id = foo.did order by defi.display_name&quot;;
+      }
+
+      int numDefs = definitions.size();
+      queryString = JDBCUtil.transformQueryForMultipleInParameters(queryString, &quot;@@DEFINITIONS@@&quot;, numDefs);
+      int numResources = resources.size();
+      if(numResources &gt; 1000) {
+         numResources = 1000;
+      }
+
+      queryString = JDBCUtil.transformQueryForMultipleInParameters(queryString, &quot;@@RESOURCES@@&quot;, numResources);
+      int[] defIds = new int[numDefs];
+      int i = 0;
+
+      MeasurementDefinition compList;
+      for(Iterator resIds = definitions.iterator(); resIds.hasNext(); defIds[i++] = compList.getId()) {
+         compList = (MeasurementDefinition)resIds.next();
+      }
+
+      int[] var33 = new int[numResources];
+      i = 0;
+
+      org.rhq.core.domain.resource.Resource result;
+      for(Iterator var34 = resources.iterator(); var34.hasNext(); var33[i++] = result.getId()) {
+         result = (org.rhq.core.domain.resource.Resource)var34.next();
+      }
+
+      ArrayList var35 = new ArrayList(numDefs);
+
+      try {
+         conn = this.dataSource.getConnection();
+         ps = conn.prepareStatement(queryString);
+         JDBCUtil.bindNTimes(ps, defIds, 1);
+         JDBCUtil.bindNTimes(ps, var33, numDefs + 1);
+         resultSet = ps.executeQuery();
+
+         while(resultSet.next()) {
+            int var36 = resultSet.getInt(1);
+            String defDisName = resultSet.getString(2);
+            String defDescr = resultSet.getString(3);
+            int category = resultSet.getInt(4);
+            int dataType = resultSet.getInt(5);
+            int maxInterval = resultSet.getInt(6);
+            int minInterval = resultSet.getInt(7);
+            int collectionInterval = maxInterval == minInterval?maxInterval:0;
+            Boolean collectionEnabled = null;
+            if(!(type instanceof PostgresqlDatabaseType) &amp;&amp; !(type instanceof H2DatabaseType)) {
+               if(!(type instanceof OracleDatabaseType) &amp;&amp; !(type instanceof SQLServerDatabaseType)) {
+                  throw new IllegalArgumentException(&quot;Unimplemented db type: &quot; + type.toString());
+               }
+
+               int var38 = resultSet.getInt(8);
+               int var40 = resultSet.getInt(9);
+               if(var38 == var40) {
+                  collectionEnabled = Boolean.valueOf(var38 == 1);
+               } else {
+                  collectionInterval = 0;
+               }
+            } else {
+               boolean dummy = resultSet.getBoolean(8);
+               boolean comp = resultSet.getBoolean(9);
+               if(dummy == comp) {
+                  collectionEnabled = Boolean.valueOf(dummy);
+               } else {
+                  collectionInterval = 0;
+               }
+            }
+
+            MeasurementDefinition var39 = new MeasurementDefinition(resType, defDisName);
+            var39.setId(var36);
+            var39.setDescription(defDescr);
+            var39.setDisplayName(defDisName);
+            var39.setCategory(MeasurementCategory.values()[category]);
+            var39.setDataType(DataType.values()[dataType]);
+            MeasurementScheduleComposite var41 = new MeasurementScheduleComposite(var39, collectionEnabled, (long)collectionInterval);
+            var35.add(var41);
+         }
+      } catch (SQLException var31) {
+         this.log.error(&quot;Can not retrieve results: &quot; + var31.getMessage() + &quot;, code= &quot; + var31.getErrorCode());
+         var35 = new ArrayList();
+      } finally {
+         JDBCUtil.safeClose(conn, ps, resultSet);
+      }
+
+      PageList var37 = new PageList(var35, pageControl);
+      return var37;
+   }
+
+   public PageList findScheduleCompositesForResource(Subject subject, int resourceId, @Nullable DataType dataType, PageControl pageControl) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view metric schedules for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         pageControl.addDefaultOrderingField(&quot;ms.id&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;MeasurementDefinition.findScheduleCompositeForResource&quot;, pageControl);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         query.setParameter(&quot;dataType&quot;, dataType);
+         List results = query.getResultList();
+         return new PageList(results, pageControl);
+      }
+   }
+
+   public PageList findSchedulesForResource(Subject subject, int resourceId, PageControl pageControl) {
+      return this.findScheduleCompositesForResource(subject, resourceId, (DataType)null, pageControl);
+   }
+
+   @RequiredPermission(Permission.MANAGE_SETTINGS)
+   public void disableDefaultCollectionForMeasurementDefinitions(Subject subject, int[] measurementDefinitionIds, boolean updateSchedules) {
+      this.modifyDefaultCollectionIntervalForMeasurementDefinitions(subject, measurementDefinitionIds, -1L, updateSchedules);
+   }
+
+   public void disableSchedules(Subject subject, int resourceId, int[] measurementDefinitionIds) {
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_MEASUREMENTS, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to disable metric collection schedules for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         this.disableSchedule(subject, resourceId, measurementDefinitionIds);
+      }
+   }
+
+   private void disableSchedule(Subject subject, int resourceId, int[] measurementDefinitionIds) {
+      org.rhq.core.domain.resource.Resource resource = this.resourceManager.getResourceById(subject, resourceId);
+      List measurementSchedules = this.findSchedulesByResourceIdAndDefinitionIds(subject, resourceId, measurementDefinitionIds);
+      ResourceMeasurementScheduleRequest resourceMeasurementScheduleRequest = new ResourceMeasurementScheduleRequest(resourceId);
+      Iterator resourceMeasurementScheduleRequests = measurementSchedules.iterator();
+
+      while(resourceMeasurementScheduleRequests.hasNext()) {
+         MeasurementSchedule synced = (MeasurementSchedule)resourceMeasurementScheduleRequests.next();
+         synced.setEnabled(false);
+         MeasurementScheduleRequest measurementScheduleRequest = new MeasurementScheduleRequest(synced);
+         resourceMeasurementScheduleRequest.addMeasurementScheduleRequest(measurementScheduleRequest);
+      }
+
+      HashSet resourceMeasurementScheduleRequests1 = new HashSet();
+      resourceMeasurementScheduleRequests1.add(resourceMeasurementScheduleRequest);
+      boolean synced1 = this.sendUpdatedSchedulesToAgent(resource.getAgent(), resourceMeasurementScheduleRequests1);
+      if(!synced1) {
+         resource.setAgentSynchronizationNeeded();
+      }
+
+      this.entityManager.merge(resource);
+   }
+
+   public void enableSchedules(Subject subject, int resourceId, int[] measurementDefinitionIds) {
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_MEASUREMENTS, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to enable metric collection schedules for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         this.enableSchedule(subject, resourceId, measurementDefinitionIds);
+      }
+   }
+
+   private void enableSchedule(Subject subject, int resourceId, int[] measurementDefinitionIds) {
+      org.rhq.core.domain.resource.Resource resource = this.resourceManager.getResourceById(subject, resourceId);
+      List measurementSchedules = this.findSchedulesByResourceIdAndDefinitionIds(subject, resourceId, measurementDefinitionIds);
+      ResourceMeasurementScheduleRequest resourceMeasurementScheduleRequest = new ResourceMeasurementScheduleRequest(resourceId);
+      Iterator resourceMeasurementScheduleRequests = measurementSchedules.iterator();
+
+      while(resourceMeasurementScheduleRequests.hasNext()) {
+         MeasurementSchedule synced = (MeasurementSchedule)resourceMeasurementScheduleRequests.next();
+         synced.setEnabled(true);
+         MeasurementScheduleRequest measurementScheduleRequest = new MeasurementScheduleRequest(synced);
+         resourceMeasurementScheduleRequest.addMeasurementScheduleRequest(measurementScheduleRequest);
+      }
+
+      HashSet resourceMeasurementScheduleRequests1 = new HashSet();
+      resourceMeasurementScheduleRequests1.add(resourceMeasurementScheduleRequest);
+      boolean synced1 = this.sendUpdatedSchedulesToAgent(resource.getAgent(), resourceMeasurementScheduleRequests1);
+      if(!synced1) {
+         resource.setAgentSynchronizationNeeded();
+      }
+
+      this.entityManager.merge(resource);
+   }
+
+   @RequiredPermissions({@RequiredPermission(Permission.MANAGE_INVENTORY), @RequiredPermission(Permission.MANAGE_SETTINGS)})
+   public void disableAllDefaultCollections(Subject subject) {
+      this.entityManager.createNamedQuery(&quot;MeasurementDefinition.disableAll&quot;).executeUpdate();
+   }
+
+   @RequiredPermissions({@RequiredPermission(Permission.MANAGE_INVENTORY), @RequiredPermission(Permission.MANAGE_SETTINGS)})
+   public void disableAllSchedules(Subject subject) {
+      this.entityManager.createNamedQuery(&quot;MeasurementSchedule.disableAll&quot;).executeUpdate();
+   }
+
+   public void createSchedulesForExistingResources(ResourceType type, MeasurementDefinition newDefinition) {
+      long now = System.currentTimeMillis();
+      List resources = type.getResources();
+      if(resources != null) {
+         Iterator i$ = resources.iterator();
+
+         while(i$.hasNext()) {
+            org.rhq.core.domain.resource.Resource res = (org.rhq.core.domain.resource.Resource)i$.next();
+            res.setMtime(now);
+            MeasurementSchedule sched = new MeasurementSchedule(newDefinition, res);
+            sched.setInterval(newDefinition.getDefaultInterval());
+            this.entityManager.persist(sched);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SETTINGS)
+   public void updateDefaultCollectionIntervalForMeasurementDefinitions(Subject subject, int[] measurementDefinitionIds, long collectionInterval, boolean updateExistingSchedules) {
+      collectionInterval = this.verifyMinimumCollectionInterval(collectionInterval);
+      this.modifyDefaultCollectionIntervalForMeasurementDefinitions(subject, measurementDefinitionIds, collectionInterval, updateExistingSchedules);
+   }
+
+   private void modifyDefaultCollectionIntervalForMeasurementDefinitions(Subject subject, int[] measurementDefinitionIds, long collectionInterval, boolean updateExistingSchedules) {
+      if(measurementDefinitionIds != null &amp;&amp; measurementDefinitionIds.length != 0) {
+         List measurementDefinitions = this.getDefinitionsByIds(measurementDefinitionIds);
+         Iterator reqMap = measurementDefinitions.iterator();
+
+         MeasurementDefinition agentUpdates;
+         while(reqMap.hasNext()) {
+            agentUpdates = (MeasurementDefinition)reqMap.next();
+            if(collectionInterval &gt; 0L) {
+               agentUpdates.setDefaultOn(true);
+               agentUpdates.setDefaultInterval(collectionInterval);
+            } else {
+               agentUpdates.setDefaultOn(false);
+            }
+         }
+
+         HashMap reqMap1 = new HashMap();
+         if(updateExistingSchedules) {
+            Iterator agentUpdates1 = measurementDefinitions.iterator();
+
+            int agentId;
+            while(agentUpdates1.hasNext()) {
+               MeasurementDefinition measurementDefinitionList = (MeasurementDefinition)agentUpdates1.next();
+               List i$ = measurementDefinitionList.getSchedules();
+               Iterator agentEntry = i$.iterator();
+
+               while(agentEntry.hasNext()) {
+                  MeasurementSchedule synced = (MeasurementSchedule)agentEntry.next();
+                  if(collectionInterval &gt; 0L) {
+                     synced.setEnabled(true);
+                     synced.setInterval(collectionInterval);
+                  } else {
+                     synced.setEnabled(false);
+                  }
+
+                  agentId = synced.getResource().getId();
+                  ResourceMeasurementScheduleRequest req;
+                  if(!reqMap1.containsKey(Integer.valueOf(agentId))) {
+                     req = new ResourceMeasurementScheduleRequest(agentId);
+                     reqMap1.put(Integer.valueOf(agentId), req);
+                  }
+
+                  req = (ResourceMeasurementScheduleRequest)reqMap1.get(Integer.valueOf(agentId));
+                  MeasurementScheduleRequest msr = new MeasurementScheduleRequest(synced);
+                  req.addMeasurementScheduleRequest(msr);
+               }
+            }
+
+            agentUpdates = null;
+            HashMap agentUpdates2 = new HashMap();
+
+            Integer i$1;
+            Object synced1;
+            for(Iterator measurementDefinitionList1 = reqMap1.keySet().iterator(); measurementDefinitionList1.hasNext(); ((Set)synced1).add(reqMap1.get(i$1))) {
+               i$1 = (Integer)measurementDefinitionList1.next();
+               Agent agentEntry1 = this.agentManager.getAgentByResourceId(i$1.intValue());
+               synced1 = (Set)agentUpdates2.get(agentEntry1);
+               if(synced1 == null) {
+                  synced1 = new HashSet();
+                  agentUpdates2.put(agentEntry1, synced1);
+               }
+            }
+
+            List measurementDefinitionList2 = ArrayUtils.wrapInList(measurementDefinitionIds);
+            Iterator i$2 = agentUpdates2.entrySet().iterator();
+
+            while(i$2.hasNext()) {
+               Entry agentEntry2 = (Entry)i$2.next();
+               boolean synced2 = this.sendUpdatedSchedulesToAgent((Agent)agentEntry2.getKey(), (Set)agentEntry2.getValue());
+               if(!synced2) {
+                  agentId = ((Agent)agentEntry2.getKey()).getId();
+                  this.setAgentSynchronizationNeededByDefinitionsForAgent(agentId, measurementDefinitionList2);
+               }
+            }
+         }
+
+      } else {
+         this.log.debug(&quot;update metric template: no definitions supplied (interval = &quot; + collectionInterval);
+      }
+   }
+
+   private void setAgentSynchronizationNeededByDefinitionsForAgent(int agentId, List measurementDefinitionIds) {
+      String updateSQL = &quot;UPDATE Resource res    SET res.mtime = :now  WHERE res.agent.id = :agentId        res.resourceType.id IN ( SELECT md.resourceType.id                                   FROM MeasurementDefinition md                                  WHERE md.id IN ( :definitionIds ) )&quot;;
+      Query updateQuery = this.entityManager.createQuery(updateSQL);
+      updateQuery.setParameter(&quot;now&quot;, Long.valueOf(System.currentTimeMillis()));
+      updateQuery.setParameter(&quot;agentId&quot;, Integer.valueOf(agentId));
+      updateQuery.setParameter(&quot;definitionIds&quot;, measurementDefinitionIds);
+      int updateCount = updateQuery.executeUpdate();
+      this.log.info(&quot;&quot; + updateCount + &quot; resources mtime fields were updated as a result of this metric template update&quot;);
+   }
+
+   public void updateSchedules(Subject subject, int resourceId, int[] measurementDefinitionIds, long collectionInterval) {
+      collectionInterval = this.verifyMinimumCollectionInterval(collectionInterval);
+      org.rhq.core.domain.resource.Resource resource = this.resourceManager.getResourceById(subject, resourceId);
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_MEASUREMENTS, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to change metric collection schedules for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         List measurementSchedules = this.findSchedulesByResourceIdAndDefinitionIds(subject, resourceId, measurementDefinitionIds);
+         ResourceMeasurementScheduleRequest resourceMeasurementScheduleRequest = new ResourceMeasurementScheduleRequest(resourceId);
+         Iterator resourceMeasurementScheduleRequests = measurementSchedules.iterator();
+
+         while(resourceMeasurementScheduleRequests.hasNext()) {
+            MeasurementSchedule synced = (MeasurementSchedule)resourceMeasurementScheduleRequests.next();
+            synced.setEnabled(true);
+            synced.setInterval(collectionInterval);
+            MeasurementScheduleRequest measurementScheduleRequest = new MeasurementScheduleRequest(synced);
+            resourceMeasurementScheduleRequest.addMeasurementScheduleRequest(measurementScheduleRequest);
+         }
+
+         HashSet resourceMeasurementScheduleRequests1 = new HashSet();
+         resourceMeasurementScheduleRequests1.add(resourceMeasurementScheduleRequest);
+         boolean synced1 = this.sendUpdatedSchedulesToAgent(resource.getAgent(), resourceMeasurementScheduleRequests1);
+         if(!synced1) {
+            resource.setAgentSynchronizationNeeded();
+         }
+
+         this.entityManager.merge(resource);
+      }
+   }
+
+   public void updateSchedulesForAutoGroup(Subject subject, int parentResourceId, int childResourceType, int[] measurementDefinitionIds, long collectionInterval) {
+      List resources = this.resourceGroupManager.findResourcesForAutoGroup(subject, parentResourceId, childResourceType);
+      Iterator i$ = resources.iterator();
+
+      while(i$.hasNext()) {
+         org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)i$.next();
+         this.updateSchedules(subject, resource.getId(), measurementDefinitionIds, collectionInterval);
+      }
+
+   }
+
+   public void updateSchedulesForCompatGroup(Subject subject, int groupId, int[] measurementDefinitionIds, long collectionInterval) {
+      ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+      Set resources = group.getExplicitResources();
+      Iterator i$ = resources.iterator();
+
+      while(i$.hasNext()) {
+         org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)i$.next();
+         this.updateSchedules(subject, resource.getId(), measurementDefinitionIds, collectionInterval);
+      }
+
+   }
+
+   public void disableSchedulesForCompatibleGroup(Subject subject, int groupId, int[] measurementDefinitionIds) {
+      if(!this.authorizationManager.hasGroupPermission(subject, Permission.MANAGE_MEASUREMENTS, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to disable metric collection schedules for resourceGroup[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+         Set resources = group.getExplicitResources();
+         Iterator i$ = resources.iterator();
+
+         while(i$.hasNext()) {
+            org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)i$.next();
+            this.disableSchedule(subject, resource.getId(), measurementDefinitionIds);
+         }
+
+      }
+   }
+
+   public void enableSchedulesForCompatibleGroup(Subject subject, int groupId, int[] measurementDefinitionIds) {
+      if(!this.authorizationManager.hasGroupPermission(subject, Permission.MANAGE_MEASUREMENTS, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to enable metric collection schedules for resourceGroup[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+         Set resources = group.getExplicitResources();
+         Iterator i$ = resources.iterator();
+
+         while(i$.hasNext()) {
+            org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)i$.next();
+            this.enableSchedule(subject, resource.getId(), measurementDefinitionIds);
+         }
+
+      }
+   }
+
+   public void disableSchedulesForAutoGroup(Subject subject, int parentResourceId, int childResourceType, int[] measurementDefinitionIds) {
+      List resources = this.resourceGroupManager.findResourcesForAutoGroup(subject, parentResourceId, childResourceType);
+      Iterator i$ = resources.iterator();
+
+      while(i$.hasNext()) {
+         org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)i$.next();
+         this.disableSchedules(subject, resource.getId(), measurementDefinitionIds);
+      }
+
+   }
+
+   public void enableSchedulesForAutoGroup(Subject subject, int parentResourceId, int childResourceType, int[] measurementDefinitionIds) {
+      List resources = this.resourceGroupManager.findResourcesForAutoGroup(subject, parentResourceId, childResourceType);
+      Iterator i$ = resources.iterator();
+
+      while(i$.hasNext()) {
+         org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)i$.next();
+         this.enableSchedules(subject, resource.getId(), measurementDefinitionIds);
+      }
+
+   }
+
+   public List findSchedulesForResourceAndType(Subject subject, int resourceId, DataType dataType, DisplayType displayType, boolean enabledOnly) {
+      OrderingField sortOrder = new OrderingField(&quot;ms.definition.displayName&quot;, PageOrdering.ASC);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;MeasurementSchedule.FIND_ALL_FOR_RESOURCE_ID&quot;, new OrderingField[]{sortOrder});
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      query.setParameter(&quot;dataType&quot;, dataType);
+      query.setParameter(&quot;displayType&quot;, displayType);
+      query.setParameter(&quot;enabled&quot;, enabledOnly?Boolean.valueOf(true):null);
+      List results = query.getResultList();
+      return results;
+   }
+
+   private boolean sendUpdatedSchedulesToAgent(Agent agent, Set resourceMeasurementScheduleRequest) {
+      try {
+         AgentClient t = LookupUtil.getAgentManager().getAgentClient(agent);
+         if(!t.ping(2000L)) {
+            this.log.debug(&quot;Won\'t send MeasurementSchedules to offline Agent[id=&quot; + agent.getId() + &quot;]&quot;);
+            return false;
+         } else {
+            t.getMeasurementAgentService().updateCollection(resourceMeasurementScheduleRequest);
+            return true;
+         }
+      } catch (Throwable var4) {
+         this.log.error(&quot;Error updating MeasurementSchedules for Agent[id=&quot; + agent.getId() + &quot;]: &quot; + var4);
+         return false;
+      }
+   }
+
+   public List findSchedulesByResourceIdAndDefinitionIds(Subject subject, int resourceId, int[] definitionIds) {
+      return this.findSchedulesByResourcesAndDefinitions(subject, new int[]{resourceId}, definitionIds);
+   }
+
+   private List getDefinitionsByIds(int[] ids) {
+      Query q = this.entityManager.createNamedQuery(&quot;MeasurementDefinition.findByIds&quot;);
+      List idsList = ArrayUtils.wrapInList(ids);
+      q.setParameter(&quot;ids&quot;, idsList);
+      List results = q.getResultList();
+      return results;
+   }
+
+   private void getSchedulesForResourceAndItsDescendants(int[] resourceIds, Set allSchedules, boolean getDescendents) {
+      if(resourceIds != null &amp;&amp; resourceIds.length != 0) {
+         try {
+            for(int t = 0; t &lt; resourceIds.length; t += 1000) {
+               int[] batchIds = ArrayUtils.copyOfRange(resourceIds, t, t + 1000);
+               this.measurementScheduleManager.insertSchedulesFor(batchIds);
+               this.measurementScheduleManager.returnSchedulesFor(batchIds, allSchedules);
+               if(getDescendents) {
+                  int[] batchChildrenIds = this.getChildrenIdByParentIds(batchIds);
+                  this.getSchedulesForResourceAndItsDescendants(batchChildrenIds, allSchedules, getDescendents);
+               }
+            }
+         } catch (Throwable var7) {
+            this.log.warn(&quot;problem creating schedules for resourceIds [&quot; + resourceIds + &quot;]&quot;, var7);
+         }
+
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public int insertSchedulesFor(int[] batchIds) throws Exception {
+      Connection conn = null;
+      PreparedStatement insertStatement = null;
+      boolean created = true;
+
+      int created1;
+      try {
+         conn = this.dataSource.getConnection();
+         DatabaseType dbType = DatabaseTypeFactory.getDatabaseType(conn);
+         String insertQueryString = null;
+         if(dbType instanceof PostgresqlDatabaseType) {
+            insertQueryString = &quot;INSERT INTO RHQ_MEASUREMENT_SCHED ( ID, ENABLED, COLL_INTERVAL, DEFINITION, RESOURCE_ID )      SELECT nextval(\'RHQ_MEASUREMENT_SCHED_ID_SEQ\'),             def.DEFAULT_ON AS defaultOn,             def.DEFAULT_INTERVAL AS interval,             def.ID AS definitionId,             res.ID AS resourceId        FROM RHQ_RESOURCE res, RHQ_RESOURCE_TYPE type, RHQ_MEASUREMENT_DEF def       WHERE ( res.ID in ( @@RESOURCES@@ ) )         AND type.ID = res.RESOURCE_TYPE_ID         AND type.ID = def.RESOURCE_TYPE_ID         AND NOT EXISTS ( SELECT ms.id                            FROM RHQ_MEASUREMENT_SCHED ms                           WHERE ms.RESOURCE_ID = res.ID                             AND ms.DEFINITION = def.ID ) &quot;;
+         } else if(!(dbType instanceof OracleDatabaseType) &amp;&amp; !(dbType instanceof H2DatabaseType)) {
+            if(!(dbType instanceof SQLServerDatabaseType)) {
+               throw new IllegalArgumentException(&quot;Unknown database type, can\'t continue: &quot; + dbType);
+            }
+
+            insertQueryString = &quot;INSERT INTO RHQ_MEASUREMENT_SCHED ( ENABLED, COLL_INTERVAL, DEFINITION, RESOURCE_ID )      SELECT def.DEFAULT_ON AS defaultOn,             def.DEFAULT_INTERVAL AS interval,             def.ID AS definitionId,             res.ID AS resourceId        FROM RHQ_RESOURCE res, RHQ_RESOURCE_TYPE type, RHQ_MEASUREMENT_DEF def       WHERE ( res.ID in ( @@RESOURCES@@ ) )         AND type.ID = res.RESOURCE_TYPE_ID         AND type.ID = def.RESOURCE_TYPE_ID         AND NOT EXISTS ( SELECT ms.id                            FROM RHQ_MEASUREMENT_SCHED ms                           WHERE ms.RESOURCE_ID = res.ID                             AND ms.DEFINITION = def.ID ) &quot;;
+         } else {
+            insertQueryString = &quot;INSERT INTO RHQ_MEASUREMENT_SCHED ( ID, ENABLED, COLL_INTERVAL, DEFINITION, RESOURCE_ID )      SELECT RHQ_MEASUREMENT_SCHED_ID_SEQ.nextval,             defaultOn, interval, definitionId, resourceId        FROM ( SELECT def.DEFAULT_ON AS defaultOn,                      def.DEFAULT_INTERVAL AS interval,                      def.ID AS definitionId,                      res.ID AS resourceId                 FROM RHQ_RESOURCE res, RHQ_RESOURCE_TYPE type, RHQ_MEASUREMENT_DEF def                WHERE ( res.ID in ( @@RESOURCES@@ ) )                  AND type.ID = res.RESOURCE_TYPE_ID                  AND type.ID = def.RESOURCE_TYPE_ID                  AND NOT EXISTS ( SELECT ms.id                                     FROM RHQ_MEASUREMENT_SCHED ms                                    WHERE ms.RESOURCE_ID = res.ID                                      AND ms.DEFINITION = def.ID ) ) &quot;;
+         }
+
+         insertQueryString = JDBCUtil.transformQueryForMultipleInParameters(insertQueryString, &quot;@@RESOURCES@@&quot;, batchIds.length);
+         insertStatement = conn.prepareStatement(insertQueryString);
+         JDBCUtil.bindNTimes(insertStatement, batchIds, 1);
+         created1 = insertStatement.executeUpdate();
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;Batch created [&quot; + created1 + &quot;] default measurement schedules for resource batch [&quot; + batchIds + &quot;]&quot;);
+         }
+      } finally {
+         if(insertStatement != null) {
+            try {
+               insertStatement.close();
+            } catch (Exception var16) {
+               ;
+            }
+         }
+
+         if(conn != null) {
+            try {
+               conn.close();
+            } catch (Exception var15) {
+               ;
+            }
+         }
+
+      }
+
+      return created1;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public int returnSchedulesFor(int[] batchIds, Set allSchedules) throws Exception {
+      Connection conn = null;
+      PreparedStatement resultsStatement = null;
+      byte created = -1;
+
+      try {
+         conn = this.dataSource.getConnection();
+         String resultsQueryString = &quot;SELECT ms.RESOURCE_ID, ms.ID, def.NAME, ms.COLL_INTERVAL, ms.ENABLED, def.DATA_TYPE, def.RAW_NUMERIC_TYPE   FROM RHQ_MEASUREMENT_SCHED ms   JOIN RHQ_MEASUREMENT_DEF def ON ms.DEFINITION = def.ID  WHERE ms.RESOURCE_ID IN ( @@RESOURCES@@ )&quot;;
+         resultsQueryString = JDBCUtil.transformQueryForMultipleInParameters(resultsQueryString, &quot;@@RESOURCES@@&quot;, batchIds.length);
+         resultsStatement = conn.prepareStatement(resultsQueryString);
+         JDBCUtil.bindNTimes(resultsStatement, batchIds, 1);
+         HashMap scheduleRequestMap = new HashMap();
+         ResultSet results = resultsStatement.executeQuery();
+
+         while(results.next()) {
+            Integer resourceId = Integer.valueOf(results.getInt(1));
+            Integer scheduleId = Integer.valueOf(results.getInt(2));
+            String definitionName = results.getString(3);
+            Long interval = Long.valueOf(results.getLong(4));
+            Boolean enabled = Boolean.valueOf(results.getBoolean(5));
+            DataType dataType = DataType.values()[results.getInt(6)];
+            NumericType rawNumericType = NumericType.values()[results.getInt(7)];
+            if(results.wasNull()) {
+               rawNumericType = null;
+            }
+
+            ResourceMeasurementScheduleRequest scheduleRequest = (ResourceMeasurementScheduleRequest)scheduleRequestMap.get(resourceId);
+            if(scheduleRequest == null) {
+               scheduleRequest = new ResourceMeasurementScheduleRequest(resourceId.intValue());
+               scheduleRequestMap.put(resourceId, scheduleRequest);
+               allSchedules.add(scheduleRequest);
+            }
+
+            MeasurementScheduleRequest requestData = new MeasurementScheduleRequest(scheduleId.intValue(), definitionName, interval.longValue(), enabled.booleanValue(), dataType, rawNumericType);
+            scheduleRequest.addMeasurementScheduleRequest(requestData);
+         }
+      } finally {
+         if(resultsStatement != null) {
+            try {
+               resultsStatement.close();
+            } catch (Exception var27) {
+               ;
+            }
+         }
+
+         if(conn != null) {
+            try {
+               conn.close();
+            } catch (Exception var26) {
+               ;
+            }
+         }
+
+      }
+
+      return created;
+   }
+
+   private int[] getChildrenIdByParentIds(int[] batchIds) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findChildrenIdsByParentIds&quot;);
+      query.setParameter(&quot;parentIds&quot;, ArrayUtils.wrapInList(batchIds));
+      List results = query.getResultList();
+      int[] batchChildrenIds = ArrayUtils.unwrapCollection(results);
+      return batchChildrenIds;
+   }
+
+   public int getScheduledMeasurementsPerMinute() {
+      Object rate = Integer.valueOf(0);
+
+      try {
+         Query t = this.entityManager.createNamedQuery(&quot;MeasurementSchedule.getScheduledMeasurementsPerMinute&quot;);
+         t.setParameter(&quot;status&quot;, InventoryStatus.COMMITTED);
+         rate = (Number)t.getSingleResult();
+      } catch (Throwable var3) {
+         this.measurementScheduleManager.errorCorrectSchedules();
+      }
+
+      return rate == null?0:((Number)rate).intValue();
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void errorCorrectSchedules() {
+      try {
+         long t = System.currentTimeMillis();
+         String updateResourcesQueryString = &quot; UPDATE Resource     SET mtime = :currentTime   WHERE id IN ( SELECT ms.resource.id                   FROM MeasurementSchedule ms                  WHERE ms.interval &lt; 30000 ) &quot;;
+         Query updateResourcesQuery = this.entityManager.createQuery(updateResourcesQueryString);
+         updateResourcesQuery.setParameter(&quot;currentTime&quot;, Long.valueOf(t));
+         int resourcesUpdatedCount = updateResourcesQuery.executeUpdate();
+         String updateSchedulesQueryString = &quot; UPDATE MeasurementSchedule     SET interval = 30000   WHERE interval &lt; 30000 &quot;;
+         Query updateSchedulesQuery = this.entityManager.createQuery(updateSchedulesQueryString);
+         int schedulesUpdatedCount = updateSchedulesQuery.executeUpdate();
+         if(resourcesUpdatedCount &gt; 0) {
+            String findResourcesQueryString = &quot; SELECT res.id    FROM Resource res   WHERE res.mtime = :currentTime &quot;;
+            Query findResourcesQuery = this.entityManager.createQuery(findResourcesQueryString);
+            findResourcesQuery.setParameter(&quot;currentTime&quot;, Long.valueOf(t));
+            List updatedResourceIds = findResourcesQuery.getResultList();
+            this.updateMeasurementSchedulesForResources(ArrayUtils.unwrapCollection(updatedResourceIds));
+            this.log.error(&quot;MeasurementSchedule data was corrupt: automatically updated &quot; + resourcesUpdatedCount + &quot; resources and &quot; + schedulesUpdatedCount + &quot; to correct the issue; agents were notified&quot;);
+         } else if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;MeasurementSchedule data was checked for corruption, but all data was consistent&quot;);
+         }
+      } catch (Throwable var12) {
+         this.log.error(&quot;There was a problem correcting errors for MeasurementSchedules&quot;, var12);
+      }
+
+   }
+
+   private void updateMeasurementSchedulesForResources(int[] resourceIds) {
+      if(resourceIds.length != 0) {
+         Subject overlord = this.subjectManager.getOverlord();
+         PageList resources = this.resourceManager.findResourceByIds(overlord, resourceIds, false, PageControl.getUnlimitedInstance());
+         Set requests = this.findSchedulesForResourceAndItsDescendants(resourceIds, false);
+         HashMap agentScheduleMap = new HashMap();
+         Iterator i$ = resources.iterator();
+
+         Agent agent;
+         while(i$.hasNext()) {
+            org.rhq.core.domain.resource.Resource agentScheduleEntry = (org.rhq.core.domain.resource.Resource)i$.next();
+            agent = agentScheduleEntry.getAgent();
+            Object schedules = (Set)agentScheduleMap.get(agent);
+            if(schedules == null) {
+               schedules = new HashSet();
+               agentScheduleMap.put(agent, schedules);
+            }
+
+            Iterator t = requests.iterator();
+
+            while(t.hasNext()) {
+               ResourceMeasurementScheduleRequest request = (ResourceMeasurementScheduleRequest)t.next();
+               int resId = agentScheduleEntry.getId();
+               if(request.getResourceId() == resId) {
+                  ((Set)schedules).add(request);
+               }
+            }
+         }
+
+         i$ = agentScheduleMap.entrySet().iterator();
+
+         while(i$.hasNext()) {
+            Entry agentScheduleEntry1 = (Entry)i$.next();
+            agent = (Agent)agentScheduleEntry1.getKey();
+            Set schedules1 = (Set)agentScheduleEntry1.getValue();
+
+            try {
+               this.sendUpdatedSchedulesToAgent(agent, schedules1);
+            } catch (Throwable var13) {
+               if(this.log.isDebugEnabled()) {
+                  this.log.debug(&quot;Tried to immediately sync agent[name=&quot; + agent.getName() + &quot;] with error-corrected schedules failed&quot;);
+               }
+            }
+         }
+
+      }
+   }
+
+   public PageList getSchedulesByCriteria(Subject subject, MeasurementScheduleCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      if(!this.authorizationManager.isInventoryManager(subject)) {
+         generator.setAuthorizationResourceFragment(AuthorizationTokenType.RESOURCE, subject.getId());
+      }
+
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, criteria.getPageControl());
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

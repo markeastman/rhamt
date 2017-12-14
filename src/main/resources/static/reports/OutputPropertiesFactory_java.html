@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for OutputPropertiesFactory.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4150272">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.4.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4150272">
+                            rhq-enterprise-server-base-perspective-war-3.0.0.B04.war/WEB-INF/lib/richfaces-impl-3.3.2.GA.jar/org/ajax4jsf/xml/serializer/OutputPropertiesFactory.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.ajax4jsf.xml.serializer;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+import java.util.Enumeration;
+import java.util.Properties;
+import org.ajax4jsf.resource.util.URLToStreamHelper;
+import org.ajax4jsf.xml.serializer.Encodings;
+import org.ajax4jsf.xml.serializer.utils.Utils;
+import org.ajax4jsf.xml.serializer.utils.WrappedRuntimeException;
+
+public final class OutputPropertiesFactory {
+   private static final String S_BUILTIN_EXTENSIONS_URL = &quot;http://xml.apache.org/xalan&quot;;
+   private static final String S_BUILTIN_OLD_EXTENSIONS_URL = &quot;http://xml.apache.org/xslt&quot;;
+   public static final String S_BUILTIN_EXTENSIONS_UNIVERSAL = &quot;{http://xml.apache.org/xalan}&quot;;
+   public static final String S_KEY_INDENT_AMOUNT = &quot;{http://xml.apache.org/xalan}indent-amount&quot;;
+   public static final String S_KEY_LINE_SEPARATOR = &quot;{http://xml.apache.org/xalan}line-separator&quot;;
+   public static final String S_KEY_CONTENT_HANDLER = &quot;{http://xml.apache.org/xalan}content-handler&quot;;
+   public static final String S_KEY_ENTITIES = &quot;{http://xml.apache.org/xalan}entities&quot;;
+   public static final String S_USE_URL_ESCAPING = &quot;{http://xml.apache.org/xalan}use-url-escaping&quot;;
+   public static final String S_OMIT_META_TAG = &quot;{http://xml.apache.org/xalan}omit-meta-tag&quot;;
+   public static final String S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL = &quot;{http://xml.apache.org/xslt}&quot;;
+   public static final int S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL_LEN = &quot;{http://xml.apache.org/xslt}&quot;.length();
+   private static final String S_XSLT_PREFIX = &quot;xslt.output.&quot;;
+   private static final int S_XSLT_PREFIX_LEN = &quot;xslt.output.&quot;.length();
+   private static final String S_XALAN_PREFIX = &quot;org.apache.xslt.&quot;;
+   private static final int S_XALAN_PREFIX_LEN = &quot;org.apache.xslt.&quot;.length();
+   private static Integer m_synch_object = new Integer(1);
+   private static final String PROP_DIR = &quot;org/ajax4jsf/xml/serializer/&quot;;
+   private static final String PROP_FILE_XML = &quot;output_xml.properties&quot;;
+   private static final String PROP_FILE_TEXT = &quot;output_text.properties&quot;;
+   private static final String PROP_FILE_HTML = &quot;output_html.properties&quot;;
+   private static final String PROP_FILE_XHTML = &quot;output_xhtml.properties&quot;;
+   private static final String PROP_FILE_UNKNOWN = &quot;output_unknown.properties&quot;;
+   private static Properties m_xml_properties = null;
+   private static Properties m_html_properties = null;
+   private static Properties m_xhtml_properties = null;
+   private static Properties m_text_properties = null;
+   private static Properties m_unknown_properties = null;
+   private static final Class ACCESS_CONTROLLER_CLASS = findAccessControllerClass();
+
+   private static Class findAccessControllerClass() {
+      try {
+         return Class.forName(&quot;java.security.AccessController&quot;);
+      } catch (Exception var1) {
+         return null;
+      }
+   }
+
+   public static final Properties getDefaultMethodProperties(String method) {
+      String fileName = null;
+      Properties defaultProperties = null;
+
+      try {
+         Integer ioe = m_synch_object;
+         synchronized(m_synch_object) {
+            if(null == m_xml_properties) {
+               fileName = &quot;output_xml.properties&quot;;
+               m_xml_properties = loadPropertiesFile(fileName, (Properties)null);
+            }
+         }
+
+         if(method.equals(&quot;xml&quot;)) {
+            defaultProperties = m_xml_properties;
+         } else if(method.equals(&quot;html&quot;)) {
+            if(null == m_html_properties) {
+               fileName = &quot;output_html.properties&quot;;
+               m_html_properties = loadPropertiesFile(fileName, m_xml_properties);
+            }
+
+            defaultProperties = m_html_properties;
+         } else if(method.equals(&quot;xhtml&quot;)) {
+            if(null == m_xhtml_properties) {
+               fileName = &quot;output_xhtml.properties&quot;;
+               m_xhtml_properties = loadPropertiesFile(fileName, m_xml_properties);
+            }
+
+            defaultProperties = m_xhtml_properties;
+         } else if(method.equals(&quot;text&quot;)) {
+            if(null == m_text_properties) {
+               fileName = &quot;output_text.properties&quot;;
+               m_text_properties = loadPropertiesFile(fileName, m_xml_properties);
+               if(null == m_text_properties.getProperty(&quot;encoding&quot;)) {
+                  String ioe1 = Encodings.getMimeEncoding((String)null);
+                  m_text_properties.put(&quot;encoding&quot;, ioe1);
+               }
+            }
+
+            defaultProperties = m_text_properties;
+         } else if(method.equals(&quot;&quot;)) {
+            if(null == m_unknown_properties) {
+               fileName = &quot;output_unknown.properties&quot;;
+               m_unknown_properties = loadPropertiesFile(fileName, m_xml_properties);
+            }
+
+            defaultProperties = m_unknown_properties;
+         } else {
+            defaultProperties = m_xml_properties;
+         }
+      } catch (IOException var6) {
+         throw new WrappedRuntimeException(Utils.messages.createMessage(&quot;ER_COULD_NOT_LOAD_METHOD_PROPERTY&quot;, new Object[]{fileName, method}), var6);
+      }
+
+      return new Properties(defaultProperties);
+   }
+
+   private static Properties loadPropertiesFile(final String resourceName, Properties defaults) throws IOException {
+      Properties props = new Properties(defaults);
+      InputStream is = null;
+      BufferedInputStream bis = null;
+
+      try {
+         if(ACCESS_CONTROLLER_CLASS != null) {
+            is = (InputStream)AccessController.doPrivileged(new PrivilegedAction() {
+               public Object run() {
+                  return URLToStreamHelper.urlToStreamSafe(OutputPropertiesFactory.class.getResource(resourceName));
+               }
+            });
+         } else {
+            is = URLToStreamHelper.urlToStreamSafe(OutputPropertiesFactory.class.getResource(resourceName));
+         }
+
+         bis = new BufferedInputStream(is);
+         props.load(bis);
+      } catch (IOException var18) {
+         if(defaults == null) {
+            throw var18;
+         }
+
+         throw new WrappedRuntimeException(Utils.messages.createMessage(&quot;ER_COULD_NOT_LOAD_RESOURCE&quot;, new Object[]{resourceName}), var18);
+      } catch (SecurityException var19) {
+         if(defaults == null) {
+            throw var19;
+         }
+
+         throw new WrappedRuntimeException(Utils.messages.createMessage(&quot;ER_COULD_NOT_LOAD_RESOURCE&quot;, new Object[]{resourceName}), var19);
+      } finally {
+         if(bis != null) {
+            bis.close();
+         }
+
+         if(is != null) {
+            is.close();
+         }
+
+      }
+
+      Enumeration keys = ((Properties)props.clone()).keys();
+
+      while(keys.hasMoreElements()) {
+         String key = (String)keys.nextElement();
+         String value = null;
+
+         try {
+            value = System.getProperty(key);
+         } catch (SecurityException var17) {
+            ;
+         }
+
+         if(value == null) {
+            value = (String)props.get(key);
+         }
+
+         String newKey = fixupPropertyString(key, true);
+         String newValue = null;
+
+         try {
+            newValue = System.getProperty(newKey);
+         } catch (SecurityException var16) {
+            ;
+         }
+
+         if(newValue == null) {
+            newValue = fixupPropertyString(value, false);
+         } else {
+            newValue = fixupPropertyString(newValue, false);
+         }
+
+         if(key != newKey || value != newValue) {
+            props.remove(key);
+            props.put(newKey, newValue);
+         }
+      }
+
+      return props;
+   }
+
+   private static String fixupPropertyString(String s, boolean doClipping) {
+      if(doClipping &amp;&amp; s.startsWith(&quot;xslt.output.&quot;)) {
+         s = s.substring(S_XSLT_PREFIX_LEN);
+      }
+
+      if(s.startsWith(&quot;org.apache.xslt.&quot;)) {
+         s = &quot;{http://xml.apache.org/xalan}&quot; + s.substring(S_XALAN_PREFIX_LEN);
+      }
+
+      int index;
+      if((index = s.indexOf(&quot;\\u003a&quot;)) &gt; 0) {
+         String temp = s.substring(index + 6);
+         s = s.substring(0, index) + &quot;:&quot; + temp;
+      }
+
+      return s;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "47" });
+
+            $("<div id='47-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(47)');
+
+
+$("<a name='12228608' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#47-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4150272;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

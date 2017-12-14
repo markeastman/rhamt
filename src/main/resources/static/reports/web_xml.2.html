@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for web.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/web.xml
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Web XML</span>
+                            </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Web XML</em>
+<a title='View Rule: DiscoverWebXmlRuleProvider_1' href='windup_ruleproviders.html#DiscoverWebXmlRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc"> Web Application Deployment Descriptors</div>
+                                            </li>
+                                </ul>
+
+                            <h4>Automatically Translated Files</h4>
+                            <ul>
+                                    <li><a href="jboss_web_RHQ_Enterprise_Server_EAR.2.xml">JBoss Web XML Descriptor - Generated by Red Hat Application Migration Toolkit</a></li>
+                            </ul>
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;?xml version=&quot;1.0&quot;?&gt;
+
+&lt;web-app xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+         version=&quot;2.5&quot;&gt;
+
+   &lt;display-name&gt;RHQ&lt;/display-name&gt;
+
+   &lt;!--=== Seam ===--&gt;
+
+   &lt;listener&gt;
+      &lt;listener-class&gt;org.jboss.seam.servlet.SeamListener&lt;/listener-class&gt;
+   &lt;/listener&gt;
+
+   &lt;!-- From Seam docs: The Seam master filter must be the first filter specified
+        in web.xml. This ensures it is run first. --&gt;
+   &lt;filter&gt;
+      &lt;filter-name&gt;Seam Filter&lt;/filter-name&gt;
+      &lt;filter-class&gt;org.jboss.seam.servlet.SeamFilter&lt;/filter-class&gt;
+   &lt;/filter&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;Seam Filter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+
+   &lt;!--=== JSF RI ===--&gt;
+
+   &lt;listener&gt;
+      &lt;listener-class&gt;com.sun.faces.config.ConfigureListener&lt;/listener-class&gt;
+   &lt;/listener&gt;
+
+   &lt;!-- flags for debugging during development --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;com.sun.faces.validateXml&lt;/param-name&gt;
+      &lt;param-value&gt;false&lt;/param-value&gt;
+   &lt;/context-param&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;com.sun.faces.verifyObjects&lt;/param-name&gt;
+      &lt;param-value&gt;false&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!--=== JSF non-impl-specific ===--&gt;
+
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+   &lt;servlet-name&gt;Seam Resource Servlet&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.jboss.seam.servlet.SeamResourceServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;!-- serve Facelets pages (*.xhtml) via the JSF servlet --&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;Seam Resource Servlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/seam/resource/*&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+  
+   &lt;!-- the suffix for files containing JSF content (default is &quot;.jsp&quot;) --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;javax.faces.DEFAULT_SUFFIX&lt;/param-name&gt;
+      &lt;param-value&gt;.xhtml&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!-- only need this if we want jsp's and facelets together, but we don't right now
+   &lt;context-param&gt;
+      &lt;param-name&gt;facelets.VIEW_MAPPINGS&lt;/param-name&gt;
+      &lt;param-value&gt;*.xhtml&lt;/param-value&gt;
+   &lt;/context-param&gt;
+    --&gt;
+
+   &lt;!-- see http://www.jroller.com/page/mert?entry=state_saving_method_client_side for an explanation of the below param --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;javax.faces.STATE_SAVING_METHOD&lt;/param-name&gt;
+      &lt;param-value&gt;server&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!-- list of additional JSF config files (in addition to /WEB-INF/faces-config.xml) --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;javax.faces.CONFIG_FILES&lt;/param-name&gt;
+      &lt;param-value&gt;
+         /WEB-INF/jsf-components/configuration-components.xml,
+         /WEB-INF/jsf-components/error-components.xml,
+         /WEB-INF/jsf-components/inventory-components.xml,
+         /WEB-INF/jsf-components/layout-components.xml,
+         /WEB-INF/jsf-components/navigation-components.xml,
+         /WEB-INF/jsf-components/pagination-components.xml,
+         /WEB-INF/jsf-components/sorting-components.xml,
+         /WEB-INF/jsf-components/table-components.xml,
+         /WEB-INF/jsf-components/time-components.xml,
+         /WEB-INF/jsf-components/upload-components.xml,
+         /WEB-INF/jsf-components/metric-components.xml,
+
+         /WEB-INF/jsf-managed-beans/alert-beans.xml,
+         /WEB-INF/jsf-managed-beans/content-beans.xml,
+         /WEB-INF/jsf-managed-beans/autodiscovery-beans.xml,
+         /WEB-INF/jsf-managed-beans/cluster-beans.xml,
+         /WEB-INF/jsf-managed-beans/configuration-beans.xml,
+         /WEB-INF/jsf-managed-beans/global-beans.xml,
+         /WEB-INF/jsf-managed-beans/inventory-beans.xml,
+         /WEB-INF/jsf-managed-beans/admin-beans.xml,
+         /WEB-INF/jsf-managed-beans/measurement-beans.xml,
+         /WEB-INF/jsf-managed-beans/operation-beans.xml,
+         /WEB-INF/jsf-managed-beans/test-beans.xml,
+
+         /WEB-INF/jsf-managed-beans-auto-group/inventory-beans.xml,
+         /WEB-INF/jsf-managed-beans-auto-group/measurement-beans.xml,
+
+         /WEB-INF/jsf-managed-beans-common/availability-beans.xml,
+         /WEB-INF/jsf-managed-beans-common/event-beans.xml,
+         /WEB-INF/jsf-managed-beans-common/measurement-beans.xml,
+         /WEB-INF/jsf-managed-beans-common/navigation-beans.xml,
+
+         /WEB-INF/jsf-managed-beans-definition/group-definition-beans.xml,
+
+         /WEB-INF/jsf-managed-beans-resource-group/alert-beans.xml,
+         /WEB-INF/jsf-managed-beans-resource-group/configuration-beans.xml,
+         /WEB-INF/jsf-managed-beans-resource-group/inventory-beans.xml,
+         /WEB-INF/jsf-managed-beans-resource-group/operation-beans.xml,
+         /WEB-INF/jsf-managed-beans-resource-group/measurement-beans.xml,
+
+         /WEB-INF/jsf-managed-beans-subsystem/alert-beans.xml,
+         /WEB-INF/jsf-managed-beans-subsystem/configuration-beans.xml,
+         /WEB-INF/jsf-managed-beans-subsystem/measurement-beans.xml,
+         /WEB-INF/jsf-managed-beans-subsystem/operation-beans.xml,
+
+         /WEB-INF/jsf-navigation/alert-navigation.xml,
+         /WEB-INF/jsf-navigation/cluster-navigation.xml,
+         /WEB-INF/jsf-navigation/content-navigation.xml,
+         /WEB-INF/jsf-navigation/events-navigation.xml,
+         /WEB-INF/jsf-navigation/autodiscovery-navigation.xml,
+         /WEB-INF/jsf-navigation/configuration-navigation.xml,
+         /WEB-INF/jsf-navigation/inventory-navigation.xml,
+         /WEB-INF/jsf-navigation/admin-navigation.xml,
+         /WEB-INF/jsf-navigation/operation-navigation.xml,
+         /WEB-INF/jsf-navigation/measurement-navigation.xml,
+         /WEB-INF/jsf-navigation/summary-navigation.xml,
+         /WEB-INF/jsf-navigation/test-navigation.xml,
+
+         /WEB-INF/jsf-navigation-definition/group-definition-navigation.xml,
+
+         /WEB-INF/jsf-navigation-resource-group/alert-navigation.xml,
+         /WEB-INF/jsf-navigation-resource-group/configuration-navigation.xml,
+         /WEB-INF/jsf-navigation-resource-group/events-navigation.xml,
+         /WEB-INF/jsf-navigation-resource-group/inventory-navigation.xml,
+         /WEB-INF/jsf-navigation-resource-group/operation-navigation.xml,
+         /WEB-INF/jsf-navigation-resource-group/measurement-navigation.xml,
+         
+         /WEB-INF/jsf-navigation-auto-group/events-navigation.xml,
+         /WEB-INF/jsf-navigation-auto-group/measurement-navigation.xml,
+
+         /WEB-INF/jsf-navigation-subsystem/tab-container-navigation.xml,
+
+         /WEB-INF/jsf-converters/common-converters.xml,
+         /WEB-INF/jsf-converters/content-converters.xml,
+         /WEB-INF/jsf-converters/inventory-converters.xml
+
+      &lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!--=== Facelets ===--&gt;
+
+   &lt;!-- load our taglibs (value must be semicolon-delimited) --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;facelets.LIBRARIES&lt;/param-name&gt;
+      &lt;param-value&gt;/WEB-INF/tags/on.component.taglib.xml;/WEB-INF/tags/on.function.taglib.xml&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!-- enable special debug output for development --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;facelets.DEVELOPMENT&lt;/param-name&gt;
+      &lt;param-value&gt;true&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!--=== RichFaces ===--&gt;
+
+    &lt;!-- From Seam docs: If RichFaces is used in your project, Seam will install
+         the RichFaces Ajax filter for you, making sure to install it before all
+         other built-in filters. You don't need to install the RichFaces Ajax
+         filter in web.xml yourself. --&gt;
+
+   &lt;!-- name of the CSS skin used by RichFaces (default value is &quot;DEFAULT&quot;) --&gt;
+   &lt;context-param&gt;
+      &lt;param-name&gt;org.richfaces.SKIN&lt;/param-name&gt;
+      &lt;param-value&gt;DEFAULT&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!-- everything else --&gt;
+
+   &lt;context-param&gt;
+      &lt;param-name&gt;javax.servlet.jsp.jstl.fmt.localizationContext&lt;/param-name&gt;
+      &lt;param-value&gt;ApplicationResources&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;context-param&gt;
+      &lt;param-name&gt;context-constants&lt;/param-name&gt;
+      &lt;param-value&gt;org.rhq.enterprise.gui.legacy.Constants&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;context-param&gt;
+      &lt;param-name&gt;RtEnabled&lt;/param-name&gt;
+      &lt;param-value&gt;false&lt;/param-value&gt;
+   &lt;/context-param&gt;
+
+   &lt;!-- Allows upload of files through JSF (i.e. software uploads) --&gt;
+   &lt;filter&gt;
+      &lt;filter-name&gt;MultipartFilter&lt;/filter-name&gt;
+      &lt;filter-class&gt;org.rhq.enterprise.gui.common.upload.MultipartFilter&lt;/filter-class&gt;
+   &lt;/filter&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;MultipartFilter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;/rhq/resource/*&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+
+
+   &lt;!-- The stuff needed for ajax4jsf / richfaces --&gt;
+   &lt;filter&gt;
+      &lt;display-name&gt;Ajax4jsf Filter&lt;/display-name&gt;
+      &lt;filter-name&gt;ajax4jsf&lt;/filter-name&gt;
+      &lt;filter-class&gt;org.ajax4jsf.Filter&lt;/filter-class&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;forceparser&lt;/param-name&gt;
+         &lt;param-value&gt;false&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;createTempFiles&lt;/param-name&gt;
+         &lt;param-value&gt;true&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;init-param&gt;
+         &lt;!-- is 250MB the largest package we'll ever want to upload? --&gt;
+         &lt;param-name&gt;maxRequestSize&lt;/param-name&gt;
+         &lt;param-value&gt;250000000&lt;/param-value&gt;
+      &lt;/init-param&gt;
+   &lt;/filter&gt;
+
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;ajax4jsf&lt;/filter-name&gt;
+      &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+      &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+      &lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;
+      &lt;dispatcher&gt;INCLUDE&lt;/dispatcher&gt;
+   &lt;/filter-mapping&gt;
+
+   &lt;!-- The Authentication Filter to support our custom login stuff --&gt;
+   &lt;filter&gt;
+      &lt;filter-name&gt;Authentication-Filter&lt;/filter-name&gt;
+      &lt;filter-class&gt;org.rhq.enterprise.gui.legacy.AuthenticationFilter&lt;/filter-class&gt;
+   &lt;/filter&gt;
+   &lt;!-- The Admin-User-Filter ensures only administrators (not just authenticated users) access certain resources,
+        depends on the Authentication-Filter coming earlier in the chain --&gt;
+   &lt;filter&gt;
+      &lt;filter-name&gt;Admin-User-Filter&lt;/filter-name&gt;
+      &lt;filter-class&gt;org.rhq.enterprise.gui.legacy.AdminUserFilter&lt;/filter-class&gt;
+   &lt;/filter&gt;
+   &lt;filter&gt;
+      &lt;filter-name&gt;WebUserTrackingFilter&lt;/filter-name&gt;
+      &lt;filter-class&gt;org.rhq.enterprise.gui.legacy.WebUserTrackingFilter&lt;/filter-class&gt;
+   &lt;/filter&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;Authentication-Filter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;Authentication-Filter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;Authentication-Filter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;*.rss&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;Authentication-Filter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;/admin/test/*&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;Admin-User-Filter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;/admin/test/*&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+   &lt;!-- we only want to track &quot;real&quot; pages and not images, CSS inclusions, or external Javascript files --&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;WebUserTrackingFilter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+   &lt;filter-mapping&gt;
+      &lt;filter-name&gt;WebUserTrackingFilter&lt;/filter-name&gt;
+      &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
+   &lt;/filter-mapping&gt;
+
+   &lt;!-- This is the object that reads the /WEB-INF/rhq-server-internals.properties for internal configuration settings. --&gt;
+   &lt;listener&gt;
+      &lt;listener-class&gt;org.rhq.enterprise.gui.startup.Configurator&lt;/listener-class&gt;
+   &lt;/listener&gt;
+   
+   &lt;!-- Listener used to clear SubjectPreferencesCache when user logs outs / times out --&gt;
+   &lt;listener&gt;
+      &lt;listener-class&gt;org.rhq.enterprise.gui.startup.SessionCacheListener&lt;/listener-class&gt;
+   &lt;/listener&gt;
+
+   &lt;!-- This is the object that finishes the RHQ Server startup initialization. --&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;initializer&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.startup.StartupServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;!-- Servlet that serves the agent update binaries and version information --&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;AgentUpdateServlet&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.agentupdate.AgentUpdateServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;!-- Servlet that serves the content from rhq-downloads --&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;DownloadServlet&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.download.DownloadServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;RemoteClientServlet&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.client.RemoteClientServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;!-- standalone servlets used by the JSPs --&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;navMapImage&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.NavMapImageServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;availHealthChart&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.AvailHealthChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;usageHealthChart&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.UsageHealthChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;utilizationHealthChart&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.UtilizationHealthChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;highLowChart&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.HighLowChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;metricChart&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.MetricChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;performanceChart&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.PerformanceChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;availStoplight&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.rhq.enterprise.gui.common.servlet.AvailabilityStoplightChartServlet&lt;/servlet-class&gt;
+      &lt;load-on-startup&gt;3&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;!-- Struts ActionServlet configuration (with debugging) --&gt;
+   &lt;servlet&gt;
+      &lt;servlet-name&gt;action&lt;/servlet-name&gt;
+      &lt;servlet-class&gt;org.apache.struts.action.ActionServlet&lt;/servlet-class&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;config&lt;/param-name&gt;
+         &lt;param-value&gt;/WEB-INF/struts-config.xml&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;debug&lt;/param-name&gt;
+         &lt;param-value&gt;0&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;detail&lt;/param-name&gt;
+         &lt;param-value&gt;0&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;validate&lt;/param-name&gt;
+         &lt;param-value&gt;true&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;init-param&gt;
+         &lt;param-name&gt;mapping&lt;/param-name&gt;
+         &lt;param-value&gt;org.rhq.enterprise.gui.legacy.action.BaseActionMapping&lt;/param-value&gt;
+      &lt;/init-param&gt;
+      &lt;load-on-startup&gt;2&lt;/load-on-startup&gt;
+   &lt;/servlet&gt;
+
+   &lt;!-- The endpoints to the agent update servlet --&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;AgentUpdateServlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/agentupdate/version&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;AgentUpdateServlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/agentupdate/download&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+
+   &lt;!-- The endpoints to the remote client servlet --&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;RemoteClientServlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/client/version&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;RemoteClientServlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/client/download&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+
+   &lt;!-- The download servlet; this URI /downloads will effectively look like its pointing to rhq-downloads --&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;DownloadServlet&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/downloads/*&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+
+   &lt;!-- standalone servlets used by the JSPs --&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;navMapImage&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/NavMapImage&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;availHealthChart&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/AvailHealthChart&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;usageHealthChart&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/UsageHealthChart&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;utilizationHealthChart&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/UtilizationHealthChart&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;highLowChart&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/HighLowChart&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;metricChart&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/MetricChart&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;performanceChart&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/PerformanceChart&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;availStoplight&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;/resource/AvailStoplight&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+
+   &lt;!-- mappings for Struts ActionServlet --&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;action&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;*.rss&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;servlet-mapping&gt;
+      &lt;servlet-name&gt;action&lt;/servlet-name&gt;
+      &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
+   &lt;/servlet-mapping&gt;
+   &lt;session-config&gt;
+      &lt;session-timeout&gt;30&lt;/session-timeout&gt;
+   &lt;/session-config&gt;
+
+   &lt;welcome-file-list&gt;
+      &lt;welcome-file&gt;index.xhtml&lt;/welcome-file&gt;
+      &lt;welcome-file&gt;Start.do&lt;/welcome-file&gt;
+      &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+      &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+   &lt;/welcome-file-list&gt;
+   
+   &lt;error-page&gt;
+      &lt;exception-type&gt;javax.faces.application.ViewExpiredException&lt;/exception-type&gt;
+      &lt;location&gt;/common/GenericError.jsp&lt;/location&gt;
+   &lt;/error-page&gt;
+
+   &lt;error-page&gt;
+      &lt;error-code&gt;404&lt;/error-code&gt;
+      &lt;location&gt;/common/GenericError.jsp&lt;/location&gt;
+   &lt;/error-page&gt;
+   
+   
+
+   &lt;!----&gt;&lt;!-- Struts Tag Library Descriptors --&gt;&lt;!--
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-bean&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-bean.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-html&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-html.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-logic&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-logic.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-nested&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-nested.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-tiles&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-tiles.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+--&gt;&lt;!--
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-validator&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-validator.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+--&gt;&lt;!--
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-html-el&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-html-el.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;struts-logic-el&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/struts-logic-el.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;jstl-c&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/c.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;jstl-c-rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/c-rt.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;jstl-fmt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/fmt.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;hq&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/hq.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;display&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/display.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;
+  &lt;taglib&gt;
+    &lt;taglib-uri&gt;rt&lt;/taglib-uri&gt;
+    &lt;taglib-location&gt;/WEB-INF/tld/rt.tld&lt;/taglib-location&gt;
+  &lt;/taglib&gt;--&gt;
+
+&lt;/web-app&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

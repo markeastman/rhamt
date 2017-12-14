@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for OpendesktopMimeDetector.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-webdav.war/WEB-INF/lib/mime-util-1.3.1.jar/eu/medsea/mimeutil/detector/OpendesktopMimeDetector.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">2</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package eu.medsea.mimeutil.detector;
+
+import eu.medsea.mimeutil.MimeException;
+import eu.medsea.mimeutil.MimeType;
+import eu.medsea.mimeutil.MimeUtil;
+import eu.medsea.mimeutil.detector.MimeDetector;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.RandomAccessFile;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileChannel.MapMode;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.List;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+public class OpendesktopMimeDetector extends MimeDetector {
+   private static Log log;
+   private static String mimeCacheFile;
+   private static String internalMimeCacheFile;
+   private ByteBuffer content;
+
+   public OpendesktopMimeDetector(String mimeCacheFile) {
+      this.init(mimeCacheFile);
+   }
+
+   public OpendesktopMimeDetector() {
+      this.init(mimeCacheFile);
+   }
+
+   private void init(String mimeCacheFile) {
+      String cacheFile = mimeCacheFile;
+      if(!(new File(mimeCacheFile)).exists()) {
+         cacheFile = internalMimeCacheFile;
+      }
+
+      FileChannel rCh = null;
+
+      try {
+         RandomAccessFile e = null;
+         e = new RandomAccessFile(cacheFile, &quot;r&quot;);
+         rCh = e.getChannel();
+         this.content = rCh.map(MapMode.READ_ONLY, 0L, rCh.size());
+      } catch (Exception var12) {
+         throw new MimeException(var12);
+      } finally {
+         if(rCh != null) {
+            try {
+               rCh.close();
+            } catch (Exception var11) {
+               log.error(var11, var11);
+            }
+         }
+
+      }
+
+   }
+
+   public String getDescription() {
+      return &quot;Resolve mime types for files and streams using the Opendesktop shared mime.cache file. Version [&quot; + this.getMajorVersion() + &quot;.&quot; + this.getMinorVersion() + &quot;].&quot;;
+   }
+
+   public Collection getMimeTypesFile(File file) throws UnsupportedOperationException {
+      Object mimeTypes = new ArrayList();
+      this.lookupMimeTypesForGlobFileName(file, (Collection)mimeTypes);
+      if(!((Collection)mimeTypes).isEmpty()) {
+         mimeTypes = this.normalizeWeightedMimeList((List)mimeTypes);
+      }
+
+      if(file.exists() &amp;&amp; !file.isDirectory() &amp;&amp; (((Collection)mimeTypes).isEmpty() || ((Collection)mimeTypes).size() &gt; 1)) {
+         try {
+            Collection e = this.getMimeTypes(file.toURI().toURL().openConnection());
+            if(!e.isEmpty()) {
+               Iterator it = ((Collection)mimeTypes).iterator();
+
+               while(it.hasNext()) {
+                  String mimeType = (String)it.next();
+                  ArrayList mimeTypes1;
+                  if(e.contains(mimeType)) {
+                     mimeTypes1 = new ArrayList();
+                     mimeTypes1.add(mimeType);
+                     return mimeTypes1;
+                  }
+
+                  Iterator _it = e.iterator();
+
+                  while(_it.hasNext()) {
+                     String _mimeType = (String)_it.next();
+                     if(this.isMimeTypeSubclass(mimeType, _mimeType)) {
+                        mimeTypes1 = new ArrayList();
+                        mimeTypes1.add(mimeType);
+                        return mimeTypes1;
+                     }
+                  }
+               }
+            }
+         } catch (Exception var8) {
+            throw new MimeException(var8);
+         }
+      }
+
+      return (Collection)mimeTypes;
+   }
+
+   public Collection getMimeTypesInputStream(InputStream in) throws UnsupportedOperationException {
+      ArrayList mimeTypes = new ArrayList();
+      this.lookupMimeTypesForMagicData(in, mimeTypes);
+      return mimeTypes;
+   }
+
+   public Collection getMimeTypesByteArray(byte[] data) throws UnsupportedOperationException {
+      ArrayList mimeTypes = new ArrayList();
+      this.lookupMagicData(data, mimeTypes);
+      return mimeTypes;
+   }
+
+   public String dump() {
+      return &quot;{MAJOR_VERSION=&quot; + this.getMajorVersion() + &quot; MINOR_VERSION=&quot; + this.getMinorVersion() + &quot; ALIAS_LIST_OFFSET=&quot; + this.getAliasListOffset() + &quot; PARENT_LIST_OFFSET=&quot; + this.getParentListOffset() + &quot; LITERAL_LIST_OFFSET=&quot; + this.getLiteralListOffset() + &quot; REVERSE_SUFFIX_TREE_OFFSET=&quot; + this.getReverseSuffixTreeOffset() + &quot; GLOB_LIST_OFFSET=&quot; + this.getGlobListOffset() + &quot; MAGIC_LIST_OFFSET=&quot; + this.getMagicListOffset() + &quot; NAMESPACE_LIST_OFFSET=&quot; + this.getNameSpaceListOffset() + &quot; ICONS_LIST_OFFSET=&quot; + this.getIconListOffset() + &quot; GENERIC_ICONS_LIST_OFFSET=&quot; + this.getGenericIconListOffset() + &quot;}&quot;;
+   }
+
+   private void lookupMimeTypesForMagicData(InputStream in, Collection mimeTypes) {
+      int offset = 0;
+      int len = this.getMaxExtents();
+      byte[] data = new byte[len];
+
+      int bytesRead;
+      try {
+         for(int ioe = len; ioe &gt; 0; ioe -= bytesRead) {
+            bytesRead = in.read(data, offset, ioe);
+            if(bytesRead &lt; 0) {
+               break;
+            }
+
+            offset += bytesRead;
+         }
+      } catch (IOException var8) {
+         throw new MimeException(var8);
+      }
+
+      this.lookupMagicData(data, mimeTypes);
+   }
+
+   private void lookupMagicData(byte[] data, Collection mimeTypes) {
+      int listOffset = this.getMagicListOffset();
+      int numEntries = this.content.getInt(listOffset);
+      int offset = this.content.getInt(listOffset + 8);
+
+      for(int i = 0; i &lt; numEntries; ++i) {
+         String mimeType = this.compareToMagicData(offset + 16 * i, data);
+         if(mimeType != null) {
+            mimeTypes.add(mimeType);
+         } else {
+            String nonMatch = this.getMimeType(this.content.getInt(offset + 16 * i + 4));
+            mimeTypes.remove(nonMatch);
+         }
+      }
+
+   }
+
+   private String compareToMagicData(int offset, byte[] data) {
+      this.content.getInt(offset);
+      int mimeOffset = this.content.getInt(offset + 4);
+      int numMatches = this.content.getInt(offset + 8);
+      int matchletOffset = this.content.getInt(offset + 12);
+
+      for(int i = 0; i &lt; numMatches; ++i) {
+         if(this.matchletMagicCompare(matchletOffset + i * 32, data)) {
+            return this.getMimeType(mimeOffset);
+         }
+      }
+
+      return null;
+   }
+
+   private boolean matchletMagicCompare(int offset, byte[] data) {
+      int rangeStart = this.content.getInt(offset);
+      int rangeLength = this.content.getInt(offset + 4);
+      int dataLength = this.content.getInt(offset + 12);
+      int dataOffset = this.content.getInt(offset + 16);
+      int maskOffset = this.content.getInt(offset + 20);
+
+      for(int i = rangeStart; i &lt;= rangeStart + rangeLength; ++i) {
+         boolean validMatch = true;
+         if(i + dataLength &gt; data.length) {
+            return false;
+         }
+
+         int j;
+         if(maskOffset != 0) {
+            for(j = 0; j &lt; dataLength; ++j) {
+               if((this.content.get(dataOffset + j) &amp; this.content.get(maskOffset + j)) != (data[j + i] &amp; this.content.get(maskOffset + j))) {
+                  validMatch = false;
+                  break;
+               }
+            }
+         } else {
+            for(j = 0; j &lt; dataLength; ++j) {
+               if(this.content.get(dataOffset + j) != data[j + i]) {
+                  validMatch = false;
+                  break;
+               }
+            }
+         }
+
+         if(validMatch) {
+            return true;
+         }
+      }
+
+      return false;
+   }
+
+   private void lookupGlobLiteral(String fileName, Collection mimeTypes) {
+      int listOffset = this.getLiteralListOffset();
+      int numEntries = this.content.getInt(listOffset);
+      int min = 0;
+      int max = numEntries - 1;
+
+      while(max &gt;= min) {
+         int mid = (min + max) / 2;
+         String literal = this.getString(this.content.getInt(listOffset + 4 + 12 * mid));
+         int cmp = literal.compareTo(fileName);
+         if(cmp &lt; 0) {
+            min = mid + 1;
+         } else {
+            if(cmp &lt;= 0) {
+               String mimeType = this.getMimeType(this.content.getInt(listOffset + 4 + 12 * mid + 4));
+               int weight = this.content.getInt(listOffset + 4 + 12 * mid + 8);
+               mimeTypes.add(new OpendesktopMimeDetector.WeightedMimeType(mimeType, literal, weight));
+               return;
+            }
+
+            max = mid - 1;
+         }
+      }
+
+   }
+
+   private void lookupGlobFileNameMatch(String fileName, Collection mimeTypes) {
+      int listOffset = this.getGlobListOffset();
+      int numEntries = this.content.getInt(listOffset);
+
+      for(int i = 0; i &lt; numEntries; ++i) {
+         int offset = this.content.getInt(listOffset + 4 + 12 * i);
+         int mimeTypeOffset = this.content.getInt(listOffset + 4 + 12 * i + 4);
+         int weight = this.content.getInt(listOffset + 4 + 12 * i + 8);
+         String pattern = this.getString(offset, true);
+         String mimeType = this.getMimeType(mimeTypeOffset);
+         if(fileName.matches(pattern)) {
+            mimeTypes.add(new OpendesktopMimeDetector.WeightedMimeType(mimeType, pattern, weight));
+         }
+      }
+
+   }
+
+   private Collection normalizeWeightedMimeList(Collection weightedMimeTypes) {
+      LinkedHashSet mimeTypes = new LinkedHashSet();
+      Collections.sort((List)weightedMimeTypes, new Comparator() {
+         public int compare(Object obj1, Object obj2) {
+            return ((OpendesktopMimeDetector.WeightedMimeType)obj1).weight - ((OpendesktopMimeDetector.WeightedMimeType)obj2).weight;
+         }
+      });
+      int weight = 0;
+      int patternLen = 0;
+      Iterator _mimeTypes = weightedMimeTypes.iterator();
+
+      OpendesktopMimeDetector.WeightedMimeType it;
+      while(_mimeTypes.hasNext()) {
+         it = (OpendesktopMimeDetector.WeightedMimeType)_mimeTypes.next();
+         if(weight &lt; it.weight) {
+            weight = it.weight;
+         }
+
+         if(weight &gt;= it.weight) {
+            if(it.pattern.length() &gt; patternLen) {
+               patternLen = it.pattern.length();
+            }
+
+            mimeTypes.add(it);
+         }
+      }
+
+      _mimeTypes = weightedMimeTypes.iterator();
+
+      while(_mimeTypes.hasNext()) {
+         it = (OpendesktopMimeDetector.WeightedMimeType)_mimeTypes.next();
+         if(it.pattern.length() &lt; patternLen) {
+            mimeTypes.remove(it);
+         }
+      }
+
+      HashSet _mimeTypes1 = new HashSet();
+      Iterator it1 = mimeTypes.iterator();
+
+      while(it1.hasNext()) {
+         _mimeTypes1.add(it1.next());
+      }
+
+      return _mimeTypes1;
+   }
+
+   private void lookupMimeTypesForGlobFileName(File fileName, Collection mimeTypes) {
+      if(fileName != null) {
+         this.lookupGlobLiteral(fileName.getName(), mimeTypes);
+         if(mimeTypes.isEmpty()) {
+            int len = fileName.getName().length();
+            this.lookupGlobSuffix(fileName.getName(), false, len, mimeTypes);
+            if(mimeTypes.isEmpty()) {
+               this.lookupGlobSuffix(fileName.getName(), true, len, mimeTypes);
+            }
+
+            if(mimeTypes.isEmpty()) {
+               this.lookupGlobFileNameMatch(fileName.getName(), mimeTypes);
+            }
+
+         }
+      }
+   }
+
+   private void lookupGlobSuffix(String fileName, boolean ignoreCase, int len, Collection mimeTypes) {
+      int listOffset = this.getReverseSuffixTreeOffset();
+      int numEntries = this.content.getInt(listOffset);
+      int offset = this.content.getInt(listOffset + 4);
+      this.lookupGlobNodeSuffix(fileName, numEntries, offset, ignoreCase, len, mimeTypes, new StringBuffer());
+   }
+
+   private void lookupGlobNodeSuffix(String fileName, int numEntries, int offset, boolean ignoreCase, int len, Collection mimeTypes, StringBuffer pattern) {
+      char character = ignoreCase?fileName.toLowerCase().charAt(len - 1):fileName.charAt(len - 1);
+      if(character != 0) {
+         int min = 0;
+         int max = numEntries - 1;
+
+         while(max &gt;= min &amp;&amp; len &gt;= 0) {
+            int mid = (min + max) / 2;
+            char matchChar = (char)this.content.getInt(offset + 12 * mid);
+            if(matchChar &lt; character) {
+               min = mid + 1;
+            } else {
+               if(matchChar &lt;= character) {
+                  --len;
+                  int numChildren = this.content.getInt(offset + 12 * mid + 4);
+                  int childOffset = this.content.getInt(offset + 12 * mid + 8);
+                  if(len &gt; 0) {
+                     pattern.append(matchChar);
+                     this.lookupGlobNodeSuffix(fileName, numChildren, childOffset, ignoreCase, len, mimeTypes, pattern);
+                  }
+
+                  if(mimeTypes.isEmpty()) {
+                     for(int i = 0; i &lt; numChildren; ++i) {
+                        matchChar = (char)this.content.getInt(childOffset + 12 * i);
+                        if(matchChar != 0) {
+                           break;
+                        }
+
+                        int mimeOffset = this.content.getInt(childOffset + 12 * i + 4);
+                        int weight = this.content.getInt(childOffset + 12 * i + 8);
+                        mimeTypes.add(new OpendesktopMimeDetector.WeightedMimeType(this.getMimeType(mimeOffset), pattern.toString(), weight));
+                     }
+                  }
+
+                  return;
+               }
+
+               max = mid - 1;
+            }
+         }
+
+      }
+   }
+
+   private int getMaxExtents() {
+      return this.content.getInt(this.getMagicListOffset() + 4);
+   }
+
+   private String aliasLookup(String alias) {
+      int aliasListOffset = this.getAliasListOffset();
+      int min = 0;
+      int max = this.content.getInt(aliasListOffset) - 1;
+
+      while(max &gt;= min) {
+         int mid = (min + max) / 2;
+         this.content.position(aliasListOffset + 4 + mid * 8);
+         int aliasOffset = this.content.getInt();
+         int mimeOffset = this.content.getInt();
+         int cmp = this.getMimeType(aliasOffset).compareTo(alias);
+         if(cmp &lt; 0) {
+            min = mid + 1;
+         } else {
+            if(cmp &lt;= 0) {
+               return this.getMimeType(mimeOffset);
+            }
+
+            max = mid - 1;
+         }
+      }
+
+      return null;
+   }
+
+   private String unaliasMimeType(String mimeType) {
+      String lookup = this.aliasLookup(mimeType);
+      return lookup == null?mimeType:lookup;
+   }
+
+   private boolean isMimeTypeSubclass(String mimeType, String subClass) {
+      String umimeType = this.unaliasMimeType(mimeType);
+      String usubClass = this.unaliasMimeType(subClass);
+      MimeType _mimeType = new MimeType(umimeType);
+      MimeType _subClass = new MimeType(usubClass);
+      if(umimeType.compareTo(usubClass) == 0) {
+         return true;
+      } else if(this.isSuperType(usubClass) &amp;&amp; _mimeType.getMediaType().equals(_subClass.getMediaType())) {
+         return true;
+      } else if(usubClass.equals(&quot;text/plain&quot;) &amp;&amp; _mimeType.getMediaType().equals(&quot;text&quot;)) {
+         return true;
+      } else if(usubClass.equals(&quot;application/octet-stream&quot;)) {
+         return true;
+      } else {
+         int parentListOffset = this.getParentListOffset();
+         int numParents = this.content.getInt(parentListOffset);
+         int min = 0;
+         int max = numParents - 1;
+
+         while(max &gt;= min) {
+            int med = (min + max) / 2;
+            int offset = this.content.getInt(parentListOffset + 4 + 8 * med);
+            String parentMime = this.getMimeType(offset);
+            int cmp = parentMime.compareTo(umimeType);
+            if(cmp &lt; 0) {
+               min = med + 1;
+            } else {
+               if(cmp &lt;= 0) {
+                  offset = this.content.getInt(parentListOffset + 4 + 8 * med + 4);
+                  int _numParents = this.content.getInt(offset);
+
+                  for(int i = 0; i &lt; _numParents; ++i) {
+                     int parentOffset = this.content.getInt(offset + 4 + 4 * i);
+                     if(this.isMimeTypeSubclass(this.getMimeType(parentOffset), usubClass)) {
+                        return true;
+                     }
+                  }
+
+                  return false;
+               }
+
+               max = med - 1;
+            }
+         }
+
+         return false;
+      }
+   }
+
+   private boolean isSuperType(String mimeType) {
+      String type = mimeType.substring(mimeType.length() - 2);
+      return type.equals(&quot;/*&quot;);
+   }
+
+   private int getGenericIconListOffset() {
+      return this.content.getInt(36);
+   }
+
+   private int getIconListOffset() {
+      return this.content.getInt(32);
+   }
+
+   private int getNameSpaceListOffset() {
+      return this.content.getInt(28);
+   }
+
+   private int getMagicListOffset() {
+      return this.content.getInt(24);
+   }
+
+   private int getGlobListOffset() {
+      return this.content.getInt(20);
+   }
+
+   private int getReverseSuffixTreeOffset() {
+      return this.content.getInt(16);
+   }
+
+   private int getLiteralListOffset() {
+      return this.content.getInt(12);
+   }
+
+   private int getParentListOffset() {
+      return this.content.getInt(8);
+   }
+
+   private int getAliasListOffset() {
+      return this.content.getInt(4);
+   }
+
+   private short getMinorVersion() {
+      return this.content.getShort(2);
+   }
+
+   private short getMajorVersion() {
+      return this.content.getShort(0);
+   }
+
+   private String getMimeType(int offset) {
+      String mimeType = this.getString(offset);
+      MimeUtil.addKnownMimeType(new MimeType(mimeType));
+      return mimeType;
+   }
+
+   private String getString(int offset) {
+      return this.getString(offset, false);
+   }
+
+   private String getString(int offset, boolean regularExpression) {
+      int position = this.content.position();
+      this.content.position(offset);
+      StringBuffer buf = new StringBuffer();
+
+      char c1;
+      for(boolean c = false; (c1 = (char)this.content.get()) != 0; buf.append(c1)) {
+         if(regularExpression) {
+            switch(c1) {
+            case '*':
+            case '+':
+            case '?':
+               buf.append(&quot;.&quot;);
+               break;
+            case '.':
+               buf.append(&quot;\\&quot;);
+            }
+         }
+      }
+
+      this.content.position(position + 4);
+      if(regularExpression) {
+         buf.insert(0, '^');
+         buf.append('$');
+      }
+
+      return buf.toString();
+   }
+
+   public static void main(String[] args) throws Exception {
+      OpendesktopMimeDetector mimeDetector = new OpendesktopMimeDetector();
+      log.debug(mimeDetector.dump());
+      if(mimeDetector.isMimeTypeSubclass(&quot;video/x-matroska&quot;, &quot;application/x-matroska&quot;)) {
+         log.debug(&quot;video/x-matroska is a base type of application/x-matroska&quot;);
+      } else {
+         log.debug(&quot;video/x-matroska is NOT a base type of application/x-matroska&quot;);
+      }
+
+      if(mimeDetector.isMimeTypeSubclass(&quot;application/x-matroska&quot;, &quot;video/x-matroska&quot;)) {
+         log.debug(&quot;application/x-matroska is a base type of video/x-matroska&quot;);
+      } else {
+         log.debug(&quot;application/x-matroska is NOT a base type of video/x-matroska&quot;);
+      }
+
+      String fileName = &quot;src/main/java/eu/medsea/mimeutil/detector/OpendesktopMimeDetector.java&quot;;
+      Collection mimeTypes = mimeDetector.getMimeTypesFile(new File(fileName));
+      Iterator data = mimeTypes.iterator();
+
+      while(data.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + data.next());
+      }
+
+      fileName = &quot;target/classes/eu/medsea/mimeutil/detector/OpendesktopMimeDetector.class&quot;;
+      mimeTypes = mimeDetector.getMimeTypesInputStream(new FileInputStream(fileName));
+      data = mimeTypes.iterator();
+
+      while(data.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + data.next());
+      }
+
+      MimeUtil.addMimeDetector(mimeDetector);
+      fileName = &quot;/projects/mimeutil/src/test/resources/e-svg.img&quot;;
+      mimeTypes = MimeUtil.getMimeTypes(new File(fileName));
+      data = mimeTypes.iterator();
+
+      while(data.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + data.next());
+      }
+
+      fileName = &quot;/projects/mimeutil/src/test/resources/f.tar.gz&quot;;
+      mimeTypes = MimeUtil.getMimeTypes(new File(fileName));
+      data = mimeTypes.iterator();
+
+      while(data.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + data.next());
+      }
+
+      byte[] data1 = new byte[2048];
+      FileInputStream fis = new FileInputStream(fileName);
+      fis.read(data1, 0, 1024);
+      mimeTypes = MimeUtil.getMimeTypes(data1);
+      Iterator it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+      fileName = &quot;/projects/mimeutil/src/test/resources/e.svg&quot;;
+      mimeTypes = MimeUtil.getMimeTypes(new File(fileName));
+      it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+      data1 = new byte[1024];
+      fis = new FileInputStream(fileName);
+      fis.read(data1, 0, 1024);
+      mimeTypes = MimeUtil.getMimeTypes(data1);
+      it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+      MimeUtil.removeMimeDetector(MimeUtil.getMimeDetector(&quot;eu.medsea.mimeutil.detector.MagicMimeMimeDetector&quot;));
+      MimeUtil.removeMimeDetector(MimeUtil.getMimeDetector(&quot;eu.medsea.mimeutil.detector.ExtensionMimeDetector&quot;));
+      mimeTypes = MimeUtil.getMimeTypes(new File(fileName));
+      it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+      data1 = new byte[1024];
+      fis = new FileInputStream(fileName);
+      fis.read(data1, 0, 1024);
+      mimeTypes = MimeUtil.getMimeTypes(data1);
+      it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+      mimeTypes = MimeUtil.getMimeTypes((new File(fileName)).toURL().openConnection());
+      it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+      mimeTypes = MimeUtil.getMimeTypes(new BufferedInputStream(new FileInputStream(fileName)));
+      it = mimeTypes.iterator();
+
+      while(it.hasNext()) {
+         System.out.println(fileName + &quot;=&quot; + it.next());
+      }
+
+   }
+
+   static {
+      log = LogFactory.getLog(OpendesktopMimeDetector.class);
+      mimeCacheFile = &quot;/usr/share/mime/mime.cache&quot;;
+      internalMimeCacheFile = &quot;src/main/resources/mime.cache&quot;;
+      MimeUtil.addMimeDetector(new OpendesktopMimeDetector());
+   }
+
+   class WeightedMimeType extends MimeType {
+      String pattern;
+      int weight;
+
+      WeightedMimeType(String mimeType, String pattern, int weight) {
+         super(mimeType);
+         this.pattern = pattern;
+         this.weight = weight;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "15,14" });
+
+            $("<div id='15-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(15)');
+            $("<div id='14-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(14)');
+
+
+$("<a name='12389888' class='windup-file-location'></a><div class='inline-source-comment green tag-storage'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>File system - Java NIO</strong><a title='View Rule: local-storage-00005' href='windup_ruleproviders.html#local-storage-00005'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Accessing a file on a local storage in a cloud environment is not safe because, inside a running container, an application can never assume that anything stored on disk will be permanently available because a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location) will usually wipe out all local (e.g., memory and filesystem) state.<\/p><p>There are different ways to improve the application based on what the file is used for:<\/p>\n<ul>\n  <li>logging: log to stdout [1] and use a centralized log collector to analyze logs [2]<\/li>\n  <li>caching: use a cache backing service accessed [3] via a URL or other locator/credentials stored in the config (see below)<\/li>\n  <li>config: store configurations in environment variables because they are easy to change between deploys without changing any code [4][5][6]<\/li>\n  <li>storing data: use a database backing service [3] in case of relational data or a persistent storage system [7][8][9][10]<\/li>\n  <li>temporary data: file system of a running container should be used to storing files only as a brief, single-transaction cache (e.g. downloading a large file, operating on it, and storing the results of the operation in the database)<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/logs\" target=\"_blank\">Twelve-factor app - Logs<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en/openshift-container-platform/3.4/paged/installation-and-configuration/chapter-28-aggregating-container-logs\" target=\"_blank\">OpenShift - Aggregating container logs<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://12factor.net/config\" target=\"_blank\">Twelve-factor app - Config<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en/openshift-container-platform/3.4/paged/developer-guide/chapter-30-managing-environment-variables\" target=\"_blank\">OpenShift - Managing Environment Variables<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en/openshift-container-platform/3.4/paged/developer-guide/chapter-18-configmaps\" target=\"_blank\">OpenShift - ConfigMaps<\/a><\/li>\n  <li><a href=\"https://docs.openshift.com/container-platform/3.4/architecture/additional_concepts/storage.html\" target=\"_blank\">OpenShift - Persistent storage (Concepts)<\/a><\/li>\n  <li><a href=\"https://docs.openshift.com/container-platform/3.4/install_config/persistent_storage/index.html\" target=\"_blank\">OpenShift - Configure persistent storage<\/a><\/li>\n  <li><a href=\"https://blog.openshift.com/experimenting-with-persistent-volumes/\" target=\"_blank\">OpenShift - Blog post about persistent storage<\/a><\/li>\n  <li><a href=\"https://blog.openshift.com/openshift-applications-using-object-storage/\" target=\"_blank\">OpenShift - Object Storage<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#15-inlines');
+
+$("<a name='12390144' class='windup-file-location'></a><div class='inline-source-comment green tag-storage'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>File system - Java NIO</strong><a title='View Rule: local-storage-00005' href='windup_ruleproviders.html#local-storage-00005'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Accessing a file on a local storage in a cloud environment is not safe because, inside a running container, an application can never assume that anything stored on disk will be permanently available because a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location) will usually wipe out all local (e.g., memory and filesystem) state.<\/p><p>There are different ways to improve the application based on what the file is used for:<\/p>\n<ul>\n  <li>logging: log to stdout [1] and use a centralized log collector to analyze logs [2]<\/li>\n  <li>caching: use a cache backing service accessed [3] via a URL or other locator/credentials stored in the config (see below)<\/li>\n  <li>config: store configurations in environment variables because they are easy to change between deploys without changing any code [4][5][6]<\/li>\n  <li>storing data: use a database backing service [3] in case of relational data or a persistent storage system [7][8][9][10]<\/li>\n  <li>temporary data: file system of a running container should be used to storing files only as a brief, single-transaction cache (e.g. downloading a large file, operating on it, and storing the results of the operation in the database)<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/logs\" target=\"_blank\">Twelve-factor app - Logs<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en/openshift-container-platform/3.4/paged/installation-and-configuration/chapter-28-aggregating-container-logs\" target=\"_blank\">OpenShift - Aggregating container logs<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://12factor.net/config\" target=\"_blank\">Twelve-factor app - Config<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en/openshift-container-platform/3.4/paged/developer-guide/chapter-30-managing-environment-variables\" target=\"_blank\">OpenShift - Managing Environment Variables<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en/openshift-container-platform/3.4/paged/developer-guide/chapter-18-configmaps\" target=\"_blank\">OpenShift - ConfigMaps<\/a><\/li>\n  <li><a href=\"https://docs.openshift.com/container-platform/3.4/architecture/additional_concepts/storage.html\" target=\"_blank\">OpenShift - Persistent storage (Concepts)<\/a><\/li>\n  <li><a href=\"https://docs.openshift.com/container-platform/3.4/install_config/persistent_storage/index.html\" target=\"_blank\">OpenShift - Configure persistent storage<\/a><\/li>\n  <li><a href=\"https://blog.openshift.com/experimenting-with-persistent-volumes/\" target=\"_blank\">OpenShift - Blog post about persistent storage<\/a><\/li>\n  <li><a href=\"https://blog.openshift.com/openshift-applications-using-object-storage/\" target=\"_blank\">OpenShift - Object Storage<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#14-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

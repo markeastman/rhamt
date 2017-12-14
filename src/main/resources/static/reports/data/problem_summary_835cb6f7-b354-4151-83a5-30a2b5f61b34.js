@@ -1,0 +1,28 @@
+MIGRATION_ISSUES_DETAILS["835cb6f7-b354-4151-83a5-30a2b5f61b34"] = [
+{description: "<p>There is no direct mapping for <code>&lt;s:defaultAction&gt;<\/code> in JSF UI controls<\/p>", ruleID: "seam-ui-jsf-01004", issueName: "JSF Seam 2 UI control s:defaultAction",
+problemSummaryID: "835cb6f7-b354-4151-83a5-30a2b5f61b34", files: [
+{l:"<a class='' href='create_config_1_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/create-config-1.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='add_plugin_config_map_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/add-plugin-config-map.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='edit_resource_config_map_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/edit-resource-config-map.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='edit_plugin_config_map_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/edit-plugin-config-map.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='add_resource_config_simple_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/add-resource-config-simple.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='add_2_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/add-2.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='edit_connection_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/edit-connection.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='add_resource_config_map_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/add-resource-config-map.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='create_package_1_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/create-package-1.xhtml<\/a>", oc:"2"},
+{l:"<a class='' href='add_plugin_config_simple_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/add-plugin-config-simple.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='create_config_2_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/inventory/create-config-2.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='listAlertHistory_xhtml.html?project=4062208'>rhq-portal.war/rhq/resource/alert/listAlertHistory.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='listGroupAlertHistory_xhtml.html?project=4062208'>rhq-portal.war/rhq/group/alert/listGroupAlertHistory.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='history_xhtml.html?project=4062208'>rhq-portal.war/rhq/common/events/history.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='listPartitionEvents_xhtml.html?project=4062208'>rhq-portal.war/rhq/ha/listPartitionEvents.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='oobHistory_xhtml.html?project=4062208'>rhq-portal.war/rhq/subsystem/oobHistory.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='operationHistory_xhtml.html?project=4062208'>rhq-portal.war/rhq/subsystem/operationHistory.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='alertHistory_xhtml.html?project=4062208'>rhq-portal.war/rhq/subsystem/alertHistory.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='alertDefinitions_xhtml.html?project=4062208'>rhq-portal.war/rhq/subsystem/alertDefinitions.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='configurationUpdate_xhtml.html?project=4062208'>rhq-portal.war/rhq/subsystem/configurationUpdate.xhtml<\/a>", oc:"1"},
+{l:"<a class='' href='channel_xhtml.html?project=4062208'>rhq-portal.war/rhq/content/channel.xhtml<\/a>", oc:"1"},
+], resourceLinks: [
+{h:"https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html/Seam_Guide/_seam_2_ui_controls_migration_to_jsf.html", t:"Seam 2 UI controls migration to JSF"},
+]},
+];

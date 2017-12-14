@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RHQ Enterprise Server EAR - Hard-coded IP Address Files</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen">
+    <link href="resources/css/windup.java.css" rel="stylesheet" media="screen">
+    <link href="resources/img/rhamt-icon-128.png" rel="shortcut icon" type="image/x-icon"/>
+</head>
+<body role="document">
+
+    <!-- Navbar -->
+    <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="active">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+        </div>
+    </div>
+    <!-- / Navbar -->
+
+
+    <div class="container-fluid" role="main" id="report-content">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Hard-coded IP Report</div>
+                    <div class="path">rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear</div>
+                </h1>
+                <div class="desc">
+                    The hard-coded IP report lists the places where an IP address is found in the application.
+                    This may include places where the IP address is specified directly in the code rather than
+                    externalized into the configuration files.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Hard-coded IP Addresses</h3>
+        </div>
+
+            <table class="table table-striped table-bordered" id="hardcodedIPTable">
+                <tr>
+                    <th>File</th>
+                    <th>Location</th>
+                    <th>IP Address</th>
+                </tr>
+
+                <tr>
+                    <td>
+<a class='' href='DataInserter_java.html#12456192?project=4062208'>org.rhq.enterprise.server.measurement.util.DataInserter (106, 64)</a>                    </td>
+                    <td> Line: 106, Position: 64  </td>
+                    <td>  127.0.0.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='DiscoveryTestBean_java.html#12456448?project=4062208'>org.rhq.enterprise.server.test.DiscoveryTestBean (106, 51)</a>                    </td>
+                    <td> Line: 106, Position: 51  </td>
+                    <td>  127.0.0.2  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='RemoteWsInvocationHandler_java.html#12456704?project=4062208'>org.rhq.enterprise.server.remote.RemoteWsInvocationHandler (92, 83)</a>                    </td>
+                    <td> Line: 92, Position: 83  </td>
+                    <td>  127.0.0.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='MeasurementDataManagerUtility_java.html#12457984?project=4062208'>org.rhq.enterprise.server.measurement.util.MeasurementDataManagerUtility (580, 37)</a>                    </td>
+                    <td> Line: 580, Position: 37  </td>
+                    <td>  192.168.1.5  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='PDUv1_java.html#12458240?project=4062208'>org.snmp4j.PDUv1 (28, 51)</a>                    </td>
+                    <td> Line: 28, Position: 51  </td>
+                    <td>  0.0.0.0  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='PDUv1_java.html#12458496?project=4062208'>org.snmp4j.PDUv1 (72, 93)</a>                    </td>
+                    <td> Line: 72, Position: 93  </td>
+                    <td>  4.1.2.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='MultiThreadedTrapReceiver_java.html#12458752?project=4062208'>org.snmp4j.test.MultiThreadedTrapReceiver (37, 96)</a>                    </td>
+                    <td> Line: 37, Position: 96  </td>
+                    <td>  0.0.0.0  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='CoreTestBean_java.html#12459008?project=4062208'>org.rhq.enterprise.server.test.CoreTestBean (25, 45)</a>                    </td>
+                    <td> Line: 25, Position: 45  </td>
+                    <td>  127.0.0.2  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='CoreTestBean_java.html#12459264?project=4062208'>org.rhq.enterprise.server.test.CoreTestBean (27, 62)</a>                    </td>
+                    <td> Line: 27, Position: 62  </td>
+                    <td>  127.0.0.2  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='CoreTestBean_java.html#12460288?project=4062208'>org.rhq.enterprise.server.test.CoreTestBean (76, 111)</a>                    </td>
+                    <td> Line: 76, Position: 111  </td>
+                    <td>  127.0.0.2  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='DataReader_java.html#12460544?project=4062208'>org.rhq.enterprise.server.measurement.util.DataReader (91, 57)</a>                    </td>
+                    <td> Line: 91, Position: 57  </td>
+                    <td>  127.0.0.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='CoreServerServiceImpl_java.html#12460800?project=4062208'>org.rhq.enterprise.server.core.CoreServerServiceImpl (78, 37)</a>                    </td>
+                    <td> Line: 78, Position: 37  </td>
+                    <td>  127.0.0.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='CoreServerServiceImpl_java.html#12461056?project=4062208'>org.rhq.enterprise.server.core.CoreServerServiceImpl (79, 56)</a>                    </td>
+                    <td> Line: 79, Position: 56  </td>
+                    <td>  127.0.0.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='server_comm_configuration_xml.html#12461568?project=4062208'>server-comm-configuration.xml (308, 94)</a>                    </td>
+                    <td> Line: 308, Position: 94  </td>
+                    <td>  224.16.16.16  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='server_comm_configuration_xml.html#12461824?project=4062208'>server-comm-configuration.xml (309, 94)</a>                    </td>
+                    <td> Line: 309, Position: 94  </td>
+                    <td>  0.0.0.0  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='server_comm_configuration_xml.html#12462080?project=4062208'>server-comm-configuration.xml (336, 81)</a>                    </td>
+                    <td> Line: 336, Position: 81  </td>
+                    <td>  127.0.0.1  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='struts_config_xml.html#12462336?project=4062208'>rhq-portal.war/WEB-INF/struts-config.xml (2580, 47)</a>                    </td>
+                    <td> Line: 2,580, Position: 47  </td>
+                    <td>  2.2.3.2  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='struts_config_xml.html#12462592?project=4062208'>rhq-portal.war/WEB-INF/struts-config.xml (2603, 47)</a>                    </td>
+                    <td> Line: 2,603, Position: 47  </td>
+                    <td>  2.2.3.2  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='ApplicationResources_properties.html#12462848?project=4062208'>rhq-portal.war/WEB-INF/classes/ApplicationResources.properties (93, 79)</a>                    </td>
+                    <td> Line: 93, Position: 79  </td>
+                    <td>  1.2.3.4  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='server_comm_service_xml.html#12463104?project=4062208'>server-comm-service.xml (2, 30)</a>                    </td>
+                    <td> Line: 2, Position: 30  </td>
+                    <td>  1.3.2.12  </td>
+                </tr>
+                <tr>
+                    <td>
+<a class='' href='server_comm_service_xml.html#12463360?project=4062208'>server-comm-service.xml (66, 85)</a>                    </td>
+                    <td> Line: 66, Position: 85  </td>
+                    <td>  224.16.16.16  </td>
+                </tr>
+            </table>
+    </div>
+            </div>
+        </div>
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>    </div> <!-- /container -->
+
+
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/libraries/flot/jquery.flot.min.js"></script>
+    <script src="resources/libraries/flot/jquery.flot.pie.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+</body>
+</html>

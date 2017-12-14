@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for PartitionEventManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/cloud/PartitionEventManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.cloud;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.IgnoreDependency;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.cloud.PartitionEvent;
+import org.rhq.core.domain.cloud.PartitionEventType;
+import org.rhq.core.domain.cloud.PartitionEvent.ExecutionStatus;
+import org.rhq.core.domain.cloud.composite.FailoverListComposite;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.cloud.FailoverListManagerLocal;
+import org.rhq.enterprise.server.cloud.PartitionEventManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+
+@Stateless
+public class PartitionEventManagerBean implements PartitionEventManagerLocal {
+   private final Log LOG = LogFactory.getLog(PartitionEventManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   AgentManagerLocal agentManager;
+   @EJB
+   FailoverListManagerLocal failoverListManager;
+   @EJB
+   @IgnoreDependency
+   PartitionEventManagerLocal partitionEventManager;
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public FailoverListComposite agentPartitionEvent(Subject subject, String agentName, PartitionEventType eventType, String eventDetail) {
+      if(!eventType.isCloudPartitionEvent() &amp;&amp; null != agentName) {
+         Agent agent = this.agentManager.getAgentByName(agentName);
+         if(null == agent) {
+            throw new IllegalArgumentException(&quot;Can not perform partition event, agent not found with name: &quot; + agentName);
+         } else {
+            PartitionEvent partitionEvent = new PartitionEvent(subject.getName(), eventType, eventDetail, ExecutionStatus.IMMEDIATE);
+            this.partitionEventManager.createPartitionEvent(subject, partitionEvent);
+            return this.failoverListManager.getForSingleAgent(partitionEvent, agent.getName());
+         }
+      } else {
+         throw new IllegalArgumentException(&quot;Invalid agent partition event or no agent specified for event type: &quot; + eventType);
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void createPartitionEvent(Subject subject, PartitionEvent partitionEvent) {
+      this.entityManager.persist(partitionEvent);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public Map cloudPartitionEvent(Subject subject, PartitionEventType eventType, String eventDetail) {
+      if(!eventType.isCloudPartitionEvent()) {
+         throw new IllegalArgumentException(&quot;Invalid cloud partition event type: &quot; + eventType);
+      } else {
+         PartitionEvent partitionEvent = new PartitionEvent(subject.getName(), eventType, eventDetail, ExecutionStatus.IMMEDIATE);
+         this.entityManager.persist(partitionEvent);
+         return this.failoverListManager.refresh(partitionEvent);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void cloudPartitionEventRequest(Subject subject, PartitionEventType eventType, String eventDetail) {
+      if(!eventType.isCloudPartitionEvent()) {
+         throw new IllegalArgumentException(&quot;Invalid cloud partition event type: &quot; + eventType);
+      } else {
+         PartitionEvent partitionEvent = new PartitionEvent(subject.getName(), eventType, eventDetail, ExecutionStatus.REQUESTED);
+         this.entityManager.persist(partitionEvent);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void auditPartitionEvent(Subject subject, PartitionEventType eventType, String eventDetail) {
+      PartitionEvent partitionEvent = new PartitionEvent(subject.getName(), eventType, eventDetail, ExecutionStatus.AUDIT);
+      this.entityManager.persist(partitionEvent);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void deletePartitionEvents(Subject subject, Integer[] partitionEventIds) {
+      Integer[] arr$ = partitionEventIds;
+      int len$ = partitionEventIds.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         int partitionEventId = arr$[i$].intValue();
+         PartitionEvent doomedEvent = (PartitionEvent)this.entityManager.find(PartitionEvent.class, Integer.valueOf(partitionEventId));
+         this.entityManager.remove(doomedEvent);
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public int purgeAllEvents(Subject subject) {
+      PageList events = this.getPartitionEvents(subject, (PartitionEventType)null, (ExecutionStatus)null, (String)null, PageControl.getUnlimitedInstance());
+      int i = 0;
+      Integer[] eventIds = new Integer[events.size()];
+
+      PartitionEvent event;
+      for(Iterator i$ = events.iterator(); i$.hasNext(); eventIds[i++] = Integer.valueOf(event.getId())) {
+         event = (PartitionEvent)i$.next();
+      }
+
+      this.deletePartitionEvents(subject, eventIds);
+      return eventIds.length;
+   }
+
+   public void processRequestedPartitionEvents() {
+      boolean completedRequest = false;
+      Query query = this.entityManager.createNamedQuery(&quot;PartitionEvent.findByExecutionStatus&quot;);
+      query.setParameter(&quot;executionStatus&quot;, ExecutionStatus.REQUESTED);
+      List requestedPartitionEvents = query.getResultList();
+
+      PartitionEvent next;
+      for(Iterator i$ = requestedPartitionEvents.iterator(); i$.hasNext(); next.setExecutionStatus(ExecutionStatus.COMPLETED)) {
+         next = (PartitionEvent)i$.next();
+         if(!completedRequest) {
+            if(!next.getEventType().isCloudPartitionEvent()) {
+               this.LOG.warn(&quot;Invalid cloud partition event type: &quot; + next.getEventType());
+            }
+
+            try {
+               this.failoverListManager.refresh(next);
+               completedRequest = true;
+            } catch (Exception var7) {
+               this.LOG.warn(&quot;Failed requested partition event. Setting COMPLETED to avoid repeated failure: &quot; + var7);
+            }
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PartitionEvent getPartitionEvent(Subject subject, int partitionEventId) {
+      PartitionEvent event = (PartitionEvent)this.entityManager.find(PartitionEvent.class, Integer.valueOf(partitionEventId));
+      return event;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getPartitionEvents(Subject subject, PartitionEventType type, ExecutionStatus status, String details, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;pe.ctime&quot;, PageOrdering.DESC);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PartitionEvent.findAll&quot;, pageControl);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PartitionEvent.findAll&quot;);
+      details = PersistenceUtility.formatSearchParameter(details);
+      query.setParameter(&quot;type&quot;, type);
+      countQuery.setParameter(&quot;type&quot;, type);
+      query.setParameter(&quot;status&quot;, status);
+      countQuery.setParameter(&quot;status&quot;, status);
+      query.setParameter(&quot;details&quot;, details);
+      countQuery.setParameter(&quot;details&quot;, details);
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getPartitionEventDetails(Subject subject, int partitionEventId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;ped.id&quot;, PageOrdering.ASC);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PartitionEventDetails.findByEventId&quot;, pageControl);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PartitionEventDetails.findByEventId&quot;);
+      query.setParameter(&quot;eventId&quot;, Integer.valueOf(partitionEventId));
+      countQuery.setParameter(&quot;eventId&quot;, Integer.valueOf(partitionEventId));
+      List detailsList = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(detailsList, (int)count, pageControl);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

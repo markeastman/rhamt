@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for DiscoveryBossBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/discovery/DiscoveryBossBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.discovery;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.security.auth.login.LoginException;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import org.rhq.core.clientapi.agent.PluginContainerException;
+import org.rhq.core.clientapi.agent.discovery.InvalidPluginConfigurationClientException;
+import org.rhq.core.clientapi.server.discovery.InvalidInventoryReportException;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.configuration.Configuration;
+import org.rhq.core.domain.discovery.InventoryReport;
+import org.rhq.core.domain.discovery.MergeResourceResponse;
+import org.rhq.core.domain.discovery.ResourceSyncInfo;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.ProductVersion;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceCategory;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.discovery.DiscoveryBossLocal;
+import org.rhq.enterprise.server.discovery.DiscoveryBossRemote;
+import org.rhq.enterprise.server.resource.ProductVersionManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceAlreadyExistsException;
+import org.rhq.enterprise.server.resource.ResourceAvailabilityManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+
+@Stateless
+public class DiscoveryBossBean implements DiscoveryBossLocal, DiscoveryBossRemote {
+   private final Log log = LogFactory.getLog(DiscoveryBossBean.class.getName());
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private DiscoveryBossLocal discoveryBoss;
+   @EJB
+   private ResourceGroupManagerLocal groupManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   private ResourceAvailabilityManagerLocal resourceAvailabilityManager;
+   @EJB
+   private ResourceTypeManagerLocal resourceTypeManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private ProductVersionManagerLocal productVersionManager;
+
+   public ResourceSyncInfo mergeInventoryReport(InventoryReport report) throws InvalidInventoryReportException {
+      this.validateInventoryReport(report);
+      Agent agent = report.getAgent();
+      long start = System.currentTimeMillis();
+      Agent knownAgent = this.agentManager.getAgentByName(agent.getName());
+      if(knownAgent == null) {
+         throw new InvalidInventoryReportException(&quot;Unknown Agent named [&quot; + agent.getName() + &quot;] sent an inventory report - that report will be ignored&quot;);
+      } else {
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;Received inventory report from RHQ Agent [&quot; + knownAgent + &quot;]. Number of added roots: &quot; + report.getAddedRoots().size());
+         }
+
+         Set roots = report.getAddedRoots();
+         this.log.debug(report);
+         Iterator platform = roots.iterator();
+
+         while(true) {
+            Resource syncInfo;
+            long rootStart;
+            do {
+               if(!platform.hasNext()) {
+                  Resource platform1 = this.resourceManager.getPlatform(knownAgent);
+                  ResourceSyncInfo syncInfo1 = (ResourceSyncInfo)this.entityManager.find(ResourceSyncInfo.class, Integer.valueOf(platform1.getId()));
+                  if(this.log.isDebugEnabled()) {
+                     this.log.debug(&quot;Inventory merge completed in (&quot; + (System.currentTimeMillis() - start) + &quot;)ms&quot;);
+                  }
+
+                  return syncInfo1;
+               }
+
+               syncInfo = (Resource)platform.next();
+               rootStart = System.currentTimeMillis();
+            } while(!this.initResourceTypes(syncInfo));
+
+            if(syncInfo.getParentResource() != Resource.ROOT &amp;&amp; syncInfo.getParentResource().getId() != -1) {
+               Resource parent = this.getExistingResource(syncInfo.getParentResource());
+
+               assert parent != null;
+
+               this.mergeResource(syncInfo, parent, knownAgent);
+            } else {
+               this.mergeResource(syncInfo, Resource.ROOT, knownAgent);
+            }
+
+            this.entityManager.flush();
+            this.entityManager.clear();
+            if(this.log.isDebugEnabled()) {
+               this.log.debug(&quot;Root merged: resource/millis=&quot; + syncInfo.getName() + '/' + (System.currentTimeMillis() - rootStart));
+            }
+         }
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public Map getQueuedPlatformsAndServers(Subject user, PageControl pc) {
+      HashMap queuedResources = new HashMap();
+      PageList queuedPlatforms = this.getQueuedPlatforms(user, EnumSet.of(InventoryStatus.NEW), pc);
+      Iterator i$ = queuedPlatforms.iterator();
+
+      while(i$.hasNext()) {
+         Resource platform = (Resource)i$.next();
+         List queuedServers = this.getQueuedPlatformChildServers(user, InventoryStatus.NEW, platform);
+         ArrayList servers = new ArrayList();
+         Iterator i$1 = queuedServers.iterator();
+
+         while(i$1.hasNext()) {
+            Resource server = (Resource)i$1.next();
+            servers.add(server);
+         }
+
+         queuedResources.put(platform, servers);
+      }
+
+      return queuedResources;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getQueuedPlatforms(Subject user, EnumSet statuses, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;res.ctime&quot;, PageOrdering.DESC);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findQueuedPlatformsByInventoryStatus&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findQueuedPlatformsByInventoryStatus&quot;, pc);
+      queryCount.setParameter(&quot;inventoryStatuses&quot;, statuses);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;inventoryStatuses&quot;, statuses);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public List getQueuedPlatformChildServers(Subject user, InventoryStatus status, Resource platform) {
+      PageList childServers = this.resourceManager.findChildResourcesByCategoryAndInventoryStatus(user, platform, ResourceCategory.SERVER, status, PageControl.getUnlimitedInstance());
+      return childServers;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void updateInventoryStatus(Subject user, List platforms, List servers, InventoryStatus status) {
+      long start = System.currentTimeMillis();
+      ArrayList attachedPlatforms = new ArrayList(platforms.size());
+      Iterator attachedServers = platforms.iterator();
+
+      while(attachedServers.hasNext()) {
+         Resource i$ = (Resource)attachedServers.next();
+         attachedPlatforms.add(this.entityManager.find(Resource.class, Integer.valueOf(i$.getId())));
+      }
+
+      ArrayList platforms1 = attachedPlatforms;
+      ArrayList attachedServers1 = new ArrayList(servers.size());
+      Iterator i$1 = servers.iterator();
+
+      Resource server;
+      while(i$1.hasNext()) {
+         server = (Resource)i$1.next();
+         attachedServers1.add(this.entityManager.find(Resource.class, Integer.valueOf(server.getId())));
+      }
+
+      this.discoveryBoss.updateInventoryStatus(user, status, attachedPlatforms, attachedServers1);
+      i$1 = attachedPlatforms.iterator();
+
+      AgentClient agentClient;
+      while(i$1.hasNext()) {
+         server = (Resource)i$1.next();
+         agentClient = this.agentManager.getAgentClient(server.getAgent());
+
+         try {
+            agentClient.getDiscoveryAgentService().synchronizeInventory((ResourceSyncInfo)this.entityManager.find(ResourceSyncInfo.class, Integer.valueOf(server.getId())));
+         } catch (Exception var14) {
+            this.log.warn(&quot;Could not perform commit synchronization with agent for platform [&quot; + server.getName() + &quot;]&quot;, var14);
+         }
+      }
+
+      i$1 = attachedServers1.iterator();
+
+      while(i$1.hasNext()) {
+         server = (Resource)i$1.next();
+         if(!platforms1.contains(server.getParentResource())) {
+            agentClient = this.agentManager.getAgentClient(server.getAgent());
+
+            try {
+               agentClient.getDiscoveryAgentService().synchronizeInventory((ResourceSyncInfo)this.entityManager.find(ResourceSyncInfo.class, Integer.valueOf(server.getId())));
+            } catch (Exception var13) {
+               this.log.warn(&quot;Could not perform commit synchronization with agent for server [&quot; + server.getName() + &quot;]&quot;, var13);
+            }
+         }
+      }
+
+      if(this.log.isDebugEnabled()) {
+         this.log.debug(&quot;Inventory status set to [&quot; + status + &quot;] for [&quot; + platforms1.size() + &quot;] platforms and [&quot; + attachedServers1.size() + &quot;] servers in [&quot; + (System.currentTimeMillis() - start) + &quot;]ms&quot;);
+      }
+
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void updateInventoryStatus(Subject user, InventoryStatus status, List platforms, List servers) {
+      Iterator allResourceIds = platforms.iterator();
+
+      Resource i$;
+      while(allResourceIds.hasNext()) {
+         i$ = (Resource)allResourceIds.next();
+         this.resourceManager.setResourceStatus(user, i$, status, false);
+      }
+
+      allResourceIds = servers.iterator();
+
+      while(allResourceIds.hasNext()) {
+         i$ = (Resource)allResourceIds.next();
+         this.resourceManager.setResourceStatus(user, i$, status, true);
+      }
+
+      if(status == InventoryStatus.COMMITTED) {
+         ArrayList allResourceIds1 = new ArrayList();
+         Iterator i$1 = platforms.iterator();
+
+         Resource server;
+         while(i$1.hasNext()) {
+            server = (Resource)i$1.next();
+            allResourceIds1.add(Integer.valueOf(server.getId()));
+         }
+
+         i$1 = servers.iterator();
+
+         while(i$1.hasNext()) {
+            server = (Resource)i$1.next();
+            allResourceIds1.add(Integer.valueOf(server.getId()));
+         }
+
+         this.resourceAvailabilityManager.insertNeededAvailabilityForImportedResources(allResourceIds1);
+      }
+
+   }
+
+   @NotNull
+   public MergeResourceResponse manuallyAddResource(Subject user, ResourceType resourceType, int parentResourceId, Configuration pluginConfiguration) throws InvalidPluginConfigurationClientException, PluginContainerException {
+      if(!this.authorizationManager.hasResourcePermission(user, Permission.CREATE_CHILD_RESOURCES, parentResourceId)) {
+         throw new PermissionException(&quot;You do not have permission on resource with id &quot; + parentResourceId + &quot; to manually add child resources.&quot;);
+      } else {
+         try {
+            Resource e = this.resourceManager.getResourceById(user, parentResourceId);
+            AgentClient agentClient = this.agentManager.getAgentClient(e.getAgent());
+            MergeResourceResponse mergeResourceResponse = agentClient.getDiscoveryAgentService().manuallyAddResource(resourceType, parentResourceId, pluginConfiguration, user.getId());
+            return mergeResourceResponse;
+         } catch (RuntimeException var8) {
+            throw new RuntimeException(&quot;Error adding &quot; + resourceType.getName() + &quot; resource to inventory as a child of the resource with id &quot; + parentResourceId + &quot; - cause: &quot; + var8.getLocalizedMessage(), var8);
+         }
+      }
+   }
+
+   public MergeResourceResponse addResource(Resource resource, int creatorSubjectId) {
+      try {
+         this.validateResource(resource);
+      } catch (InvalidInventoryReportException var10) {
+         throw new IllegalStateException(&quot;Plugin Container sent an invalid Resource - &quot; + var10.getLocalizedMessage());
+      }
+
+      if(!this.initResourceTypes(resource)) {
+         throw new IllegalStateException(&quot;Plugin Container sent a Resource with an unknown type - &quot; + resource.getResourceType());
+      } else {
+         Resource existingResource = this.getExistingResource(resource);
+         MergeResourceResponse mergeResourceResponse;
+         if(existingResource != null) {
+            mergeResourceResponse = new MergeResourceResponse(existingResource.getId(), true);
+         } else {
+            Subject creator = this.subjectManager.getSubjectById(creatorSubjectId);
+
+            try {
+               creator = this.subjectManager.loginUnauthenticated(creator.getName(), true);
+            } catch (LoginException var9) {
+               throw new IllegalStateException(&quot;Unable to temporarily login to provided resource creator user for resource creation&quot;, var9);
+            }
+
+            Resource parentResource = this.resourceManager.getResourceById(creator, resource.getParentResource().getId());
+            resource.setAgent(parentResource.getAgent());
+            resource.setModifiedBy(creator);
+            resource.setInventoryStatus(InventoryStatus.COMMITTED);
+            resource.setItime(System.currentTimeMillis());
+
+            try {
+               this.resourceManager.createResource(creator, resource, parentResource.getId());
+            } catch (ResourceAlreadyExistsException var8) {
+               throw new IllegalStateException(var8);
+            }
+
+            mergeResourceResponse = new MergeResourceResponse(resource.getId(), false);
+         }
+
+         return mergeResourceResponse;
+      }
+   }
+
+   public boolean updateResourceVersion(int resourceId, String version) {
+      Resource existingResource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(existingResource != null) {
+         boolean changed = this.updateResourceVersion(existingResource, version);
+         if(changed) {
+            this.entityManager.merge(existingResource);
+         }
+
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   private boolean updateResourceVersion(Resource resource, String newVersion) {
+      boolean versionChanged = false;
+      if(resource != null) {
+         String oldVersion = resource.getVersion();
+         if(oldVersion == null) {
+            oldVersion = &quot;&quot;;
+         }
+
+         if(newVersion == null) {
+            newVersion = &quot;&quot;;
+         }
+
+         versionChanged = !oldVersion.equals(newVersion);
+         if(versionChanged) {
+            this.log.info(&quot;Resource [&quot; + resource + &quot;] changed its version from [&quot; + oldVersion + &quot;] to [&quot; + newVersion + &quot;]&quot;);
+            resource.setVersion(newVersion);
+            ProductVersion productVersion = null;
+            if(newVersion.length() &gt; 0) {
+               productVersion = this.productVersionManager.addProductVersion(resource.getResourceType(), newVersion);
+            }
+
+            resource.setProductVersion(productVersion);
+         }
+      }
+
+      return versionChanged;
+   }
+
+   private void validateInventoryReport(InventoryReport report) throws InvalidInventoryReportException {
+      Iterator i$ = report.getAddedRoots().iterator();
+
+      while(i$.hasNext()) {
+         Resource root = (Resource)i$.next();
+         this.validateResource(root);
+      }
+
+   }
+
+   private void validateResource(Resource resource) throws InvalidInventoryReportException {
+      if(resource.getResourceType() == null) {
+         throw new InvalidInventoryReportException(&quot;Reported resource [&quot; + resource + &quot;] has a null type.&quot;);
+      } else if(resource.getResourceKey() == null) {
+         throw new InvalidInventoryReportException(&quot;Reported resource [&quot; + resource + &quot;] has a null key.&quot;);
+      } else if(resource.getInventoryStatus() == InventoryStatus.DELETED) {
+         throw new InvalidInventoryReportException(&quot;Reported resource [&quot; + resource + &quot;] has an illegal inventory status of \'DELETED\' - agents are not allowed to delete platforms from inventory.&quot;);
+      } else {
+         Iterator i$ = resource.getChildResources().iterator();
+
+         while(i$.hasNext()) {
+            Resource childResource = (Resource)i$.next();
+            this.validateResource(childResource);
+         }
+
+      }
+   }
+
+   private void mergeResource(@NotNull Resource resource, @Nullable Resource parentResource, @NotNull Agent agent) throws InvalidInventoryReportException {
+      long start = System.currentTimeMillis();
+      this.log.debug(&quot;Merging [&quot; + resource + &quot;]...&quot;);
+      Resource existingResource = this.getExistingResource(resource);
+      if(existingResource != null) {
+         this.updatePreviouslyInventoriedResource(resource, existingResource, parentResource);
+      } else {
+         this.presetAgent(resource, agent);
+         this.addResourceToInventory(resource, parentResource);
+      }
+
+      if(this.log.isDebugEnabled()) {
+         this.log.debug(&quot;Resource merged: resource/millis=&quot; + resource.getName() + '/' + (System.currentTimeMillis() - start));
+      }
+
+   }
+
+   private void presetAgent(Resource resource, Agent agent) {
+      resource.setAgent(agent);
+      Iterator i$ = resource.getChildResources().iterator();
+
+      while(i$.hasNext()) {
+         Resource child = (Resource)i$.next();
+         this.presetAgent(child, agent);
+      }
+
+   }
+
+   private Resource getExistingResource(Resource resource) {
+      Resource existingResource = null;
+      this.log.debug(&quot;getExistingResource processing for [&quot; + resource + &quot;]&quot;);
+      String idLogMsg = &quot;id=&quot; + resource.getId();
+      if(resource.getId() != 0) {
+         this.log.debug(idLogMsg + &quot;: Agent claims resource is already in inventory.&quot;);
+         existingResource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resource.getId()));
+         if(existingResource == null) {
+            this.log.debug(idLogMsg + &quot;: However, no resource exists with the specified id.&quot;);
+         } else {
+            this.log.debug(idLogMsg + &quot;: Found resource already in inventory with specified id&quot;);
+         }
+      } else {
+         this.log.debug(idLogMsg + &quot;: Agent reported resource with id of 0.&quot;);
+      }
+
+      if(existingResource == null) {
+         this.log.debug(idLogMsg + &quot;: Checking if a resource exists with the specified business key.&quot;);
+         ResourceType resourceType = resource.getResourceType();
+         existingResource = this.resourceManager.getResourceByParentAndKey(this.subjectManager.getOverlord(), resource.getParentResource(), resource.getResourceKey(), resourceType.getPlugin(), resourceType.getName());
+         if(existingResource != null) {
+            resource.setId(existingResource.getId());
+            this.log.debug(idLogMsg + &quot;: Found resource already in inventory with specified business key&quot;);
+         } else {
+            this.log.debug(idLogMsg + &quot;: Unable to find the agent-reported resource by id and business key.&quot;);
+            if(resource.getId() != 0) {
+               this.log.error(idLogMsg + &quot;: Resetting the resource\'s id to zero.&quot;);
+               resource.setId(0);
+            } else {
+               this.log.debug(idLogMsg + &quot;: Resource\'s id was already zero, nothing to do for the merge.&quot;);
+            }
+         }
+      }
+
+      if(existingResource != null) {
+         existingResource.getChildResources().size();
+      }
+
+      return existingResource;
+   }
+
+   private void updatePreviouslyInventoriedResource(Resource resource, Resource existingResource, Resource parentResource) throws InvalidInventoryReportException {
+      assert parentResource == null || parentResource.getId() != 0;
+
+      if(existingResource.getDescription() == null &amp;&amp; resource.getDescription() != null) {
+         this.log.debug(&quot;Setting description of existing resource with id &quot; + existingResource.getId() + &quot; to \'&quot; + resource.getDescription() + &quot;\' (as reported by agent)...&quot;);
+         existingResource.setDescription(resource.getDescription());
+      }
+
+      if(existingResource.getResourceKey() != null &amp;&amp; !existingResource.getResourceKey().equals(resource.getResourceKey())) {
+         this.log.warn(&quot;Agent reported that key for &quot; + existingResource + &quot; has changed from \'&quot; + existingResource.getResourceKey() + &quot;\' to \'&quot; + resource.getResourceKey() + &quot;\'.&quot;);
+      }
+
+      this.updateResourceVersion(existingResource, resource.getVersion());
+      if(existingResource.getInventoryStatus() == InventoryStatus.DELETED) {
+         existingResource.setInventoryStatus(InventoryStatus.COMMITTED);
+         existingResource.setPluginConfiguration(resource.getPluginConfiguration());
+      }
+
+      Iterator i$ = resource.getChildResources().iterator();
+
+      while(i$.hasNext()) {
+         Resource childResource = (Resource)i$.next();
+         this.mergeResource(childResource, existingResource, existingResource.getAgent());
+      }
+
+   }
+
+   private boolean initResourceTypes(Resource resource) {
+      ResourceType resourceType = this.resourceTypeManager.getResourceTypeByNameAndPlugin(resource.getResourceType().getName(), resource.getResourceType().getPlugin());
+      if(resourceType == null) {
+         this.log.error(&quot;Reported resource [&quot; + resource + &quot;] has an unknown type [&quot; + resource.getResourceType() + &quot;]. The Agent most likely has a plugin named \'&quot; + resource.getResourceType().getPlugin() + &quot;\' installed that is not installed on the Server. Resource will be ignored...&quot;);
+         return false;
+      } else {
+         resource.setResourceType(resourceType);
+         Iterator childIterator = resource.getChildResources().iterator();
+
+         while(childIterator.hasNext()) {
+            Resource child = (Resource)childIterator.next();
+            if(!this.initResourceTypes(child)) {
+               childIterator.remove();
+            }
+         }
+
+         return true;
+      }
+   }
+
+   private void addResourceToInventory(Resource resource, Resource parentResource) {
+      this.log.debug(&quot;New resource [&quot; + resource + &quot;] reported - adding to inventory with status \'NEW\'...&quot;);
+      this.initAutoDiscoveredResource(resource, parentResource);
+      this.entityManager.persist(resource);
+      if(parentResource != null) {
+         parentResource.addChildResource(resource);
+      }
+
+      this.addProductVersionsRecursively(resource);
+      if(parentResource != null) {
+         this.groupManager.updateImplicitGroupMembership(this.subjectManager.getOverlord(), resource);
+      }
+
+      this.entityManager.flush();
+      this.entityManager.clear();
+   }
+
+   private void addProductVersionsRecursively(Resource resource) {
+      if(resource.getVersion() != null &amp;&amp; resource.getVersion().length() &gt; 0) {
+         ResourceType i$ = resource.getResourceType();
+         ProductVersion child = this.productVersionManager.addProductVersion(i$, resource.getVersion());
+         resource.setProductVersion(child);
+      }
+
+      Iterator i$1 = resource.getChildResources().iterator();
+
+      while(i$1.hasNext()) {
+         Resource child1 = (Resource)i$1.next();
+         this.addProductVersionsRecursively(child1);
+      }
+
+   }
+
+   private void initAutoDiscoveredResource(Resource resource, Resource parent) {
+      if(resource.getParentResource() == null || resource.getParentResource().getInventoryStatus() != InventoryStatus.COMMITTED || resource.getResourceType().getCategory() != ResourceCategory.SERVICE &amp;&amp; resource.getParentResource().getResourceType().getCategory() != ResourceCategory.SERVER) {
+         resource.setInventoryStatus(InventoryStatus.NEW);
+      } else {
+         resource.setInventoryStatus(InventoryStatus.COMMITTED);
+      }
+
+      resource.setItime(System.currentTimeMillis());
+      resource.setModifiedBy(this.subjectManager.getOverlord());
+      Iterator i$ = resource.getChildResources().iterator();
+
+      while(i$.hasNext()) {
+         Resource childResource = (Resource)i$.next();
+         this.initAutoDiscoveredResource(childResource, resource);
+      }
+
+   }
+
+   public void importResources(Subject subject, Integer[] resourceIds) {
+      if(resourceIds != null &amp;&amp; resourceIds.length != 0) {
+         this.checkStatus(subject, resourceIds, InventoryStatus.COMMITTED, EnumSet.of(InventoryStatus.NEW));
+      }
+   }
+
+   public void ignoreResources(Subject subject, Integer[] resourceIds) {
+      if(resourceIds != null &amp;&amp; resourceIds.length != 0) {
+         this.checkStatus(subject, resourceIds, InventoryStatus.IGNORED, EnumSet.of(InventoryStatus.NEW));
+      }
+   }
+
+   public void unignoreResources(Subject subject, Integer[] resourceIds) {
+      if(resourceIds != null &amp;&amp; resourceIds.length != 0) {
+         this.checkStatus(subject, resourceIds, InventoryStatus.NEW, EnumSet.of(InventoryStatus.IGNORED));
+      }
+   }
+
+   private void checkStatus(Subject subject, Integer[] resourceIds, InventoryStatus target, EnumSet validStatuses) {
+      Query query = this.entityManager.createQuery(&quot;  SELECT res.inventoryStatus     FROM Resource res    WHERE res.id IN ( :resourceIds ) GROUP BY res.inventoryStatus &quot;);
+      query.setParameter(&quot;resourceIds&quot;, Arrays.asList(resourceIds));
+      List results = query.getResultList();
+      Iterator resources = validStatuses.iterator();
+
+      while(resources.hasNext()) {
+         InventoryStatus platforms = (InventoryStatus)resources.next();
+         results.remove(platforms);
+      }
+
+      if(results.size() &gt; 0) {
+         throw new IllegalArgumentException(&quot;Can only commit resources with status: &quot; + results);
+      } else {
+         PageList resources1 = this.resourceManager.findResourceByIds(subject, ArrayUtils.unwrapArray(resourceIds), false, PageControl.getUnlimitedInstance());
+         ArrayList platforms1 = new ArrayList();
+         ArrayList servers = new ArrayList();
+         Iterator i$ = resources1.iterator();
+
+         while(i$.hasNext()) {
+            Resource res = (Resource)i$.next();
+            ResourceCategory category = res.getResourceType().getCategory();
+            if(category == ResourceCategory.PLATFORM) {
+               platforms1.add(res);
+            } else {
+               if(category != ResourceCategory.SERVER) {
+                  throw new IllegalArgumentException(&quot;Can not directly change the inventory status of a service&quot;);
+               }
+
+               servers.add(res);
+            }
+         }
+
+         this.updateInventoryStatus(subject, (List)platforms1, servers, (InventoryStatus)target);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

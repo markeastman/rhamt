@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for CoreServerServiceImpl.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/core/CoreServerServiceImpl.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">2</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.core;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.clientapi.server.core.AgentNotSupportedException;
+import org.rhq.core.clientapi.server.core.AgentRegistrationException;
+import org.rhq.core.clientapi.server.core.AgentRegistrationRequest;
+import org.rhq.core.clientapi.server.core.AgentRegistrationResults;
+import org.rhq.core.clientapi.server.core.AgentVersion;
+import org.rhq.core.clientapi.server.core.ConnectAgentRequest;
+import org.rhq.core.clientapi.server.core.ConnectAgentResults;
+import org.rhq.core.clientapi.server.core.CoreServerService;
+import org.rhq.core.domain.cloud.PartitionEventType;
+import org.rhq.core.domain.cloud.Server;
+import org.rhq.core.domain.cloud.composite.FailoverListComposite;
+import org.rhq.core.domain.plugin.Plugin;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.util.exception.WrappedRemotingException;
+import org.rhq.enterprise.communications.command.client.RemoteInputStream;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.cloud.FailoverListManagerLocal;
+import org.rhq.enterprise.server.cloud.PartitionEventManagerLocal;
+import org.rhq.enterprise.server.cloud.instance.ServerManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.core.comm.ServerCommunicationsServiceMBean;
+import org.rhq.enterprise.server.core.comm.ServerCommunicationsServiceUtil;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+public class CoreServerServiceImpl implements CoreServerService {
+   private final Log log = LogFactory.getLog(CoreServerServiceImpl.class);
+   private AgentManagerLocal agentManager;
+   private AlertConditionCacheManagerLocal alertConditionCacheManager;
+   private FailoverListManagerLocal failoverListManager;
+   private PartitionEventManagerLocal partitionEventManager;
+   private ServerManagerLocal serverManager;
+   private SubjectManagerLocal subjectManager;
+
+   public AgentRegistrationResults registerAgent(AgentRegistrationRequest request) throws AgentRegistrationException, AgentNotSupportedException {
+      if(!this.getAgentManager().isAgentVersionSupported(request.getAgentVersion())) {
+         this.log.warn(&quot;Agent [&quot; + request.getName() + &quot;][&quot; + request.getAddress() + ':' + request.getPort() + &quot;][&quot; + request.getAgentVersion() + &quot;] would like to register with this server but it is not supported&quot;);
+         throw new AgentNotSupportedException(&quot;Agent [&quot; + request.getName() + &quot;] is an unsupported agent: &quot; + request.getAgentVersion());
+      } else {
+         this.pingEndpoint(request.getRemoteEndpoint());
+         Agent agentByName = this.getAgentManager().getAgentByName(request.getName());
+         Agent registeringServer;
+         String failoverList;
+         if(request.getOriginalToken() != null) {
+            registeringServer = this.getAgentManager().getAgentByAgentToken(request.getOriginalToken());
+            if(registeringServer != null &amp;&amp; !registeringServer.getName().equals(request.getName())) {
+               failoverList = &quot;The agent asking for registration is already registered with the name [&quot; + registeringServer.getName() + &quot;], it cannot change its name to [&quot; + request.getName() + &quot;]&quot;;
+               throw new AgentRegistrationException(failoverList);
+            }
+         } else {
+            registeringServer = this.getAgentManager().getAgentByAddressAndPort(request.getAddress(), request.getPort());
+            if(registeringServer != null &amp;&amp; !registeringServer.getName().equals(request.getName())) {
+               failoverList = &quot;The agent asking for registration is trying to register the same address/port [&quot; + request.getAddress() + &quot;:&quot; + request.getPort() + &quot;] that is already registered under a different name [&quot; + registeringServer.getName() + &quot;]; if this new agent is actually the same as the original, then re-register with the same name&quot;;
+               throw new AgentRegistrationException(failoverList);
+            }
+         }
+
+         Server registeringServer1 = this.getServerManager().getServer();
+
+         try {
+            failoverList = request.getAddress();
+            String results = request.getRemoteEndpoint();
+            boolean loopbackRegistration = false;
+            if(!failoverList.equals(&quot;127.0.0.1&quot;) &amp;&amp; !failoverList.equalsIgnoreCase(&quot;localhost&quot;)) {
+               if(results != null &amp;&amp; (results.contains(&quot;127.0.0.1&quot;) || results.contains(&quot;localhost&quot;))) {
+                  loopbackRegistration = true;
+               }
+            } else {
+               loopbackRegistration = true;
+            }
+
+            if(loopbackRegistration) {
+               this.log.warn(&quot;An agent [&quot; + request.getName() + &quot;] has registered with a loopback address. This should only be done &quot; + &quot;for testing or demo purposes - this agent can only ever interact with this server. &quot; + request);
+            }
+         } catch (Exception var9) {
+            ;
+         }
+
+         if(agentByName != null) {
+            this.log.info(&quot;Got agent registration request for existing agent: &quot; + agentByName.getName() + &quot;[&quot; + agentByName.getAddress() + &quot;:&quot; + agentByName.getPort() + &quot;][&quot; + request.getAgentVersion() + &quot;] - Will &quot; + (request.getRegenerateToken()?&quot;&quot;:&quot;not&quot;) + &quot; regenerate a new token&quot;);
+            agentByName.setServer(registeringServer1);
+            agentByName.setAddress(request.getAddress());
+            agentByName.setPort(request.getPort());
+            agentByName.setRemoteEndpoint(request.getRemoteEndpoint());
+            if(request.getRegenerateToken()) {
+               agentByName.setAgentToken(Agent.generateRandomToken(request.getName()));
+            }
+
+            try {
+               this.agentManager.updateAgent(agentByName);
+            } catch (Exception var8) {
+               this.log.warn(&quot;Could not update the agent in database&quot;, var8);
+               throw new AgentRegistrationException(new WrappedRemotingException(var8));
+            }
+         } else {
+            this.log.info(&quot;Got agent registration request for new agent: &quot; + request.getName() + &quot;[&quot; + request.getAddress() + &quot;:&quot; + request.getPort() + &quot;][&quot; + request.getAgentVersion() + &quot;]&quot;);
+
+            try {
+               agentByName = new Agent(request.getName(), request.getAddress(), request.getPort(), request.getRemoteEndpoint(), Agent.generateRandomToken(request.getName()));
+               agentByName.setServer(registeringServer1);
+               this.agentManager.createAgent(agentByName);
+            } catch (Exception var7) {
+               this.log.warn(&quot;Failed to create agent in database&quot;, var7);
+               throw new AgentRegistrationException(new WrappedRemotingException(var7));
+            }
+         }
+
+         FailoverListComposite failoverList1 = this.getPartitionEventManager().agentPartitionEvent(this.getSubjectManager().getOverlord(), agentByName.getName(), PartitionEventType.AGENT_REGISTRATION, agentByName.getName() + &quot; - &quot; + registeringServer1.getName());
+         AgentRegistrationResults results1 = new AgentRegistrationResults();
+         results1.setAgentToken(agentByName.getAgentToken());
+         results1.setFailoverList(failoverList1);
+         return results1;
+      }
+   }
+
+   public ConnectAgentResults connectAgent(ConnectAgentRequest request) throws AgentRegistrationException, AgentNotSupportedException {
+      String agentName = request.getAgentName();
+      AgentVersion agentVersion = request.getAgentVersion();
+      this.log.info(&quot;Agent [&quot; + agentName + &quot;][&quot; + agentVersion + &quot;] would like to connect to this server&quot;);
+      if(!this.getAgentManager().isAgentVersionSupported(agentVersion)) {
+         this.log.warn(&quot;Agent [&quot; + agentName + &quot;][&quot; + agentVersion + &quot;] would like to connect to this server but it is not supported&quot;);
+         throw new AgentNotSupportedException(&quot;Agent [&quot; + agentName + &quot;] is an unsupported agent: &quot; + agentVersion);
+      } else {
+         Agent agent = this.getAgentManager().getAgentByName(agentName);
+         if(agent == null) {
+            throw new AgentRegistrationException(&quot;Agent [&quot; + agentName + &quot;] is not registered&quot;);
+         } else {
+            Server server = this.getServerManager().getServer();
+            agent.setServer(server);
+            this.getAgentManager().updateAgent(agent);
+            this.getAlertConditionCacheManager().reloadCachesForAgent(agent.getId());
+            this.getPartitionEventManager().auditPartitionEvent(this.getSubjectManager().getOverlord(), PartitionEventType.AGENT_CONNECT, agentName + &quot; - &quot; + server.getName());
+            this.log.info(&quot;Agent [&quot; + agentName + &quot;] has connected to this server at &quot; + new Date());
+            return new ConnectAgentResults(System.currentTimeMillis());
+         }
+      }
+   }
+
+   public List getLatestPlugins() {
+      EntityManager em = null;
+      ArrayList plugins = new ArrayList();
+
+      try {
+         em = LookupUtil.getEntityManager();
+         Query e = em.createNamedQuery(&quot;Plugin.findAll&quot;);
+         List resultList = e.getResultList();
+         Iterator i$ = resultList.iterator();
+
+         while(i$.hasNext()) {
+            Plugin potentialPlugin = (Plugin)i$.next();
+            if(potentialPlugin.isEnabled()) {
+               plugins.add(potentialPlugin);
+            }
+         }
+      } catch (Exception var10) {
+         this.log.warn(&quot;Failed to get the list of latest plugins&quot;, var10);
+         throw new WrappedRemotingException(var10);
+      } finally {
+         if(em != null) {
+            em.close();
+         }
+
+      }
+
+      return plugins;
+   }
+
+   public InputStream getPluginArchive(String pluginName) {
+      EntityManager em = null;
+
+      InputStream var5;
+      try {
+         em = LookupUtil.getEntityManager();
+         Query q = em.createNamedQuery(&quot;Plugin.findByName&quot;);
+         q.setParameter(&quot;name&quot;, pluginName);
+         Plugin plugin = (Plugin)q.getSingleResult();
+         var5 = this.getFileContents((new File(&quot;rhq-plugins&quot;, plugin.getPath())).getPath());
+      } finally {
+         if(em != null) {
+            em.close();
+         }
+
+      }
+
+      return var5;
+   }
+
+   public InputStream getFileContents(String file) {
+      if(file.indexOf(&quot;..&quot;) &gt;= 0) {
+         String e1 = &quot;WARNING: agent is attempting to download a file from an invalid location: &quot; + file;
+         this.log.error(e1);
+         throw new IllegalArgumentException(e1);
+      } else {
+         try {
+            ServerCommunicationsServiceMBean e = ServerCommunicationsServiceUtil.getService();
+            String dir = e.getConfiguration().getAgentFilesDirectory();
+            File file_to_stream = new File(dir, file);
+            if(!file_to_stream.exists()) {
+               this.log.debug(&quot;Agent is asking for a plugin that isn\'t on file system [&quot; + file_to_stream + &quot;] - performing plugin scan&quot;);
+               LookupUtil.getAgentPluginURLDeploymentScanner().scan();
+            }
+
+            FileInputStream fis = new FileInputStream(file_to_stream);
+            BufferedInputStream bis = new BufferedInputStream(fis, '耀');
+            RemoteInputStream in = ServerCommunicationsServiceUtil.remoteInputStream(bis);
+            return in;
+         } catch (Exception var8) {
+            throw new WrappedRemotingException(var8);
+         }
+      }
+   }
+
+   public void agentIsShuttingDown(String agentName) {
+      this.log.debug(&quot;Agent [&quot; + agentName + &quot;] is sending a notification that it is going down!&quot;);
+      this.getAgentManager().agentIsShuttingDown(agentName);
+      this.getPartitionEventManager().auditPartitionEvent(this.getSubjectManager().getOverlord(), PartitionEventType.AGENT_SHUTDOWN, agentName);
+   }
+
+   public FailoverListComposite getFailoverList(String agentName) {
+      return this.getFailoverListManager().getExistingForSingleAgent(agentName);
+   }
+
+   private AgentManagerLocal getAgentManager() {
+      if(this.agentManager == null) {
+         this.agentManager = LookupUtil.getAgentManager();
+      }
+
+      return this.agentManager;
+   }
+
+   private AlertConditionCacheManagerLocal getAlertConditionCacheManager() {
+      if(this.alertConditionCacheManager == null) {
+         this.alertConditionCacheManager = LookupUtil.getAlertConditionCacheManager();
+      }
+
+      return this.alertConditionCacheManager;
+   }
+
+   private FailoverListManagerLocal getFailoverListManager() {
+      if(this.failoverListManager == null) {
+         this.failoverListManager = LookupUtil.getFailoverListManager();
+      }
+
+      return this.failoverListManager;
+   }
+
+   private PartitionEventManagerLocal getPartitionEventManager() {
+      if(this.partitionEventManager == null) {
+         this.partitionEventManager = LookupUtil.getPartitionEventManager();
+      }
+
+      return this.partitionEventManager;
+   }
+
+   private ServerManagerLocal getServerManager() {
+      if(this.serverManager == null) {
+         this.serverManager = LookupUtil.getServerManager();
+      }
+
+      return this.serverManager;
+   }
+
+   private SubjectManagerLocal getSubjectManager() {
+      if(this.subjectManager == null) {
+         this.subjectManager = LookupUtil.getSubjectManager();
+      }
+
+      return this.subjectManager;
+   }
+
+   private void pingEndpoint(String endpoint) throws AgentRegistrationException {
+      AgentRegistrationException failure = null;
+
+      try {
+         ServerCommunicationsServiceMBean e = ServerCommunicationsServiceUtil.getService();
+         boolean ping = e.pingEndpoint(endpoint, 10000L);
+         if(!ping) {
+            ping = e.pingEndpoint(endpoint, 20000L);
+            if(!ping) {
+               failure = new AgentRegistrationException(&quot;Server cannot ping the agent\'s endpoint. The agent\'s endpoint is probably invalid or there is a firewall preventing the server from connecting to the agent. Endpoint: &quot; + endpoint);
+            }
+         }
+      } catch (Exception var5) {
+         failure = new AgentRegistrationException(&quot;Cannot verify agent endpoint due to internal error.&quot;, new WrappedRemotingException(var5));
+      }
+
+      if(failure != null) {
+         throw failure;
+      } else {
+         this.log.debug(&quot;A new agent has passed its endpoint verification test: &quot; + endpoint);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "78,79" });
+
+            $("<div id='78-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(78)');
+            $("<div id='79-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(79)');
+
+
+$("<a name='12460800' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Hard-coded IP address</strong><a title='View Rule: DiscoverHardcodedIPAddressRuleProvider' href='windup_ruleproviders.html#DiscoverHardcodedIPAddressRuleProvider'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><strong>Hard-coded IP: 127.0.0.1<\/strong><\/p><p>When migrating environments, hard-coded IP addresses may need to be modified or eliminated.<\/p></div></div></div>").appendTo('#78-inlines');
+
+$("<a name='12461056' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Hard-coded IP address</strong><a title='View Rule: DiscoverHardcodedIPAddressRuleProvider' href='windup_ruleproviders.html#DiscoverHardcodedIPAddressRuleProvider'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><strong>Hard-coded IP: 127.0.0.1<\/strong><\/p><p>When migrating environments, hard-coded IP addresses may need to be modified or eliminated.<\/p></div></div></div>").appendTo('#79-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

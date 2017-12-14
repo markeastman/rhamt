@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for DefaultTcpTransportMapping.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/lib/snmp4j-1.8.2.jar/org/snmp4j/transport/DefaultTcpTransportMapping.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">275</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.snmp4j.transport;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.util.Date;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
+import org.snmp4j.SNMP4JSettings;
+import org.snmp4j.asn1.BER;
+import org.snmp4j.asn1.BERInputStream;
+import org.snmp4j.asn1.BER.MutableByte;
+import org.snmp4j.log.LogAdapter;
+import org.snmp4j.log.LogFactory;
+import org.snmp4j.smi.Address;
+import org.snmp4j.smi.OctetString;
+import org.snmp4j.smi.TcpAddress;
+import org.snmp4j.transport.MessageLength;
+import org.snmp4j.transport.MessageLengthDecoder;
+import org.snmp4j.transport.TcpTransportMapping;
+import org.snmp4j.transport.TransportStateEvent;
+
+public class DefaultTcpTransportMapping extends TcpTransportMapping {
+   private static final LogAdapter logger;
+   private Map sockets = new Hashtable();
+   private DefaultTcpTransportMapping.ServerThread server;
+   private Timer socketCleaner;
+   private long connectionTimeout = 60000L;
+   private boolean serverEnabled = false;
+   private static final int MIN_SNMP_HEADER_LENGTH = 6;
+   private MessageLengthDecoder messageLengthDecoder = new DefaultTcpTransportMapping.SnmpMesssageLengthDecoder();
+
+   public DefaultTcpTransportMapping() throws UnknownHostException, IOException {
+      super(new TcpAddress(InetAddress.getLocalHost(), 0));
+   }
+
+   public DefaultTcpTransportMapping(TcpAddress var1) throws UnknownHostException, IOException {
+      super(var1);
+      this.serverEnabled = true;
+   }
+
+   public synchronized void listen() throws IOException {
+      if(this.server != null) {
+         throw new SocketException(&quot;Port already listening&quot;);
+      } else {
+         this.server = new DefaultTcpTransportMapping.ServerThread();
+         if(this.connectionTimeout &gt; 0L) {
+            this.socketCleaner = new Timer(true);
+         }
+
+         this.server.setDaemon(true);
+         this.server.start();
+      }
+   }
+
+   public void setPriority(int var1) {
+      DefaultTcpTransportMapping.ServerThread var2 = this.server;
+      if(var2 != null) {
+         var2.setPriority(var1);
+      }
+
+   }
+
+   public int getPriority() {
+      DefaultTcpTransportMapping.ServerThread var1 = this.server;
+      return var1 != null?var1.getPriority():5;
+   }
+
+   public void setThreadName(String var1) {
+      DefaultTcpTransportMapping.ServerThread var2 = this.server;
+      if(var2 != null) {
+         var2.setName(var1);
+      }
+
+   }
+
+   public String getThreadName() {
+      DefaultTcpTransportMapping.ServerThread var1 = this.server;
+      return var1 != null?var1.getName():null;
+   }
+
+   public void close() {
+      DefaultTcpTransportMapping.ServerThread var1 = this.server;
+      if(var1 != null) {
+         var1.close();
+
+         try {
+            var1.join();
+         } catch (InterruptedException var8) {
+            logger.warn(var8);
+         }
+
+         this.server = null;
+         Iterator var2 = this.sockets.values().iterator();
+
+         while(var2.hasNext()) {
+            DefaultTcpTransportMapping.SocketEntry var3 = (DefaultTcpTransportMapping.SocketEntry)var2.next();
+
+            try {
+               synchronized(var3) {
+                  var3.getSocket().close();
+               }
+
+               logger.debug(&quot;Socket to &quot; + var3.getPeerAddress() + &quot; closed&quot;);
+            } catch (IOException var7) {
+               logger.debug(var7);
+            }
+         }
+
+         if(this.socketCleaner != null) {
+            this.socketCleaner.cancel();
+         }
+
+         this.socketCleaner = null;
+      }
+
+   }
+
+   public synchronized boolean close(Address var1) throws IOException {
+      if(logger.isDebugEnabled()) {
+         logger.debug(&quot;Closing socket for peer address &quot; + var1);
+      }
+
+      DefaultTcpTransportMapping.SocketEntry var2 = (DefaultTcpTransportMapping.SocketEntry)this.sockets.remove(var1);
+      if(var2 != null) {
+         synchronized(var2) {
+            var2.getSocket().close();
+         }
+
+         logger.info(&quot;Socket to &quot; + var2.getPeerAddress() + &quot; closed&quot;);
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   public void sendMessage(Address var1, byte[] var2) throws IOException {
+      if(this.server == null) {
+         this.listen();
+      }
+
+      this.server.sendMessage(var1, var2);
+   }
+
+   public long getConnectionTimeout() {
+      return this.connectionTimeout;
+   }
+
+   public void setConnectionTimeout(long var1) {
+      this.connectionTimeout = var1;
+   }
+
+   public boolean isServerEnabled() {
+      return this.serverEnabled;
+   }
+
+   public MessageLengthDecoder getMessageLengthDecoder() {
+      return this.messageLengthDecoder;
+   }
+
+   public void setServerEnabled(boolean var1) {
+      this.serverEnabled = var1;
+   }
+
+   public void setMessageLengthDecoder(MessageLengthDecoder var1) {
+      if(var1 == null) {
+         throw new NullPointerException();
+      } else {
+         this.messageLengthDecoder = var1;
+      }
+   }
+
+   public int getMaxInboundMessageSize() {
+      return super.getMaxInboundMessageSize();
+   }
+
+   public void setMaxInboundMessageSize(int var1) {
+      this.maxInboundMessageSize = var1;
+   }
+
+   private synchronized void timeoutSocket(DefaultTcpTransportMapping.SocketEntry var1) {
+      if(this.connectionTimeout &gt; 0L) {
+         this.socketCleaner.schedule(new DefaultTcpTransportMapping.SocketTimeout(var1), this.connectionTimeout);
+      }
+
+   }
+
+   public boolean isListening() {
+      return this.server != null;
+   }
+
+   static {
+      logger = LogFactory.getLogger(DefaultTcpTransportMapping.class);
+   }
+
+   class ServerThread extends Thread {
+      private byte[] buf;
+      private volatile boolean stop = false;
+      private Throwable lastError = null;
+      private ServerSocketChannel ssc;
+      private Selector selector;
+      private LinkedList pending = new LinkedList();
+
+      public ServerThread() throws IOException {
+         this.setName(&quot;DefaultTCPTransportMapping_&quot; + DefaultTcpTransportMapping.this.getAddress());
+         this.buf = new byte[DefaultTcpTransportMapping.this.getMaxInboundMessageSize()];
+         this.selector = Selector.open();
+         if(DefaultTcpTransportMapping.this.serverEnabled) {
+            this.ssc = ServerSocketChannel.open();
+            this.ssc.configureBlocking(false);
+            InetSocketAddress var2 = new InetSocketAddress(DefaultTcpTransportMapping.this.tcpAddress.getInetAddress(), DefaultTcpTransportMapping.this.tcpAddress.getPort());
+            this.ssc.socket().bind(var2);
+            this.ssc.register(this.selector, 16);
+         }
+
+      }
+
+      private void processPending() {
+         LinkedList var1 = this.pending;
+         synchronized(this.pending) {
+            for(int var2 = 0; var2 &lt; this.pending.size(); ++var2) {
+               DefaultTcpTransportMapping.SocketEntry var3 = (DefaultTcpTransportMapping.SocketEntry)this.pending.getFirst();
+
+               try {
+                  if(var3.getSocket().isConnected()) {
+                     var3.getSocket().getChannel().register(this.selector, 4);
+                  } else {
+                     var3.getSocket().getChannel().register(this.selector, 8);
+                  }
+               } catch (IOException var8) {
+                  IOException var4 = var8;
+                  DefaultTcpTransportMapping.logger.error(var8);
+
+                  try {
+                     var3.getSocket().getChannel().close();
+                     TransportStateEvent var5 = new TransportStateEvent(DefaultTcpTransportMapping.this, var3.getPeerAddress(), 4, var4);
+                     DefaultTcpTransportMapping.this.fireConnectionStateChanged(var5);
+                  } catch (IOException var7) {
+                     DefaultTcpTransportMapping.logger.error(var7);
+                  }
+
+                  this.lastError = var8;
+                  if(SNMP4JSettings.isFowardRuntimeExceptions()) {
+                     throw new RuntimeException(var8);
+                  }
+               }
+            }
+
+         }
+      }
+
+      public Throwable getLastError() {
+         return this.lastError;
+      }
+
+      public void sendMessage(Address var1, byte[] var2) throws IOException {
+         Socket var3 = null;
+         DefaultTcpTransportMapping.SocketEntry var4 = (DefaultTcpTransportMapping.SocketEntry)DefaultTcpTransportMapping.this.sockets.get(var1);
+         if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+            DefaultTcpTransportMapping.logger.debug(&quot;Looking up connection for destination \'&quot; + var1 + &quot;\' returned: &quot; + var4);
+            DefaultTcpTransportMapping.logger.debug(DefaultTcpTransportMapping.this.sockets.toString());
+         }
+
+         if(var4 != null) {
+            var3 = var4.getSocket();
+         }
+
+         if(var3 != null &amp;&amp; !var3.isClosed() &amp;&amp; var3.isConnected()) {
+            var4.addMessage(var2);
+            LinkedList var12 = this.pending;
+            synchronized(this.pending) {
+               this.pending.add(var4);
+            }
+
+            this.selector.wakeup();
+         } else {
+            if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+               DefaultTcpTransportMapping.logger.debug(&quot;Socket for address \'&quot; + var1 + &quot;\' is closed, opening it...&quot;);
+            }
+
+            SocketChannel var5 = null;
+
+            try {
+               var5 = SocketChannel.open();
+               var5.configureBlocking(false);
+               var5.connect(new InetSocketAddress(((TcpAddress)var1).getInetAddress(), ((TcpAddress)var1).getPort()));
+               var3 = var5.socket();
+               var4 = DefaultTcpTransportMapping.this.new SocketEntry((TcpAddress)var1, var3);
+               var4.addMessage(var2);
+               DefaultTcpTransportMapping.this.sockets.put(var1, var4);
+               LinkedList var6 = this.pending;
+               synchronized(this.pending) {
+                  this.pending.add(var4);
+               }
+
+               this.selector.wakeup();
+               DefaultTcpTransportMapping.logger.debug(&quot;Trying to connect to &quot; + var1);
+            } catch (IOException var11) {
+               DefaultTcpTransportMapping.logger.error(var11);
+               throw var11;
+            }
+         }
+
+      }
+
+      public void run() {
+         try {
+            while(true) {
+               label155: {
+                  if(!this.stop) {
+                     try {
+                        if(this.selector.select() &lt;= 0) {
+                           break label155;
+                        }
+
+                        if(!this.stop) {
+                           Set var23 = this.selector.selectedKeys();
+                           Iterator var2 = var23.iterator();
+
+                           while(true) {
+                              SelectionKey var3;
+                              SocketChannel var4;
+                              TcpAddress var5;
+                              TransportStateEvent var26;
+                              do {
+                                 if(!var2.hasNext()) {
+                                    break label155;
+                                 }
+
+                                 var3 = (SelectionKey)var2.next();
+                                 var2.remove();
+                                 var4 = null;
+                                 var5 = null;
+                                 if(var3.isAcceptable()) {
+                                    ServerSocketChannel var25 = (ServerSocketChannel)var3.channel();
+                                    Socket var30 = var25.accept().socket();
+                                    var4 = var30.getChannel();
+                                    var4.configureBlocking(false);
+                                    var4.register(this.selector, 1);
+                                    var5 = new TcpAddress(var30.getInetAddress(), var30.getPort());
+                                    DefaultTcpTransportMapping.SocketEntry var29 = DefaultTcpTransportMapping.this.new SocketEntry(var5, var30);
+                                    DefaultTcpTransportMapping.this.sockets.put(var5, var29);
+                                    DefaultTcpTransportMapping.this.timeoutSocket(var29);
+                                    TransportStateEvent var9 = new TransportStateEvent(DefaultTcpTransportMapping.this, var5, 1, (IOException)null);
+                                    DefaultTcpTransportMapping.this.fireConnectionStateChanged(var9);
+                                    if(var9.isCancelled()) {
+                                       DefaultTcpTransportMapping.logger.warn(&quot;Incoming connection cancelled&quot;);
+                                       var30.close();
+                                       DefaultTcpTransportMapping.this.sockets.remove(var5);
+                                       var4 = null;
+                                    }
+                                 } else if(var3.isReadable()) {
+                                    var4 = (SocketChannel)var3.channel();
+                                    var5 = new TcpAddress(var4.socket().getInetAddress(), var4.socket().getPort());
+                                 } else if(var3.isWritable()) {
+                                    try {
+                                       SocketChannel var24 = (SocketChannel)var3.channel();
+                                       LinkedList var28 = this.pending;
+                                       DefaultTcpTransportMapping.SocketEntry var27;
+                                       synchronized(this.pending) {
+                                          try {
+                                             var27 = (DefaultTcpTransportMapping.SocketEntry)this.pending.removeFirst();
+                                          } catch (NoSuchElementException var16) {
+                                             var27 = null;
+                                          }
+                                       }
+
+                                       if(var27 != null) {
+                                          this.writeMessage(var27, var24);
+                                       }
+                                    } catch (IOException var18) {
+                                       if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+                                          var18.printStackTrace();
+                                       }
+
+                                       DefaultTcpTransportMapping.logger.warn(var18);
+                                       var26 = new TransportStateEvent(DefaultTcpTransportMapping.this, var5, 2, var18);
+                                       DefaultTcpTransportMapping.this.fireConnectionStateChanged(var26);
+                                       var3.cancel();
+                                    }
+                                 } else if(var3.isConnectable()) {
+                                    try {
+                                       LinkedList var7 = this.pending;
+                                       DefaultTcpTransportMapping.SocketEntry var6;
+                                       synchronized(this.pending) {
+                                          try {
+                                             var6 = (DefaultTcpTransportMapping.SocketEntry)this.pending.getFirst();
+                                             if(var6 != null) {
+                                                SocketChannel var8 = (SocketChannel)var3.channel();
+                                                if(!var8.isConnected() &amp;&amp; var8.finishConnect()) {
+                                                   var8.configureBlocking(false);
+                                                   DefaultTcpTransportMapping.logger.debug(&quot;Connected to &quot; + var6.getPeerAddress());
+                                                   DefaultTcpTransportMapping.this.timeoutSocket(var6);
+                                                   var8.register(this.selector, 4);
+                                                }
+                                             }
+                                          } catch (NoSuchElementException var14) {
+                                             var6 = null;
+                                          }
+                                       }
+
+                                       if(var6 != null) {
+                                          var26 = new TransportStateEvent(DefaultTcpTransportMapping.this, var5, 1, (IOException)null);
+                                          DefaultTcpTransportMapping.this.fireConnectionStateChanged(var26);
+                                       } else {
+                                          DefaultTcpTransportMapping.logger.warn(&quot;Message not found on finish connection&quot;);
+                                       }
+                                    } catch (IOException var19) {
+                                       if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+                                          var19.printStackTrace();
+                                       }
+
+                                       DefaultTcpTransportMapping.logger.warn(var19);
+                                       var3.cancel();
+                                    }
+                                 }
+                              } while(var4 == null);
+
+                              try {
+                                 this.readMessage(var3, var4, var5);
+                              } catch (IOException var20) {
+                                 if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+                                    var20.printStackTrace();
+                                 }
+
+                                 DefaultTcpTransportMapping.logger.warn(var20);
+                                 var3.cancel();
+                                 var4.close();
+                                 var26 = new TransportStateEvent(DefaultTcpTransportMapping.this, var5, 2, var20);
+                                 DefaultTcpTransportMapping.this.fireConnectionStateChanged(var26);
+                              }
+                           }
+                        }
+                     } catch (NullPointerException var21) {
+                        var21.printStackTrace();
+                        DefaultTcpTransportMapping.logger.warn(&quot;NullPointerException within select()?&quot;);
+                        break label155;
+                     }
+                  }
+
+                  if(this.ssc != null) {
+                     this.ssc.close();
+                  }
+
+                  if(this.selector != null) {
+                     this.selector.close();
+                  }
+                  break;
+               }
+
+               this.processPending();
+            }
+         } catch (IOException var22) {
+            DefaultTcpTransportMapping.logger.error(var22);
+            this.lastError = var22;
+         }
+
+         if(!this.stop) {
+            this.stop = true;
+            DefaultTcpTransportMapping var1 = DefaultTcpTransportMapping.this;
+            synchronized(DefaultTcpTransportMapping.this) {
+               DefaultTcpTransportMapping.this.server = null;
+            }
+         }
+
+      }
+
+      private void readMessage(SelectionKey var1, SocketChannel var2, TcpAddress var3) throws IOException {
+         DefaultTcpTransportMapping.SocketEntry var4 = (DefaultTcpTransportMapping.SocketEntry)DefaultTcpTransportMapping.this.sockets.get(var3);
+         ByteBuffer var5;
+         if(var4 != null) {
+            var4.used();
+            var5 = var4.getReadBuffer();
+            if(var5 != null) {
+               var2.read(var5);
+               if(var5.hasRemaining()) {
+                  var2.register(this.selector, 1, var4);
+               } else {
+                  this.dispatchMessage(var3, var5, (long)var5.capacity());
+               }
+
+               return;
+            }
+         }
+
+         var5 = ByteBuffer.wrap(this.buf);
+         var5.limit(DefaultTcpTransportMapping.this.messageLengthDecoder.getMinHeaderLength());
+         long var6 = (long)var2.read(var5);
+         if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+            DefaultTcpTransportMapping.logger.debug(&quot;Reading header &quot; + var6 + &quot; bytes from &quot; + var3);
+         }
+
+         new MessageLength(0, Integer.MIN_VALUE);
+         if(var6 == (long)DefaultTcpTransportMapping.this.messageLengthDecoder.getMinHeaderLength()) {
+            MessageLength var8 = DefaultTcpTransportMapping.this.messageLengthDecoder.getMessageLength(ByteBuffer.wrap(this.buf));
+            if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+               DefaultTcpTransportMapping.logger.debug(&quot;Message length is &quot; + var8);
+            }
+
+            if(var8.getMessageLength() &lt;= DefaultTcpTransportMapping.this.getMaxInboundMessageSize() &amp;&amp; var8.getMessageLength() &gt; 0) {
+               var5.limit(var8.getMessageLength());
+               var6 += (long)var2.read(var5);
+               if(var6 == (long)var8.getMessageLength()) {
+                  this.dispatchMessage(var3, var5, var6);
+               } else {
+                  byte[] var9 = new byte[var5.limit()];
+                  var5.flip();
+                  var5.get(var9, 0, var5.limit() - var5.remaining());
+                  var4.setReadBuffer(ByteBuffer.wrap(var9));
+               }
+
+               var2.register(this.selector, 1, var4);
+            } else {
+               DefaultTcpTransportMapping.logger.error(&quot;Received message length &quot; + var8 + &quot; is greater than inboundBufferSize &quot; + DefaultTcpTransportMapping.this.getMaxInboundMessageSize());
+               synchronized(var4) {
+                  var4.getSocket().close();
+                  DefaultTcpTransportMapping.logger.info(&quot;Socket to &quot; + var4.getPeerAddress() + &quot; closed due to an error&quot;);
+               }
+            }
+         } else if(var6 &lt; 0L) {
+            DefaultTcpTransportMapping.logger.debug(&quot;Socket closed remotely&quot;);
+            var1.cancel();
+            var2.close();
+            TransportStateEvent var12 = new TransportStateEvent(DefaultTcpTransportMapping.this, var3, 2, (IOException)null);
+            DefaultTcpTransportMapping.this.fireConnectionStateChanged(var12);
+         }
+
+      }
+
+      private void dispatchMessage(TcpAddress var1, ByteBuffer var2, long var3) {
+         var2.flip();
+         if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+            DefaultTcpTransportMapping.logger.debug(&quot;Received message from &quot; + var1 + &quot; with length &quot; + var3 + &quot;: &quot; + (new OctetString(var2.array(), 0, (int)var3)).toHexString());
+         }
+
+         ByteBuffer var5;
+         if(DefaultTcpTransportMapping.this.isAsyncMsgProcessingSupported()) {
+            byte[] var6 = new byte[(int)var3];
+            System.arraycopy(var2.array(), 0, var6, 0, (int)var3);
+            var5 = ByteBuffer.wrap(var6);
+         } else {
+            var5 = ByteBuffer.wrap(var2.array(), 0, (int)var3);
+         }
+
+         DefaultTcpTransportMapping.this.fireProcessMessage(var1, var5);
+      }
+
+      private void writeMessage(DefaultTcpTransportMapping.SocketEntry var1, SocketChannel var2) throws IOException {
+         byte[] var3 = var1.nextMessage();
+         if(var3 != null) {
+            ByteBuffer var4 = ByteBuffer.wrap(var3);
+            var2.write(var4);
+            if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+               DefaultTcpTransportMapping.logger.debug(&quot;Send message with length &quot; + var3.length + &quot; to &quot; + var1.getPeerAddress() + &quot;: &quot; + (new OctetString(var3)).toHexString());
+            }
+
+            var2.register(this.selector, 1);
+         }
+
+      }
+
+      public void close() {
+         this.stop = true;
+         DefaultTcpTransportMapping.ServerThread var1 = DefaultTcpTransportMapping.this.server;
+         if(var1 != null) {
+            var1.interrupt();
+         }
+
+      }
+   }
+
+   class SocketTimeout extends TimerTask {
+      private DefaultTcpTransportMapping.SocketEntry entry;
+
+      public SocketTimeout(DefaultTcpTransportMapping.SocketEntry var2) {
+         this.entry = var2;
+      }
+
+      public void run() {
+         long var1 = System.currentTimeMillis();
+         if(DefaultTcpTransportMapping.this.socketCleaner != null &amp;&amp; var1 - this.entry.getLastUse() &lt; DefaultTcpTransportMapping.this.connectionTimeout) {
+            if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+               DefaultTcpTransportMapping.logger.debug(&quot;Scheduling &quot; + (this.entry.getLastUse() + DefaultTcpTransportMapping.this.connectionTimeout - var1));
+            }
+
+            DefaultTcpTransportMapping.this.socketCleaner.schedule(DefaultTcpTransportMapping.this.new SocketTimeout(this.entry), this.entry.getLastUse() + DefaultTcpTransportMapping.this.connectionTimeout - var1);
+         } else {
+            if(DefaultTcpTransportMapping.logger.isDebugEnabled()) {
+               DefaultTcpTransportMapping.logger.debug(&quot;Socket has not been used for &quot; + (var1 - this.entry.getLastUse()) + &quot; micro seconds, closing it&quot;);
+            }
+
+            DefaultTcpTransportMapping.this.sockets.remove(this.entry.getPeerAddress());
+
+            try {
+               DefaultTcpTransportMapping.SocketEntry var3 = this.entry;
+               synchronized(this.entry) {
+                  this.entry.getSocket().close();
+               }
+
+               DefaultTcpTransportMapping.logger.info(&quot;Socket to &quot; + this.entry.getPeerAddress() + &quot; closed due to timeout&quot;);
+            } catch (IOException var6) {
+               DefaultTcpTransportMapping.logger.error(var6);
+            }
+         }
+
+      }
+   }
+
+   public static class SnmpMesssageLengthDecoder implements MessageLengthDecoder {
+      public int getMinHeaderLength() {
+         return 6;
+      }
+
+      public MessageLength getMessageLength(ByteBuffer var1) throws IOException {
+         MutableByte var2 = new MutableByte();
+         BERInputStream var3 = new BERInputStream(var1);
+         int var4 = BER.decodeHeader(var3, var2);
+         int var5 = (int)var3.getPosition();
+         MessageLength var6 = new MessageLength(var5, var4);
+         return var6;
+      }
+   }
+
+   class SocketEntry {
+      private Socket socket;
+      private TcpAddress peerAddress;
+      private long lastUse;
+      private LinkedList message = new LinkedList();
+      private ByteBuffer readBuffer = null;
+
+      public SocketEntry(TcpAddress var2, Socket var3) {
+         this.peerAddress = var2;
+         this.socket = var3;
+         this.lastUse = System.currentTimeMillis();
+      }
+
+      public long getLastUse() {
+         return this.lastUse;
+      }
+
+      public void used() {
+         this.lastUse = System.currentTimeMillis();
+      }
+
+      public Socket getSocket() {
+         return this.socket;
+      }
+
+      public TcpAddress getPeerAddress() {
+         return this.peerAddress;
+      }
+
+      public synchronized void addMessage(byte[] var1) {
+         this.message.add(var1);
+      }
+
+      public byte[] nextMessage() {
+         return this.message.size() &gt; 0?(byte[])((byte[])this.message.removeFirst()):null;
+      }
+
+      public void setReadBuffer(ByteBuffer var1) {
+         this.readBuffer = var1;
+      }
+
+      public ByteBuffer getReadBuffer() {
+         return this.readBuffer;
+      }
+
+      public String toString() {
+         return &quot;SocketEntry[peerAddress=&quot; + this.peerAddress + &quot;,socket=&quot; + this.socket + &quot;,lastUse=&quot; + new Date(this.lastUse) + &quot;]&quot;;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "226,225,242,368,58,282,368,7,225,271,282,141,645,659,240,239,354,530,354,58,115,6,300,362,639,5,351,611,350,249,349,12,223,350,226,214,336,295,298,502,566,562,516,403,300,301,371,368,350,482,489,404,404,368,13" });
+
+            $("<div id='226-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(226)');
+            $("<div id='225-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(225)');
+            $("<div id='242-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(242)');
+            $("<div id='368-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(368)');
+            $("<div id='58-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(58)');
+            $("<div id='282-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(282)');
+            $("<div id='368-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(368)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='225-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(225)');
+            $("<div id='271-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(271)');
+            $("<div id='282-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(282)');
+            $("<div id='141-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(141)');
+            $("<div id='645-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(645)');
+            $("<div id='659-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(659)');
+            $("<div id='240-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(240)');
+            $("<div id='239-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(239)');
+            $("<div id='354-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(354)');
+            $("<div id='530-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(530)');
+            $("<div id='354-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(354)');
+            $("<div id='58-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(58)');
+            $("<div id='115-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(115)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='300-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(300)');
+            $("<div id='362-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(362)');
+            $("<div id='639-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(639)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='351-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(351)');
+            $("<div id='611-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(611)');
+            $("<div id='350-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(350)');
+            $("<div id='249-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(249)');
+            $("<div id='349-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(349)');
+            $("<div id='12-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(12)');
+            $("<div id='223-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(223)');
+            $("<div id='350-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(350)');
+            $("<div id='226-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(226)');
+            $("<div id='214-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(214)');
+            $("<div id='336-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(336)');
+            $("<div id='295-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(295)');
+            $("<div id='298-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(298)');
+            $("<div id='502-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(502)');
+            $("<div id='566-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(566)');
+            $("<div id='562-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(562)');
+            $("<div id='516-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(516)');
+            $("<div id='403-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(403)');
+            $("<div id='300-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(300)');
+            $("<div id='301-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(301)');
+            $("<div id='371-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(371)');
+            $("<div id='368-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(368)');
+            $("<div id='350-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(350)');
+            $("<div id='482-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(482)');
+            $("<div id='489-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(489)');
+            $("<div id='404-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(404)');
+            $("<div id='404-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(404)');
+            $("<div id='368-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(368)');
+            $("<div id='13-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(13)');
+
+
+$("<a name='12390400' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#226-inlines');
+
+$("<a name='12394752' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#225-inlines');
+
+$("<a name='12395264' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#242-inlines');
+
+$("<a name='12395776' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#368-inlines');
+
+$("<a name='12396800' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#58-inlines');
+
+$("<a name='12397312' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#282-inlines');
+
+$("<a name='12398336' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#368-inlines');
+
+$("<a name='12398848' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='12401920' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#225-inlines');
+
+$("<a name='12402432' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#271-inlines');
+
+$("<a name='12402944' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#282-inlines');
+
+$("<a name='12403968' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#141-inlines');
+
+$("<a name='12404480' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#645-inlines');
+
+$("<a name='12404992' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#659-inlines');
+
+$("<a name='12405504' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#240-inlines');
+
+$("<a name='12406528' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#239-inlines');
+
+$("<a name='12409088' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#354-inlines');
+
+$("<a name='12409600' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#530-inlines');
+
+$("<a name='12412160' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#354-inlines');
+
+$("<a name='12414208' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#58-inlines');
+
+$("<a name='12416256' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#115-inlines');
+
+$("<a name='12418816' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='12419328' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#300-inlines');
+
+$("<a name='12420352' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#362-inlines');
+
+$("<a name='12421376' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#639-inlines');
+
+$("<a name='12423424' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='12423936' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#351-inlines');
+
+$("<a name='12424448' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#611-inlines');
+
+$("<a name='12425472' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#350-inlines');
+
+$("<a name='12426496' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#249-inlines');
+
+$("<a name='12427008' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#349-inlines');
+
+$("<a name='12427520' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#12-inlines');
+
+$("<a name='12428032' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#223-inlines');
+
+$("<a name='12428544' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#350-inlines');
+
+$("<a name='12429056' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#226-inlines');
+
+$("<a name='12429568' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#214-inlines');
+
+$("<a name='12430336' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#336-inlines');
+
+$("<a name='12430848' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#295-inlines');
+
+$("<a name='12431360' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#298-inlines');
+
+$("<a name='12431872' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#502-inlines');
+
+$("<a name='12432384' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#566-inlines');
+
+$("<a name='12432896' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#562-inlines');
+
+$("<a name='12433408' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#516-inlines');
+
+$("<a name='12433920' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#403-inlines');
+
+$("<a name='12434432' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#300-inlines');
+
+$("<a name='12434944' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#301-inlines');
+
+$("<a name='12435456' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#371-inlines');
+
+$("<a name='12435968' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#368-inlines');
+
+$("<a name='12436480' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#350-inlines');
+
+$("<a name='12436992' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#482-inlines');
+
+$("<a name='12437504' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#489-inlines');
+
+$("<a name='12438016' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#404-inlines');
+
+$("<a name='12438528' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#404-inlines');
+
+$("<a name='12439040' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#368-inlines');
+
+$("<a name='12439552' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Java NIO channel</strong><a title='View Rule: socket-communication-00001' href='windup_ruleproviders.html#socket-communication-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java NIO Channels are designed to provide for bulk data transfers to and from NIO buffers. They can be synchronously and asynchronously read and written.<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#13-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

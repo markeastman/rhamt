@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for AlertNotificationManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/alert/AlertNotificationManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.alert;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.domain.alert.AlertDefinition;
+import org.rhq.core.domain.alert.AlertDefinitionContext;
+import org.rhq.core.domain.alert.notification.AlertNotification;
+import org.rhq.core.domain.alert.notification.EmailNotification;
+import org.rhq.core.domain.alert.notification.RoleNotification;
+import org.rhq.core.domain.alert.notification.SnmpNotification;
+import org.rhq.core.domain.alert.notification.SubjectNotification;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.authz.Role;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.enterprise.server.alert.AlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.alert.AlertNotificationManagerLocal;
+import org.rhq.enterprise.server.alert.AlertTemplateManagerLocal;
+import org.rhq.enterprise.server.alert.GroupAlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.alert.InvalidAlertDefinitionException;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RoleManagerLocal;
+
+@Stateless
+public class AlertNotificationManagerBean implements AlertNotificationManagerLocal {
+   private static final Log LOG = LogFactory.getLog(AlertNotificationManagerBean.class);
+   @EJB
+   private AlertDefinitionManagerLocal alertDefinitionManager;
+   @EJB
+   private AlertTemplateManagerLocal alertTemplateManager;
+   @EJB
+   private GroupAlertDefinitionManagerLocal groupAlertDefintionManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private RoleManagerLocal roleManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+
+   private AlertDefinition getDetachedAlertDefinition(int alertDefinitionId) {
+      AlertDefinition alertDefinition = this.alertDefinitionManager.getAlertDefinitionById(this.subjectManager.getOverlord(), alertDefinitionId);
+      this.checkPermission(this.subjectManager.getOverlord(), alertDefinition);
+      AlertDefinitionContext context = alertDefinition.getContext();
+      if(context == AlertDefinitionContext.Resource) {
+         return alertDefinition;
+      } else {
+         AlertDefinition detachedDefinition = new AlertDefinition(alertDefinition, true);
+         detachedDefinition.setContext(context);
+         detachedDefinition.setId(alertDefinition.getId());
+         return detachedDefinition;
+      }
+   }
+
+   private void checkPermission(Subject subject, AlertDefinition alertDefinition) {
+      boolean hasPermission = false;
+      if(alertDefinition.getResourceType() != null) {
+         hasPermission = this.authorizationManager.hasGlobalPermission(subject, Permission.MANAGE_SETTINGS);
+      } else if(alertDefinition.getResourceGroup() != null) {
+         hasPermission = this.authorizationManager.hasGroupPermission(subject, Permission.MANAGE_ALERTS, alertDefinition.getResourceGroup().getId());
+      } else {
+         hasPermission = this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_ALERTS, alertDefinition.getResource().getId());
+      }
+
+      if(!hasPermission) {
+         throw new PermissionException(subject + &quot; is not authorized to edit this alert definition&quot;);
+      }
+   }
+
+   public int addEmailNotifications(Subject subject, Integer alertDefinitionId, String[] emails) {
+      AlertDefinition alertDefinition = this.getDetachedAlertDefinition(alertDefinitionId.intValue());
+      Set notifications = alertDefinition.getAlertNotifications();
+      int added = 0;
+      String[] arr$ = emails;
+      int len$ = emails.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         String emailAddress = arr$[i$];
+         emailAddress = emailAddress.toLowerCase().trim();
+         if(!emailAddress.equals(&quot;&quot;)) {
+            EmailNotification notification = new EmailNotification(alertDefinition, emailAddress);
+            if(!notifications.contains(notification)) {
+               ++added;
+               notifications.add(notification);
+            }
+         }
+      }
+
+      this.postProcessAlertDefinition(alertDefinition);
+      return added;
+   }
+
+   public PageList getEmailNotifications(Integer alertDefinitionId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;en.emailAddress&quot;);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;EmailNotification.findAllByAlertDefinitionId&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;EmailNotification.findAllByAlertDefinitionId&quot;, pageControl);
+      queryCount.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      query.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList getEmailNotifications(Integer[] alertNotificationIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;en.emailAddress&quot;);
+      if(alertNotificationIds != null &amp;&amp; alertNotificationIds.length != 0) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;EmailNotification.findByIds&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;EmailNotification.findByIds&quot;, pageControl);
+         queryCount.setParameter(&quot;ids&quot;, alertNotificationIds);
+         query.setParameter(&quot;ids&quot;, alertNotificationIds);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, pageControl);
+      } else {
+         return new PageList(Collections.EMPTY_LIST, 0, pageControl);
+      }
+   }
+
+   public int addRoleNotifications(Subject subject, Integer alertDefinitionId, Integer[] roleIds) {
+      AlertDefinition alertDefinition = this.getDetachedAlertDefinition(alertDefinitionId.intValue());
+      Set notifications = alertDefinition.getAlertNotifications();
+      PageList roles = this.roleManager.findRolesByIds(roleIds, PageControl.getUnlimitedInstance());
+      int added = 0;
+      Iterator i$ = roles.iterator();
+
+      while(i$.hasNext()) {
+         Role role = (Role)i$.next();
+         RoleNotification notification = new RoleNotification(alertDefinition, role);
+         if(!notifications.contains(notification)) {
+            ++added;
+            notifications.add(notification);
+         }
+      }
+
+      this.postProcessAlertDefinition(alertDefinition);
+      return added;
+   }
+
+   public PageList getRoleNotifications(Integer alertDefinitionId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;rn.role.name&quot;);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;RoleNotification.findAllByAlertDefinitionId&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;RoleNotification.findAllByAlertDefinitionId&quot;, pageControl);
+      queryCount.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      query.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList getRoleNotifications(Integer[] alertNotificationIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;rn.role.name&quot;);
+      if(alertNotificationIds != null &amp;&amp; alertNotificationIds.length != 0) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;RoleNotification.findByIds&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;RoleNotification.findByIds&quot;, pageControl);
+         queryCount.setParameter(&quot;ids&quot;, alertNotificationIds);
+         query.setParameter(&quot;ids&quot;, alertNotificationIds);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, pageControl);
+      } else {
+         return new PageList(Collections.EMPTY_LIST, 0, pageControl);
+      }
+   }
+
+   public PageList getRoleNotificationsByRoles(Integer[] roleIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;rn.role.name&quot;);
+      if(roleIds != null &amp;&amp; roleIds.length != 0) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;SubjectNotification.findByRoleIds&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;SubjectNotification.findByRoleIds&quot;, pageControl);
+         queryCount.setParameter(&quot;ids&quot;, roleIds);
+         query.setParameter(&quot;ids&quot;, roleIds);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, pageControl);
+      } else {
+         return new PageList(Collections.EMPTY_LIST, 0, pageControl);
+      }
+   }
+
+   public int addSubjectNotifications(Subject user, Integer alertDefinitionId, Integer[] subjectIds) {
+      AlertDefinition alertDefinition = this.getDetachedAlertDefinition(alertDefinitionId.intValue());
+      Set notifications = alertDefinition.getAlertNotifications();
+      PageList subjects = this.subjectManager.findSubjectsById(subjectIds, PageControl.getUnlimitedInstance());
+      int added = 0;
+      Iterator i$ = subjects.iterator();
+
+      while(i$.hasNext()) {
+         Subject subject = (Subject)i$.next();
+         SubjectNotification notification = new SubjectNotification(alertDefinition, subject);
+         if(!notifications.contains(notification)) {
+            ++added;
+            notifications.add(notification);
+         }
+      }
+
+      this.postProcessAlertDefinition(alertDefinition);
+      return added;
+   }
+
+   public PageList getSubjectNotifications(Integer alertDefinitionId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;sn.subject.name&quot;);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;SubjectNotification.findAllByAlertDefinitionId&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;SubjectNotification.findAllByAlertDefinitionId&quot;, pageControl);
+      queryCount.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      query.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList getSnmpNotifications(Integer alertDefinitionId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;sn.host&quot;);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;SnmpNotification.findAllByAlertDefinitionId&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;SnmpNotification.findAllByAlertDefinitionId&quot;, pageControl);
+      queryCount.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      query.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList getSubjectNotifications(Integer[] alertNotificationIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;sn.subject.name&quot;);
+      if(alertNotificationIds != null &amp;&amp; alertNotificationIds.length != 0) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;SubjectNotification.findByIds&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;SubjectNotification.findByIds&quot;, pageControl);
+         queryCount.setParameter(&quot;ids&quot;, alertNotificationIds);
+         query.setParameter(&quot;ids&quot;, alertNotificationIds);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, pageControl);
+      } else {
+         return new PageList(Collections.EMPTY_LIST, 0, pageControl);
+      }
+   }
+
+   public PageList getSubjectNotificationsBySubjects(Integer[] subjectIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;rn.role.name&quot;);
+      if(subjectIds != null &amp;&amp; subjectIds.length != 0) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;SubjectNotification.findBySubjectIds&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;SubjectNotification.findBySubjectIds&quot;, pageControl);
+         queryCount.setParameter(&quot;ids&quot;, subjectIds);
+         query.setParameter(&quot;ids&quot;, subjectIds);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, pageControl);
+      } else {
+         return new PageList(Collections.EMPTY_LIST, 0, pageControl);
+      }
+   }
+
+   public int removeNotifications(Subject subject, Integer alertDefinitionId, Integer[] notificationIds) {
+      AlertDefinition alertDefinition = this.getDetachedAlertDefinition(alertDefinitionId.intValue());
+      if(notificationIds != null &amp;&amp; notificationIds.length != 0) {
+         HashSet notificationIdSet = new HashSet(Arrays.asList(notificationIds));
+         ArrayList notifications = new ArrayList(alertDefinition.getAlertNotifications());
+         ArrayList toBeRemoved = new ArrayList();
+         int removed = 0;
+         Iterator i$ = notifications.iterator();
+
+         while(i$.hasNext()) {
+            AlertNotification notification = (AlertNotification)i$.next();
+            if(notificationIdSet.contains(Integer.valueOf(notification.getId()))) {
+               toBeRemoved.add(notification);
+               --removed;
+            }
+         }
+
+         alertDefinition.getAlertNotifications().removeAll(toBeRemoved);
+         this.postProcessAlertDefinition(alertDefinition);
+         return removed;
+      } else {
+         return 0;
+      }
+   }
+
+   public void setSnmpNotification(Subject subject, Integer alertDefinitionId, SnmpNotification snmpNotification) {
+      AlertDefinition alertDefinition = this.getDetachedAlertDefinition(alertDefinitionId.intValue());
+      Set alertNotifications = alertDefinition.getAlertNotifications();
+      Iterator i$ = alertNotifications.iterator();
+
+      while(i$.hasNext()) {
+         AlertNotification alertNotification = (AlertNotification)i$.next();
+         if(alertNotification instanceof SnmpNotification) {
+            alertNotifications.remove(alertNotification);
+         }
+      }
+
+      alertNotifications.add(snmpNotification);
+      this.postProcessAlertDefinition(alertDefinition);
+   }
+
+   public int purgeOrphanedAlertNotifications() {
+      Query purgeQuery = this.entityManager.createNamedQuery(&quot;AlertNotification.deleteOrphaned&quot;);
+      return purgeQuery.executeUpdate();
+   }
+
+   private void postProcessAlertDefinition(AlertDefinition definition) {
+      AlertDefinitionContext context = definition.getContext();
+      if(context == AlertDefinitionContext.Type) {
+         try {
+            this.alertTemplateManager.updateAlertTemplate(this.subjectManager.getOverlord(), definition, true);
+         } catch (InvalidAlertDefinitionException var5) {
+            LOG.error(&quot;Can not update alert template, invalid definition: &quot; + definition);
+         }
+      } else if(context == AlertDefinitionContext.Group) {
+         try {
+            this.groupAlertDefintionManager.updateGroupAlertDefinitions(this.subjectManager.getOverlord(), definition, true);
+         } catch (InvalidAlertDefinitionException var4) {
+            LOG.error(&quot;Can not update alert template, invalid definition: &quot; + definition);
+         }
+      }
+
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

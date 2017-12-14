@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ResourceFactoryManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/resource/ResourceFactoryManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.resource;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.Calendar;
+import java.util.Iterator;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.clientapi.agent.inventory.CreateResourceRequest;
+import org.rhq.core.clientapi.agent.inventory.CreateResourceResponse;
+import org.rhq.core.clientapi.agent.inventory.DeleteResourceRequest;
+import org.rhq.core.clientapi.agent.inventory.DeleteResourceResponse;
+import org.rhq.core.clientapi.agent.inventory.ResourceFactoryAgentService;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.configuration.Configuration;
+import org.rhq.core.domain.content.InstalledPackage;
+import org.rhq.core.domain.content.PackageType;
+import org.rhq.core.domain.content.PackageVersion;
+import org.rhq.core.domain.content.transfer.ResourcePackageDetails;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.CreateResourceHistory;
+import org.rhq.core.domain.resource.CreateResourceStatus;
+import org.rhq.core.domain.resource.DeleteResourceHistory;
+import org.rhq.core.domain.resource.DeleteResourceStatus;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.exception.ThrowableUtil;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.content.ContentManagerHelper;
+import org.rhq.enterprise.server.content.ContentManagerLocal;
+import org.rhq.enterprise.server.content.ContentUIManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceFactoryManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceFactoryManagerRemote;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+
+@Stateless
+public class ResourceFactoryManagerBean implements ResourceFactoryManagerLocal, ResourceFactoryManagerRemote {
+   private static final int REQUEST_TIMEOUT = 3600000;
+   private final Log log = LogFactory.getLog(ResourceFactoryManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private SubjectManagerLocal subjectManagerBean;
+   @EJB
+   private ResourceFactoryManagerLocal resourceFactoryManager;
+   @EJB
+   private ResourceManagerLocal resourceManagerBean;
+   @EJB
+   private ContentManagerLocal contentManagerLocal;
+   @EJB
+   private ContentUIManagerLocal contentUIManagerLocal;
+
+   public void createResource(Subject user, int parentResourceId, int resourceTypeId, String resourceName, Configuration pluginConfiguration, Configuration resourceConfiguration) {
+      this.log.debug(&quot;Received call to create configuration backed resource under parent: &quot; + parentResourceId + &quot; of type: &quot; + resourceTypeId);
+      ResourceType resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(resourceTypeId));
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(parentResourceId));
+      Agent agent = resource.getAgent();
+      if(!this.authorizationManager.hasResourcePermission(user, Permission.CREATE_CHILD_RESOURCES, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + user.getName() + &quot;] does not have permission to create a child resource for resource [&quot; + resource + &quot;]&quot;);
+      } else {
+         CreateResourceHistory persistedHistory = this.resourceFactoryManager.persistCreateHistory(user, parentResourceId, resourceTypeId, resourceName, resourceConfiguration);
+         CreateResourceRequest request = new CreateResourceRequest(persistedHistory.getId(), parentResourceId, resourceName, resourceType.getName(), resourceType.getPlugin(), pluginConfiguration, resourceConfiguration);
+
+         try {
+            AgentClient e = this.agentManager.getAgentClient(agent);
+            ResourceFactoryAgentService errorMessage1 = e.getResourceFactoryAgentService();
+            errorMessage1.createResource(request);
+         } catch (Exception var15) {
+            this.log.error(&quot;Error while sending create resource request to agent service&quot;, var15);
+            String errorMessage = ThrowableUtil.getAllMessages(var15);
+            CreateResourceResponse response = new CreateResourceResponse(persistedHistory.getId(), (String)null, (String)null, CreateResourceStatus.FAILURE, errorMessage, resourceConfiguration);
+            this.resourceFactoryManager.completeCreateResource(response);
+            throw new RuntimeException(&quot;Error while sending create resource request to agent service&quot;, var15);
+         }
+      }
+   }
+
+   public void createResource(Subject subject, int parentResourceId, int newResourceTypeId, String newResourceName, Configuration pluginConfiguration, String packageName, String packageVersionNumber, Integer architectureId, Configuration deploymentTimeConfiguration, byte[] packageBits) {
+      this.createResource(subject, parentResourceId, newResourceTypeId, newResourceName, pluginConfiguration, packageName, packageVersionNumber, architectureId, deploymentTimeConfiguration, (InputStream)(new ByteArrayInputStream(packageBits)));
+   }
+
+   public void createResource(Subject user, int parentResourceId, int newResourceTypeId, String newResourceName, Configuration pluginConfiguration, String packageName, String packageVersionNumber, Integer architectureId, Configuration deploymentTimeConfiguration, InputStream packageBitStream) {
+      this.log.info(&quot;Received call to create package backed resource under parent [&quot; + parentResourceId + &quot;]&quot;);
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(parentResourceId));
+      ResourceType newResourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(newResourceTypeId));
+      PackageType newPackageType = this.contentUIManagerLocal.getResourceCreationPackageType(newResourceTypeId);
+      Agent agent = resource.getAgent();
+      if(!this.authorizationManager.hasResourcePermission(user, Permission.CREATE_CHILD_RESOURCES, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + user.getName() + &quot;] does not have permission to create a child resource for resource [&quot; + resource + &quot;]&quot;);
+      } else {
+         PackageVersion packageVersion = this.contentManagerLocal.createPackageVersion(packageName, newPackageType.getId(), packageVersionNumber, null != architectureId?architectureId.intValue():this.contentManagerLocal.getNoArchitecture().getId(), packageBitStream);
+         CreateResourceHistory persistedHistory = this.resourceFactoryManager.persistCreateHistory(user, parentResourceId, newResourceTypeId, newResourceName, packageVersion, deploymentTimeConfiguration);
+         ResourcePackageDetails packageDetails = ContentManagerHelper.packageVersionToDetails(packageVersion);
+         packageDetails.setDeploymentTimeConfiguration(deploymentTimeConfiguration);
+         CreateResourceRequest request = new CreateResourceRequest(persistedHistory.getId(), parentResourceId, newResourceName, newResourceType.getName(), newResourceType.getPlugin(), pluginConfiguration, packageDetails);
+
+         try {
+            AgentClient e = this.agentManager.getAgentClient(agent);
+            ResourceFactoryAgentService errorMessage1 = e.getResourceFactoryAgentService();
+            errorMessage1.createResource(request);
+         } catch (Exception var22) {
+            this.log.error(&quot;Error while sending create resource request to agent service&quot;, var22);
+            String errorMessage = ThrowableUtil.getAllMessages(var22);
+            CreateResourceResponse response = new CreateResourceResponse(persistedHistory.getId(), (String)null, (String)null, CreateResourceStatus.FAILURE, errorMessage, (Configuration)null);
+            this.resourceFactoryManager.completeCreateResource(response);
+            throw new RuntimeException(&quot;Error while sending create resource request to agent service&quot;, var22);
+         }
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public Resource createInventoryResource(int parentResourceId, int resourceTypeId, String resourceName, String resourceKey) {
+      Resource parentResource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(parentResourceId));
+      ResourceType resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(resourceTypeId));
+      Subject overLord = this.subjectManagerBean.getOverlord();
+      Resource resource = this.resourceManagerBean.getResourceByParentAndKey(overLord, parentResource, resourceKey, resourceType.getPlugin(), resourceType.getName());
+      if(resource == null) {
+         resource = new Resource(resourceKey, resourceName, resourceType);
+         resource.setParentResource(parentResource);
+         resource.setAgent(parentResource.getAgent());
+         resource.setInventoryStatus(InventoryStatus.COMMITTED);
+         this.entityManager.persist(resource);
+      } else {
+         resource.setInventoryStatus(InventoryStatus.COMMITTED);
+         resource.setItime(Calendar.getInstance().getTimeInMillis());
+      }
+
+      return resource;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void completeCreateResource(CreateResourceResponse response) {
+      this.log.debug(&quot;Received call to complete create resource: &quot; + response);
+      CreateResourceHistory history = (CreateResourceHistory)this.entityManager.find(CreateResourceHistory.class, Integer.valueOf(response.getRequestId()));
+      if(history == null) {
+         this.log.error(&quot;Attempting to complete a request that was not found in the database: &quot; + response.getRequestId());
+      } else {
+         history.setNewResourceKey(response.getResourceKey());
+         history.setErrorMessage(response.getErrorMessage());
+         history.setStatus(response.getStatus());
+         if(response.getResourceConfiguration() != null) {
+            this.entityManager.merge(response.getResourceConfiguration());
+         }
+
+         String newResourceName = response.getResourceName();
+         if(history.getCreatedResourceName() != null) {
+            newResourceName = history.getCreatedResourceName();
+         }
+
+      }
+   }
+
+   public void deleteResource(Subject user, int resourceId) {
+      this.log.debug(&quot;Received call to delete resource: &quot; + resourceId);
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      Agent agent = resource.getAgent();
+      if(!this.authorizationManager.hasResourcePermission(user, Permission.DELETE_RESOURCE, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + user.getName() + &quot;] does not have permission to delete resource [&quot; + resource + &quot;]&quot;);
+      } else {
+         DeleteResourceHistory persistedHistory = this.resourceFactoryManager.persistDeleteHistory(user, resourceId);
+         DeleteResourceRequest request = new DeleteResourceRequest(persistedHistory.getId(), resourceId);
+
+         try {
+            AgentClient e = this.agentManager.getAgentClient(agent);
+            ResourceFactoryAgentService errorMessage1 = e.getResourceFactoryAgentService();
+            errorMessage1.deleteResource(request);
+         } catch (Exception var10) {
+            this.log.error(&quot;Error while sending delete resource request to agent service&quot;, var10);
+            String errorMessage = ThrowableUtil.getAllMessages(var10);
+            DeleteResourceResponse response = new DeleteResourceResponse(persistedHistory.getId(), DeleteResourceStatus.FAILURE, errorMessage);
+            this.resourceFactoryManager.completeDeleteResourceRequest(response);
+            throw new RuntimeException(&quot;Error while sending delete resource request to agent service&quot;, var10);
+         }
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void completeDeleteResourceRequest(DeleteResourceResponse response) {
+      this.log.debug(&quot;Received call to complete delete resource: &quot; + response);
+      DeleteResourceHistory history = (DeleteResourceHistory)this.entityManager.find(DeleteResourceHistory.class, Integer.valueOf(response.getRequestId()));
+      if(history == null) {
+         this.log.error(&quot;Attemping to complete a request that was not found in the database: &quot; + response.getRequestId());
+      } else {
+         history.setErrorMessage(response.getErrorMessage());
+         history.setStatus(response.getStatus());
+         if(response.getStatus() == DeleteResourceStatus.SUCCESS) {
+            Resource resource = history.getResource();
+            resource.setInventoryStatus(InventoryStatus.DELETED);
+            resource.setItime(System.currentTimeMillis());
+         }
+
+      }
+   }
+
+   public void checkForTimedOutRequests() {
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;CreateResourceHistory.findWithStatus&quot;);
+         e.setParameter(&quot;status&quot;, CreateResourceStatus.IN_PROGRESS);
+         List createHistories = e.getResultList();
+         if(createHistories == null) {
+            return;
+         }
+
+         Iterator deleteHistories = createHistories.iterator();
+
+         while(deleteHistories.hasNext()) {
+            CreateResourceHistory i$ = (CreateResourceHistory)deleteHistories.next();
+            long request = i$.getDuration();
+            if(request &gt; 3600000L) {
+               this.log.debug(&quot;Timing out request after duration: &quot; + request + &quot; Request: &quot; + i$);
+               i$.setErrorMessage(&quot;Request with duration &quot; + request + &quot; exceeded the timeout threshold of &quot; + 3600000);
+               i$.setStatus(CreateResourceStatus.TIMED_OUT);
+            }
+         }
+
+         e = this.entityManager.createNamedQuery(&quot;CreateResourceHistory.findWithStatus&quot;);
+         e.setParameter(&quot;status&quot;, CreateResourceStatus.IN_PROGRESS);
+         List deleteHistories1 = e.getResultList();
+         if(deleteHistories1 == null) {
+            return;
+         }
+
+         Iterator i$1 = deleteHistories1.iterator();
+
+         while(i$1.hasNext()) {
+            DeleteResourceHistory request1 = (DeleteResourceHistory)i$1.next();
+            long duration = request1.getDuration();
+            if(duration &gt; 3600000L) {
+               this.log.debug(&quot;Timing out request after duration: &quot; + duration + &quot; Request: &quot; + request1);
+               request1.setErrorMessage(&quot;Request with duration &quot; + duration + &quot; exceeded the timeout threshold of &quot; + 3600000);
+               request1.setStatus(DeleteResourceStatus.TIMED_OUT);
+            }
+         }
+      } catch (Throwable var8) {
+         this.log.error(&quot;Error while processing timed out requests&quot;, var8);
+      }
+
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public CreateResourceHistory persistCreateHistory(Subject user, int parentResourceId, int resourceTypeId, String createResourceName, Configuration configuration) {
+      Resource parentResource = (Resource)this.entityManager.getReference(Resource.class, Integer.valueOf(parentResourceId));
+      ResourceType resourceType = (ResourceType)this.entityManager.getReference(ResourceType.class, Integer.valueOf(resourceTypeId));
+      Configuration configurationClone = configuration.deepCopy(false);
+      CreateResourceHistory history = new CreateResourceHistory(parentResource, resourceType, user.getName(), configurationClone);
+      history.setCreatedResourceName(createResourceName);
+      history.setStatus(CreateResourceStatus.IN_PROGRESS);
+      this.entityManager.persist(history);
+      parentResource.addCreateChildResourceHistory(history);
+      parentResource.getAgent();
+      return history;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public CreateResourceHistory persistCreateHistory(Subject user, int parentResourceId, int resourceTypeId, String createResourceName, PackageVersion packageVersion, Configuration deploymentTimeConfiguration) {
+      Resource parentResource = (Resource)this.entityManager.getReference(Resource.class, Integer.valueOf(parentResourceId));
+      ResourceType resourceType = (ResourceType)this.entityManager.getReference(ResourceType.class, Integer.valueOf(resourceTypeId));
+      CreateResourceHistory history = new CreateResourceHistory(parentResource, resourceType, user.getName(), (InstalledPackage)null);
+      history.setCreatedResourceName(createResourceName);
+      history.setConfiguration(deploymentTimeConfiguration);
+      history.setStatus(CreateResourceStatus.IN_PROGRESS);
+      this.entityManager.persist(history);
+      parentResource.addCreateChildResourceHistory(history);
+      parentResource.getAgent();
+      return history;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public DeleteResourceHistory persistDeleteHistory(Subject user, int resourceId) {
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      DeleteResourceHistory history = new DeleteResourceHistory(resource, user.getName());
+      history.setStatus(DeleteResourceStatus.IN_PROGRESS);
+      this.entityManager.persist(history);
+      resource.addDeleteResourceHistory(history);
+      resource.getAgent();
+      return history;
+   }
+
+   public CreateResourceHistory getCreateHistoryItem(int historyItemId) {
+      Query query = this.entityManager.createNamedQuery(&quot;CreateResourceHistory.findById&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(historyItemId));
+      CreateResourceHistory history = (CreateResourceHistory)query.getSingleResult();
+      return history;
+   }
+
+   public int getCreateChildResourceHistoryCount(int parentResourceId, Long beginDate, Long endDate) {
+      Query query = PersistenceUtility.createCountQuery(this.entityManager, &quot;CreateResourceHistory.findByParentResourceId&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(parentResourceId));
+      query.setParameter(&quot;startTime&quot;, beginDate);
+      query.setParameter(&quot;endTime&quot;, endDate);
+      long totalCount = ((Long)query.getSingleResult()).longValue();
+      return (int)totalCount;
+   }
+
+   public PageList getCreateChildResourceHistory(int parentResourceId, Long beginDate, Long endDate, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;crh.id&quot;, PageOrdering.DESC);
+      int totalCount = this.getCreateChildResourceHistoryCount(parentResourceId, beginDate, endDate);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;CreateResourceHistory.findByParentResourceId&quot;, pageControl);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(parentResourceId));
+      query.setParameter(&quot;startTime&quot;, beginDate);
+      query.setParameter(&quot;endTime&quot;, endDate);
+      List history = query.getResultList();
+      PageList pageList = new PageList(history, totalCount, pageControl);
+      return pageList;
+   }
+
+   public int getDeleteChildResourceHistoryCount(int parentResourceId, Long beginDate, Long endDate) {
+      Query query = PersistenceUtility.createCountQuery(this.entityManager, &quot;DeleteResourceHistory.findByParentResourceId&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(parentResourceId));
+      query.setParameter(&quot;startTime&quot;, beginDate);
+      query.setParameter(&quot;endTime&quot;, endDate);
+      long totalCount = ((Long)query.getSingleResult()).longValue();
+      return (int)totalCount;
+   }
+
+   public PageList getDeleteChildResourceHistory(int parentResourceId, Long beginDate, Long endDate, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;drh.id&quot;, PageOrdering.DESC);
+      int totalCount = this.getDeleteChildResourceHistoryCount(parentResourceId, beginDate, endDate);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;DeleteResourceHistory.findByParentResourceId&quot;, pageControl);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(parentResourceId));
+      query.setParameter(&quot;startTime&quot;, beginDate);
+      query.setParameter(&quot;endTime&quot;, endDate);
+      List history = query.getResultList();
+      PageList pageList = new PageList(history, totalCount, pageControl);
+      return pageList;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

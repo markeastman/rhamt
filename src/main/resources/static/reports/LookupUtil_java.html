@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for LookupUtil.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/util/LookupUtil.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">4</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.util;
+
+import javax.management.MBeanServer;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
+import javax.transaction.TransactionManager;
+import org.jboss.deployment.scanner.URLDeploymentScannerMBean;
+import org.jboss.mx.util.MBeanProxyExt;
+import org.jboss.mx.util.MBeanServerLocator;
+import org.jetbrains.annotations.NotNull;
+import org.rhq.enterprise.server.alert.AlertConditionManagerBean;
+import org.rhq.enterprise.server.alert.AlertConditionManagerLocal;
+import org.rhq.enterprise.server.alert.AlertDefinitionManagerBean;
+import org.rhq.enterprise.server.alert.AlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.alert.AlertManagerBean;
+import org.rhq.enterprise.server.alert.AlertManagerLocal;
+import org.rhq.enterprise.server.alert.AlertNotificationManagerBean;
+import org.rhq.enterprise.server.alert.AlertNotificationManagerLocal;
+import org.rhq.enterprise.server.alert.AlertTemplateManagerBean;
+import org.rhq.enterprise.server.alert.AlertTemplateManagerLocal;
+import org.rhq.enterprise.server.alert.GroupAlertDefinitionManagerBean;
+import org.rhq.enterprise.server.alert.GroupAlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerBean;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.alert.engine.jms.AlertConditionConsumerBean;
+import org.rhq.enterprise.server.alert.engine.jms.CachedConditionProducerBean;
+import org.rhq.enterprise.server.alert.engine.jms.CachedConditionProducerLocal;
+import org.rhq.enterprise.server.auth.SubjectManagerBean;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerBean;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.RoleManagerBean;
+import org.rhq.enterprise.server.authz.RoleManagerLocal;
+import org.rhq.enterprise.server.cloud.AffinityGroupManagerBean;
+import org.rhq.enterprise.server.cloud.AffinityGroupManagerLocal;
+import org.rhq.enterprise.server.cloud.CloudManagerBean;
+import org.rhq.enterprise.server.cloud.CloudManagerLocal;
+import org.rhq.enterprise.server.cloud.FailoverListManagerBean;
+import org.rhq.enterprise.server.cloud.FailoverListManagerLocal;
+import org.rhq.enterprise.server.cloud.PartitionEventManagerBean;
+import org.rhq.enterprise.server.cloud.PartitionEventManagerLocal;
+import org.rhq.enterprise.server.cloud.StatusManagerBean;
+import org.rhq.enterprise.server.cloud.StatusManagerLocal;
+import org.rhq.enterprise.server.cloud.instance.CacheConsistencyManagerBean;
+import org.rhq.enterprise.server.cloud.instance.CacheConsistencyManagerLocal;
+import org.rhq.enterprise.server.cloud.instance.ServerManagerBean;
+import org.rhq.enterprise.server.cloud.instance.ServerManagerLocal;
+import org.rhq.enterprise.server.common.EntityManagerFacade;
+import org.rhq.enterprise.server.common.EntityManagerFacadeLocal;
+import org.rhq.enterprise.server.configuration.ConfigurationManagerBean;
+import org.rhq.enterprise.server.configuration.ConfigurationManagerLocal;
+import org.rhq.enterprise.server.configuration.metadata.ConfigurationMetadataManagerBean;
+import org.rhq.enterprise.server.configuration.metadata.ConfigurationMetadataManagerLocal;
+import org.rhq.enterprise.server.content.ChannelManagerBean;
+import org.rhq.enterprise.server.content.ChannelManagerLocal;
+import org.rhq.enterprise.server.content.ContentManagerBean;
+import org.rhq.enterprise.server.content.ContentManagerLocal;
+import org.rhq.enterprise.server.content.ContentSourceManagerBean;
+import org.rhq.enterprise.server.content.ContentSourceManagerLocal;
+import org.rhq.enterprise.server.content.ContentUIManagerBean;
+import org.rhq.enterprise.server.content.ContentUIManagerLocal;
+import org.rhq.enterprise.server.content.metadata.ContentSourceMetadataManagerBean;
+import org.rhq.enterprise.server.content.metadata.ContentSourceMetadataManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerBean;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.core.CoreServerMBean;
+import org.rhq.enterprise.server.core.EmailManagerBean;
+import org.rhq.enterprise.server.core.EmailManagerLocal;
+import org.rhq.enterprise.server.core.plugin.AgentPluginURLDeploymentScanner;
+import org.rhq.enterprise.server.discovery.DiscoveryBossBean;
+import org.rhq.enterprise.server.discovery.DiscoveryBossLocal;
+import org.rhq.enterprise.server.event.EventManagerBean;
+import org.rhq.enterprise.server.event.EventManagerLocal;
+import org.rhq.enterprise.server.measurement.AvailabilityManagerBean;
+import org.rhq.enterprise.server.measurement.AvailabilityManagerLocal;
+import org.rhq.enterprise.server.measurement.CallTimeDataManagerBean;
+import org.rhq.enterprise.server.measurement.CallTimeDataManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementBaselineManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementBaselineManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementChartsManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementChartsManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementCompressionManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementCompressionManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementDataManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementDataManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementDefinitionManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementDefinitionManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementOOBManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementOOBManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementProblemManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementProblemManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementViewManagerBean;
+import org.rhq.enterprise.server.measurement.MeasurementViewManagerLocal;
+import org.rhq.enterprise.server.operation.OperationManagerBean;
+import org.rhq.enterprise.server.operation.OperationManagerLocal;
+import org.rhq.enterprise.server.perspective.PerspectiveManagerBean;
+import org.rhq.enterprise.server.perspective.PerspectiveManagerLocal;
+import org.rhq.enterprise.server.report.DataAccessManagerBean;
+import org.rhq.enterprise.server.report.DataAccessManagerLocal;
+import org.rhq.enterprise.server.resource.ProductVersionManagerBean;
+import org.rhq.enterprise.server.resource.ProductVersionManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceAvailabilityManagerBean;
+import org.rhq.enterprise.server.resource.ResourceAvailabilityManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceBossBean;
+import org.rhq.enterprise.server.resource.ResourceBossLocal;
+import org.rhq.enterprise.server.resource.ResourceFactoryManagerBean;
+import org.rhq.enterprise.server.resource.ResourceFactoryManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceManagerBean;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerBean;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerRemote;
+import org.rhq.enterprise.server.resource.cluster.ClusterManagerBean;
+import org.rhq.enterprise.server.resource.cluster.ClusterManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerBean;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.resource.group.definition.GroupDefinitionExpressionBuilderManagerBean;
+import org.rhq.enterprise.server.resource.group.definition.GroupDefinitionExpressionBuilderManagerLocal;
+import org.rhq.enterprise.server.resource.group.definition.GroupDefinitionManagerBean;
+import org.rhq.enterprise.server.resource.group.definition.GroupDefinitionManagerLocal;
+import org.rhq.enterprise.server.resource.metadata.ResourceMetadataManagerBean;
+import org.rhq.enterprise.server.resource.metadata.ResourceMetadataManagerLocal;
+import org.rhq.enterprise.server.scheduler.SchedulerBean;
+import org.rhq.enterprise.server.scheduler.SchedulerLocal;
+import org.rhq.enterprise.server.subsystem.AlertSubsystemManagerBean;
+import org.rhq.enterprise.server.subsystem.AlertSubsystemManagerLocal;
+import org.rhq.enterprise.server.subsystem.ConfigurationSubsystemManagerBean;
+import org.rhq.enterprise.server.subsystem.ConfigurationSubsystemManagerLocal;
+import org.rhq.enterprise.server.subsystem.OperationHistorySubsystemManagerBean;
+import org.rhq.enterprise.server.subsystem.OperationHistorySubsystemManagerLocal;
+import org.rhq.enterprise.server.support.SupportManagerBean;
+import org.rhq.enterprise.server.support.SupportManagerLocal;
+import org.rhq.enterprise.server.system.SystemManagerBean;
+import org.rhq.enterprise.server.system.SystemManagerLocal;
+import org.rhq.enterprise.server.test.AccessBean;
+import org.rhq.enterprise.server.test.AccessLocal;
+import org.rhq.enterprise.server.test.AlertTemplateTestBean;
+import org.rhq.enterprise.server.test.AlertTemplateTestLocal;
+import org.rhq.enterprise.server.test.CoreTestBean;
+import org.rhq.enterprise.server.test.CoreTestLocal;
+import org.rhq.enterprise.server.test.DiscoveryTestBean;
+import org.rhq.enterprise.server.test.DiscoveryTestLocal;
+import org.rhq.enterprise.server.test.MeasurementTestBean;
+import org.rhq.enterprise.server.test.MeasurementTestLocal;
+import org.rhq.enterprise.server.test.ResourceGroupTestBean;
+import org.rhq.enterprise.server.test.ResourceGroupTestBeanLocal;
+import org.rhq.enterprise.server.test.SubjectRoleTestBean;
+import org.rhq.enterprise.server.test.SubjectRoleTestBeanLocal;
+
+public final class LookupUtil {
+   private static boolean embeddedDeployment = Boolean.valueOf(System.getProperty(&quot;embeddedDeployment&quot;, &quot;false&quot;)).booleanValue();
+
+   public static DataSource getDataSource() {
+      try {
+         InitialContext e = new InitialContext();
+         DataSource ds = (DataSource)e.lookup(&quot;java:/RHQDS&quot;);
+         return ds;
+      } catch (Exception var2) {
+         throw new RuntimeException(&quot;Failed to get the data source&quot;, var2);
+      }
+   }
+
+   public static TransactionManager getTransactionManager() {
+      try {
+         InitialContext e = new InitialContext();
+         TransactionManager tm = (TransactionManager)e.lookup(&quot;java:/TransactionManager&quot;);
+         return tm;
+      } catch (Exception var2) {
+         throw new RuntimeException(&quot;Failed to get the transaction manager&quot;, var2);
+      }
+   }
+
+   public static EntityManager getEntityManager() {
+      try {
+         InitialContext e = new InitialContext();
+         EntityManagerFactory factory = (EntityManagerFactory)e.lookup(&quot;java:/RHQEntityManagerFactory&quot;);
+         return factory.createEntityManager();
+      } catch (Exception var2) {
+         throw new RuntimeException(&quot;Failed to create an entity manager&quot;, var2);
+      }
+   }
+
+   public static CachedConditionProducerBean getActiveConditionProducer() {
+      return (CachedConditionProducerBean)lookupLocal(CachedConditionProducerBean.class);
+   }
+
+   public static AlertConditionConsumerBean getActiveConditionConsumer() {
+      return (AlertConditionConsumerBean)lookupLocal(AlertConditionConsumerBean.class);
+   }
+
+   public static AgentManagerLocal getAgentManager() {
+      return (AgentManagerLocal)lookupLocal(AgentManagerBean.class);
+   }
+
+   public static AlertConditionCacheManagerLocal getAlertConditionCacheManager() {
+      return (AlertConditionCacheManagerLocal)lookupLocal(AlertConditionCacheManagerBean.class);
+   }
+
+   public static AlertConditionManagerLocal getAlertConditionManager() {
+      return (AlertConditionManagerLocal)lookupLocal(AlertConditionManagerBean.class);
+   }
+
+   public static AlertDefinitionManagerLocal getAlertDefinitionManager() {
+      return (AlertDefinitionManagerLocal)lookupLocal(AlertDefinitionManagerBean.class);
+   }
+
+   public static GroupAlertDefinitionManagerLocal getGroupAlertDefinitionManager() {
+      return (GroupAlertDefinitionManagerLocal)lookupLocal(GroupAlertDefinitionManagerBean.class);
+   }
+
+   public static AlertManagerLocal getAlertManager() {
+      return (AlertManagerLocal)lookupLocal(AlertManagerBean.class);
+   }
+
+   public static AlertNotificationManagerLocal getAlertNotificationManager() {
+      return (AlertNotificationManagerLocal)lookupLocal(AlertNotificationManagerBean.class);
+   }
+
+   public static AlertTemplateManagerLocal getAlertTemplateManager() {
+      return (AlertTemplateManagerLocal)lookupLocal(AlertTemplateManagerBean.class);
+   }
+
+   public static AlertSubsystemManagerLocal getAlertSubsystemManager() {
+      return (AlertSubsystemManagerLocal)lookupLocal(AlertSubsystemManagerBean.class);
+   }
+
+   public static AlertTemplateTestLocal getAlertTemplateTestBean() {
+      return (AlertTemplateTestLocal)lookupLocal(AlertTemplateTestBean.class);
+   }
+
+   public static AuthorizationManagerLocal getAuthorizationManager() {
+      return (AuthorizationManagerLocal)lookupLocal(AuthorizationManagerBean.class);
+   }
+
+   public static AvailabilityManagerLocal getAvailabilityManager() {
+      return (AvailabilityManagerLocal)lookupLocal(AvailabilityManagerBean.class);
+   }
+
+   public static CallTimeDataManagerLocal getCallTimeDataManager() {
+      return (CallTimeDataManagerLocal)lookupLocal(CallTimeDataManagerBean.class);
+   }
+
+   public static ConfigurationManagerLocal getConfigurationManager() {
+      return (ConfigurationManagerLocal)lookupLocal(ConfigurationManagerBean.class);
+   }
+
+   public static ConfigurationSubsystemManagerLocal getConfigurationSubsystemManager() {
+      return (ConfigurationSubsystemManagerLocal)lookupLocal(ConfigurationSubsystemManagerBean.class);
+   }
+
+   public static ContentManagerLocal getContentManager() {
+      return (ContentManagerLocal)lookupLocal(ContentManagerBean.class);
+   }
+
+   public static ContentUIManagerLocal getContentUIManager() {
+      return (ContentUIManagerLocal)lookupLocal(ContentUIManagerBean.class);
+   }
+
+   public static DiscoveryBossLocal getDiscoveryBoss() {
+      return (DiscoveryBossLocal)lookupLocal(DiscoveryBossBean.class);
+   }
+
+   public static EmailManagerLocal getEmailManagerBean() {
+      return (EmailManagerLocal)lookupLocal(EmailManagerBean.class);
+   }
+
+   public static EntityManagerFacadeLocal getEntityManagerFacade() {
+      return (EntityManagerFacadeLocal)lookupLocal(EntityManagerFacade.class);
+   }
+
+   public static EventManagerLocal getEventManager() {
+      return (EventManagerLocal)lookupLocal(EventManagerBean.class);
+   }
+
+   public static FailoverListManagerLocal getFailoverListManager() {
+      return (FailoverListManagerLocal)lookupLocal(FailoverListManagerBean.class);
+   }
+
+   public static GroupDefinitionManagerLocal getGroupDefinitionManager() {
+      return (GroupDefinitionManagerLocal)lookupLocal(GroupDefinitionManagerBean.class);
+   }
+
+   public static GroupDefinitionExpressionBuilderManagerLocal getGroupDefinitionExpressionBuilderManager() {
+      return (GroupDefinitionExpressionBuilderManagerLocal)lookupLocal(GroupDefinitionExpressionBuilderManagerBean.class);
+   }
+
+   public static MeasurementDefinitionManagerLocal getMeasurementDefinitionManager() {
+      return (MeasurementDefinitionManagerLocal)lookupLocal(MeasurementDefinitionManagerBean.class);
+   }
+
+   public static MeasurementScheduleManagerLocal getMeasurementScheduleManager() {
+      return (MeasurementScheduleManagerLocal)lookupLocal(MeasurementScheduleManagerBean.class);
+   }
+
+   public static MeasurementDataManagerLocal getMeasurementDataManager() {
+      return (MeasurementDataManagerLocal)lookupLocal(MeasurementDataManagerBean.class);
+   }
+
+   public static MeasurementChartsManagerLocal getMeasurementChartsManager() {
+      return (MeasurementChartsManagerLocal)lookupLocal(MeasurementChartsManagerBean.class);
+   }
+
+   public static MeasurementCompressionManagerLocal getMeasurementCompressionManager() {
+      return (MeasurementCompressionManagerLocal)lookupLocal(MeasurementCompressionManagerBean.class);
+   }
+
+   public static MeasurementProblemManagerLocal getMeasurementProblemManager() {
+      return (MeasurementProblemManagerLocal)lookupLocal(MeasurementProblemManagerBean.class);
+   }
+
+   public static MeasurementViewManagerLocal getMeasurementViewManager() {
+      return (MeasurementViewManagerLocal)lookupLocal(MeasurementViewManagerBean.class);
+   }
+
+   public static MeasurementBaselineManagerLocal getMeasurementBaselineManager() {
+      return (MeasurementBaselineManagerLocal)lookupLocal(MeasurementBaselineManagerBean.class);
+   }
+
+   public static MeasurementOOBManagerLocal getOOBManager() {
+      return (MeasurementOOBManagerLocal)lookupLocal(MeasurementOOBManagerBean.class);
+   }
+
+   public static OperationManagerLocal getOperationManager() {
+      return (OperationManagerLocal)lookupLocal(OperationManagerBean.class);
+   }
+
+   public static OperationHistorySubsystemManagerLocal getOperationHistorySubsystemManager() {
+      return (OperationHistorySubsystemManagerLocal)lookupLocal(OperationHistorySubsystemManagerBean.class);
+   }
+
+   public static PartitionEventManagerLocal getPartitionEventManager() {
+      return (PartitionEventManagerLocal)lookupLocal(PartitionEventManagerBean.class);
+   }
+
+   public static ConfigurationMetadataManagerLocal getConfigurationMetadataManager() {
+      return (ConfigurationMetadataManagerLocal)lookupLocal(ConfigurationMetadataManagerBean.class);
+   }
+
+   public static ContentSourceMetadataManagerLocal getContentSourceMetadataManager() {
+      return (ContentSourceMetadataManagerLocal)lookupLocal(ContentSourceMetadataManagerBean.class);
+   }
+
+   public static ContentSourceManagerLocal getContentSourceManager() {
+      return (ContentSourceManagerLocal)lookupLocal(ContentSourceManagerBean.class);
+   }
+
+   public static ChannelManagerLocal getChannelManagerLocal() {
+      return (ChannelManagerLocal)lookupLocal(ChannelManagerBean.class);
+   }
+
+   public static AffinityGroupManagerLocal getAffinityGroupManager() {
+      return (AffinityGroupManagerLocal)lookupLocal(AffinityGroupManagerBean.class);
+   }
+
+   public static CloudManagerLocal getCloudManager() {
+      return (CloudManagerLocal)lookupLocal(CloudManagerBean.class);
+   }
+
+   public static ClusterManagerLocal getClusterManager() {
+      return (ClusterManagerLocal)lookupLocal(ClusterManagerBean.class);
+   }
+
+   public static ServerManagerLocal getServerManager() {
+      return (ServerManagerLocal)lookupLocal(ServerManagerBean.class);
+   }
+
+   public static CacheConsistencyManagerLocal getCacheConsistenyManager() {
+      return (CacheConsistencyManagerLocal)lookupLocal(CacheConsistencyManagerBean.class);
+   }
+
+   public static ResourceMetadataManagerLocal getResourceMetadataManager() {
+      return (ResourceMetadataManagerLocal)lookupLocal(ResourceMetadataManagerBean.class);
+   }
+
+   public static ResourceBossLocal getResourceBoss() {
+      return (ResourceBossLocal)lookupLocal(ResourceBossBean.class);
+   }
+
+   public static ResourceGroupManagerLocal getResourceGroupManager() {
+      return (ResourceGroupManagerLocal)lookupLocal(ResourceGroupManagerBean.class);
+   }
+
+   public static ResourceManagerLocal getResourceManager() {
+      return (ResourceManagerLocal)lookupLocal(ResourceManagerBean.class);
+   }
+
+   public static ResourceAvailabilityManagerLocal getResourceAvailabilityManager() {
+      return (ResourceAvailabilityManagerLocal)lookupLocal(ResourceAvailabilityManagerBean.class);
+   }
+
+   public static ResourceFactoryManagerLocal getResourceFactoryManager() {
+      return (ResourceFactoryManagerLocal)lookupLocal(ResourceFactoryManagerBean.class);
+   }
+
+   public static ResourceTypeManagerLocal getResourceTypeManager() {
+      return (ResourceTypeManagerLocal)lookupLocal(ResourceTypeManagerBean.class);
+   }
+
+   public static ResourceTypeManagerRemote getResourceTypeManagerRemote() {
+      return (ResourceTypeManagerRemote)lookupRemote(ResourceTypeManagerBean.class);
+   }
+
+   public static RoleManagerLocal getRoleManager() {
+      return (RoleManagerLocal)lookupLocal(RoleManagerBean.class);
+   }
+
+   public static SchedulerLocal getSchedulerBean() {
+      return (SchedulerLocal)lookupLocal(SchedulerBean.class);
+   }
+
+   public static SubjectManagerLocal getSubjectManager() {
+      return (SubjectManagerLocal)lookupLocal(SubjectManagerBean.class);
+   }
+
+   public static SubjectRoleTestBeanLocal getSubjectRoleTestBean() {
+      return (SubjectRoleTestBeanLocal)lookupLocal(SubjectRoleTestBean.class);
+   }
+
+   public static SystemManagerLocal getSystemManager() {
+      return (SystemManagerLocal)lookupLocal(SystemManagerBean.class);
+   }
+
+   public static PerspectiveManagerLocal getPerspectiveManager() {
+      return (PerspectiveManagerLocal)lookupLocal(PerspectiveManagerBean.class);
+   }
+
+   public static ProductVersionManagerLocal getProductVersionManager() {
+      return (ProductVersionManagerLocal)lookupLocal(ProductVersionManagerBean.class);
+   }
+
+   public static CachedConditionProducerLocal getCachedConditionProducerLocal() {
+      return (CachedConditionProducerLocal)lookupLocal(CachedConditionProducerBean.class);
+   }
+
+   public static SupportManagerLocal getSupportManager() {
+      return (SupportManagerLocal)lookupLocal(SupportManagerBean.class);
+   }
+
+   public static StatusManagerLocal getStatusManager() {
+      return (StatusManagerLocal)lookupLocal(StatusManagerBean.class);
+   }
+
+   public static AccessLocal getAccessLocal() {
+      return (AccessLocal)lookupLocal(AccessBean.class);
+   }
+
+   public static CoreTestLocal getCoreTest() {
+      return (CoreTestLocal)lookupLocal(CoreTestBean.class);
+   }
+
+   public static DiscoveryTestLocal getDiscoveryTest() {
+      return (DiscoveryTestLocal)lookupLocal(DiscoveryTestBean.class);
+   }
+
+   public static MeasurementTestLocal getMeasurementTest() {
+      return (MeasurementTestLocal)lookupLocal(MeasurementTestBean.class);
+   }
+
+   public static ResourceGroupTestBeanLocal getResourceGroupTestBean() {
+      return (ResourceGroupTestBeanLocal)lookupLocal(ResourceGroupTestBean.class);
+   }
+
+   public static CoreServerMBean getCoreServer() {
+      MBeanServer jBossMBeanServer = MBeanServerLocator.locate();
+      CoreServerMBean jonServer = (CoreServerMBean)MBeanProxyExt.create(CoreServerMBean.class, CoreServerMBean.OBJECT_NAME, jBossMBeanServer);
+      return jonServer;
+   }
+
+   public static URLDeploymentScannerMBean getAgentPluginURLDeploymentScanner() {
+      MBeanServer jBossMBeanServer = MBeanServerLocator.locate();
+      URLDeploymentScannerMBean scanner = (URLDeploymentScannerMBean)MBeanProxyExt.create(URLDeploymentScannerMBean.class, AgentPluginURLDeploymentScanner.OBJECT_NAME, jBossMBeanServer);
+      return scanner;
+   }
+
+   private static String getLocalJNDIName(@NotNull Class beanClass) {
+      return (embeddedDeployment?&quot;&quot;:&quot;rhq/&quot;) + beanClass.getSimpleName() + &quot;/local&quot;;
+   }
+
+   private static String getRemoteJNDIName(@NotNull Class beanClass) {
+      return (embeddedDeployment?&quot;&quot;:&quot;rhq/&quot;) + beanClass.getSimpleName() + &quot;/remote&quot;;
+   }
+
+   private static Object lookupLocal(Class type) {
+      try {
+         return lookup(getLocalJNDIName(type));
+      } catch (NamingException var2) {
+         throw new RuntimeException(&quot;Failed to lookup local interface to EJB &quot; + type, var2);
+      }
+   }
+
+   private static Object lookupRemote(Class type) {
+      try {
+         return lookup(getRemoteJNDIName(type));
+      } catch (NamingException var2) {
+         throw new RuntimeException(&quot;Failed to lookup remote interface to EJB &quot; + type, var2);
+      }
+   }
+
+   private static Object lookup(String name) throws NamingException {
+      return (new InitialContext()).lookup(name);
+   }
+
+   public static DataAccessManagerLocal getDataAccessManager() {
+      return (DataAccessManagerLocal)lookupLocal(DataAccessManagerBean.class);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "181,171,505,161" });
+
+            $("<div id='181-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(181)');
+            $("<div id='171-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(171)');
+            $("<div id='505-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(505)');
+            $("<div id='161-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(161)');
+
+
+$("<a name='12260352' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Call of JNDI lookup</strong><a title='View Rule: environment-dependent-calls-02000' href='windup_ruleproviders.html#environment-dependent-calls-02000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This method lookups an object using a JNDI String. During the migration process, some entity JNDI bindings may change. Ensure that the JNDI Name does not need to change for JBoss.<\/p><p><em>For Example:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n<\/code><\/pre><p><em>should become:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n<\/code><\/pre><ul><li><a href='https://docs.jboss.org/author/display/AS71/JNDI+Reference' target='_blank'>JBoss JNDI Reference</a></li></ul></div></div></div>").appendTo('#181-inlines');
+
+$("<a name='12261120' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Call of JNDI lookup</strong><a title='View Rule: environment-dependent-calls-02000' href='windup_ruleproviders.html#environment-dependent-calls-02000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This method lookups an object using a JNDI String. During the migration process, some entity JNDI bindings may change. Ensure that the JNDI Name does not need to change for JBoss.<\/p><p><em>For Example:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n<\/code><\/pre><p><em>should become:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n<\/code><\/pre><ul><li><a href='https://docs.jboss.org/author/display/AS71/JNDI+Reference' target='_blank'>JBoss JNDI Reference</a></li></ul></div></div></div>").appendTo('#171-inlines');
+
+$("<a name='12261632' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Call of JNDI lookup</strong><a title='View Rule: environment-dependent-calls-02000' href='windup_ruleproviders.html#environment-dependent-calls-02000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This method lookups an object using a JNDI String. During the migration process, some entity JNDI bindings may change. Ensure that the JNDI Name does not need to change for JBoss.<\/p><p><em>For Example:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n<\/code><\/pre><p><em>should become:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n<\/code><\/pre><ul><li><a href='https://docs.jboss.org/author/display/AS71/JNDI+Reference' target='_blank'>JBoss JNDI Reference</a></li></ul></div></div></div>").appendTo('#505-inlines');
+
+$("<a name='12262144' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Call of JNDI lookup</strong><a title='View Rule: environment-dependent-calls-02000' href='windup_ruleproviders.html#environment-dependent-calls-02000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This method lookups an object using a JNDI String. During the migration process, some entity JNDI bindings may change. Ensure that the JNDI Name does not need to change for JBoss.<\/p><p><em>For Example:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n<\/code><\/pre><p><em>should become:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n<\/code><\/pre><ul><li><a href='https://docs.jboss.org/author/display/AS71/JNDI+Reference' target='_blank'>JBoss JNDI Reference</a></li></ul></div></div></div>").appendTo('#161-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

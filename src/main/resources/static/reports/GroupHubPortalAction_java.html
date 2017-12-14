@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for GroupHubPortalAction.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/classes/org/rhq/enterprise/gui/legacy/action/resource/hub/GroupHubPortalAction.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">3</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Java Remote Method Invocation (RMI) API</em>
+<a title='View Rule: java-rmi-00001' href='windup_ruleproviders.html#java-rmi-00001'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Java RMI should be avoided in cloud environments, as it tends to lead to tightly-coupled stateful applications with scalability problems. Consider replacing it with a solution using RESTful APIs or message queues.</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.gui.legacy.action.resource.hub;
+
+import java.rmi.RemoteException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.LabelValueBean;
+import org.apache.struts.util.MessageResources;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.plugin.Plugin;
+import org.rhq.core.domain.resource.ResourceCategory;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.enterprise.gui.legacy.HubConstants;
+import org.rhq.enterprise.gui.legacy.Portal;
+import org.rhq.enterprise.gui.legacy.WebUser;
+import org.rhq.enterprise.gui.legacy.action.BaseAction;
+import org.rhq.enterprise.gui.legacy.action.resource.hub.GroupHubForm;
+import org.rhq.enterprise.gui.legacy.action.resource.hub.HubForm;
+import org.rhq.enterprise.gui.legacy.util.HubUtils;
+import org.rhq.enterprise.gui.legacy.util.RequestUtils;
+import org.rhq.enterprise.gui.legacy.util.SessionUtils;
+import org.rhq.enterprise.gui.util.WebUtility;
+import org.rhq.enterprise.server.auth.SessionNotFoundException;
+import org.rhq.enterprise.server.auth.SessionTimeoutException;
+import org.rhq.enterprise.server.resource.InventorySummary;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+public class GroupHubPortalAction extends BaseAction {
+   private static final String ALL_PLATFORMS_KEY = &quot;resource.hub.filter.AllPlatformTypes&quot;;
+   private static final String ALL_SERVERS_KEY = &quot;resource.hub.filter.AllServerTypes&quot;;
+   private static final String ALL_SERVICES_KEY = &quot;resource.hub.filter.AllServiceTypes&quot;;
+   public static final int SELECTOR_GROUP_COMPAT = 1;
+   public static final int SELECTOR_GROUP_ADHOC = 2;
+   protected Log log = LogFactory.getLog(GroupHubPortalAction.class);
+
+   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      GroupHubForm hubForm = (GroupHubForm)form;
+      PageControl pageControl = WebUtility.getPageControl(request);
+      Subject subject = RequestUtils.getSubject(request);
+      HttpSession session = request.getSession();
+      WebUser user = SessionUtils.getWebUser(request.getSession());
+      HubUtils.initView(hubForm, user);
+      String groupName = this.getGroupName(request, hubForm);
+      String resourceTypeName = HubConstants.ALL_RESOURCE_TYPES;
+      ResourceCategory resourceCategory = null;
+      if(hubForm.getResourceType() != null) {
+         int pluginName = 0;
+
+         try {
+            pluginName = Integer.parseInt(hubForm.getResourceType().trim());
+         } catch (Exception var18) {
+            ;
+         }
+
+         if(pluginName == -1) {
+            resourceCategory = ResourceCategory.PLATFORM;
+         } else if(pluginName == -2) {
+            resourceCategory = ResourceCategory.SERVER;
+         } else if(pluginName == -3) {
+            resourceCategory = ResourceCategory.SERVICE;
+         } else {
+            resourceTypeName = this.decode(hubForm.getResourceType());
+            if(resourceTypeName.equals(&quot;&quot;) || resourceTypeName.equals(&quot;ALL&quot;)) {
+               resourceTypeName = HubConstants.ALL_RESOURCE_TYPES;
+            }
+         }
+      }
+
+      String pluginName1 = hubForm.getPlugin();
+      if(pluginName1 != null &amp;&amp; pluginName1.trim().equals(&quot;&quot;)) {
+         pluginName1 = null;
+      }
+
+      if(pluginName1 != null) {
+         pluginName1 = this.decode(pluginName1);
+      }
+
+      if(hubForm.getGroupCategory() == null) {
+         hubForm.setGroupCategory(HubConstants.DEFAULT_GROUP_CATEGORY);
+      }
+
+      GroupCategory groupCategory = GroupCategory.valueOf(hubForm.getGroupCategory());
+      PageList groups = this.getGroups(subject, groupCategory, resourceCategory, resourceTypeName, pluginName1, groupName, pageControl);
+      request.setAttribute(&quot;AllResources&quot;, groups);
+      this.initGroupTypesPulldownMenu(request, hubForm, subject, groupCategory, groupName, resourceCategory, resourceTypeName, pluginName1);
+      this.initInventorySummary(subject, request);
+      SessionUtils.resetReturnPath(request.getSession());
+      Portal portal = Portal.createPortal(&quot;resource.hub.ResourceHubTitle&quot;, &quot;.group.hub&quot;);
+      request.setAttribute(&quot;portal&quot;, portal);
+      String navHierarchy = HubUtils.buildNavHierarchy(groupCategory.toString(), resourceTypeName);
+      request.setAttribute(&quot;navHierarchy&quot;, navHierarchy);
+      return this.returnSuccess(request, mapping);
+   }
+
+   private void initInventorySummary(Subject user, HttpServletRequest request) throws SessionNotFoundException, SessionTimeoutException, RemoteException {
+      InventorySummary summary = LookupUtil.getResourceBoss().getInventorySummary(user);
+      request.setAttribute(&quot;ResourceSummary&quot;, summary);
+   }
+
+   private String getGroupName(HttpServletRequest request, GroupHubForm hubForm) {
+      MessageResources res = this.getResources(request);
+      String jsInserted = res.getMessage(&quot;resource.hub.search.KeywordSearchText&quot;);
+      String groupName = hubForm.getKeywords();
+      if(groupName != null &amp;&amp; (groupName.equals(&quot;&quot;) || groupName.equals(jsInserted))) {
+         groupName = HubConstants.DEFAULT_GROUP_NAME;
+         hubForm.setKeywords(groupName);
+      }
+
+      return groupName;
+   }
+
+   private void initGroupTypesPulldownMenu(HttpServletRequest request, GroupHubForm hubForm, Subject subject, GroupCategory groupCategory, String nameFilter, ResourceCategory resourceCategory, String resourceTypeName, String pluginName) throws Exception {
+      hubForm.addType(this.createMenuLabel(request, &quot;resource.hub.filter.AllGroupTypes&quot;, &quot;ALL&quot;));
+      if(groupCategory == GroupCategory.COMPATIBLE) {
+         List allResourceTypes = LookupUtil.getResourceTypeManager().getResourceTypesForCompatibleGroups(subject, pluginName);
+         TreeSet platformTypes = new TreeSet();
+         TreeSet serverTypes = new TreeSet();
+         TreeSet serviceTypes = new TreeSet();
+         Iterator plugins = allResourceTypes.iterator();
+
+         while(plugins.hasNext()) {
+            ResourceType i$ = (ResourceType)plugins.next();
+            ResourceCategory plugin = i$.getCategory();
+            if(plugin == ResourceCategory.PLATFORM) {
+               platformTypes.add(i$.getName());
+            } else if(plugin == ResourceCategory.SERVER) {
+               serverTypes.add(i$.getName());
+            } else {
+               if(plugin != ResourceCategory.SERVICE) {
+                  throw new IllegalArgumentException(&quot;Unsupported ResourceCategory \'&quot; + plugin.name() + &quot;\' in GroupHubPortalAction.initGroupTypesPulldownMenu&quot;);
+               }
+
+               serviceTypes.add(i$.getName());
+            }
+         }
+
+         this.addResourceTypeMenuItems(hubForm, platformTypes, RequestUtils.message(request, &quot;resource.hub.filter.AllPlatformTypes&quot;), &quot;-1&quot;);
+         this.addResourceTypeMenuItems(hubForm, serverTypes, RequestUtils.message(request, &quot;resource.hub.filter.AllServerTypes&quot;), &quot;-2&quot;);
+         this.addResourceTypeMenuItems(hubForm, serviceTypes, RequestUtils.message(request, &quot;resource.hub.filter.AllServiceTypes&quot;), &quot;-3&quot;);
+         hubForm.addPlugin(this.createMenuLabel(request, &quot;resource.hub.filter.AllPlugins&quot;, &quot;&quot;));
+         List plugins1 = LookupUtil.getResourceMetadataManager().getPluginsByResourceTypeAndCategory(resourceTypeName, resourceCategory);
+         Iterator i$1 = plugins1.iterator();
+
+         while(i$1.hasNext()) {
+            Plugin plugin1 = (Plugin)i$1.next();
+            hubForm.addPlugin(new LabelValueBean(plugin1.getDisplayName(), this.encode(plugin1.getName())));
+         }
+      }
+
+   }
+
+   public void addResourceTypeMenuItems(HubForm form, Set typeNames, String headerLabel, String headerValue) {
+      if(!typeNames.isEmpty()) {
+         form.addType(new LabelValueBean(&quot;&quot;, &quot;&quot;));
+         form.addType(new LabelValueBean(headerLabel, headerValue));
+         Iterator i$ = typeNames.iterator();
+
+         while(i$.hasNext()) {
+            String resourceTypeName = (String)i$.next();
+            form.addType(new LabelValueBean(resourceTypeName, this.encode(resourceTypeName)));
+         }
+      }
+
+   }
+
+   protected LabelValueBean createMenuLabel(HttpServletRequest req, String key, String value) {
+      MessageResources messages = this.getResources(req);
+      return new LabelValueBean(messages.getMessage(key), value);
+   }
+
+   private PageList getGroups(Subject subject, GroupCategory groupCategory, ResourceCategory resourceCategory, String resourceTypeName, String pluginName, String nameFilter, PageControl pageControl) throws Exception {
+      this.log.debug(&quot;Finding all &quot; + groupCategory + &quot;s with &quot; + &quot;resource category [&quot; + resourceCategory + &quot;] and &quot; + &quot;resource type [&quot; + resourceTypeName + &quot;] and &quot; + &quot;resource name [&quot; + nameFilter + &quot;]...&quot;);
+      if(groupCategory != GroupCategory.COMPATIBLE &amp;&amp; groupCategory != GroupCategory.MIXED) {
+         throw new RuntimeException(&quot;ResourceHub doesn\'t currently support &quot; + groupCategory.toString() + &quot; groupCategory&quot;);
+      } else {
+         this.log.debug(&quot;getting compatible group list&quot;);
+         PageList groups = LookupUtil.getResourceGroupManager().findResourceGroupComposites(subject, groupCategory, resourceCategory, resourceTypeName, pluginName, nameFilter, (Integer)null, (Integer)null, pageControl);
+         this.log.debug(&quot;found &quot; + groups.size() + &quot; groups&quot;);
+         return groups;
+      }
+   }
+
+   private String encode(String parameter) {
+      return parameter.replaceAll(&quot; &quot;, &quot;_&quot;);
+   }
+
+   private String decode(String parameter) {
+      return parameter.replaceAll(&quot;_&quot;, &quot; &quot;);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

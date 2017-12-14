@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for SchedulerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/scheduler/SchedulerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.scheduler;
+
+import java.text.ParseException;
+import java.util.Date;
+import java.util.List;
+import java.util.Properties;
+import java.util.Set;
+import javax.ejb.Stateless;
+import javax.management.MBeanServerInvocationHandler;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.mx.util.MBeanServerLocator;
+import org.quartz.Calendar;
+import org.quartz.CronTrigger;
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+import org.quartz.JobListener;
+import org.quartz.SchedulerContext;
+import org.quartz.SchedulerException;
+import org.quartz.SchedulerListener;
+import org.quartz.SchedulerMetaData;
+import org.quartz.SimpleTrigger;
+import org.quartz.Trigger;
+import org.quartz.TriggerListener;
+import org.quartz.UnableToInterruptJobException;
+import org.quartz.spi.JobFactory;
+import org.rhq.enterprise.server.scheduler.SchedulerLocal;
+import org.rhq.enterprise.server.scheduler.SchedulerServiceMBean;
+
+@Stateless
+public class SchedulerBean implements SchedulerLocal {
+   private static final long serialVersionUID = 1L;
+   private final Log log = LogFactory.getLog(SchedulerBean.class.getName());
+
+   private SchedulerServiceMBean getSchedulerService() throws SchedulerException {
+      try {
+         return (SchedulerServiceMBean)MBeanServerInvocationHandler.newProxyInstance(MBeanServerLocator.locateJBoss(), SCHEDULER_MBEAN_NAME, SchedulerServiceMBean.class, false);
+      } catch (Exception var2) {
+         throw new SchedulerException(&quot;Failed to get a proxy to the scheduler service MBean&quot;, var2);
+      }
+   }
+
+   public void scheduleRepeatingJob(String name, String groupName, JobDataMap jobData, Class jobClass, boolean rescheduleIfExists, boolean isVolatile, long initialDelay, long interval) throws SchedulerException {
+      SchedulerServiceMBean scheduler = this.getSchedulerService();
+
+      try {
+         if(scheduler.getJobDetail(name, groupName) != null) {
+            if(!rescheduleIfExists) {
+               this.log.debug(&quot;Looks like repeating job [&quot; + name + ':' + groupName + &quot;] is already scheduled - leaving the original job as-is&quot;);
+               return;
+            }
+
+            this.log.debug(&quot;Looks like repeating job [&quot; + name + ':' + groupName + &quot;] is already scheduled - removing it so it can be rescheduled&quot;);
+            scheduler.deleteJob(name, groupName);
+         }
+      } catch (SchedulerException var16) {
+         ;
+      }
+
+      JobDetail job = new JobDetail(name, groupName, jobClass, isVolatile, false, false);
+      if(jobData != null) {
+         job.setJobDataMap(jobData);
+      }
+
+      Date start = new Date(System.currentTimeMillis() + initialDelay);
+      SimpleTrigger trigger = new SimpleTrigger(name, groupName, start, (Date)null, -1, interval);
+      trigger.setVolatility(isVolatile);
+      Date next = scheduler.scheduleJob(job, trigger);
+      this.log.info(&quot;Scheduled job [&quot; + name + ':' + groupName + &quot;] to fire next at [&quot; + next + &quot;] and repeat every [&quot; + interval + &quot;] milliseconds&quot;);
+   }
+
+   public void scheduleCronJob(String name, String groupName, JobDataMap jobData, Class jobClass, boolean rescheduleIfExists, boolean isVolatile, String cronString) throws SchedulerException {
+      SchedulerServiceMBean scheduler = this.getSchedulerService();
+
+      try {
+         if(scheduler.getJobDetail(name, groupName) != null) {
+            if(!rescheduleIfExists) {
+               this.log.debug(&quot;Looks like cron job [&quot; + name + ':' + groupName + &quot;] is already scheduled - leaving the original job as-is&quot;);
+               return;
+            }
+
+            this.log.debug(&quot;Looks like cron job [&quot; + name + ':' + groupName + &quot;] is already scheduled - removing it so it can be rescheduled&quot;);
+            scheduler.deleteJob(name, groupName);
+         }
+      } catch (SchedulerException var13) {
+         ;
+      }
+
+      JobDetail job = new JobDetail(name, groupName, jobClass, isVolatile, false, false);
+      if(jobData != null) {
+         job.setJobDataMap(jobData);
+      }
+
+      CronTrigger trigger;
+      try {
+         trigger = new CronTrigger(name, groupName, name, groupName, cronString);
+      } catch (ParseException var12) {
+         throw new SchedulerException(var12);
+      }
+
+      trigger.setVolatility(isVolatile);
+      Date next = scheduler.scheduleJob(job, trigger);
+      this.log.info(&quot;Scheduled cron job [&quot; + name + ':' + groupName + &quot;] to fire next at [&quot; + next + &quot;] with the cronString of [&quot; + cronString + &quot;]&quot;);
+   }
+
+   public void scheduleSimpleRepeatingJob(Class jobClass, boolean rescheduleIfExists, boolean isVolatile, long initialDelay, long interval) throws SchedulerException {
+      this.scheduleRepeatingJob(jobClass.getName(), jobClass.getName(), (JobDataMap)null, jobClass, rescheduleIfExists, isVolatile, initialDelay, interval);
+   }
+
+   public void scheduleSimpleCronJob(Class jobClass, boolean rescheduleIfExists, boolean isVolatile, String cronString) throws SchedulerException {
+      this.scheduleCronJob(jobClass.getName(), jobClass.getName(), (JobDataMap)null, jobClass, rescheduleIfExists, isVolatile, cronString);
+   }
+
+   public Properties getQuartzProperties() {
+      try {
+         return this.getSchedulerService().getQuartzProperties();
+      } catch (SchedulerException var2) {
+         this.log.error(&quot;Failed to get the Quartz properties&quot;, var2);
+         return null;
+      }
+   }
+
+   public void setQuartzProperties(Properties quartzProps) throws SchedulerException {
+      this.getSchedulerService().setQuartzProperties(quartzProps);
+   }
+
+   public Integer getDefaultOperationTimeout() {
+      try {
+         return this.getSchedulerService().getDefaultOperationTimeout();
+      } catch (SchedulerException var2) {
+         this.log.error(&quot;Failed to get the default operation timeout&quot;, var2);
+         return null;
+      }
+   }
+
+   public void startQuartzScheduler() throws SchedulerException {
+      this.getSchedulerService().startQuartzScheduler();
+   }
+
+   public String getSchedulerName() throws SchedulerException {
+      return this.getSchedulerService().getSchedulerName();
+   }
+
+   public String getSchedulerInstanceId() throws SchedulerException {
+      return this.getSchedulerService().getSchedulerInstanceId();
+   }
+
+   public SchedulerContext getContext() throws SchedulerException {
+      return this.getSchedulerService().getContext();
+   }
+
+   public SchedulerMetaData getMetaData() throws SchedulerException {
+      return this.getSchedulerService().getMetaData();
+   }
+
+   public void start() throws SchedulerException {
+      this.getSchedulerService().start();
+   }
+
+   public void pause() throws SchedulerException {
+      this.getSchedulerService().pause();
+   }
+
+   public boolean isPaused() throws SchedulerException {
+      return this.getSchedulerService().isPaused();
+   }
+
+   public void shutdown() throws SchedulerException {
+      this.getSchedulerService().shutdown();
+   }
+
+   public void shutdown(boolean waitForJobsToComplete) throws SchedulerException {
+      this.getSchedulerService().shutdown(waitForJobsToComplete);
+   }
+
+   public boolean isShutdown() throws SchedulerException {
+      return this.getSchedulerService().isShutdown();
+   }
+
+   public List getCurrentlyExecutingJobs() throws SchedulerException {
+      return this.getSchedulerService().getCurrentlyExecutingJobs();
+   }
+
+   public Date scheduleJob(JobDetail jobDetail, Trigger trigger) throws SchedulerException {
+      if(this.log.isDebugEnabled()) {
+         this.log.debug(&quot;Job details: &quot; + jobDetail);
+      }
+
+      return this.getSchedulerService().scheduleJob(jobDetail, trigger);
+   }
+
+   public Date scheduleJob(Trigger trigger) throws SchedulerException {
+      return this.getSchedulerService().scheduleJob(trigger);
+   }
+
+   public void addJob(JobDetail jobDetail, boolean replace) throws SchedulerException {
+      this.getSchedulerService().addJob(jobDetail, replace);
+   }
+
+   public boolean deleteJob(String jobName, String groupName) throws SchedulerException {
+      return this.getSchedulerService().deleteJob(jobName, groupName);
+   }
+
+   public boolean unscheduleJob(String triggerName, String groupName) throws SchedulerException {
+      return this.getSchedulerService().unscheduleJob(triggerName, groupName);
+   }
+
+   public void triggerJob(String jobName, String groupName) throws SchedulerException {
+      this.getSchedulerService().triggerJob(jobName, groupName);
+   }
+
+   public void triggerJobWithVolatileTrigger(String jobName, String groupName) throws SchedulerException {
+      this.getSchedulerService().triggerJobWithVolatileTrigger(jobName, groupName);
+   }
+
+   public void pauseTrigger(String triggerName, String groupName) throws SchedulerException {
+      this.getSchedulerService().pauseTrigger(triggerName, groupName);
+   }
+
+   public void pauseTriggerGroup(String groupName) throws SchedulerException {
+      this.getSchedulerService().pauseTriggerGroup(groupName);
+   }
+
+   public void pauseJob(String jobName, String groupName) throws SchedulerException {
+      this.getSchedulerService().pauseJob(jobName, groupName);
+   }
+
+   public void pauseJobGroup(String groupName) throws SchedulerException {
+      this.getSchedulerService().pauseJobGroup(groupName);
+   }
+
+   public void resumeTrigger(String triggerName, String groupName) throws SchedulerException {
+      this.getSchedulerService().resumeTrigger(triggerName, groupName);
+   }
+
+   public void resumeTriggerGroup(String groupName) throws SchedulerException {
+      this.getSchedulerService().resumeTriggerGroup(groupName);
+   }
+
+   public void resumeJob(String jobName, String groupName) throws SchedulerException {
+      this.getSchedulerService().resumeJob(jobName, groupName);
+   }
+
+   public void resumeJobGroup(String groupName) throws SchedulerException {
+      this.getSchedulerService().resumeJobGroup(groupName);
+   }
+
+   public String[] getJobGroupNames() throws SchedulerException {
+      return this.getSchedulerService().getJobGroupNames();
+   }
+
+   public String[] getJobNames(String groupName) throws SchedulerException {
+      return this.getSchedulerService().getJobNames(groupName);
+   }
+
+   public Trigger[] getTriggersOfJob(String jobName, String groupName) throws SchedulerException {
+      return this.getSchedulerService().getTriggersOfJob(jobName, groupName);
+   }
+
+   public String[] getTriggerGroupNames() throws SchedulerException {
+      return this.getSchedulerService().getTriggerGroupNames();
+   }
+
+   public String[] getTriggerNames(String groupName) throws SchedulerException {
+      return this.getSchedulerService().getTriggerNames(groupName);
+   }
+
+   public JobDetail getJobDetail(String jobName, String jobGroup) throws SchedulerException {
+      return this.getSchedulerService().getJobDetail(jobName, jobGroup);
+   }
+
+   public Trigger getTrigger(String triggerName, String triggerGroup) throws SchedulerException {
+      return this.getSchedulerService().getTrigger(triggerName, triggerGroup);
+   }
+
+   public boolean deleteCalendar(String calName) throws SchedulerException {
+      return this.getSchedulerService().deleteCalendar(calName);
+   }
+
+   public Calendar getCalendar(String calName) throws SchedulerException {
+      return this.getSchedulerService().getCalendar(calName);
+   }
+
+   public String[] getCalendarNames() throws SchedulerException {
+      return this.getSchedulerService().getCalendarNames();
+   }
+
+   public void addGlobalJobListener(JobListener jobListener) throws SchedulerException {
+      this.getSchedulerService().addGlobalJobListener(jobListener);
+   }
+
+   public void addJobListener(JobListener jobListener) throws SchedulerException {
+      this.getSchedulerService().addJobListener(jobListener);
+   }
+
+   public boolean removeGlobalJobListener(JobListener jobListener) throws SchedulerException {
+      return this.getSchedulerService().removeGlobalJobListener(jobListener);
+   }
+
+   public boolean removeJobListener(String name) throws SchedulerException {
+      return this.getSchedulerService().removeJobListener(name);
+   }
+
+   public List getGlobalJobListeners() throws SchedulerException {
+      return this.getSchedulerService().getGlobalJobListeners();
+   }
+
+   public Set getJobListenerNames() throws SchedulerException {
+      return this.getSchedulerService().getJobListenerNames();
+   }
+
+   public JobListener getJobListener(String name) throws SchedulerException {
+      return this.getSchedulerService().getJobListener(name);
+   }
+
+   public void addGlobalTriggerListener(TriggerListener triggerListener) throws SchedulerException {
+      this.getSchedulerService().addGlobalTriggerListener(triggerListener);
+   }
+
+   public void addTriggerListener(TriggerListener triggerListener) throws SchedulerException {
+      this.getSchedulerService().addTriggerListener(triggerListener);
+   }
+
+   public boolean removeGlobalTriggerListener(TriggerListener triggerListener) throws SchedulerException {
+      return this.getSchedulerService().removeGlobalTriggerListener(triggerListener);
+   }
+
+   public boolean removeTriggerListener(String name) throws SchedulerException {
+      return this.getSchedulerService().removeTriggerListener(name);
+   }
+
+   public List getGlobalTriggerListeners() throws SchedulerException {
+      return this.getSchedulerService().getGlobalTriggerListeners();
+   }
+
+   public Set getTriggerListenerNames() throws SchedulerException {
+      return this.getSchedulerService().getTriggerListenerNames();
+   }
+
+   public TriggerListener getTriggerListener(String name) throws SchedulerException {
+      return this.getSchedulerService().getTriggerListener(name);
+   }
+
+   public void addSchedulerListener(SchedulerListener schedulerListener) throws SchedulerException {
+      this.getSchedulerService().addSchedulerListener(schedulerListener);
+   }
+
+   public boolean removeSchedulerListener(SchedulerListener schedulerListener) throws SchedulerException {
+      return this.getSchedulerService().removeSchedulerListener(schedulerListener);
+   }
+
+   public List getSchedulerListeners() throws SchedulerException {
+      return this.getSchedulerService().getSchedulerListeners();
+   }
+
+   public void addCalendar(String calName, Calendar calendar, boolean replace, boolean updateTriggers) throws SchedulerException {
+      this.getSchedulerService().addCalendar(calName, calendar, replace, updateTriggers);
+   }
+
+   public Set getPausedTriggerGroups() throws SchedulerException {
+      return this.getSchedulerService().getPausedTriggerGroups();
+   }
+
+   public int getTriggerState(String triggerName, String triggerGroup) throws SchedulerException {
+      return this.getSchedulerService().getTriggerState(triggerName, triggerGroup);
+   }
+
+   public boolean interrupt(String jobName, String groupName) throws UnableToInterruptJobException {
+      try {
+         return this.getSchedulerService().interrupt(jobName, groupName);
+      } catch (SchedulerException var4) {
+         throw new UnableToInterruptJobException(var4);
+      }
+   }
+
+   public boolean isInStandbyMode() throws SchedulerException {
+      return this.getSchedulerService().isInStandbyMode();
+   }
+
+   public void pauseAll() throws SchedulerException {
+      this.getSchedulerService().pauseAll();
+   }
+
+   public Date rescheduleJob(String triggerName, String groupName, Trigger newTrigger) throws SchedulerException {
+      return this.getSchedulerService().rescheduleJob(triggerName, groupName, newTrigger);
+   }
+
+   public void resumeAll() throws SchedulerException {
+      this.getSchedulerService().resumeAll();
+   }
+
+   public void setJobFactory(JobFactory factory) throws SchedulerException {
+      this.getSchedulerService().setJobFactory(factory);
+   }
+
+   public void standby() throws SchedulerException {
+      this.getSchedulerService().standby();
+   }
+
+   public void triggerJob(String jobName, String groupName, JobDataMap data) throws SchedulerException {
+      this.getSchedulerService().triggerJob(jobName, groupName, data);
+   }
+
+   public void triggerJobWithVolatileTrigger(String jobName, String groupName, JobDataMap data) throws SchedulerException {
+      this.getSchedulerService().triggerJob(jobName, groupName, data);
+   }
+
+   public JobListener getGlobalJobListener(String jobName) throws SchedulerException {
+      return this.getSchedulerService().getGlobalJobListener(jobName);
+   }
+
+   public TriggerListener getGlobalTriggerListener(String triggerName) throws SchedulerException {
+      return this.getSchedulerService().getGlobalTriggerListener(triggerName);
+   }
+
+   public boolean isStarted() throws SchedulerException {
+      return this.getSchedulerService().isStarted();
+   }
+
+   public boolean removeGlobalJobListener(String jobName) throws SchedulerException {
+      return this.getSchedulerService().removeGlobalJobListener(jobName);
+   }
+
+   public boolean removeGlobalTriggerListener(String triggerName) throws SchedulerException {
+      return this.getSchedulerService().removeGlobalTriggerListener(triggerName);
+   }
+
+   public void startDelayed(int delay) throws SchedulerException {
+      this.getSchedulerService().startDelayed(delay);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

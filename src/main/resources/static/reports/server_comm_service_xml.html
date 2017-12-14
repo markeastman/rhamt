@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for server-comm-service.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/server-comm-service.xml
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+
+
+
+                <pre id="source">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!-- $Id: jboss-service.xml,v 1.3.2.12 2006/03/10 19:26:40 asaldhana Exp $ --&gt;
+
+&lt;server&gt; 
+
+   &lt;mbean code=&quot;org.rhq.enterprise.server.core.comm.ServerCommunicationsService&quot;
+          name=&quot;rhq:service=ServerCommunications&quot;&gt;
+
+      &lt;!--
+      &lt;attribute name=&quot;ConfigurationFile&quot;&gt;${jboss.server.config.url}/server-comm-configuration.xml&lt;/attribute&gt; 
+      --&gt;
+
+      &lt;attribute name=&quot;ConfigurationOverrides&quot; serialDataType=&quot;jbxb&quot;&gt;
+         &lt;java:properties xmlns:java=&quot;urn:jboss:java-properties&quot;
+                          xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                          xs:schemaLocation=&quot;urn:jboss:java-properties resource:java-properties_1_0.xsd&quot;&gt;
+
+            &lt;!-- location of the plugin jars and other files agents can download directly from sever --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.agent-files-directory&lt;/java:key&gt;
+               &lt;java:value&gt;${jboss.server.home.dir}/deploy/rhq.ear/rhq-downloads&lt;/java:value&gt;
+            &lt;/java:property&gt;
+
+            &lt;!-- location where data files can be stored --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.data-directory&lt;/java:key&gt;
+               &lt;java:value&gt;${jboss.server.data.dir}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+
+            &lt;!-- global limit on number of concurrent incoming messages allowed --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.global-concurrency-limit&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.global-concurrency-limit:200}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+
+            &lt;!-- JON Server's remote endpoint for agents to talk to --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.transport&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.transport:servlet}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.bind-address&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.bind-address}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.bind-port&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.bind-port:7080}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.transport-params&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.transport-params:/jboss-remoting-servlet-invoker/ServerInvokerServlet}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+
+            &lt;!-- Multicast detector configuration for auto-discovery --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.multicast-detector.enabled&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.multicast-detector.enabled:false}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.multicast-detector.multicast-address&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.multicast-detector.multicast-address:224.16.16.16}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.multicast-detector.bind-address&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.multicast-detector.bind-address}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.multicast-detector.port&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.multicast-detector.port:16162}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+
+            &lt;!-- Server-side SSL Security Configuration (for incoming messages from agents) --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.secure-socket-protocol&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.secure-socket-protocol:TLS}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.keystore.file&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.keystore.file}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.keystore.algorithm&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.keystore.algorithm:SunX509}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.keystore.type&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.keystore.type:JKS}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.keystore.password&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.keystore.password:rhqpwd}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.keystore.key-password&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.keystore.key-password:rhqpwd}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.keystore.alias&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.keystore.alias:rhq}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.truststore.file&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.truststore.file}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.truststore.algorithm&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.truststore.algorithm:SunX509}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.truststore.type&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.truststore.type:JKS}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.truststore.password&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.truststore.password}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.communications.connector.security.client-auth-mode&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.communications.connector.security.client-auth-mode:none}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+
+
+            &lt;!-- Client-side SSL Security Configuration (for outgoing messages to agents) --&gt;
+
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.secure-socket-protocol&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.secure-socket-protocol:TLS}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.keystore.file&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.keystore.file}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.keystore.algorithm&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.keystore.algorithm:SunX509}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.keystore.type&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.keystore.type:JKS}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.keystore.password&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.keystore.password:rhqpwd}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.keystore.key-password&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.keystore.key-password:rhqpwd}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.keystore.alias&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.keystore.alias:rhq}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.truststore.file&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.truststore.file}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.truststore.algorithm&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.truststore.algorithm:SunX509}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.truststore.type&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.truststore.type:JKS}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.truststore.password&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.truststore.password}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+            &lt;java:property&gt;
+               &lt;java:key&gt;rhq.server.client.security.server-auth-mode-enabled&lt;/java:key&gt;
+               &lt;java:value&gt;${rhq.server.client.security.server-auth-mode-enabled:false}&lt;/java:value&gt;
+            &lt;/java:property&gt;
+         &lt;/java:properties&gt; 
+      &lt;/attribute&gt; 
+   &lt;/mbean&gt;
+
+&lt;/server&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "2,66" });
+
+            $("<div id='2-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(2)');
+            $("<div id='66-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(66)');
+
+
+$("<a name='12463104' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Hard-coded IP address</strong><a title='View Rule: DiscoverHardcodedIPAddressRuleProvider' href='windup_ruleproviders.html#DiscoverHardcodedIPAddressRuleProvider'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><strong>Hard-coded IP: 1.3.2.12<\/strong><\/p><p>When migrating environments, hard-coded IP addresses may need to be modified or eliminated.<\/p></div></div></div>").appendTo('#2-inlines');
+
+$("<a name='12463360' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Hard-coded IP address</strong><a title='View Rule: DiscoverHardcodedIPAddressRuleProvider' href='windup_ruleproviders.html#DiscoverHardcodedIPAddressRuleProvider'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><strong>Hard-coded IP: 224.16.16.16<\/strong><\/p><p>When migrating environments, hard-coded IP addresses may need to be modified or eliminated.<\/p></div></div></div>").appendTo('#66-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

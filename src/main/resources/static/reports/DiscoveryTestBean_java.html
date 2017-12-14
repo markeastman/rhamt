@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for DiscoveryTestBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/test/DiscoveryTestBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">1</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.test;
+
+import java.util.Iterator;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Restrictions;
+import org.rhq.core.clientapi.server.core.AgentNotSupportedException;
+import org.rhq.core.clientapi.server.core.AgentRegistrationException;
+import org.rhq.core.clientapi.server.core.AgentRegistrationRequest;
+import org.rhq.core.clientapi.server.core.AgentVersion;
+import org.rhq.core.clientapi.server.core.CoreServerService;
+import org.rhq.core.clientapi.server.discovery.DiscoveryServerService;
+import org.rhq.core.clientapi.server.discovery.InvalidInventoryReportException;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Role;
+import org.rhq.core.domain.discovery.InventoryReport;
+import org.rhq.core.domain.plugin.Plugin;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceCategory;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.core.CoreServerServiceImpl;
+import org.rhq.enterprise.server.discovery.DiscoveryServerServiceImpl;
+import org.rhq.enterprise.server.test.CoreTestLocal;
+import org.rhq.enterprise.server.test.DiscoveryTestLocal;
+
+@Stateless
+public class DiscoveryTestBean implements DiscoveryTestLocal {
+   private final Log log = LogFactory.getLog(DiscoveryTestBean.class);
+   private static final String TEST_PLUGIN_NAME = &quot;BogusPlugin&quot;;
+   private static final String TEST_PLUGIN_PATH = &quot;on-bogus-plugin.jar&quot;;
+   private static final String TEST_PLATFORM_TYPE_NAME = &quot;BogusOS&quot;;
+   private static final String TEST_PLATFORM_NAME = &quot;BogusPlatform&quot;;
+   private static final String TEST_SERVER_TYPE_NAME = &quot;BogusApp&quot;;
+   private static final String TEST_SERVER1_NAME = &quot;BogusServer1&quot;;
+   private static final String TEST_SERVER2_NAME = &quot;BogusServer2&quot;;
+   private static final String TEST_SERVICE_TYPE_NAME = &quot;BogusServiceType&quot;;
+   private static final String TEST_SERVICE1_NAME = &quot;BogusService1&quot;;
+   private static final String TEST_SERVICE2_NAME = &quot;BogusService2&quot;;
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   private DiscoveryServerService discoveryServerService = new DiscoveryServerServiceImpl();
+   private CoreServerService coreServerService = new CoreServerServiceImpl();
+   @EJB
+   private CoreTestLocal coreTest;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+
+   public void registerTestPluginAndTypeInfo() {
+      try {
+         this.getTestPlugin();
+      } catch (NoResultException var4) {
+         Plugin testResourceType = this.createTestPlugin();
+         this.entityManager.persist(testResourceType);
+         this.log.info(&quot;Test plugin [&quot; + testResourceType + &quot;] persisted...&quot;);
+      }
+
+      try {
+         this.getTestPlatformType();
+      } catch (NoResultException var3) {
+         ResourceType testResourceType1 = this.createTestPlatformType();
+         this.entityManager.persist(testResourceType1);
+         this.log.info(&quot;Test platform type [&quot; + testResourceType1 + &quot;] persisted...&quot;);
+      }
+
+   }
+
+   public void removeTestPluginAndTypeInfo() {
+      try {
+         Plugin e = this.getTestPlugin();
+         this.entityManager.remove(e);
+         this.log.info(&quot;Test plugin [&quot; + e + &quot;] removed...&quot;);
+      } catch (NoResultException var3) {
+         ;
+      }
+
+      try {
+         ResourceType e1 = this.getTestPlatformType();
+         this.entityManager.remove(e1);
+         this.log.info(&quot;Test platform type [&quot; + e1 + &quot;] recursively removed...&quot;);
+      } catch (NoResultException var2) {
+         ;
+      }
+
+   }
+
+   public void registerFakePlugin() {
+   }
+
+   public void sendTestFullInventoryReport() {
+      this.log.info(&quot;Sending fake full inventory report to server...&quot;);
+      Resource platform = this.createTestPlatform(&quot;127.0.0.2&quot;, 5, 10);
+
+      try {
+         InventoryReport e = new InventoryReport(this.coreTest.getTestAgent());
+         e.addAddedRoot(platform);
+         this.discoveryServerService.mergeInventoryReport(e);
+      } catch (InvalidInventoryReportException var3) {
+         throw new RuntimeException(var3);
+      }
+   }
+
+   public void sendNewPlatform(String platformAddress, int servers, int servicesPerServer) {
+      AgentRegistrationRequest registrationRequest = new AgentRegistrationRequest(&quot;TestAgent&quot;, platformAddress, 2144, &quot;socket://&quot; + platformAddress + &quot;:&quot; + 2144, true, (String)null, (AgentVersion)null);
+
+      try {
+         this.coreServerService.registerAgent(registrationRequest);
+      } catch (AgentRegistrationException var8) {
+         throw new RuntimeException(var8);
+      } catch (AgentNotSupportedException var9) {
+         throw new RuntimeException(var9);
+      }
+
+      Resource platform = this.createTestPlatform(platformAddress, servers, servicesPerServer);
+
+      try {
+         InventoryReport e = new InventoryReport(new Agent(&quot;TestAgent&quot;, platformAddress, 2144, &quot;endpoint&quot;, &quot;token&quot;));
+         e.addAddedRoot(platform);
+         this.discoveryServerService.mergeInventoryReport(e);
+      } catch (InvalidInventoryReportException var7) {
+         throw new RuntimeException(var7);
+      }
+   }
+
+   public String clearAutoinventoryQueue() {
+      return null;
+   }
+
+   public void sendTestRuntimeInventoryReport() {
+      this.log.info(&quot;Sending fake runtime inventory report to server...&quot;);
+      Resource platform = this.createTestPlatform(&quot;BogusPlatform&quot;, 2, 10);
+      this.addTestServicesToPlatform(platform);
+
+      try {
+         InventoryReport e = new InventoryReport(this.coreTest.getTestAgent());
+         e.addAddedRoot(platform);
+         this.discoveryServerService.mergeInventoryReport(e);
+      } catch (InvalidInventoryReportException var3) {
+         throw new RuntimeException(var3);
+      }
+   }
+
+   public void removeTestPlatform() {
+      try {
+         Resource e = this.getTestPlatform();
+         this.entityManager.remove(e);
+      } catch (NoResultException var2) {
+         ;
+      }
+
+   }
+
+   public void createTestMixedGroup(String groupName) {
+      List resources = PersistenceUtility.findByCriteria(this.entityManager, Resource.class, new Criterion[]{Restrictions.like(&quot;name&quot;, &quot;BogusServer 0&quot;, MatchMode.ANYWHERE), Restrictions.eq(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED)});
+      System.out.println(&quot;FOUND &quot; + resources.size() + &quot; resources&quot;);
+      ResourceGroup group = new ResourceGroup(groupName);
+      Iterator s = resources.iterator();
+
+      while(s.hasNext()) {
+         Resource r = (Resource)s.next();
+         group.addExplicitResource(r);
+      }
+
+      this.entityManager.persist(group);
+      Subject s1 = new Subject(groupName + &quot;User&quot;, true, false);
+      this.entityManager.persist(s1);
+      groupName = &quot;Role&quot;;
+      Role r1 = new Role(&quot;Role&quot;);
+      r1.addSubject(s1);
+      r1.addResourceGroup(group);
+      this.entityManager.persist(r1);
+   }
+
+   private Resource getTestPlatform() {
+      return (Resource)this.entityManager.createQuery(&quot;SELECT res FROM Resource res WHERE res.name = :name&quot;).setParameter(&quot;name&quot;, &quot;BogusPlatform&quot;).getSingleResult();
+   }
+
+   private Plugin getTestPlugin() {
+      return (Plugin)this.entityManager.createNamedQuery(&quot;Plugin.findByName&quot;).setParameter(&quot;name&quot;, &quot;BogusPlugin&quot;).getSingleResult();
+   }
+
+   private ResourceType getTestPlatformType() {
+      return (ResourceType)this.entityManager.createNamedQuery(&quot;ResourceType.findByName&quot;).setParameter(&quot;name&quot;, &quot;BogusOS&quot;).getSingleResult();
+   }
+
+   private ResourceType getTestServerType() {
+      return (ResourceType)this.entityManager.createNamedQuery(&quot;ResourceType.findByName&quot;).setParameter(&quot;name&quot;, &quot;BogusApp&quot;).getSingleResult();
+   }
+
+   private ResourceType getTestServiceType() {
+      return (ResourceType)this.entityManager.createNamedQuery(&quot;ResourceType.findByName&quot;).setParameter(&quot;name&quot;, &quot;BogusServiceType&quot;).getSingleResult();
+   }
+
+   private Resource createTestPlatform(String address, int servers, int servicesPerServer) {
+      Resource platform = new Resource(address, address + &quot; platform&quot;, this.getTestPlatformType());
+      platform.setAgent(this.coreTest.getTestAgent());
+      platform.setDescription(&quot;test platform created by &quot; + this.getClass().getName());
+      platform.setLocation(&quot;San Pedro Sula, Honduras&quot;);
+      platform.setModifiedBy(this.subjectManager.getOverlord());
+      String serverName = &quot;BogusServer &quot;;
+
+      for(int i = 0; i &lt; servers; ++i) {
+         platform.addChildResource(this.createTestServer(platform, serverName + i, servicesPerServer));
+      }
+
+      return platform;
+   }
+
+   private Resource createTestServer(Resource platform, String name, int servicesPerServer) {
+      String installPath = &quot;c:\\Program Files\\&quot; + name;
+      Resource server = new Resource(installPath, name, this.getTestServerType());
+      server.setParentResource(platform);
+      server.setDescription(&quot;test server created by &quot; + this.getClass().getName());
+      server.setModifiedBy(this.subjectManager.getOverlord());
+
+      for(int i = 0; i &lt; servicesPerServer; ++i) {
+         String childName = name + &quot; child service &quot; + i;
+         server.addChildResource(this.createTestService(server, childName));
+      }
+
+      return server;
+   }
+
+   private Resource createTestService(Resource parent, String name) {
+      Resource service = new Resource(name, name, this.getTestServiceType());
+      service.setDescription(&quot;test service created by &quot; + this.getClass().getName());
+      service.setModifiedBy(this.subjectManager.getOverlord());
+      return service;
+   }
+
+   private void addTestServicesToPlatform(Resource platform) {
+      Resource testServer1 = (Resource)platform.getChildResources().iterator().next();
+      testServer1.addChildResource(this.createTestService(testServer1, &quot;BogusService1&quot;));
+      testServer1.addChildResource(this.createTestService(testServer1, &quot;BogusService2&quot;));
+   }
+
+   private Plugin createTestPlugin() {
+      return new Plugin(&quot;BogusPlugin&quot;, &quot;on-bogus-plugin.jar&quot;, &quot;abc123ddd76a2361be08b2b4c7f2b19b&quot;);
+   }
+
+   private ResourceType createTestPlatformType() {
+      ResourceType platformType = new ResourceType(&quot;BogusOS&quot;, &quot;&quot;, ResourceCategory.PLATFORM, ResourceType.ANY_PLATFORM_TYPE);
+      platformType.setPlugin(&quot;BogusPlugin&quot;);
+      platformType.setDescription(&quot;test platform type&quot;);
+      platformType.addChildResourceType(this.createTestServerType(platformType));
+      return platformType;
+   }
+
+   private ResourceType createTestServerType(ResourceType parentType) {
+      ResourceType serverType = new ResourceType(&quot;BogusApp&quot;, &quot;&quot;, ResourceCategory.SERVER, parentType);
+      serverType.setPlugin(&quot;BogusPlugin&quot;);
+      serverType.setDescription(&quot;test server type&quot;);
+      serverType.addChildResourceType(this.createTestServiceType(serverType));
+      return serverType;
+   }
+
+   private ResourceType createTestServiceType(ResourceType parentType) {
+      ResourceType serviceType = new ResourceType(&quot;BogusServiceType&quot;, &quot;&quot;, ResourceCategory.SERVICE, parentType);
+      serviceType.setPlugin(&quot;BogusPlugin&quot;);
+      serviceType.setDescription(&quot;test service type&quot;);
+      return serviceType;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "106" });
+
+            $("<div id='106-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(106)');
+
+
+$("<a name='12456448' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Hard-coded IP address</strong><a title='View Rule: DiscoverHardcodedIPAddressRuleProvider' href='windup_ruleproviders.html#DiscoverHardcodedIPAddressRuleProvider'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><strong>Hard-coded IP: 127.0.0.2<\/strong><\/p><p>When migrating environments, hard-coded IP addresses may need to be modified or eliminated.<\/p></div></div></div>").appendTo('#106-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

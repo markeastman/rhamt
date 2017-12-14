@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ResourceBuilderImpl.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4150272">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.4.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4150272">
+                            rhq-enterprise-server-base-perspective-war-3.0.0.B04.war/WEB-INF/lib/richfaces-impl-3.3.2.GA.jar/org/ajax4jsf/resource/ResourceBuilderImpl.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.ajax4jsf.resource;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.StreamCorruptedException;
+import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.zip.Deflater;
+import java.util.zip.Inflater;
+import javax.faces.FacesException;
+import javax.faces.context.FacesContext;
+import javax.imageio.ImageIO;
+import javax.servlet.ServletContext;
+import org.ajax4jsf.Messages;
+import org.ajax4jsf.resource.GifRenderer;
+import org.ajax4jsf.resource.HTMLRenderer;
+import org.ajax4jsf.resource.InternetResource;
+import org.ajax4jsf.resource.InternetResourceBuilder;
+import org.ajax4jsf.resource.JarResource;
+import org.ajax4jsf.resource.JpegRenderer;
+import org.ajax4jsf.resource.LogfileRenderer;
+import org.ajax4jsf.resource.MimeRenderer;
+import org.ajax4jsf.resource.PngRenderer;
+import org.ajax4jsf.resource.ResourceContext;
+import org.ajax4jsf.resource.ResourceNotFoundException;
+import org.ajax4jsf.resource.ResourceRenderer;
+import org.ajax4jsf.resource.ScriptRenderer;
+import org.ajax4jsf.resource.StaticResource;
+import org.ajax4jsf.resource.StyleRenderer;
+import org.ajax4jsf.resource.TemplateCSSRenderer;
+import org.ajax4jsf.resource.UserResource;
+import org.ajax4jsf.resource.util.URLToStreamHelper;
+import org.ajax4jsf.util.base64.Codec;
+import org.ajax4jsf.webapp.WebXml;
+import org.apache.commons.digester.Digester;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.xml.sax.EntityResolver;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+public class ResourceBuilderImpl extends InternetResourceBuilder {
+   private static final Log log = LogFactory.getLog(ResourceBuilderImpl.class);
+   private static final String DATA_SEPARATOR = &quot;/DATA/&quot;;
+   private static final String DATA_BYTES_SEPARATOR = &quot;/DATB/&quot;;
+   private static final Pattern DATA_SEPARATOR_PATTERN = Pattern.compile(&quot;/DAT(A|B)/&quot;);
+   private static final ResourceRenderer defaultRenderer = new MimeRenderer((String)null);
+   private Map renderers = new HashMap();
+   private Map resources = Collections.synchronizedMap(new HashMap());
+   private long _startTime = System.currentTimeMillis();
+   private Codec codec = new Codec();
+   private static final ResourceRenderer scriptRenderer = new ScriptRenderer();
+   private static final ResourceRenderer styleRenderer = new StyleRenderer();
+
+   public WebXml getWebXml(FacesContext context) {
+      WebXml webXml = WebXml.getInstance(context);
+      if(null == webXml) {
+         throw new FacesException(&quot;Resources framework is not initialised, check web.xml for Filter configuration&quot;);
+      } else {
+         return webXml;
+      }
+   }
+
+   public ResourceBuilderImpl() {
+      this.renderers.put(&quot;.gif&quot;, new GifRenderer());
+      JpegRenderer renderer = new JpegRenderer();
+      this.renderers.put(&quot;.jpeg&quot;, renderer);
+      this.renderers.put(&quot;.jpg&quot;, renderer);
+      this.renderers.put(&quot;.png&quot;, new PngRenderer());
+      this.renderers.put(&quot;.js&quot;, this.getScriptRenderer());
+      this.renderers.put(&quot;.css&quot;, this.getStyleRenderer());
+      this.renderers.put(&quot;.log&quot;, new LogfileRenderer());
+      this.renderers.put(&quot;.html&quot;, new HTMLRenderer());
+      this.renderers.put(&quot;.xhtml&quot;, new MimeRenderer(&quot;application/xhtml+xml&quot;));
+      this.renderers.put(&quot;.xml&quot;, new MimeRenderer(&quot;text/xml&quot;));
+      this.renderers.put(&quot;.xcss&quot;, new TemplateCSSRenderer());
+      this.renderers.put(&quot;.swf&quot;, new MimeRenderer(&quot;application/x-shockwave-flash&quot;));
+   }
+
+   protected void registerResources() throws FacesException {
+      try {
+         ClassLoader e = Thread.currentThread().getContextClassLoader();
+         Enumeration e1 = e.getResources(&quot;META-INF/resources-config.xml&quot;);
+
+         while(e1.hasMoreElements()) {
+            URL resource = (URL)e1.nextElement();
+            this.registerConfig(resource);
+         }
+
+      } catch (IOException var4) {
+         throw new FacesException(var4);
+      }
+   }
+
+   private void registerConfig(URL resourceConfig) {
+      try {
+         if(log.isDebugEnabled()) {
+            log.debug(&quot;Process resources configuration file &quot; + resourceConfig.toExternalForm());
+         }
+
+         InputStream e = URLToStreamHelper.urlToStream(resourceConfig);
+
+         try {
+            Digester digester = new Digester();
+            digester.setValidating(false);
+            digester.setEntityResolver(new EntityResolver() {
+               public InputSource resolveEntity(String publicId, String systemId) throws SAXException, IOException {
+                  return new InputSource(new StringReader(&quot;&quot;));
+               }
+            });
+            digester.setNamespaceAware(false);
+            digester.setUseContextClassLoader(true);
+            digester.push(this);
+            digester.addObjectCreate(&quot;resource-config/resource&quot;, &quot;class&quot;, JarResource.class);
+            digester.addObjectCreate(&quot;resource-config/resource/renderer&quot;, &quot;class&quot;, HTMLRenderer.class);
+            digester.addCallMethod(&quot;resource-config/resource/renderer/content-type&quot;, &quot;setContentType&quot;, 0);
+            digester.addSetNext(&quot;resource-config/resource/renderer&quot;, &quot;setRenderer&quot;, ResourceRenderer.class.getName());
+            digester.addCallMethod(&quot;resource-config/resource/name&quot;, &quot;setKey&quot;, 0);
+            digester.addCallMethod(&quot;resource-config/resource/path&quot;, &quot;setPath&quot;, 0);
+            digester.addCallMethod(&quot;resource-config/resource/cacheable&quot;, &quot;setCacheable&quot;, 0);
+            digester.addCallMethod(&quot;resource-config/resource/session-aware&quot;, &quot;setSessionAware&quot;, 0);
+            digester.addCallMethod(&quot;resource-config/resource/property&quot;, &quot;setProperty&quot;, 2);
+            digester.addCallParam(&quot;resource-config/resource/property/name&quot;, 0);
+            digester.addCallParam(&quot;resource-config/resource/property/value&quot;, 1);
+            digester.addCallMethod(&quot;resource-config/resource/content-type&quot;, &quot;setContentType&quot;, 0);
+            digester.addSetNext(&quot;resource-config/resource&quot;, &quot;addResource&quot;, InternetResource.class.getName());
+            digester.parse(e);
+         } finally {
+            e.close();
+         }
+
+      } catch (IOException var9) {
+         throw new FacesException(var9);
+      } catch (SAXException var10) {
+         throw new FacesException(var10);
+      }
+   }
+
+   public void init() throws FacesException {
+      this.registerResources();
+   }
+
+   public InternetResource createResource(Object base, String path) throws FacesException {
+      try {
+         return this.getResource(path);
+      } catch (ResourceNotFoundException var9) {
+         try {
+            return this.getResource(this.buildKey(base, path));
+         } catch (ResourceNotFoundException var8) {
+            if(log.isDebugEnabled()) {
+               log.debug(Messages.getMessage(&quot;BUILD_RESOURCE_INFO&quot;, path));
+            }
+
+            InternetResource res;
+            try {
+               Class e = Class.forName(path);
+               res = this.createDynamicResource(path, e);
+            } catch (Exception var7) {
+               try {
+                  res = this.createJarResource(base, path);
+               } catch (ResourceNotFoundException var6) {
+                  res = this.createStaticResource(path);
+               }
+            }
+
+            return res;
+         }
+      }
+   }
+
+   private String buildKey(Object base, String path) {
+      if(path.startsWith(&quot;/&quot;)) {
+         return path.substring(1);
+      } else if(null == base) {
+         return path;
+      } else {
+         StringBuffer packageName = new StringBuffer(base.getClass().getPackage().getName().replace('.', '/'));
+         return packageName.append(&quot;/&quot;).append(path).toString();
+      }
+   }
+
+   public String getUri(InternetResource resource, FacesContext context, Object storeData) {
+      StringBuffer uri = new StringBuffer();
+      uri.append(resource.getKey());
+      if(storeData != null) {
+         try {
+            byte[] isGlobal;
+            if(storeData instanceof byte[]) {
+               isGlobal = (byte[])((byte[])storeData);
+               uri.append(&quot;/DATB/&quot;);
+            } else {
+               ByteArrayOutputStream resourceURL = new ByteArrayOutputStream(1024);
+               ObjectOutputStream objStream = new ObjectOutputStream(resourceURL);
+               objStream.writeObject(storeData);
+               objStream.flush();
+               objStream.close();
+               resourceURL.close();
+               isGlobal = resourceURL.toByteArray();
+               uri.append(&quot;/DATA/&quot;);
+            }
+
+            byte[] resourceURL1 = this.encrypt(isGlobal);
+            uri.append(new String(resourceURL1, &quot;ISO-8859-1&quot;));
+         } catch (Exception var8) {
+            log.error(Messages.getMessage(&quot;QUERY_STRING_BUILDING_ERROR&quot;), var8);
+         }
+      }
+
+      boolean isGlobal1 = !resource.isSessionAware();
+      String resourceURL2 = this.getWebXml(context).getFacesResourceURL(context, uri.toString(), isGlobal1);
+      if(!isGlobal1) {
+         resourceURL2 = context.getExternalContext().encodeResourceURL(resourceURL2);
+      }
+
+      if(log.isDebugEnabled()) {
+         log.debug(Messages.getMessage(&quot;BUILD_RESOURCE_URI_INFO&quot;, resource.getKey(), resourceURL2));
+      }
+
+      return resourceURL2;
+   }
+
+   public InternetResource getResourceForKey(String key) throws ResourceNotFoundException {
+      Matcher matcher = DATA_SEPARATOR_PATTERN.matcher(key);
+      if(matcher.find()) {
+         int data = matcher.start();
+         key = key.substring(0, data);
+      }
+
+      return this.getResource(key);
+   }
+
+   public Object getResourceDataForKey(String key) {
+      Object data = null;
+      String dataString = null;
+      Matcher matcher = DATA_SEPARATOR_PATTERN.matcher(key);
+      if(matcher.find()) {
+         if(log.isDebugEnabled()) {
+            log.debug(Messages.getMessage(&quot;RESTORE_DATA_FROM_RESOURCE_URI_INFO&quot;, key, dataString));
+         }
+
+         int dataStart = matcher.end();
+         dataString = key.substring(dataStart);
+         byte[] objectArray = null;
+
+         try {
+            byte[] dataArray = dataString.getBytes(&quot;ISO-8859-1&quot;);
+            objectArray = this.decrypt(dataArray);
+         } catch (UnsupportedEncodingException var12) {
+            ;
+         }
+
+         if(&quot;B&quot;.equals(matcher.group(1))) {
+            data = objectArray;
+         } else {
+            try {
+               ObjectInputStream e = new ObjectInputStream(new ByteArrayInputStream(objectArray));
+               data = e.readObject();
+            } catch (StreamCorruptedException var9) {
+               log.error(Messages.getMessage(&quot;STREAM_CORRUPTED_ERROR&quot;), var9);
+            } catch (IOException var10) {
+               log.error(Messages.getMessage(&quot;DESERIALIZE_DATA_INPUT_ERROR&quot;), var10);
+            } catch (ClassNotFoundException var11) {
+               log.error(Messages.getMessage(&quot;DATA_CLASS_NOT_FOUND_ERROR&quot;), var11);
+            }
+         }
+      }
+
+      return data;
+   }
+
+   public InternetResource getResource(String path) throws ResourceNotFoundException {
+      InternetResource internetResource = (InternetResource)this.resources.get(path);
+      if(null == internetResource) {
+         throw new ResourceNotFoundException(&quot;Resource not registered : &quot; + path);
+      } else {
+         return internetResource;
+      }
+   }
+
+   public void addResource(InternetResource resource) {
+      this.resources.put(resource.getKey(), resource);
+      ResourceRenderer renderer = resource.getRenderer((ResourceContext)null);
+      if(renderer == null) {
+         this.setRenderer(resource, resource.getKey());
+      }
+
+   }
+
+   public void addResource(String key, InternetResource resource) {
+      this.resources.put(key, resource);
+      resource.setKey(key);
+   }
+
+   public String getFacesResourceURL(FacesContext context, String Url, boolean isGlobal) {
+      return this.getWebXml(context).getFacesResourceURL(context, Url, isGlobal);
+   }
+
+   protected InternetResource createStaticResource(String path) throws ResourceNotFoundException, FacesException {
+      FacesContext context = FacesContext.getCurrentInstance();
+      if(null != context &amp;&amp; context.getExternalContext().getContext() instanceof ServletContext) {
+         ServletContext servletContext = (ServletContext)context.getExternalContext().getContext();
+         InputStream in = servletContext.getResourceAsStream(path);
+         if(null != in) {
+            StaticResource res = new StaticResource(path);
+            this.setRenderer(res, path);
+            res.setLastModified(new Date(this.getStartTime()));
+            this.addResource(path, res);
+
+            try {
+               in.close();
+            } catch (IOException var7) {
+               ;
+            }
+
+            return res;
+         }
+      }
+
+      throw new ResourceNotFoundException(Messages.getMessage(&quot;STATIC_RESOURCE_NOT_FOUND_ERROR&quot;, path));
+   }
+
+   private void setRenderer(InternetResource res, String path) throws FacesException {
+      int lastPoint = path.lastIndexOf(46);
+      if(lastPoint &gt; 0) {
+         String ext = path.substring(lastPoint);
+         ResourceRenderer resourceRenderer = this.getRendererByExtension(ext);
+         if(null != resourceRenderer) {
+            res.setRenderer(resourceRenderer);
+         } else {
+            if(log.isDebugEnabled()) {
+               log.debug(Messages.getMessage(&quot;NO_RESOURCE_REGISTERED_ERROR_2&quot;, path, this.renderers.keySet()));
+            }
+
+            res.setRenderer(defaultRenderer);
+         }
+      }
+
+   }
+
+   protected ResourceRenderer getRendererByExtension(String ext) {
+      return (ResourceRenderer)this.renderers.get(ext);
+   }
+
+   protected InternetResource createJarResource(Object base, String path) throws ResourceNotFoundException, FacesException {
+      String key = this.buildKey(base, path);
+      ClassLoader loader = Thread.currentThread().getContextClassLoader();
+      if(null != loader.getResource(key)) {
+         JarResource res = new JarResource(key);
+         this.setRenderer(res, path);
+         res.setLastModified(new Date(this.getStartTime()));
+         this.addResource(key, res);
+         return res;
+      } else {
+         throw new ResourceNotFoundException(Messages.getMessage(&quot;NO_RESOURCE_EXISTS_ERROR&quot;, key));
+      }
+   }
+
+   protected InternetResource createDynamicResource(String path, Class instatiate) throws ResourceNotFoundException {
+      if(InternetResource.class.isAssignableFrom(instatiate)) {
+         try {
+            InternetResource resource = (InternetResource)instatiate.newInstance();
+            this.addResource(path, resource);
+            return resource;
+         } catch (Exception var6) {
+            String message = Messages.getMessage(&quot;INSTANTIATE_RESOURCE_ERROR&quot;, instatiate.toString());
+            log.error(message, var6);
+            throw new ResourceNotFoundException(message, var6);
+         }
+      } else {
+         throw new FacesException(Messages.getMessage(&quot;INSTANTIATE_CLASS_ERROR&quot;));
+      }
+   }
+
+   public InternetResource createUserResource(boolean cacheable, boolean session, String mime) throws FacesException {
+      String path = this.getUserResourceKey(cacheable, session, mime);
+
+      Object userResource;
+      try {
+         userResource = this.getResource(path);
+      } catch (ResourceNotFoundException var7) {
+         userResource = new UserResource(cacheable, session, mime);
+         this.addResource(path, (InternetResource)userResource);
+      }
+
+      return (InternetResource)userResource;
+   }
+
+   private String getUserResourceKey(boolean cacheable, boolean session, String mime) {
+      StringBuffer pathBuffer = new StringBuffer(UserResource.class.getName());
+      pathBuffer.append(cacheable?&quot;/c&quot;:&quot;/n&quot;);
+      pathBuffer.append(session?&quot;/s&quot;:&quot;/n&quot;);
+      if(null != mime) {
+         pathBuffer.append('/').append(mime.hashCode());
+      }
+
+      String path = pathBuffer.toString();
+      return path;
+   }
+
+   public long getStartTime() {
+      return this._startTime;
+   }
+
+   protected byte[] encrypt(byte[] src) {
+      try {
+         Deflater e = new Deflater(1);
+         byte[] compressed = new byte[src.length + 100];
+         e.setInput(src);
+         e.finish();
+         int totalOut = e.deflate(compressed);
+         byte[] zipsrc = new byte[totalOut];
+         System.arraycopy(compressed, 0, zipsrc, 0, totalOut);
+         e.end();
+         return this.codec.encode(zipsrc);
+      } catch (Exception var6) {
+         throw new FacesException(&quot;Error encode resource data&quot;, var6);
+      }
+   }
+
+   protected byte[] decrypt(byte[] src) {
+      try {
+         byte[] e = this.codec.decode(src);
+         Inflater decompressor = new Inflater();
+         byte[] uncompressed = new byte[e.length * 5];
+         decompressor.setInput(e);
+         int totalOut = decompressor.inflate(uncompressed);
+         byte[] out = new byte[totalOut];
+         System.arraycopy(uncompressed, 0, out, 0, totalOut);
+         decompressor.end();
+         return out;
+      } catch (Exception var7) {
+         throw new FacesException(&quot;Error decode resource data&quot;, var7);
+      }
+   }
+
+   public ResourceRenderer getScriptRenderer() {
+      return scriptRenderer;
+   }
+
+   public ResourceRenderer getStyleRenderer() {
+      return styleRenderer;
+   }
+
+   static {
+      Thread thread = Thread.currentThread();
+      ClassLoader initialTCCL = thread.getContextClassLoader();
+
+      try {
+         ClassLoader systemCL = ClassLoader.getSystemClassLoader();
+         thread.setContextClassLoader(systemCL);
+         ImageIO.setUseCache(false);
+      } finally {
+         thread.setContextClassLoader(initialTCCL);
+      }
+
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "168" });
+
+            $("<div id='168-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(168)');
+
+
+$("<a name='12231680' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#168-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4150272;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

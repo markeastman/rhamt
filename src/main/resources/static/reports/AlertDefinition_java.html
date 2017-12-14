@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for AlertDefinition.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-core-domain-ejb3.jar/org/rhq/core/domain/alert/AlertDefinition.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.core.domain.alert;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import org.hibernate.annotations.Cascade;
+import org.rhq.core.domain.alert.Alert;
+import org.rhq.core.domain.alert.AlertCondition;
+import org.rhq.core.domain.alert.AlertDampening;
+import org.rhq.core.domain.alert.AlertDampeningEvent;
+import org.rhq.core.domain.alert.AlertDefinitionContext;
+import org.rhq.core.domain.alert.AlertPriority;
+import org.rhq.core.domain.alert.BooleanExpression;
+import org.rhq.core.domain.alert.notification.AlertNotification;
+import org.rhq.core.domain.operation.OperationDefinition;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+
+@Entity
+@NamedQueries({@NamedQuery(
+   name = &quot;AlertDefinition.findAll&quot;,
+   query = &quot;SELECT a   FROM AlertDefinition a  WHERE a.deleted = false    AND a.resource IS NOT NULL&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findAllByRecoveryDefinitionId&quot;,
+   query = &quot;SELECT a   FROM AlertDefinition a   LEFT JOIN FETCH a.conditions  WHERE a.deleted = false AND a.enabled = true    AND a.recoveryId = :recoveryDefinitionId&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findByAlertTemplateId&quot;,
+   query = &quot;SELECT a.id   FROM AlertDefinition a  WHERE a.parentId = :alertTemplateId    AND a.deleted = false   AND a.readOnly = false&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findByGroupAlertDefinitionId&quot;,
+   query = &quot;SELECT a.id   FROM AlertDefinition a  WHERE a.groupAlertDefinition.id = :groupAlertDefinitionId    AND a.deleted = false   AND a.readOnly = false&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findResourceIdsNeedingTemplateApplication&quot;,
+   query = &quot;SELECT res.id   FROM Resource res  WHERE res.resourceType.id = :resourceTypeId    AND res.inventoryStatus = :inventoryStatus    AND NOT EXISTS ( SELECT ad.id                       FROM AlertDefinition ad                      WHERE ad.parentId = :alertTemplateId                        AND ad.resource.id = res.id                        AND ad.deleted = false ) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findOptionItemsByResource&quot;,
+   query = &quot;  SELECT new org.rhq.core.domain.common.composite.IntegerOptionItem(ad.id, ad.name)     FROM AlertDefinition ad    WHERE ad.resource.id = :resourceId      AND ad.deleted = false&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findByResource&quot;,
+   query = &quot;SELECT a   FROM AlertDefinition a  WHERE a.resource.id = :id    AND a.deleted = false&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findByResourceType&quot;,
+   query = &quot;SELECT a   FROM AlertDefinition a  WHERE a.resourceType.id = :typeId    AND a.deleted = false&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findByResourceGroup&quot;,
+   query = &quot;SELECT a   FROM AlertDefinition a  WHERE a.resourceGroup.id = :groupId    AND a.deleted = false&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.deleteByResources&quot;,
+   query = &quot;DELETE FROM AlertDefinition ad  WHERE ad.resource.id IN ( :resourceIds ) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findUnusedDefinitionIds&quot;,
+   query = &quot;SELECT ad.id   FROM AlertDefinition ad  WHERE ad.deleted = TRUE    AND ad.id NOT IN ( SELECT alertDef.id                         FROM Alert a                         JOIN a.alertDefinition alertDef )&quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findAllComposites_admin&quot;,
+   query = &quot;   SELECT new org.rhq.core.domain.alert.composite.AlertDefinitionComposite        ( ad, parent.id, parent.name )      FROM AlertDefinition ad LEFT JOIN ad.resource res LEFT JOIN res.parentResource parent     WHERE ad.deleted = false       AND (UPPER(res.name) LIKE :resourceFilter OR :resourceFilter IS NULL)       AND (UPPER(parent.name) LIKE :parentFilter OR :parentFilter IS NULL)       AND (ad.ctime &gt; :startTime OR :startTime IS NULL)       AND (ad.ctime &lt; :endTime OR :endTime IS NULL)       AND (ad.id IN ( SELECT aad.id FROM AlertDefinition aad                        JOIN aad.conditions aadc                       WHERE aadc.category = :category )            OR :category IS NULL) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findAllComposites&quot;,
+   query = &quot;   SELECT new org.rhq.core.domain.alert.composite.AlertDefinitionComposite        ( ad, parent.id, parent.name )      FROM AlertDefinition ad LEFT JOIN ad.resource res LEFT JOIN res.parentResource parent     WHERE ad.deleted = false       AND res.id IN ( SELECT rr.id FROM Resource rr                         JOIN rr.implicitGroups g JOIN g.roles r JOIN r.subjects s                        WHERE s.id = :subjectId )       AND (UPPER(res.name) LIKE :resourceFilter OR :resourceFilter IS NULL)       AND (UPPER(parent.name) LIKE :parentFilter OR :parentFilter IS NULL)       AND (ad.ctime &gt; :startTime OR :startTime IS NULL)       AND (ad.ctime &lt; :endTime OR :endTime IS NULL)       AND (ad.id IN ( SELECT aad.id FROM AlertDefinition aad                        JOIN aad.conditions aadc                       WHERE aadc.category = :category )            OR :category IS NULL) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findDefinitionIdByConditionId&quot;,
+   query = &quot;SELECT ac.alertDefinition.id   FROM AlertCondition ac  WHERE ac.id = :alertConditionId &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.isEnabled&quot;,
+   query = &quot;SELECT ad.id   FROM AlertDefinition ad  WHERE ad.id = :alertDefinitionId    AND ad.enabled = true &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.isTemplate&quot;,
+   query = &quot;SELECT ad.id   FROM AlertDefinition ad  WHERE ad.id = :alertDefinitionId    AND ad.resourceType IS NOT NULL &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.isGroupAlertDefinition&quot;,
+   query = &quot;SELECT ad.id   FROM AlertDefinition ad  WHERE ad.id = :alertDefinitionId    AND ad.resourceGroup IS NOT NULL &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.updateSetDeleted&quot;,
+   query = &quot;UPDATE AlertDefinition ad    SET ad.deleted = TRUE  WHERE ad.id IN ( :groupAlertDefinitionIds )     OR ad.groupAlertDefinition.id IN ( :groupAlertDefinitionIds ) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.updateSetEnabled&quot;,
+   query = &quot;UPDATE AlertDefinition ad    SET ad.enabled = TRUE  WHERE ad.id IN ( :groupAlertDefinitionIds )     OR ad.groupAlertDefinition.id IN ( :groupAlertDefinitionIds ) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.updateSetDisabled&quot;,
+   query = &quot;UPDATE AlertDefinition ad    SET ad.enabled = FALSE  WHERE ad.id IN ( :groupAlertDefinitionIds )     OR ad.groupAlertDefinition.id IN ( :groupAlertDefinitionIds ) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.updateSetParentsNull&quot;,
+   query = &quot;UPDATE AlertDefinition ad    SET ad.groupAlertDefinition = NULL  WHERE ad.id IN ( :childrenDefinitionIds ) &quot;
+), @NamedQuery(
+   name = &quot;AlertDefinition.findResourceIdsNeedingGroupApplication&quot;,
+   query = &quot;SELECT res.id   FROM Resource res   JOIN res.explicitGroups rg  WHERE rg.id = :resourceGroupId    AND res.inventoryStatus = :inventoryStatus    AND NOT EXISTS ( SELECT ad.id                       FROM AlertDefinition ad                      WHERE ad.groupAlertDefinition.id = :groupAlertDefinitionId                        AND ad.resource.id = res.id                        AND ad.deleted = false ) &quot;
+)})
+@SequenceGenerator(
+   name = &quot;RHQ_ALERT_DEFINITION_ID_SEQ&quot;,
+   sequenceName = &quot;RHQ_ALERT_DEFINITION_ID_SEQ&quot;,
+   allocationSize = 10
+)
+@Table(
+   name = &quot;RHQ_ALERT_DEFINITION&quot;
+)
+public class AlertDefinition implements Serializable {
+   private static final long serialVersionUID = 1L;
+   public static final String QUERY_FIND_ALL = &quot;AlertDefinition.findAll&quot;;
+   public static final String QUERY_FIND_ALL_BY_RECOVERY_DEFINITION_ID = &quot;AlertDefinition.findAllByRecoveryDefinitionId&quot;;
+   public static final String QUERY_FIND_BY_ALERT_TEMPLATE_ID = &quot;AlertDefinition.findByAlertTemplateId&quot;;
+   public static final String QUERY_FIND_BY_GROUP_ALERT_DEFINITION_ID = &quot;AlertDefinition.findByGroupAlertDefinitionId&quot;;
+   public static final String QUERY_FIND_RESOURCE_IDS_NEEDING_TEMPLATE_APPLICATION = &quot;AlertDefinition.findResourceIdsNeedingTemplateApplication&quot;;
+   public static final String QUERY_FIND_OPTION_ITEMS_BY_RESOURCE = &quot;AlertDefinition.findOptionItemsByResource&quot;;
+   public static final String QUERY_FIND_BY_RESOURCE = &quot;AlertDefinition.findByResource&quot;;
+   public static final String QUERY_FIND_BY_RESOURCE_TYPE = &quot;AlertDefinition.findByResourceType&quot;;
+   public static final String QUERY_FIND_BY_RESOURCE_GROUP = &quot;AlertDefinition.findByResourceGroup&quot;;
+   public static final String QUERY_DELETE_BY_RESOURCES = &quot;AlertDefinition.deleteByResources&quot;;
+   public static final String QUERY_FIND_UNUSED_DEFINITION_IDS = &quot;AlertDefinition.findUnusedDefinitionIds&quot;;
+   public static final String QUERY_FIND_DEFINITION_ID_BY_CONDITION_ID = &quot;AlertDefinition.findDefinitionIdByConditionId&quot;;
+   public static final String QUERY_IS_ENABLED = &quot;AlertDefinition.isEnabled&quot;;
+   public static final String QUERY_IS_TEMPLATE = &quot;AlertDefinition.isTemplate&quot;;
+   public static final String QUERY_IS_GROUP_ALERT_DEFINITION = &quot;AlertDefinition.isGroupAlertDefinition&quot;;
+   public static final String QUERY_UPDATE_SET_DELETED = &quot;AlertDefinition.updateSetDeleted&quot;;
+   public static final String QUERY_UPDATE_SET_ENABLED = &quot;AlertDefinition.updateSetEnabled&quot;;
+   public static final String QUERY_UPDATE_SET_DISABLED = &quot;AlertDefinition.updateSetDisabled&quot;;
+   public static final String QUERY_UPDATE_SET_PARENTS_NULL = &quot;AlertDefinition.updateSetParentsNull&quot;;
+   public static final String QUERY_FIND_RESOURCE_IDS_NEEDING_GROUP_APPLICATION = &quot;AlertDefinition.findResourceIdsNeedingGroupApplication&quot;;
+   public static final String QUERY_FIND_ALL_COMPOSITES = &quot;AlertDefinition.findAllComposites&quot;;
+   public static final String QUERY_FIND_ALL_COMPOSITES_ADMIN = &quot;AlertDefinition.findAllComposites_admin&quot;;
+   @Column(
+      name = &quot;ID&quot;,
+      nullable = false
+   )
+   @GeneratedValue(
+      strategy = GenerationType.AUTO,
+      generator = &quot;RHQ_ALERT_DEFINITION_ID_SEQ&quot;
+   )
+   @Id
+   private int id;
+   @Column(
+      name = &quot;NAME&quot;,
+      nullable = false
+   )
+   private String name;
+   @Column(
+      name = &quot;CTIME&quot;,
+      nullable = false
+   )
+   private long ctime;
+   @Column(
+      name = &quot;MTIME&quot;,
+      nullable = false
+   )
+   private long mtime;
+   @Column(
+      name = &quot;PARENT_ID&quot;,
+      nullable = false
+   )
+   private Integer parentId;
+   @JoinColumn(
+      name = &quot;GROUP_ALERT_DEF_ID&quot;
+   )
+   @ManyToOne
+   private AlertDefinition groupAlertDefinition;
+   @OneToMany(
+      mappedBy = &quot;groupAlertDefinition&quot;,
+      fetch = FetchType.LAZY,
+      cascade = {CascadeType.PERSIST}
+   )
+   @OrderBy
+   private Set groupAlertDefinitionChildren;
+   @Column(
+      name = &quot;DESCRIPTION&quot;
+   )
+   private String description;
+   @Column(
+      name = &quot;PRIORITY&quot;,
+      nullable = false
+   )
+   @Enumerated(EnumType.STRING)
+   private AlertPriority priority;
+   @JoinColumn(
+      name = &quot;RESOURCE_TYPE_ID&quot;,
+      nullable = true
+   )
+   @ManyToOne
+   private ResourceType resourceType;
+   @JoinColumn(
+      name = &quot;RESOURCE_ID&quot;,
+      nullable = true
+   )
+   @ManyToOne
+   private Resource resource;
+   @JoinColumn(
+      name = &quot;RESOURCE_GROUP_ID&quot;,
+      nullable = true
+   )
+   @ManyToOne
+   private ResourceGroup resourceGroup;
+   @Column(
+      name = &quot;ENABLED&quot;,
+      nullable = false
+   )
+   private boolean enabled;
+   @Embedded
+   private AlertDampening alertDampening;
+   @Column(
+      name = &quot;RECOVERY_ID&quot;
+   )
+   private Integer recoveryId;
+   @Column(
+      name = &quot;WILL_RECOVER&quot;,
+      nullable = false
+   )
+   private boolean willRecover;
+   @Column(
+      name = &quot;NOTIFY_FILTERED&quot;,
+      nullable = false
+   )
+   private boolean notifyFiltered;
+   @Column(
+      name = &quot;CONTROL_FILTERED&quot;,
+      nullable = false
+   )
+   private boolean controlFiltered;
+   @Column(
+      name = &quot;DELETED&quot;,
+      nullable = false
+   )
+   private boolean deleted;
+   @Column(
+      name = &quot;READ_ONLY&quot;,
+      nullable = false
+   )
+   private boolean readOnly;
+   @Column(
+      name = &quot;REQUIRED&quot;,
+      nullable = false
+   )
+   @Enumerated(EnumType.ORDINAL)
+   private BooleanExpression conditionExpression;
+   @OneToMany(
+      mappedBy = &quot;alertDefinition&quot;,
+      cascade = {CascadeType.ALL}
+   )
+   @OrderBy
+   @Cascade({org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+   private Set conditions;
+   @OneToMany(
+      mappedBy = &quot;alertDefinition&quot;,
+      cascade = {CascadeType.ALL}
+   )
+   @OrderBy
+   @Cascade({org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+   private Set alertNotifications;
+   @JoinColumn(
+      name = &quot;OPERATION_DEF_ID&quot;,
+      nullable = true
+   )
+   @ManyToOne
+   private OperationDefinition operationDefinition;
+   @OneToMany(
+      mappedBy = &quot;alertDefinition&quot;,
+      cascade = {CascadeType.REFRESH, CascadeType.REMOVE}
+   )
+   @Cascade({org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
+   private Set alertDampeningEvents;
+   @OneToMany(
+      mappedBy = &quot;alertDefinition&quot;,
+      cascade = {CascadeType.REMOVE}
+   )
+   @OrderBy
+   private Set alerts;
+   private transient AlertDefinitionContext context;
+
+   public AlertDefinition() {
+      this.parentId = new Integer(0);
+      this.groupAlertDefinitionChildren = new LinkedHashSet();
+      this.conditions = new LinkedHashSet(1);
+      this.alertNotifications = new HashSet();
+      this.alertDampeningEvents = new HashSet();
+      this.alerts = new LinkedHashSet();
+   }
+
+   public AlertDefinition(AlertDefinition alertDef) {
+      this();
+      this.update(alertDef, false);
+   }
+
+   public AlertDefinition(AlertDefinition alertDef, boolean copyIds) {
+      this();
+      this.update(alertDef, copyIds);
+   }
+
+   public void update(AlertDefinition alertDef, boolean copyIds) {
+      this.name = alertDef.name;
+      this.description = alertDef.description;
+      this.priority = alertDef.priority;
+      this.enabled = alertDef.enabled;
+      this.readOnly = alertDef.readOnly;
+      if(this.alertDampening == null) {
+         this.alertDampening = new AlertDampening(alertDef.getAlertDampening());
+      } else {
+         this.alertDampening.update(alertDef.getAlertDampening());
+      }
+
+      this.willRecover = alertDef.willRecover;
+      this.notifyFiltered = alertDef.notifyFiltered;
+      this.controlFiltered = alertDef.controlFiltered;
+      this.deleted = alertDef.deleted;
+      this.conditionExpression = alertDef.conditionExpression;
+      this.recoveryId = alertDef.recoveryId;
+      HashSet copiedConditions = new HashSet();
+      Iterator copiedNotifications = alertDef.getConditions().iterator();
+
+      while(copiedNotifications.hasNext()) {
+         AlertCondition i$ = (AlertCondition)copiedNotifications.next();
+         AlertCondition oldNotification = new AlertCondition(i$, copyIds);
+         oldNotification.setAlertDefinition(this);
+         copiedConditions.add(oldNotification);
+      }
+
+      this.removeAllConditions();
+      this.getConditions().addAll(copiedConditions);
+      HashSet copiedNotifications1 = new HashSet();
+      Iterator i$1 = (new HashSet(alertDef.getAlertNotifications())).iterator();
+
+      while(i$1.hasNext()) {
+         AlertNotification oldNotification1 = (AlertNotification)i$1.next();
+         AlertNotification newNotification = oldNotification1.copy(copyIds);
+         newNotification.setAlertDefinition(this);
+         copiedNotifications1.add(newNotification);
+      }
+
+      this.removeAllAlertNotifications();
+      this.getAlertNotifications().addAll(copiedNotifications1);
+      this.operationDefinition = alertDef.operationDefinition;
+   }
+
+   public int getId() {
+      return this.id;
+   }
+
+   public void setId(int id) {
+      this.id = id;
+   }
+
+   public String getName() {
+      return this.name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+   public long getCtime() {
+      return this.ctime;
+   }
+
+   @PrePersist
+   void onPersist() {
+      this.mtime = this.ctime = System.currentTimeMillis();
+   }
+
+   public long getMtime() {
+      return this.mtime;
+   }
+
+   @PreUpdate
+   void onUpdate() {
+      this.mtime = System.currentTimeMillis();
+   }
+
+   public Integer getParentId() {
+      return this.parentId;
+   }
+
+   public void setParentId(Integer parentId) {
+      this.parentId = parentId;
+   }
+
+   public AlertDefinition getGroupAlertDefinition() {
+      return this.groupAlertDefinition;
+   }
+
+   public void setGroupAlertDefinition(AlertDefinition groupAlertDefinition) {
+      this.groupAlertDefinition = groupAlertDefinition;
+   }
+
+   public Resource getResource() {
+      return this.resource;
+   }
+
+   public void setResource(Resource resource) {
+      this.resource = resource;
+      this.resource.getAlertDefinitions().add(this);
+   }
+
+   public ResourceGroup getResourceGroup() {
+      return this.resourceGroup;
+   }
+
+   public void setResourceGroup(ResourceGroup resourceGroup) {
+      this.resourceGroup = resourceGroup;
+      if(this.resourceGroup != null) {
+         this.resourceGroup.getAlertDefinitions().add(this);
+      }
+
+   }
+
+   public ResourceType getResourceType() {
+      return this.resourceType;
+   }
+
+   public void setResourceType(ResourceType resourceType) {
+      this.resourceType = resourceType;
+   }
+
+   public String getDescription() {
+      return this.description;
+   }
+
+   public void setDescription(String description) {
+      this.description = description;
+   }
+
+   public AlertPriority getPriority() {
+      return this.priority;
+   }
+
+   public void setPriority(AlertPriority priority) {
+      this.priority = priority;
+   }
+
+   public boolean getEnabled() {
+      return this.enabled;
+   }
+
+   public void setEnabled(boolean enabled) {
+      this.enabled = enabled;
+   }
+
+   public AlertDampening getAlertDampening() {
+      return this.alertDampening;
+   }
+
+   public void setAlertDampening(AlertDampening alertDampening) {
+      this.alertDampening = alertDampening;
+   }
+
+   public boolean getWillRecover() {
+      return this.willRecover;
+   }
+
+   public void setWillRecover(boolean willRecover) {
+      if(willRecover &amp;&amp; this.getRecoveryId().intValue() != 0) {
+         throw new IllegalStateException(&quot;An alert definition can either be a recovery definition or a definition to-be-recovered, but not both.&quot;);
+      } else {
+         this.willRecover = willRecover;
+      }
+   }
+
+   public boolean getNotifyFiltered() {
+      return this.notifyFiltered;
+   }
+
+   public void setNotifyFiltered(boolean notifyFiltered) {
+      this.notifyFiltered = notifyFiltered;
+   }
+
+   public boolean getControlFiltered() {
+      return this.controlFiltered;
+   }
+
+   public void setControlFiltered(boolean controlFiltered) {
+      this.controlFiltered = controlFiltered;
+   }
+
+   public Integer getRecoveryId() {
+      return this.recoveryId;
+   }
+
+   public void setRecoveryId(Integer actOnTriggerId) {
+      if(this.getWillRecover() &amp;&amp; actOnTriggerId.intValue() != 0) {
+         throw new IllegalStateException(&quot;An alert definition can either be a recovery definition or a definition to-be-recovered, but not both.&quot;);
+      } else {
+         this.recoveryId = actOnTriggerId;
+      }
+   }
+
+   public boolean getDeleted() {
+      return this.deleted;
+   }
+
+   public void setDeleted(boolean deleted) {
+      this.deleted = deleted;
+   }
+
+   public boolean isReadOnly() {
+      return this.readOnly;
+   }
+
+   public void setReadOnly(boolean readOnly) {
+      this.readOnly = readOnly;
+   }
+
+   public BooleanExpression getConditionExpression() {
+      return this.conditionExpression;
+   }
+
+   public void setConditionExpression(BooleanExpression conditionExpression) {
+      this.conditionExpression = conditionExpression;
+   }
+
+   public Set getConditions() {
+      return this.conditions;
+   }
+
+   public void setConditions(Set conditions) {
+      this.conditions.clear();
+      Iterator i$ = conditions.iterator();
+
+      while(i$.hasNext()) {
+         AlertCondition condition = (AlertCondition)i$.next();
+         this.addCondition(condition);
+      }
+
+   }
+
+   public void addCondition(AlertCondition condition) {
+      this.conditions.add(condition);
+      condition.setAlertDefinition(this);
+   }
+
+   public void removeAllConditions() {
+      Iterator i$ = this.conditions.iterator();
+
+      while(i$.hasNext()) {
+         AlertCondition condition = (AlertCondition)i$.next();
+         condition.setAlertDefinition((AlertDefinition)null);
+      }
+
+      this.conditions.clear();
+   }
+
+   public Set getAlerts() {
+      return this.alerts;
+   }
+
+   public void addAlert(Alert alert) {
+      this.alerts.add(alert);
+   }
+
+   public Set getAlertNotifications() {
+      return this.alertNotifications;
+   }
+
+   public void setAlertNotifications(Set alertNotifications) {
+      this.alertNotifications = alertNotifications;
+   }
+
+   public void addAlertNotification(AlertNotification alertNotification) {
+      this.alertNotifications.add(alertNotification);
+   }
+
+   public void removeAllAlertNotifications() {
+      ArrayList toBeRemoved = new ArrayList(this.alertNotifications);
+      Iterator i$ = toBeRemoved.iterator();
+
+      while(i$.hasNext()) {
+         AlertNotification notification = (AlertNotification)i$.next();
+         notification.prepareForOrphanDelete();
+      }
+
+      this.alertNotifications.clear();
+   }
+
+   public OperationDefinition getOperationDefinition() {
+      return this.operationDefinition;
+   }
+
+   public void setOperationDefinition(OperationDefinition operationDefinition) {
+      this.operationDefinition = operationDefinition;
+   }
+
+   public Set getAlertDampeningEvents() {
+      return this.alertDampeningEvents;
+   }
+
+   public boolean removeAlertDampeningEvent(AlertDampeningEvent event) {
+      return this.alertDampeningEvents.remove(event);
+   }
+
+   public void calculateContext() {
+      this.context = AlertDefinitionContext.get(this);
+   }
+
+   public void setContext(AlertDefinitionContext context) {
+      this.context = context;
+   }
+
+   public AlertDefinitionContext getContext() {
+      if(this.context == null) {
+         this.calculateContext();
+      }
+
+      return this.context;
+   }
+
+   public boolean equals(Object obj) {
+      if(this == obj) {
+         return true;
+      } else if(obj != null &amp;&amp; obj instanceof AlertDefinition) {
+         AlertDefinition that = (AlertDefinition)obj;
+         if(this.id != that.id) {
+            return false;
+         } else {
+            if(this.name != null) {
+               if(!this.name.equals(that.name)) {
+                  return false;
+               }
+            } else if(that.name != null) {
+               return false;
+            }
+
+            return true;
+         }
+      } else {
+         return false;
+      }
+   }
+
+   public int hashCode() {
+      int result = this.id;
+      result = 31 * result + (this.name != null?this.name.hashCode():0);
+      return result;
+   }
+
+   public String toSimpleString() {
+      return &quot;AlertDefinition[ id=&quot; + this.id + &quot;, &quot; + &quot;name=&quot; + this.name + &quot; ]&quot;;
+   }
+
+   public String toString() {
+      return &quot;org.rhq.core.domain.alert.AlertDefinition[ id=&quot; + this.id + &quot;, &quot; + &quot;name=&quot; + this.name + &quot;, &quot; + &quot;conditionExpression=&quot; + this.conditionExpression + &quot;, &quot; + &quot;priority=&quot; + this.priority + &quot;, &quot; + (this.resource != null?&quot;resourceId=&quot; + this.resource.getId():&quot;&quot;) + (this.resourceType != null?&quot;resourceTypeId=&quot; + this.resourceType.getId():&quot;&quot;) + &quot; ]&quot;;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

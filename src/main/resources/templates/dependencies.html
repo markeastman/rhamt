@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/StandardPage}">
+
+<head>
+    <title>RHAMT Example !</title>
+    <link href="/reports/resources/css/windup.css" rel="stylesheet" media="screen"/>
+</head>
+
+<body class="java-application report-Application Details">
+<th:block layout:fragment="content">
+
+    <ul class="nav nav-tabs">
+        <li><a href="/execution/1/reports/report_index_RHQ_Enterprise_Server_EAR.html">Dashboard</a></li>
+        <li><a href="/execution/1/reports/migration_issues.1.html">Issues</a></li>
+        <li><a href="/execution/1/reports/ApplicationDetails_RHQ_Enterprise_Server_EAR.html">Details</a></li>
+        <li class="active"><a href="/execution/1/reports/dependency_report_RHQ_Enterprise_Server_EAR.html">Dependencies</a></li>
+        <li><a href="/execution/1/reports/remotereport_RHQ_Enterprise_Server_EAR.html">Remote Services</a></li>
+        <li><a href="/execution/1/reports/ejbreport_RHQ_Enterprise_Server_EAR.html">EJBs</a></li>
+        <li><a href="/execution/1/reports/jpa_RHQ_Enterprise_Server_EAR.html">JPA</a></li>
+        <li><a href="/execution/1/reports/server_resources_RHQ_Enterprise_Server_EAR.html">Server Resources</a></li>
+        <li><a href="/execution/1/reports/hardcoded_ipsRHQ_Enterprise_Server_EAR.html">Hardcoded IPS</a></li>
+        <li><a href="/execution/1/reports/ignoredfiles_RHQ_Enterprise_Server_EAR.html">Ignored Files</a></li>
+    </ul>
+
+    <div id="reportContent">
+
+    </div>
+
+    <script th:inline="javascript">
+        var url = [[${app_name}]];
+        console.log(url);
+        $('#reportContent').load('/reports/dependency_report_'+url+'.html #report-content', function(response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: ";
+                alert(msg + xhr.status + " " + xhr.statusText);
+            }
+        });
+    </script>
+
+
+</th:block>
+
+</body>
+</html>

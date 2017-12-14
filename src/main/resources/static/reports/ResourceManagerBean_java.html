@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ResourceManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/resource/ResourceManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.resource;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.IgnoreDependency;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.criteria.ResourceCriteria;
+import org.rhq.core.domain.measurement.Availability;
+import org.rhq.core.domain.measurement.AvailabilityType;
+import org.rhq.core.domain.measurement.ResourceAvailability;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceCategory;
+import org.rhq.core.domain.resource.ResourceError;
+import org.rhq.core.domain.resource.ResourceErrorType;
+import org.rhq.core.domain.resource.ResourceSubCategory;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.composite.LockedResource;
+import org.rhq.core.domain.resource.composite.ResourceAvailabilitySummary;
+import org.rhq.core.domain.resource.composite.ResourceWithAvailability;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.resource.group.composite.AutoGroupComposite;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.domain.util.CriteriaQueryGenerator.AuthorizationTokenType;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.exception.UnscheduleException;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerLocal;
+import org.rhq.enterprise.server.operation.OperationManagerLocal;
+import org.rhq.enterprise.server.operation.ResourceOperationSchedule;
+import org.rhq.enterprise.server.resource.ResourceAlreadyExistsException;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceManagerRemote;
+import org.rhq.enterprise.server.resource.ResourceNotFoundException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+
+@Stateless
+public class ResourceManagerBean implements ResourceManagerLocal, ResourceManagerRemote {
+   private final Log log = LogFactory.getLog(ResourceManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private ResourceGroupManagerLocal groupManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   @IgnoreDependency
+   private OperationManagerLocal operationManager;
+   @EJB
+   @IgnoreDependency
+   private MeasurementScheduleManagerLocal measurementScheduleManager;
+
+   public void createResource(Subject user, Resource resource, int parentId) throws ResourceAlreadyExistsException {
+      Resource parent = null;
+      if(parentId != -1) {
+         parent = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(parentId));
+         if(parent == null) {
+            throw new ResourceNotFoundException(&quot;Intended parent for new resource does not exist.&quot;);
+         }
+      }
+
+      if(!this.authorizationManager.hasResourcePermission(user, Permission.CREATE_CHILD_RESOURCES, parent.getId())) {
+         throw new PermissionException(&quot;You do not have permission to add this resource as a child.&quot;);
+      } else if(this.getResourceByParentAndKey(user, parent, resource.getResourceKey(), resource.getResourceType().getPlugin(), resource.getResourceType().getName()) != null) {
+         throw new ResourceAlreadyExistsException(&quot;Resource with key \'&quot; + resource.getResourceKey() + &quot;\' already exists.&quot;);
+      } else {
+         if(parent != Resource.ROOT) {
+            resource.setParentResource(parent);
+            parent.addChildResource(resource);
+         }
+
+         this.entityManager.persist(resource);
+         Subject overlord = this.subjectManager.getOverlord();
+         this.updateImplicitMembership(overlord, resource);
+         int[] resourceIds = new int[]{resource.getId()};
+         this.measurementScheduleManager.findSchedulesForResourceAndItsDescendants(resourceIds, false);
+      }
+   }
+
+   private void updateImplicitMembership(Subject subject, Resource resource) {
+      if(resource.getParentResource() != null) {
+         this.groupManager.updateImplicitGroupMembership(subject, resource);
+      }
+   }
+
+   public Resource updateResource(Subject user, Resource resource) {
+      if(!this.authorizationManager.hasResourcePermission(user, Permission.MODIFY_RESOURCE, resource.getId())) {
+         throw new PermissionException(&quot;You do not have permission to modify resource&quot;);
+      } else {
+         return (Resource)this.entityManager.merge(resource);
+      }
+   }
+
+   public List deleteResources(Subject user, int[] resourceIds) {
+      ArrayList deletedResourceIds = new ArrayList();
+      int[] arr$ = resourceIds;
+      int len$ = resourceIds.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         Integer resourceId = Integer.valueOf(arr$[i$]);
+         if(!deletedResourceIds.contains(resourceId)) {
+            deletedResourceIds.addAll(this.deleteResource(user, resourceId.intValue()));
+         }
+      }
+
+      return deletedResourceIds;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public List deleteResource(Subject user, int resourceId) {
+      Resource resource = this.resourceManager.getResourceTree(resourceId, true);
+      if(resource == null) {
+         this.log.info(&quot;Delete resource not possible, as resource with id [&quot; + resourceId + &quot;] was not found&quot;);
+         return Collections.emptyList();
+      } else if(!this.authorizationManager.hasResourcePermission(user, Permission.DELETE_RESOURCE, resourceId)) {
+         throw new PermissionException(&quot;You do not have permission to delete resource [&quot; + resourceId + &quot;]&quot;);
+      } else {
+         Agent doomedAgent = null;
+         if(resource.getParentResource() == null) {
+            try {
+               doomedAgent = this.agentManager.getAgentByResourceId(resourceId);
+            } catch (Exception var14) {
+               doomedAgent = null;
+               this.log.warn(&quot;This warning should occur in TEST code only! &quot; + var14);
+            }
+         }
+
+         AgentClient agentClient = null;
+
+         try {
+            agentClient = this.agentManager.getAgentClient(resourceId);
+         } catch (Throwable var13) {
+            this.log.warn(&quot;No AgentClient found for resource [&quot; + resource + &quot;]. Unable to inform agent of inventory removal (this may be ok): &quot; + var13);
+         }
+
+         Subject overlord = this.subjectManager.getOverlord();
+         this.cleanupScheduledOperationsForResource(overlord, resourceId);
+         this.log.info(&quot;User [&quot; + user + &quot;] is marking resource [&quot; + resource + &quot;] for asychronous deletion&quot;);
+         Query toBeDeletedQuery = this.entityManager.createNamedQuery(&quot;Resource.findDescendents&quot;);
+         toBeDeletedQuery.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         List toBeDeletedResourceIds = toBeDeletedQuery.getResultList();
+         Query markDeletedQuery = this.entityManager.createNamedQuery(&quot;Resource.markResourcesForAsyncDeletion&quot;);
+         markDeletedQuery.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         markDeletedQuery.setParameter(&quot;status&quot;, InventoryStatus.UNINVENTORIED);
+         int resourcesDeleted = markDeletedQuery.executeUpdate();
+         if(resourcesDeleted != toBeDeletedResourceIds.size()) {
+            this.log.error(&quot;Tried to delete &quot; + toBeDeletedResourceIds.size() + &quot; resources, but actually deleted &quot; + resourcesDeleted);
+         }
+
+         if(agentClient != null) {
+            try {
+               agentClient.getDiscoveryAgentService().removeResource(resourceId);
+            } catch (Exception var12) {
+               this.log.warn(&quot; Unable to inform agent of inventory removal for resource [&quot; + resourceId + &quot;]&quot;, var12);
+            }
+         }
+
+         if(doomedAgent != null) {
+            this.agentManager.deleteAgent(doomedAgent);
+         }
+
+         return toBeDeletedResourceIds;
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void deleteSingleResourceInNewTransaction(Subject user, int resourceId) {
+      if(!this.authorizationManager.isOverlord(user)) {
+         throw new IllegalArgumentException(&quot;Only the overlord can execute out-of-band async resource delete method&quot;);
+      } else {
+         boolean hasErrors = this.doBulkDelete(user, resourceId);
+         if(!hasErrors) {
+            Resource attachedResource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+            if(this.log.isDebugEnabled()) {
+               this.log.debug(&quot;Overlord is asynchronously deleting resource [&quot; + attachedResource + &quot;]&quot;);
+            }
+
+            this.entityManager.remove(attachedResource);
+         }
+      }
+   }
+
+   private boolean doBulkDelete(Subject overlord, int resourceId) {
+      String[] nativeQueriesToExecute = new String[]{&quot;DELETE FROM RHQ_RESOURCE_GROUP_RES_EXP_MAP WHERE RESOURCE_ID IN ( :resourceIds )&quot;, &quot;DELETE FROM RHQ_RESOURCE_GROUP_RES_IMP_MAP WHERE RESOURCE_ID IN ( :resourceIds )&quot;};
+      String[] namedQueriesToExecute = new String[]{&quot;ResourceChannel.deleteByResources&quot;, &quot;MeasurementBaseline.deleteByResources&quot;, &quot;MeasurementDataTrait.deleteByResources&quot;, &quot;CallTimeDataValue.deleteByResources&quot;, &quot;CallTimeDataKey.deleteByResources&quot;, &quot;DeleteOOBForResurces&quot;, &quot;MeasurementSchedule.deleteByResources&quot;, &quot;Availability.deleteByResources&quot;, &quot;ResourceError.deleteByResources&quot;, &quot;Event.deleteByResources&quot;, &quot;EventSource.deleteByResources&quot;, &quot;PackageInstallationStep.deleteByResources&quot;, &quot;InstalledPackageHistory.deleteByResources&quot;, &quot;InstalledPackage.deleteByResources&quot;, &quot;ContentServiceRequest.deleteByResources&quot;, &quot;ResourceOperationScheduleEntity.QUERY_DELETE_BY_RESOURCES&quot;, &quot;ResourceOperationHistory.deleteByResources&quot;, &quot;DeleteResourceHistory.deleteByResources&quot;, &quot;CreateResourceHistory.deleteByResources&quot;, &quot;ResourceConfigurationUpdate.deleteByResources0&quot;, &quot;ResourceConfigurationUpdate.deleteByResources1&quot;, &quot;ResourceConfigurationUpdate.deleteByResources2&quot;, &quot;PluginConfigurationUpdate.deleteByResources0&quot;, &quot;PluginConfigurationUpdate.deleteByResources1&quot;, &quot;PluginConfigurationUpdate.deleteByResources2&quot;, &quot;AlertConditionLog.deleteByResources&quot;, &quot;AlertNotificationLog.deleteByResources&quot;, &quot;Alert.deleteByResources&quot;, &quot;AlertCondition.deleteByResources&quot;, &quot;AlertDampeningEvent.deleteByResources&quot;, &quot;AlertNotification.deleteByResources&quot;, &quot;AlertDefinition.deleteByResources&quot;};
+      ArrayList resourceIds = new ArrayList();
+      resourceIds.add(Integer.valueOf(resourceId));
+      boolean hasErrors = false;
+      String[] arr$ = nativeQueriesToExecute;
+      int len$ = nativeQueriesToExecute.length;
+
+      int i$;
+      String namedQueryToExecute;
+      for(i$ = 0; i$ &lt; len$; ++i$) {
+         namedQueryToExecute = arr$[i$];
+         hasErrors |= this.resourceManager.bulkNativeQueryDeleteInNewTransaction(overlord, namedQueryToExecute, resourceIds);
+      }
+
+      arr$ = namedQueriesToExecute;
+      len$ = namedQueriesToExecute.length;
+
+      for(i$ = 0; i$ &lt; len$; ++i$) {
+         namedQueryToExecute = arr$[i$];
+         hasErrors |= this.resourceManager.bulkNamedQueryDeleteInNewTransaction(overlord, namedQueryToExecute, resourceIds);
+      }
+
+      return hasErrors;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public boolean bulkNativeQueryDeleteInNewTransaction(Subject subject, String nativeQueryString, List resourceIds) {
+      if(!this.authorizationManager.isOverlord(subject)) {
+         throw new IllegalArgumentException(&quot;Only the overlord can execute arbitrary native query strings&quot;);
+      } else {
+         try {
+            Query t = this.entityManager.createNativeQuery(nativeQueryString);
+            t.setParameter(&quot;resourceIds&quot;, resourceIds);
+            t.executeUpdate();
+            return false;
+         } catch (Throwable var5) {
+            if(this.log.isDebugEnabled()) {
+               this.log.error(&quot;Bulk native query delete error for \'&quot; + nativeQueryString + &quot;\' for &quot; + resourceIds, var5);
+            } else {
+               this.log.error(&quot;Bulk native query delete error for \'&quot; + nativeQueryString + &quot;\' for &quot; + resourceIds + &quot;: &quot; + var5.getMessage());
+            }
+
+            return true;
+         }
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public boolean bulkNamedQueryDeleteInNewTransaction(Subject subject, String namedQuery, List resourceIds) {
+      if(!this.authorizationManager.isOverlord(subject)) {
+         throw new IllegalArgumentException(&quot;Only the overlord can execute arbitrary named query strings&quot;);
+      } else {
+         try {
+            Query t = this.entityManager.createNamedQuery(namedQuery);
+            t.setParameter(&quot;resourceIds&quot;, resourceIds);
+            t.executeUpdate();
+            return false;
+         } catch (Throwable var5) {
+            if(this.log.isDebugEnabled()) {
+               this.log.error(&quot;Bulk named query delete error for \'&quot; + namedQuery + &quot;\' for &quot; + resourceIds, var5);
+            } else {
+               this.log.error(&quot;Bulk named query delete error for \'&quot; + namedQuery + &quot;\' for &quot; + resourceIds + &quot;: &quot; + var5.getMessage());
+            }
+
+            return true;
+         }
+      }
+   }
+
+   private int cleanupScheduledOperationsForResource(Subject overlord, int resourceId) {
+      int result = 0;
+
+      try {
+         List t = this.operationManager.findScheduledResourceOperations(overlord, resourceId);
+         result = t.size();
+         Iterator i$ = t.iterator();
+
+         while(i$.hasNext()) {
+            ResourceOperationSchedule schedule = (ResourceOperationSchedule)i$.next();
+
+            try {
+               this.operationManager.unscheduleResourceOperation(overlord, schedule.getJobId().toString(), resourceId);
+            } catch (UnscheduleException var8) {
+               this.log.warn(&quot;Failed to unschedule job [&quot; + schedule + &quot;] for a resource being deleted [&quot; + resourceId + &quot;]&quot;, var8);
+            }
+         }
+      } catch (Throwable var9) {
+         this.log.warn(&quot;Failed to get jobs for a resource being deleted [&quot; + resourceId + &quot;]; will not attempt to unschedule anything&quot;, var9);
+      }
+
+      return result;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public Resource setResourceStatus(Subject user, Resource resource, InventoryStatus newStatus, boolean setDescendents) {
+      if(resource.getParentResource() != null &amp;&amp; resource.getParentResource().getInventoryStatus() != InventoryStatus.COMMITTED) {
+         throw new IllegalStateException(&quot;Cannot commit resource [&quot; + resource + &quot;] to inventory, because its parent resource [&quot; + resource.getParentResource() + &quot;] has not yet been committed.&quot;);
+      } else {
+         long now = System.currentTimeMillis();
+         resource.setInventoryStatus(newStatus);
+         resource.setItime(now);
+         resource = (Resource)this.entityManager.merge(resource);
+         Iterator i$;
+         Resource childResource;
+         if(setDescendents) {
+            i$ = resource.getChildResources().iterator();
+
+            while(i$.hasNext()) {
+               childResource = (Resource)i$.next();
+               childResource.setInventoryStatus(newStatus);
+               childResource.setItime(now);
+               childResource = (Resource)this.entityManager.merge(childResource);
+               this.setResourceStatus(user, childResource, newStatus, setDescendents);
+            }
+         } else if(resource.getResourceType().getCategory() == ResourceCategory.PLATFORM) {
+            i$ = resource.getChildResources().iterator();
+
+            while(i$.hasNext()) {
+               childResource = (Resource)i$.next();
+               if(childResource.getResourceType().getCategory() == ResourceCategory.SERVICE) {
+                  childResource.setInventoryStatus(newStatus);
+                  childResource.setItime(now);
+                  childResource = (Resource)this.entityManager.merge(childResource);
+                  this.setResourceStatus(user, childResource, newStatus, setDescendents);
+               }
+            }
+         }
+
+         return resource;
+      }
+   }
+
+   public Resource getResourceById(Subject user, int resourceId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findById&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List resources = query.getResultList();
+      if(resources.size() != 1) {
+         throw new ResourceNotFoundException(resourceId);
+      } else if(!this.authorizationManager.canViewResource(user, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + user + &quot;] does not have permission to view resource [&quot; + resourceId + &quot;]&quot;);
+      } else {
+         return (Resource)resources.get(0);
+      }
+   }
+
+   @Nullable
+   public Resource getResourceByParentAndKey(Subject user, Resource parent, String key, String plugin, String typeName) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findByParentAndKey&quot;);
+      query.setParameter(&quot;parent&quot;, parent);
+      query.setParameter(&quot;key&quot;, key);
+      query.setParameter(&quot;plugin&quot;, plugin);
+      query.setParameter(&quot;typeName&quot;, typeName);
+
+      Resource resource;
+      try {
+         resource = (Resource)query.getSingleResult();
+      } catch (NoResultException var9) {
+         return null;
+      }
+
+      if(!this.authorizationManager.canViewResource(user, resource.getId())) {
+         throw new PermissionException(&quot;You do not have permission to get this resource by parent and key.&quot;);
+      } else {
+         return resource;
+      }
+   }
+
+   public List findResourcesByParentAndType(Subject user, Resource parent, ResourceType type) {
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findByParentAndType_admin&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findByParentAndType&quot;);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      query.setParameter(&quot;parent&quot;, parent);
+      query.setParameter(&quot;type&quot;, type);
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      List objs = query.getResultList();
+      ArrayList results = new ArrayList(objs.size());
+      Iterator i$ = objs.iterator();
+
+      while(i$.hasNext()) {
+         Object[] ob = (Object[])i$.next();
+         Resource r = (Resource)ob[0];
+         AvailabilityType at = (AvailabilityType)ob[1];
+         ResourceWithAvailability rwa = new ResourceWithAvailability(r, at);
+         results.add(rwa);
+      }
+
+      return results;
+   }
+
+   @Nullable
+   public Resource getParentResource(int resourceId) {
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(resource == null) {
+         throw new ResourceNotFoundException(resourceId);
+      } else {
+         Resource parent = resource.getParentResource();
+         if(parent != null) {
+            parent.getId();
+         }
+
+         return parent;
+      }
+   }
+
+   @Nullable
+   private Integer getParentResourceId(int resourceId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findParentId&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(resourceId));
+
+      try {
+         return (Integer)query.getSingleResult();
+      } catch (NoResultException var4) {
+         return null;
+      }
+   }
+
+   public List getResourceIdLineage(int resourceId) {
+      ArrayList lineage = new ArrayList();
+      Integer child = Integer.valueOf(resourceId);
+
+      for(Integer parent = null; (parent = this.getParentResourceId(child.intValue())) != null; child = parent) {
+         lineage.add(parent);
+      }
+
+      return lineage;
+   }
+
+   public List getResourceLineage(int resourceId) {
+      LinkedList resourceLineage = new LinkedList();
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(resource == null) {
+         throw new ResourceNotFoundException(resourceId);
+      } else {
+         resourceLineage.add(resource);
+
+         Resource parent;
+         for(int childResourceId = resourceId; (parent = this.getParentResource(childResourceId)) != null; childResourceId = parent.getId()) {
+            resourceLineage.addFirst(parent);
+         }
+
+         return resourceLineage;
+      }
+   }
+
+   @NotNull
+   public Resource getRootResourceForResource(int resourceId) {
+      Query q = this.entityManager.createNamedQuery(&quot;Resource.findRootPlatformOfResource&quot;);
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      return (Resource)q.getSingleResult();
+   }
+
+   public PageList findResourceByParentAndInventoryStatus(Subject user, Resource parent, InventoryStatus inventoryStatus, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByParentAndInventoryStatus_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByParentAndInventoryStatus_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByParentAndInventoryStatus&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByParentAndInventoryStatus&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;parent&quot;, parent);
+      queryCount.setParameter(&quot;inventoryStatus&quot;, inventoryStatus);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;parent&quot;, parent);
+      query.setParameter(&quot;inventoryStatus&quot;, inventoryStatus);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findChildResources(Subject user, Resource parent, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findChildren_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findChildren_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findChildren&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findChildren&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;parent&quot;, parent);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;parent&quot;, parent);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public List findChildrenResourceIds(int parentResourceId, InventoryStatus status) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findChildrenIds_admin&quot;);
+      query.setParameter(&quot;parentResourceId&quot;, Integer.valueOf(parentResourceId));
+      query.setParameter(&quot;inventoryStatus&quot;, status);
+      List results = query.getResultList();
+      return results;
+   }
+
+   public PageList findChildResourcesByCategoryAndInventoryStatus(Subject user, Resource parent, ResourceCategory category, InventoryStatus status, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findChildrenByCategoryAndInventoryStatus_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findChildrenByCategoryAndInventoryStatus_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findChildrenByCategoryAndInventoryStatus&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findChildrenByCategoryAndInventoryStatus&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;parent&quot;, parent);
+      queryCount.setParameter(&quot;category&quot;, category);
+      queryCount.setParameter(&quot;status&quot;, status);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;parent&quot;, parent);
+      query.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;status&quot;, status);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findResourcesByCategory(Subject user, ResourceCategory category, InventoryStatus inventoryStatus, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByCategoryAndInventoryStatus_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByCategoryAndInventoryStatus_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByCategoryAndInventoryStatus&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByCategoryAndInventoryStatus&quot;, pageControl);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;category&quot;, category);
+      queryCount.setParameter(&quot;inventoryStatus&quot;, inventoryStatus);
+      query.setParameter(&quot;inventoryStatus&quot;, inventoryStatus);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findResourceComposites(Subject user, ResourceCategory category, String typeName, int parentResourceId, String searchString, PageControl pageControl) {
+      ResourceType type = null;
+      Resource parentResource = null;
+      if(null != typeName) {
+         Query typeNameFilter = this.entityManager.createNamedQuery(&quot;ResourceType.findByName&quot;);
+         typeNameFilter.setParameter(&quot;name&quot;, typeName);
+         type = (ResourceType)typeNameFilter.getSingleResult();
+         type = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(type.getId()));
+      }
+
+      if(parentResourceId &gt; 0) {
+         parentResource = this.getResourceById(user, parentResourceId);
+      }
+
+      String typeNameFilter1 = type == null?null:type.getName();
+      return this.findResourceComposites(user, category, typeNameFilter1, (String)null, parentResource, searchString, false, pageControl);
+   }
+
+   public PageList findResourceComposites(Subject user, ResourceCategory category, String typeName, String pluginName, Resource parentResource, String searchString, boolean attachParentResource, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      pageControl.addDefaultOrderingField(&quot;res.id&quot;);
+      String queryName;
+      String queryCountName;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         if(attachParentResource) {
+            queryName = &quot;Resource.findCompositeWithParent_admin&quot;;
+         } else {
+            queryName = &quot;Resource.findComposite_admin&quot;;
+         }
+
+         queryCountName = &quot;Resource.findComposite_count_admin&quot;;
+      } else {
+         if(attachParentResource) {
+            queryName = &quot;Resource.findCompositeWithParent&quot;;
+         } else {
+            queryName = &quot;Resource.findComposite&quot;;
+         }
+
+         queryCountName = &quot;Resource.findComposite_count&quot;;
+      }
+
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pageControl);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryCountName);
+      if(!this.authorizationManager.isInventoryManager(user)) {
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      searchString = PersistenceUtility.formatSearchParameter(searchString);
+      query.setParameter(&quot;category&quot;, category);
+      queryCount.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;resourceTypeName&quot;, typeName);
+      queryCount.setParameter(&quot;resourceTypeName&quot;, typeName);
+      query.setParameter(&quot;pluginName&quot;, pluginName);
+      queryCount.setParameter(&quot;pluginName&quot;, pluginName);
+      query.setParameter(&quot;search&quot;, searchString);
+      queryCount.setParameter(&quot;search&quot;, searchString);
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      queryCount.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      query.setParameter(&quot;parentResource&quot;, parentResource);
+      queryCount.setParameter(&quot;parentResource&quot;, parentResource);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      return new PageList(query.getResultList(), (int)count, pageControl);
+   }
+
+   public PageList findResourceCompositeForParentAndTypeAndCategory(Subject user, ResourceCategory category, int resourceTypeId, Resource parentResource, PageControl pageControl) {
+      ResourceType resourceType = null;
+      if(resourceTypeId != -1) {
+         try {
+            resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(resourceTypeId));
+         } catch (NoResultException var8) {
+            ;
+         }
+      }
+
+      String typeNameFilter = resourceType == null?null:resourceType.getName();
+      return this.findResourceComposites(user, category, typeNameFilter, (String)null, parentResource, (String)null, false, pageControl);
+   }
+
+   public PageList findResourcesByType(Subject user, ResourceType resourceType, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByType_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByType_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByType&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByType&quot;, pageControl);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;type&quot;, resourceType);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;type&quot;, resourceType);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public int getResourceCountByCategory(Subject user, ResourceCategory category, InventoryStatus status) {
+      Query queryCount;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByCategoryAndInventoryStatus_admin&quot;);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByCategoryAndInventoryStatus&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;inventoryStatus&quot;, status);
+      queryCount.setParameter(&quot;category&quot;, category);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      return (int)count;
+   }
+
+   public int getResourceCountByTypeAndIds(Subject user, ResourceType type, int[] resourceIds) {
+      Query queryCount;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByTypeAndIds_admin&quot;);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByTypeAndIds&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+      }
+
+      List resourceList = ArrayUtils.wrapInList(resourceIds);
+      queryCount.setParameter(&quot;ids&quot;, resourceList);
+      queryCount.setParameter(&quot;type&quot;, type);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      return (int)count;
+   }
+
+   public List findResourcesMarkedForAsyncDeletion(Subject user) {
+      if(!this.authorizationManager.isOverlord(user)) {
+         throw new IllegalArgumentException(&quot;Only the overlord can purge resources marked for deletion&quot;);
+      } else {
+         Query query = this.entityManager.createNamedQuery(&quot;Resource.findResourcesMarkedForAsyncDeletion&quot;);
+         List results = query.getResultList();
+         return results;
+      }
+   }
+
+   public List findRecentlyAddedPlatforms(Subject user, long ctime, int maxItems) {
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findRecentlyAddedPlatforms_admin&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findRecentlyAddedPlatforms&quot;);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      query.setParameter(&quot;oldestEpochTime&quot;, Long.valueOf(ctime));
+      query.setMaxResults(maxItems);
+      return query.getResultList();
+   }
+
+   public List findRecentlyAddedServers(Subject user, long ctime, int platformId) {
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findRecentlyAddedServers_admin&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findRecentlyAddedServers&quot;);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      query.setParameter(&quot;oldestEpochTime&quot;, Long.valueOf(ctime));
+      query.setParameter(&quot;platformId&quot;, Integer.valueOf(platformId));
+      query.setMaxResults(100);
+      return query.getResultList();
+   }
+
+   public AutoGroupComposite getResourceAutoGroup(Subject user, int resourceId) {
+      boolean isInventoryManager = this.authorizationManager.isInventoryManager(user);
+      Query query;
+      if(isInventoryManager) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findResourceAutogroupComposite_admin&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findResourceAutogroupComposite&quot;);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      query.setParameter(&quot;id&quot;, Integer.valueOf(resourceId));
+
+      AutoGroupComposite result;
+      try {
+         result = (AutoGroupComposite)query.getSingleResult();
+      } catch (NoResultException var7) {
+         return null;
+      }
+
+      if(isInventoryManager) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findAvailabilityByResourceId_admin&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findAvailabilityByResourceId&quot;);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      query.setParameter(&quot;id&quot;, Integer.valueOf(resourceId));
+      result.setResources(query.getResultList());
+      return result;
+   }
+
+   public List findResourcesAutoGroups(Subject subject, int[] resourceIds) {
+      ArrayList results = new ArrayList();
+      List ids = ArrayUtils.wrapInList(resourceIds);
+      if(ids != null &amp;&amp; ids.size() != 0) {
+         boolean isInventoryManager = this.authorizationManager.isInventoryManager(subject);
+         Query query;
+         if(isInventoryManager) {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findResourceAutogroupsComposite_admin&quot;);
+         } else {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findResourceAutogroupsComposite&quot;);
+            query.setParameter(&quot;subject&quot;, subject);
+         }
+
+         query.setParameter(&quot;ids&quot;, ids);
+
+         AutoGroupComposite oneComp;
+         try {
+            oneComp = (AutoGroupComposite)query.getSingleResult();
+         } catch (NoResultException var16) {
+            return null;
+         }
+
+         if(isInventoryManager) {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findAvailabilityByResourceIds_admin&quot;);
+         } else {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findAvailabilityByResourceIds&quot;);
+            query.setParameter(&quot;subject&quot;, subject);
+         }
+
+         query.setParameter(&quot;ids&quot;, ids);
+         List objs = query.getResultList();
+         Iterator i$ = objs.iterator();
+
+         while(i$.hasNext()) {
+            Object[] ob = (Object[])i$.next();
+            Resource r = (Resource)ob[0];
+            AvailabilityType at = (AvailabilityType)ob[1];
+            ResourceWithAvailability rwa = new ResourceWithAvailability(r, at);
+            AutoGroupComposite comp = new AutoGroupComposite(oneComp);
+            ArrayList res = new ArrayList(1);
+            res.add(rwa);
+            comp.setResources(res);
+            results.add(comp);
+         }
+
+         return results;
+      } else {
+         return results;
+      }
+   }
+
+   public List findChildrenAutoGroups(Subject user, int parentResourceId, int[] resourceTypeIds) {
+      List typeIds = ArrayUtils.wrapInList(resourceTypeIds);
+      Query query;
+      if(null != typeIds) {
+         if(this.authorizationManager.isInventoryManager(user)) {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findChildrenAutogroupCompositesByType_admin&quot;);
+         } else {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findChildrenAutogroupCompositesByType&quot;);
+            query.setParameter(&quot;subject&quot;, user);
+         }
+
+         query.setParameter(&quot;resourceTypeIds&quot;, typeIds);
+      } else if(this.authorizationManager.isInventoryManager(user)) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findChildrenAutogroupComposites_admin&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findChildrenAutogroupComposites&quot;);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      Resource parentResource = (Resource)this.entityManager.getReference(Resource.class, Integer.valueOf(parentResourceId));
+      query.setParameter(&quot;parent&quot;, parentResource);
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      List resourceAutoGroups = query.getResultList();
+      Iterator fullComposites = resourceAutoGroups.iterator();
+
+      while(fullComposites.hasNext()) {
+         AutoGroupComposite composite = (AutoGroupComposite)fullComposites.next();
+         ResourceSubCategory sc = composite.getResourceType().getSubCategory();
+         if(sc != null) {
+            sc.getId();
+         }
+
+         if(this.authorizationManager.isInventoryManager(user)) {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findByParentAndType_admin&quot;);
+         } else {
+            query = this.entityManager.createNamedQuery(&quot;Resource.findByParentAndType&quot;);
+            query.setParameter(&quot;subject&quot;, user);
+         }
+
+         query.setParameter(&quot;parent&quot;, parentResource);
+         query.setParameter(&quot;type&quot;, composite.getResourceType());
+         query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+         List objs = query.getResultList();
+         ArrayList results = new ArrayList(objs.size());
+         Iterator i$ = objs.iterator();
+
+         while(i$.hasNext()) {
+            Object[] ob = (Object[])i$.next();
+            Resource r = (Resource)ob[0];
+            AvailabilityType at = (AvailabilityType)ob[1];
+            ResourceWithAvailability rwa = new ResourceWithAvailability(r, at);
+            results.add(rwa);
+         }
+
+         composite.setResources(results);
+      }
+
+      ArrayList fullComposites1 = new ArrayList();
+      this.calculateSubcategorySummary(parentResource, parentResource.getResourceType().getChildSubCategories(), resourceAutoGroups, 0, fullComposites1);
+      fullComposites1.addAll(resourceAutoGroups);
+      return fullComposites1;
+   }
+
+   public List findChildrenAutoGroups(Subject user, int parentResourceId) {
+      return this.findChildrenAutoGroups(user, parentResourceId, (int[])null);
+   }
+
+   private void calculateSubcategorySummary(Resource parentResource, List subcategories, List resourceAutoGroups, int depth, List fullComposites) {
+      Iterator i$ = subcategories.iterator();
+
+      while(i$.hasNext()) {
+         ResourceSubCategory subCategory = (ResourceSubCategory)i$.next();
+         ArrayList matches = new ArrayList();
+         Iterator i$1 = resourceAutoGroups.iterator();
+
+         AutoGroupComposite match;
+         while(i$1.hasNext()) {
+            match = (AutoGroupComposite)i$1.next();
+
+            for(ResourceSubCategory searchCategory = match.getResourceType().getSubCategory(); searchCategory != null; searchCategory = searchCategory.getParentSubCategory()) {
+               if(subCategory.equals(searchCategory)) {
+                  matches.add(match);
+               }
+            }
+         }
+
+         if(matches.size() &gt; 0) {
+            int i$2 = 0;
+            double match1 = 0.0D;
+
+            AutoGroupComposite mac;
+            for(Iterator categoryComposite = matches.iterator(); categoryComposite.hasNext(); match1 += (mac.getAvailability() == null?0.0D:mac.getAvailability().doubleValue()) * (double)mac.getMemberCount()) {
+               mac = (AutoGroupComposite)categoryComposite.next();
+               i$2 = (int)((long)i$2 + mac.getMemberCount());
+            }
+
+            match1 /= (double)i$2;
+            AutoGroupComposite categoryComposite1 = new AutoGroupComposite(Double.valueOf(match1), parentResource, subCategory, (long)i$2);
+            categoryComposite1.setDepth(depth);
+            fullComposites.add(categoryComposite1);
+         }
+
+         if(subCategory.getChildSubCategories() != null) {
+            this.calculateSubcategorySummary(parentResource, subCategory.getChildSubCategories(), resourceAutoGroups, depth + 1, fullComposites);
+         }
+
+         i$1 = matches.iterator();
+
+         while(i$1.hasNext()) {
+            match = (AutoGroupComposite)i$1.next();
+            if(match.getResourceType().getSubCategory().equals(subCategory)) {
+               match.setDepth(depth + 1);
+               fullComposites.add(match);
+               resourceAutoGroups.remove(match);
+            }
+         }
+      }
+
+   }
+
+   public PageList findExplicitResourcesByResourceGroup(Subject user, ResourceGroup group, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByExplicitResourceGroup_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByExplicitResourceGroup_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByExplicitResourceGroup&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByExplicitResourceGroup&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;group&quot;, group);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;group&quot;, group);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public List findExplicitResourceIdsByResourceGroup(int resourceGroupId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findExplicitIdsByResourceGroup_admin&quot;);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(resourceGroupId));
+      List results = query.getResultList();
+      return results;
+   }
+
+   public List findImplicitResourceIdsByResourceGroup(int resourceGroupId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findImplicitIdsByResourceGroup_admin&quot;);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(resourceGroupId));
+      List results = query.getResultList();
+      return results;
+   }
+
+   public List findFlyWeights(int[] resourceIds) {
+      Integer[] ids = ArrayUtils.wrapInArray(resourceIds);
+      if(ids.length == 0) {
+         return new ArrayList();
+      } else {
+         ArrayList results = new ArrayList();
+         Arrays.sort(ids);
+         Query query = this.entityManager.createNamedQuery(&quot;Resource.findFlyWeights&quot;);
+
+         for(int i = 0; i &lt; ids.length; i += 1000) {
+            Integer[] batchRange = (Integer[])ArrayUtils.copyOfRange(ids, i, i + 1000);
+            query.setParameter(&quot;resourceIds&quot;, Arrays.asList(batchRange));
+            List batchResults = query.getResultList();
+            results.addAll(batchResults);
+         }
+
+         return results;
+      }
+   }
+
+   public PageList findImplicitResourcesByResourceGroup(Subject user, ResourceGroup group, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(user)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByImplicitResourceGroup_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByImplicitResourceGroup_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.findByImplicitResourceGroup&quot;);
+         queryCount.setParameter(&quot;subject&quot;, user);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.findByImplicitResourceGroup&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, user);
+      }
+
+      queryCount.setParameter(&quot;group&quot;, group);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;group&quot;, group);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findExplicitResourceWithAvailabilityByResourceGroup(Subject subject, ResourceGroup group, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceWithAvailability.findExplicitByResourceGroup_count_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceWithAvailability.findExplicitByResourceGroup_admin&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceWithAvailability.findExplicitByResourceGroup_count&quot;);
+         queryCount.setParameter(&quot;subject&quot;, subject);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceWithAvailability.findExplicitByResourceGroup&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, subject);
+      }
+
+      queryCount.setParameter(&quot;groupId&quot;, Integer.valueOf(group.getId()));
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(group.getId()));
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findImplicitResourceWithAvailabilityByResourceGroup(Subject subject, ResourceGroup group, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount;
+      Query query;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         queryCount = this.entityManager.createNamedQuery(&quot;ResourceWithAvailability.findImplicitByResourceGroup_count_admin&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceWithAvailability.findImplicitByResourceGroup_admin&quot;, pageControl);
+      } else {
+         queryCount = this.entityManager.createNamedQuery(&quot;ResourceWithAvailability.findImplicitByResourceGroup_count&quot;);
+         queryCount.setParameter(&quot;subject&quot;, subject);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceWithAvailability.findImplicitByResourceGroup&quot;, pageControl);
+         query.setParameter(&quot;subject&quot;, subject);
+      }
+
+      queryCount.setParameter(&quot;groupId&quot;, Integer.valueOf(group.getId()));
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(group.getId()));
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findResourceHealth(Subject user, int[] resourceIds, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;res.name&quot;);
+      List resourceIdList = ArrayUtils.wrapInList(resourceIds);
+      if(resourceIdList != null &amp;&amp; resourceIdList.size() != 0) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.getResourceHealthByIds&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.getResourceHealthByIds&quot;, pc);
+         queryCount.setParameter(&quot;resourceIds&quot;, resourceIdList);
+         query.setParameter(&quot;resourceIds&quot;, resourceIdList);
+         long count = (long)queryCount.getResultList().size();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, pc);
+      } else {
+         return new PageList(pc);
+      }
+   }
+
+   private void setImplicitMarkers(ResourceGroup group, List resources) {
+      ResourceWithAvailability res;
+      boolean explicitMember;
+      for(Iterator i$ = resources.iterator(); i$.hasNext(); res.setExplicit(explicitMember)) {
+         res = (ResourceWithAvailability)i$.next();
+         explicitMember = false;
+         Iterator i$1 = res.getResource().getExplicitGroups().iterator();
+
+         while(i$1.hasNext()) {
+            ResourceGroup explicitGroup = (ResourceGroup)i$1.next();
+            if(explicitGroup.getId() == group.getId()) {
+               explicitMember = true;
+               break;
+            }
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findAvailableResourcesForResourceGroup(Subject user, int groupId, ResourceType type, ResourceCategory category, String nameFilter, int[] excludeIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      List excludeList = ArrayUtils.wrapInList(excludeIds);
+      Query queryCount;
+      Query query;
+      if(excludeList != null &amp;&amp; excludeList.size() != 0) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.getAvailableResourcesForResourceGroupWithExcludes&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.getAvailableResourcesWithParentForResourceGroupWithExcludes&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.getAvailableResourcesForResourceGroup&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.getAvailableResourcesWithParentForResourceGroup&quot;, pageControl);
+      }
+
+      if(excludeList != null &amp;&amp; excludeList.size() != 0) {
+         queryCount.setParameter(&quot;excludeIds&quot;, excludeList);
+         query.setParameter(&quot;excludeIds&quot;, excludeList);
+      }
+
+      nameFilter = PersistenceUtility.formatSearchParameter(nameFilter);
+      queryCount.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      queryCount.setParameter(&quot;type&quot;, type);
+      query.setParameter(&quot;type&quot;, type);
+      queryCount.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;search&quot;, nameFilter);
+      queryCount.setParameter(&quot;search&quot;, nameFilter);
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      queryCount.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List resources = query.getResultList();
+      return new PageList(resources, (int)count, pageControl);
+   }
+
+   public PageList findAvailableResourcesForChannel(Subject user, int channelId, String search, ResourceCategory category, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.getAvailableResourcesForChannel&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.getAvailableResourcesForChannel&quot;, pageControl);
+      queryCount.setParameter(&quot;channelId&quot;, Integer.valueOf(channelId));
+      query.setParameter(&quot;channelId&quot;, Integer.valueOf(channelId));
+      search = PersistenceUtility.formatSearchParameter(search);
+      queryCount.setParameter(&quot;search&quot;, search);
+      query.setParameter(&quot;search&quot;, search);
+      queryCount.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      queryCount.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List resources = query.getResultList();
+      return new PageList(resources, (int)count, pageControl);
+   }
+
+   public PageList findAvailableResourcesForDashboardPortlet(Subject user, Integer typeId, ResourceCategory category, int[] excludeIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      List excludeList = ArrayUtils.wrapInList(excludeIds);
+      Query queryCount;
+      Query query;
+      if(excludeList != null &amp;&amp; excludeList.size() != 0) {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.getAvailableResourcesForDashboardPortletWithExcludes&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.getAvailableResourcesForDashboardPortletWithExcludes&quot;, pageControl);
+      } else {
+         queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;Resource.getAvailableResourcesForDashboardPortlet&quot;);
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Resource.getAvailableResourcesForDashboardPortlet&quot;, pageControl);
+      }
+
+      if(excludeList != null &amp;&amp; excludeList.size() != 0) {
+         queryCount.setParameter(&quot;excludeIds&quot;, excludeList);
+         query.setParameter(&quot;excludeIds&quot;, excludeList);
+      }
+
+      queryCount.setParameter(&quot;typeId&quot;, typeId);
+      query.setParameter(&quot;typeId&quot;, typeId);
+      queryCount.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;category&quot;, category);
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      queryCount.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List resources = query.getResultList();
+      return new PageList(resources, (int)count, pageControl);
+   }
+
+   public PageList findResourceByIds(Subject subject, int[] resourceIds, boolean attachParentResource, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;res.name&quot;);
+      List idList = ArrayUtils.wrapInList(resourceIds);
+      if(idList != null &amp;&amp; idList.size() != 0) {
+         String queryCountName;
+         String queryName;
+         if(this.authorizationManager.isInventoryManager(subject)) {
+            if(attachParentResource) {
+               queryName = &quot;Resource.findWithParentByIds_admin&quot;;
+            } else {
+               queryName = &quot;Resource.findByIds_admin&quot;;
+            }
+
+            queryCountName = &quot;Resource.findByIds_admin&quot;;
+         } else {
+            if(attachParentResource) {
+               queryName = &quot;Resource.findWithParentByIds&quot;;
+            } else {
+               queryName = &quot;Resource.findByIds&quot;;
+            }
+
+            queryCountName = &quot;Resource.findByIds&quot;;
+         }
+
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryCountName);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pageControl);
+         if(!this.authorizationManager.isInventoryManager(subject)) {
+            queryCount.setParameter(&quot;subject&quot;, subject);
+            query.setParameter(&quot;subject&quot;, subject);
+         }
+
+         queryCount.setParameter(&quot;ids&quot;, idList);
+         query.setParameter(&quot;ids&quot;, idList);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List resources = query.getResultList();
+         return new PageList(resources, (int)count, pageControl);
+      } else {
+         return new PageList(Collections.EMPTY_LIST, 0, pageControl);
+      }
+   }
+
+   public Resource getResourceTree(int rootResourceId, boolean recursive) {
+      Subject overlord = this.subjectManager.getOverlord();
+      Resource root = this.getResourceById(overlord, rootResourceId);
+      if(root != null) {
+         this.prefetchResource(root, recursive);
+         if(root.getParentResource() != null) {
+            root.getParentResource().getId();
+         }
+      }
+
+      return root;
+   }
+
+   @NotNull
+   public List findResourceErrors(Subject user, int resourceId, ResourceErrorType errorType) {
+      if(!this.authorizationManager.canViewResource(user, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + user + &quot;] does not have permission to view resource [&quot; + resourceId + &quot;]&quot;);
+      } else {
+         Query query = this.entityManager.createNamedQuery(&quot;ResourceError.findByResourceAndErrorType&quot;);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         query.setParameter(&quot;errorType&quot;, errorType);
+         return query.getResultList();
+      }
+   }
+
+   public void addResourceError(ResourceError resourceError) {
+      Subject overlord = this.subjectManager.getOverlord();
+
+      Resource resource;
+      try {
+         resource = this.getResourceById(overlord, resourceError.getResource().getId());
+      } catch (ResourceNotFoundException var7) {
+         throw new ResourceNotFoundException(&quot;Resource error contains an unknown Resource id: &quot; + resourceError);
+      }
+
+      if(resourceError.getErrorType() == ResourceErrorType.INVALID_PLUGIN_CONFIGURATION || resourceError.getErrorType() == ResourceErrorType.AVAILABILITY_CHECK) {
+         List doomedErrors = resource.getResourceErrors(resourceError.getErrorType());
+         Iterator i$ = doomedErrors.iterator();
+
+         while(i$.hasNext()) {
+            ResourceError doomedError = (ResourceError)i$.next();
+            this.entityManager.remove(doomedError);
+         }
+      }
+
+      this.entityManager.persist(resourceError);
+   }
+
+   public void clearResourceConfigError(int resourceId) {
+      Query q = this.entityManager.createQuery(&quot;delete from ResourceError e where e.resource.id = :resourceId and e.errorType = :type&quot;);
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      q.setParameter(&quot;type&quot;, ResourceErrorType.INVALID_PLUGIN_CONFIGURATION);
+      int updates = q.executeUpdate();
+      if(updates &gt; 1) {
+         this.log.error(&quot;Resource [&quot; + resourceId + &quot;] has [&quot; + updates + &quot;] INVALID_PLUGIN_CONFIGURATION ResourceError associated with it.&quot;);
+      }
+
+   }
+
+   public void deleteResourceError(Subject user, int resourceErrorId) {
+      ResourceError error = (ResourceError)this.entityManager.find(ResourceError.class, Integer.valueOf(resourceErrorId));
+      if(error != null) {
+         if(!this.authorizationManager.canViewResource(user, error.getResource().getId())) {
+            throw new PermissionException(&quot;Cannot delete resource error [&quot; + resourceErrorId + &quot;]. User [&quot; + user + &quot;] does not have permission to operate on resource [&quot; + error.getResource().getName() + &quot;].&quot;);
+         }
+
+         this.entityManager.remove(error);
+      }
+
+   }
+
+   public Map getResourceStatuses(int rootResourceId, boolean descendents) {
+      Resource root = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(rootResourceId));
+      LinkedHashMap statuses = new LinkedHashMap();
+      statuses.put(Integer.valueOf(root.getId()), root.getInventoryStatus());
+      this.getResourceStatuses(rootResourceId, descendents, statuses);
+      return statuses;
+   }
+
+   public Resource getPlatform(Agent agent) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.findPlatformByAgent&quot;);
+      query.setParameter(&quot;category&quot;, ResourceCategory.PLATFORM);
+      query.setParameter(&quot;agent&quot;, agent);
+      Resource platform = (Resource)query.getSingleResult();
+      return platform;
+   }
+
+   public ResourceAvailabilitySummary getAvailabilitySummary(Subject user, int resourceId) {
+      if(!this.authorizationManager.canViewResource(user, resourceId)) {
+         throw new PermissionException(&quot;Cannot view resource availability. User [&quot; + user + &quot;] does not have permission to view the resource [&quot; + resourceId + &quot;].&quot;);
+      } else {
+         Query query = this.entityManager.createNamedQuery(&quot;Availability.findByResource&quot;);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         List availabilities = query.getResultList();
+         long upTime = 0L;
+         long downTime = 0L;
+         int failures = 0;
+         long lastChange = 0L;
+         AvailabilityType current = null;
+         Iterator i$ = availabilities.iterator();
+
+         while(i$.hasNext()) {
+            Availability avail = (Availability)i$.next();
+            if(avail.getAvailabilityType() == AvailabilityType.UP) {
+               upTime += (avail.getEndTime() != null?avail.getEndTime().getTime():System.currentTimeMillis()) - avail.getStartTime().getTime();
+            } else {
+               downTime += (avail.getEndTime() != null?avail.getEndTime().getTime():System.currentTimeMillis()) - avail.getStartTime().getTime();
+               ++failures;
+            }
+
+            if(avail.getEndTime() == null) {
+               lastChange = avail.getStartTime().getTime();
+               current = avail.getAvailabilityType();
+            }
+         }
+
+         return new ResourceAvailabilitySummary(upTime, downTime, failures, lastChange, current);
+      }
+   }
+
+   public List findResourcesByAgent(Subject user, int agentId, PageControl unlimitedInstance) {
+      String reportingQueryString = &quot;    SELECT res.id, res.uuid, res.name, res.resourceKey,            parent.id, parent.name,            currentAvail.availabilityType,            type.id, type.name, type.plugin, type.category,            subCategory.id, subCategory.name,            parentSubCategory.id, parentSubCategory.name       FROM Resource res       JOIN res.currentAvailability currentAvail       JOIN res.resourceType type  LEFT JOIN type.subCategory subCategory  LEFT JOIN subCategory.parentSubCategory parentSubCategory  LEFT JOIN res.parentResource parent      WHERE res.inventoryStatus = :inventoryStatus        AND res.agent.id = :agentId&quot;;
+      Query reportingQuery = this.entityManager.createQuery(reportingQueryString);
+      reportingQuery.setParameter(&quot;agentId&quot;, Integer.valueOf(agentId));
+      reportingQuery.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      List reportingQueryResults = reportingQuery.getResultList();
+      List resources = this.getFlyWeightObjectGraphFromReportingQueryResults(reportingQueryResults);
+      if(!this.authorizationManager.isInventoryManager(user)) {
+         String authorizationQueryString = &quot;SELECT res.id   FROM Resource res  WHERE res.inventoryStatus = :inventoryStatus    AND res.agent.id = :agentId    AND res.id IN ( SELECT rr.id                      FROM Resource rr                      JOIN rr.implicitGroups g                      JOIN g.roles r                      JOIN r.subjects s                     WHERE s = :subject)&quot;;
+         Query authorizationQuery = this.entityManager.createQuery(authorizationQueryString);
+         authorizationQuery.setParameter(&quot;agentId&quot;, Integer.valueOf(agentId));
+         authorizationQuery.setParameter(&quot;subject&quot;, user);
+         authorizationQuery.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+         List visibleResources = authorizationQuery.getResultList();
+         HashSet visibleIdSet = new HashSet(visibleResources);
+         ListIterator iter = resources.listIterator();
+
+         while(iter.hasNext()) {
+            Resource res = (Resource)iter.next();
+            if(!visibleIdSet.contains(Integer.valueOf(res.getId()))) {
+               LockedResource replacement = new LockedResource(res);
+               if(res.getParentResource() != null) {
+                  Resource parent = res.getParentResource();
+                  parent.removeChildResource(res);
+                  parent.addChildResource(replacement);
+               }
+
+               iter.set(replacement);
+            }
+         }
+      }
+
+      return resources;
+   }
+
+   private Object getFlyWeight(int id, String name, Map cache, Class clazz) {
+      if(cache.containsKey(Integer.valueOf(id))) {
+         return cache.get(Integer.valueOf(id));
+      } else {
+         try {
+            Constructor t = clazz.getConstructor(new Class[0]);
+            Object flyWeight = t.newInstance(new Object[0]);
+            Method setIdMethod = clazz.getMethod(&quot;setId&quot;, new Class[]{Integer.TYPE});
+            setIdMethod.invoke(flyWeight, new Object[]{Integer.valueOf(id)});
+            Method setNameMethod = clazz.getMethod(&quot;setName&quot;, new Class[]{String.class});
+            setNameMethod.invoke(flyWeight, new Object[]{name});
+            cache.put(Integer.valueOf(id), flyWeight);
+            return flyWeight;
+         } catch (Throwable var9) {
+            this.log.equals(var9);
+            throw new IllegalArgumentException(&quot;Class &quot; + clazz.getSimpleName() + &quot; needs a no-arg constructor, as well as setId(int) and setName(String) methods&quot;);
+         }
+      }
+   }
+
+   private List getFlyWeightObjectGraphFromReportingQueryResults(List reportQueryResults) {
+      ArrayList resources = new ArrayList();
+      HashMap flyWeightResourceCache = new HashMap();
+      HashMap flyWeightTypeCache = new HashMap();
+      HashMap flyWeightSubCategoryCache = new HashMap();
+
+      Resource flyWeightResource;
+      for(Iterator i$ = reportQueryResults.iterator(); i$.hasNext(); resources.add(flyWeightResource)) {
+         Object[] prefetched = (Object[])i$.next();
+         byte i = 0;
+         int var29 = i + 1;
+         Integer resourceId = (Integer)prefetched[i];
+         String resourceUuid = (String)prefetched[var29++];
+         String resourceName = (String)prefetched[var29++];
+         String resourceKey = (String)prefetched[var29++];
+         Integer parentId = (Integer)prefetched[var29++];
+         String parentName = (String)prefetched[var29++];
+         AvailabilityType availType = (AvailabilityType)prefetched[var29++];
+         Integer typeId = (Integer)prefetched[var29++];
+         String typeName = (String)prefetched[var29++];
+         String typePlugin = (String)prefetched[var29++];
+         ResourceCategory typeCategory = (ResourceCategory)prefetched[var29++];
+         Integer subCategoryId = (Integer)prefetched[var29++];
+         String subCategoryName = (String)prefetched[var29++];
+         Integer parentSubCategoryId = (Integer)prefetched[var29++];
+         String parentSubCategoryName = (String)prefetched[var29++];
+         flyWeightResource = (Resource)this.getFlyWeight(resourceId.intValue(), resourceName, flyWeightResourceCache, Resource.class);
+         flyWeightResource.setUuid(resourceUuid);
+         flyWeightResource.setResourceKey(resourceKey);
+         if(parentId != null) {
+            Resource currentAvail = (Resource)this.getFlyWeight(parentId.intValue(), parentName, flyWeightResourceCache, Resource.class);
+            flyWeightResource.setParentResource(currentAvail);
+            currentAvail.addChildResource(flyWeightResource);
+         }
+
+         ResourceAvailability var31 = new ResourceAvailability(flyWeightResource, availType);
+         flyWeightResource.setCurrentAvailability(var31);
+         ResourceType flyWeightType = (ResourceType)this.getFlyWeight(typeId.intValue(), typeName, flyWeightTypeCache, ResourceType.class);
+         flyWeightType.setPlugin(typePlugin);
+         flyWeightType.setCategory(typeCategory);
+         flyWeightResource.setResourceType(flyWeightType);
+         if(subCategoryId != null) {
+            ResourceSubCategory flyWeightSubCategory = (ResourceSubCategory)this.getFlyWeight(subCategoryId.intValue(), subCategoryName, flyWeightSubCategoryCache, ResourceSubCategory.class);
+            flyWeightType.setSubCategory(flyWeightSubCategory);
+            if(parentSubCategoryId != null) {
+               ResourceSubCategory flyWeightParentSubCategory = (ResourceSubCategory)this.getFlyWeight(parentSubCategoryId.intValue(), parentSubCategoryName, flyWeightSubCategoryCache, ResourceSubCategory.class);
+               flyWeightSubCategory.setParentSubCategory(flyWeightParentSubCategory);
+            }
+         }
+      }
+
+      return resources;
+   }
+
+   public List findResourcesByCompatibleGroup(Subject user, int compatibleGroupId, PageControl pageControl) {
+      String reportingQueryString = &quot;    SELECT res.id, res.uuid, res.name, res.resourceKey,            parent.id, parent.name,            currentAvail.availabilityType,            type.id, type.name, type.plugin, type.category,            subCategory.id, subCategory.name,            parentSubCategory.id, parentSubCategory.name       FROM Resource res       JOIN res.implicitGroups g       JOIN res.currentAvailability currentAvail       JOIN res.resourceType type  LEFT JOIN type.subCategory subCategory  LEFT JOIN subCategory.parentSubCategory parentSubCategory  LEFT JOIN res.parentResource parent      WHERE res.inventoryStatus = :inventoryStatus        AND g.id = :groupId&quot;;
+      Query reportingQuery = this.entityManager.createQuery(reportingQueryString);
+      reportingQuery.setParameter(&quot;groupId&quot;, Integer.valueOf(compatibleGroupId));
+      reportingQuery.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      List reportingQueryResults = reportingQuery.getResultList();
+      List resources = this.getFlyWeightObjectGraphFromReportingQueryResults(reportingQueryResults);
+      return resources;
+   }
+
+   private void getResourceStatuses(int parentResourceId, boolean descendents, Map statuses) {
+      Query query = this.entityManager.createNamedQuery(&quot;Resource.getStatusesByParent&quot;);
+      query.setParameter(&quot;parentResourceId&quot;, Integer.valueOf(parentResourceId));
+      Iterator i$ = query.getResultList().iterator();
+
+      while(i$.hasNext()) {
+         Object[] is = (Object[])i$.next();
+         statuses.put((Integer)is[0], (InventoryStatus)is[1]);
+         if(descendents) {
+            this.getResourceStatuses(((Integer)is[0]).intValue(), descendents, statuses);
+         }
+      }
+
+   }
+
+   private void prefetchResource(Resource resource, boolean recursive) {
+      if(resource != null) {
+         resource.getId();
+         resource.getPluginConfiguration().getNotes();
+         this.prefetchResource(resource.getParentResource(), false);
+         if(recursive) {
+            Iterator i$ = resource.getChildResources().iterator();
+
+            while(i$.hasNext()) {
+               Resource child = (Resource)i$.next();
+               this.prefetchResource(child, recursive);
+            }
+         }
+
+      }
+   }
+
+   public Resource getResource(Subject subject, int resourceId) {
+      return this.getResourceById(subject, resourceId);
+   }
+
+   public List findResourceLineage(Subject subject, int resourceId) {
+      List result = null;
+      result = this.getResourceLineage(resourceId);
+      Iterator i$ = result.iterator();
+
+      Resource resource;
+      do {
+         if(!i$.hasNext()) {
+            return result;
+         }
+
+         resource = (Resource)i$.next();
+      } while(this.authorizationManager.canViewResource(subject, resource.getId()));
+
+      throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view resource [&quot; + resource.getId() + &quot;]&quot;);
+   }
+
+   public void uninventoryResources(Subject subject, int[] resourceIds) {
+      this.deleteResources(subject, resourceIds);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public List findResourceInstallCounts(Subject subject, boolean groupByVersions) {
+      Query query = null;
+      if(!groupByVersions) {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findResourceReport&quot;);
+      } else {
+         query = this.entityManager.createNamedQuery(&quot;Resource.findResourceVersionReport&quot;);
+      }
+
+      List results = query.getResultList();
+      return results;
+   }
+
+   public PageList findResourcesByCriteria(Subject subject, ResourceCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      if(!this.authorizationManager.isInventoryManager(subject)) {
+         if(criteria.isInventoryManagerRequired()) {
+            throw new PermissionException(&quot;Subject [&quot; + subject.getName() + &quot;] requires InventoryManager permission for requested query criteria.&quot;);
+         }
+
+         generator.setAuthorizationResourceFragment(AuthorizationTokenType.RESOURCE, (String)null, subject.getId());
+      }
+
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, criteria.getPageControl());
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MeasurementDataManagerUtility.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/measurement/util/MeasurementDataManagerUtility.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">1</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.measurement.util;
+
+import java.lang.reflect.Array;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Properties;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.domain.measurement.MeasurementDataNumeric;
+import org.rhq.core.domain.measurement.MeasurementDataPK;
+import org.rhq.core.domain.measurement.composite.MeasurementDataNumericHighLowComposite;
+import org.rhq.core.util.jdbc.JDBCUtil;
+import org.rhq.enterprise.server.measurement.MeasurementAggregate;
+import org.rhq.enterprise.server.measurement.MeasurementNotFoundException;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+public class MeasurementDataManagerUtility {
+   private static final Log LOG = LogFactory.getLog(MeasurementDataManagerUtility.class);
+   public static final int STORED_DAYS = 7;
+   public static final int TABLES_PER_DAY = 2;
+   public static final int BUFFER_TABLES = 1;
+   public static final int LIVE_TABLES = 14;
+   public static final int TABLE_COUNT = 15;
+   private static final String TABLE_PREFIX = &quot;RHQ_MEAS_DATA_NUM_R&quot;;
+   static final String TABLE_DATA_1H = &quot;RHQ_MEASUREMENT_DATA_NUM_1H&quot;;
+   static final String TABLE_DATA_6H = &quot;RHQ_MEASUREMENT_DATA_NUM_6H&quot;;
+   static final String TABLE_DATA_1D = &quot;RHQ_MEASUREMENT_DATA_NUM_1D&quot;;
+   private static final int MAX_IN_CLAUSE_PARAMS = 1000;
+   private static NumberFormat nf = new DecimalFormat(&quot;00&quot;);
+   private static final long MILLISECONDS_PER_DAY = 86400000L;
+   public static final long MILLESECONDS_PER_TABLE = 43200000L;
+   public static final long RAW_PURGE = 604800000L;
+   private Connection connection;
+   private DataSource datasource;
+   private static long purge1h;
+   private static long purge6h;
+   private static long purge1d;
+   private static long purgeRt;
+   private static long purgeAlert;
+
+   public static MeasurementDataManagerUtility getInstance(DataSource dataSource) {
+      MeasurementDataManagerUtility util = new MeasurementDataManagerUtility();
+      util.datasource = dataSource;
+      return util;
+   }
+
+   public static MeasurementDataManagerUtility getInstance(Connection connection) {
+      MeasurementDataManagerUtility util = new MeasurementDataManagerUtility();
+      util.connection = connection;
+      return util;
+   }
+
+   public static String getTable(long time) {
+      return &quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((long)getTableIndex(time));
+   }
+
+   public static String[] getAllRawTables() {
+      String[] tables = new String[15];
+
+      for(int i = 0; i &lt; 15; ++i) {
+         tables[i] = &quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((long)i);
+      }
+
+      return tables;
+   }
+
+   public static String[] getAllRawTables(int startIndex) {
+      String[] tables = new String[15];
+
+      for(int i = 0; i &lt; 15; ++i) {
+         tables[i] = &quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((long)((i + startIndex) % 15));
+      }
+
+      return tables;
+   }
+
+   public static String[] getTables(long beginTime, long endTime) {
+      ArrayList tables = new ArrayList();
+      long now = System.currentTimeMillis();
+      if(now - 604800000L &gt;= beginTime) {
+         return now - purge1h &lt; beginTime?new String[]{&quot;RHQ_MEASUREMENT_DATA_NUM_1H&quot;}:(now - purge6h &lt; beginTime?new String[]{&quot;RHQ_MEASUREMENT_DATA_NUM_6H&quot;}:new String[]{&quot;RHQ_MEASUREMENT_DATA_NUM_1D&quot;});
+      } else {
+         int startIndex = getTableIndex(beginTime);
+         int endIndex = getTableIndex(endTime);
+         int tableCount = (endIndex + 15 - startIndex) % 15 + 1;
+         if(endTime - beginTime &gt; 604800000L) {
+            throw new RuntimeException(&quot;Time span greater than raw data storage&quot;);
+         } else {
+            for(int i = 0; i &lt; tableCount; ++i) {
+               tables.add(&quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((long)((startIndex + i) % 15)));
+            }
+
+            return (String[])tables.toArray(new String[tables.size()]);
+         }
+      }
+   }
+
+   public static String getDeadTable(long time) {
+      long tableIndex = (long)getTableIndex(time);
+      return &quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((tableIndex + 1L) % 15L);
+   }
+
+   public static String getCurrentRawTable() {
+      return getTable(System.currentTimeMillis());
+   }
+
+   public static String getNextRotationTime() {
+      long now = System.currentTimeMillis();
+      long day = now / 86400000L;
+      long timeOfDay = now - day * 86400000L;
+      long remaining = 43200000L - timeOfDay;
+      long nextRotation = now + remaining;
+      if(nextRotation &lt; now) {
+         nextRotation += 43200000L;
+      }
+
+      return DateFormat.getDateTimeInstance(1, 0).format(new Date(nextRotation));
+   }
+
+   private static int getTableIndex(long time) {
+      long day = time / 86400000L;
+      long timeOfDay = time - day * 86400000L;
+      long table = day * 2L + timeOfDay / 43200000L;
+      long tableIndex = table % 15L;
+      return (int)tableIndex;
+   }
+
+   public static int getTableNameIndex(String tableName) {
+      String indexString = tableName.substring(&quot;RHQ_MEAS_DATA_NUM_R&quot;.length());
+
+      int result;
+      try {
+         result = Integer.valueOf(indexString).intValue();
+      } catch (NumberFormatException var4) {
+         LOG.error(&quot;Invalid raw table name: &quot; + tableName + &quot;, returning table index 0.&quot;);
+         result = 0;
+      }
+
+      return result;
+   }
+
+   private static void loadPurgeDefaults() {
+      LOG.debug(&quot;Loading default purge intervals&quot;);
+
+      try {
+         Properties e = LookupUtil.getSystemManager().getSystemConfiguration();
+         purge1h = Long.parseLong(e.getProperty(&quot;CAM_DATA_PURGE_1H&quot;));
+         purge6h = Long.parseLong(e.getProperty(&quot;CAM_DATA_PURGE_6H&quot;));
+         purge1d = Long.parseLong(e.getProperty(&quot;CAM_DATA_PURGE_1D&quot;));
+         purgeRt = Long.parseLong(e.getProperty(&quot;RT_DATA_PURGE&quot;));
+         purgeAlert = Long.parseLong(e.getProperty(&quot;ALERT_PURGE&quot;));
+      } catch (Exception var1) {
+         ;
+      }
+
+   }
+
+   public List getMeasurementDataForResource(long beginTime, long endTime, int resourceId, int[] measurementDefinitionIds) throws MeasurementNotFoundException {
+      String otherTable = &quot;, RHQ_MEASUREMENT_SCHED s &quot;;
+      String conditions = &quot;  AND d.schedule_id = s.id  AND s.resource_id = ? \n  AND s.definition = ? \n&quot;;
+      PreparedStatement ps = null;
+      ResultSet rs = null;
+      Connection myConnection = null;
+      ArrayList data = new ArrayList();
+
+      try {
+         myConnection = this.getConnection();
+         int[] e = measurementDefinitionIds;
+         int len$ = measurementDefinitionIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            int measurementDefinitionId = e[i$];
+            ps = null;
+            rs = null;
+
+            try {
+               ps = this.getFullQuery(myConnection, beginTime, endTime, 60, otherTable, conditions, new Object[]{Integer.valueOf(resourceId), Integer.valueOf(measurementDefinitionId)});
+               rs = ps.executeQuery();
+               ArrayList compositeList = new ArrayList();
+
+               while(rs.next()) {
+                  long timestamp = rs.getLong(1);
+                  double value = rs.getDouble(2);
+                  if(rs.wasNull()) {
+                     value = Double.NaN;
+                  }
+
+                  double peak = rs.getDouble(3);
+                  if(rs.wasNull()) {
+                     peak = Double.NaN;
+                  }
+
+                  double low = rs.getDouble(4);
+                  if(rs.wasNull()) {
+                     low = Double.NaN;
+                  }
+
+                  MeasurementDataNumericHighLowComposite next = new MeasurementDataNumericHighLowComposite(timestamp, value, peak, low);
+                  compositeList.add(next);
+               }
+
+               data.add(compositeList);
+            } finally {
+               JDBCUtil.safeClose(ps, rs);
+            }
+         }
+      } catch (SQLException var38) {
+         throw new MeasurementNotFoundException(var38);
+      } finally {
+         JDBCUtil.safeClose(myConnection);
+         this.connection = null;
+      }
+
+      return data;
+   }
+
+   public List getMeasurementDataForSiblingResources(long beginTime, long endTime, int[] resourceIds, int measurementDefinitionId) throws MeasurementNotFoundException {
+      String otherTable = &quot;, RHQ_MEASUREMENT_SCHED s &quot;;
+      String conditions = &quot;  AND d.schedule_id = s.id  AND s.resource_id = ? \n  AND s.definition = ? \n&quot;;
+      PreparedStatement ps = null;
+      ResultSet rs = null;
+      Connection myConnection = null;
+      ArrayList data = new ArrayList();
+      int[] arr$ = resourceIds;
+      int len$ = resourceIds.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         int resourceId = arr$[i$];
+
+         try {
+            myConnection = this.getConnection();
+            ps = this.getFullQuery(myConnection, beginTime, endTime, 60, otherTable, conditions, new Object[]{Integer.valueOf(resourceId), Integer.valueOf(measurementDefinitionId)});
+            rs = ps.executeQuery();
+            ArrayList e = new ArrayList();
+
+            while(rs.next()) {
+               long timestamp = rs.getLong(1);
+               double value = rs.getDouble(2);
+               if(rs.wasNull()) {
+                  value = Double.NaN;
+               }
+
+               double peak = rs.getDouble(3);
+               if(rs.wasNull()) {
+                  peak = Double.NaN;
+               }
+
+               double low = rs.getDouble(4);
+               if(rs.wasNull()) {
+                  low = Double.NaN;
+               }
+
+               MeasurementDataNumericHighLowComposite next = new MeasurementDataNumericHighLowComposite(timestamp, value, peak, low);
+               e.add(next);
+            }
+
+            data.add(e);
+         } catch (SQLException var31) {
+            throw new MeasurementNotFoundException(var31);
+         } finally {
+            JDBCUtil.safeClose(myConnection, ps, rs);
+            this.connection = null;
+         }
+      }
+
+      return data;
+   }
+
+   public List getMeasurementDataAggregatesForSiblingResources(long beginTime, long endTime, int[] resourceIds, int measurementDefinitionId) throws MeasurementNotFoundException {
+      String otherTable = &quot;, RHQ_MEASUREMENT_SCHED s &quot;;
+      String conditions = &quot;  AND d.schedule_id = s.id  AND s.resource_id IN ( &quot; + JDBCUtil.generateInBinds(resourceIds.length) + &quot;) \n&quot; + &quot;  AND s.definition = ? \n&quot;;
+      PreparedStatement ps = null;
+      ResultSet rs = null;
+      Connection myConnection = null;
+      ArrayList data = new ArrayList();
+
+      try {
+         myConnection = this.getConnection();
+         ps = this.getFullQuery(myConnection, beginTime, endTime, 60, otherTable, conditions, new Object[]{resourceIds, Integer.valueOf(measurementDefinitionId)});
+         rs = ps.executeQuery();
+         ArrayList e = new ArrayList();
+
+         while(rs.next()) {
+            long timestamp = rs.getLong(1);
+            double value = rs.getDouble(2);
+            if(rs.wasNull()) {
+               value = Double.NaN;
+            }
+
+            double peak = rs.getDouble(3);
+            if(rs.wasNull()) {
+               peak = Double.NaN;
+            }
+
+            double low = rs.getDouble(4);
+            if(rs.wasNull()) {
+               low = Double.NaN;
+            }
+
+            MeasurementDataNumericHighLowComposite next = new MeasurementDataNumericHighLowComposite(timestamp, value, peak, low);
+            e.add(next);
+         }
+
+         data.add(e);
+         List timestamp1 = Collections.singletonList(e);
+         return timestamp1;
+      } catch (SQLException var27) {
+         throw new MeasurementNotFoundException(var27);
+      } finally {
+         JDBCUtil.safeClose(myConnection, ps, rs);
+         this.connection = null;
+      }
+   }
+
+   public MeasurementAggregate getAggregateByScheduleId(long beginTime, long endTime, long scheduleId) throws MeasurementNotFoundException {
+      Connection myConnection = null;
+      PreparedStatement ps = null;
+      ResultSet rs = null;
+
+      MeasurementAggregate var12;
+      try {
+         myConnection = this.getConnection();
+         String e = &quot;         AND d.schedule_id = ?\n&quot;;
+         ps = this.getFullQuery(myConnection, beginTime, endTime, 1, &quot;&quot;, e, new Object[]{Long.valueOf(scheduleId)});
+         rs = ps.executeQuery();
+         if(!rs.next()) {
+            throw new MeasurementNotFoundException(&quot;Data not found&quot;);
+         }
+
+         MeasurementAggregate measurementAggregate = this.fillAggregateFromResultSet(rs);
+         var12 = measurementAggregate;
+      } catch (SQLException var17) {
+         throw new MeasurementNotFoundException(var17);
+      } finally {
+         JDBCUtil.safeClose(myConnection, ps, rs);
+         this.connection = null;
+      }
+
+      return var12;
+   }
+
+   public MeasurementAggregate getAggregateByGroupAndDefinition(long beginTime, long endTime, int groupId, int definitionId) throws MeasurementNotFoundException {
+      Connection myConnection = null;
+      PreparedStatement ps = null;
+      ResultSet rs = null;
+
+      MeasurementAggregate var12;
+      try {
+         myConnection = this.getConnection();
+         String e = &quot; AND d.schedule_id IN ( SELECT m_sched.id \n                                       FROM rhq_measurement_sched m_sched, \n                                            rhq_resource_group_res_imp_map imp_map \n                                      WHERE m_sched.resource_id = imp_map.resource_id \n                                        AND imp_map.resource_group_id = ? \n                                        AND m_sched.definition = ? ) \n&quot;;
+         ps = this.getFullQuery(myConnection, beginTime, endTime, 1, &quot;&quot;, e, new Object[]{Integer.valueOf(groupId), Integer.valueOf(definitionId)});
+         rs = ps.executeQuery();
+         if(!rs.next()) {
+            throw new MeasurementNotFoundException(&quot;Data not found&quot;);
+         }
+
+         MeasurementAggregate measurementAggregate = this.fillAggregateFromResultSet(rs);
+         var12 = measurementAggregate;
+      } catch (SQLException var17) {
+         throw new MeasurementNotFoundException(var17);
+      } finally {
+         JDBCUtil.safeClose(myConnection, ps, rs);
+         this.connection = null;
+      }
+
+      return var12;
+   }
+
+   private MeasurementAggregate fillAggregateFromResultSet(ResultSet rs) throws SQLException {
+      Double min = Double.valueOf(rs.getDouble(4));
+      if(rs.wasNull()) {
+         min = Double.valueOf(Double.NaN);
+      }
+
+      Double avg = Double.valueOf(rs.getDouble(2));
+      if(rs.wasNull()) {
+         avg = Double.valueOf(Double.NaN);
+      }
+
+      Double max = Double.valueOf(rs.getDouble(3));
+      if(rs.wasNull()) {
+         max = Double.valueOf(Double.NaN);
+      }
+
+      MeasurementAggregate measurementAggregate = new MeasurementAggregate(min, avg, max);
+      return measurementAggregate;
+   }
+
+   public MeasurementAggregate getAggregateByScheduleIds(long beginTime, long endTime, int[] scheduleIds) throws MeasurementNotFoundException {
+      Connection myConnection = null;
+      PreparedStatement ps = null;
+      ResultSet rs = null;
+      String condition = null;
+
+      MeasurementAggregate var11;
+      try {
+         condition = &quot;         AND d.schedule_id IN ( &quot; + JDBCUtil.generateInBinds(scheduleIds.length) + &quot;)\n&quot;;
+         myConnection = this.getConnection();
+         ps = this.getFullQuery(myConnection, beginTime, endTime, 1, &quot;&quot;, condition, new Object[]{scheduleIds});
+         rs = ps.executeQuery();
+         if(!rs.next()) {
+            throw new MeasurementNotFoundException(&quot;Data not found&quot;);
+         }
+
+         MeasurementAggregate e = this.fillAggregateFromResultSet(rs);
+         var11 = e;
+      } catch (SQLException var16) {
+         LOG.warn(&quot;Error condition :&quot; + condition);
+         throw new MeasurementNotFoundException(var16);
+      } finally {
+         JDBCUtil.safeClose(myConnection, ps, rs);
+         this.connection = null;
+      }
+
+      return var11;
+   }
+
+   public MeasurementDataNumeric getLatestValueForSchedule(int scheduleId) {
+      long now = System.currentTimeMillis();
+      int index = getTableIndex(now);
+
+      do {
+         Connection myConnection = null;
+         PreparedStatement ps = null;
+         ResultSet rs = null;
+
+         try {
+            myConnection = this.getConnection();
+            String e = &quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((long)index);
+            String query = &quot;SELECT d.time_stamp, d.value \nFROM &quot; + e + &quot; d \n&quot; + &quot;WHERE d.schedule_id = ? \n&quot; + &quot;AND d.time_stamp = ( SELECT MAX(dd.time_stamp) \n&quot; + &quot;FROM &quot; + e + &quot; dd \n&quot; + &quot;WHERE dd.schedule_id = ? )&quot;;
+            ps = myConnection.prepareStatement(query);
+            ps.setInt(1, scheduleId);
+            ps.setInt(2, scheduleId);
+            rs = ps.executeQuery();
+            if(rs.next()) {
+               MeasurementDataNumeric var10 = new MeasurementDataNumeric(new MeasurementDataPK(rs.getLong(1), scheduleId), Double.valueOf(rs.getDouble(2)));
+               return var10;
+            }
+         } catch (SQLException var15) {
+            throw new MeasurementNotFoundException(var15);
+         } finally {
+            JDBCUtil.safeClose(myConnection, ps, rs);
+            this.connection = null;
+         }
+
+         --index;
+         if(index &lt; 0) {
+            index = 14;
+         }
+      } while(!(&quot;RHQ_MEAS_DATA_NUM_R&quot; + nf.format((long)index)).equals(getDeadTable(now)));
+
+      return null;
+   }
+
+   private PreparedStatement getFullQuery(Connection connection, long beginTime, long endTime, int numberOfDataPoints, String otherTables, String conditions, Object... bindParameters) throws SQLException {
+      long interval = (endTime - beginTime) / (long)numberOfDataPoints;
+      String valuesClause;
+      if(isRawTimePeriod(beginTime)) {
+         valuesClause = &quot;avg(value), max(value) as peak, min(value) as low&quot;;
+      } else {
+         valuesClause = &quot;avg(value), max(maxvalue) as peak, min(minvalue) as low&quot;;
+      }
+
+      StringBuilder unions = new StringBuilder();
+      String[] tables = getTables(beginTime, endTime);
+      String[] sql = tables;
+      int ps = tables.length;
+
+      for(int fullSql = 0; fullSql &lt; ps; ++fullSql) {
+         String i = sql[fullSql];
+         if(unions.length() != 0) {
+            unions.append(&quot;   UNION ALL \n &quot;);
+         }
+
+         unions.append(getTableString(i, valuesClause, otherTables, conditions));
+      }
+
+      String var29 = &quot;SELECT timestamp, max(av), max(peak), max(low) FROM ( \n   (SELECT timestamp, avg(value) as av, max(value) as peak, min(value) as low FROM (\n&quot; + unions.toString() + &quot;   ) data GROUP BY timestamp) \n&quot; + &quot;   UNION ALL (select ? + (? * i) as timestamp, null as av, null as peak, null as low from RHQ_numbers where i &lt; ?) ) alldata \n&quot; + &quot;GROUP BY timestamp ORDER BY timestamp&quot;;
+      PreparedStatement var30 = connection.prepareStatement(var29);
+      StringBuilder var31 = null;
+      if(LOG.isDebugEnabled()) {
+         var31 = new StringBuilder(var29);
+      }
+
+      int var32 = 1;
+      String[] arr$ = tables;
+      int len$ = tables.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         String var10000 = arr$[i$];
+         var30.setLong(var32++, beginTime);
+         var30.setLong(var32++, interval);
+         var30.setInt(var32++, numberOfDataPoints);
+         var30.setLong(var32++, interval);
+         if(LOG.isDebugEnabled()) {
+            var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(beginTime));
+            var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(interval));
+            var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(numberOfDataPoints));
+            var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(interval));
+         }
+
+         Object[] arr$1 = bindParameters;
+         int len$1 = bindParameters.length;
+
+         for(int i$1 = 0; i$1 &lt; len$1; ++i$1) {
+            Object param = arr$1[i$1];
+            if(param.getClass().isArray()) {
+               int length = Array.getLength(param);
+               if(length &gt; 1000) {
+                  throw new IllegalArgumentException(&quot;Number of resource id\'s must be less than or equal to 1000.&quot;);
+               }
+
+               for(int x = 0; x &lt; length; ++x) {
+                  var30.setObject(var32++, Array.get(param, x));
+                  if(LOG.isDebugEnabled()) {
+                     var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(param));
+                  }
+               }
+            } else {
+               var30.setObject(var32++, param);
+               if(LOG.isDebugEnabled()) {
+                  var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(param));
+               }
+            }
+         }
+      }
+
+      var30.setLong(var32++, beginTime);
+      var30.setLong(var32++, interval);
+      var30.setInt(var32++, numberOfDataPoints);
+      if(LOG.isDebugEnabled()) {
+         var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(beginTime));
+         var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(interval));
+         var31.replace(var31.indexOf(&quot;?&quot;), var31.indexOf(&quot;?&quot;) + 1, String.valueOf(numberOfDataPoints));
+         LOG.debug(var31);
+      }
+
+      return var30;
+   }
+
+   public static String getTableString(String table, String valuesClause, String otherTables, String conditions) {
+      return &quot;      (SELECT beginTS as timestamp, value \n      FROM (select ? + (? * i) as beginTS, i from RHQ_numbers where i &lt; ?) n,\n         &quot; + table + &quot; d &quot; + otherTables + &quot; \n&quot; + &quot;      WHERE time_stamp BETWEEN beginTS AND (beginTS + ?)\n&quot; + &quot;      &quot; + conditions + &quot;      ) \n&quot;;
+   }
+
+   public long getPurge1h() {
+      return purge1h;
+   }
+
+   public long getPurge6h() {
+      return purge6h;
+   }
+
+   public long getPurge1d() {
+      return purge1d;
+   }
+
+   public long getPurgeRt() {
+      return purgeRt;
+   }
+
+   public long getPurgeAlert() {
+      return purgeAlert;
+   }
+
+   public static void main(String[] args) throws Exception {
+      System.out.println(getNextRotationTime());
+      Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;);
+      String db = &quot;jdbc:oracle:thin:@192.168.1.5:1521:xe&quot;;
+      System.out.println(&quot;=============getAggregateByScheduleId=================================================&quot;);
+      Connection c = DriverManager.getConnection(db, &quot;jon&quot;, &quot;jon&quot;);
+      long now = System.currentTimeMillis();
+      long start = now - 79200000L;
+      MeasurementAggregate ag = getInstance(c).getAggregateByScheduleId(start, now, 1L);
+      System.out.println(ag);
+      System.out.println(&quot;=============getAggregateByScheduleIds=================================================&quot;);
+      c = DriverManager.getConnection(db, &quot;jon&quot;, &quot;jon&quot;);
+      ag = getInstance(c).getAggregateByScheduleIds(start, now, new int[]{1, 2, 3});
+      System.out.println(ag);
+      System.out.println(&quot;=============getMeasurementDataForResource=================================================&quot;);
+      c = DriverManager.getConnection(db, &quot;jon&quot;, &quot;jon&quot;);
+      List data = getInstance(c).getMeasurementDataForResource(start, now, 50, new int[]{166});
+      System.out.println(data);
+      System.out.println(&quot;===========getMeasurementDataForSiblingResources===================================================&quot;);
+      c = DriverManager.getConnection(db, &quot;jon&quot;, &quot;jon&quot;);
+      data = getInstance(c).getMeasurementDataForSiblingResources(start, now, new int[]{50}, 166);
+      System.out.println(data);
+      System.out.println(&quot;=============getMeasurementDataAggregatesForSiblingResources=================================================&quot;);
+      c = DriverManager.getConnection(db, &quot;jon&quot;, &quot;jon&quot;);
+      data = getInstance(c).getMeasurementDataAggregatesForSiblingResources(start, now, new int[]{50}, 166);
+      System.out.println(data);
+      String[] ts = getTables(now - 28800000L, now);
+      System.out.println(Arrays.toString(ts));
+      System.out.println(&quot;NOW: &quot; + getTable(now));
+   }
+
+   public static long getRawTimePeriodStart(long end) {
+      long now = System.currentTimeMillis();
+      return end - 604800000L;
+   }
+
+   public static boolean isRawTimePeriod(long beginTime) {
+      long now = System.currentTimeMillis();
+      return now - 604800000L &lt; beginTime;
+   }
+
+   public static boolean isRawTable(String tableName) {
+      return null != tableName &amp;&amp; tableName.startsWith(&quot;RHQ_MEAS_DATA_NUM_R&quot;);
+   }
+
+   private Connection getConnection() throws SQLException {
+      return this.connection != null?this.connection:this.datasource.getConnection();
+   }
+
+   static {
+      loadPurgeDefaults();
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "579,580" });
+
+            $("<div id='579-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(579)');
+            $("<div id='580-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(580)');
+
+
+$("<a name='12216320' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#579-inlines');
+
+$("<a name='12457984' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Hard-coded IP address</strong><a title='View Rule: DiscoverHardcodedIPAddressRuleProvider' href='windup_ruleproviders.html#DiscoverHardcodedIPAddressRuleProvider'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><strong>Hard-coded IP: 192.168.1.5<\/strong><\/p><p>When migrating environments, hard-coded IP addresses may need to be modified or eliminated.<\/p></div></div></div>").appendTo('#580-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

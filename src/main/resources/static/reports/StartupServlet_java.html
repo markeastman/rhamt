@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for StartupServlet.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/classes/org/rhq/enterprise/gui/startup/StartupServlet.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">1</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.gui.startup;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
+import javax.management.Attribute;
+import javax.management.MBeanServer;
+import javax.management.MBeanServerInvocationHandler;
+import javax.management.NotificationFilter;
+import javax.management.ObjectName;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import org.jboss.mx.util.MBeanServerLocator;
+import org.quartz.SchedulerException;
+import org.rhq.core.domain.cloud.Server;
+import org.rhq.core.domain.cloud.Server.OperationMode;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.util.ObjectNameFactory;
+import org.rhq.enterprise.communications.util.SecurityUtil;
+import org.rhq.enterprise.gui.startup.ShutdownListener;
+import org.rhq.enterprise.server.alert.engine.internal.AlertConditionCacheCoordinator;
+import org.rhq.enterprise.server.auth.SessionManager;
+import org.rhq.enterprise.server.auth.prefs.SubjectPreferencesCache;
+import org.rhq.enterprise.server.cloud.instance.ServerManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.core.CustomJaasDeploymentServiceMBean;
+import org.rhq.enterprise.server.core.comm.ServerCommunicationsServiceUtil;
+import org.rhq.enterprise.server.core.plugin.ProductPluginDeployerMBean;
+import org.rhq.enterprise.server.plugin.content.ContentSourcePluginServiceManagement;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.scheduler.SchedulerLocal;
+import org.rhq.enterprise.server.scheduler.jobs.AsyncResourceDeleteJob;
+import org.rhq.enterprise.server.scheduler.jobs.CheckForSuspectedAgentsJob;
+import org.rhq.enterprise.server.scheduler.jobs.CheckForTimedOutConfigUpdatesJob;
+import org.rhq.enterprise.server.scheduler.jobs.CheckForTimedOutContentRequestsJob;
+import org.rhq.enterprise.server.scheduler.jobs.CheckForTimedOutOperationsJob;
+import org.rhq.enterprise.server.scheduler.jobs.CloudManagerJob;
+import org.rhq.enterprise.server.scheduler.jobs.DataPurgeJob;
+import org.rhq.enterprise.server.scheduler.jobs.DynaGroupAutoRecalculationJob;
+import org.rhq.enterprise.server.util.LookupUtil;
+import org.rhq.enterprise.server.util.concurrent.AlertSerializer;
+import org.rhq.enterprise.server.util.concurrent.AvailabilityReportSerializer;
+
+public class StartupServlet extends HttpServlet {
+   private static final long serialVersionUID = 1L;
+
+   public void init() throws ServletException {
+      this.log(&quot;All business tier deployments are complete - finishing the startup&quot;);
+      LookupUtil.getSystemManager().undeployInstaller();
+      AlertConditionCacheCoordinator.getInstance();
+      SessionManager.getInstance();
+      SubjectPreferencesCache.getInstance();
+      AlertSerializer.getSingleton();
+      AvailabilityReportSerializer.getSingleton();
+
+      try {
+         ResourceTypeManagerLocal t = LookupUtil.getResourceTypeManager();
+         t.reloadResourceFacetsCache();
+      } catch (Throwable var2) {
+         this.log(&quot;Could not load ResourceFacets cache&quot;, var2);
+      }
+
+      this.initializeServer();
+      this.startHibernateStatistics();
+      this.startPluginDeployer();
+      this.startServerPluginContainer();
+      this.installJaasModules();
+      this.startServerCommunicationServices();
+      this.startScheduler();
+      this.scheduleJobs();
+      this.startAgentClients();
+      this.startEmbeddedAgent();
+      this.registerShutdownListener();
+   }
+
+   private void initializeServer() {
+      this.createDefaultServerIfNecessary();
+      ServerManagerLocal serverManager = LookupUtil.getServerManager();
+      if(ServerCommunicationsServiceUtil.getService().getMaintenanceModeAtStartup().booleanValue()) {
+         this.log(&quot;Server is configured to start up in MAINTENANCE mode&quot;);
+         Server server = serverManager.getServer();
+         Integer[] serverId = new Integer[]{new Integer(server.getId())};
+         LookupUtil.getCloudManager().updateServerMode(serverId, OperationMode.MAINTENANCE);
+      }
+
+      serverManager.establishCurrentServerMode();
+   }
+
+   private void createDefaultServerIfNecessary() {
+      String identity = LookupUtil.getServerManager().getIdentity();
+      Server server = LookupUtil.getCloudManager().getServerByName(identity);
+      if(server == null) {
+         server = new Server();
+         server.setName(identity);
+         String address = &quot;localhost&quot;;
+
+         try {
+            address = InetAddress.getLocalHost().getCanonicalHostName();
+         } catch (UnknownHostException var5) {
+            address = &quot;localhost&quot;;
+         }
+
+         server.setAddress(address);
+         server.setPort(7080);
+         server.setSecurePort(7443);
+         server.setComputePower(1);
+         server.setOperationMode(OperationMode.INSTALLED);
+         LookupUtil.getServerManager().create(server);
+         this.log(&quot;Default server created: &quot; + server);
+      }
+
+   }
+
+   private void startHibernateStatistics() throws ServletException {
+      this.log(&quot;Starting hibernate statistics monitoring&quot;);
+
+      try {
+         LookupUtil.getSystemManager().enableHibernateStatistics();
+      } catch (Exception var2) {
+         throw new ServletException(&quot;Cannot start hibernate statistics monitoring&quot;, var2);
+      }
+   }
+
+   private void startPluginDeployer() throws ServletException {
+      this.log(&quot;Starting the plugin deployer&quot;);
+
+      try {
+         MBeanServer mbs = MBeanServerLocator.locateJBoss();
+         ObjectName name = ProductPluginDeployerMBean.OBJECT_NAME;
+         Class iface = ProductPluginDeployerMBean.class;
+         ProductPluginDeployerMBean e = (ProductPluginDeployerMBean)MBeanServerInvocationHandler.newProxyInstance(mbs, name, iface, false);
+         e.startDeployer();
+      } catch (Exception var5) {
+         throw new ServletException(&quot;Cannot start the plugin deployer&quot;, var5);
+      }
+   }
+
+   private void installJaasModules() throws ServletException {
+      this.log(&quot;Installing JAAS Modules&quot;);
+
+      try {
+         MBeanServer mbs = MBeanServerLocator.locateJBoss();
+         ObjectName name = CustomJaasDeploymentServiceMBean.OBJECT_NAME;
+         Class iface = CustomJaasDeploymentServiceMBean.class;
+         CustomJaasDeploymentServiceMBean e = (CustomJaasDeploymentServiceMBean)MBeanServerInvocationHandler.newProxyInstance(mbs, name, iface, false);
+         e.installJaasModules();
+      } catch (Exception var5) {
+         throw new ServletException(&quot;Cannot deploy our JAAS login modules!&quot;, var5);
+      }
+   }
+
+   private void startScheduler() throws ServletException {
+      this.log(&quot;Starting the scheduler&quot;);
+
+      try {
+         LookupUtil.getSchedulerBean().startQuartzScheduler();
+      } catch (SchedulerException var2) {
+         throw new ServletException(&quot;Cannot start the scheduler!&quot;, var2);
+      }
+   }
+
+   private void startServerCommunicationServices() throws ServletException {
+      this.log(&quot;Starting the server-agent communications services&quot;);
+
+      try {
+         ServerCommunicationsServiceUtil.getService().startCommunicationServices();
+      } catch (Exception var2) {
+         throw new ServletException(&quot;Cannot start the server-side communications services&quot;, var2);
+      }
+   }
+
+   private void scheduleJobs() throws ServletException {
+      this.log(&quot;Scheduling some jobs that need to be run&quot;);
+      SchedulerLocal scheduler = LookupUtil.getSchedulerBean();
+      LookupUtil.getServerManager().scheduleServerHeartbeat();
+      LookupUtil.getCacheConsistenyManager().scheduleServerCacheReloader();
+      LookupUtil.getSystemManager().scheduleConfigCacheReloader();
+
+      long e;
+      long name;
+      try {
+         e = 60000L;
+         name = 300000L;
+         scheduler.scheduleSimpleRepeatingJob(AsyncResourceDeleteJob.class, true, false, 60000L, 300000L);
+      } catch (Exception var14) {
+         this.log(&quot;Cannot schedule asynchronous resource deletion job: &quot; + var14.getMessage());
+      }
+
+      try {
+         e = 60000L;
+         name = 60000L;
+         scheduler.scheduleSimpleRepeatingJob(DynaGroupAutoRecalculationJob.class, true, false, 60000L, 60000L);
+      } catch (Exception var13) {
+         this.log(&quot;Cannot schedule DynaGroup auto-recalculation job: &quot; + var13.getMessage());
+      }
+
+      try {
+         e = 120000L;
+         name = 30000L;
+         scheduler.scheduleSimpleRepeatingJob(CloudManagerJob.class, true, false, 120000L, 30000L);
+      } catch (Exception var12) {
+         this.log(&quot;Cannot schedule cloud management job: &quot; + var12.getMessage());
+      }
+
+      try {
+         e = 600000L;
+         name = 60000L;
+         scheduler.scheduleSimpleRepeatingJob(CheckForSuspectedAgentsJob.class, true, false, 600000L, 60000L);
+      } catch (Exception var11) {
+         this.log(&quot;Cannot schedule suspected Agents job: &quot; + var11.getMessage());
+      }
+
+      try {
+         e = 180000L;
+         name = 600000L;
+         scheduler.scheduleSimpleRepeatingJob(CheckForTimedOutOperationsJob.class, true, false, 180000L, 600000L);
+      } catch (Exception var10) {
+         this.log(&quot;Cannot schedule check-for-timed-out-operations job: &quot; + var10.getMessage());
+      }
+
+      try {
+         e = 240000L;
+         name = 600000L;
+         scheduler.scheduleSimpleRepeatingJob(CheckForTimedOutConfigUpdatesJob.class, true, false, 240000L, 600000L);
+      } catch (Exception var9) {
+         this.log(&quot;Cannot schedule check-for-timed-out-configuration-update-requests job: &quot; + var9.getMessage());
+      }
+
+      try {
+         e = 300000L;
+         name = 900000L;
+         scheduler.scheduleSimpleRepeatingJob(CheckForTimedOutContentRequestsJob.class, true, false, 300000L, 900000L);
+      } catch (Exception var8) {
+         this.log(&quot;Cannot schedule check-for-timed-out-artifact-requests job: &quot; + var8.getMessage());
+      }
+
+      try {
+         String e1 = &quot;0 0 * * * ?&quot;;
+         scheduler.scheduleSimpleCronJob(DataPurgeJob.class, true, false, e1);
+      } catch (Exception var7) {
+         this.log(&quot;Cannot schedule data purge job: &quot; + var7.getMessage());
+      }
+
+      try {
+         MBeanServer mbs = MBeanServerLocator.locateJBoss();
+         ObjectName name1 = ObjectNameFactory.create(&quot;rhq.serverplugin:service=ContentSourcePluginService&quot;);
+         Class iface = ContentSourcePluginServiceManagement.class;
+         ContentSourcePluginServiceManagement e2 = (ContentSourcePluginServiceManagement)MBeanServerInvocationHandler.newProxyInstance(mbs, name1, iface, false);
+         e2.getPluginContainer().scheduleSyncJobs();
+      } catch (Exception var6) {
+         this.log(&quot;Cannot schedule content source sync jobs: &quot; + var6.getMessage());
+      }
+
+   }
+
+   private void startAgentClients() {
+      this.log(&quot;Starting agent clients - any persisted messages with guaranteed delivery will be sent&quot;);
+      AgentManagerLocal agentManager = LookupUtil.getAgentManager();
+      List agents = agentManager.getAllAgents();
+      if(agents != null) {
+         Iterator i$ = agents.iterator();
+
+         while(i$.hasNext()) {
+            Agent agent = (Agent)i$.next();
+            agentManager.getAgentClient(agent);
+         }
+      }
+
+   }
+
+   private void startEmbeddedAgent() throws ServletException {
+      final ObjectName agentBootstrapMBean = ObjectNameFactory.create(&quot;rhq:service=EmbeddedAgentBootstrap&quot;);
+      String agentEnabledAttribute = &quot;AgentEnabled&quot;;
+      String startAgentMethod = &quot;startAgent&quot;;
+      String configurationOverridesAttribute = &quot;ConfigurationOverrides&quot;;
+      final MBeanServer mbs = MBeanServerLocator.locateJBoss();
+
+      try {
+         String t = (String)mbs.getAttribute(agentBootstrapMBean, &quot;AgentEnabled&quot;);
+
+         try {
+            if(Boolean.valueOf(t).booleanValue()) {
+               this.log(&quot;The embedded Agent is installed and enabled - it will now be started...&quot;);
+               String t1 = &quot;rhq.agent.server.transport&quot;;
+               String AgentConfigurationConstants_SERVER_BIND_ADDRESS = &quot;rhq.agent.server.bind-address&quot;;
+               String AgentConfigurationConstants_SERVER_BIND_PORT = &quot;rhq.agent.server.bind-port&quot;;
+               Properties overrides = (Properties)mbs.getAttribute(agentBootstrapMBean, &quot;ConfigurationOverrides&quot;);
+               String serverTransport = overrides.getProperty(t1);
+               String serverAddress = overrides.getProperty(AgentConfigurationConstants_SERVER_BIND_ADDRESS);
+               String serverPort = overrides.getProperty(AgentConfigurationConstants_SERVER_BIND_PORT);
+               String agentAddress = overrides.getProperty(&quot;rhq.communications.connector.bind-address&quot;);
+               Server server = LookupUtil.getServerManager().getServer();
+               if(agentAddress == null || agentAddress.trim().equals(&quot;&quot;)) {
+                  overrides.setProperty(&quot;rhq.communications.connector.bind-address&quot;, server.getAddress());
+               }
+
+               if(serverAddress == null || serverAddress.trim().equals(&quot;&quot;)) {
+                  overrides.setProperty(AgentConfigurationConstants_SERVER_BIND_ADDRESS, server.getAddress());
+               }
+
+               if(serverPort == null || serverPort.trim().equals(&quot;&quot;)) {
+                  if(SecurityUtil.isTransportSecure(serverTransport)) {
+                     overrides.setProperty(AgentConfigurationConstants_SERVER_BIND_PORT, Integer.toString(server.getSecurePort()));
+                  } else {
+                     overrides.setProperty(AgentConfigurationConstants_SERVER_BIND_PORT, Integer.toString(server.getPort()));
+                  }
+               }
+
+               mbs.setAttribute(agentBootstrapMBean, new Attribute(&quot;ConfigurationOverrides&quot;, overrides));
+               Runnable agentStartRunnable = new Runnable() {
+                  public void run() {
+                     try {
+                        mbs.invoke(agentBootstrapMBean, &quot;startAgent&quot;, new Object[0], new String[0]);
+                     } catch (Throwable var2) {
+                        StartupServlet.this.log(&quot;Failed to start the embedded Agent - it will not be available!&quot;, var2);
+                     }
+
+                  }
+               };
+               Thread agentStartThread = new Thread(agentStartRunnable, &quot;Embedded Agent Startup&quot;);
+               agentStartThread.setDaemon(true);
+               agentStartThread.start();
+            } else {
+               this.log(&quot;The embedded Agent is not enabled, so it will not be started.&quot;);
+            }
+         } catch (Throwable var18) {
+            throw new ServletException(&quot;Failed to start the embedded Agent.&quot;, var18);
+         }
+      } catch (ServletException var19) {
+         throw var19;
+      } catch (Throwable var20) {
+         this.log(&quot;The embedded Agent is not installed, so it will not be started (&quot; + var20 + &quot;).&quot;);
+      }
+
+   }
+
+   private void startServerPluginContainer() throws ServletException {
+      this.log(&quot;Starting the server plugin container...&quot;);
+
+      try {
+         MBeanServer mbs = MBeanServerLocator.locateJBoss();
+         ObjectName name = ObjectNameFactory.create(&quot;rhq.serverplugin:service=ContentSourcePluginService&quot;);
+         Class iface = ContentSourcePluginServiceManagement.class;
+         ContentSourcePluginServiceManagement e = (ContentSourcePluginServiceManagement)MBeanServerInvocationHandler.newProxyInstance(mbs, name, iface, false);
+         e.startPluginContainer();
+      } catch (Exception var5) {
+         throw new ServletException(&quot;Cannot start the server plugin container!&quot;, var5);
+      }
+   }
+
+   private void registerShutdownListener() throws ServletException {
+      try {
+         ObjectName e = new ObjectName(&quot;jboss.system:type=Server&quot;);
+         MBeanServer jbossServer = MBeanServerLocator.locateJBoss();
+         jbossServer.addNotificationListener(e, new ShutdownListener(), (NotificationFilter)null, (Object)null);
+      } catch (Exception var3) {
+         throw new ServletException(&quot;Failed to register the Server Shutdown Listener&quot;, var3);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "355" });
+
+            $("<div id='355-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(355)');
+
+
+$("<a name='12268800' class='windup-file-location'></a><div class='inline-source-comment green tag-jmx'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>JMX MBean object name (javax.management.ObjectName)</strong><a title='View Rule: environment-dependent-calls-04000' href='windup_ruleproviders.html#environment-dependent-calls-04000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>After migration, some of the JMX beans provided by the previous server may not be present anymore. Ensure that the <code>javax.management.ObjectName<\/code> does not need to change for JBoss.<\/p></div></div></div>").appendTo('#355-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

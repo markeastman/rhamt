@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-webdav.war/WEB-INF/lib/spring-2.5.6.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Export-Package: org.aopalliance.aop;version=&quot;1.0.0&quot;,org.aopalliance.in
+ tercept;version=&quot;1.0.0&quot;,org.springframework.aop;version=&quot;2.5.6&quot;;uses:
+ =&quot;org.aopalliance.aop,org.aopalliance.intercept&quot;,org.springframework.
+ aop.aspectj;version=&quot;2.5.6&quot;;uses:=&quot;org.aopalliance.aop,org.aopallianc
+ e.intercept,org.aspectj.bridge,org.aspectj.lang,org.aspectj.lang.refl
+ ect,org.aspectj.runtime.internal,org.aspectj.weaver.ast,org.aspectj.w
+ eaver.internal.tools,org.aspectj.weaver.reflect,org.aspectj.weaver.to
+ ols,org.springframework.aop,org.springframework.beans.factory,org.spr
+ ingframework.core&quot;,org.springframework.aop.aspectj.annotation;version
+ =&quot;2.5.6&quot;;uses:=&quot;org.aopalliance.aop,org.aspectj.lang.reflect,org.spri
+ ngframework.aop,org.springframework.aop.aspectj,org.springframework.a
+ op.framework,org.springframework.beans.factory,org.springframework.be
+ ans.factory.config&quot;,org.springframework.aop.aspectj.autoproxy;version
+ =&quot;2.5.6&quot;;uses:=&quot;org.springframework.aop&quot;,org.springframework.aop.conf
+ ig;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans.factory,org.sprin
+ gframework.beans.factory.config,org.springframework.beans.factory.sup
+ port,org.springframework.beans.factory.xml,org.w3c.dom&quot;,org.springfra
+ mework.aop.framework;version=&quot;2.5.6&quot;;uses:=&quot;net.sf.cglib.proxy,org.ao
+ palliance.aop,org.aopalliance.intercept,org.springframework.aop,org.s
+ pringframework.aop.framework.adapter,org.springframework.beans,org.sp
+ ringframework.beans.factory&quot;,org.springframework.aop.framework.adapte
+ r;version=&quot;2.5.6&quot;;uses:=&quot;org.aopalliance.aop,org.aopalliance.intercep
+ t,org.springframework.aop,org.springframework.beans&quot;,org.springframew
+ ork.aop.framework.autoproxy;version=&quot;2.5.6&quot;;uses:=&quot;org.springframewor
+ k.aop,org.springframework.aop.framework,org.springframework.aop.frame
+ work.adapter,org.springframework.beans,org.springframework.beans.fact
+ ory,org.springframework.beans.factory.config&quot;,org.springframework.aop
+ .framework.autoproxy.target;version=&quot;2.5.6&quot;;uses:=&quot;org.springframewor
+ k.aop,org.springframework.aop.target,org.springframework.beans.factor
+ y,org.springframework.beans.factory.config,org.springframework.beans.
+ factory.support&quot;,org.springframework.aop.interceptor;version=&quot;2.5.6&quot;;
+ uses:=&quot;org.aopalliance.aop,org.aopalliance.intercept,org.apache.commo
+ ns.logging,org.springframework.aop&quot;,org.springframework.aop.scope;ver
+ sion=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans.factory,org.springframe
+ work.beans.factory.config,org.springframework.beans.factory.support&quot;,
+ org.springframework.aop.support;version=&quot;2.5.6&quot;;uses:=&quot;org.aopallianc
+ e.aop,org.aopalliance.intercept,org.springframework.aop,org.springfra
+ mework.beans.factory&quot;,org.springframework.aop.support.annotation;vers
+ ion=&quot;2.5.6&quot;;uses:=&quot;org.springframework.aop&quot;,org.springframework.aop.t
+ arget;version=&quot;2.5.6&quot;;uses:=&quot;org.apache.commons.pool,org.springframew
+ ork.aop,org.springframework.aop.support,org.springframework.beans,org
+ .springframework.beans.factory&quot;,org.springframework.aop.target.dynami
+ c;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans.factory&quot;,org.sprin
+ gframework.beans;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.core&quot;,org
+ .springframework.beans.annotation;version=&quot;2.5.6&quot;,org.springframework
+ .beans.factory;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans&quot;,org.
+ springframework.beans.factory.access;version=&quot;2.5.6&quot;;uses:=&quot;org.sprin
+ gframework.beans,org.springframework.beans.factory&quot;,org.springframewo
+ rk.beans.factory.access.el;version=&quot;2.5.6&quot;;uses:=&quot;javax.el,org.spring
+ framework.beans.factory&quot;,org.springframework.beans.factory.annotation
+ ;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.springframework
+ .beans.factory,org.springframework.beans.factory.config,org.springfra
+ mework.beans.factory.support,org.springframework.beans.factory.wiring
+ ,org.springframework.core.type&quot;,org.springframework.beans.factory.con
+ fig;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.springframew
+ ork.beans.factory,org.springframework.core,org.springframework.util&quot;,
+ org.springframework.beans.factory.generic;version=&quot;2.5.6&quot;;uses:=&quot;org.
+ springframework.beans,org.springframework.beans.factory&quot;,org.springfr
+ amework.beans.factory.parsing;version=&quot;2.5.6&quot;;uses:=&quot;org.apache.commo
+ ns.logging,org.springframework.beans.factory.config,org.springframewo
+ rk.core.io&quot;,org.springframework.beans.factory.serviceloader;version=&quot;
+ 2.5.6&quot;,org.springframework.beans.factory.support;version=&quot;2.5.6&quot;;uses
+ :=&quot;net.sf.cglib.proxy,org.apache.commons.logging,org.springframework.
+ beans,org.springframework.beans.factory,org.springframework.beans.fac
+ tory.config,org.springframework.core,org.springframework.core.io,org.
+ springframework.core.io.support,org.springframework.util&quot;,org.springf
+ ramework.beans.factory.wiring;version=&quot;2.5.6&quot;;uses:=&quot;org.springframew
+ ork.beans.factory&quot;,org.springframework.beans.factory.xml;version=&quot;2.5
+ .6&quot;;uses:=&quot;javax.xml.parsers,org.springframework.beans,org.springfram
+ ework.beans.factory,org.springframework.beans.factory.config,org.spri
+ ngframework.beans.factory.parsing,org.springframework.beans.factory.s
+ upport,org.springframework.core.io,org.springframework.core.io.suppor
+ t,org.w3c.dom,org.xml.sax&quot;,org.springframework.beans.propertyeditors;
+ version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.core.io&quot;,org.springframewo
+ rk.beans.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org
+ .springframework.core.io&quot;,org.springframework.cache.ehcache;version=&quot;
+ 2.5.6&quot;;uses:=&quot;net.sf.ehcache,net.sf.ehcache.constructs.blocking,net.s
+ f.ehcache.store,org.springframework.core.io&quot;,org.springframework.cont
+ ext;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.springframew
+ ork.beans.factory.config,org.springframework.core.io&quot;,org.springframe
+ work.context.access;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,
+ org.springframework.beans.factory,org.springframework.beans.factory.a
+ ccess,org.springframework.context&quot;,org.springframework.context.annota
+ tion;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.springframe
+ work.beans.factory,org.springframework.beans.factory.annotation,org.s
+ pringframework.beans.factory.config,org.springframework.beans.factory
+ .support,org.springframework.beans.factory.xml,org.springframework.co
+ re.io,org.springframework.core.type,org.springframework.core.type.cla
+ ssreading,org.springframework.core.type.filter,org.w3c.dom&quot;,org.sprin
+ gframework.context.config;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.
+ beans.factory.config,org.springframework.beans.factory.support,org.sp
+ ringframework.beans.factory.xml,org.w3c.dom&quot;,org.springframework.cont
+ ext.event;version=&quot;2.5.6&quot;;uses:=&quot;org.aopalliance.intercept,org.spring
+ framework.context,org.springframework.core.task&quot;,org.springframework.
+ context.i18n;version=&quot;2.5.6&quot;,org.springframework.context.support;vers
+ ion=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.springframework.bean
+ s.factory,org.springframework.beans.factory.config,org.springframewor
+ k.beans.factory.support,org.springframework.beans.factory.xml,org.spr
+ ingframework.context,org.springframework.core.io,org.springframework.
+ core.io.support,org.springframework.util&quot;,org.springframework.context
+ .weaving;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.springf
+ ramework.beans.factory,org.springframework.beans.factory.config,org.s
+ pringframework.instrument.classloading&quot;,org.springframework.core;vers
+ ion=&quot;2.5.6&quot;;uses:=&quot;org.apache.commons.logging,org.springframework.asm
+ ,org.springframework.util&quot;,org.springframework.core.annotation;versio
+ n=&quot;2.5.6&quot;,org.springframework.core.enums;version=&quot;2.5.6&quot;,org.springfr
+ amework.core.io;version=&quot;2.5.6&quot;,org.springframework.core.io.support;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;org.springframework.core.io,org.springframework
+ .util&quot;,org.springframework.core.style;version=&quot;2.5.6&quot;,org.springframe
+ work.core.task;version=&quot;2.5.6&quot;,org.springframework.core.task.support;
+ version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.core.task&quot;,org.springframe
+ work.core.type;version=&quot;2.5.6&quot;,org.springframework.core.type.classrea
+ ding;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.asm,org.springframewo
+ rk.core.io,org.springframework.core.type&quot;,org.springframework.core.ty
+ pe.filter;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.core.type,org.sp
+ ringframework.core.type.classreading&quot;,org.springframework.dao;version
+ =&quot;2.5.6&quot;,org.springframework.dao.annotation;version=&quot;2.5.6&quot;;uses:=&quot;or
+ g.aopalliance.aop,org.springframework.aop,org.springframework.beans,o
+ rg.springframework.beans.factory,org.springframework.dao.support&quot;,org
+ .springframework.dao.support;version=&quot;2.5.6&quot;;uses:=&quot;org.aopalliance.i
+ ntercept,org.springframework.beans,org.springframework.beans.factory,
+ org.springframework.dao&quot;,org.springframework.ejb.access;version=&quot;2.5.
+ 6&quot;;uses:=&quot;javax.ejb,javax.naming,org.aopalliance.intercept&quot;,org.sprin
+ gframework.ejb.config;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.bean
+ s.factory.support,org.springframework.beans.factory.xml,org.w3c.dom&quot;,
+ org.springframework.ejb.interceptor;version=&quot;2.5.6&quot;;uses:=&quot;javax.inte
+ rceptor,org.springframework.beans.factory,org.springframework.beans.f
+ actory.access,org.springframework.beans.factory.annotation&quot;,org.sprin
+ gframework.ejb.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.ejb,org.springfra
+ mework.beans,org.springframework.beans.factory,org.springframework.be
+ ans.factory.access&quot;,org.springframework.instrument.classloading;versi
+ on=&quot;2.5.6&quot;,org.springframework.instrument.classloading.glassfish;vers
+ ion=&quot;2.5.6&quot;;uses:=&quot;com.sun.enterprise.loader&quot;,org.springframework.ins
+ trument.classloading.oc4j;version=&quot;2.5.6&quot;;uses:=&quot;oracle.classloader.u
+ til&quot;,org.springframework.instrument.classloading.tomcat;version=&quot;2.5.
+ 6&quot;;uses:=&quot;org.apache.catalina.loader&quot;,org.springframework.instrument.
+ classloading.weblogic;version=&quot;2.5.6&quot;,org.springframework.jca.cci;ver
+ sion=&quot;2.5.6&quot;;uses:=&quot;javax.resource&quot;,org.springframework.jca.cci.conne
+ ction;version=&quot;2.5.6&quot;;uses:=&quot;javax.naming,javax.resource,javax.resour
+ ce.cci,org.springframework.jca.cci,org.springframework.transaction,or
+ g.springframework.transaction.support&quot;,org.springframework.jca.cci.co
+ re;version=&quot;2.5.6&quot;;uses:=&quot;javax.resource,javax.resource.cci,org.sprin
+ gframework.dao&quot;,org.springframework.jca.cci.core.support;version=&quot;2.5
+ .6&quot;;uses:=&quot;javax.resource.cci,org.springframework.jca.cci,org.springf
+ ramework.jca.cci.core&quot;,org.springframework.jca.cci.object;version=&quot;2.
+ 5.6&quot;;uses:=&quot;javax.resource,javax.resource.cci,org.springframework.dao
+ ,org.springframework.jca.cci.core&quot;,org.springframework.jca.context;ve
+ rsion=&quot;2.5.6&quot;;uses:=&quot;javax.resource,javax.resource.spi,javax.resource
+ .spi.endpoint,javax.transaction.xa,org.springframework.beans,org.spri
+ ngframework.beans.factory.config,org.springframework.beans.factory.su
+ pport,org.springframework.context&quot;,org.springframework.jca.endpoint;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.resource,javax.resource.spi,javax.resourc
+ e.spi.endpoint,javax.transaction.xa,org.aopalliance.intercept,org.spr
+ ingframework.transaction.jta&quot;,org.springframework.jca.support;version
+ =&quot;2.5.6&quot;;uses:=&quot;javax.resource,javax.resource.spi,javax.resource.spi.
+ work&quot;,org.springframework.jca.work;version=&quot;2.5.6&quot;;uses:=&quot;javax.namin
+ g,javax.resource.spi,javax.resource.spi.work,org.springframework.core
+ .task&quot;,org.springframework.jca.work.glassfish;version=&quot;2.5.6&quot;;uses:=&quot;
+ javax.resource.spi.work&quot;,org.springframework.jca.work.jboss;version=&quot;
+ 2.5.6&quot;;uses:=&quot;javax.resource.spi.work&quot;,org.springframework.jdbc;versi
+ on=&quot;2.5.6&quot;,org.springframework.jdbc.core;version=&quot;2.5.6&quot;;uses:=&quot;javax
+ .sql,javax.sql.rowset,org.apache.commons.logging,org.springframework.
+ beans,org.springframework.dao,org.springframework.jdbc,org.springfram
+ ework.jdbc.support,org.springframework.jdbc.support.nativejdbc,org.sp
+ ringframework.jdbc.support.rowset&quot;,org.springframework.jdbc.core.meta
+ data;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,org.apache.commons.logging,org.
+ springframework.jdbc.core,org.springframework.jdbc.core.namedparam,or
+ g.springframework.jdbc.support&quot;,org.springframework.jdbc.core.namedpa
+ ram;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,org.springframework.dao,org.spri
+ ngframework.jdbc.core,org.springframework.jdbc.support,org.springfram
+ ework.jdbc.support.rowset&quot;,org.springframework.jdbc.core.simple;versi
+ on=&quot;2.5.6&quot;;uses:=&quot;javax.sql,org.springframework.dao,org.springframewo
+ rk.jdbc.core,org.springframework.jdbc.core.namedparam,org.springframe
+ work.jdbc.support&quot;,org.springframework.jdbc.core.support;version=&quot;2.5
+ .6&quot;;uses:=&quot;javax.sql,org.springframework.beans.factory.support,org.sp
+ ringframework.dao,org.springframework.jdbc,org.springframework.jdbc.c
+ ore,org.springframework.jdbc.support,org.springframework.jdbc.support
+ .lob&quot;,org.springframework.jdbc.datasource;version=&quot;2.5.6&quot;;uses:=&quot;java
+ x.sql,org.apache.commons.logging,org.springframework.jdbc,org.springf
+ ramework.transaction,org.springframework.transaction.support&quot;,org.spr
+ ingframework.jdbc.datasource.lookup;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,
+ org.springframework.beans.factory&quot;,org.springframework.jdbc.object;ve
+ rsion=&quot;2.5.6&quot;;uses:=&quot;javax.sql,org.springframework.dao,org.springfram
+ ework.jdbc,org.springframework.jdbc.core,org.springframework.jdbc.cor
+ e.namedparam,org.springframework.jdbc.support&quot;,org.springframework.jd
+ bc.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,org.springframework.core.
+ io,org.springframework.dao&quot;,org.springframework.jdbc.support.incremen
+ ter;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,org.springframework.dao&quot;,org.spr
+ ingframework.jdbc.support.lob;version=&quot;2.5.6&quot;;uses:=&quot;javax.transactio
+ n,org.springframework.jdbc.support.nativejdbc&quot;,org.springframework.jd
+ bc.support.nativejdbc;version=&quot;2.5.6&quot;,org.springframework.jdbc.suppor
+ t.rowset;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.jdbc&quot;,org.springf
+ ramework.jdbc.support.xml;version=&quot;2.5.6&quot;;uses:=&quot;javax.xml.transform,
+ org.w3c.dom&quot;,org.springframework.jms;version=&quot;2.5.6&quot;;uses:=&quot;javax.jms
+ &quot;,org.springframework.jms.config;version=&quot;2.5.6&quot;;uses:=&quot;org.springfra
+ mework.beans.factory.config,org.springframework.beans.factory.xml,org
+ .w3c.dom&quot;,org.springframework.jms.connection;version=&quot;2.5.6&quot;;uses:=&quot;j
+ avax.jms,org.springframework.transaction,org.springframework.transact
+ ion.support&quot;,org.springframework.jms.core;version=&quot;2.5.6&quot;;uses:=&quot;java
+ x.jms,org.springframework.jms,org.springframework.jms.connection,org.
+ springframework.jms.support.converter&quot;,org.springframework.jms.core.s
+ upport;version=&quot;2.5.6&quot;;uses:=&quot;javax.jms,org.springframework.beans.fac
+ tory,org.springframework.jms.core&quot;,org.springframework.jms.listener;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.jms,org.apache.commons.logging,org.spring
+ framework.core.task,org.springframework.jms,org.springframework.jms.c
+ onnection,org.springframework.transaction&quot;,org.springframework.jms.li
+ stener.adapter;version=&quot;2.5.6&quot;;uses:=&quot;javax.jms,org.springframework.j
+ ms.support.converter,org.springframework.jms.support.destination&quot;,org
+ .springframework.jms.listener.endpoint;version=&quot;2.5.6&quot;;uses:=&quot;javax.j
+ ms,javax.resource,javax.resource.spi,org.springframework.beans,org.sp
+ ringframework.jca.endpoint,org.springframework.jms.support.destinatio
+ n&quot;,org.springframework.jms.listener.serversession;version=&quot;2.5.6&quot;;use
+ s:=&quot;javax.jms,org.apache.commons.logging,org.apache.commons.pool,org.
+ springframework.core.task&quot;,org.springframework.jms.remoting;version=&quot;
+ 2.5.6&quot;;uses:=&quot;javax.jms,org.aopalliance.intercept,org.springframework
+ .jms.support.converter,org.springframework.jms.support.destination,or
+ g.springframework.remoting,org.springframework.remoting.support&quot;,org.
+ springframework.jms.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.jms,org.spri
+ ngframework.jms&quot;,org.springframework.jms.support.converter;version=&quot;2
+ .5.6&quot;;uses:=&quot;javax.jms&quot;,org.springframework.jms.support.destination;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.jms,org.springframework.beans.factory&quot;,or
+ g.springframework.jmx;version=&quot;2.5.6&quot;,org.springframework.jmx.access;
+ version=&quot;2.5.6&quot;;uses:=&quot;javax.management,javax.management.remote,org.a
+ opalliance.intercept,org.springframework.jmx&quot;,org.springframework.jmx
+ .export;version=&quot;2.5.6&quot;;uses:=&quot;javax.management,javax.management.mode
+ lmbean,org.springframework.beans.factory,org.springframework.jmx.expo
+ rt.assembler,org.springframework.jmx.export.naming&quot;,org.springframewo
+ rk.jmx.export.annotation;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.j
+ mx.export.metadata&quot;,org.springframework.jmx.export.assembler;version=
+ &quot;2.5.6&quot;;uses:=&quot;javax.management,javax.management.modelmbean,org.sprin
+ gframework.jmx.export.metadata&quot;,org.springframework.jmx.export.metada
+ ta;version=&quot;2.5.6&quot;;uses:=&quot;javax.management.modelmbean,org.springframe
+ work.metadata&quot;,org.springframework.jmx.export.naming;version=&quot;2.5.6&quot;;
+ uses:=&quot;javax.management,org.springframework.core.io,org.springframewo
+ rk.jmx.export.metadata&quot;,org.springframework.jmx.export.notification;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.management,javax.management.modelmbean&quot;,o
+ rg.springframework.jmx.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.managemen
+ t,javax.management.remote,org.springframework.jmx&quot;,org.springframewor
+ k.jndi;version=&quot;2.5.6&quot;;uses:=&quot;javax.naming,org.aopalliance.intercept&quot;
+ ,org.springframework.jndi.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springfr
+ amework.beans,org.springframework.beans.factory&quot;,org.springframework.
+ mail;version=&quot;2.5.6&quot;,org.springframework.mail.javamail;version=&quot;2.5.6
+ &quot;;uses:=&quot;javax.activation,javax.mail,javax.mail.internet,org.springfr
+ amework.core.io,org.springframework.mail&quot;,org.springframework.metadat
+ a;version=&quot;2.5.6&quot;,org.springframework.metadata.commons;version=&quot;2.5.6
+ &quot;,org.springframework.orm;version=&quot;2.5.6&quot;,org.springframework.orm.hib
+ ernate3;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,javax.transaction,org.aopall
+ iance.intercept,org.hibernate,org.hibernate.cache,org.hibernate.cfg,o
+ rg.hibernate.classic,org.hibernate.criterion,org.hibernate.engine,org
+ .hibernate.jdbc,org.hibernate.transaction,org.springframework.beans,o
+ rg.springframework.beans.factory,org.springframework.core.io,org.spri
+ ngframework.dao,org.springframework.jdbc.datasource,org.springframewo
+ rk.jdbc.support,org.springframework.jdbc.support.lob,org.springframew
+ ork.transaction,org.springframework.transaction.support&quot;,org.springfr
+ amework.orm.hibernate3.annotation;version=&quot;2.5.6&quot;;uses:=&quot;org.hibernat
+ e,org.hibernate.cfg,org.springframework.core.io,org.springframework.c
+ ore.type.filter&quot;,org.springframework.orm.hibernate3.support;version=&quot;
+ 2.5.6&quot;;uses:=&quot;javax.servlet,javax.servlet.http,javax.transaction,org.
+ hibernate,org.hibernate.event,org.springframework.dao,org.springframe
+ work.jdbc.support.lob,org.springframework.orm.hibernate3,org.springfr
+ amework.ui,org.springframework.web.context.request&quot;,org.springframewo
+ rk.orm.ibatis;version=&quot;2.5.6&quot;;uses:=&quot;com.ibatis.common.util,com.ibati
+ s.sqlmap.client,com.ibatis.sqlmap.client.event,com.ibatis.sqlmap.engi
+ ne.builder.xml,com.ibatis.sqlmap.engine.transaction,javax.sql,org.spr
+ ingframework.core.io,org.springframework.dao,org.springframework.jdbc
+ .support.lob&quot;,org.springframework.orm.ibatis.support;version=&quot;2.5.6&quot;;
+ uses:=&quot;com.ibatis.sqlmap.client,javax.sql,org.springframework.jdbc.su
+ pport.lob,org.springframework.orm.ibatis&quot;,org.springframework.orm.jdo
+ ;version=&quot;2.5.6&quot;;uses:=&quot;javax.jdo,javax.sql,org.aopalliance.intercept
+ ,org.springframework.core.io,org.springframework.dao,org.springframew
+ ork.jdbc.datasource,org.springframework.jdbc.support,org.springframew
+ ork.transaction,org.springframework.transaction.support&quot;,org.springfr
+ amework.orm.jdo.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.jdo,javax.servle
+ t,javax.servlet.http,org.springframework.dao,org.springframework.orm.
+ jdo,org.springframework.ui,org.springframework.web.context.request&quot;,o
+ rg.springframework.orm.jpa;version=&quot;2.5.6&quot;;uses:=&quot;javax.persistence,j
+ avax.persistence.spi,javax.sql,org.aopalliance.intercept,org.springfr
+ amework.beans.factory,org.springframework.core.io,org.springframework
+ .dao,org.springframework.dao.support,org.springframework.instrument.c
+ lassloading,org.springframework.jdbc.datasource,org.springframework.o
+ rm.jpa.persistenceunit,org.springframework.transaction,org.springfram
+ ework.transaction.support&quot;,org.springframework.orm.jpa.persistenceuni
+ t;version=&quot;2.5.6&quot;;uses:=&quot;javax.persistence.spi,javax.sql,javax.xml.pa
+ rsers,org.springframework.core.io,org.springframework.core.io.support
+ ,org.springframework.instrument.classloading,org.springframework.jdbc
+ .datasource.lookup,org.w3c.dom,org.xml.sax&quot;,org.springframework.orm.j
+ pa.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.persistence,javax.servlet,jav
+ ax.servlet.http,org.springframework.beans,org.springframework.beans.f
+ actory,org.springframework.beans.factory.annotation,org.springframewo
+ rk.beans.factory.support,org.springframework.dao,org.springframework.
+ orm.jpa,org.springframework.ui,org.springframework.web.context.reques
+ t&quot;,org.springframework.orm.jpa.vendor;version=&quot;2.5.6&quot;;uses:=&quot;javax.pe
+ rsistence,javax.persistence.spi,oracle.toplink.essentials.sessions,or
+ g.apache.openjpa.persistence,org.eclipse.persistence.sessions,org.hib
+ ernate,org.springframework.dao,org.springframework.jdbc.datasource,or
+ g.springframework.orm.jpa,org.springframework.transaction&quot;,org.spring
+ framework.orm.toplink;version=&quot;2.5.6&quot;;uses:=&quot;javax.sql,oracle.toplink
+ .exceptions,oracle.toplink.expressions,oracle.toplink.internal.databa
+ seaccess,oracle.toplink.queryframework,oracle.toplink.sessionbroker,o
+ racle.toplink.sessions,oracle.toplink.threetier,oracle.toplink.tools.
+ sessionmanagement,org.aopalliance.intercept,org.springframework.dao,o
+ rg.springframework.jdbc.support,org.springframework.transaction,org.s
+ pringframework.transaction.support&quot;,org.springframework.orm.toplink.s
+ upport;version=&quot;2.5.6&quot;;uses:=&quot;oracle.toplink.exceptions,oracle.toplin
+ k.logging,oracle.toplink.publicinterface,oracle.toplink.sessions,org.
+ springframework.dao,org.springframework.orm.toplink&quot;,org.springframew
+ ork.remoting;version=&quot;2.5.6&quot;,org.springframework.remoting.caucho;vers
+ ion=&quot;2.5.6&quot;;uses:=&quot;com.caucho.burlap.client,com.caucho.hessian.client
+ ,com.caucho.hessian.io,com.caucho.hessian.server,com.sun.net.httpserv
+ er,javax.servlet,javax.servlet.http,org.aopalliance.intercept,org.apa
+ che.commons.logging,org.springframework.remoting&quot;,org.springframework
+ .remoting.httpinvoker;version=&quot;2.5.6&quot;;uses:=&quot;com.sun.net.httpserver,j
+ avax.servlet,javax.servlet.http,org.aopalliance.intercept,org.apache.
+ commons.httpclient,org.apache.commons.httpclient.methods,org.springfr
+ amework.remoting,org.springframework.remoting.support&quot;,org.springfram
+ ework.remoting.jaxrpc;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.xml.
+ namespace,javax.xml.rpc,javax.xml.rpc.server,javax.xml.rpc.soap,org.a
+ opalliance.intercept,org.springframework.context,org.springframework.
+ context.support,org.springframework.remoting,org.springframework.web.
+ context&quot;,org.springframework.remoting.jaxrpc.support;version=&quot;2.5.6&quot;;
+ uses:=&quot;javax.xml.namespace,javax.xml.rpc,javax.xml.rpc.encoding&quot;,org.
+ springframework.remoting.jaxws;version=&quot;2.5.6&quot;;uses:=&quot;com.sun.net.htt
+ pserver,javax.jws,javax.xml.namespace,javax.xml.soap,javax.xml.ws,jav
+ ax.xml.ws.handler,javax.xml.ws.soap,org.aopalliance.intercept,org.spr
+ ingframework.beans.factory,org.springframework.core.task&quot;,org.springf
+ ramework.remoting.rmi;version=&quot;2.5.6&quot;;uses:=&quot;javax.naming,org.aopalli
+ ance.intercept,org.omg.CORBA,org.omg.CORBA.portable,org.springframewo
+ rk.jndi,org.springframework.remoting,org.springframework.remoting.sup
+ port&quot;,org.springframework.remoting.soap;version=&quot;2.5.6&quot;;uses:=&quot;javax.
+ xml.namespace&quot;,org.springframework.remoting.support;version=&quot;2.5.6&quot;;u
+ ses:=&quot;com.sun.net.httpserver,org.aopalliance.intercept,org.springfram
+ ework.core.task&quot;,org.springframework.scheduling;version=&quot;2.5.6&quot;,org.s
+ pringframework.scheduling.backportconcurrent;version=&quot;2.5.6&quot;;uses:=&quot;e
+ du.emory.mathcs.backport.java.util.concurrent&quot;,org.springframework.sc
+ heduling.commonj;version=&quot;2.5.6&quot;;uses:=&quot;commonj.timers,commonj.work,j
+ avax.naming&quot;,org.springframework.scheduling.concurrent;version=&quot;2.5.6
+ &quot;,org.springframework.scheduling.quartz;version=&quot;2.5.6&quot;;uses:=&quot;javax.
+ sql,org.quartz,org.quartz.spi,org.springframework.beans.factory,org.s
+ pringframework.context,org.springframework.core.io,org.springframewor
+ k.core.task,org.springframework.scheduling,org.springframework.transa
+ ction,org.springframework.util&quot;,org.springframework.scheduling.suppor
+ t;version=&quot;2.5.6&quot;,org.springframework.scheduling.timer;version=&quot;2.5.6
+ &quot;,org.springframework.scripting;version=&quot;2.5.6&quot;,org.springframework.s
+ cripting.bsh;version=&quot;2.5.6&quot;;uses:=&quot;bsh,org.springframework.scripting
+ &quot;,org.springframework.scripting.config;version=&quot;2.5.6&quot;;uses:=&quot;org.spr
+ ingframework.beans.factory.config,org.springframework.beans.factory.s
+ upport,org.springframework.beans.factory.xml,org.w3c.dom&quot;,org.springf
+ ramework.scripting.groovy;version=&quot;2.5.6&quot;;uses:=&quot;groovy.lang,org.spri
+ ngframework.beans,org.springframework.beans.factory,org.springframewo
+ rk.scripting&quot;,org.springframework.scripting.jruby;version=&quot;2.5.6&quot;;use
+ s:=&quot;org.jruby,org.jruby.ast,org.jruby.exceptions,org.jruby.runtime.bu
+ iltin,org.springframework.scripting&quot;,org.springframework.scripting.su
+ pport;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.aop,org.springframew
+ ork.beans.factory,org.springframework.beans.factory.config,org.spring
+ framework.core.io,org.springframework.scripting&quot;,org.springframework.
+ stereotype;version=&quot;2.5.6&quot;,org.springframework.transaction;version=&quot;2
+ .5.6&quot;,org.springframework.transaction.annotation;version=&quot;2.5.6&quot;;uses
+ :=&quot;javax.ejb,org.springframework.transaction.interceptor&quot;,org.springf
+ ramework.transaction.config;version=&quot;2.5.6&quot;;uses:=&quot;org.springframewor
+ k.beans.factory.config,org.springframework.beans.factory.support,org.
+ springframework.beans.factory.xml,org.w3c.dom&quot;,org.springframework.tr
+ ansaction.interceptor;version=&quot;2.5.6&quot;;uses:=&quot;org.aopalliance.aop,org.
+ aopalliance.intercept,org.springframework.aop,org.springframework.bea
+ ns.factory,org.springframework.metadata,org.springframework.transacti
+ on&quot;,org.springframework.transaction.jta;version=&quot;2.5.6&quot;;uses:=&quot;com.ib
+ m.wsspi.uow,javax.naming,javax.transaction,org.apache.commons.logging
+ ,org.objectweb.jotm,org.springframework.jndi,org.springframework.tran
+ saction,org.springframework.transaction.support&quot;,org.springframework.
+ transaction.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.transa
+ ction&quot;,org.springframework.ui;version=&quot;2.5.6&quot;,org.springframework.ui.
+ context;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.context&quot;,org.sprin
+ gframework.ui.context.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springframew
+ ork.context,org.springframework.ui.context&quot;,org.springframework.ui.fr
+ eemarker;version=&quot;2.5.6&quot;;uses:=&quot;freemarker.cache,freemarker.template,
+ org.springframework.core.io&quot;,org.springframework.ui.jasperreports;ver
+ sion=&quot;2.5.6&quot;;uses:=&quot;net.sf.jasperreports.engine&quot;,org.springframework.
+ ui.velocity;version=&quot;2.5.6&quot;;uses:=&quot;org.apache.commons.collections,org
+ .apache.velocity.app,org.apache.velocity.exception,org.apache.velocit
+ y.runtime,org.apache.velocity.runtime.resource,org.springframework.co
+ re.io&quot;,org.springframework.util;version=&quot;2.5.6&quot;;uses:=&quot;org.apache.com
+ mons.logging&quot;,org.springframework.util.comparator;version=&quot;2.5.6&quot;,org
+ .springframework.util.xml;version=&quot;2.5.6&quot;;uses:=&quot;javax.xml.transform,
+ org.apache.commons.logging,org.w3c.dom,org.xml.sax&quot;,org.springframewo
+ rk.validation;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans,org.sp
+ ringframework.core&quot;,org.springframework.validation.support;version=&quot;2
+ .5.6&quot;,org.springframework.web;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,ja
+ vax.servlet.http&quot;,org.springframework.web.context;version=&quot;2.5.6&quot;;use
+ s:=&quot;javax.servlet,javax.servlet.http,org.springframework.beans,org.sp
+ ringframework.context&quot;,org.springframework.web.context.request;versio
+ n=&quot;2.5.6&quot;;uses:=&quot;javax.faces.context,javax.servlet,javax.servlet.http
+ ,org.springframework.beans.factory,org.springframework.ui&quot;,org.spring
+ framework.web.context.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,ja
+ vax.servlet.http,org.springframework.beans,org.springframework.beans.
+ factory.config,org.springframework.beans.factory.support,org.springfr
+ amework.beans.factory.xml,org.springframework.context,org.springframe
+ work.core.io,org.springframework.core.io.support,org.springframework.
+ ui.context,org.springframework.web.context&quot;,org.springframework.web.f
+ ilter;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.servlet.http,org.spr
+ ingframework.beans,org.springframework.web.context&quot;,org.springframewo
+ rk.web.jsf;version=&quot;2.5.6&quot;;uses:=&quot;javax.faces.application,javax.faces
+ .context,javax.faces.el,javax.faces.event,org.springframework.beans.f
+ actory,org.springframework.web.context&quot;,org.springframework.web.jsf.e
+ l;version=&quot;2.5.6&quot;;uses:=&quot;javax.el,org.springframework.beans.factory,o
+ rg.springframework.web.context&quot;,org.springframework.web.util;version=
+ &quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.servlet.http,javax.servlet.jsp,jav
+ ax.servlet.jsp.tagext,org.apache.commons.logging&quot;
+Implementation-Title: Spring Framework
+Spring-Version: 2.5.6
+Implementation-Version: 2.5.6
+Bundle-Name: Spring Framework
+Created-By: 10.0-b23 (Sun Microsystems Inc.)
+Ant-Version: Apache Ant 1.7.0
+Bundle-Vendor: SpringSource
+Bundle-Version: 2.5.6
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.springframework
+Import-Package: bsh;version=&quot;[2.0.0.b4, 3.0.0)&quot;;resolution:=optional,c
+ om.caucho.burlap.client;version=&quot;[3.1.3, 4.0.0)&quot;;resolution:=optional
+ ,com.caucho.burlap.io;version=&quot;[3.1.3, 4.0.0)&quot;;resolution:=optional,c
+ om.caucho.burlap.server;version=&quot;[3.1.3, 4.0.0)&quot;;resolution:=optional
+ ,com.caucho.hessian.client;version=&quot;[3.1.3, 4.0.0)&quot;;resolution:=optio
+ nal,com.caucho.hessian.io;version=&quot;[3.1.3, 4.0.0)&quot;;resolution:=option
+ al,com.caucho.hessian.server;version=&quot;[3.1.3, 4.0.0)&quot;;resolution:=opt
+ ional,com.evermind.server;resolution:=optional,com.ibatis.common.util
+ ;version=&quot;[2.3.0.677, 3.0.0)&quot;;resolution:=optional,com.ibatis.common.
+ xml;version=&quot;[2.3.0.677, 3.0.0)&quot;;resolution:=optional,com.ibatis.sqlm
+ ap.client;version=&quot;[2.3.0.677, 3.0.0)&quot;;resolution:=optional,com.ibati
+ s.sqlmap.client.event;version=&quot;[2.3.0.677, 3.0.0)&quot;;resolution:=option
+ al,com.ibatis.sqlmap.engine.builder.xml;version=&quot;[2.3.0.677, 3.0.0)&quot;;
+ resolution:=optional,com.ibatis.sqlmap.engine.impl;version=&quot;[2.3.0.67
+ 7, 3.0.0)&quot;;resolution:=optional,com.ibatis.sqlmap.engine.transaction;
+ version=&quot;[2.3.0.677, 3.0.0)&quot;;resolution:=optional,com.ibatis.sqlmap.e
+ ngine.transaction.external;version=&quot;[2.3.0.677, 3.0.0)&quot;;resolution:=o
+ ptional,com.ibatis.sqlmap.engine.type;version=&quot;[2.3.0.677, 3.0.0)&quot;;re
+ solution:=optional,com.ibm.websphere.management;resolution:=optional,
+ com.ibm.websphere.rsadapter;resolution:=optional,com.ibm.ws.Transacti
+ on;resolution:=optional,com.ibm.ws.rsadapter.jdbc;resolution:=optiona
+ l,com.ibm.wsspi.uow;version=&quot;[6.0.2.17, 6.1.0)&quot;;resolution:=optional,
+ com.jamonapi;version=&quot;[2.4.0, 3.0.0)&quot;;resolution:=optional,com.mchang
+ e.v2.c3p0;version=&quot;[0.9.1.2, 1.0.0)&quot;;resolution:=optional,com.sun.ent
+ erprise.loader;version=&quot;[1.0.0, 2.0.0)&quot;;resolution:=optional,com.sun.
+ net.httpserver;resolution:=optional,com.sun.rowset;version=&quot;[1.0.1, 2
+ .0.0)&quot;;resolution:=optional,commonj.timers;version=&quot;[1.1.0, 2.0.0)&quot;;r
+ esolution:=optional,commonj.work;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:
+ =optional,edu.emory.mathcs.backport.java.util.concurrent;version=&quot;[3.
+ 0.0, 4.0.0)&quot;;resolution:=optional,freemarker.cache;version=&quot;[2.3.12, 
+ 3.0.0)&quot;;resolution:=optional,freemarker.template;version=&quot;[2.3.12, 3.
+ 0.0)&quot;;resolution:=optional,groovy.lang;version=&quot;[1.5.1, 2.0.0)&quot;;resol
+ ution:=optional,javax.activation;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:
+ =optional,javax.annotation;version=&quot;[1.0.0, 2.0.0)&quot;;resolution:=optio
+ nal,javax.ejb;version=&quot;[3.0.0, 4.0.0)&quot;;resolution:=optional,javax.el;
+ version=&quot;[2.1.0, 3.0.0)&quot;;resolution:=optional,javax.faces.application
+ ;version=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.faces.context
+ ;version=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.faces.el;vers
+ ion=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.faces.event;versio
+ n=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.interceptor;version=
+ &quot;[3.0.0, 4.0.0)&quot;;resolution:=optional,javax.jdo;version=&quot;[2.0.0, 3.0.
+ 0)&quot;;resolution:=optional,javax.jdo.datastore;version=&quot;[2.0.0, 3.0.0)&quot;
+ ;resolution:=optional,javax.jms;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=
+ optional,javax.jws;resolution:=optional,javax.mail;version=&quot;[1.4.0, 2
+ .0.0)&quot;;resolution:=optional,javax.mail.internet;version=&quot;[1.4.0, 2.0.
+ 0)&quot;;resolution:=optional,javax.management;resolution:=optional,javax.
+ management.modelmbean;resolution:=optional,javax.management.openmbean
+ ;resolution:=optional,javax.management.remote;resolution:=optional,ja
+ vax.naming;resolution:=optional,javax.persistence;version=&quot;[1.0.0, 2.
+ 0.0)&quot;;resolution:=optional,javax.persistence.spi;version=&quot;[1.0.0, 2.0
+ .0)&quot;;resolution:=optional,javax.resource;version=&quot;[1.5.0, 2.0.0)&quot;;res
+ olution:=optional,javax.resource.cci;version=&quot;[1.5.0, 2.0.0)&quot;;resolut
+ ion:=optional,javax.resource.spi;version=&quot;[1.5.0, 2.0.0)&quot;;resolution:
+ =optional,javax.resource.spi.endpoint;version=&quot;[1.5.0, 2.0.0)&quot;;resolu
+ tion:=optional,javax.resource.spi.work;version=&quot;[1.5.0, 2.0.0)&quot;;resol
+ ution:=optional,javax.rmi;resolution:=optional,javax.rmi.CORBA;resolu
+ tion:=optional,javax.servlet;version=&quot;[2.4.0, 3.0.0)&quot;;resolution:=opt
+ ional,javax.servlet.http;version=&quot;[2.4.0, 3.0.0)&quot;;resolution:=optiona
+ l,javax.servlet.jsp;version=&quot;[2.1.0, 3.0.0)&quot;;resolution:=optional,jav
+ ax.servlet.jsp.el;version=&quot;[2.1.0, 3.0.0)&quot;;resolution:=optional,javax
+ .servlet.jsp.tagext;version=&quot;[2.1.0, 3.0.0)&quot;;resolution:=optional,jav
+ ax.sql;resolution:=optional,javax.sql.rowset;version=&quot;[1.0.1, 2.0.0)&quot;
+ ;resolution:=optional,javax.transaction;version=&quot;[1.0.1, 2.0.0)&quot;;reso
+ lution:=optional,javax.transaction.xa;version=&quot;[1.0.1, 2.0.0)&quot;;resolu
+ tion:=optional,javax.xml.namespace;resolution:=optional,javax.xml.par
+ sers;resolution:=optional,javax.xml.rpc;version=&quot;[1.1.0, 2.0.0)&quot;;reso
+ lution:=optional,javax.xml.rpc.encoding;version=&quot;[1.1.0, 2.0.0)&quot;;reso
+ lution:=optional,javax.xml.rpc.server;version=&quot;[1.1.0, 2.0.0)&quot;;resolu
+ tion:=optional,javax.xml.rpc.soap;version=&quot;[1.1.0, 2.0.0)&quot;;resolution
+ :=optional,javax.xml.soap;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=option
+ al,javax.xml.transform;resolution:=optional,javax.xml.transform.dom;r
+ esolution:=optional,javax.xml.ws;version=&quot;[2.1.1, 3.0.0)&quot;;resolution:
+ =optional,javax.xml.ws.handler;version=&quot;[2.1.1, 3.0.0)&quot;;resolution:=o
+ ptional,javax.xml.ws.soap;version=&quot;[2.1.1, 3.0.0)&quot;;resolution:=option
+ al,net.sf.cglib.asm;version=&quot;[2.1.3, 2.2.0)&quot;;resolution:=optional,net
+ .sf.cglib.core;version=&quot;[2.1.3, 2.2.0)&quot;;resolution:=optional,net.sf.c
+ glib.proxy;version=&quot;[2.1.3, 2.2.0)&quot;;resolution:=optional,net.sf.cglib
+ .transform.impl;version=&quot;[2.1.3, 2.2.0)&quot;;resolution:=optional,net.sf.
+ ehcache;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,net.sf.ehcache.
+ bootstrap;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,net.sf.ehcach
+ e.constructs.blocking;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,n
+ et.sf.ehcache.event;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,net
+ .sf.ehcache.store;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,net.s
+ f.jasperreports.engine;version=&quot;[2.0.5, 3.0.0)&quot;;resolution:=optional,
+ net.sf.jasperreports.engine.data;version=&quot;[2.0.5, 3.0.0)&quot;;resolution:
+ =optional,net.sf.jasperreports.engine.export;version=&quot;[2.0.5, 3.0.0)&quot;
+ ;resolution:=optional,oracle.classloader.util;version=&quot;[10.1.3.1, 10.
+ 2.0.0)&quot;;resolution:=optional,oracle.j2ee.transaction;resolution:=opti
+ onal,oracle.sql;resolution:=optional,oracle.toplink.essentials.ejb.cm
+ p3;version=&quot;[2.0.0.b41-beta2, 3.0.0)&quot;;resolution:=optional,oracle.top
+ link.essentials.expressions;version=&quot;[2.0.0.b41-beta2, 3.0.0)&quot;;resolu
+ tion:=optional,oracle.toplink.essentials.internal.databaseaccess;vers
+ ion=&quot;[2.0.0.b41-beta2, 3.0.0)&quot;;resolution:=optional,oracle.toplink.es
+ sentials.internal.sessions;version=&quot;[2.0.0.b41-beta2, 3.0.0)&quot;;resolut
+ ion:=optional,oracle.toplink.essentials.sessions;version=&quot;[2.0.0.b41-
+ beta2, 3.0.0)&quot;;resolution:=optional,oracle.toplink.exceptions;version
+ =&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional,oracle.toplink.expressions;v
+ ersion=&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional,oracle.toplink.interna
+ l.databaseaccess;version=&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional,orac
+ le.toplink.jndi;version=&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional,oracl
+ e.toplink.logging;version=&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional,ora
+ cle.toplink.publicinterface;version=&quot;[10.1.3, 11.0.0)&quot;;resolution:=op
+ tional,oracle.toplink.queryframework;version=&quot;[10.1.3, 11.0.0)&quot;;resol
+ ution:=optional,oracle.toplink.sessionbroker;version=&quot;[10.1.3, 11.0.0
+ )&quot;;resolution:=optional,oracle.toplink.sessions;version=&quot;[10.1.3, 11.
+ 0.0)&quot;;resolution:=optional,oracle.toplink.threetier;version=&quot;[10.1.3,
+  11.0.0)&quot;;resolution:=optional,oracle.toplink.tools.sessionconfigurat
+ ion;version=&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional,oracle.toplink.to
+ ols.sessionmanagement;version=&quot;[10.1.3, 11.0.0)&quot;;resolution:=optional
+ ,org.apache.axis.encoding.ser;version=&quot;[1.4.0, 2.0.0)&quot;;resolution:=op
+ tional,org.apache.catalina.loader;version=&quot;[5.5.23, 7.0.0)&quot;;resolutio
+ n:=optional,org.apache.commons.attributes;version=&quot;[2.2.0, 3.0.0)&quot;;re
+ solution:=optional,org.apache.commons.collections;version=&quot;[3.2.0, 4.
+ 0.0)&quot;;resolution:=optional,org.apache.commons.collections.map;version
+ =&quot;[3.2.0, 4.0.0)&quot;;resolution:=optional,org.apache.commons.httpclient;
+ version=&quot;[3.1.0, 4.0.0)&quot;;resolution:=optional,org.apache.commons.http
+ client.methods;version=&quot;[3.1.0, 4.0.0)&quot;;resolution:=optional,org.apac
+ he.commons.httpclient.params;version=&quot;[3.1.0, 4.0.0)&quot;;resolution:=opt
+ ional,org.apache.commons.logging;version=&quot;[1.0.4, 2.0.0)&quot;,org.apache.
+ commons.pool;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,org.apache
+ .commons.pool.impl;version=&quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,org.
+ apache.log4j;version=&quot;[1.2.15, 2.0.0)&quot;;resolution:=optional,org.apach
+ e.log4j.xml;version=&quot;[1.2.15, 2.0.0)&quot;;resolution:=optional,org.apache
+ .openjpa.persistence;version=&quot;[1.0.2, 2.0.0)&quot;;resolution:=optional,or
+ g.apache.taglibs.standard.lang.support;version=&quot;[1.1.2, 2.0.0)&quot;;resol
+ ution:=optional,org.apache.velocity;version=&quot;[1.5.0, 2.0.0)&quot;;resoluti
+ on:=optional,org.apache.velocity.app;version=&quot;[1.5.0, 2.0.0)&quot;;resolut
+ ion:=optional,org.apache.velocity.context;version=&quot;[1.5.0, 2.0.0)&quot;;re
+ solution:=optional,org.apache.velocity.exception;version=&quot;[1.5.0, 2.0
+ .0)&quot;;resolution:=optional,org.apache.velocity.runtime;version=&quot;[1.5.0
+ , 2.0.0)&quot;;resolution:=optional,org.apache.velocity.runtime.log;versio
+ n=&quot;[1.5.0, 2.0.0)&quot;;resolution:=optional,org.apache.velocity.runtime.r
+ esource;version=&quot;[1.5.0, 2.0.0)&quot;;resolution:=optional,org.apache.velo
+ city.runtime.resource.loader;version=&quot;[1.5.0, 2.0.0)&quot;;resolution:=opt
+ ional,org.aspectj.bridge;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=optiona
+ l,org.aspectj.lang;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=optional,org.
+ aspectj.lang.annotation;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=optional
+ ,org.aspectj.lang.reflect;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=option
+ al,org.aspectj.runtime.internal;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=
+ optional,org.aspectj.util;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=option
+ al,org.aspectj.weaver;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=optional,o
+ rg.aspectj.weaver.ast;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=optional,o
+ rg.aspectj.weaver.bcel;version=&quot;[1.5.4, 2.0.0)&quot;;resolution:=optional,
+ org.aspectj.weaver.internal.tools;version=&quot;[1.5.4, 2.0.0)&quot;;resolution
+ :=optional,org.aspectj.weaver.loadtime;version=&quot;[1.5.4, 2.0.0)&quot;;resol
+ ution:=optional,org.aspectj.weaver.patterns;version=&quot;[1.5.4, 2.0.0)&quot;;
+ resolution:=optional,org.aspectj.weaver.reflect;version=&quot;[1.5.4, 2.0.
+ 0)&quot;;resolution:=optional,org.aspectj.weaver.tools;version=&quot;[1.5.4, 2.
+ 0.0)&quot;;resolution:=optional,org.codehaus.groovy.control;version=&quot;[1.5.
+ 1, 2.0.0)&quot;;resolution:=optional,org.eclipse.core.runtime;common=&quot;spli
+ t&quot;;resolution:=optional,org.eclipse.persistence.expressions;version=&quot;
+ [1.0.0, 2.0.0)&quot;;resolution:=optional,org.eclipse.persistence.internal
+ .databaseaccess;version=&quot;[1.0.0, 2.0.0)&quot;;resolution:=optional,org.ecl
+ ipse.persistence.internal.sessions;version=&quot;[1.0.0, 2.0.0)&quot;;resolutio
+ n:=optional,org.eclipse.persistence.jpa;version=&quot;[1.0.0, 2.0.0)&quot;;reso
+ lution:=optional,org.eclipse.persistence.sessions;version=&quot;[1.0.0, 2.
+ 0.0)&quot;;resolution:=optional,org.enhydra.jdbc.core;version=&quot;[1.5.0, 2.0
+ .0)&quot;;resolution:=optional,org.hibernate;version=&quot;[3.2.6.ga, 4.0.0)&quot;;r
+ esolution:=optional,org.hibernate.cache;version=&quot;[3.2.6.ga, 4.0.0)&quot;;r
+ esolution:=optional,org.hibernate.cfg;version=&quot;[3.2.6.ga, 4.0.0)&quot;;res
+ olution:=optional,org.hibernate.classic;version=&quot;[3.2.6.ga, 4.0.0)&quot;;r
+ esolution:=optional,org.hibernate.connection;version=&quot;[3.2.6.ga, 4.0.
+ 0)&quot;;resolution:=optional,org.hibernate.context;version=&quot;[3.2.6.ga, 4.
+ 0.0)&quot;;resolution:=optional,org.hibernate.criterion;version=&quot;[3.2.6.ga
+ , 4.0.0)&quot;;resolution:=optional,org.hibernate.dialect;version=&quot;[3.2.6.
+ ga, 4.0.0)&quot;;resolution:=optional,org.hibernate.ejb;version=&quot;[3.3.0.ga
+ , 4.0.0)&quot;;resolution:=optional,org.hibernate.engine;version=&quot;[3.2.6.g
+ a, 4.0.0)&quot;;resolution:=optional,org.hibernate.event;version=&quot;[3.2.6.g
+ a, 4.0.0)&quot;;resolution:=optional,org.hibernate.event.def;version=&quot;[3.2
+ .6.ga, 4.0.0)&quot;;resolution:=optional,org.hibernate.exception;version=&quot;
+ [3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org.hibernate.impl;version=&quot;[
+ 3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org.hibernate.jdbc;version=&quot;[3
+ .2.6.ga, 4.0.0)&quot;;resolution:=optional,org.hibernate.persister.entity;
+ version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org.hibernate.tool.h
+ bm2ddl;version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org.hibernate
+ .transaction;version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org.hib
+ ernate.transform;version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org
+ .hibernate.type;version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,org.
+ hibernate.usertype;version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,o
+ rg.hibernate.util;version=&quot;[3.2.6.ga, 4.0.0)&quot;;resolution:=optional,or
+ g.jboss.resource.adapter.jdbc;resolution:=optional,org.jruby;version=
+ &quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,org.jruby.ast;version=&quot;[1.1.0, 
+ 2.0.0)&quot;;resolution:=optional,org.jruby.exceptions;version=&quot;[1.1.0, 2.
+ 0.0)&quot;;resolution:=optional,org.jruby.javasupport;version=&quot;[1.1.0, 2.0
+ .0)&quot;;resolution:=optional,org.jruby.runtime;version=&quot;[1.1.0, 2.0.0)&quot;;
+ resolution:=optional,org.jruby.runtime.builtin;version=&quot;[1.1.0, 2.0.0
+ )&quot;;resolution:=optional,org.objectweb.jotm;version=&quot;[2.0.10, 3.0.0)&quot;;
+ resolution:=optional,org.omg.CORBA;resolution:=optional,org.omg.CORBA
+ .portable;resolution:=optional,org.omg.CORBA_2_3.portable;resolution:
+ =optional,org.quartz;version=&quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,or
+ g.quartz.impl;version=&quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,org.quart
+ z.impl.jdbcjobstore;version=&quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,org
+ .quartz.simpl;version=&quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,org.quart
+ z.spi;version=&quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,org.quartz.utils;
+ version=&quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,org.quartz.xml;version=
+ &quot;[1.6.0, 2.0.0)&quot;;resolution:=optional,org.springframework.instrument;
+ resolution:=optional,org.w3c.dom;resolution:=optional,org.xml.sax;res
+ olution:=optional,weblogic.jdbc.extensions;resolution:=optional,weblo
+ gic.transaction;resolution:=optional
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

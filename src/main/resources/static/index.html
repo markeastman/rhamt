@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Application List</title>
+
+    <!-- Bootstrap -->
+    <link href="reports/resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="reports/resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link href="reports/resources/img/rhamt-icon-128.png" rel="shortcut icon" type="image/x-icon"/>
+    <style>
+        body.viewAppList .apps  { margin: 0 2ex; }
+
+        body.viewAppList .apps .appInfo {
+            border-bottom: 1px solid gray;
+            overflow: auto; width: 100%; /* clearing */
+            padding: 1ex 0 1ex;
+        }
+        body.viewAppList .apps .appInfo .stats { float: right; width: 610px; padding: 0.4ex 0; }
+        body.viewAppList .apps .appInfo .stats .effortPoints { float: left; width: 160px; padding: 0.3ex 0.2em 0; font-size: 33pt; }
+        body.viewAppList .apps .appInfo .stats .effortPoints        span { display: block; margin: auto; text-align: center; }
+        body.viewAppList .apps .appInfo .stats .effortPoints        .points { line-height: 1; color: #294593; }
+        body.viewAppList .apps .appInfo .stats .effortPoints        .legend { font-size: 7pt; }
+        body.viewAppList .apps .appInfo .stats .effortPoints.shared,
+        body.viewAppList .apps .appInfo .stats .effortPoints.unique { width: 90px; font-size: 18pt; margin-top: 23px; }
+        /* Hide the "cell" if the app has 0 shared points". */
+        body.viewAppList .apps .appInfo.pointsShared0 .stats .effortPoints.shared,
+        body.viewAppList .apps .appInfo.pointsShared0 .stats .effortPoints.unique { visibility: hidden; }
+        /* Hide the whole "column" if there's no virtual app (i.e. no shared-libs app). */
+        body.viewAppList.noVirtualApp .apps .appInfo  .stats .effortPoints.shared,
+        body.viewAppList.noVirtualApp .apps .appInfo  .stats .effortPoints.unique { display: none; }
+        body.viewAppList .apps .appInfo .stats .effortPoints.shared .points,
+        body.viewAppList .apps .appInfo .stats .effortPoints.unique .points { color: #8491a8; /* Like normal, but grayed. */ }
+
+        body.viewAppList .apps .appInfo .stats .incidentsCount { float: left; margin:  0 2ex;}
+        body.viewAppList .apps .appInfo .stats .incidentsCount table tr.total td { border-top: 1px solid silver; }
+        body.viewAppList .apps .appInfo .stats .incidentsCount .count { text-align: right; padding-right: 1ex; min-width: 7.4ex; }
+        body.viewAppList .apps .appInfo .traits { margin-left: 0px; }
+        body.viewAppList .apps .appInfo .traits .fileName { padding: 0.0ex 0em 0.2ex; font-size: 18pt; /* color: #008cba; (Default BS link color) */ }
+        body.viewAppList .apps .appInfo .traits .techs { }
+
+        /* Specifics for virtual apps. */
+        body.viewAppList .apps .virtual .appInfo .traits .fileName { color: #477280; }
+    </style>
+</head>
+<body role="document" class="viewAppList" style="margin: auto;">
+
+    <!-- Navbar -->
+    <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="#"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="reports/migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      All Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="reports/dependency_report_global.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="reports/about_global.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "reports/resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+            </div><!-- /.nav-collapse -->
+    </div>
+    <!-- / Navbar -->
+
+
+    <div class="container-fluid" role="main" id="report-content">
+
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Application List</div>
+                </h1>
+                <div class="desc">
+                    This report lists all analyzed applications. Select an individual application to show more details.
+                </div>
+            </div>
+        </div>
+
+        <!-- Apps -->
+
+        <section class="apps">
+            <div class="real">
+
+
+    <div class="appInfo pointsShared0">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">0</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">0</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">0</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">1</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>1</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Enterprise_Agent_Update_War.html">
+                    rhq-agentupdate-war-4.10.0.war
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="appInfo pointsShared0">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">0</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">0</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">0</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">1</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>1</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Enterprise_Downloads_War.html">
+                    rhq-downloads-war-4.10.0.war
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="appInfo pointsShared23">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">62</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">23</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">39</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">12</td>
+                            <td class="label_">Migration Mandatory</td>
+                        </tr>
+                        <tr>
+                            <td class="count">48</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                        <tr>
+                            <td class="count">2</td>
+                            <td class="label_">Cloud Mandatory</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>62</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Base_Perspective_War.html">
+                    rhq-enterprise-server-base-perspective-war-3.0.0.B04.war
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-danger" title="IMPORTANT">
+                                Hibernate (embedded) 
+</span>
+        <span class="label label-danger" title="IMPORTANT">
+                                JBoss Web XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Seam (embedded) 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Web XML 3.0
+</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="appInfo pointsShared23">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">62</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">23</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">39</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">12</td>
+                            <td class="label_">Migration Mandatory</td>
+                        </tr>
+                        <tr>
+                            <td class="count">47</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                        <tr>
+                            <td class="count">2</td>
+                            <td class="label_">Cloud Mandatory</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>61</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Base_Perspective_War.1.html">
+                    rhq-enterprise-server-base-perspective-war-3.0.0.war
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-danger" title="IMPORTANT">
+                                Hibernate (embedded) 
+</span>
+        <span class="label label-danger" title="IMPORTANT">
+                                JBoss Web XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Seam (embedded) 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Web XML 3.0
+</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="appInfo pointsShared20">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">957</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">20</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">937</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">111</td>
+                            <td class="label_">Migration Mandatory</td>
+                        </tr>
+                        <tr>
+                            <td class="count">81</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                        <tr>
+                            <td class="count">31</td>
+                            <td class="label_">Cloud Mandatory</td>
+                        </tr>
+                        <tr>
+                            <td class="count">163</td>
+                            <td class="label_">Cloud Optional</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>386</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Enterprise_Server_EAR.html">
+                    rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-danger" title="IMPORTANT">
+                                JBoss Web XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                EJB XML 3.0
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                JDBC (embedded) 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Seam (embedded) 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Web XML 3.0
+</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="appInfo pointsShared0">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">0</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">0</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">0</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">1</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>1</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Enterprise_Remote_Client_War.html">
+                    rhq-remote-client-war-4.10.0.war
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="appInfo pointsShared0">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">1</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">0</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">1</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">1</td>
+                            <td class="label_">Migration Mandatory</td>
+                        </tr>
+                        <tr>
+                            <td class="count">2</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>3</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_RHQ_Remoting_WAR.html">
+                    rhq-remoting-war-4.10.0.war
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Web XML 3.0
+</span>
+            </div>
+        </div>
+    </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Shared Libraries</div>
+                </h1>
+                <div class="desc">
+                    This section groups all issues found in libraries included in multiple applications.
+                </div>
+            </div>
+        </div>
+        <section class="apps">
+            <div class="virtual">
+
+
+    <div class="appInfo pointsShared0">
+        <div class="stats">
+            <div class="effortPoints total">
+                <span class="points">23</span>
+                <span class="legend">story points</span>
+            </div>
+                <div class="effortPoints shared">
+                    <span class="points">0</span>
+                    <span class="legend">in shared archives</span>
+                </div>
+                <div class="effortPoints unique">
+                    <span class="points">23</span>
+                    <span class="legend">only in this app</span>
+                </div>
+            <div class="incidentsCount">
+                <table>
+                    <tr>
+                        <td colspan="2">Number of incidents</td>
+                    </tr>
+                        <tr>
+                            <td class="count">5</td>
+                            <td class="label_">Migration Mandatory</td>
+                        </tr>
+                        <tr>
+                            <td class="count">6</td>
+                            <td class="label_">Migration Optional</td>
+                        </tr>
+                    <tr class="total">
+                        <td class="count"> <span>11</span> </td>
+                        <td class="label_"> <span>Total</span> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="traits">
+            <div class="fileName">
+                <a href="reports/report_index_Archives_shared_by_multiple_applications.html">
+                    Archives shared by multiple applications
+                </a>
+            </div>
+            <div class="techs">
+        <span class="label label-danger" title="IMPORTANT">
+                                Hibernate (embedded) 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Manifest 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Maven XML 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Properties 
+</span>
+        <span class="label label-info" title="INFORMATIONAL">
+                                Seam (embedded) 
+</span>
+            </div>
+        </div>
+    </div>
+            </div>
+        </section>
+
+        <div style="width: 100%; text-align: center">
+            <a href="reports/windup_ruleproviders.html">Rule providers execution overview</a>
+                |
+            <a href="reports/windup_freemarkerfunctions.html">FreeMarker methods</a>
+        </div>
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:20 AM</div>
+    </div> <!-- /.container-fluid -->
+    <script src="reports/resources/js/jquery-1.10.1.min.js"></script>
+    <script src="reports/resources/js/windup-utils.js"></script>
+    <script type="text/javascript">
+        $("body.viewAppList .apps .real .appInfo").sortElements(function(a, b){
+            return $(a).find(".traits .fileName").first().text().trim().toLowerCase() > $(b).find(".traits .fileName").first().text().trim().toLowerCase() ? 1 : -1;
+        });
+    </script>
+    <script src="reports/resources/js/bootstrap.min.js"></script>
+</body>
+</html>

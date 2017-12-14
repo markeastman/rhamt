@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ConfigurationManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/configuration/ConfigurationManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.configuration;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jetbrains.annotations.Nullable;
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+import org.quartz.SchedulerException;
+import org.quartz.Trigger;
+import org.rhq.core.clientapi.agent.configuration.ConfigurationUpdateRequest;
+import org.rhq.core.clientapi.server.configuration.ConfigurationUpdateResponse;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.configuration.AbstractResourceConfigurationUpdate;
+import org.rhq.core.domain.configuration.Configuration;
+import org.rhq.core.domain.configuration.ConfigurationUpdateStatus;
+import org.rhq.core.domain.configuration.PluginConfigurationUpdate;
+import org.rhq.core.domain.configuration.ResourceConfigurationUpdate;
+import org.rhq.core.domain.configuration.definition.ConfigurationDefinition;
+import org.rhq.core.domain.configuration.group.AbstractGroupConfigurationUpdate;
+import org.rhq.core.domain.configuration.group.GroupPluginConfigurationUpdate;
+import org.rhq.core.domain.configuration.group.GroupResourceConfigurationUpdate;
+import org.rhq.core.domain.measurement.AvailabilityType;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceError;
+import org.rhq.core.domain.resource.ResourceErrorType;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.resource.group.composite.ResourceGroupComposite;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.core.util.exception.ThrowableUtil;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheStats;
+import org.rhq.enterprise.server.alert.engine.internal.Tuple;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.auth.prefs.SubjectPreferences;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.configuration.ConfigurationManagerLocal;
+import org.rhq.enterprise.server.configuration.ConfigurationManagerRemote;
+import org.rhq.enterprise.server.configuration.ConfigurationUpdateException;
+import org.rhq.enterprise.server.configuration.ConfigurationUpdateStillInProgressException;
+import org.rhq.enterprise.server.configuration.LiveConfigurationLoader;
+import org.rhq.enterprise.server.configuration.job.GroupPluginConfigurationUpdateJob;
+import org.rhq.enterprise.server.configuration.job.GroupResourceConfigurationUpdateJob;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.jaxb.WebServiceTypeAdapter;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceNotFoundException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupNotFoundException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupUpdateException;
+import org.rhq.enterprise.server.scheduler.SchedulerLocal;
+import org.rhq.enterprise.server.util.QuartzUtil;
+
+@Stateless
+@XmlType(
+   namespace = &quot;http://jon.rhq.org/JON_2.3/2009/9/JON.xsd&quot;
+)
+public class ConfigurationManagerBean implements ConfigurationManagerLocal, ConfigurationManagerRemote {
+   private final Log log = LogFactory.getLog(ConfigurationManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AlertConditionCacheManagerLocal alertConditionCacheManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   private ConfigurationManagerLocal configurationManager;
+   @EJB
+   private SchedulerLocal scheduler;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+
+   @Nullable
+   public Configuration getPluginConfiguration(Subject subject, int resourceId) {
+      this.log.debug(&quot;Getting current plugin configuration for resource [&quot; + resourceId + &quot;]&quot;);
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(resource == null) {
+         throw new IllegalStateException(&quot;Cannot retrieve plugin config for unknown resource [&quot; + resourceId + &quot;]&quot;);
+      } else if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view plugin configuration for [&quot; + resource + &quot;]&quot;);
+      } else {
+         Configuration pluginConfiguration = this.configurationManager.getPluginConfiguration(resourceId);
+         return pluginConfiguration;
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public Configuration getPluginConfiguration(int resourceId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Configuration.getPluginConfigByResourceId&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      Configuration result = (Configuration)query.getSingleResult();
+      return result;
+   }
+
+   public void completePluginConfigurationUpdate(Integer updateId) {
+      PluginConfigurationUpdate update = (PluginConfigurationUpdate)this.entityManager.find(PluginConfigurationUpdate.class, updateId);
+      this.configurationManager.completePluginConfigurationUpdate(update);
+   }
+
+   public void completePluginConfigurationUpdate(PluginConfigurationUpdate update) {
+      ConfigurationUpdateResponse response = this.configurationManager.executePluginConfigurationUpdate(update);
+      Resource resource = update.getResource();
+      resource.setPluginConfiguration(update.getConfiguration());
+      if(response.getStatus() == ConfigurationUpdateStatus.SUCCESS) {
+         update.setStatus(ConfigurationUpdateStatus.SUCCESS);
+         resource.setConnected(true);
+         this.removeAnyExistingInvalidPluginConfigurationErrors(this.subjectManager.getOverlord(), resource);
+         this.entityManager.flush();
+         this.entityManager.merge(update);
+      } else {
+         this.handlePluginConfiguratonUpdateRemoteException(resource, response.getStatus().toString(), response.getErrorMessage());
+         update.setStatus(response.getStatus());
+         update.setErrorMessage(response.getErrorMessage());
+      }
+
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public ConfigurationUpdateResponse executePluginConfigurationUpdate(PluginConfigurationUpdate update) {
+      Resource resource = update.getResource();
+      Configuration configuration = update.getConfiguration();
+      ConfigurationUpdateResponse response = null;
+
+      try {
+         AgentClient e = this.agentManager.getAgentClient(resource.getAgent());
+         e.getDiscoveryAgentService().updatePluginConfiguration(resource.getId(), configuration);
+
+         try {
+            e.getDiscoveryAgentService().executeServiceScanDeferred();
+         } catch (Exception var7) {
+            this.log.warn(&quot;Failed to execute service scan - cannot detect children of the newly connected resource [&quot; + resource + &quot;]&quot;, var7);
+         }
+
+         response = new ConfigurationUpdateResponse(update.getId(), (Configuration)null, ConfigurationUpdateStatus.SUCCESS, (String)null);
+      } catch (Exception var8) {
+         response = new ConfigurationUpdateResponse(update.getId(), (Configuration)null, var8);
+      }
+
+      return response;
+   }
+
+   public PluginConfigurationUpdate updatePluginConfiguration(Subject subject, int resourceId, Configuration configuration) throws ResourceNotFoundException {
+      Subject overlord = this.subjectManager.getOverlord();
+      Resource resource = this.resourceManager.getResourceById(overlord, resourceId);
+      this.ensureModifyPermission(subject, resource);
+      PluginConfigurationUpdate update = new PluginConfigurationUpdate(resource, configuration, subject.getName());
+      update.setStatus(ConfigurationUpdateStatus.SUCCESS);
+      this.entityManager.persist(update);
+      resource.addPluginConfigurationUpdates(update);
+      Agent agent = resource.getAgent();
+      if(agent != null) {
+         agent.getName();
+      }
+
+      this.configurationManager.completePluginConfigurationUpdate(update);
+      return update;
+   }
+
+   public Configuration getResourceConfiguration(Subject subject, int resourceId) {
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(resource == null) {
+         throw new NoResultException(&quot;Cannot get live configuration for unknown resource [&quot; + resourceId + &quot;]&quot;);
+      } else if(!this.authorizationManager.canViewResource(subject, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view resource configuration for [&quot; + resource + &quot;]&quot;);
+      } else {
+         Configuration result = this.configurationManager.getResourceConfiguration(resourceId);
+         return result;
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public Configuration getResourceConfiguration(int resourceId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Configuration.getResourceConfigByResourceId&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      Configuration result = (Configuration)query.getSingleResult();
+      return result;
+   }
+
+   @Nullable
+   public ResourceConfigurationUpdate getLatestResourceConfigurationUpdate(Subject subject, int resourceId) {
+      this.log.debug(&quot;Getting current resource configuration for resource [&quot; + resourceId + &quot;]&quot;);
+
+      Resource resource;
+      ResourceConfigurationUpdate current;
+      try {
+         Query latest = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findCurrentlyActiveConfig&quot;);
+         latest.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         current = (ResourceConfigurationUpdate)latest.getSingleResult();
+         resource = current.getResource();
+      } catch (NoResultException var12) {
+         current = null;
+         resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+         if(resource == null) {
+            throw new NoResultException(&quot;Cannot get latest resource configuration for unknown resource [&quot; + resourceId + &quot;]&quot;);
+         }
+      }
+
+      if(!this.authorizationManager.canViewResource(subject, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view resource configuration for [&quot; + resource + &quot;]&quot;);
+      } else {
+         try {
+            Query liveConfig = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findByLatestByResourceId&quot;);
+            liveConfig.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+            ResourceConfigurationUpdate latest1 = (ResourceConfigurationUpdate)liveConfig.getSingleResult();
+            if(latest1.getStatus() == ConfigurationUpdateStatus.INPROGRESS) {
+               return current;
+            }
+         } catch (NoResultException var11) {
+            ;
+         }
+
+         Configuration liveConfig1 = this.getLiveResourceConfiguration(resource, true);
+         if(liveConfig1 != null) {
+            Configuration currentConfig = current != null?current.getConfiguration():null;
+            boolean theSame = currentConfig != null &amp;&amp; currentConfig.equals(liveConfig1);
+            if(!theSame) {
+               try {
+                  current = this.persistNewAgentReportedResourceConfiguration(resource, liveConfig1);
+               } catch (ConfigurationUpdateStillInProgressException var10) {
+                  this.log.debug(&quot;Resource is currently in progress of changing its resource configuration - since it hasn\'t finished yet, will use the last successful resource configuration: &quot; + var10);
+               }
+            }
+         } else {
+            this.log.warn(&quot;Could not get live resource configuration for resource [&quot; + resource + &quot;]; will assume latest resource configuration update is the current resource configuration.&quot;);
+         }
+
+         return current;
+      }
+   }
+
+   private ResourceConfigurationUpdate persistNewAgentReportedResourceConfiguration(Resource resource, Configuration liveConfig) throws ConfigurationUpdateStillInProgressException {
+      ResourceConfigurationUpdate update = this.configurationManager.persistNewResourceConfigurationUpdateHistory(this.subjectManager.getOverlord(), resource.getId(), liveConfig, ConfigurationUpdateStatus.SUCCESS, (String)null, false);
+      resource.setResourceConfiguration(liveConfig.deepCopy(false));
+      return update;
+   }
+
+   public PluginConfigurationUpdate getLatestPluginConfigurationUpdate(Subject subject, int resourceId) {
+      this.log.debug(&quot;Getting current plugin configuration for resource [&quot; + resourceId + &quot;]&quot;);
+
+      Resource resource;
+      PluginConfigurationUpdate current;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;PluginConfigurationUpdate.findCurrentlyActiveConfig&quot;);
+         nre.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         current = (PluginConfigurationUpdate)nre.getSingleResult();
+         resource = current.getResource();
+      } catch (NoResultException var6) {
+         current = null;
+         resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+         if(resource == null) {
+            throw new NoResultException(&quot;Cannot get latest plugin configuration for unknown resource [&quot; + resourceId + &quot;]&quot;);
+         }
+      }
+
+      if(!this.authorizationManager.canViewResource(subject, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view plugin configuration for [&quot; + resource + &quot;]&quot;);
+      } else {
+         return current;
+      }
+   }
+
+   public boolean isResourceConfigurationUpdateInProgress(Subject subject, int resourceId) {
+      boolean updateInProgress;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findByLatestByResourceId&quot;);
+         nre.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         ResourceConfigurationUpdate latestConfigUpdate = (ResourceConfigurationUpdate)nre.getSingleResult();
+         if(!this.authorizationManager.canViewResource(subject, latestConfigUpdate.getResource().getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view Resource configuration for [&quot; + latestConfigUpdate.getResource() + &quot;]&quot;);
+         }
+
+         updateInProgress = latestConfigUpdate.getStatus() == ConfigurationUpdateStatus.INPROGRESS;
+      } catch (NoResultException var6) {
+         updateInProgress = false;
+      }
+
+      return updateInProgress;
+   }
+
+   public boolean isPluginConfigurationUpdateInProgress(Subject subject, int resourceId) {
+      boolean updateInProgress;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;PluginConfigurationUpdate.findLatestByResourceId&quot;);
+         nre.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         PluginConfigurationUpdate latestConfigUpdate = (PluginConfigurationUpdate)nre.getSingleResult();
+         if(!this.authorizationManager.canViewResource(subject, latestConfigUpdate.getResource().getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view plugin configuration for [&quot; + latestConfigUpdate.getResource() + &quot;]&quot;);
+         }
+
+         updateInProgress = latestConfigUpdate.getStatus() == ConfigurationUpdateStatus.INPROGRESS;
+      } catch (NoResultException var6) {
+         updateInProgress = false;
+      }
+
+      return updateInProgress;
+   }
+
+   public boolean isGroupResourceConfigurationUpdateInProgress(Subject subject, int groupId) {
+      boolean updateInProgress;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;GroupResourceConfigurationUpdate.findLatestByGroupId&quot;);
+         nre.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+         GroupResourceConfigurationUpdate latestConfigGroupUpdate = (GroupResourceConfigurationUpdate)nre.getSingleResult();
+         if(!this.authorizationManager.canViewGroup(subject, latestConfigGroupUpdate.getGroup().getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view group Resource configuration for [&quot; + latestConfigGroupUpdate.getGroup() + &quot;]&quot;);
+         }
+
+         updateInProgress = latestConfigGroupUpdate.getStatus() == ConfigurationUpdateStatus.INPROGRESS;
+      } catch (NoResultException var6) {
+         updateInProgress = false;
+      }
+
+      return updateInProgress;
+   }
+
+   public boolean isGroupPluginConfigurationUpdateInProgress(Subject subject, int groupId) {
+      boolean updateInProgress;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;GroupPluginConfigurationUpdatee.findLatestByGroupId&quot;);
+         nre.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+         GroupPluginConfigurationUpdate latestConfigGroupUpdate = (GroupPluginConfigurationUpdate)nre.getSingleResult();
+         if(!this.authorizationManager.canViewGroup(subject, latestConfigGroupUpdate.getGroup().getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view group plugin configuration for [&quot; + latestConfigGroupUpdate.getGroup() + &quot;]&quot;);
+         }
+
+         updateInProgress = latestConfigGroupUpdate.getStatus() == ConfigurationUpdateStatus.INPROGRESS;
+      } catch (NoResultException var6) {
+         updateInProgress = false;
+      }
+
+      return updateInProgress;
+   }
+
+   public Map getResourceConfigurationsForCompatibleGroup(Subject subject, int groupId) throws ConfigurationUpdateStillInProgressException, Exception {
+      ResourceGroupComposite groupComposite = this.resourceGroupManager.getResourceGroupComposite(subject, groupId);
+      if(groupComposite.getExplicitAvail() == null) {
+         return new HashMap();
+      } else {
+         AvailabilityType availability = groupComposite.getExplicitAvail().doubleValue() == 1.0D?AvailabilityType.UP:AvailabilityType.DOWN;
+         if(availability == AvailabilityType.DOWN) {
+            throw new Exception(&quot;Current group Resource configuration for &quot; + groupId + &quot; cannot be calculated, because one or more of this group\'s member Resources are DOWN.&quot;);
+         } else {
+            ResourceGroup group = groupComposite.getResourceGroup();
+            this.ensureNoResourceConfigurationUpdatesInProgress(group);
+            int userPreferencesTimeout = (new SubjectPreferences(subject)).getGroupConfigurationTimeoutPeriod();
+            Set groupMembers = group.getExplicitResources();
+            Map liveConfigs = LiveConfigurationLoader.getInstance().loadLiveResourceConfigurations(groupMembers, (long)userPreferencesTimeout);
+            Map currentPersistedConfigs = this.getPersistedResourceConfigurationsForCompatibleGroup(group);
+            Iterator i$ = groupMembers.iterator();
+
+            while(i$.hasNext()) {
+               Resource memberResource = (Resource)i$.next();
+               Configuration liveConfig = (Configuration)liveConfigs.get(Integer.valueOf(memberResource.getId()));
+               Configuration currentPersistedConfig = (Configuration)currentPersistedConfigs.get(Integer.valueOf(memberResource.getId()));
+               if(!liveConfig.equals(currentPersistedConfig)) {
+                  ResourceConfigurationUpdate update = this.persistNewAgentReportedResourceConfiguration(memberResource, liveConfig);
+                  if(update != null) {
+                     currentPersistedConfigs.put(Integer.valueOf(memberResource.getId()), update.getConfiguration());
+                  } else {
+                     this.log.error(&quot;Current Configuration for &quot; + memberResource + &quot; does not match latest associated ResourceConfigurationUpdate with SUCCESS status.&quot;);
+                  }
+               }
+            }
+
+            return currentPersistedConfigs;
+         }
+      }
+   }
+
+   public Map getPluginConfigurationsForCompatibleGroup(Subject subject, int groupId) throws ConfigurationUpdateStillInProgressException, Exception {
+      ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+      this.ensureNoPluginConfigurationUpdatesInProgress(group);
+      Map currentPersistedConfigs = this.getPersistedPluginConfigurationsForCompatibleGroup(group);
+      return currentPersistedConfigs;
+   }
+
+   private void ensureNoResourceConfigurationUpdatesInProgress(ResourceGroup compatibleGroup) throws ConfigurationUpdateStillInProgressException {
+      if(this.isGroupResourceConfigurationUpdateInProgress(this.subjectManager.getOverlord(), compatibleGroup.getId())) {
+         throw new ConfigurationUpdateStillInProgressException(&quot;Current group Resource configuration for &quot; + compatibleGroup + &quot; cannot be calculated, because a group Resource configuration update is currently in progress &quot; + &quot; (please wait for this update to complete or delete it from the history).&quot;);
+      } else {
+         Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceConfigurationUpdate.findByGroupIdAndStatus&quot;);
+         countQuery.setParameter(&quot;groupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+         countQuery.setParameter(&quot;status&quot;, ConfigurationUpdateStatus.INPROGRESS);
+         long count = ((Long)countQuery.getSingleResult()).longValue();
+         if(count != 0L) {
+            Query query = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findByGroupIdAndStatus&quot;);
+            query.setParameter(&quot;groupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+            query.setParameter(&quot;status&quot;, ConfigurationUpdateStatus.INPROGRESS);
+            List resources = query.getResultList();
+            throw new ConfigurationUpdateStillInProgressException(&quot;Current group Resource configuration for &quot; + compatibleGroup + &quot; cannot be calculated, because Resource configuration updates are currently in progress for the&quot; + &quot; following Resources (please wait for these updates to complete or delete them from the history): &quot; + resources);
+         }
+      }
+   }
+
+   private void ensureNoPluginConfigurationUpdatesInProgress(ResourceGroup compatibleGroup) throws ConfigurationUpdateStillInProgressException {
+      if(this.isGroupPluginConfigurationUpdateInProgress(this.subjectManager.getOverlord(), compatibleGroup.getId())) {
+         throw new ConfigurationUpdateStillInProgressException(&quot;Current group plugin configuration for &quot; + compatibleGroup + &quot; cannot be calculated, because a group plugin configuration update is currently in progress.&quot;);
+      } else {
+         ArrayList resourcesWithPluginConfigUpdatesInProgress = new ArrayList();
+         Iterator i$ = compatibleGroup.getExplicitResources().iterator();
+
+         while(i$.hasNext()) {
+            Resource memberResource = (Resource)i$.next();
+            if(this.isPluginConfigurationUpdateInProgress(this.subjectManager.getOverlord(), memberResource.getId())) {
+               resourcesWithPluginConfigUpdatesInProgress.add(memberResource);
+            }
+         }
+
+         if(!resourcesWithPluginConfigUpdatesInProgress.isEmpty()) {
+            throw new ConfigurationUpdateStillInProgressException(&quot;Current group plugin configuration for &quot; + compatibleGroup + &quot; cannot be calculated, because plugin configuration updates are currently in progress for the following Resources: &quot; + resourcesWithPluginConfigUpdatesInProgress);
+         }
+      }
+   }
+
+   private Map getPersistedResourceConfigurationsForCompatibleGroup(ResourceGroup compatibleGroup) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Configuration.getResourceConfigMapByGroupId&quot;);
+      countQuery.setParameter(&quot;resourceGroupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      if(count != (long)compatibleGroup.getExplicitResources().size()) {
+         throw new IllegalStateException(&quot;Size of group changed from &quot; + compatibleGroup.getExplicitResources().size() + &quot; to &quot; + count + &quot; - please retry the operation.&quot;);
+      } else {
+         PageControl pageControl = new PageControl(0, 10);
+         Query query = this.entityManager.createNamedQuery(&quot;Configuration.getResourceConfigMapByGroupId&quot;);
+         query.setParameter(&quot;resourceGroupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+         HashMap results = new HashMap((int)count);
+         int rowsProcessed = 0;
+
+         while(true) {
+            PersistenceUtility.setDataPage(query, pageControl);
+            List pagedResults = query.getResultList();
+            if(pagedResults.size() &lt;= 0) {
+               break;
+            }
+
+            Iterator i$ = pagedResults.iterator();
+
+            while(i$.hasNext()) {
+               Object[] result = (Object[])i$.next();
+               results.put((Integer)result[0], (Configuration)result[1]);
+            }
+
+            rowsProcessed += pagedResults.size();
+            if((long)rowsProcessed &gt;= count) {
+               break;
+            }
+
+            pageControl.setPageNumber(pageControl.getPageNumber() + 1);
+         }
+
+         return results;
+      }
+   }
+
+   private Map getPersistedPluginConfigurationsForCompatibleGroup(ResourceGroup compatibleGroup) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Configuration.getPluginConfigMapByGroupId&quot;);
+      countQuery.setParameter(&quot;resourceGroupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      if(count != (long)compatibleGroup.getExplicitResources().size()) {
+         throw new IllegalStateException(&quot;Size of group changed from &quot; + compatibleGroup.getExplicitResources().size() + &quot; to &quot; + count + &quot; - please retry the operation.&quot;);
+      } else {
+         PageControl pageControl = new PageControl(0, 20);
+         Query query = this.entityManager.createNamedQuery(&quot;Configuration.getPluginConfigMapByGroupId&quot;);
+         query.setParameter(&quot;resourceGroupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+         HashMap results = new HashMap((int)count);
+         int rowsProcessed = 0;
+
+         while(true) {
+            List pagedResults = query.getResultList();
+            if(pagedResults.size() &lt;= 0) {
+               break;
+            }
+
+            Iterator i$ = pagedResults.iterator();
+
+            while(i$.hasNext()) {
+               Object[] result = (Object[])i$.next();
+               results.put((Integer)result[0], (Configuration)result[1]);
+            }
+
+            rowsProcessed += pagedResults.size();
+            if((long)rowsProcessed &gt;= count) {
+               break;
+            }
+
+            pageControl.setPageNumber(pageControl.getPageNumber() + 1);
+            PersistenceUtility.setDataPage(query, pageControl);
+         }
+
+         return results;
+      }
+   }
+
+   public Configuration getLiveResourceConfiguration(Subject subject, int resourceId, boolean pingAgentFirst) throws Exception {
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(resource == null) {
+         throw new NoResultException(&quot;Cannot get live configuration for unknown resource [&quot; + resourceId + &quot;]&quot;);
+      } else if(!this.authorizationManager.canViewResource(subject, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view resource configuration for [&quot; + resource + &quot;]&quot;);
+      } else {
+         Configuration liveConfig = this.getLiveResourceConfiguration(resource, pingAgentFirst);
+         return liveConfig;
+      }
+   }
+
+   public void checkForTimedOutConfigurationUpdateRequests() {
+      this.log.debug(&quot;Scanning configuration update requests to see if any in-progress requests have timed out...&quot;);
+      this.checkForTimedOutResourceConfigurationUpdateRequests();
+      this.checkForTimedOutGroupResourceConfigurationUpdateRequests();
+   }
+
+   private void checkForTimedOutResourceConfigurationUpdateRequests() {
+      try {
+         Query t = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findAllInStatus&quot;);
+         t.setParameter(&quot;status&quot;, ConfigurationUpdateStatus.INPROGRESS);
+         List requests = t.getResultList();
+         Iterator i$ = requests.iterator();
+
+         while(i$.hasNext()) {
+            ResourceConfigurationUpdate request = (ResourceConfigurationUpdate)i$.next();
+            long timeout = 600000L;
+            long duration = request.getDuration();
+            if(duration &gt; timeout) {
+               this.log.info(&quot;Resource configuration update request seems to have been orphaned - timing it out: &quot; + request);
+               request.setErrorMessage(&quot;Timed out - did not complete after &quot; + duration + &quot; ms&quot; + &quot; (the timeout period was &quot; + timeout + &quot; ms)&quot;);
+               request.setStatus(ConfigurationUpdateStatus.FAILURE);
+               this.checkForCompletedGroupResourceConfigurationUpdate(request.getId());
+            }
+         }
+      } catch (Throwable var9) {
+         this.log.error(&quot;Failed to check for timed out Resource configuration update requests. Cause: &quot; + var9);
+      }
+
+   }
+
+   private void checkForTimedOutGroupResourceConfigurationUpdateRequests() {
+      try {
+         Query t = this.entityManager.createNamedQuery(&quot;GroupResourceConfigurationUpdate.findAllInStatus&quot;);
+         t.setParameter(&quot;status&quot;, ConfigurationUpdateStatus.INPROGRESS);
+         List requests = t.getResultList();
+         Iterator i$ = requests.iterator();
+
+         while(i$.hasNext()) {
+            GroupResourceConfigurationUpdate request = (GroupResourceConfigurationUpdate)i$.next();
+            long timeout = 660000L;
+            long duration = request.getDuration();
+            if(duration &gt; timeout) {
+               this.log.info(&quot;Group Resource configuration update request seems to have been orphaned - timing it out: &quot; + request);
+               request.setErrorMessage(&quot;Timed out - did not complete after &quot; + duration + &quot; ms&quot; + &quot; (the timeout period was &quot; + timeout + &quot; ms)&quot;);
+               request.setStatus(ConfigurationUpdateStatus.FAILURE);
+            }
+         }
+      } catch (Throwable var9) {
+         this.log.error(&quot;Failed to check for timed out group Resource configuration update requests. Cause: &quot; + var9);
+      }
+
+   }
+
+   public PageList findPluginConfigurationUpdates(Subject subject, int resourceId, Long beginDate, Long endDate, PageControl pc) {
+      Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+      if(resource.getResourceType().getPluginConfigurationDefinition() != null &amp;&amp; !resource.getResourceType().getPluginConfigurationDefinition().getPropertyDefinitions().isEmpty()) {
+         pc.initDefaultOrderingField(&quot;cu.id&quot;, PageOrdering.DESC);
+         String queryName = &quot;PluginConfigurationUpdate.findAllByResourceId&quot;;
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+         queryCount.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         queryCount.setParameter(&quot;startTime&quot;, beginDate);
+         query.setParameter(&quot;startTime&quot;, beginDate);
+         queryCount.setParameter(&quot;endTime&quot;, endDate);
+         query.setParameter(&quot;endTime&quot;, endDate);
+         long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+         Object updates = query.getResultList();
+         if(updates != null &amp;&amp; ((List)updates).size() != 0) {
+            if(((List)updates).size() &gt; 0) {
+               resource = ((PluginConfigurationUpdate)((List)updates).get(0)).getResource();
+               if(!this.authorizationManager.canViewResource(subject, resource.getId())) {
+                  throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view resource [&quot; + resource + &quot;]&quot;);
+               }
+            }
+         } else {
+            updates = new ArrayList();
+            PluginConfigurationUpdate latest = this.getLatestPluginConfigurationUpdate(subject, resourceId);
+            if(latest != null) {
+               ((List)updates).add(latest);
+            }
+         }
+
+         return new PageList((Collection)updates, (int)totalCount, pc);
+      } else {
+         return new PageList(pc);
+      }
+   }
+
+   public PageList findResourceConfigurationUpdates(Subject subject, Integer resourceId, Long beginDate, Long endDate, boolean suppressOldest, PageControl pc) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId.intValue())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         Resource resource = (Resource)this.entityManager.find(Resource.class, resourceId);
+         if(resource.getResourceType().getResourceConfigurationDefinition() != null &amp;&amp; !resource.getResourceType().getResourceConfigurationDefinition().getPropertyDefinitions().isEmpty()) {
+            pc.initDefaultOrderingField(&quot;cu.id&quot;, PageOrdering.DESC);
+            String queryName = &quot;ResourceConfigurationUpdate.findAllByResourceId&quot;;
+            Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+            Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+            queryCount.setParameter(&quot;resourceId&quot;, resourceId);
+            query.setParameter(&quot;resourceId&quot;, resourceId);
+            queryCount.setParameter(&quot;startTime&quot;, beginDate);
+            query.setParameter(&quot;startTime&quot;, beginDate);
+            queryCount.setParameter(&quot;endTime&quot;, endDate);
+            query.setParameter(&quot;endTime&quot;, endDate);
+            int includeAll = suppressOldest?0:1;
+            queryCount.setParameter(&quot;includeAll&quot;, Integer.valueOf(includeAll));
+            query.setParameter(&quot;includeAll&quot;, Integer.valueOf(includeAll));
+            long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+            Object updates = query.getResultList();
+            if(!suppressOldest &amp;&amp; ((List)updates).size() == 0) {
+               updates = new ArrayList();
+               ResourceConfigurationUpdate latest = this.getLatestResourceConfigurationUpdate(subject, resourceId.intValue());
+               if(latest != null) {
+                  ((List)updates).add(latest);
+               }
+            }
+
+            return new PageList((Collection)updates, (int)totalCount, pc);
+         } else {
+            return new PageList(pc);
+         }
+      }
+   }
+
+   public PluginConfigurationUpdate getPluginConfigurationUpdate(Subject subject, int configurationUpdateId) {
+      PluginConfigurationUpdate update = (PluginConfigurationUpdate)this.entityManager.find(PluginConfigurationUpdate.class, Integer.valueOf(configurationUpdateId));
+      if(!this.authorizationManager.canViewResource(subject, update.getResource().getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view plugin configuration update for [&quot; + update.getResource() + &quot;]&quot;);
+      } else {
+         update.getConfiguration();
+         return update;
+      }
+   }
+
+   public ResourceConfigurationUpdate getResourceConfigurationUpdate(Subject subject, int configurationUpdateId) {
+      ResourceConfigurationUpdate update = (ResourceConfigurationUpdate)this.entityManager.find(ResourceConfigurationUpdate.class, Integer.valueOf(configurationUpdateId));
+      if(!this.authorizationManager.canViewResource(subject, update.getResource().getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view resource configuration update for [&quot; + update.getResource() + &quot;]&quot;);
+      } else {
+         update.getConfiguration();
+         return update;
+      }
+   }
+
+   public void purgePluginConfigurationUpdate(Subject subject, int configurationUpdateId, boolean purgeInProgress) {
+      PluginConfigurationUpdate doomedRequest = (PluginConfigurationUpdate)this.entityManager.find(PluginConfigurationUpdate.class, Integer.valueOf(configurationUpdateId));
+      if(doomedRequest == null) {
+         this.log.debug(&quot;Asked to purge a non-existing config update request [&quot; + configurationUpdateId + &quot;]&quot;);
+      } else if(doomedRequest.getStatus() == ConfigurationUpdateStatus.INPROGRESS &amp;&amp; !purgeInProgress) {
+         throw new IllegalStateException(&quot;The update request is still in the in-progress state. Please wait for it to complete: &quot; + doomedRequest);
+      } else {
+         Resource resource = doomedRequest.getResource();
+         if(!this.authorizationManager.hasResourcePermission(subject, Permission.CONFIGURE, resource.getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to purge a plugin configuration update audit trail for resource [&quot; + resource + &quot;]&quot;);
+         } else {
+            resource.getPluginConfigurationUpdates().remove(doomedRequest);
+            this.entityManager.remove(doomedRequest);
+            this.entityManager.flush();
+         }
+      }
+   }
+
+   public void purgeResourceConfigurationUpdate(Subject subject, int configurationUpdateId, boolean purgeInProgress) {
+      ResourceConfigurationUpdate doomedRequest = (ResourceConfigurationUpdate)this.entityManager.find(ResourceConfigurationUpdate.class, Integer.valueOf(configurationUpdateId));
+      if(doomedRequest == null) {
+         this.log.debug(&quot;Asked to purge a non-existing config update request [&quot; + configurationUpdateId + &quot;]&quot;);
+      } else if(doomedRequest.getStatus() == ConfigurationUpdateStatus.INPROGRESS &amp;&amp; !purgeInProgress) {
+         throw new IllegalStateException(&quot;The update request is still in the in-progress state. Please wait for it to complete: &quot; + doomedRequest);
+      } else {
+         Resource resource = doomedRequest.getResource();
+         if(!this.authorizationManager.hasResourcePermission(subject, Permission.CONFIGURE, resource.getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to purge a configuration update audit trail for resource [&quot; + resource + &quot;]&quot;);
+         } else {
+            resource.getResourceConfigurationUpdates().remove(doomedRequest);
+            this.entityManager.remove(doomedRequest);
+            this.entityManager.flush();
+         }
+      }
+   }
+
+   public void purgeResourceConfigurationUpdates(Subject subject, int[] configurationUpdateIds, boolean purgeInProgress) {
+      if(configurationUpdateIds != null &amp;&amp; configurationUpdateIds.length != 0) {
+         int[] arr$ = configurationUpdateIds;
+         int len$ = configurationUpdateIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            int configurationUpdateId = arr$[i$];
+            this.purgeResourceConfigurationUpdate(subject, configurationUpdateId, purgeInProgress);
+         }
+
+      }
+   }
+
+   @Nullable
+   public ResourceConfigurationUpdate updateResourceConfiguration(Subject subject, int resourceId, Configuration newConfiguration) throws ResourceNotFoundException {
+      ResourceConfigurationUpdate newUpdate = this.configurationManager.persistNewResourceConfigurationUpdateHistory(subject, resourceId, newConfiguration, ConfigurationUpdateStatus.INPROGRESS, subject.getName(), false);
+      this.executeResourceConfigurationUpdate(newUpdate);
+      return newUpdate;
+   }
+
+   public void executeResourceConfigurationUpdate(int updateId) {
+      ResourceConfigurationUpdate update = this.getResourceConfigurationUpdate(this.subjectManager.getOverlord(), updateId);
+      this.executeResourceConfigurationUpdate(update);
+   }
+
+   private void executeResourceConfigurationUpdate(ResourceConfigurationUpdate update) {
+      try {
+         AgentClient e = this.agentManager.getAgentClient(update.getResource().getAgent());
+         ConfigurationUpdateRequest request = new ConfigurationUpdateRequest(update.getId(), update.getConfiguration(), update.getResource().getId());
+         e.getConfigurationAgentService().updateResourceConfiguration(request);
+      } catch (RuntimeException var4) {
+         if(null != update) {
+            update.setStatus(ConfigurationUpdateStatus.FAILURE);
+            update.setErrorMessageFromThrowable(var4);
+            this.configurationManager.mergeConfigurationUpdate(update);
+         }
+      }
+
+   }
+
+   public void rollbackResourceConfiguration(Subject subject, int resourceId, int configHistoryId) throws ConfigurationUpdateException {
+      ResourceConfigurationUpdate configurationUpdateHistory = (ResourceConfigurationUpdate)this.entityManager.find(ResourceConfigurationUpdate.class, Integer.valueOf(configHistoryId));
+      Configuration configuration = configurationUpdateHistory.getConfiguration();
+      if(configuration == null) {
+         throw new ConfigurationUpdateException(&quot;No configuration history element exists with id = \'&quot; + configHistoryId + &quot;\'&quot;);
+      } else {
+         this.updateResourceConfiguration(subject, resourceId, configuration);
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public ResourceConfigurationUpdate persistNewResourceConfigurationUpdateHistory(Subject subject, int resourceId, Configuration newConfiguration, ConfigurationUpdateStatus newStatus, String newSubject, boolean isPartofGroupUpdate) throws ResourceNotFoundException, ConfigurationUpdateStillInProgressException {
+      Resource resource = this.resourceManager.getResourceById(subject, resourceId);
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.CONFIGURE, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to modify configuration for resource [&quot; + resource + &quot;]&quot;);
+      } else {
+         List previousRequests = resource.getResourceConfigurationUpdates();
+         String errorMessage = null;
+         if(previousRequests != null) {
+            Iterator current = previousRequests.iterator();
+
+            while(current.hasNext()) {
+               ResourceConfigurationUpdate zeroedConfiguration = (ResourceConfigurationUpdate)current.next();
+               if(zeroedConfiguration.getStatus() == ConfigurationUpdateStatus.INPROGRESS) {
+                  if(!isPartofGroupUpdate) {
+                     throw new ConfigurationUpdateStillInProgressException(&quot;Resource [&quot; + resource + &quot;] has a resource configuration update request already in progress - please wait for it to finish: &quot; + zeroedConfiguration);
+                  }
+
+                  newStatus = ConfigurationUpdateStatus.FAILURE;
+                  errorMessage = &quot;Resource configuration Update was aborted because an update request for the Resource was already in progress.&quot;;
+               }
+            }
+         }
+
+         ResourceConfigurationUpdate current1;
+         try {
+            Query zeroedConfiguration1 = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findCurrentlyActiveConfig&quot;);
+            zeroedConfiguration1.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+            current1 = (ResourceConfigurationUpdate)zeroedConfiguration1.getSingleResult();
+            resource = current1.getResource();
+         } catch (NoResultException var14) {
+            current1 = null;
+         }
+
+         if(!isPartofGroupUpdate &amp;&amp; current1 != null &amp;&amp; newConfiguration.equals(current1.getConfiguration())) {
+            return null;
+         } else {
+            Configuration zeroedConfiguration2 = newConfiguration.deepCopy(false);
+            ResourceConfigurationUpdate newUpdateRequest = new ResourceConfigurationUpdate(resource, zeroedConfiguration2, newSubject);
+            newUpdateRequest.setStatus(newStatus);
+            if(newStatus == ConfigurationUpdateStatus.FAILURE) {
+               newUpdateRequest.setErrorMessage(errorMessage);
+            }
+
+            this.entityManager.persist(newUpdateRequest);
+            if(current1 != null &amp;&amp; newStatus == ConfigurationUpdateStatus.SUCCESS) {
+               this.notifyAlertConditionCacheManager(&quot;persistNewResourceConfigurationUpdateHistory&quot;, newUpdateRequest);
+            }
+
+            resource.addResourceConfigurationUpdates(newUpdateRequest);
+            resource.getChildResources().size();
+            Agent agent = resource.getAgent();
+            if(agent != null) {
+               agent.getName();
+            }
+
+            return newUpdateRequest;
+         }
+      }
+   }
+
+   private void notifyAlertConditionCacheManager(String callingMethod, ResourceConfigurationUpdate update) {
+      AlertConditionCacheStats stats = this.alertConditionCacheManager.checkConditions(update);
+      this.log.debug(callingMethod + &quot;: &quot; + stats);
+   }
+
+   public void completeResourceConfigurationUpdate(ConfigurationUpdateResponse response) {
+      this.log.debug(&quot;Received a configuration-update-completed message: &quot; + response);
+      ResourceConfigurationUpdate update = (ResourceConfigurationUpdate)this.entityManager.find(ResourceConfigurationUpdate.class, Integer.valueOf(response.getConfigurationUpdateId()));
+      if(update == null) {
+         throw new IllegalStateException(&quot;The completed request passed in does not match any request for any resource in inventory: &quot; + response);
+      } else {
+         if(response.getStatus() == ConfigurationUpdateStatus.FAILURE) {
+            if(response.getConfiguration() != null) {
+               Configuration resource = response.getConfiguration();
+               resource = (Configuration)this.entityManager.merge(resource);
+               update.setConfiguration(resource);
+            }
+         } else if(response.getStatus() == ConfigurationUpdateStatus.SUCCESS) {
+            Resource resource1 = update.getResource();
+            resource1.setResourceConfiguration(update.getConfiguration().deepCopy(false));
+            this.notifyAlertConditionCacheManager(&quot;completeResourceConfigurationUpdate&quot;, update);
+         }
+
+         update.setStatus(response.getStatus());
+         update.setErrorMessage(response.getErrorMessage());
+      }
+   }
+
+   public void checkForCompletedGroupResourceConfigurationUpdate(int resourceConfigUpdateId) {
+      ResourceConfigurationUpdate resourceConfigUpdate = (ResourceConfigurationUpdate)this.entityManager.find(ResourceConfigurationUpdate.class, Integer.valueOf(resourceConfigUpdateId));
+      if(resourceConfigUpdate.getStatus() != ConfigurationUpdateStatus.INPROGRESS) {
+         GroupResourceConfigurationUpdate groupConfigUpdate = resourceConfigUpdate.getGroupConfigurationUpdate();
+         if(groupConfigUpdate != null) {
+            Query inProgressResourcesCountQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceConfigurationUpdate.findByParentUpdateIdAndStatus&quot;);
+            inProgressResourcesCountQuery.setParameter(&quot;parentUpdateId&quot;, Integer.valueOf(groupConfigUpdate.getId()));
+            inProgressResourcesCountQuery.setParameter(&quot;status&quot;, ConfigurationUpdateStatus.INPROGRESS);
+            long inProgressResourcesCount = ((Long)inProgressResourcesCountQuery.getSingleResult()).longValue();
+            if(inProgressResourcesCount == 0L) {
+               Query failedResourcesQuery = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.findByParentUpdateIdAndStatus&quot;);
+               failedResourcesQuery.setParameter(&quot;parentUpdateId&quot;, Integer.valueOf(groupConfigUpdate.getId()));
+               failedResourcesQuery.setParameter(&quot;status&quot;, ConfigurationUpdateStatus.FAILURE);
+               List failedResources = failedResourcesQuery.getResultList();
+               ConfigurationUpdateStatus groupStatus;
+               if(failedResources.isEmpty()) {
+                  groupStatus = ConfigurationUpdateStatus.SUCCESS;
+               } else {
+                  groupStatus = ConfigurationUpdateStatus.FAILURE;
+                  groupConfigUpdate.setErrorMessage(&quot;The following Resources failed to update their Configurations: &quot; + failedResources);
+               }
+
+               groupConfigUpdate.setStatus(groupStatus);
+               this.log.info(&quot;Group Resource configuration update [&quot; + groupConfigUpdate.getId() + &quot;] for &quot; + groupConfigUpdate.getGroup() + &quot; has completed with status [&quot; + groupStatus + &quot;].&quot;);
+            } else {
+               this.log.debug(&quot;Group Resource configuration update [&quot; + groupConfigUpdate.getId() + &quot;] for &quot; + groupConfigUpdate.getGroup() + &quot; has &quot; + inProgressResourcesCount + &quot; member updates still in progress.&quot;);
+            }
+
+         }
+      }
+   }
+
+   @Nullable
+   public ConfigurationDefinition getResourceConfigurationDefinitionForResourceType(Subject subject, int resourceTypeId) {
+      Query query = this.entityManager.createNamedQuery(&quot;ConfigurationDefinition.findResourceByResourceTypeId&quot;);
+      query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+      ConfigurationDefinition configurationDefinition = null;
+
+      try {
+         configurationDefinition = (ConfigurationDefinition)query.getSingleResult();
+      } catch (NoResultException var7) {
+         ResourceType resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(resourceTypeId));
+         if(resourceType == null) {
+            throw new EntityNotFoundException(&quot;A resource type with id &quot; + resourceTypeId + &quot; does not exist.&quot;);
+         }
+      }
+
+      return configurationDefinition;
+   }
+
+   @Nullable
+   public ConfigurationDefinition getResourceConfigurationDefinitionWithTemplatesForResourceType(Subject subject, int resourceTypeId) {
+      Query query = this.entityManager.createNamedQuery(&quot;ConfigurationDefinition.findResourceByResourceTypeId&quot;);
+      query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+      ConfigurationDefinition configurationDefinition = null;
+
+      try {
+         configurationDefinition = (ConfigurationDefinition)query.getSingleResult();
+      } catch (NoResultException var7) {
+         ResourceType resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(resourceTypeId));
+         if(resourceType == null) {
+            throw new EntityNotFoundException(&quot;A resource type with id &quot; + resourceTypeId + &quot; does not exist.&quot;);
+         }
+      }
+
+      if(configurationDefinition != null &amp;&amp; configurationDefinition.getTemplates() != null) {
+         configurationDefinition.getTemplates().size();
+      }
+
+      return configurationDefinition;
+   }
+
+   public boolean hasPluginConfiguration(int resourceTypeId) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ConfigurationDefinition.findPluginByResourceTypeId&quot;);
+      countQuery.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return count != 0L;
+   }
+
+   @Nullable
+   public ConfigurationDefinition getPluginConfigurationDefinitionForResourceType(Subject subject, int resourceTypeId) {
+      Query query = this.entityManager.createNamedQuery(&quot;ConfigurationDefinition.findPluginByResourceTypeId&quot;);
+      query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+      ConfigurationDefinition configurationDefinition = null;
+
+      try {
+         configurationDefinition = (ConfigurationDefinition)query.getSingleResult();
+      } catch (NoResultException var7) {
+         ResourceType resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(resourceTypeId));
+         if(resourceType == null) {
+            throw new EntityNotFoundException(&quot;A resource type with id &quot; + resourceTypeId + &quot; does not exist.&quot;);
+         }
+      }
+
+      if(configurationDefinition != null &amp;&amp; configurationDefinition.getTemplates() != null) {
+         configurationDefinition.getTemplates().size();
+      }
+
+      return configurationDefinition;
+   }
+
+   private Configuration getLiveResourceConfiguration(Resource resource, boolean pingAgentFirst) {
+      Configuration liveConfig = null;
+
+      try {
+         Agent e = resource.getAgent();
+         AgentClient agentClient = this.agentManager.getAgentClient(e);
+         boolean agentPingedSuccessfully = false;
+         if(pingAgentFirst) {
+            agentPingedSuccessfully = agentClient.ping(5000L);
+         }
+
+         if(pingAgentFirst &amp;&amp; !agentPingedSuccessfully) {
+            this.log.warn(&quot;Agent is unreachable [&quot; + e + &quot;] - cannot get live configuration for resource [&quot; + resource + &quot;]&quot;);
+         } else {
+            liveConfig = agentClient.getConfigurationAgentService().loadResourceConfiguration(resource.getId());
+            if(liveConfig == null) {
+               this.log.debug(&quot;ConfigurationAgentService.loadResourceConfiguration() returned a null Configuration.&quot;);
+               liveConfig = new Configuration();
+            }
+         }
+      } catch (Exception var7) {
+         this.log.warn(&quot;Could not get live configuration for resource [&quot; + resource + &quot;]&quot; + ThrowableUtil.getAllMessages(var7, true));
+      }
+
+      return liveConfig;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public AbstractResourceConfigurationUpdate mergeConfigurationUpdate(AbstractResourceConfigurationUpdate configurationUpdate) {
+      return (AbstractResourceConfigurationUpdate)this.entityManager.merge(configurationUpdate);
+   }
+
+   public Configuration getConfigurationById(int id) {
+      return (Configuration)this.entityManager.find(Configuration.class, Integer.valueOf(id));
+   }
+
+   public Configuration getConfiguration(Subject subject, int configurationId) {
+      return this.getConfigurationById(configurationId);
+   }
+
+   public Configuration getConfigurationFromDefaultTemplate(ConfigurationDefinition definition) {
+      ConfigurationDefinition managedDefinition = (ConfigurationDefinition)this.entityManager.find(ConfigurationDefinition.class, Integer.valueOf(definition.getId()));
+      return managedDefinition.getDefaultTemplate().getConfiguration();
+   }
+
+   private void handlePluginConfiguratonUpdateRemoteException(Resource resource, String summary, String detail) {
+      resource.setConnected(false);
+      ResourceError invalidPluginConfigError = new ResourceError(resource, ResourceErrorType.INVALID_PLUGIN_CONFIGURATION, summary, detail, Calendar.getInstance().getTimeInMillis());
+      this.resourceManager.addResourceError(invalidPluginConfigError);
+   }
+
+   private void removeAnyExistingInvalidPluginConfigurationErrors(Subject subject, Resource resource) {
+      this.resourceManager.clearResourceConfigError(resource.getId());
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public int createGroupConfigurationUpdate(AbstractGroupConfigurationUpdate update) throws SchedulerException {
+      this.entityManager.persist(update);
+      return update.getId();
+   }
+
+   public int scheduleGroupPluginConfigurationUpdate(Subject subject, int compatibleGroupId, Map memberPluginConfigurations) throws SchedulerException {
+      if(memberPluginConfigurations == null) {
+         throw new IllegalArgumentException(&quot;GroupPluginConfigurationUpdate must have non-null member configurations.&quot;);
+      } else {
+         ResourceGroup group = this.getCompatibleGroupIfAuthorized(subject, compatibleGroupId);
+         this.ensureModifyResourcePermission(subject, group);
+         GroupPluginConfigurationUpdate groupUpdate = new GroupPluginConfigurationUpdate(group, subject.getName());
+         int updateId = this.configurationManager.createGroupConfigurationUpdate(groupUpdate);
+         Iterator jobDataMap = memberPluginConfigurations.keySet().iterator();
+
+         while(jobDataMap.hasNext()) {
+            Integer jobDetail = (Integer)jobDataMap.next();
+            Configuration trigger = (Configuration)memberPluginConfigurations.get(jobDetail);
+            Resource flyWeight = new Resource(jobDetail.intValue());
+            PluginConfigurationUpdate memberUpdate = new PluginConfigurationUpdate(flyWeight, trigger, subject.getName());
+            memberUpdate.setGroupConfigurationUpdate(groupUpdate);
+            this.entityManager.persist(memberUpdate);
+         }
+
+         JobDataMap jobDataMap1 = new JobDataMap();
+         jobDataMap1.putAsString(&quot;configGroupUpdateId&quot;, updateId);
+         jobDataMap1.putAsString(&quot;subjectId&quot;, subject.getId());
+         JobDetail jobDetail1 = GroupPluginConfigurationUpdateJob.getJobDetail(group, subject, jobDataMap1);
+         Trigger trigger1 = QuartzUtil.getFireOnceOffsetTrigger(jobDetail1, 10000L);
+         this.scheduler.scheduleJob(jobDetail1, trigger1);
+         this.log.debug(&quot;Scheduled plugin configuration update against compatibleGroup[id=&quot; + compatibleGroupId + &quot;]&quot;);
+         return updateId;
+      }
+   }
+
+   public int scheduleGroupResourceConfigurationUpdate(Subject subject, int compatibleGroupId, @XmlJavaTypeAdapter(WebServiceTypeAdapter.class) Map newResourceConfigurationMap) {
+      if(newResourceConfigurationMap == null) {
+         throw new IllegalArgumentException(&quot;GroupResourceConfigurationUpdate must have non-null member configurations.&quot;);
+      } else {
+         ResourceGroup group = this.getCompatibleGroupIfAuthorized(subject, compatibleGroupId);
+         if(!this.authorizationManager.hasGroupPermission(subject, Permission.CONFIGURE, group.getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission &quot; + &quot;to modify Resource configurations for members of group [&quot; + group + &quot;].&quot;);
+         } else {
+            this.ensureNoResourceConfigurationUpdatesInProgress(group);
+            GroupResourceConfigurationUpdate groupUpdate = new GroupResourceConfigurationUpdate(group, subject.getName());
+            int updateId = -1;
+
+            try {
+               updateId = this.configurationManager.createGroupConfigurationUpdate(groupUpdate);
+            } catch (SchedulerException var13) {
+               String jobDetail = &quot;Error scheduling update for group[id=&quot; + group.getId() + &quot;]:&quot;;
+               this.log.error(jobDetail, var13);
+               new ResourceGroupUpdateException(jobDetail + var13.getMessage());
+            }
+
+            Iterator jobDataMap = newResourceConfigurationMap.keySet().iterator();
+
+            while(jobDataMap.hasNext()) {
+               Integer jobDetail1 = (Integer)jobDataMap.next();
+               Configuration trigger = (Configuration)newResourceConfigurationMap.get(jobDetail1);
+               Resource e = new Resource(jobDetail1.intValue());
+               ResourceConfigurationUpdate message = new ResourceConfigurationUpdate(e, trigger, subject.getName());
+               message.setGroupConfigurationUpdate(groupUpdate);
+               this.entityManager.persist(message);
+            }
+
+            JobDataMap jobDataMap1 = new JobDataMap();
+            jobDataMap1.putAsString(&quot;configGroupUpdateId&quot;, updateId);
+            jobDataMap1.putAsString(&quot;subjectId&quot;, subject.getId());
+            JobDetail jobDetail2 = GroupResourceConfigurationUpdateJob.getJobDetail(group, subject, jobDataMap1);
+            Trigger trigger1 = QuartzUtil.getFireOnceOffsetTrigger(jobDetail2, 10000L);
+
+            try {
+               this.scheduler.scheduleJob(jobDetail2, trigger1);
+            } catch (SchedulerException var12) {
+               String message1 = &quot;Error scheduling job named \'&quot; + jobDetail2.getName() + &quot;\':&quot;;
+               this.log.error(message1, var12);
+               new ResourceGroupUpdateException(message1 + var12.getMessage());
+            }
+
+            this.log.debug(&quot;Scheduled Resource configuration update against compatible ResourceGroup[id=&quot; + compatibleGroupId + &quot;].&quot;);
+            return updateId;
+         }
+      }
+   }
+
+   private ResourceGroup getCompatibleGroupIfAuthorized(Subject subject, int compatibleGroupId) {
+      try {
+         ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, compatibleGroupId, GroupCategory.COMPATIBLE);
+         return group;
+      } catch (ResourceGroupNotFoundException var5) {
+         throw new RuntimeException(&quot;Cannot get support operations for unknown group [&quot; + compatibleGroupId + &quot;]: &quot; + var5, var5);
+      }
+   }
+
+   private void ensureModifyPermission(Subject subject, Resource resource) throws PermissionException {
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.MODIFY_RESOURCE, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission &quot; + &quot;to modify plugin configuration for resource [&quot; + resource + &quot;]&quot;);
+      }
+   }
+
+   private void ensureModifyResourcePermission(Subject subject, ResourceGroup group) throws PermissionException {
+      if(!this.authorizationManager.hasGroupPermission(subject, Permission.MODIFY_RESOURCE, group.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission &quot; + &quot;to modify plugin configuration for members of group [&quot; + group + &quot;]&quot;);
+      }
+   }
+
+   public GroupPluginConfigurationUpdate getGroupPluginConfigurationById(int configurationUpdateId) {
+      GroupPluginConfigurationUpdate update = (GroupPluginConfigurationUpdate)this.entityManager.find(GroupPluginConfigurationUpdate.class, Integer.valueOf(configurationUpdateId));
+      return update;
+   }
+
+   public GroupResourceConfigurationUpdate getGroupResourceConfigurationById(int configurationUpdateId) {
+      GroupResourceConfigurationUpdate update = (GroupResourceConfigurationUpdate)this.entityManager.find(GroupResourceConfigurationUpdate.class, Integer.valueOf(configurationUpdateId));
+      return update;
+   }
+
+   public PageList findPluginConfigurationUpdateCompositesByParentId(int configurationUpdateId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;cu.modifiedTime&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PluginConfigurationUpdate.findCompositeByParentUpdateId&quot;, pageControl);
+      query.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(configurationUpdateId));
+      long count = this.getPluginConfigurationUpdateCountByParentId(configurationUpdateId);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findResourceConfigurationUpdateCompositesByParentId(int configurationUpdateId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;cu.modifiedTime&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceConfigurationUpdate.findCompositeByParentUpdateId&quot;, pageControl);
+      query.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(configurationUpdateId));
+      long count = this.getResourceConfigurationUpdateCountByParentId(configurationUpdateId);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public PageList findPluginConfigurationUpdatesByParentId(int configurationUpdateId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;cu.modifiedTime&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PluginConfigurationUpdate.findByParentUpdateId&quot;, pageControl);
+      query.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(configurationUpdateId));
+      long count = this.getPluginConfigurationUpdateCountByParentId(configurationUpdateId);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public long getPluginConfigurationUpdateCountByParentId(int configurationUpdateId) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PluginConfigurationUpdate.findByParentUpdateId&quot;);
+      countQuery.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(configurationUpdateId));
+      return ((Long)countQuery.getSingleResult()).longValue();
+   }
+
+   public PageList findResourceConfigurationUpdatesByParentId(int groupConfigurationUpdateId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;cu.modifiedTime&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceConfigurationUpdate.findByParentUpdateId&quot;, pageControl);
+      query.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(groupConfigurationUpdateId));
+      long count = this.getResourceConfigurationUpdateCountByParentId(groupConfigurationUpdateId);
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   public long getResourceConfigurationUpdateCountByParentId(int groupConfigurationUpdateId) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceConfigurationUpdate.findByParentUpdateId&quot;);
+      countQuery.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(groupConfigurationUpdateId));
+      return ((Long)countQuery.getSingleResult()).longValue();
+   }
+
+   public Map getResourceConfigurationMapForGroupUpdate(Integer groupResourceConfigurationUpdateId) {
+      Tuple groupIdParameter = new Tuple(&quot;groupConfigurationUpdateId&quot;, groupResourceConfigurationUpdateId);
+      return this.executeGetConfigurationMapQuery(&quot;Configuration.getResourceConfigMapByGroupUpdateId&quot;, 100, new Tuple[]{groupIdParameter});
+   }
+
+   public Map getPluginConfigurationMapForGroupUpdate(Integer groupPluginConfigurationUpdateId) {
+      Tuple groupIdParameter = new Tuple(&quot;groupConfigurationUpdateId&quot;, groupPluginConfigurationUpdateId);
+      return this.executeGetConfigurationMapQuery(&quot;Configuration.getPluginConfigMapByGroupUpdateId&quot;, 100, new Tuple[]{groupIdParameter});
+   }
+
+   public Map getResourceConfigurationMapForCompatibleGroup(ResourceGroup compatibleGroup) {
+      Tuple groupIdParameter = new Tuple(&quot;resourceGroupId&quot;, Integer.valueOf(compatibleGroup.getId()));
+      return this.executeGetConfigurationMapQuery(&quot;Configuration.getResourceConfigMapByGroupId&quot;, 100, new Tuple[]{groupIdParameter});
+   }
+
+   private Map executeGetConfigurationMapQuery(String memberQueryName, int maxSize, Tuple... parameters) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, memberQueryName);
+      Query query = this.entityManager.createNamedQuery(memberQueryName);
+      Tuple[] count = parameters;
+      int len$ = parameters.length;
+
+      int resultsSize;
+      for(resultsSize = 0; resultsSize &lt; len$; ++resultsSize) {
+         Tuple results = count[resultsSize];
+         countQuery.setParameter((String)results.lefty, results.righty);
+         query.setParameter((String)results.lefty, results.righty);
+      }
+
+      PersistenceUtility.setDataPage(query, new PageControl(0, maxSize));
+      long var13 = ((Long)countQuery.getSingleResult()).longValue();
+      if(var13 &gt; (long)maxSize) {
+         this.log.error(&quot;Configuration set contains more than &quot; + maxSize + &quot; members - &quot; + &quot;returning only &quot; + maxSize + &quot; Configurations (the maximum allowed).&quot;);
+         resultsSize = maxSize;
+      } else {
+         resultsSize = (int)var13;
+      }
+
+      HashMap var14 = new HashMap((int)((double)resultsSize * 1.5D));
+      List pagedResults = query.getResultList();
+      Iterator i$ = pagedResults.iterator();
+
+      while(i$.hasNext()) {
+         Object[] result = (Object[])i$.next();
+         var14.put((Integer)result[0], (Configuration)result[1]);
+      }
+
+      return var14;
+   }
+
+   public PageList findGroupPluginConfigurationUpdates(int groupId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;modifiedTime&quot;, PageOrdering.DESC);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;GroupPluginConfigurationUpdate.findByGroupId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;GroupPluginConfigurationUpdate.findByGroupId&quot;);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      countQuery.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = null;
+      results = query.getResultList();
+      return new PageList(results, (int)count, pc);
+   }
+
+   public PageList findGroupResourceConfigurationUpdates(int groupId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;modifiedTime&quot;, PageOrdering.DESC);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;GroupResourceConfigurationUpdate.findByGroupId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;GroupResourceConfigurationUpdate.findByGroupId&quot;);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      countQuery.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = null;
+      results = query.getResultList();
+      return new PageList(results, (int)count, pc);
+   }
+
+   public ConfigurationUpdateStatus updateGroupPluginConfigurationUpdateStatus(int groupConfigurationUpdateId, String errorMessages) {
+      GroupPluginConfigurationUpdate groupUpdate = this.configurationManager.getGroupPluginConfigurationById(groupConfigurationUpdateId);
+      Query query = this.entityManager.createNamedQuery(&quot;PluginConfigurationUpdate.findStatusByParentUpdateId&quot;);
+      query.setParameter(&quot;groupConfigurationUpdateId&quot;, Integer.valueOf(groupConfigurationUpdateId));
+      List updateStatusTuples = query.getResultList();
+      ConfigurationUpdateStatus groupUpdateStatus;
+      if(!updateStatusTuples.contains(ConfigurationUpdateStatus.FAILURE) &amp;&amp; errorMessages == null) {
+         groupUpdateStatus = ConfigurationUpdateStatus.SUCCESS;
+      } else {
+         groupUpdateStatus = ConfigurationUpdateStatus.FAILURE;
+      }
+
+      groupUpdate.setStatus(groupUpdateStatus);
+      groupUpdate.setErrorMessage(errorMessages);
+      this.configurationManager.updateGroupConfigurationUpdate(groupUpdate);
+      return groupUpdateStatus;
+   }
+
+   public int deleteGroupPluginConfigurationUpdates(Subject subject, Integer resourceGroupId, Integer[] groupPluginConfigurationUpdateIds) {
+      int removed = 0;
+      Integer[] arr$ = groupPluginConfigurationUpdateIds;
+      int len$ = groupPluginConfigurationUpdateIds.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         Integer apcuId = arr$[i$];
+
+         try {
+            Query e = this.entityManager.createNamedQuery(&quot;pluginConfigurationUpdate.deleteGroupUpdate&quot;);
+            e.setParameter(&quot;apcuId&quot;, apcuId);
+            e.executeUpdate();
+            GroupPluginConfigurationUpdate update = this.getGroupPluginConfigurationById(apcuId.intValue());
+            this.entityManager.remove(update);
+            ++removed;
+         } catch (Exception var11) {
+            this.log.error(&quot;Problem removing group plugin configuration update&quot;, var11);
+         }
+      }
+
+      return removed;
+   }
+
+   public int deleteGroupResourceConfigurationUpdates(Subject subject, Integer resourceGroupId, Integer[] groupResourceConfigurationUpdateIds) {
+      if(!this.authorizationManager.hasGroupPermission(subject, Permission.CONFIGURE, resourceGroupId.intValue())) {
+         this.log.error(subject + &quot; attempted to delete &quot; + groupResourceConfigurationUpdateIds.length + &quot; group resource configuration updates for ResourceGroup[id&quot; + resourceGroupId + &quot;], but did not have the &quot; + Permission.CONFIGURE.name() + &quot; permission for this group&quot;);
+         return 0;
+      } else {
+         int removed = 0;
+         Integer[] arr$ = groupResourceConfigurationUpdateIds;
+         int len$ = groupResourceConfigurationUpdateIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer arcuId = arr$[i$];
+
+            try {
+               Query e = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.deleteGroupUpdate&quot;);
+               e.setParameter(&quot;arcuId&quot;, arcuId);
+               e.executeUpdate();
+               GroupResourceConfigurationUpdate update = this.getGroupResourceConfigurationById(arcuId.intValue());
+               this.entityManager.remove(update);
+               ++removed;
+            } catch (Exception var11) {
+               this.log.error(&quot;Problem removing group resource configuration update&quot;, var11);
+            }
+         }
+
+         return removed;
+      }
+   }
+
+   public void updateGroupConfigurationUpdate(AbstractGroupConfigurationUpdate groupUpdate) {
+      this.entityManager.merge(groupUpdate);
+   }
+
+   public void deleteConfigurations(List configurationIds) {
+      if(configurationIds != null &amp;&amp; configurationIds.size() != 0) {
+         Query propertiesQuery = this.entityManager.createNamedQuery(&quot;Property.deleteByConfigurationIds&quot;);
+         Query configurationsQuery = this.entityManager.createNamedQuery(&quot;Property.deleteByConfigurationIds&quot;);
+         propertiesQuery.setParameter(&quot;configurationIds&quot;, configurationIds);
+         configurationsQuery.setParameter(&quot;configurationIds&quot;, configurationIds);
+         propertiesQuery.executeUpdate();
+         configurationsQuery.executeUpdate();
+      }
+   }
+
+   public void deleteProperties(int[] propertyIds) {
+      if(propertyIds != null &amp;&amp; propertyIds.length != 0) {
+         Query propertiesQuery = this.entityManager.createNamedQuery(&quot;Property.deleteByPropertyIds&quot;);
+         propertiesQuery.setParameter(&quot;propertyIds&quot;, ArrayUtils.wrapInList(propertyIds));
+         propertiesQuery.executeUpdate();
+      }
+   }
+
+   public GroupPluginConfigurationUpdate getGroupPluginConfigurationUpdate(Subject subject, int configurationUpdateId) {
+      GroupPluginConfigurationUpdate update = this.getGroupPluginConfigurationById(configurationUpdateId);
+      int groupId = update.getGroup().getId();
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view group resourceConfiguration[id=&quot; + configurationUpdateId + &quot;]&quot;);
+      } else {
+         return update;
+      }
+   }
+
+   public GroupResourceConfigurationUpdate getGroupResourceConfigurationUpdate(Subject subject, int configurationUpdateId) {
+      GroupResourceConfigurationUpdate update = this.getGroupResourceConfigurationById(configurationUpdateId);
+      int groupId = update.getGroup().getId();
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view group resourceConfiguration[id=&quot; + configurationUpdateId + &quot;]&quot;);
+      } else {
+         return update;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

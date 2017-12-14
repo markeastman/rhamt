@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for AgentManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/core/AgentManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.core;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.interceptor.ExcludeDefaultInterceptors;
+import javax.management.MBeanServer;
+import javax.management.MBeanServerInvocationHandler;
+import javax.management.ObjectName;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.maven.artifact.versioning.ComparableVersion;
+import org.jboss.annotation.IgnoreDependency;
+import org.jboss.mx.util.MBeanServerLocator;
+import org.jboss.system.server.ServerConfig;
+import org.rhq.core.clientapi.server.core.AgentVersion;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.measurement.AvailabilityType;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.composite.AgentLastAvailabilityReportComposite;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.MD5Generator;
+import org.rhq.core.util.ObjectNameFactory;
+import org.rhq.core.util.stream.StreamUtil;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.cloud.FailoverListManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.core.CoreServerMBean;
+import org.rhq.enterprise.server.core.comm.ServerCommunicationsServiceMBean;
+import org.rhq.enterprise.server.core.comm.ServerCommunicationsServiceUtil;
+import org.rhq.enterprise.server.measurement.AvailabilityManagerLocal;
+import org.rhq.enterprise.server.system.SystemManagerLocal;
+import org.rhq.enterprise.server.util.LookupUtil;
+import org.rhq.enterprise.server.util.concurrent.AvailabilityReportSerializer;
+
+@Stateless
+public class AgentManagerBean implements AgentManagerLocal {
+   private final Log log = LogFactory.getLog(AgentManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   @IgnoreDependency
+   private FailoverListManagerLocal failoverListManager;
+   @EJB
+   @IgnoreDependency
+   private AvailabilityManagerLocal availabilityManager;
+   @EJB
+   private SystemManagerLocal systemManager;
+   private static final String RHQ_SERVER_VERSION = &quot;rhq-server.version&quot;;
+   private static final String RHQ_SERVER_BUILD_NUMBER = &quot;rhq-server.build-number&quot;;
+   private static final String RHQ_AGENT_LATEST_VERSION = &quot;rhq-agent.latest.version&quot;;
+   private static final String RHQ_AGENT_LATEST_BUILD_NUMBER = &quot;rhq-agent.latest.build-number&quot;;
+   private static final String RHQ_AGENT_LATEST_MD5 = &quot;rhq-agent.latest.md5&quot;;
+
+   @ExcludeDefaultInterceptors
+   public void createAgent(Agent agent) {
+      this.entityManager.persist(agent);
+      this.log.debug(&quot;Persisted new agent: &quot; + agent);
+   }
+
+   @ExcludeDefaultInterceptors
+   public void deleteAgent(Agent agent) {
+      agent = (Agent)this.entityManager.find(Agent.class, Integer.valueOf(agent.getId()));
+      this.failoverListManager.deleteServerListsForAgent(agent);
+      this.entityManager.remove(agent);
+      ServerCommunicationsServiceMBean bootstrap = ServerCommunicationsServiceUtil.getService();
+
+      try {
+         bootstrap.destroyKnownAgentClient(agent);
+      } catch (Exception var4) {
+         this.log.warn(&quot;Could not find agentClient for doomedAgent: &quot; + agent);
+      }
+
+      this.log.info(&quot;Removed agent: &quot; + agent);
+   }
+
+   @ExcludeDefaultInterceptors
+   public Agent updateAgent(Agent agent) {
+      agent = (Agent)this.entityManager.merge(agent);
+      this.log.debug(&quot;Updated agent: &quot; + agent);
+      return agent;
+   }
+
+   @ExcludeDefaultInterceptors
+   public AgentClient getAgentClient(Agent agent) {
+      AgentClient client = null;
+
+      try {
+         ServerCommunicationsServiceMBean t = ServerCommunicationsServiceUtil.getService();
+         client = t.getKnownAgentClient(agent);
+         client.startSending();
+      } catch (Throwable var4) {
+         this.log.debug(&quot;Could not get agent client for &quot; + agent);
+      }
+
+      return client;
+   }
+
+   @ExcludeDefaultInterceptors
+   public AgentClient getAgentClient(int resourceId) {
+      Agent agent = this.getAgentByResourceId(resourceId);
+      if(agent == null) {
+         this.log.debug(&quot;Resource [&quot; + resourceId + &quot;] does not exist or has no agent assigned&quot;);
+         return null;
+      } else {
+         return this.getAgentClient(agent);
+      }
+   }
+
+   @ExcludeDefaultInterceptors
+   public void agentIsShuttingDown(String agentName) {
+      Agent downedAgent = this.getAgentByName(agentName);
+      ServerCommunicationsServiceMBean server_bootstrap = ServerCommunicationsServiceUtil.getService();
+      server_bootstrap.removeDownedAgent(downedAgent.getRemoteEndpoint());
+      this.log.info(&quot;Agent with name [&quot; + agentName + &quot;] just went down&quot;);
+   }
+
+   @ExcludeDefaultInterceptors
+   public void agentIsAlive(Agent agent) {
+      try {
+         ServerCommunicationsServiceMBean e = ServerCommunicationsServiceUtil.getService();
+         e.addStartedAgent(agent);
+      } catch (Exception var3) {
+         this.log.info(&quot;Cannot flag the agent as started for some reason&quot;, var3);
+      }
+
+   }
+
+   @ExcludeDefaultInterceptors
+   public void checkForSuspectAgents() {
+      this.log.debug(&quot;Checking to see if there are agents that we suspect are down...&quot;);
+      long maximumQuietTimeAllowed = 900000L;
+
+      try {
+         String records = this.systemManager.getSystemConfiguration().getProperty(&quot;AGENT_MAX_QUIET_TIME_ALLOWED&quot;);
+         if(records != null) {
+            maximumQuietTimeAllowed = Long.parseLong(records);
+         }
+      } catch (Exception var19) {
+         this.log.warn(&quot;Agent quiet time config is invalid in DB, defaulting to: &quot; + maximumQuietTimeAllowed, var19);
+      }
+
+      long nowEpoch = System.currentTimeMillis();
+      Query q = this.entityManager.createNamedQuery(&quot;Agent.findAllSuspectAgents&quot;);
+      q.setParameter(&quot;dateThreshold&quot;, Long.valueOf(nowEpoch - maximumQuietTimeAllowed));
+      List records1 = q.getResultList();
+      ServerCommunicationsServiceMBean serverComm = null;
+      Iterator i$ = records1.iterator();
+
+      while(i$.hasNext()) {
+         AgentLastAvailabilityReportComposite record = (AgentLastAvailabilityReportComposite)i$.next();
+         long lastReport = record.getLastAvailabilityReport().longValue();
+         long timeSinceLastReport = nowEpoch - lastReport;
+         if(timeSinceLastReport % 21600000L &lt; maximumQuietTimeAllowed * 2L) {
+            this.log.warn(&quot;Have not heard from agent [&quot; + record.getAgentName() + &quot;] since [&quot; + new Date(record.getLastAvailabilityReport().longValue()) + &quot;]. Will be backfilled since we suspect it is down&quot;);
+            if(serverComm == null) {
+               serverComm = ServerCommunicationsServiceUtil.getService();
+            }
+
+            serverComm.removeDownedAgent(record.getRemoteEndpoint());
+         }
+
+         if(!this.availabilityManager.isAgentBackfilled(record.getAgentId())) {
+            AvailabilityReportSerializer.getSingleton().lock(record.getAgentName());
+
+            try {
+               this.availabilityManager.setAllAgentResourceAvailabilities(record.getAgentId(), AvailabilityType.DOWN);
+            } finally {
+               AvailabilityReportSerializer.getSingleton().unlock(record.getAgentName());
+            }
+         }
+      }
+
+      this.log.debug(&quot;Finished checking for suspected agents&quot;);
+   }
+
+   @ExcludeDefaultInterceptors
+   public List getAllAgents() {
+      return this.entityManager.createNamedQuery(&quot;Agent.findAll&quot;).getResultList();
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getAgentsByServer(Subject subject, Integer serverId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;a.name&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Agent.findByServer&quot;, pageControl);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Agent.findByServer&quot;);
+      query.setParameter(&quot;serverId&quot;, serverId);
+      countQuery.setParameter(&quot;serverId&quot;, serverId);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, pageControl);
+   }
+
+   @ExcludeDefaultInterceptors
+   public int getAgentCount() {
+      return ((Number)this.entityManager.createNamedQuery(&quot;Agent.countAll&quot;).getSingleResult()).intValue();
+   }
+
+   @ExcludeDefaultInterceptors
+   public Agent getAgentByAgentToken(String token) {
+      Agent agent;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findByAgentToken&quot;);
+         e.setParameter(&quot;agentToken&quot;, token);
+         agent = (Agent)e.getSingleResult();
+      } catch (NoResultException var4) {
+         this.log.debug(&quot;Failed to lookup agent - none exist with token [&quot; + token + &quot;] : &quot; + var4);
+         agent = null;
+      }
+
+      return agent;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Agent getAgentByName(String agentName) {
+      Agent agent;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findByName&quot;);
+         e.setParameter(&quot;name&quot;, agentName);
+         agent = (Agent)e.getSingleResult();
+      } catch (NoResultException var4) {
+         this.log.debug(&quot;Failed to lookup agent - none exist with name [&quot; + agentName + &quot;] : &quot; + var4);
+         agent = null;
+      }
+
+      return agent;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Agent getAgentByID(int agentId) {
+      Agent agent = (Agent)this.entityManager.find(Agent.class, Integer.valueOf(agentId));
+      return agent;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Agent getAgentByAddressAndPort(String address, int port) {
+      Agent agent;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findByAddressAndPort&quot;);
+         e.setParameter(&quot;address&quot;, address);
+         e.setParameter(&quot;port&quot;, Integer.valueOf(port));
+         agent = (Agent)e.getSingleResult();
+      } catch (NoResultException var5) {
+         this.log.debug(&quot;Agent not found with address/port: &quot; + address + &quot;/&quot; + port);
+         agent = null;
+      }
+
+      return agent;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Agent getAgentByResourceId(int resourceId) {
+      Agent agent;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findByResourceId&quot;);
+         e.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         agent = (Agent)e.getSingleResult();
+      } catch (NoResultException var4) {
+         this.log.debug(&quot;Failed to lookup agent for resource with ID of [&quot; + resourceId + &quot;] : &quot; + var4);
+         agent = null;
+      }
+
+      return agent;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Integer getAgentIdByResourceId(int resourceId) {
+      Integer agentId;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findAgentIdByResourceId&quot;);
+         e.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         agentId = (Integer)e.getSingleResult();
+      } catch (NoResultException var4) {
+         this.log.debug(&quot;Failed to lookup agent for resource with ID of [&quot; + resourceId + &quot;] : &quot; + var4);
+         agentId = null;
+      }
+
+      return agentId;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Integer getAgentIdByName(String agentName) {
+      Integer agentId;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findAgentIdByName&quot;);
+         e.setParameter(&quot;name&quot;, agentName);
+         agentId = (Integer)e.getSingleResult();
+      } catch (NoResultException var4) {
+         this.log.debug(&quot;Failed to lookup agent for name of [&quot; + agentName + &quot;] : &quot; + var4);
+         agentId = null;
+      }
+
+      return agentId;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Integer getAgentIdByScheduleId(int scheduleId) {
+      Integer agentId;
+      try {
+         Query e = this.entityManager.createNamedQuery(&quot;Agent.findAgentIdByScheduleId&quot;);
+         e.setParameter(&quot;scheduleId&quot;, Integer.valueOf(scheduleId));
+         agentId = (Integer)e.getSingleResult();
+      } catch (NoResultException var4) {
+         this.log.debug(&quot;Failed to lookup agent for resource with ID of [&quot; + scheduleId + &quot;] : &quot; + var4);
+         agentId = null;
+      }
+
+      return agentId;
+   }
+
+   @ExcludeDefaultInterceptors
+   public boolean isAgentVersionSupported(AgentVersion agentVersionInfo) {
+      try {
+         Properties e = this.getAgentUpdateVersionFileContent();
+         String supportedAgentVersion = e.getProperty(&quot;rhq-agent.latest.version&quot;);
+         if(supportedAgentVersion == null) {
+            throw new NullPointerException(&quot;no agent version in file&quot;);
+         } else {
+            ComparableVersion agent = new ComparableVersion(agentVersionInfo.getVersion());
+            ComparableVersion server = new ComparableVersion(supportedAgentVersion);
+            if(Boolean.getBoolean(&quot;rhq.server.agent-update.nonstrict-version-check&quot;)) {
+               return agent.equals(server);
+            } else {
+               String supportedAgentBuild = e.getProperty(&quot;rhq-agent.latest.build-number&quot;);
+               return agent.equals(server) &amp;&amp; agentVersionInfo.getBuild().equals(supportedAgentBuild);
+            }
+         }
+      } catch (Exception var7) {
+         this.log.warn(&quot;Cannot determine if agent version [&quot; + agentVersionInfo + &quot;] is supported. Cause: &quot; + var7);
+         return false;
+      }
+   }
+
+   @ExcludeDefaultInterceptors
+   public File getAgentUpdateVersionFile() throws Exception {
+      File agentDownloadDir = this.getAgentDownloadDir();
+      File versionFile = new File(agentDownloadDir, &quot;rhq-server-agent-versions.properties&quot;);
+      if(!versionFile.exists()) {
+         StringBuilder serverVersionInfo = new StringBuilder();
+         CoreServerMBean coreServer = LookupUtil.getCoreServer();
+         serverVersionInfo.append(&quot;rhq-server.version=&quot;).append(coreServer.getVersion()).append('\n');
+         serverVersionInfo.append(&quot;rhq-server.build-number=&quot;).append(coreServer.getBuildNumber()).append('\n');
+         File binaryFile = this.getAgentUpdateBinaryFile();
+         String md5Property = &quot;rhq-agent.latest.md5=&quot; + MD5Generator.getDigestString(binaryFile) + '\n';
+         JarFile binaryJarFile = new JarFile(binaryFile);
+         JarEntry binaryJarFileEntry = binaryJarFile.getJarEntry(&quot;rhq-agent-update-version.properties&quot;);
+         InputStream binaryJarFileEntryStream = binaryJarFile.getInputStream(binaryJarFileEntry);
+         FileOutputStream versionFileOutputStream = new FileOutputStream(versionFile);
+
+         try {
+            versionFileOutputStream.write(serverVersionInfo.toString().getBytes());
+            versionFileOutputStream.write(md5Property.getBytes());
+            StreamUtil.copy(binaryJarFileEntryStream, versionFileOutputStream, false);
+         } finally {
+            try {
+               versionFileOutputStream.close();
+            } catch (Exception var20) {
+               ;
+            }
+
+            try {
+               binaryJarFileEntryStream.close();
+            } catch (Exception var19) {
+               ;
+            }
+
+         }
+      }
+
+      return versionFile;
+   }
+
+   @ExcludeDefaultInterceptors
+   public Properties getAgentUpdateVersionFileContent() throws Exception {
+      FileInputStream stream = new FileInputStream(this.getAgentUpdateVersionFile());
+
+      Properties var3;
+      try {
+         Properties props = new Properties();
+         props.load(stream);
+         var3 = props;
+      } finally {
+         try {
+            stream.close();
+         } catch (Exception var10) {
+            ;
+         }
+
+      }
+
+      return var3;
+   }
+
+   @ExcludeDefaultInterceptors
+   public File getAgentUpdateBinaryFile() throws Exception {
+      File agentDownloadDir = this.getAgentDownloadDir();
+      File[] arr$ = agentDownloadDir.listFiles();
+      int len$ = arr$.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         File file = arr$[i$];
+         if(file.getName().endsWith(&quot;.jar&quot;)) {
+            return file;
+         }
+      }
+
+      throw new FileNotFoundException(&quot;Missing agent update binary in [&quot; + agentDownloadDir + &quot;]&quot;);
+   }
+
+   @ExcludeDefaultInterceptors
+   public File getAgentDownloadDir() throws Exception {
+      MBeanServer mbs = MBeanServerLocator.locateJBoss();
+      ObjectName name = ObjectNameFactory.create(&quot;jboss.system:type=ServerConfig&quot;);
+      Object mbean = MBeanServerInvocationHandler.newProxyInstance(mbs, name, ServerConfig.class, false);
+      File serverHomeDir = ((ServerConfig)mbean).getServerHomeDir();
+      File agentDownloadDir = new File(serverHomeDir, &quot;deploy/rhq.ear/rhq-downloads/rhq-agent&quot;);
+      if(!agentDownloadDir.exists()) {
+         throw new FileNotFoundException(&quot;Missing agent downloads directory at [&quot; + agentDownloadDir + &quot;]&quot;);
+      } else {
+         return agentDownloadDir;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

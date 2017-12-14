@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for GroupDefinitionManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/resource/group/definition/GroupDefinitionManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.resource.group.definition;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.db.DatabaseType;
+import org.rhq.core.db.DatabaseTypeFactory;
+import org.rhq.core.db.H2DatabaseType;
+import org.rhq.core.db.OracleDatabaseType;
+import org.rhq.core.db.PostgresqlDatabaseType;
+import org.rhq.core.db.SQLServerDatabaseType;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.composite.ResourceFacets;
+import org.rhq.core.domain.resource.group.GroupDefinition;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.resource.group.composite.ResourceGroupComposite;
+import org.rhq.core.domain.util.OrderingField;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.core.util.jdbc.JDBCUtil;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.resource.group.RecursivityChangeType;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupUpdateException;
+import org.rhq.enterprise.server.resource.group.definition.GroupDefinitionManagerLocal;
+import org.rhq.enterprise.server.resource.group.definition.exception.GroupDefinitionAlreadyExistsException;
+import org.rhq.enterprise.server.resource.group.definition.exception.GroupDefinitionCreateException;
+import org.rhq.enterprise.server.resource.group.definition.exception.GroupDefinitionDeleteException;
+import org.rhq.enterprise.server.resource.group.definition.exception.GroupDefinitionException;
+import org.rhq.enterprise.server.resource.group.definition.exception.GroupDefinitionNotFoundException;
+import org.rhq.enterprise.server.resource.group.definition.exception.GroupDefinitionUpdateException;
+import org.rhq.enterprise.server.resource.group.definition.framework.ExpressionEvaluator;
+import org.rhq.enterprise.server.resource.group.definition.framework.InvalidExpressionException;
+import org.rhq.enterprise.server.resource.group.definition.framework.ExpressionEvaluator.Result;
+import org.rhq.enterprise.server.resource.group.definition.mbean.GroupDefinitionRecalculationThreadMonitor;
+import org.rhq.enterprise.server.resource.group.definition.mbean.GroupDefinitionRecalculationThreadMonitorMBean;
+
+@Stateless
+@Resource(
+   name = &quot;RHQ_DS&quot;,
+   mappedName = &quot;java:/RHQDS&quot;
+)
+public class GroupDefinitionManagerBean implements GroupDefinitionManagerLocal {
+   private final Log log = LogFactory.getLog(GroupDefinitionManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;
+   )
+   private DataSource rhqDs;
+   private DatabaseType dbType;
+   @EJB
+   private GroupDefinitionManagerLocal groupDefinitionManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private ResourceTypeManagerLocal resourceTypeManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+
+   @PostConstruct
+   public void init() {
+      Connection conn = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         this.dbType = DatabaseTypeFactory.getDatabaseType(conn);
+      } catch (Exception var7) {
+         throw new RuntimeException(var7);
+      } finally {
+         JDBCUtil.safeClose(conn);
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void recalculateDynaGroups(Subject subject) {
+      Query recalculationFinderQuery = this.entityManager.createNamedQuery(&quot;GroupDefinition.findIdsForRecalculation_admin&quot;);
+      recalculationFinderQuery.setParameter(&quot;now&quot;, Long.valueOf(System.currentTimeMillis()));
+      List groupDefinitionIdsToRecalculate = recalculationFinderQuery.getResultList();
+      if(groupDefinitionIdsToRecalculate.size() != 0) {
+         GroupDefinitionRecalculationThreadMonitorMBean monitor = GroupDefinitionRecalculationThreadMonitor.getMBean();
+         long totalStart = System.currentTimeMillis();
+         Iterator totalEnd = groupDefinitionIdsToRecalculate.iterator();
+
+         while(totalEnd.hasNext()) {
+            Integer groupDefinitionId = (Integer)totalEnd.next();
+            long singleStart = System.currentTimeMillis();
+            boolean success = false;
+
+            try {
+               this.groupDefinitionManager.calculateGroupMembership(subject, groupDefinitionId.intValue());
+               success = true;
+            } catch (Throwable var17) {
+               this.log.error(&quot;Error recalculating DynaGroups for GroupDefinition[id=&quot; + groupDefinitionId + &quot;]&quot;, var17);
+            }
+
+            long singleEnd = System.currentTimeMillis();
+
+            try {
+               GroupDefinition t = this.getById(groupDefinitionId.intValue());
+               int size = this.getManagedResourceGroupSizeForGroupDefinition(groupDefinitionId.intValue());
+               monitor.updateStatistic(t.getName(), size, success, singleEnd - singleStart);
+            } catch (Throwable var16) {
+               this.log.error(&quot;Error updating DynaGroup statistics GroupDefinition[id=&quot; + groupDefinitionId + &quot;]&quot;, var16);
+            }
+         }
+
+         long totalEnd1 = System.currentTimeMillis();
+         monitor.updateAutoRecalculationThreadTime(totalEnd1 - totalStart);
+      }
+   }
+
+   public GroupDefinition getById(int groupDefinitionId) throws GroupDefinitionNotFoundException {
+      GroupDefinition groupDefinition = (GroupDefinition)this.entityManager.find(GroupDefinition.class, Integer.valueOf(groupDefinitionId));
+      if(groupDefinition == null) {
+         throw new GroupDefinitionNotFoundException(&quot;Group definition with specified id does not exist&quot;);
+      } else {
+         return groupDefinition;
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public GroupDefinition createGroupDefinition(Subject subject, GroupDefinition newGroupDefinition) throws GroupDefinitionAlreadyExistsException, GroupDefinitionCreateException {
+      try {
+         this.validate(newGroupDefinition, (Integer)null);
+      } catch (GroupDefinitionException var5) {
+         throw new GroupDefinitionCreateException(var5.getMessage());
+      }
+
+      try {
+         this.entityManager.persist(newGroupDefinition);
+         return newGroupDefinition;
+      } catch (Exception var4) {
+         throw new GroupDefinitionCreateException(var4);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public GroupDefinition updateGroupDefinition(Subject subject, GroupDefinition groupDefinition) throws GroupDefinitionAlreadyExistsException, GroupDefinitionUpdateException, InvalidExpressionException, ResourceGroupUpdateException {
+      boolean nameChanged = false;
+
+      try {
+         nameChanged = this.validate(groupDefinition, Integer.valueOf(groupDefinition.getId()));
+      } catch (GroupDefinitionException var15) {
+         throw new GroupDefinitionUpdateException(var15.getMessage());
+      }
+
+      ExpressionEvaluator evaluator = new ExpressionEvaluator();
+      Iterator changeType = groupDefinition.getExpressionAsList().iterator();
+
+      String attachedGroupDefinition;
+      while(changeType.hasNext()) {
+         attachedGroupDefinition = (String)changeType.next();
+         evaluator.addExpression(attachedGroupDefinition);
+      }
+
+      RecursivityChangeType changeType1 = RecursivityChangeType.None;
+      attachedGroupDefinition = null;
+
+      GroupDefinition attachedGroupDefinition1;
+      try {
+         attachedGroupDefinition1 = this.getById(groupDefinition.getId());
+      } catch (GroupDefinitionNotFoundException var14) {
+         throw new GroupDefinitionUpdateException(var14.getMessage());
+      }
+
+      if(groupDefinition.isRecursive() &amp;&amp; !attachedGroupDefinition1.isRecursive()) {
+         changeType1 = RecursivityChangeType.AddedRecursion;
+      } else if(!groupDefinition.isRecursive() &amp;&amp; attachedGroupDefinition1.isRecursive()) {
+         changeType1 = RecursivityChangeType.RemovedRecursion;
+      }
+
+      if(nameChanged || changeType1 != RecursivityChangeType.None) {
+         String e = attachedGroupDefinition1.getName();
+         Subject overlord = this.subjectManager.getOverlord();
+         Iterator i$ = attachedGroupDefinition1.getManagedResourceGroups().iterator();
+
+         while(i$.hasNext()) {
+            ResourceGroup dynaGroup = (ResourceGroup)i$.next();
+            String dynaGroupName = dynaGroup.getName();
+            String newDynaGroupName = this.updateDynaGroupName(e, groupDefinition.getName(), dynaGroupName);
+            dynaGroup.setName(newDynaGroupName);
+            this.resourceGroupManager.updateResourceGroup(overlord, dynaGroup, changeType1);
+         }
+      }
+
+      try {
+         return (GroupDefinition)this.entityManager.merge(groupDefinition);
+      } catch (Exception var13) {
+         throw new GroupDefinitionUpdateException(var13);
+      }
+   }
+
+   private boolean validate(GroupDefinition definition, Integer id) throws GroupDefinitionException, GroupDefinitionAlreadyExistsException {
+      String name = definition.getName() == null?&quot;&quot;:definition.getName().trim();
+      String description = definition.getDescription() == null?&quot;&quot;:definition.getDescription().trim();
+      if(name.equals(&quot;&quot;)) {
+         throw new GroupDefinitionException(&quot;Name is a required property&quot;);
+      } else if(name.length() &gt; 100) {
+         throw new GroupDefinitionException(&quot;Name is limited to 100 characters&quot;);
+      } else if(description.length() &gt; 100) {
+         throw new GroupDefinitionException(&quot;Description is limited to 100 characters&quot;);
+      } else {
+         Query query = this.entityManager.createNamedQuery(&quot;GroupDefinition.findByName&quot;);
+         query.setParameter(&quot;name&quot;, name);
+
+         try {
+            GroupDefinition e = (GroupDefinition)query.getSingleResult();
+            if(id != null &amp;&amp; e.getId() == id.intValue()) {
+               return false;
+            } else {
+               throw new GroupDefinitionAlreadyExistsException(&quot;GroupDefinition with name &quot; + name + &quot; already exists&quot;);
+            }
+         } catch (NoResultException var7) {
+            return true;
+         }
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void calculateGroupMembership(Subject subject, int groupDefinitionId) throws GroupDefinitionDeleteException, GroupDefinitionNotFoundException, InvalidExpressionException, ResourceGroupUpdateException {
+      long startTime = System.currentTimeMillis();
+      GroupDefinition groupDefinition = this.getById(groupDefinitionId);
+      ExpressionEvaluator evaluator = new ExpressionEvaluator();
+      Iterator doomedResourceGroupIds = groupDefinition.getExpressionAsList().iterator();
+
+      while(doomedResourceGroupIds.hasNext()) {
+         String endTime = (String)doomedResourceGroupIds.next();
+         evaluator.addExpression(endTime);
+      }
+
+      ArrayList doomedResourceGroupIds1 = new ArrayList();
+      Iterator endTime1 = this.getManagedResourceGroupIdsForGroupDefinition(groupDefinitionId).iterator();
+
+      Integer doomedGroupId;
+      while(endTime1.hasNext()) {
+         doomedGroupId = (Integer)endTime1.next();
+         doomedResourceGroupIds1.add(doomedGroupId);
+      }
+
+      endTime1 = evaluator.iterator();
+
+      while(endTime1.hasNext()) {
+         Result doomedGroupId1 = (Result)endTime1.next();
+         if(doomedGroupId1 != null) {
+            Integer nextResourceGroupId = this.groupDefinitionManager.calculateGroupMembership_helper(subject, groupDefinitionId, doomedGroupId1);
+            doomedResourceGroupIds1.remove(nextResourceGroupId);
+         }
+      }
+
+      endTime1 = doomedResourceGroupIds1.iterator();
+
+      while(endTime1.hasNext()) {
+         doomedGroupId = (Integer)endTime1.next();
+         this.groupDefinitionManager.removeManagedResource_helper(subject, groupDefinitionId, doomedGroupId);
+      }
+
+      groupDefinition = this.getById(groupDefinitionId);
+      groupDefinition.setLastCalculationTime(Long.valueOf(System.currentTimeMillis()));
+      long endTime2 = System.currentTimeMillis();
+      this.log.debug(&quot;calculateGroupMembership took &quot; + (endTime2 - startTime) + &quot; millis&quot;);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public Integer calculateGroupMembership_helper(Subject overlord, int groupDefinitionId, Result result) throws GroupDefinitionNotFoundException, GroupDefinitionNotFoundException {
+      long startTime = System.currentTimeMillis();
+      GroupDefinition groupDefinition = this.getById(groupDefinitionId);
+      String groupByClause = result.getGroupByClause();
+      ResourceGroup resourceGroup = this.resourceGroupManager.getByGroupDefinitionAndGroupByClause(groupDefinition.getId(), groupByClause);
+      boolean resourceGroupId = false;
+      int resourceGroupId1;
+      if(resourceGroup == null) {
+         String existingResourceIds = this.getDynamicGroupName(groupDefinition.getName(), groupByClause);
+         resourceGroup = new ResourceGroup(existingResourceIds);
+         resourceGroupId1 = this.resourceGroupManager.createResourceGroup(overlord, resourceGroup).getId();
+         resourceGroup.setRecursive(groupDefinition.isRecursive());
+         resourceGroup.setGroupByClause(groupByClause);
+         groupDefinition.addResourceGroup(resourceGroup);
+      } else {
+         resourceGroupId1 = resourceGroup.getId();
+      }
+
+      List existingResourceIds1 = this.resourceManager.findExplicitResourceIdsByResourceGroup(resourceGroup.getId());
+      HashSet idsToAdd = new HashSet(result.getData());
+      idsToAdd.removeAll(existingResourceIds1);
+      HashSet idsToRemove = new HashSet(existingResourceIds1);
+      idsToRemove.removeAll(result.getData());
+      this.resourceGroupManager.addResourcesToGroup(overlord, resourceGroupId1, ArrayUtils.unwrapCollection(idsToAdd));
+      this.resourceGroupManager.removeResourcesFromGroup(overlord, resourceGroupId1, ArrayUtils.unwrapCollection(idsToRemove));
+      this.resourceGroupManager.setResourceType(resourceGroupId1);
+      this.entityManager.flush();
+      this.entityManager.clear();
+      long endTime = System.currentTimeMillis();
+      this.log.debug(&quot;calculateGroupMembership_helper took &quot; + (endTime - startTime) + &quot; millis&quot;);
+      return Integer.valueOf(resourceGroupId1);
+   }
+
+   private Map getIdGroupMap(List groupIds) {
+      if(groupIds != null &amp;&amp; groupIds.size() != 0) {
+         Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findByIds_admin&quot;);
+         query.setParameter(&quot;ids&quot;, groupIds);
+         List groups = query.getResultList();
+         HashMap results = new HashMap();
+         Iterator i$ = groups.iterator();
+
+         while(i$.hasNext()) {
+            ResourceGroup group = (ResourceGroup)i$.next();
+            results.put(Integer.valueOf(group.getId()), group);
+         }
+
+         return results;
+      } else {
+         return new HashMap();
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getManagedResourceGroups(Subject subject, int groupDefinitionId, PageControl pc) throws GroupDefinitionException {
+      pc.initDefaultOrderingField(&quot;groupName&quot;);
+      pc.truncateOrderingFields(1);
+      OrderingField primary = (OrderingField)pc.getOrderingFields().get(0);
+      String field = primary.getField();
+      if(field.endsWith(&quot;Avail&quot;)) {
+         String conn = field.substring(0, field.length() - 5);
+         String stmt = conn + &quot;Count&quot;;
+         pc.addDefaultOrderingField(stmt, primary.getOrdering());
+      }
+
+      if(!field.equals(&quot;groupName&quot;)) {
+         pc.addDefaultOrderingField(&quot;groupName&quot;);
+      }
+
+      Connection var35 = null;
+      PreparedStatement var36 = null;
+      ResultSet rs = null;
+      ArrayList rawResults = new ArrayList();
+
+      long count;
+      try {
+         var35 = this.rhqDs.getConnection();
+         String queryCount = &quot;         SELECT               (     SELECT COUNT(eresAvail.ID)                       FROM rhq_resource_avail eresAvail                 INNER JOIN rhq_resource eres                         ON eresAvail.resource_id = eres.id                 INNER JOIN rhq_resource_group_res_exp_map expMap                         ON eres.id = expMap.resource_id                      WHERE expMap.resource_group_id = rg.id               ) as explicitCount,               (     SELECT AVG(eresAvail.availability_type)                       FROM rhq_resource_avail eresAvail                 INNER JOIN rhq_resource eres                         ON eresAvail.resource_id = eres.id                 INNER JOIN rhq_resource_group_res_exp_map expMap                         ON eres.id = expMap.resource_id                      WHERE expMap.resource_group_id = rg.id               ) as explicitAvail,               (     SELECT COUNT(iresAvail.ID)                       FROM rhq_resource_avail iresAvail                 INNER JOIN rhq_resource ires                         ON iresAvail.resource_id = ires.id                 INNER JOIN rhq_resource_group_res_imp_map impMap                         ON ires.id = impMap.resource_id                      WHERE impMap.resource_group_id = rg.id               ) as implicitCount,               (     SELECT AVG(iresAvail.availability_type)                       FROM rhq_resource_avail iresAvail                 INNER JOIN rhq_resource ires                         ON iresAvail.resource_id = ires.id                 INNER JOIN rhq_resource_group_res_imp_map impMap                         ON ires.id = impMap.resource_id                      WHERE impMap.resource_group_id = rg.id               ) as implicitAvail,                 rg.id as groupId,                 rg.name as groupName,                 rg.category as groupCategory,                 rg.group_by as groupedBy            FROM rhq_resource_group rg LEFT OUTER JOIN rhq_resource_group_res_imp_map memberMap              ON rg.id = memberMap.resource_group_id LEFT OUTER JOIN rhq_resource res              ON memberMap.resource_id = res.id LEFT OUTER JOIN rhq_resource_avail resAvail              ON res.id = resAvail.resource_id           WHERE rg.group_definition_id = ?        GROUP BY rg.id, rg.category, rg.name, rg.group_by &quot;;
+         if(this.dbType instanceof PostgresqlDatabaseType) {
+            queryCount = PersistenceUtility.addPostgresNativePagingSortingToQuery(queryCount, pc);
+         } else if(this.dbType instanceof OracleDatabaseType) {
+            queryCount = PersistenceUtility.addOracleNativePagingSortingToQuery(queryCount, pc);
+         } else if(this.dbType instanceof H2DatabaseType) {
+            queryCount = PersistenceUtility.addH2NativePagingSortingToQuery(queryCount, pc);
+         } else {
+            if(!(this.dbType instanceof SQLServerDatabaseType)) {
+               throw new RuntimeException(&quot;Unknown database type: &quot; + this.dbType);
+            }
+
+            queryCount = PersistenceUtility.addSQLServerNativePagingSortingToQuery(queryCount, pc);
+         }
+
+         var36 = var35.prepareStatement(queryCount);
+         var36.setInt(1, groupDefinitionId);
+         rs = var36.executeQuery();
+
+         while(rs.next()) {
+            count = rs.getLong(1);
+            double groupIds = rs.getDouble(2);
+            long results = rs.getLong(3);
+            double i$ = rs.getDouble(4);
+            int explicitCount = rs.getInt(5);
+            Object[] next = new Object[]{Long.valueOf(count), Double.valueOf(groupIds), Long.valueOf(results), Double.valueOf(i$), Integer.valueOf(explicitCount)};
+            rawResults.add(next);
+         }
+      } catch (Throwable var33) {
+         throw new GroupDefinitionException(var33);
+      } finally {
+         JDBCUtil.safeClose(var35, var36, rs);
+      }
+
+      Query var37 = this.entityManager.createNamedQuery(&quot;GroupDefinition.findMembers_count&quot;);
+      var37.setParameter(&quot;groupDefinitionId&quot;, Integer.valueOf(groupDefinitionId));
+      count = ((Long)var37.getSingleResult()).longValue();
+      ArrayList var38 = new ArrayList();
+      Iterator groupMap = rawResults.iterator();
+
+      while(groupMap.hasNext()) {
+         Object[] var40 = (Object[])groupMap.next();
+         var38.add(Integer.valueOf(((Number)var40[4]).intValue()));
+      }
+
+      Map var39 = this.getIdGroupMap(var38);
+      ArrayList var41 = new ArrayList(rawResults.size());
+      int i = 0;
+      Iterator var42 = rawResults.iterator();
+
+      while(var42.hasNext()) {
+         Object[] row = (Object[])var42.next();
+         long var43 = ((Long)row[0]).longValue();
+         double explicitAvail = ((Double)row[1]).doubleValue();
+         long implicitCount = ((Long)row[2]).longValue();
+         double implicitAvail = ((Double)row[3]).doubleValue();
+         ResourceGroup group = (ResourceGroup)var39.get(var38.get(i++));
+         ResourceType type = group.getResourceType();
+         ResourceFacets facets;
+         if(type == null) {
+            facets = ResourceFacets.NONE;
+         } else {
+            facets = this.resourceTypeManager.getResourceFacets(group.getResourceType().getId());
+         }
+
+         ResourceGroupComposite composite = new ResourceGroupComposite(var43, explicitAvail, implicitCount, implicitAvail, group, facets);
+         var41.add(composite);
+      }
+
+      return new PageList(var41, (int)count, pc);
+   }
+
+   public PageList getGroupDefinitions(Subject subject, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;gd.name&quot;);
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;GroupDefinition.findAll&quot;, pc);
+         List results = query.getResultList();
+         int count = this.getGroupDefinitionCount(subject);
+         return new PageList(results, count, pc);
+      } else {
+         return new PageList(pc);
+      }
+   }
+
+   public int getGroupDefinitionCount(Subject subject) {
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;GroupDefinition.findAll&quot;);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         return (int)count;
+      } else {
+         return 0;
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public int getAutoRecalculationGroupDefinitionCount(Subject subject) {
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;GroupDefinition.findAllRecalculating_admin&quot;);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      return (int)count;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public int getDynaGroupCount(Subject subject) {
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;GroupDefinition.findAllMembers_admin&quot;);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      return (int)count;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void removeGroupDefinition(Subject subject, Integer groupDefinitionId) throws GroupDefinitionNotFoundException, GroupDefinitionDeleteException {
+      List managedGroupIds = this.getManagedResourceGroupIdsForGroupDefinition(groupDefinitionId.intValue());
+      Subject overlord = this.subjectManager.getOverlord();
+      Iterator groupDefinition = managedGroupIds.iterator();
+
+      while(groupDefinition.hasNext()) {
+         Integer e = (Integer)groupDefinition.next();
+         this.removeManagedResource_helper(overlord, groupDefinitionId.intValue(), e);
+      }
+
+      GroupDefinition groupDefinition1 = this.getById(groupDefinitionId.intValue());
+
+      try {
+         this.entityManager.remove(groupDefinition1);
+      } catch (Exception var7) {
+         throw new GroupDefinitionDeleteException(&quot;Error deleting groupDefinition \'&quot; + groupDefinition1.getName() + &quot;\': &quot;, var7);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void removeManagedResource_helper(Subject overlord, int groupDefinitionId, Integer doomedGroupId) throws GroupDefinitionDeleteException, GroupDefinitionNotFoundException {
+      GroupDefinition groupDefinition = this.getById(groupDefinitionId);
+      ResourceGroup doomedGroup = (ResourceGroup)this.entityManager.getReference(ResourceGroup.class, doomedGroupId);
+      groupDefinition.removeResourceGroup(doomedGroup);
+
+      try {
+         this.resourceGroupManager.deleteResourceGroup(this.subjectManager.getOverlord(), doomedGroupId.intValue());
+      } catch (Exception var7) {
+         throw new GroupDefinitionDeleteException(&quot;Error removing managedGroup \'&quot; + doomedGroup.getName() + &quot;\' &quot; + &quot;from groupDefinition \'&quot; + groupDefinition.getName() + &quot;\': &quot;, var7);
+      }
+   }
+
+   private List getManagedResourceGroupIdsForGroupDefinition(int groupDefinitionId) {
+      Query query = this.entityManager.createNamedQuery(&quot;GroupDefinition.findManagedResourceGroupIds_admin&quot;);
+      query.setParameter(&quot;groupDefinitionId&quot;, Integer.valueOf(groupDefinitionId));
+      List results = query.getResultList();
+      return results;
+   }
+
+   private int getManagedResourceGroupSizeForGroupDefinition(int groupDefinitionId) {
+      Query query = this.entityManager.createNamedQuery(&quot;GroupDefinition.findManagedResourceGroupSize_admin&quot;);
+      query.setParameter(&quot;groupDefinitionId&quot;, Integer.valueOf(groupDefinitionId));
+      Number result = (Number)query.getSingleResult();
+      return result.intValue();
+   }
+
+   private String getDynamicGroupName(String groupDefinitionName, String groupByClause) {
+      String newDynamicGroupName = &quot;DynaGroup - &quot; + groupDefinitionName + (groupByClause.equals(&quot;&quot;)?&quot;&quot;:&quot; ( &quot; + groupByClause + &quot; )&quot;);
+      return newDynamicGroupName;
+   }
+
+   private String updateDynaGroupName(String oldGroupDefinitionName, String updatedGroupDefinitionName, String dynaGroupName) throws GroupDefinitionUpdateException {
+      byte oldGroupNameIndexStart = 12;
+      int oldGroupNameLength = oldGroupDefinitionName.length();
+      return dynaGroupName.substring(0, oldGroupNameIndexStart) + updatedGroupDefinitionName + dynaGroupName.substring(oldGroupNameIndexStart + oldGroupNameLength);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

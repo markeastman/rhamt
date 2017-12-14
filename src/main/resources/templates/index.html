@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/StandardPage}">
+
+<head>
+    <title>RHAMT Example !</title>
+</head>
+
+<body>
+<th:block layout:fragment="content">
+    <div th:if="${session.selectedProject == null}">
+        <table border="solid 1 navy" style="width:80%;">
+            <thead>
+            <th>Project</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="/selectProject/1">Project One</a></td>
+            </tr>
+            <tr>
+                <td><a href="/selectProject/2">Project Two</a></td>
+            </tr>
+            <tr>
+                <td><a href="/selectProject/3">Project Three</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</th:block>
+
+
+</body>
+</html>

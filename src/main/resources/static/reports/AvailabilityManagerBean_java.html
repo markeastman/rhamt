@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for AvailabilityManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/measurement/AvailabilityManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.measurement;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.FlushModeType;
+import javax.persistence.NoResultException;
+import javax.persistence.NonUniqueResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.ejb.TransactionTimeout;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.discovery.AvailabilityReport;
+import org.rhq.core.domain.measurement.Availability;
+import org.rhq.core.domain.measurement.AvailabilityType;
+import org.rhq.core.domain.measurement.ResourceAvailability;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.composite.ResourceIdWithAvailabilityComposite;
+import org.rhq.core.domain.resource.group.composite.ResourceGroupComposite;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.StopWatch;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheStats;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.common.EntityContext;
+import org.rhq.enterprise.server.common.EntityContext.Category;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.measurement.AvailabilityManagerLocal;
+import org.rhq.enterprise.server.measurement.AvailabilityManagerRemote;
+import org.rhq.enterprise.server.measurement.AvailabilityPoint;
+import org.rhq.enterprise.server.measurement.instrumentation.MeasurementMonitor;
+import org.rhq.enterprise.server.resource.ResourceAvailabilityManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+
+@Stateless
+public class AvailabilityManagerBean implements AvailabilityManagerLocal, AvailabilityManagerRemote {
+   private final Log log = LogFactory.getLog(AvailabilityManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AvailabilityManagerLocal availabilityManager;
+   @EJB
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private ResourceAvailabilityManagerLocal resourceAvailabilityManager;
+   @EJB
+   private AlertConditionCacheManagerLocal alertConditionCacheManager;
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(21600)
+   public int purgeAvailabilities(long oldest) {
+      try {
+         Query e = this.entityManager.createNativeQuery(&quot;DELETE FROM RHQ_AVAILABILITY WHERE END_TIME &lt; ?&quot;);
+         e.setParameter(1, Long.valueOf(oldest));
+         long startTime = System.currentTimeMillis();
+         int deleted = e.executeUpdate();
+         MeasurementMonitor.getMBean().incrementPurgeTime(System.currentTimeMillis() - startTime);
+         MeasurementMonitor.getMBean().setPurgedAvailabilities((long)deleted);
+         return deleted;
+      } catch (Exception var7) {
+         throw new RuntimeException(&quot;Failed to purge availabilities older than [&quot; + oldest + &quot;]&quot;, var7);
+      }
+   }
+
+   public AvailabilityType getCurrentAvailabilityTypeForResource(Subject subject, int resourceId) {
+      return this.resourceAvailabilityManager.getLatestAvailabilityType(subject, resourceId);
+   }
+
+   public Availability getCurrentAvailabilityForResource(Subject subject, int resourceId) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view current availability for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         Availability retAvailability;
+         try {
+            Query nre = this.entityManager.createNamedQuery(&quot;Availability.findCurrentByResource&quot;);
+            nre.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+            retAvailability = (Availability)nre.getSingleResult();
+         } catch (NoResultException var7) {
+            Resource resource = this.resourceManager.getResourceById(subject, resourceId);
+            List availList = resource.getAvailability();
+            if(availList != null &amp;&amp; availList.size() &gt; 0) {
+               this.log.warn(&quot;Could not query for latest avail but found one - missing null end time (this should never happen)&quot;);
+               retAvailability = (Availability)availList.get(availList.size() - 1);
+            } else {
+               retAvailability = new Availability(resource, new Date(), (AvailabilityType)null);
+            }
+         }
+
+         return retAvailability;
+      }
+   }
+
+   public List findAvailabilitiesForResource(Subject subject, int resourceId, long fullRangeBeginTime, long fullRangeEndTime, int numberOfPoints, boolean withCurrentAvailability) {
+      EntityContext context = new EntityContext(Integer.valueOf(resourceId), Integer.valueOf(-1), Integer.valueOf(-1), Integer.valueOf(-1));
+      return this.getAvailabilitiesForContext(subject, context, fullRangeBeginTime, fullRangeEndTime, numberOfPoints, withCurrentAvailability);
+   }
+
+   public List findAvailabilitiesForResourceGroup(Subject subject, int groupId, long fullRangeBeginTime, long fullRangeEndTime, int numberOfPoints, boolean withCurrentAvailability) {
+      EntityContext context = new EntityContext(Integer.valueOf(-1), Integer.valueOf(groupId), Integer.valueOf(-1), Integer.valueOf(-1));
+      return this.getAvailabilitiesForContext(subject, context, fullRangeBeginTime, fullRangeEndTime, numberOfPoints, withCurrentAvailability);
+   }
+
+   public List findAvailabilitiesForAutoGroup(Subject subject, int parentResourceId, int resourceTypeId, long fullRangeBeginTime, long fullRangeEndTime, int numberOfPoints, boolean withCurrentAvailability) {
+      EntityContext context = new EntityContext(Integer.valueOf(-1), Integer.valueOf(-1), Integer.valueOf(parentResourceId), Integer.valueOf(resourceTypeId));
+      return this.getAvailabilitiesForContext(subject, context, fullRangeBeginTime, fullRangeEndTime, numberOfPoints, withCurrentAvailability);
+   }
+
+   private List getAvailabilitiesForContext(Subject subject, EntityContext context, long fullRangeBeginTime, long fullRangeEndTime, int numberOfPoints, boolean withCurrentAvailability) {
+      if(context.category == Category.Resource) {
+         if(!this.authorizationManager.canViewResource(subject, context.resourceId)) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view &quot; + context.toShortString());
+         }
+      } else if(context.category == Category.ResourceGroup &amp;&amp; !this.authorizationManager.canViewGroup(subject, context.groupId)) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view &quot; + context.toShortString());
+      }
+
+      if(numberOfPoints &gt; 0 &amp;&amp; fullRangeBeginTime &lt; fullRangeEndTime) {
+         Date fullRangeBeginDate = new Date(fullRangeBeginTime);
+         Date fullRangeEndDate = new Date(fullRangeEndTime);
+
+         List availabilities;
+         try {
+            if(context.category == Category.Resource) {
+               availabilities = this.findAvailabilityWithinInterval(context.resourceId, fullRangeBeginDate, fullRangeEndDate);
+            } else if(context.category == Category.ResourceGroup) {
+               availabilities = this.findResourceGroupAvailabilityWithinInterval(context.groupId, fullRangeBeginDate, fullRangeEndDate);
+            } else {
+               if(context.category != Category.AutoGroup) {
+                  throw new IllegalArgumentException(&quot;Do not yet support retrieving availability history for Context[&quot; + context.toShortString() + &quot;]&quot;);
+               }
+
+               availabilities = this.findAutoGroupAvailabilityWithinInterval(context.parentResourceId, context.resourceTypeId, fullRangeBeginDate, fullRangeEndDate);
+            }
+         } catch (Exception var30) {
+            this.log.warn(&quot;Can\'t obtain Availability for &quot; + context.toShortString(), var30);
+            ArrayList totalMillis = new ArrayList(numberOfPoints);
+            long unknownFuture = fullRangeEndTime - fullRangeBeginTime;
+            long perPointMillis1 = unknownFuture / (long)numberOfPoints;
+
+            for(int currentTime = numberOfPoints; currentTime &gt;= 0; --currentTime) {
+               totalMillis.add(new AvailabilityPoint((long)currentTime * perPointMillis1));
+            }
+
+            Collections.reverse(totalMillis);
+            return totalMillis;
+         }
+
+         Availability var33;
+         if(availabilities.size() &gt; 0) {
+            Availability now = (Availability)availabilities.get(0);
+            if(now.getStartTime().getTime() &gt; fullRangeBeginDate.getTime()) {
+               var33 = new Availability(now.getResource(), fullRangeBeginDate, (AvailabilityType)null);
+               var33.setEndTime(now.getStartTime());
+               availabilities.add(0, var33);
+            }
+         } else {
+            Resource var31 = context.category == Category.Resource?(Resource)this.entityManager.find(Resource.class, Integer.valueOf(context.resourceId)):new Resource(-1);
+            var33 = new Availability(var31, fullRangeBeginDate, (AvailabilityType)null);
+            var33.setEndTime(fullRangeEndDate);
+            availabilities.add(var33);
+         }
+
+         Date var32 = new Date();
+         if(fullRangeEndDate.getTime() &gt; var32.getTime()) {
+            var33 = (Availability)availabilities.get(availabilities.size() - 1);
+            var33.setEndTime(var32);
+            Availability var34 = new Availability(var33.getResource(), var32, (AvailabilityType)null);
+            availabilities.add(var34);
+         }
+
+         long var35 = fullRangeEndTime - fullRangeBeginTime;
+         long perPointMillis = var35 / (long)numberOfPoints;
+         ArrayList availabilityPoints = new ArrayList(numberOfPoints);
+         long var36 = fullRangeEndTime;
+         int currentAvailabilityIndex = availabilities.size() - 1;
+         long timeUpInDataPoint = 0L;
+         boolean hasDownPeriods = false;
+         long dataPointStartBarrier = fullRangeEndTime - perPointMillis;
+
+         while(var36 &gt; fullRangeBeginTime) {
+            if(currentAvailabilityIndex &lt;= -1) {
+               availabilityPoints.add(new AvailabilityPoint(var36));
+               var36 -= perPointMillis;
+            } else {
+               Availability errorMsg = (Availability)availabilities.get(currentAvailabilityIndex);
+               long newFirstAvailabilityType = errorMsg.getStartTime().getTime();
+               if(dataPointStartBarrier &gt;= newFirstAvailabilityType) {
+                  if(errorMsg.getAvailabilityType() == null) {
+                     if(hasDownPeriods) {
+                        availabilityPoints.add(new AvailabilityPoint(AvailabilityType.DOWN, var36));
+                     } else if(timeUpInDataPoint &gt; 0L) {
+                        availabilityPoints.add(new AvailabilityPoint(AvailabilityType.UP, var36));
+                     } else {
+                        availabilityPoints.add(new AvailabilityPoint(var36));
+                     }
+                  } else {
+                     if(errorMsg.getAvailabilityType() == AvailabilityType.UP) {
+                        timeUpInDataPoint += var36 - dataPointStartBarrier;
+                     }
+
+                     AvailabilityType firstAvailability = timeUpInDataPoint != perPointMillis?AvailabilityType.DOWN:AvailabilityType.UP;
+                     availabilityPoints.add(new AvailabilityPoint(firstAvailability, var36));
+                  }
+
+                  timeUpInDataPoint = 0L;
+                  hasDownPeriods = false;
+                  if(dataPointStartBarrier == newFirstAvailabilityType) {
+                     --currentAvailabilityIndex;
+                  }
+
+                  var36 = dataPointStartBarrier;
+                  dataPointStartBarrier -= perPointMillis;
+               } else {
+                  if(errorMsg.getAvailabilityType() == AvailabilityType.UP) {
+                     timeUpInDataPoint += var36 - newFirstAvailabilityType;
+                  } else if(errorMsg.getAvailabilityType() == AvailabilityType.DOWN) {
+                     hasDownPeriods = true;
+                  }
+
+                  --currentAvailabilityIndex;
+                  var36 = newFirstAvailabilityType;
+               }
+            }
+         }
+
+         Collections.reverse(availabilityPoints);
+         if(withCurrentAvailability) {
+            AvailabilityPoint var37 = (AvailabilityPoint)availabilityPoints.remove(availabilityPoints.size() - 1);
+            AvailabilityType var39 = var37.getAvailabilityType();
+            if(context.category == Category.Resource) {
+               var39 = this.getCurrentAvailabilityTypeForResource(subject, context.resourceId);
+            } else if(context.category == Category.ResourceGroup) {
+               ResourceGroupComposite composite = this.resourceGroupManager.getResourceGroupComposite(subject, context.groupId);
+               Double var40 = composite.getExplicitAvail();
+               var39 = var40 == null?null:(var40.doubleValue() == 1.0D?AvailabilityType.UP:AvailabilityType.DOWN);
+            }
+
+            availabilityPoints.add(new AvailabilityPoint(var39, var37.getTimestamp()));
+         }
+
+         if(availabilityPoints.size() != numberOfPoints) {
+            String var38 = &quot;Calculation of availability did not produce the proper number of data points! &quot; + context.toShortString() + &quot;; begin=[&quot; + fullRangeBeginTime + &quot;(&quot; + new Date(fullRangeBeginTime) + &quot;)&quot; + &quot;]; end=[&quot; + fullRangeEndTime + &quot;(&quot; + new Date(fullRangeEndTime) + &quot;)&quot; + &quot;]; numberOfPoints=[&quot; + numberOfPoints + &quot;]; actual-number=[&quot; + availabilityPoints.size() + &quot;]&quot;;
+            this.log.warn(var38);
+         }
+
+         return availabilityPoints;
+      } else {
+         return new ArrayList();
+      }
+   }
+
+   public boolean mergeAvailabilityReport(AvailabilityReport report) {
+      int reportSize = report.getResourceAvailability().size();
+      String agentName = report.getAgentName();
+      StopWatch watch = new StopWatch();
+      if(reportSize == 0) {
+         this.log.error(&quot;Agent [&quot; + agentName + &quot;] sent an empty availability report.  This is a bug, please report it&quot;);
+         return true;
+      } else {
+         if(this.log.isDebugEnabled() &amp;&amp; reportSize &gt; 1) {
+            this.log.debug(&quot;Agent [&quot; + agentName + &quot;]: processing availability report of size: &quot; + reportSize);
+         }
+
+         this.notifyAlertConditionCacheManager(&quot;mergeAvailabilityReport&quot;, (Availability[])report.getResourceAvailability().toArray(new Availability[report.getResourceAvailability().size()]));
+         boolean askForFullReport = false;
+         Integer agentToUpdate = this.agentManager.getAgentIdByName(agentName);
+         if(agentToUpdate != null) {
+            this.availabilityManager.updateLastAvailabilityReport(agentToUpdate.intValue());
+         }
+
+         int numInserted = 0;
+         if(report.isChangesOnlyReport() &amp;&amp; this.isAgentBackfilled(agentToUpdate.intValue())) {
+            askForFullReport = true;
+         } else {
+            Query q = this.entityManager.createNamedQuery(&quot;Availability.findCurrentByResource&quot;);
+            q.setFlushMode(FlushModeType.COMMIT);
+            int count = 0;
+            Iterator i$ = report.getResourceAvailability().iterator();
+
+            while(i$.hasNext()) {
+               Availability reported = (Availability)i$.next();
+               ++count;
+               if(count % 100 == 0) {
+                  this.entityManager.flush();
+                  this.entityManager.clear();
+               }
+
+               reported.setEndTime((Date)null);
+
+               try {
+                  q.setParameter(&quot;resourceId&quot;, Integer.valueOf(reported.getResource().getId()));
+                  Availability nure = (Availability)q.getSingleResult();
+                  if(reported.getStartTime().getTime() &gt;= nure.getStartTime().getTime()) {
+                     if(nure.getAvailabilityType() != reported.getAvailabilityType()) {
+                        this.entityManager.persist(reported);
+                        ++numInserted;
+                        nure.setEndTime(reported.getStartTime());
+                        nure = (Availability)this.entityManager.merge(nure);
+                        this.updateResourceAvailability(reported);
+                     }
+
+                     if(nure.getAvailabilityType() == null) {
+                        askForFullReport = true;
+                     }
+                  } else {
+                     this.insertAvailability(reported);
+                     ++numInserted;
+                     askForFullReport = true;
+                  }
+               } catch (NoResultException var16) {
+                  this.entityManager.persist(reported);
+                  this.updateResourceAvailability(reported);
+                  ++numInserted;
+               } catch (NonUniqueResultException var17) {
+                  this.log.warn(&quot;Resource [&quot; + reported.getResource() + &quot;] has multiple availabilities without an endtime [&quot; + var17.getMessage() + &quot;] - will attempt to remove the extra ones\n&quot; + report.toString(false));
+                  q.setParameter(&quot;resourceId&quot;, Integer.valueOf(reported.getResource().getId()));
+                  List latest = q.getResultList();
+                  int latestCount = latest.size();
+
+                  for(int i = 0; i &lt; latestCount - 1; ++i) {
+                     this.entityManager.remove(latest.get(i));
+                  }
+
+                  this.updateResourceAvailability((Availability)latest.get(latestCount - 1));
+                  askForFullReport = true;
+               }
+            }
+
+            MeasurementMonitor.getMBean().incrementAvailabilityReports(report.isChangesOnlyReport());
+            MeasurementMonitor.getMBean().incrementAvailabilitiesInserted((long)numInserted);
+            MeasurementMonitor.getMBean().incrementAvailabilityInsertTime(watch.getElapsed());
+            watch.reset();
+         }
+
+         if(agentToUpdate != null) {
+            if(askForFullReport &amp;&amp; report.isChangesOnlyReport()) {
+               this.log.debug(&quot;The server is unsure that it has up-to-date availabilities for agent [&quot; + agentName + &quot;]; asking for a full report to be sent&quot;);
+               return false;
+            }
+         } else {
+            this.log.error(&quot;Could not figure out which agent sent availability report.  This is a bug, please report it. &quot; + report);
+         }
+
+         return true;
+      }
+   }
+
+   private void updateResourceAvailability(Availability reported) {
+      ResourceAvailability currentAvailability = this.resourceAvailabilityManager.getLatestAvailability(reported.getResource().getId());
+      if(currentAvailability.getAvailabilityType() != reported.getAvailabilityType()) {
+         currentAvailability.setAvailabilityType(reported.getAvailabilityType());
+         this.entityManager.merge(currentAvailability);
+      }
+
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void updateLastAvailabilityReport(int agentId) {
+      String updateStatement = &quot;UPDATE RHQ_AGENT    SET LAST_AVAILABILITY_REPORT = ?  WHERE ID = ? &quot;;
+      Query query = this.entityManager.createNativeQuery(updateStatement);
+      query.setParameter(1, Long.valueOf(System.currentTimeMillis()));
+      query.setParameter(2, Integer.valueOf(agentId));
+      query.executeUpdate();
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void setAllAgentResourceAvailabilities(int agentId, AvailabilityType availabilityType) {
+      String typeString = availabilityType != null?availabilityType.toString():&quot;unknown&quot;;
+      Query query = this.entityManager.createNamedQuery(&quot;Availability.findNonmatchingWithResourceIdByAgentAndType&quot;);
+      query.setParameter(&quot;agentId&quot;, Integer.valueOf(agentId));
+      query.setParameter(&quot;availabilityType&quot;, availabilityType);
+      List resourcesWithStatus = query.getResultList();
+      this.log.debug(&quot;Agent #[&quot; + agentId + &quot;] is going to have [&quot; + resourcesWithStatus.size() + &quot;] resources backfilled with [&quot; + typeString + &quot;]&quot;);
+      Date now = new Date();
+      ArrayList newAvailabilities = new ArrayList(resourcesWithStatus.size());
+      Iterator i$ = resourcesWithStatus.iterator();
+
+      while(i$.hasNext()) {
+         ResourceIdWithAvailabilityComposite record = (ResourceIdWithAvailabilityComposite)i$.next();
+         Availability newAvailabilityInterval = this.getNewInterval(record, now, availabilityType);
+         if(newAvailabilityInterval != null) {
+            newAvailabilities.add(newAvailabilityInterval);
+         }
+      }
+
+      this.resourceAvailabilityManager.updateAllResourcesAvailabilitiesForAgent(agentId, availabilityType);
+      this.notifyAlertConditionCacheManager(&quot;setAllAgentResourceAvailabilities&quot;, (Availability[])newAvailabilities.toArray(new Availability[newAvailabilities.size()]));
+      this.log.debug(&quot;Resources for agent #[&quot; + agentId + &quot;] have been fully backfilled with [&quot; + typeString + &quot;]&quot;);
+   }
+
+   public boolean isAgentBackfilled(int agentId) {
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceAvailability.isAgentBackfilled&quot;);
+      query.setParameter(&quot;agentId&quot;, Integer.valueOf(agentId));
+      Long downOrSuspectCount = (Long)query.getSingleResult();
+      return downOrSuspectCount.longValue() != 0L;
+   }
+
+   private Availability getNewInterval(ResourceIdWithAvailabilityComposite record, Date startDate, AvailabilityType aType) {
+      Availability old = record.getAvailability();
+      if(old != null) {
+         if(old.getAvailabilityType() == aType) {
+            old.setEndTime((Date)null);
+            return null;
+         }
+
+         old.setEndTime(startDate);
+      }
+
+      Resource resource = new Resource();
+      resource.setId(record.getResourceId());
+      Availability newAvail = new Availability(resource, startDate, aType);
+      this.entityManager.persist(newAvail);
+      return newAvail;
+   }
+
+   private void insertAvailability(Availability toInsert) {
+      Query query = this.entityManager.createNamedQuery(&quot;Availability.findByResourceAndDate&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(toInsert.getResource().getId()));
+      query.setParameter(&quot;aTime&quot;, Long.valueOf(toInsert.getStartTime().getTime()));
+
+      Availability existing;
+      try {
+         existing = (Availability)query.getSingleResult();
+      } catch (NoResultException var6) {
+         query = this.entityManager.createNamedQuery(&quot;Availability.findByResource&quot;);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(toInsert.getResource().getId()));
+         query.setMaxResults(1);
+         Availability firstAvail = (Availability)query.getResultList().get(0);
+         if(firstAvail.getAvailabilityType() != toInsert.getAvailabilityType()) {
+            toInsert.setEndTime(firstAvail.getStartTime());
+            this.entityManager.persist(toInsert);
+         } else {
+            firstAvail.setStartTime(toInsert.getStartTime());
+         }
+
+         return;
+      }
+
+      if(existing.getAvailabilityType() != toInsert.getAvailabilityType()) {
+         query = this.entityManager.createNamedQuery(&quot;Availability.findByResourceAndDate&quot;);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(toInsert.getResource().getId()));
+         query.setParameter(&quot;aTime&quot;, Long.valueOf(existing.getEndTime().getTime() + 1L));
+         Availability afterExisting = (Availability)query.getSingleResult();
+         afterExisting.setStartTime(toInsert.getStartTime());
+         if(existing.getEndTime().getTime() == toInsert.getStartTime().getTime()) {
+            this.entityManager.remove(existing);
+         } else {
+            existing.setEndTime(toInsert.getStartTime());
+         }
+      }
+
+   }
+
+   public List findAvailabilityWithinInterval(int resourceId, Date startDate, Date endDate) {
+      Query q = this.entityManager.createNamedQuery(&quot;Availability.findForResourceWithinInterval&quot;);
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      q.setParameter(&quot;start&quot;, Long.valueOf(startDate.getTime()));
+      q.setParameter(&quot;end&quot;, Long.valueOf(endDate.getTime()));
+      List results = q.getResultList();
+      return results;
+   }
+
+   private List findResourceGroupAvailabilityWithinInterval(int groupId, Date startDate, Date endDate) {
+      Query q = this.entityManager.createNamedQuery(&quot;Availability.findForResourceGroupWithinInterval&quot;);
+      q.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      q.setParameter(&quot;start&quot;, Long.valueOf(startDate.getTime()));
+      q.setParameter(&quot;end&quot;, Long.valueOf(endDate.getTime()));
+      List results = q.getResultList();
+      return results;
+   }
+
+   private List findAutoGroupAvailabilityWithinInterval(int parentResourceId, int resourceTypeId, Date startDate, Date endDate) {
+      Query q = this.entityManager.createNamedQuery(&quot;Availability.findForAutoGroupWithinInterval&quot;);
+      q.setParameter(&quot;parentId&quot;, Integer.valueOf(parentResourceId));
+      q.setParameter(&quot;typeId&quot;, Integer.valueOf(resourceTypeId));
+      q.setParameter(&quot;start&quot;, Long.valueOf(startDate.getTime()));
+      q.setParameter(&quot;end&quot;, Long.valueOf(endDate.getTime()));
+      List results = q.getResultList();
+      return results;
+   }
+
+   public PageList findAvailabilityForResource(Subject subject, int resourceId, PageControl pageControl) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view Availability history for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         pageControl.initDefaultOrderingField(&quot;av.startTime&quot;, PageOrdering.DESC);
+         Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Availability.findByResourceNoSort&quot;);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Availability.findByResourceNoSort&quot;, pageControl);
+         countQuery.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         long count = ((Long)countQuery.getSingleResult()).longValue();
+         List availabilities = query.getResultList();
+         return new PageList(availabilities, (int)count, pageControl);
+      }
+   }
+
+   private void notifyAlertConditionCacheManager(String callingMethod, Availability... availabilities) {
+      AlertConditionCacheStats stats = this.alertConditionCacheManager.checkConditions(availabilities);
+      this.log.debug(callingMethod + &quot;: &quot; + stats.toString());
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

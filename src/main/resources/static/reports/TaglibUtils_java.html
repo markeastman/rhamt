@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for TaglibUtils.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/classes/org/rhq/enterprise/gui/legacy/util/TaglibUtils.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">3</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.gui.legacy.util;
+
+import javax.servlet.http.HttpSession;
+import javax.servlet.jsp.PageContext;
+
+public class TaglibUtils {
+   public static void setScopedVariable(PageContext pageContext, String scope, String var, Object value) {
+      if(scope == null) {
+         scope = &quot; page&quot;;
+      }
+
+      if(scope.equalsIgnoreCase(&quot;application&quot;)) {
+         pageContext.getServletContext().setAttribute(var, value);
+      } else if(scope.equalsIgnoreCase(&quot;session&quot;)) {
+         HttpSession session = pageContext.getSession();
+         if(session != null) {
+            session.setAttribute(var, value);
+         }
+      } else if(scope.equalsIgnoreCase(&quot;request&quot;)) {
+         pageContext.getRequest().setAttribute(var, value);
+      } else {
+         pageContext.setAttribute(var, value);
+      }
+
+   }
+
+   public static String shortenPath(String path, int preChars, int postChars, boolean strict) {
+      if(!strict) {
+         return shortenPath(path, preChars, postChars);
+      } else if(path.length() &lt;= preChars + postChars + 3) {
+         return path;
+      } else {
+         StringBuffer ret = (new StringBuffer(path.substring(0, preChars))).append(&quot;...&quot;).append(path.substring(path.length() - postChars));
+         return ret.toString();
+      }
+   }
+
+   public static String shortenPath(String path, int preChars, int postChars) {
+      int slash1 = path.indexOf(&quot;/&quot;);
+      int slash2 = path.indexOf(&quot;\\&quot;);
+      byte slash;
+      if(slash1 == -1) {
+         if(slash2 == -1) {
+            return path;
+         }
+
+         slash = 92;
+      } else if(slash2 == -1) {
+         slash = 47;
+      } else if(slash1 &lt; slash2) {
+         slash = 47;
+      } else {
+         slash = 92;
+      }
+
+      try {
+         if(path.length() &lt;= preChars + postChars) {
+            return path;
+         } else {
+            slash1 = path.substring(0, preChars).lastIndexOf(slash);
+            if(slash1 == -1) {
+               slash1 = path.indexOf(slash);
+            }
+
+            if(slash1 == -1) {
+               return path;
+            } else {
+               String e = path.substring(0, slash1 + 1);
+               if(postChars &gt; path.length()) {
+                  postChars = path.length();
+               }
+
+               slash2 = path.substring(path.length() - postChars).indexOf(slash);
+               if(slash2 == -1) {
+                  postChars = path.length();
+                  slash2 = path.lastIndexOf(slash);
+               }
+
+               if(slash2 != -1 &amp;&amp; slash2 != slash1) {
+                  String suffix = path.substring(path.length() - postChars).substring(slash2);
+                  return e + &quot;...&quot; + suffix;
+               } else {
+                  return path;
+               }
+            }
+         }
+      } catch (StringIndexOutOfBoundsException var8) {
+         System.err.println(&quot;SBE on shortenPath(&quot; + path + &quot;,&quot; + preChars + &quot;,&quot; + postChars + &quot;)&quot;);
+         throw var8;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "17" });
+
+            $("<div id='17-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(17)');
+
+
+$("<a name='12448256' class='windup-file-location'></a><div class='inline-source-comment green tag-clustering'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>HTTP Session data storage</strong><a title='View Rule: session-00001' href='windup_ruleproviders.html#session-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The servlet container uses HttpSession to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user. <code>HttpSession.setAttribute<\/code> method allows user information to persist across multiple user connections Warning: As of Java Servlet Version 2.2, the <code>javax.http.HTTPSession.putValue(java.lang.String name,java.lang.Object value)<\/code> method is deprecated and replaced by <code>javax.http.HttpSession.setAttribute(java.lang.String, java.lang.Object)<\/code><\/p><p>In a cloud environment it has to be considered that the data in the memory of a running container can be wiped out by a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location)[1]. Consider storing HTTPSession data to a cache backing service[2][3][4][5] This approach has some benefits:<\/p>\n<ul>\n  <li>Increased application scalability and elasticity. By offloading the session data off to a remote Data Grid, the application tier itself can be more scalable and elastic.<\/li>\n  <li>Session Persistence. By offloading session data to a remote data grid, the application itself will be able to survive EAP node failures since the a JVM failure will not cause the session data to be lost.<\/li>\n  <li>Session Data Sharing. If you have a requirement for multiple applications to be able to share session data, this solution might be able to solve that use case as well.<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/processes\" target=\"_blank\">Twelve-factor app - Processes<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_high_availability#externalize-http-sessions-to-jdg\" target=\"_blank\">JBoss EAP - Externalize HTTP Sessions to JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://developers.redhat.com/blog/2015/11/23/externalize-http-session-data-to-jboss-data-grid/\" target=\"_blank\">Developer blog post - Externalize HTTP Session Data to the JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html/red_hat_jboss_data_grid_for_openshift/\" target=\"_blank\">Red Hat JBoss Data Grid for OpenShift<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#17-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

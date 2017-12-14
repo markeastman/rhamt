@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ClusterManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/resource/cluster/ClusterManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.resource.cluster;
+
+import java.util.Iterator;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.resource.cluster.ClusterKey;
+import org.rhq.enterprise.server.resource.cluster.ClusterManagerLocal;
+import org.rhq.enterprise.server.resource.cluster.ClusterKey.Node;
+import org.rhq.enterprise.server.resource.group.ResourceGroupAlreadyExistsException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupUpdateException;
+
+@Stateless
+public class ClusterManagerBean implements ClusterManagerLocal {
+   private final Log log = LogFactory.getLog(ClusterManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+
+   public ResourceGroup createAutoClusterBackingGroup(Subject subject, ClusterKey clusterKey, boolean addResources) {
+      ResourceGroup autoClusterBackingGroup = null;
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findByClusterKey&quot;);
+      query.setParameter(&quot;clusterKey&quot;, clusterKey.toString());
+      ResourceType resourceType = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(ClusterKey.getResourceType(clusterKey)));
+      ResourceGroup resourceGroup = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(clusterKey.getClusterGroupId()));
+      if(!this.authorizationManager.canViewGroup(subject, clusterKey.getClusterGroupId())) {
+         throw new PermissionException(&quot;You do not have permission to view child cluster groups of the group [&quot; + resourceGroup.getName() + &quot;]&quot;);
+      } else {
+         List resources = null;
+
+         Iterator e;
+         Resource res;
+         try {
+            autoClusterBackingGroup = (ResourceGroup)query.getSingleResult();
+         } catch (NoResultException var15) {
+            try {
+               resources = this.getAutoClusterResources(subject, clusterKey);
+               String resourceIds = null;
+               if(resources.isEmpty()) {
+                  resourceIds = &quot;Group of &quot; + resourceType.getName();
+               } else {
+                  e = resources.iterator();
+
+                  while(e.hasNext()) {
+                     res = (Resource)e.next();
+                     if(resourceIds == null) {
+                        resourceIds = res.getName();
+                     } else if(!resourceIds.equals(res.getName())) {
+                        resourceIds = &quot;Group of &quot; + resourceType.getName();
+                     }
+                  }
+               }
+
+               autoClusterBackingGroup = new ResourceGroup(resourceIds, resourceType);
+               autoClusterBackingGroup.setClusterKey(clusterKey.toString());
+               autoClusterBackingGroup.setClusterResourceGroup(resourceGroup);
+               autoClusterBackingGroup.setVisible(false);
+               int var16 = this.resourceGroupManager.createResourceGroup(this.subjectManager.getOverlord(), autoClusterBackingGroup).getId();
+               autoClusterBackingGroup = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(var16));
+            } catch (ResourceGroupAlreadyExistsException var14) {
+               this.log.error(&quot;Unexpected Error, group exists &quot; + var14);
+               return null;
+            }
+         }
+
+         if(addResources) {
+            if(resources == null) {
+               resources = this.getAutoClusterResources(subject, clusterKey);
+            }
+
+            int i = 0;
+            int[] var17 = new int[resources.size()];
+
+            for(e = resources.iterator(); e.hasNext(); var17[i++] = res.getId()) {
+               res = (Resource)e.next();
+            }
+
+            try {
+               this.resourceGroupManager.ensureMembershipMatches(this.subjectManager.getOverlord(), autoClusterBackingGroup.getId(), var17);
+            } catch (ResourceGroupUpdateException var13) {
+               this.log.error(&quot;Could not add resources to group:&quot; + var13);
+            }
+         }
+
+         return autoClusterBackingGroup;
+      }
+   }
+
+   public ResourceGroup getAutoClusterBackingGroup(Subject subject, ClusterKey clusterKey) {
+      ResourceGroup result = null;
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findByClusterKey&quot;);
+      query.setParameter(&quot;clusterKey&quot;, clusterKey.toString());
+
+      try {
+         result = (ResourceGroup)query.getSingleResult();
+      } catch (NoResultException var6) {
+         result = null;
+      }
+
+      return result;
+   }
+
+   public List getAutoClusterResources(Subject subject, ClusterKey clusterKey) {
+      String queryString = this.getClusterKeyQuery(clusterKey);
+      if(this.log.isDebugEnabled()) {
+         this.log.debug(&quot;getAutoClusterResources() generated query: &quot; + queryString);
+      }
+
+      Query query = this.entityManager.createQuery(queryString);
+      List rs = query.getResultList();
+      return rs;
+   }
+
+   private String getClusterKeyQuery(ClusterKey clusterKey) {
+      if(null == clusterKey) {
+         return null;
+      } else if(0 == clusterKey.getDepth()) {
+         return null;
+      } else {
+         StringBuilder query = new StringBuilder();
+         this.buildQuery(query, clusterKey, clusterKey.getHierarchy());
+         return query.toString();
+      }
+   }
+
+   private void buildQuery(StringBuilder query, ClusterKey clusterKey, List nodes) {
+      int size = nodes.size();
+      Node node = (Node)nodes.get(size - 1);
+      String alias = &quot;r&quot; + size;
+      query.append(&quot; SELECT &quot; + alias + &quot; FROM Resource &quot; + alias + &quot; WHERE &quot;);
+      query.append(alias + &quot;.resourceKey = \'&quot; + node.getResourceKey() + &quot;\' AND &quot;);
+      query.append(alias + &quot;.resourceType = &quot; + node.getResourceTypeId() + &quot; AND &quot;);
+      query.append(alias + &quot;.parentResource IN ( &quot;);
+      if(1 == size) {
+         query.append(&quot;SELECT rgir FROM ResourceGroup rg JOIN rg.implicitResources rgir WHERE rg = &quot; + clusterKey.getClusterGroupId());
+      } else {
+         this.buildQuery(query, clusterKey, nodes.subList(0, size - 1));
+      }
+
+      query.append(&quot;)&quot;);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

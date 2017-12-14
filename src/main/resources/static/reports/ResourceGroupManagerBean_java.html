@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ResourceGroupManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/resource/group/ResourceGroupManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.resource.group;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.IgnoreDependency;
+import org.quartz.SchedulerException;
+import org.rhq.core.db.DatabaseType;
+import org.rhq.core.db.DatabaseTypeFactory;
+import org.rhq.core.db.H2DatabaseType;
+import org.rhq.core.db.OracleDatabaseType;
+import org.rhq.core.db.PostgresqlDatabaseType;
+import org.rhq.core.db.SQLServerDatabaseType;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.authz.Role;
+import org.rhq.core.domain.criteria.ResourceGroupCriteria;
+import org.rhq.core.domain.measurement.DataType;
+import org.rhq.core.domain.measurement.DisplayType;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.ResourceCategory;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.composite.ResourceFacets;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.resource.group.composite.ResourceGroupComposite;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.OrderingField;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.domain.util.CriteriaQueryGenerator.AuthorizationTokenType;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.core.util.jdbc.JDBCUtil;
+import org.rhq.enterprise.server.alert.GroupAlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.exception.UnscheduleException;
+import org.rhq.enterprise.server.operation.GroupOperationSchedule;
+import org.rhq.enterprise.server.operation.OperationManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeNotFoundException;
+import org.rhq.enterprise.server.resource.group.RecursivityChangeType;
+import org.rhq.enterprise.server.resource.group.ResourceGroupDeleteException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerRemote;
+import org.rhq.enterprise.server.resource.group.ResourceGroupNotFoundException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupUpdateException;
+
+@Stateless
+@Resource(
+   name = &quot;RHQ_DS&quot;,
+   mappedName = &quot;java:/RHQDS&quot;
+)
+public class ResourceGroupManagerBean implements ResourceGroupManagerLocal, ResourceGroupManagerRemote {
+   private final Log log = LogFactory.getLog(ResourceGroupManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   @IgnoreDependency
+   private OperationManagerLocal operationManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   @IgnoreDependency
+   private ResourceTypeManagerLocal resourceTypeManager;
+   @EJB
+   @IgnoreDependency
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private GroupAlertDefinitionManagerLocal groupAlertDefinitionManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;
+   )
+   private DataSource rhqDs;
+   private DatabaseType dbType;
+
+   @PostConstruct
+   public void init() {
+      Connection conn = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         this.dbType = DatabaseTypeFactory.getDatabaseType(conn);
+      } catch (Exception var7) {
+         throw new RuntimeException(var7);
+      } finally {
+         JDBCUtil.safeClose(conn);
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ResourceGroup createResourceGroup(Subject user, ResourceGroup group) {
+      long time = System.currentTimeMillis();
+      group.setCtime(Long.valueOf(time));
+      group.setMtime(Long.valueOf(time));
+      group.setModifiedBy(user);
+      this.entityManager.persist(group);
+      return group;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ResourceGroup updateResourceGroup(Subject user, ResourceGroup group, RecursivityChangeType changeType) throws ResourceGroupUpdateException {
+      int groupId = group.getId();
+      if(changeType == null) {
+         ResourceGroup time = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(groupId));
+         changeType = RecursivityChangeType.None;
+         if(time.isRecursive() &amp;&amp; !group.isRecursive()) {
+            changeType = RecursivityChangeType.RemovedRecursion;
+         } else if(!time.isRecursive() &amp;&amp; group.isRecursive()) {
+            changeType = RecursivityChangeType.AddedRecursion;
+         }
+      }
+
+      long time1 = System.currentTimeMillis();
+      group.setMtime(Long.valueOf(time1));
+      group.setModifiedBy(user);
+      ResourceGroup newlyAttachedGroup = (ResourceGroup)this.entityManager.merge(group);
+      if(changeType == RecursivityChangeType.AddedRecursion) {
+         newlyAttachedGroup.setRecursive(true);
+         this.enableRecursivityForGroup(user, groupId);
+      } else if(changeType == RecursivityChangeType.RemovedRecursion) {
+         newlyAttachedGroup.setRecursive(false);
+         this.clearImplicitResources(groupId);
+         this.makeImplicitMirrorExplicit(groupId);
+      }
+
+      return newlyAttachedGroup;
+   }
+
+   private void clearImplicitResources(int resourceGroupId) throws ResourceGroupUpdateException {
+      Connection conn = null;
+      PreparedStatement removeImplicitStatement = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         removeImplicitStatement = conn.prepareStatement(&quot;DELETE FROM rhq_resource_group_res_imp_map implicitMap       WHERE implicitMap.resource_group_id = ?&quot;);
+         removeImplicitStatement.setInt(1, resourceGroupId);
+         removeImplicitStatement.executeUpdate();
+      } catch (SQLException var9) {
+         this.log.error(&quot;Error removing implicit resources from group[id=&quot; + resourceGroupId + &quot;]: &quot;, var9);
+         throw new ResourceGroupUpdateException(&quot;Error removing implicit resources from group[id=&quot; + resourceGroupId + &quot;]: &quot; + var9.getMessage());
+      } finally {
+         JDBCUtil.safeClose(removeImplicitStatement);
+         JDBCUtil.safeClose(conn);
+      }
+
+   }
+
+   private void makeImplicitMirrorExplicit(int resourceGroupId) throws ResourceGroupUpdateException {
+      Connection conn = null;
+      PreparedStatement updateImplicitMirrorExplicitStatement = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         updateImplicitMirrorExplicitStatement = conn.prepareStatement(&quot;INSERT INTO rhq_resource_group_res_imp_map (resource_id, resource_group_id)      SELECT explicitMap.resource_id, explicitMap.resource_group_id        FROM rhq_resource_group_res_exp_map explicitMap       WHERE explicitMap.resource_group_id = ?&quot;);
+         updateImplicitMirrorExplicitStatement.setInt(1, resourceGroupId);
+         updateImplicitMirrorExplicitStatement.executeUpdate();
+      } catch (SQLException var9) {
+         this.log.error(&quot;Error making implicit resources mirror explicit resources for group[id=&quot; + resourceGroupId + &quot;]: &quot;, var9);
+         throw new ResourceGroupUpdateException(&quot;Error making implicit resources mirror explicit resources for group[id=&quot; + resourceGroupId + &quot;]: &quot; + var9.getMessage());
+      } finally {
+         JDBCUtil.safeClose(updateImplicitMirrorExplicitStatement);
+         JDBCUtil.safeClose(conn);
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void deleteResourceGroup(Subject subject, int groupId) throws ResourceGroupNotFoundException, ResourceGroupDeleteException {
+      ResourceGroup group = this.getResourceGroupById(subject, groupId, (GroupCategory)null);
+      Iterator q;
+      if(group.getGroupCategory() == GroupCategory.COMPATIBLE) {
+         q = group.getClusterBackingGroups().iterator();
+
+         while(q.hasNext()) {
+            ResourceGroup doomedRoleRelationship = (ResourceGroup)q.next();
+            this.deleteResourceGroup(subject, doomedRoleRelationship.getId());
+         }
+      }
+
+      if(group.getGroupCategory() == GroupCategory.COMPATIBLE) {
+         Subject q1 = this.subjectManager.getOverlord();
+
+         try {
+            List doomedRoleRelationship1 = this.operationManager.findScheduledGroupOperations(q1, groupId);
+            Iterator i$ = doomedRoleRelationship1.iterator();
+
+            while(i$.hasNext()) {
+               GroupOperationSchedule schedule = (GroupOperationSchedule)i$.next();
+
+               try {
+                  this.operationManager.unscheduleGroupOperation(q1, schedule.getJobId().toString(), groupId);
+               } catch (UnscheduleException var9) {
+                  this.log.warn(&quot;Failed to unschedule job [&quot; + schedule + &quot;] for a group being deleted [&quot; + group + &quot;]&quot;, var9);
+               }
+            }
+         } catch (SchedulerException var10) {
+            this.log.warn(&quot;Failed to get jobs for a group being deleted [&quot; + group + &quot;]; will not attempt to unschedule anything&quot;, var10);
+         }
+      }
+
+      this.groupAlertDefinitionManager.purgeAllGroupAlertDefinitions(subject, groupId);
+      q = group.getRoles().iterator();
+
+      while(q.hasNext()) {
+         Role doomedRoleRelationship2 = (Role)q.next();
+         group.removeRole(doomedRoleRelationship2);
+         this.entityManager.merge(doomedRoleRelationship2);
+      }
+
+      this.resourceGroupManager.removeAllResourcesFromGroup(subject, groupId);
+      q = null;
+      Query q2 = this.entityManager.createNamedQuery(&quot;ResourceConfigurationUpdate.deleteGroupUpdatesForGroup&quot;);
+      q2.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      q2.executeUpdate();
+      q2 = this.entityManager.createNamedQuery(&quot;pluginConfigurationUpdate.deleteGroupUpdatesForGroup&quot;);
+      q2.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      q2.executeUpdate();
+      this.entityManager.remove(group);
+   }
+
+   public ResourceGroup getResourceGroupById(Subject user, int id, GroupCategory category) throws ResourceGroupNotFoundException {
+      ResourceGroup group = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(id));
+      if(group == null) {
+         throw new ResourceGroupNotFoundException(id);
+      } else if(!this.authorizationManager.canViewGroup(user, group.getId())) {
+         throw new PermissionException(&quot;You do not have permission to view this resource group&quot;);
+      } else if(category != null &amp;&amp; category != group.getGroupCategory()) {
+         throw new ResourceGroupNotFoundException(&quot;Expected group to belong to \'&quot; + category + &quot;\' category, &quot; + &quot;it belongs to \'&quot; + group.getGroupCategory() + &quot;\' category instead&quot;);
+      } else {
+         this.initLazyFields(group);
+         return group;
+      }
+   }
+
+   private void initLazyFields(ResourceGroup group) {
+      if(group.getModifiedBy() != null) {
+         group.getModifiedBy().getId();
+      }
+
+   }
+
+   public int getResourceGroupCountByCategory(Subject subject, GroupCategory category) {
+      Query queryCount;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         queryCount = this.entityManager.createNamedQuery(&quot;ResourceGroup.findAllByCategory_Count_admin&quot;);
+      } else {
+         queryCount = this.entityManager.createNamedQuery(&quot;ResourceGroup.findAllByCategory_Count&quot;);
+         queryCount.setParameter(&quot;subject&quot;, subject);
+      }
+
+      queryCount.setParameter(&quot;category&quot;, category);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      return (int)count;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void enableRecursivityForGroup(Subject subject, int groupId) throws ResourceGroupNotFoundException, ResourceGroupUpdateException {
+      this.clearImplicitResources(groupId);
+      List explicitResourceIdList = this.resourceManager.findExplicitResourceIdsByResourceGroup(groupId);
+      this.addResourcesToGroupImplicit(subject, Integer.valueOf(groupId), explicitResourceIdList, false, true);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void addResourcesToGroup(Subject subject, int groupId, int[] resourceIds) {
+      Integer[] ids = ArrayUtils.wrapInArray(resourceIds);
+      if(ids != null &amp;&amp; ids.length != 0) {
+         boolean isRecursive = this.isRecursive(groupId);
+
+         for(int batchIndex = 0; batchIndex &lt; ids.length; batchIndex += 1000) {
+            Integer[] batchIdArray = (Integer[])ArrayUtils.copyOfRange(ids, batchIndex, batchIndex + 1000);
+            List batchIds = Arrays.asList(batchIdArray);
+            this.addResourcesToGroupImplicit(subject, Integer.valueOf(groupId), batchIds, true, isRecursive);
+            this.addResourcesToGroupExplicit(subject, Integer.valueOf(groupId), batchIds, isRecursive);
+         }
+
+      }
+   }
+
+   private void addResourcesToGroupExplicit(Subject subject, Integer groupId, List resourceIds, boolean isRecursive) throws ResourceGroupUpdateException {
+      if(resourceIds != null &amp;&amp; resourceIds.size() != 0) {
+         List nonMemberResources = this.getNonMemberExplicitResources(groupId.intValue(), resourceIds);
+         if(nonMemberResources.size() != 0) {
+            int[] resourceIdsToAdd = ArrayUtils.unwrapCollection(nonMemberResources);
+            this.groupAlertDefinitionManager.addGroupAlertDefinitions(subject, groupId.intValue(), resourceIdsToAdd);
+            Connection conn = null;
+            PreparedStatement insertExplicitStatement = null;
+
+            try {
+               conn = this.rhqDs.getConnection();
+               String sqle = JDBCUtil.transformQueryForMultipleInParameters(&quot;    insert into RHQ_RESOURCE_GROUP_RES_EXP_MAP ( RESOURCE_ID, RESOURCE_GROUP_ID )          select res.ID, ?            from RHQ_RESOURCE res           where res.ID in ( @@RESOURCE_IDS@@ ) &quot;, &quot;@@RESOURCE_IDS@@&quot;, resourceIdsToAdd.length);
+               insertExplicitStatement = conn.prepareStatement(sqle);
+               insertExplicitStatement.setInt(1, groupId.intValue());
+               JDBCUtil.bindNTimes(insertExplicitStatement, resourceIdsToAdd, 2);
+               insertExplicitStatement.executeUpdate();
+            } catch (SQLException var14) {
+               this.log.error(&quot;Error adding resources to group[id=&quot; + groupId + &quot;]: &quot;, var14);
+               throw new ResourceGroupUpdateException(&quot;Error adding resources from group[id=&quot; + groupId + &quot;]: &quot; + var14.getMessage());
+            } finally {
+               JDBCUtil.safeClose(insertExplicitStatement);
+               JDBCUtil.safeClose(conn);
+            }
+
+         }
+      }
+   }
+
+   private void addResourcesToGroupImplicit(Subject subject, Integer groupId, List resourceIds, boolean filterByExplicitMembership, boolean isRecursive) throws ResourceGroupUpdateException {
+      if(resourceIds != null &amp;&amp; resourceIds.size() != 0) {
+         int[] resourceIdsToAdd;
+         if(filterByExplicitMembership) {
+            List conn = this.getNonMemberExplicitResources(groupId.intValue(), resourceIds);
+            if(conn.size() == 0) {
+               return;
+            }
+
+            resourceIdsToAdd = ArrayUtils.unwrapCollection(conn);
+         } else {
+            resourceIdsToAdd = ArrayUtils.unwrapCollection(resourceIds);
+         }
+
+         Connection var20 = null;
+         Object insertExplicitStatement = null;
+         PreparedStatement insertImplicitStatement = null;
+
+         try {
+            var20 = this.rhqDs.getConnection();
+            if(isRecursive) {
+               insertImplicitStatement = var20.prepareStatement(&quot;    insert into RHQ_RESOURCE_GROUP_RES_IMP_MAP ( RESOURCE_ID, RESOURCE_GROUP_ID )          select res.ID, ?            from RHQ_RESOURCE res left outer join RHQ_RESOURCE g1parent on res.PARENT_RESOURCE_ID = g1parent.ID left outer join RHQ_RESOURCE g2parent on g1parent.PARENT_RESOURCE_ID = g2parent.ID left outer join RHQ_RESOURCE g3parent on g2parent.PARENT_RESOURCE_ID = g3parent.ID left outer join RHQ_RESOURCE g4parent on g3parent.PARENT_RESOURCE_ID = g4parent.ID left outer join RHQ_RESOURCE g5parent on g4parent.PARENT_RESOURCE_ID = g5parent.ID left outer join RHQ_RESOURCE g6parent on g5parent.PARENT_RESOURCE_ID = g6parent.ID           where ( res.ID = ? or                   g1parent.ID = ? or                   g2parent.ID = ? or                   g3parent.ID = ? or                   g4parent.ID = ? or                   g5parent.ID = ? or                   g6parent.ID = ? )             and ( res.ID not in ( select impRes.ID                                     from RHQ_RESOURCE_GROUP rg                               inner join RHQ_RESOURCE_GROUP_RES_IMP_MAP implicitMap on rg.ID = implicitMap.RESOURCE_GROUP_ID                               inner join RHQ_RESOURCE impRes on implicitMap.RESOURCE_ID = impRes.ID                                    where rg.ID = ? ) ) &quot;);
+               insertImplicitStatement.setInt(1, groupId.intValue());
+               insertImplicitStatement.setInt(9, groupId.intValue());
+               int[] sqle = resourceIdsToAdd;
+               int len$ = resourceIdsToAdd.length;
+
+               for(int i$ = 0; i$ &lt; len$; ++i$) {
+                  int resourceId = sqle[i$];
+                  insertImplicitStatement.setInt(2, resourceId);
+                  insertImplicitStatement.setInt(3, resourceId);
+                  insertImplicitStatement.setInt(4, resourceId);
+                  insertImplicitStatement.setInt(5, resourceId);
+                  insertImplicitStatement.setInt(6, resourceId);
+                  insertImplicitStatement.setInt(7, resourceId);
+                  insertImplicitStatement.setInt(8, resourceId);
+                  insertImplicitStatement.executeUpdate();
+               }
+            } else {
+               String var21 = JDBCUtil.transformQueryForMultipleInParameters(&quot;    insert into RHQ_RESOURCE_GROUP_RES_IMP_MAP ( RESOURCE_ID, RESOURCE_GROUP_ID )          select res.ID, ?            from RHQ_RESOURCE res           where res.ID in ( @@RESOURCE_IDS@@ ) &quot;, &quot;@@RESOURCE_IDS@@&quot;, resourceIdsToAdd.length);
+               insertImplicitStatement = var20.prepareStatement(var21);
+               insertImplicitStatement.setInt(1, groupId.intValue());
+               JDBCUtil.bindNTimes(insertImplicitStatement, resourceIdsToAdd, 2);
+               insertImplicitStatement.executeUpdate();
+            }
+         } catch (SQLException var18) {
+            this.log.error(&quot;Error adding resources to group[id=&quot; + groupId + &quot;]: &quot;, var18);
+            throw new ResourceGroupUpdateException(&quot;Error adding resources from group[id=&quot; + groupId + &quot;]: &quot; + var18.getMessage());
+         } finally {
+            JDBCUtil.safeClose((Statement)insertExplicitStatement);
+            JDBCUtil.safeClose(insertImplicitStatement);
+            JDBCUtil.safeClose(var20);
+         }
+
+      }
+   }
+
+   private boolean isRecursive(int groupId) {
+      Subject overlord = this.subjectManager.getOverlord();
+      ResourceGroup attachedGroup = this.getResourceGroupById(overlord, groupId, (GroupCategory)null);
+      return attachedGroup.isRecursive();
+   }
+
+   private List getNonMemberExplicitResources(int groupId, List resourceIds) {
+      if(resourceIds != null &amp;&amp; resourceIds.size() != 0) {
+         Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findResourceIdsNotInGroupExplicit&quot;);
+         query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+         query.setParameter(&quot;resourceIds&quot;, resourceIds);
+         List nonMemberResources = query.getResultList();
+         return nonMemberResources;
+      } else {
+         return Collections.emptyList();
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void removeResourcesFromGroup(Subject subject, int groupId, int[] resourceIds) {
+      Integer[] ids = ArrayUtils.wrapInArray(resourceIds);
+      if(ids != null &amp;&amp; ids.length != 0) {
+         boolean isRecursive = this.isRecursive(groupId);
+
+         for(int batchIndex = 0; batchIndex &lt; ids.length; batchIndex += 1000) {
+            Integer[] batchIdArray = (Integer[])ArrayUtils.copyOfRange(ids, batchIndex, batchIndex + 1000);
+            this.removeResourcesFromGroup_helper(subject, Integer.valueOf(groupId), batchIdArray, isRecursive);
+         }
+
+      }
+   }
+
+   private void removeResourcesFromGroup_helper(Subject subject, Integer groupId, Integer[] resourceIds, boolean isRecursive) throws ResourceGroupNotFoundException, ResourceGroupUpdateException {
+      List nonMembersToBeRemoved = this.getNonMemberExplicitResources(groupId.intValue(), Arrays.asList(resourceIds));
+      if(nonMembersToBeRemoved.size() != 0) {
+         throw new ResourceGroupUpdateException(&quot;Can not remove resources[&quot; + nonMembersToBeRemoved + &quot;] which are not part of the group[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         int[] resourceIdsToRemove = ArrayUtils.unwrapArray(resourceIds);
+         this.groupAlertDefinitionManager.removeGroupAlertDefinitions(subject, groupId.intValue(), resourceIdsToRemove);
+         Connection conn = null;
+         PreparedStatement deleteExplicitStatement = null;
+         PreparedStatement deleteImplicitStatement = null;
+
+         try {
+            conn = this.rhqDs.getConnection();
+            String sqle;
+            if(isRecursive) {
+               deleteImplicitStatement = conn.prepareStatement(&quot;   delete from RHQ_RESOURCE_GROUP_RES_IMP_MAP          where RESOURCE_GROUP_ID = ?            and RESOURCE_ID in                ( select res.id                    from RHQ_RESOURCE res         left outer join RHQ_RESOURCE g1parent on res.PARENT_RESOURCE_ID = g1parent.ID         left outer join RHQ_RESOURCE g2parent on g1parent.PARENT_RESOURCE_ID = g2parent.ID         left outer join RHQ_RESOURCE g3parent on g2parent.PARENT_RESOURCE_ID = g3parent.ID         left outer join RHQ_RESOURCE g4parent on g3parent.PARENT_RESOURCE_ID = g4parent.ID         left outer join RHQ_RESOURCE g5parent on g4parent.PARENT_RESOURCE_ID = g5parent.ID         left outer join RHQ_RESOURCE g6parent on g5parent.PARENT_RESOURCE_ID = g6parent.ID                   where ( res.ID = ? or                           g1parent.ID = ? or                           g2parent.ID = ? or                           g3parent.ID = ? or                           g4parent.ID = ? or                           g5parent.ID = ? or                           g6parent.ID = ? ) )            and RESOURCE_ID not in                ( select res.id                    from RHQ_RESOURCE_GROUP_RES_EXP_MAP alreadyMember, RHQ_RESOURCE res         left outer join RHQ_RESOURCE g1parent on res.PARENT_RESOURCE_ID = g1parent.ID         left outer join RHQ_RESOURCE g2parent on g1parent.PARENT_RESOURCE_ID = g2parent.ID         left outer join RHQ_RESOURCE g3parent on g2parent.PARENT_RESOURCE_ID = g3parent.ID         left outer join RHQ_RESOURCE g4parent on g3parent.PARENT_RESOURCE_ID = g4parent.ID         left outer join RHQ_RESOURCE g5parent on g4parent.PARENT_RESOURCE_ID = g5parent.ID         left outer join RHQ_RESOURCE g6parent on g5parent.PARENT_RESOURCE_ID = g6parent.ID                   where alreadyMember.RESOURCE_GROUP_ID = ?                     and alreadyMember.RESOURCE_ID &lt;&gt; ?                     and ( res.ID = alreadyMember.RESOURCE_ID or                           g1parent.ID = alreadyMember.RESOURCE_ID or                           g2parent.ID = alreadyMember.RESOURCE_ID or                           g3parent.ID = alreadyMember.RESOURCE_ID or                           g4parent.ID = alreadyMember.RESOURCE_ID or                           g5parent.ID = alreadyMember.RESOURCE_ID or                           g6parent.ID = alreadyMember.RESOURCE_ID ) ) &quot;);
+               deleteImplicitStatement.setInt(1, groupId.intValue());
+               deleteImplicitStatement.setInt(9, groupId.intValue());
+               int[] var22 = resourceIdsToRemove;
+               int len$ = resourceIdsToRemove.length;
+
+               for(int i$ = 0; i$ &lt; len$; ++i$) {
+                  int resourceId = var22[i$];
+                  List lineage = this.resourceManager.getResourceIdLineage(resourceId);
+                  List nonMembers = this.getNonMemberExplicitResources(groupId.intValue(), lineage);
+                  if(lineage.size() == nonMembers.size()) {
+                     deleteImplicitStatement.setInt(2, resourceId);
+                     deleteImplicitStatement.setInt(3, resourceId);
+                     deleteImplicitStatement.setInt(4, resourceId);
+                     deleteImplicitStatement.setInt(5, resourceId);
+                     deleteImplicitStatement.setInt(6, resourceId);
+                     deleteImplicitStatement.setInt(7, resourceId);
+                     deleteImplicitStatement.setInt(8, resourceId);
+                     deleteImplicitStatement.setInt(10, resourceId);
+                     deleteImplicitStatement.executeUpdate();
+                  }
+               }
+            } else {
+               sqle = JDBCUtil.transformQueryForMultipleInParameters(&quot;    delete from RHQ_RESOURCE_GROUP_RES_IMP_MAP           where RESOURCE_GROUP_ID = ?             and RESOURCE_ID in ( @@RESOURCE_IDS@@ ) &quot;, &quot;@@RESOURCE_IDS@@&quot;, resourceIdsToRemove.length);
+               deleteImplicitStatement = conn.prepareStatement(sqle);
+               deleteImplicitStatement.setInt(1, groupId.intValue());
+               JDBCUtil.bindNTimes(deleteImplicitStatement, resourceIdsToRemove, 2);
+               deleteImplicitStatement.executeUpdate();
+            }
+
+            sqle = JDBCUtil.transformQueryForMultipleInParameters(&quot;    delete from RHQ_RESOURCE_GROUP_RES_EXP_MAP           where RESOURCE_GROUP_ID = ?             and RESOURCE_ID in ( @@RESOURCE_IDS@@ ) &quot;, &quot;@@RESOURCE_IDS@@&quot;, resourceIdsToRemove.length);
+            deleteExplicitStatement = conn.prepareStatement(sqle);
+            deleteExplicitStatement.setInt(1, groupId.intValue());
+            JDBCUtil.bindNTimes(deleteExplicitStatement, resourceIdsToRemove, 2);
+            deleteExplicitStatement.executeUpdate();
+         } catch (SQLException var20) {
+            this.log.error(&quot;Error removing resources from group[id=&quot; + groupId + &quot;]: &quot;, var20);
+            throw new ResourceGroupUpdateException(&quot;Error removing resources from group[id=&quot; + groupId + &quot;]: &quot; + var20.getMessage());
+         } finally {
+            JDBCUtil.safeClose(deleteExplicitStatement);
+            JDBCUtil.safeClose(deleteImplicitStatement);
+            JDBCUtil.safeClose(conn);
+         }
+
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void removeAllResourcesFromGroup(Subject subject, int groupId) throws ResourceGroupDeleteException {
+      Connection conn = null;
+      PreparedStatement explicitStatement = null;
+      PreparedStatement implicitStatement = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         explicitStatement = conn.prepareStatement(&quot;delete from rhq_resource_group_res_exp_map where resource_group_id = ?&quot;);
+         implicitStatement = conn.prepareStatement(&quot;delete from rhq_resource_group_res_imp_map where resource_group_id = ?&quot;);
+         explicitStatement.setInt(1, groupId);
+         implicitStatement.setInt(1, groupId);
+         explicitStatement.executeUpdate();
+         implicitStatement.executeUpdate();
+      } catch (SQLException var11) {
+         this.log.error(&quot;Error removing group resources&quot;, var11);
+         throw new ResourceGroupDeleteException(&quot;Error removing group resources: &quot; + var11.getMessage());
+      } finally {
+         JDBCUtil.safeClose(explicitStatement);
+         JDBCUtil.safeClose(implicitStatement);
+         JDBCUtil.safeClose(conn);
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public PageList findAvailableResourceGroupsForRole(Subject subject, int roleId, int[] excludeIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;rg.name&quot;);
+      List excludeList = ArrayUtils.wrapInList(excludeIds);
+      String queryName;
+      if(excludeList != null &amp;&amp; excludeList.size() != 0) {
+         queryName = &quot;ResourceGroup.getAvailableResourceGroupsForRoleWithExcludes&quot;;
+      } else {
+         queryName = &quot;ResourceGroup.getAvailableResourceGroupsForRole&quot;;
+      }
+
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pageControl);
+      if(excludeList != null &amp;&amp; excludeList.size() != 0) {
+         queryCount.setParameter(&quot;excludeIds&quot;, excludeList);
+         query.setParameter(&quot;excludeIds&quot;, excludeList);
+      }
+
+      queryCount.setParameter(&quot;roleId&quot;, Integer.valueOf(roleId));
+      query.setParameter(&quot;roleId&quot;, Integer.valueOf(roleId));
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List groups = query.getResultList();
+      return new PageList(groups, (int)count, pageControl);
+   }
+
+   public PageList findResourceGroupByIds(Subject subject, int[] resourceGroupIds, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;rg.name&quot;);
+      List groupIdList = ArrayUtils.wrapInList(resourceGroupIds);
+      if(groupIdList != null &amp;&amp; groupIdList.size() != 0) {
+         Query queryCount = null;
+         Query query = null;
+         String count;
+         if(this.authorizationManager.isInventoryManager(subject)) {
+            count = &quot;ResourceGroup.findByIds_admin&quot;;
+            queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceGroup.findByIds_admin&quot;);
+            query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceGroup.findByIds_admin&quot;, pageControl);
+         } else {
+            count = &quot;ResourceGroup.findByIds&quot;;
+            queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;ResourceGroup.findByIds&quot;);
+            query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ResourceGroup.findByIds&quot;, pageControl);
+            queryCount.setParameter(&quot;subject&quot;, subject);
+            query.setParameter(&quot;subject&quot;, subject);
+         }
+
+         queryCount.setParameter(&quot;ids&quot;, groupIdList);
+         query.setParameter(&quot;ids&quot;, groupIdList);
+         long count1 = ((Long)queryCount.getSingleResult()).longValue();
+         List groups = query.getResultList();
+         return new PageList(groups, (int)count1, pageControl);
+      } else {
+         return new PageList(pageControl);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void updateImplicitGroupMembership(Subject subject, org.rhq.core.domain.resource.Resource resource) {
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findImplicitRecursiveGroupIdsByResourceId&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(resource.getParentResource().getId()));
+      List implicitRecursiveGroupIds = query.getResultList();
+      if(implicitRecursiveGroupIds.size() != 0) {
+         ArrayList resourceIdsToAdd = new ArrayList();
+         LinkedList toBeSearched = new LinkedList();
+         toBeSearched.add(resource);
+
+         while(toBeSearched.size() &gt; 0) {
+            org.rhq.core.domain.resource.Resource conn = (org.rhq.core.domain.resource.Resource)toBeSearched.remove(0);
+            resourceIdsToAdd.add(Integer.valueOf(conn.getId()));
+            toBeSearched.addAll(conn.getChildResources());
+         }
+
+         Connection conn1 = null;
+         PreparedStatement insertImplicitStatement = null;
+
+         try {
+            conn1 = this.rhqDs.getConnection();
+            Iterator e = implicitRecursiveGroupIds.iterator();
+
+            while(e.hasNext()) {
+               Integer implicitRecursiveGroupId = (Integer)e.next();
+               String insertImplicitQueryString = JDBCUtil.transformQueryForMultipleInParameters(&quot;    insert into RHQ_RESOURCE_GROUP_RES_IMP_MAP ( RESOURCE_ID, RESOURCE_GROUP_ID )          select res.ID, ?            from RHQ_RESOURCE res           where res.ID in ( @@RESOURCE_IDS@@ ) &quot;, &quot;@@RESOURCE_IDS@@&quot;, resourceIdsToAdd.size());
+               insertImplicitStatement = conn1.prepareStatement(insertImplicitQueryString);
+               insertImplicitStatement.setInt(1, implicitRecursiveGroupId.intValue());
+               JDBCUtil.bindNTimes(insertImplicitStatement, ArrayUtils.unwrapCollection(resourceIdsToAdd), 2);
+               insertImplicitStatement.executeUpdate();
+               this.setResourceType(implicitRecursiveGroupId.intValue());
+            }
+         } catch (Exception var16) {
+            throw new ResourceGroupUpdateException(&quot;Could not add resource[id=&quot; + resource.getId() + &quot;] to necessary implicit groups&quot;, var16);
+         } finally {
+            JDBCUtil.safeClose(insertImplicitStatement);
+            JDBCUtil.safeClose(conn1);
+         }
+
+      }
+   }
+
+   public List findResourcesForAutoGroup(Subject subject, int autoGroupParentResourceId, int autoGroupChildResourceTypeId) {
+      try {
+         Query pe = this.entityManager.createNamedQuery(&quot;Resource.findForAutogroup&quot;);
+         pe.setParameter(&quot;type&quot;, Integer.valueOf(autoGroupChildResourceTypeId));
+         pe.setParameter(&quot;parent&quot;, Integer.valueOf(autoGroupParentResourceId));
+         pe.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+         List resources = pe.getResultList();
+         return resources;
+      } catch (PersistenceException var6) {
+         return new ArrayList();
+      }
+   }
+
+   public List findResourcesForResourceGroup(Subject subject, int groupId, GroupCategory category) {
+      ResourceGroup group = this.getResourceGroupById(subject, groupId, category);
+      Set res = group.getExplicitResources();
+      if(res != null &amp;&amp; res.size() &gt; 0) {
+         List ret1 = PersistenceUtility.getHibernateSession(this.entityManager).createFilter(res, &quot;where this.inventoryStatus = :inventoryStatus&quot;).setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED).list();
+         return ret1;
+      } else {
+         ArrayList ret = new ArrayList(res.size());
+         ret.addAll(res);
+         return ret;
+      }
+   }
+
+   public int[] findDefinitionsForAutoGroup(Subject subject, int autoGroupParentResourceId, int autoGroupChildResourceTypeId, boolean displayTypeSummaryOnly) {
+      int[] ret;
+      try {
+         ResourceType enfe = (ResourceType)this.entityManager.find(ResourceType.class, Integer.valueOf(autoGroupChildResourceTypeId));
+         ret = this.getMeasurementDefinitionIdsForResourceType(enfe, displayTypeSummaryOnly);
+      } catch (EntityNotFoundException var7) {
+         ret = new int[0];
+      }
+
+      return ret;
+   }
+
+   public int[] findDefinitionsForCompatibleGroup(Subject subject, int groupId, boolean displayTypeSummaryOnly) {
+      int[] ret = new int[0];
+
+      try {
+         ResourceGroup e = this.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+         Set resources = e.getExplicitResources();
+         if(resources != null &amp;&amp; resources.size() &gt; 0) {
+            org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)resources.iterator().next();
+            ResourceType type = resource.getResourceType();
+            ret = this.getMeasurementDefinitionIdsForResourceType(type, displayTypeSummaryOnly);
+         }
+      } catch (ResourceGroupNotFoundException var9) {
+         this.log.debug(&quot;Resources for groupID: &quot; + groupId + &quot; not found &quot; + var9);
+      }
+
+      return ret;
+   }
+
+   private int[] getMeasurementDefinitionIdsForResourceType(ResourceType type, boolean summariesOnly) {
+      String queryString = &quot;SELECT id   FROM MeasurementDefinition md  WHERE md.resourceType.id = :resourceTypeId &quot;;
+      queryString = queryString + &quot; AND md.dataType = :dataType&quot;;
+      if(summariesOnly) {
+         queryString = queryString + &quot; AND md.displayType = :dispType&quot;;
+      }
+
+      queryString = queryString + &quot; ORDER BY md.displayOrder, md.displayName&quot;;
+      Query q = this.entityManager.createQuery(queryString);
+      q.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(type.getId()));
+      q.setParameter(&quot;dataType&quot;, DataType.MEASUREMENT);
+      if(summariesOnly) {
+         q.setParameter(&quot;dispType&quot;, DisplayType.SUMMARY);
+      }
+
+      List res = q.getResultList();
+      int[] ret = new int[res.size()];
+      int i = 0;
+
+      Integer r;
+      for(Iterator i$ = res.iterator(); i$.hasNext(); ret[i++] = r.intValue()) {
+         r = (Integer)i$.next();
+      }
+
+      return ret;
+   }
+
+   public ResourceGroup getByGroupDefinitionAndGroupByClause(int groupDefinitionId, String groupByClause) {
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findByGroupDefinitionAndExpression&quot;);
+      if(groupByClause.equals(&quot;&quot;)) {
+         groupByClause = null;
+      }
+
+      query.setParameter(&quot;groupDefinitionId&quot;, Integer.valueOf(groupDefinitionId));
+      query.setParameter(&quot;groupByClause&quot;, groupByClause);
+      List groups = query.getResultList();
+      if(groups.size() == 1) {
+         ResourceGroup group = (ResourceGroup)groups.get(0);
+         return group;
+      } else {
+         return null;
+      }
+   }
+
+   public void setResourceType(int resourceGroupId) {
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceType.getExplicitResourceTypeCountsByGroup&quot;);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(resourceGroupId));
+      Subject overlord = this.subjectManager.getOverlord();
+      ResourceGroup resourceGroup = this.getResourceGroupById(overlord, resourceGroupId, (GroupCategory)null);
+      List results = query.getResultList();
+      if(results.size() == 1) {
+         Object[] info = (Object[])((Object[])results.get(0));
+         int resourceTypeId = ((Integer)info[0]).intValue();
+
+         try {
+            ResourceType rtnfe = this.resourceTypeManager.getResourceTypeById(overlord, resourceTypeId);
+            resourceGroup.setResourceType(rtnfe);
+         } catch (ResourceTypeNotFoundException var9) {
+            resourceGroup.setResourceType((ResourceType)null);
+         }
+      } else {
+         resourceGroup.setResourceType((ResourceType)null);
+      }
+
+   }
+
+   public int getImplicitGroupMemberCount(int resourceGroupId) {
+      Query countQuery = this.entityManager.createNamedQuery(&quot;ResourceWithAvailability.findImplicitByResourceGroup_count_admin&quot;);
+      countQuery.setParameter(&quot;groupId&quot;, Integer.valueOf(resourceGroupId));
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return (int)count;
+   }
+
+   public PageList findResourceGroupComposites(Subject subject, GroupCategory groupCategory, ResourceCategory resourceCategory, String resourceTypeName, String pluginName, String nameFilter, Integer resourceId, Integer groupId, PageControl pc) {
+      String query = &quot;         SELECT               (     SELECT COUNT(eresAvail.ID)                       FROM rhq_resource_avail eresAvail                 INNER JOIN rhq_resource eres                         ON eresAvail.resource_id = eres.id                 INNER JOIN rhq_resource_group_res_exp_map expMap                         ON eres.id = expMap.resource_id                      WHERE expMap.resource_group_id = rg.id               ) as explicitCount,               (     SELECT AVG(eresAvail.availability_type)                       FROM rhq_resource_avail eresAvail                 INNER JOIN rhq_resource eres                         ON eresAvail.resource_id = eres.id                 INNER JOIN rhq_resource_group_res_exp_map expMap                         ON eres.id = expMap.resource_id                      WHERE expMap.resource_group_id = rg.id               ) as explicitAvail,               (     SELECT COUNT(iresAvail.ID)                       FROM rhq_resource_avail iresAvail                 INNER JOIN rhq_resource ires                         ON iresAvail.resource_id = ires.id                 INNER JOIN rhq_resource_group_res_imp_map impMap                         ON ires.id = impMap.resource_id                      WHERE impMap.resource_group_id = rg.id               ) as implicitCount,               (     SELECT AVG(iresAvail.availability_type)                       FROM rhq_resource_avail iresAvail                 INNER JOIN rhq_resource ires                         ON iresAvail.resource_id = ires.id                 INNER JOIN rhq_resource_group_res_imp_map impMap                         ON ires.id = impMap.resource_id                      WHERE impMap.resource_group_id = rg.id               ) as implicitAvail,                 rg.id as groupId,                 rg.name as groupName,                 rg.description as groupDescription,                 resType.name as resourceTypeName            FROM rhq_resource_group rg LEFT OUTER JOIN rhq_resource_type resType              ON rg.resource_type_id = resType.id LEFT OUTER JOIN rhq_resource_group_res_imp_map memberMap              ON rg.id = memberMap.resource_group_id LEFT OUTER JOIN rhq_resource res              ON memberMap.resource_id = res.id                 %SECURITY_FRAGMENT_JOIN%LEFT OUTER JOIN rhq_resource_avail resAvail              ON res.id = resAvail.resource_id           WHERE %GROUP_AND_VISIBILITY_FRAGMENT_WHERE%                 %RESOURCE_FRAGMENT_WHERE%             AND ( ? IS NULL                   OR UPPER(rg.name) LIKE ?                   OR UPPER(rg.description) LIKE ? )             AND ( rg.resource_type_id IS NULL                   OR ( ( resType.name = ? OR ? IS NULL )                       AND ( resType.plugin = ? OR ? IS NULL )                       AND ( resType.category = ? OR ? IS NULL ) ) )             AND ( rg.category = ? OR ? IS NULL )                 %SECURITY_FRAGMENT_WHERE%       GROUP BY rg.id, rg.category, rg.name, rg.group_by, rg.description, resType.name &quot;;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         query = query.replace(&quot;%SECURITY_FRAGMENT_JOIN%&quot;, &quot;&quot;);
+         query = query.replace(&quot;%SECURITY_FRAGMENT_WHERE%&quot;, &quot;&quot;);
+      } else {
+         query = query.replace(&quot;%SECURITY_FRAGMENT_JOIN%&quot;, &quot; INNER JOIN rhq_role_resource_group_map roleMap          ON roleMap.resource_group_id = rg.id  INNER JOIN rhq_subject_role_map subjectMap          ON subjectMap.role_id = roleMap.role_id &quot;);
+         query = query.replace(&quot;%SECURITY_FRAGMENT_WHERE%&quot;, &quot; AND ( subjectMap.subject_id = ? ) &quot;);
+      }
+
+      if(resourceId != null) {
+         query = query.replace(&quot;%RESOURCE_FRAGMENT_WHERE%&quot;, &quot; AND ( res.id = ? ) &quot;);
+      } else {
+         query = query.replace(&quot;%RESOURCE_FRAGMENT_WHERE%&quot;, &quot;&quot;);
+      }
+
+      pc.initDefaultOrderingField(&quot;groupName&quot;);
+      pc.truncateOrderingFields(1);
+      OrderingField primary = (OrderingField)pc.getOrderingFields().get(0);
+      String field = primary.getField();
+      if(field.endsWith(&quot;Avail&quot;)) {
+         String conn = field.substring(0, field.length() - 5);
+         String stmt = conn + &quot;Count&quot;;
+         pc.addDefaultOrderingField(stmt, primary.getOrdering());
+      }
+
+      if(!field.equals(&quot;groupName&quot;)) {
+         pc.addDefaultOrderingField(&quot;groupName&quot;);
+      }
+
+      nameFilter = PersistenceUtility.formatSearchParameter(nameFilter);
+      Connection var41 = null;
+      PreparedStatement var42 = null;
+      ArrayList rawResults = new ArrayList();
+
+      long explicitCount;
+      double explicitAvail;
+      label304: {
+         PageList count;
+         try {
+            var41 = this.rhqDs.getConnection();
+            if(groupId == null) {
+               if(!(this.dbType instanceof PostgresqlDatabaseType) &amp;&amp; !(this.dbType instanceof H2DatabaseType)) {
+                  if(!(this.dbType instanceof OracleDatabaseType) &amp;&amp; !(this.dbType instanceof SQLServerDatabaseType)) {
+                     throw new RuntimeException(&quot;Unknown database type: &quot; + this.dbType);
+                  }
+
+                  query = query.replace(&quot;%GROUP_AND_VISIBILITY_FRAGMENT_WHERE%&quot;, &quot;rg.visible = 1&quot;);
+               } else {
+                  query = query.replace(&quot;%GROUP_AND_VISIBILITY_FRAGMENT_WHERE%&quot;, &quot;rg.visible = TRUE&quot;);
+               }
+            } else {
+               query = query.replace(&quot;%GROUP_AND_VISIBILITY_FRAGMENT_WHERE%&quot;, &quot;rg.id = ?&quot;);
+            }
+
+            if(this.dbType instanceof PostgresqlDatabaseType) {
+               query = PersistenceUtility.addPostgresNativePagingSortingToQuery(query, pc);
+            } else if(this.dbType instanceof OracleDatabaseType) {
+               query = PersistenceUtility.addOracleNativePagingSortingToQuery(query, pc);
+            } else if(this.dbType instanceof H2DatabaseType) {
+               query = PersistenceUtility.addH2NativePagingSortingToQuery(query, pc);
+            } else {
+               if(!(this.dbType instanceof SQLServerDatabaseType)) {
+                  throw new RuntimeException(&quot;Unknown database type: &quot; + this.dbType);
+               }
+
+               query = PersistenceUtility.addSQLServerNativePagingSortingToQuery(query, pc);
+            }
+
+            var42 = var41.prepareStatement(query);
+            String var43 = resourceCategory == null?null:resourceCategory.name();
+            String groupCategoryName = groupCategory == null?null:groupCategory.name();
+            int groupIds = 0;
+            if(resourceId != null) {
+               ++groupIds;
+               var42.setInt(groupIds, resourceId.intValue());
+            }
+
+            if(groupId != null) {
+               ++groupIds;
+               var42.setInt(groupIds, groupId.intValue());
+            }
+
+            if(nameFilter == null) {
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+            } else {
+               ++groupIds;
+               var42.setString(groupIds, nameFilter);
+               ++groupIds;
+               var42.setString(groupIds, nameFilter);
+               ++groupIds;
+               var42.setString(groupIds, nameFilter);
+            }
+
+            if(resourceTypeName == null) {
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+            } else {
+               ++groupIds;
+               var42.setString(groupIds, resourceTypeName);
+               ++groupIds;
+               var42.setString(groupIds, resourceTypeName);
+            }
+
+            if(pluginName == null) {
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+            } else {
+               ++groupIds;
+               var42.setString(groupIds, pluginName);
+               ++groupIds;
+               var42.setString(groupIds, pluginName);
+            }
+
+            if(var43 == null) {
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+            } else {
+               ++groupIds;
+               var42.setString(groupIds, var43);
+               ++groupIds;
+               var42.setString(groupIds, var43);
+            }
+
+            if(groupCategoryName == null) {
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+               ++groupIds;
+               var42.setNull(groupIds, 12);
+            } else {
+               ++groupIds;
+               var42.setString(groupIds, groupCategoryName);
+               ++groupIds;
+               var42.setString(groupIds, groupCategoryName);
+            }
+
+            if(!this.authorizationManager.isInventoryManager(subject)) {
+               ++groupIds;
+               var42.setInt(groupIds, subject.getId());
+            }
+
+            ResultSet groupMap = var42.executeQuery();
+
+            while(true) {
+               if(!groupMap.next()) {
+                  break label304;
+               }
+
+               long results = groupMap.getLong(1);
+               double i$ = groupMap.getDouble(2);
+               explicitCount = groupMap.getLong(3);
+               explicitAvail = groupMap.getDouble(4);
+               int implicitCount = groupMap.getInt(5);
+               Object[] next = new Object[]{Long.valueOf(results), Double.valueOf(i$), Long.valueOf(explicitCount), Double.valueOf(explicitAvail), Integer.valueOf(implicitCount)};
+               rawResults.add(next);
+            }
+         } catch (Throwable var39) {
+            this.log.error(&quot;Could not execute groups query [ &quot; + query + &quot; ]: &quot;, var39);
+            count = new PageList();
+         } finally {
+            JDBCUtil.safeClose(var41, var42, (ResultSet)null);
+         }
+
+         return count;
+      }
+
+      Query queryCount = null;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         queryCount = this.entityManager.createNamedQuery(&quot;ResourceGroup.findAllFiltered_Count_Admin&quot;);
+      } else {
+         queryCount = this.entityManager.createNamedQuery(&quot;ResourceGroup.findAllFiltered_Count&quot;);
+         queryCount.setParameter(&quot;subject&quot;, subject);
+      }
+
+      queryCount.setParameter(&quot;groupCategory&quot;, groupCategory);
+      queryCount.setParameter(&quot;category&quot;, resourceCategory);
+      queryCount.setParameter(&quot;resourceTypeName&quot;, resourceTypeName);
+      queryCount.setParameter(&quot;pluginName&quot;, pluginName);
+      queryCount.setParameter(&quot;search&quot;, nameFilter);
+      queryCount.setParameter(&quot;resourceId&quot;, resourceId);
+      queryCount.setParameter(&quot;groupId&quot;, groupId);
+      long var44 = ((Long)queryCount.getSingleResult()).longValue();
+      ArrayList var51 = new ArrayList();
+      Iterator var45 = rawResults.iterator();
+
+      while(var45.hasNext()) {
+         Object[] var47 = (Object[])var45.next();
+         var51.add(Integer.valueOf(((Number)var47[4]).intValue()));
+      }
+
+      Map var46 = this.getIdGroupMap(var51);
+      ArrayList var48 = new ArrayList(rawResults.size());
+      int i = 0;
+      Iterator var49 = rawResults.iterator();
+
+      while(var49.hasNext()) {
+         Object[] row = (Object[])var49.next();
+         explicitCount = ((Long)row[0]).longValue();
+         explicitAvail = ((Double)row[1]).doubleValue();
+         long var50 = ((Long)row[2]).longValue();
+         double implicitAvail = ((Double)row[3]).doubleValue();
+         ResourceGroup group = (ResourceGroup)var46.get(var51.get(i++));
+         ResourceType type = group.getResourceType();
+         ResourceFacets facets;
+         if(type == null) {
+            facets = ResourceFacets.NONE;
+         } else {
+            facets = this.resourceTypeManager.getResourceFacets(group.getResourceType().getId());
+         }
+
+         ResourceGroupComposite composite = new ResourceGroupComposite(explicitCount, explicitAvail, var50, implicitAvail, group, facets);
+         var48.add(composite);
+      }
+
+      return new PageList(var48, (int)var44, pc);
+   }
+
+   private Map getIdGroupMap(List groupIds) {
+      if(groupIds != null &amp;&amp; groupIds.size() != 0) {
+         Query query = this.entityManager.createNamedQuery(&quot;ResourceGroup.findByIds_admin&quot;);
+         query.setParameter(&quot;ids&quot;, groupIds);
+         List groups = query.getResultList();
+         HashMap results = new HashMap();
+         Iterator i$ = groups.iterator();
+
+         while(i$.hasNext()) {
+            ResourceGroup group = (ResourceGroup)i$.next();
+            results.put(Integer.valueOf(group.getId()), group);
+         }
+
+         return results;
+      } else {
+         return new HashMap();
+      }
+   }
+
+   public List findDeletedResourceGroupIds(int[] possibleGroupIds) {
+      List groupIds = ArrayUtils.wrapInList(possibleGroupIds);
+      if(groupIds != null &amp;&amp; groupIds.size() != 0) {
+         String queryString = &quot;SELECT rg.id   FROM ResourceGroup rg  WHERE rg.id IN ( :groupIds ) &quot;;
+         Query query = this.entityManager.createQuery(queryString);
+         query.setParameter(&quot;groupIds&quot;, groupIds);
+         List validIds = query.getResultList();
+         groupIds.removeAll(validIds);
+         return groupIds;
+      } else {
+         return Collections.emptyList();
+      }
+   }
+
+   public void ensureMembershipMatches(Subject subject, int groupId, int[] resourceIds) {
+      List currentMembers = this.resourceManager.findExplicitResourceIdsByResourceGroup(groupId);
+      List newMembers = ArrayUtils.wrapInList(resourceIds);
+      newMembers.removeAll(currentMembers);
+      if(newMembers.size() &gt; 0) {
+         this.addResourcesToGroup(subject, groupId, ArrayUtils.unwrapCollection(newMembers));
+      }
+
+      ArrayList extraMembers = new ArrayList(currentMembers);
+      extraMembers.removeAll(ArrayUtils.wrapInList(resourceIds));
+      if(extraMembers.size() &gt; 0) {
+         this.removeResourcesFromGroup(subject, groupId, ArrayUtils.unwrapCollection(extraMembers));
+      }
+
+   }
+
+   public ResourceGroup getResourceGroup(Subject subject, int groupId) {
+      return this.getResourceGroupById(subject, groupId, (GroupCategory)null);
+   }
+
+   public ResourceGroupComposite getResourceGroupComposite(Subject subject, int groupId) {
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;You do not have permission to view this resource group&quot;);
+      } else {
+         String queryString = &quot;SELECT \n  (SELECT count(er)        FROM ResourceGroup g JOIN g.explicitResources er where g.id = :groupId),\n  (SELECT avg(er.currentAvailability.availabilityType)        FROM ResourceGroup g JOIN g.explicitResources er where g.id = :groupId) AS eavail,\n  (SELECT count(ir)        FROM ResourceGroup g JOIN g.implicitResources ir where g.id = :groupId),\n  (SELECT avg(ir.currentAvailability.availabilityType)        FROM ResourceGroup g JOIN g.implicitResources ir where g.id = :groupId), g \nFROM ResourceGroup g where g.id = :groupId&quot;;
+         Query query = this.entityManager.createQuery(queryString);
+         query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+         List results = query.getResultList();
+         if(results.size() == 0) {
+            throw new ResourceGroupNotFoundException(groupId);
+         } else {
+            Object[] data = (Object[])results.get(0);
+            ResourceGroup group = (ResourceGroup)data[4];
+            ResourceType type = group.getResourceType();
+            ResourceFacets facets;
+            if(type == null) {
+               facets = ResourceFacets.NONE;
+            } else {
+               facets = this.resourceTypeManager.getResourceFacets(group.getResourceType().getId());
+            }
+
+            ResourceGroupComposite composite = null;
+            if(((Number)data[2]).longValue() &gt; 0L) {
+               composite = new ResourceGroupComposite(((Number)data[0]).longValue(), ((Number)data[1]).doubleValue(), ((Number)data[2]).longValue(), ((Number)data[3]).doubleValue(), group, facets);
+            } else {
+               composite = new ResourceGroupComposite(0L, 0.0D, 0L, 0.0D, group, facets);
+            }
+
+            group.getModifiedBy().getFirstName();
+            return composite;
+         }
+      }
+   }
+
+   public PageList findResourceGroupsForRole(Subject subject, int roleId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;rg.name&quot;);
+      String queryName = null;
+      if(this.authorizationManager.hasGlobalPermission(subject, Permission.MANAGE_SETTINGS)) {
+         queryName = &quot;ResourceGroup.getResourceGroupsAssignedToRole_admin&quot;;
+      } else {
+         queryName = &quot;ResourceGroup.getResourceGroupsAssignedToRole&quot;;
+      }
+
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      if(!this.authorizationManager.hasGlobalPermission(subject, Permission.MANAGE_SETTINGS)) {
+         queryCount.setParameter(&quot;subjectId&quot;, Integer.valueOf(subject.getId()));
+         query.setParameter(&quot;subjectId&quot;, Integer.valueOf(subject.getId()));
+      }
+
+      queryCount.setParameter(&quot;id&quot;, Integer.valueOf(roleId));
+      query.setParameter(&quot;id&quot;, Integer.valueOf(roleId));
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List groups = query.getResultList();
+      return new PageList(groups, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void setRecursive(Subject subject, int groupId, boolean isRecursive) {
+      ResourceGroup group = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(groupId));
+      if(group == null) {
+         throw new ResourceGroupNotFoundException(groupId);
+      } else {
+         this.updateResourceGroup(subject, group, isRecursive?RecursivityChangeType.AddedRecursion:RecursivityChangeType.RemovedRecursion);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ResourceGroup updateResourceGroup(Subject subject, ResourceGroup group) throws ResourceGroupUpdateException {
+      return this.updateResourceGroup(subject, group, (RecursivityChangeType)null);
+   }
+
+   public PageList findResourceGroupsByCriteria(Subject subject, ResourceGroupCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      if(criteria.isSecurityManagerRequired() &amp;&amp; !this.authorizationManager.hasGlobalPermission(subject, Permission.MANAGE_SECURITY)) {
+         throw new PermissionException(&quot;Subject [&quot; + subject.getName() + &quot;] requires SecurityManager permission for requested query criteria.&quot;);
+      } else {
+         if(!this.authorizationManager.isInventoryManager(subject)) {
+            generator.setAuthorizationResourceFragment(AuthorizationTokenType.GROUP, (String)null, subject.getId());
+         }
+
+         Query query = generator.getQuery(this.entityManager);
+         Query countQuery = generator.getCountQuery(this.entityManager);
+         long count = ((Long)countQuery.getSingleResult()).longValue();
+         List results = query.getResultList();
+         return new PageList(results, (int)count, criteria.getPageControl());
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for RemoteClientProxy.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4150272">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.4.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4150272">
+                            rhq-enterprise-server-base-perspective-war-3.0.0.B04.war/WEB-INF/lib/rhq-remoting-client-api-3.0.0.B04.jar/org/rhq/enterprise/client/RemoteClientProxy.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.client;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import javassist.CannotCompileException;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
+import javassist.CtNewMethod;
+import javassist.NotFoundException;
+import javassist.bytecode.ParameterAnnotationsAttribute;
+import javassist.bytecode.annotation.Annotation;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.remoting.invocation.NameBasedInvocation;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.util.serial.ExternalizableStrategy;
+import org.rhq.core.domain.util.serial.ExternalizableStrategy.Subsystem;
+import org.rhq.enterprise.client.RemoteClient;
+import org.rhq.enterprise.client.RemoteClient.Manager;
+
+public class RemoteClientProxy implements InvocationHandler {
+   private static final Log LOG = LogFactory.getLog(RemoteClientProxy.class);
+   private RemoteClient client;
+   private Manager manager;
+
+   public RemoteClientProxy(RemoteClient client, Manager manager) {
+      this.client = client;
+      this.manager = manager;
+   }
+
+   public Class getRemoteInterface() {
+      return this.manager.remote();
+   }
+
+   public static Object getProcessor(RemoteClient remoteClient, Manager manager) {
+      try {
+         RemoteClientProxy e = new RemoteClientProxy(remoteClient, manager);
+         Class intf = simplifyInterface(e.manager.remote());
+         return Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[]{intf}, e);
+      } catch (Exception var4) {
+         throw new RuntimeException(&quot;Failed to get remote connection proxy&quot;, var4);
+      }
+   }
+
+   private static Class simplifyInterface(Class intf) {
+      try {
+         ClassPool e = ClassPool.getDefault();
+         String simpleName = intf.getName() + &quot;Simple&quot;;
+
+         try {
+            e.get(simpleName);
+            return Class.forName(simpleName, false, e.getClassLoader());
+         } catch (NotFoundException var17) {
+            ;
+         } catch (ClassNotFoundException var18) {
+            LOG.debug(&quot;Class [&quot; + simpleName + &quot;] not found - cause: &quot; + var18);
+         }
+
+         CtClass cc = e.get(intf.getName());
+         CtClass cz = e.getAndRename(intf.getName(), simpleName);
+         cz.defrost();
+         cz.setSuperclass(cc);
+         CtMethod[] methods = cc.getMethods();
+         CtMethod[] arr$ = methods;
+         int len$ = methods.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            CtMethod originalMethod = arr$[i$];
+            CtClass[] params = originalMethod.getParameterTypes();
+            if(params.length &gt; 0 &amp;&amp; params[0].getName().equals(Subject.class.getName())) {
+               CtClass[] simpleParams = new CtClass[params.length - 1];
+               System.arraycopy(params, 1, simpleParams, 0, params.length - 1);
+               cz.defrost();
+               CtMethod newMethod = CtNewMethod.abstractMethod(originalMethod.getReturnType(), originalMethod.getName(), simpleParams, (CtClass[])null, cz);
+               ParameterAnnotationsAttribute originalAnnotationsAttribute = (ParameterAnnotationsAttribute)originalMethod.getMethodInfo().getAttribute(&quot;RuntimeVisibleParameterAnnotations&quot;);
+               if(originalAnnotationsAttribute != null) {
+                  Annotation[][] originalAnnotations = originalAnnotationsAttribute.getAnnotations();
+                  Annotation[][] newAnnotations = new Annotation[originalAnnotations.length - 1][];
+
+                  for(int newAnnotationsAttribute = 1; newAnnotationsAttribute &lt; originalAnnotations.length; ++newAnnotationsAttribute) {
+                     newAnnotations[newAnnotationsAttribute - 1] = new Annotation[originalAnnotations[newAnnotationsAttribute].length];
+                     System.arraycopy(originalAnnotations[newAnnotationsAttribute], 0, newAnnotations[newAnnotationsAttribute - 1], 0, originalAnnotations[newAnnotationsAttribute].length);
+                  }
+
+                  ParameterAnnotationsAttribute var21 = new ParameterAnnotationsAttribute(newMethod.getMethodInfo().getConstPool(), &quot;RuntimeVisibleParameterAnnotations&quot;);
+                  var21.setAnnotations(newAnnotations);
+                  newMethod.getMethodInfo().addAttribute(var21);
+               }
+
+               cz.addMethod(newMethod);
+            }
+         }
+
+         return cz.toClass();
+      } catch (NotFoundException var19) {
+         LOG.debug(&quot;Failed to simplify &quot; + intf + &quot; - cause: &quot; + var19);
+      } catch (CannotCompileException var20) {
+         LOG.error(&quot;Failed to simplify &quot; + intf + &quot;.&quot;, var20);
+      }
+
+      return intf;
+   }
+
+   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+      try {
+         ExternalizableStrategy.setStrategy(Subsystem.REFLECTIVE_SERIALIZATION);
+         String t = this.manager.beanName() + &quot;:&quot; + method.getName();
+         Class[] params = method.getParameterTypes();
+
+         try {
+            Class[] paramSig = method.getDeclaringClass().getInterfaces();
+            Class request1;
+            if(paramSig != null &amp;&amp; paramSig.length &gt; 0) {
+               request1 = paramSig[0];
+            } else {
+               request1 = method.getDeclaringClass();
+            }
+
+            request1.getMethod(method.getName(), method.getParameterTypes());
+         } catch (Exception var11) {
+            int request = null == args?0:args.length;
+            Object[] response = new Object[request + 1];
+            if(request &gt; 0) {
+               System.arraycopy(args, 0, response, 1, request);
+            }
+
+            response[0] = this.client.getSubject();
+            args = response;
+            int numParams = null == params?0:params.length;
+            Class[] newParams = new Class[numParams + 1];
+            if(numParams &gt; 0) {
+               System.arraycopy(params, 0, newParams, 1, numParams);
+            }
+
+            newParams[0] = Subject.class;
+            params = newParams;
+         }
+
+         String[] paramSig1 = this.createParamSignature(params);
+         NameBasedInvocation request2 = new NameBasedInvocation(t, args, paramSig1);
+         Object response1 = this.client.getRemotingClient().invoke(request2);
+         if(response1 instanceof Throwable) {
+            throw (Throwable)response1;
+         } else {
+            return response1;
+         }
+      } catch (Throwable var12) {
+         var12.printStackTrace();
+         throw var12;
+      }
+   }
+
+   private String[] createParamSignature(Class[] types) {
+      String[] paramSig = new String[types.length];
+
+      for(int x = 0; x &lt; types.length; ++x) {
+         paramSig[x] = types[x].getName();
+      }
+
+      return paramSig;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "54" });
+
+            $("<div id='54-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(54)');
+
+
+$("<a name='12231168' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#54-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4150272;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

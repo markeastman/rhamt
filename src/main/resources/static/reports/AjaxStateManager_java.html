@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for AjaxStateManager.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4150272">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.4.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4150272">
+                            rhq-enterprise-server-base-perspective-war-3.0.0.B04.war/WEB-INF/lib/richfaces-impl-3.3.2.GA.jar/org/ajax4jsf/application/AjaxStateManager.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.ajax4jsf.application;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.ObjectStreamClass;
+import java.io.StringWriter;
+import java.lang.reflect.Constructor;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.faces.FacesException;
+import javax.faces.FactoryFinder;
+import javax.faces.application.StateManager;
+import javax.faces.application.StateManager.SerializedView;
+import javax.faces.component.UIComponentBase;
+import javax.faces.component.UIViewRoot;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
+import javax.faces.context.ResponseWriter;
+import javax.faces.render.RenderKit;
+import javax.faces.render.RenderKitFactory;
+import javax.faces.render.ResponseStateManager;
+import org.ajax4jsf.application.AjaxStateHolder;
+import org.ajax4jsf.application.ComponentsLoader;
+import org.ajax4jsf.application.ComponentsLoaderImpl;
+import org.ajax4jsf.application.StateHolder;
+import org.ajax4jsf.application.TreeStructureNode;
+import org.ajax4jsf.context.AjaxContext;
+import org.ajax4jsf.context.ContextInitParameters;
+import org.ajax4jsf.model.KeepAlive;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+public class AjaxStateManager extends StateManager {
+   public static final String CAPTURED_VIEW_STATE = &quot;org.ajax4jsf.captured_view_state&quot;;
+   private static final Class STATE_MANAGER_ARGUMENTS = StateManager.class;
+   public static final int DEFAULT_NUMBER_OF_VIEWS = 16;
+   public static final String AJAX_VIEW_SEQUENCE = AjaxStateManager.class.getName() + &quot;.AJAX_VIEW_SEQUENCE&quot;;
+   public static final String VIEW_SEQUENCE = AjaxStateManager.class.getName() + &quot;.VIEW_SEQUENCE&quot;;
+   private final StateManager parent;
+   private StateManager seamStateManager;
+   private final ComponentsLoader componentLoader;
+   private static final Log _log = LogFactory.getLog(AjaxStateManager.class);
+   public static final String VIEW_SEQUENCE_ATTRIBUTE = AjaxStateManager.class.getName() + &quot;.view_sequence&quot;;
+   private static final Pattern PATTERN = Pattern.compile(&quot;.*&lt;input.*(?:\\svalue=[\&quot;\'](.*)[\&quot;\']\\s).*name=[\&quot;\']javax.faces.ViewState[\&quot;\'].*&gt;&quot;);
+   private static final Pattern PATTERN2 = Pattern.compile(&quot;.*&lt;input .*name=[\&quot;\']javax.faces.ViewState[\&quot;\'].*(?:\\svalue=[\&quot;\'](.*)[\&quot;\']\\s).*&gt;&quot;);
+   private static final Map PRIMITIVE_CLASSES = new HashMap(9, 1.0F);
+
+   public AjaxStateManager(StateManager parent) {
+      this.parent = parent;
+      this.componentLoader = new ComponentsLoaderImpl();
+      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+      if(null == classLoader) {
+         classLoader = AjaxStateManager.class.getClassLoader();
+      }
+
+      try {
+         Class e = classLoader.loadClass(&quot;org.jboss.seam.jsf.SeamStateManager&quot;).asSubclass(StateManager.class);
+         Constructor constructor = e.getConstructor(new Class[]{STATE_MANAGER_ARGUMENTS});
+         this.seamStateManager = (StateManager)constructor.newInstance(new Object[]{new AjaxStateManager.SeamStateManagerWrapper(null)});
+         if(_log.isDebugEnabled()) {
+            _log.debug(&quot;Create instance of the SeamStateManager&quot;);
+         }
+      } catch (Exception var5) {
+         this.seamStateManager = null;
+         if(_log.isDebugEnabled()) {
+            _log.debug(&quot;SeamStateManager is not present&quot;);
+         }
+      }
+
+   }
+
+   protected Object getComponentStateToSave(FacesContext context) {
+      Object treeState = context.getViewRoot().processSaveState(context);
+      Object[] state = new Object[]{treeState, this.getAdditionalState(context)};
+      return state;
+   }
+
+   protected Object getTreeStructureToSave(FacesContext context) {
+      TreeStructureNode treeStructure = new TreeStructureNode();
+      treeStructure.apply(context, context.getViewRoot(), new HashSet());
+      return treeStructure;
+   }
+
+   protected void restoreComponentState(FacesContext context, UIViewRoot viewRoot, String renderKitId) {
+      throw new UnsupportedOperationException();
+   }
+
+   protected UIViewRoot restoreTreeStructure(FacesContext context, String viewId, String renderKitId) {
+      throw new UnsupportedOperationException();
+   }
+
+   public void writeState(FacesContext context, Object state) throws IOException {
+      RenderKit renderKit = this.getRenderKit(context);
+      ResponseStateManager responseStateManager = renderKit.getResponseStateManager();
+      Object[] stateArray = this.getStateArray(state);
+      if(null == stateArray[0] &amp;&amp; null == stateArray[1]) {
+         stateArray = new Object[]{this.getLogicalViewId(context), null};
+      }
+
+      this.writeState(context, responseStateManager, stateArray);
+      if(_log.isDebugEnabled()) {
+         _log.debug(&quot;Write view state to the response&quot;);
+      }
+
+   }
+
+   public void writeState(FacesContext context, SerializedView state) throws IOException {
+      RenderKit renderKit = this.getRenderKit(context);
+      ResponseStateManager responseStateManager = renderKit.getResponseStateManager();
+      Object[] stateArray;
+      if(null == state.getState() &amp;&amp; null == state.getStructure()) {
+         stateArray = new Object[]{this.getLogicalViewId(context), null};
+      } else {
+         stateArray = new Object[]{state.getStructure(), state.getState()};
+      }
+
+      this.writeState(context, responseStateManager, stateArray);
+      if(_log.isDebugEnabled()) {
+         _log.debug(&quot;Write view state to the response&quot;);
+      }
+
+   }
+
+   private Object[] getStateArray(Object state) throws IOException, FacesException {
+      if(null != state &amp;&amp; state.getClass().isArray() &amp;&amp; state.getClass().getComponentType().equals(Object.class)) {
+         Object[] stateArray = (Object[])((Object[])state);
+         if(2 == stateArray.length) {
+            return stateArray;
+         } else {
+            throw new FacesException(&quot;Unexpected length of the state object array &quot; + stateArray.length);
+         }
+      } else {
+         throw new FacesException(&quot;Unexpected type of the state &quot; + state.getClass().getName());
+      }
+   }
+
+   private void writeState(FacesContext context, ResponseStateManager responseStateManager, Object[] stateArray) throws IOException {
+      ResponseWriter originalWriter = context.getResponseWriter();
+      StringWriter buff = new StringWriter(128);
+
+      try {
+         ResponseWriter stateResponseWriter = originalWriter.cloneWithWriter(buff);
+         context.setResponseWriter(stateResponseWriter);
+         responseStateManager.writeState(context, stateArray);
+         stateResponseWriter.flush();
+         String stateString = buff.toString();
+         originalWriter.write(stateString);
+         String stateValue = this.getStateValue(stateString);
+         context.getExternalContext().getRequestMap().put(&quot;org.ajax4jsf.captured_view_state&quot;, stateValue);
+         if(null != stateValue) {
+            ;
+         }
+      } finally {
+         context.setResponseWriter(originalWriter);
+      }
+
+   }
+
+   private String getStateValue(String input) {
+      Matcher matcher = PATTERN.matcher(input);
+      if(!matcher.matches()) {
+         matcher = PATTERN2.matcher(input);
+         if(!matcher.matches()) {
+            return null;
+         }
+      }
+
+      return matcher.group(1);
+   }
+
+   private static final Object handleRestoreState(FacesContext context, Object state) {
+      if(ContextInitParameters.isSerializeServerState(context)) {
+         ObjectInputStream ois = null;
+
+         Object e;
+         try {
+            ois = new ObjectInputStream(new ByteArrayInputStream((byte[])((byte[])state))) {
+               protected Class resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
+                  String name = desc.getName();
+
+                  try {
+                     return Class.forName(name, true, Thread.currentThread().getContextClassLoader());
+                  } catch (ClassNotFoundException var5) {
+                     Class clazz = (Class)AjaxStateManager.PRIMITIVE_CLASSES.get(name);
+                     if(clazz != null) {
+                        return clazz;
+                     } else {
+                        throw var5;
+                     }
+                  }
+               }
+            };
+            e = ois.readObject();
+         } catch (Exception var12) {
+            throw new FacesException(var12);
+         } finally {
+            if(ois != null) {
+               try {
+                  ois.close();
+               } catch (IOException var11) {
+                  ;
+               }
+            }
+
+         }
+
+         return e;
+      } else {
+         return state;
+      }
+   }
+
+   private static final Object handleSaveState(FacesContext context, Object state) {
+      if(ContextInitParameters.isSerializeServerState(context)) {
+         ByteArrayOutputStream baos = new ByteArrayOutputStream(1024);
+         ObjectOutputStream oas = null;
+
+         try {
+            oas = new ObjectOutputStream(baos);
+            oas.writeObject(state);
+            oas.flush();
+         } catch (Exception var12) {
+            throw new FacesException(var12);
+         } finally {
+            if(oas != null) {
+               try {
+                  oas.close();
+               } catch (IOException var11) {
+                  ;
+               }
+            }
+
+         }
+
+         return baos.toByteArray();
+      } else {
+         return state;
+      }
+   }
+
+   public UIViewRoot restoreView(FacesContext context, String viewId, String renderKitId) {
+      UIViewRoot viewRoot = null;
+      ResponseStateManager responseStateManager = this.getRenderKit(context, renderKitId).getResponseStateManager();
+      TreeStructureNode treeStructure = null;
+      Object[] state = null;
+      Object[] serializedView = null;
+      if(this.isSavingStateInClient(context)) {
+         serializedView = (Object[])((Object[])responseStateManager.getState(context, viewId));
+         if(null != serializedView) {
+            treeStructure = (TreeStructureNode)serializedView[0];
+            state = (Object[])((Object[])serializedView[1]);
+         }
+      } else {
+         serializedView = this.restoreStateFromSession(context, viewId, renderKitId);
+         if(null != serializedView) {
+            treeStructure = (TreeStructureNode)serializedView[0];
+            state = (Object[])((Object[])handleRestoreState(context, serializedView[1]));
+         }
+      }
+
+      if(null != treeStructure) {
+         viewRoot = (UIViewRoot)treeStructure.restore(this.componentLoader);
+         if(null != viewRoot &amp;&amp; null != state) {
+            viewRoot.processRestoreState(context, state[0]);
+            this.restoreAdditionalState(context, state[1]);
+         }
+      }
+
+      return viewRoot;
+   }
+
+   public SerializedView saveSerializedView(FacesContext context) {
+      Object[] stateViewArray;
+      if(null == this.seamStateManager) {
+         stateViewArray = this.buildViewState(context);
+      } else {
+         stateViewArray = (Object[])((Object[])this.seamStateManager.saveView(context));
+      }
+
+      return new SerializedView(this, stateViewArray[0], stateViewArray[1]);
+   }
+
+   public Object saveView(FacesContext context) {
+      return null == this.seamStateManager?this.buildViewState(context):this.seamStateManager.saveView(context);
+   }
+
+   public boolean isSavingStateInClient(FacesContext context) {
+      return this.parent.isSavingStateInClient(context);
+   }
+
+   protected Object[] restoreStateFromSession(FacesContext context, String viewId, String renderKitId) {
+      String id = this.restoreLogicalViewId(context, viewId, renderKitId);
+      StateHolder stateHolder = this.getStateHolder(context);
+      Object[] restoredState = stateHolder.getState(context, viewId, id);
+      if(restoredState != null &amp;&amp; id != null) {
+         context.getExternalContext().getRequestMap().put(AJAX_VIEW_SEQUENCE, id);
+      }
+
+      return restoredState;
+   }
+
+   protected Object[] buildViewState(FacesContext context) {
+      Object[] viewStateArray = null;
+      UIViewRoot viewRoot = context.getViewRoot();
+      if(null != viewRoot &amp;&amp; !viewRoot.isTransient()) {
+         TreeStructureNode treeStructure = (TreeStructureNode)this.getTreeStructureToSave(context);
+         Object state = this.getComponentStateToSave(context);
+         if(this.isSavingStateInClient(context)) {
+            viewStateArray = new Object[]{treeStructure, state};
+         } else {
+            viewStateArray = this.saveStateInSession(context, treeStructure, handleSaveState(context, state));
+         }
+      }
+
+      return viewStateArray;
+   }
+
+   protected Object[] saveStateInSession(FacesContext context, Object treeStructure, Object state) {
+      UIViewRoot viewRoot = context.getViewRoot();
+      StateHolder stateHolder = this.getStateHolder(context);
+      String id = this.getLogicalViewId(context);
+      stateHolder.saveState(context, viewRoot.getViewId(), id, new Object[]{treeStructure, state});
+      Object[] serializedView = new Object[]{id, null};
+      return serializedView;
+   }
+
+   protected StateHolder getStateHolder(FacesContext context) {
+      return AjaxStateHolder.getInstance(context);
+   }
+
+   protected Object getAdditionalState(FacesContext context) {
+      HashMap keepAliveBeans = new HashMap();
+      Map requestMap = context.getExternalContext().getRequestMap();
+      Iterator i$ = requestMap.entrySet().iterator();
+
+      while(i$.hasNext()) {
+         Entry requestEntry = (Entry)i$.next();
+         Object bean = requestEntry.getValue();
+         if(null != bean &amp;&amp; bean.getClass().isAnnotationPresent(KeepAlive.class)) {
+            keepAliveBeans.put(requestEntry.getKey(), bean);
+         }
+      }
+
+      if(keepAliveBeans.size() &gt; 0) {
+         return UIComponentBase.saveAttachedState(context, keepAliveBeans);
+      } else {
+         return null;
+      }
+   }
+
+   protected void restoreAdditionalState(FacesContext context, Object state) {
+      if(null != state) {
+         boolean isAjax = AjaxContext.getCurrentInstance(context).isAjaxRequest();
+         Map beansMap = (Map)UIComponentBase.restoreAttachedState(context, state);
+         Map requestMap = context.getExternalContext().getRequestMap();
+         Iterator i$ = beansMap.keySet().iterator();
+
+         while(true) {
+            Object key;
+            Object bean;
+            KeepAlive annotation;
+            do {
+               if(!i$.hasNext()) {
+                  return;
+               }
+
+               key = i$.next();
+               bean = beansMap.get(key);
+               if(bean == null) {
+                  break;
+               }
+
+               annotation = (KeepAlive)bean.getClass().getAnnotation(KeepAlive.class);
+            } while(annotation != null &amp;&amp; !isAjax &amp;&amp; annotation.ajaxOnly());
+
+            requestMap.put((String)key, bean);
+         }
+      }
+   }
+
+   protected String restoreLogicalViewId(FacesContext context, String viewId, String renderKitId) {
+      String id = (String)this.getRenderKit(context, renderKitId).getResponseStateManager().getTreeStructureToRestore(context, viewId);
+      return id;
+   }
+
+   protected String getLogicalViewId(FacesContext context) {
+      AjaxContext ajaxContext = AjaxContext.getCurrentInstance(context);
+      ExternalContext externalContext = context.getExternalContext();
+      Object id = null;
+      Map requestMap = externalContext.getRequestMap();
+      id = requestMap.get(ajaxContext.isAjaxRequest()?AJAX_VIEW_SEQUENCE:VIEW_SEQUENCE);
+      if(null != id) {
+         return id.toString();
+      } else {
+         Object session = externalContext.getSession(true);
+         int viewSequence;
+         synchronized(session) {
+            Map sessionMap = externalContext.getSessionMap();
+            Integer sequence = (Integer)sessionMap.get(VIEW_SEQUENCE_ATTRIBUTE);
+            if(null != sequence) {
+               viewSequence = sequence.intValue();
+            } else {
+               viewSequence = 0;
+            }
+
+            if(viewSequence++ == '\uffff') {
+               viewSequence = 0;
+            }
+
+            sessionMap.put(VIEW_SEQUENCE_ATTRIBUTE, new Integer(viewSequence));
+         }
+
+         String logicalViewId = &quot;j_id&quot; + viewSequence;
+         requestMap.put(VIEW_SEQUENCE, logicalViewId);
+         return logicalViewId;
+      }
+   }
+
+   protected RenderKit getRenderKit(FacesContext context) {
+      String renderKitId = null;
+      UIViewRoot viewRoot = context.getViewRoot();
+      if(null != viewRoot) {
+         renderKitId = viewRoot.getRenderKitId();
+      }
+
+      if(null == renderKitId) {
+         renderKitId = context.getApplication().getViewHandler().calculateRenderKitId(context);
+      }
+
+      return this.getRenderKit(context, renderKitId);
+   }
+
+   protected RenderKit getRenderKit(FacesContext context, String renderKitId) {
+      RenderKit renderKit = context.getRenderKit();
+      if(null == renderKit) {
+         RenderKitFactory factory = (RenderKitFactory)FactoryFinder.getFactory(&quot;javax.faces.render.RenderKitFactory&quot;);
+         renderKit = factory.getRenderKit(context, renderKitId);
+      }
+
+      return renderKit;
+   }
+
+   static {
+      PRIMITIVE_CLASSES.put(&quot;boolean&quot;, Boolean.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;byte&quot;, Byte.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;char&quot;, Character.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;short&quot;, Short.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;int&quot;, Integer.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;long&quot;, Long.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;float&quot;, Float.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;double&quot;, Double.TYPE);
+      PRIMITIVE_CLASSES.put(&quot;void&quot;, Void.TYPE);
+   }
+
+   private final class SeamStateManagerWrapper extends StateManager {
+      private SeamStateManagerWrapper() {
+      }
+
+      protected Object getComponentStateToSave(FacesContext arg0) {
+         return null;
+      }
+
+      protected Object getTreeStructureToSave(FacesContext arg0) {
+         return null;
+      }
+
+      protected void restoreComponentState(FacesContext arg0, UIViewRoot arg1, String arg2) {
+      }
+
+      protected UIViewRoot restoreTreeStructure(FacesContext arg0, String arg1, String arg2) {
+         return null;
+      }
+
+      public UIViewRoot restoreView(FacesContext arg0, String arg1, String arg2) {
+         return null;
+      }
+
+      public SerializedView saveSerializedView(FacesContext context) {
+         Object[] viewState = AjaxStateManager.this.buildViewState(context);
+         return new SerializedView(this, viewState[0], viewState[1]);
+      }
+
+      public Object saveView(FacesContext context) {
+         return AjaxStateManager.this.buildViewState(context);
+      }
+
+      public void writeState(FacesContext arg0, SerializedView arg1) throws IOException {
+      }
+
+      // $FF: synthetic method
+      SeamStateManagerWrapper(Object x1) {
+         this();
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "190" });
+
+            $("<div id='190-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(190)');
+
+
+$("<a name='12233216' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#190-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4150272;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

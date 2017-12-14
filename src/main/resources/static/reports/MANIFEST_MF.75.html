@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-webdav.war/WEB-INF/lib/spring-web-2.5.6.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Export-Package: org.springframework.remoting.caucho;version=&quot;2.5.6&quot;;us
+ es:=&quot;com.caucho.burlap.client,com.caucho.hessian.client,com.caucho.he
+ ssian.io,com.caucho.hessian.server,com.sun.net.httpserver,javax.servl
+ et,javax.servlet.http,org.aopalliance.intercept,org.apache.commons.lo
+ gging,org.springframework.remoting&quot;,org.springframework.remoting.http
+ invoker;version=&quot;2.5.6&quot;;uses:=&quot;com.sun.net.httpserver,javax.servlet,j
+ avax.servlet.http,org.aopalliance.intercept,org.apache.commons.httpcl
+ ient,org.apache.commons.httpclient.methods,org.springframework.remoti
+ ng,org.springframework.remoting.support&quot;,org.springframework.remoting
+ .jaxrpc;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.xml.namespace,java
+ x.xml.rpc,javax.xml.rpc.server,javax.xml.rpc.soap,org.aopalliance.int
+ ercept,org.springframework.context,org.springframework.context.suppor
+ t,org.springframework.remoting,org.springframework.web.context&quot;,org.s
+ pringframework.remoting.jaxrpc.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.x
+ ml.namespace,javax.xml.rpc,javax.xml.rpc.encoding&quot;,org.springframewor
+ k.remoting.jaxws;version=&quot;2.5.6&quot;;uses:=&quot;com.sun.net.httpserver,javax.
+ jws,javax.xml.namespace,javax.xml.soap,javax.xml.ws,javax.xml.ws.hand
+ ler,javax.xml.ws.soap,org.aopalliance.intercept,org.springframework.b
+ eans.factory,org.springframework.core.task&quot;,org.springframework.web;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.servlet.http&quot;,org.springfra
+ mework.web.context;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.servlet
+ .http,org.springframework.beans,org.springframework.context&quot;,org.spri
+ ngframework.web.context.request;version=&quot;2.5.6&quot;;uses:=&quot;javax.faces.co
+ ntext,javax.servlet,javax.servlet.http,org.springframework.beans.fact
+ ory,org.springframework.ui&quot;,org.springframework.web.context.support;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,javax.servlet.http,org.springfram
+ ework.beans,org.springframework.beans.factory.config,org.springframew
+ ork.beans.factory.support,org.springframework.beans.factory.xml,org.s
+ pringframework.context,org.springframework.core.io,org.springframewor
+ k.core.io.support,org.springframework.ui.context,org.springframework.
+ web.context&quot;,org.springframework.web.filter;version=&quot;2.5.6&quot;;uses:=&quot;ja
+ vax.servlet,javax.servlet.http,org.springframework.beans,org.springfr
+ amework.web.context&quot;,org.springframework.web.jsf;version=&quot;2.5.6&quot;;uses
+ :=&quot;javax.faces.application,javax.faces.context,javax.faces.el,javax.f
+ aces.event,org.springframework.beans.factory,org.springframework.web.
+ context&quot;,org.springframework.web.jsf.el;version=&quot;2.5.6&quot;;uses:=&quot;javax.
+ el,org.springframework.beans.factory,org.springframework.web.context&quot;
+ ,org.springframework.web.util;version=&quot;2.5.6&quot;;uses:=&quot;javax.servlet,ja
+ vax.servlet.http,javax.servlet.jsp,javax.servlet.jsp.tagext,org.apach
+ e.commons.logging&quot;
+Implementation-Title: Spring Framework
+Spring-Version: 2.5.6
+Implementation-Version: 2.5.6
+Bundle-Name: Spring Web
+Created-By: 10.0-b23 (Sun Microsystems Inc.)
+Ant-Version: Apache Ant 1.7.0
+Bundle-Vendor: SpringSource
+Bundle-Version: 2.5.6
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.springframework.web
+Import-Package: com.caucho.burlap.client;version=&quot;[3.1.3, 4.0.0)&quot;;reso
+ lution:=optional,com.caucho.burlap.io;version=&quot;[3.1.3, 4.0.0)&quot;;resolu
+ tion:=optional,com.caucho.burlap.server;version=&quot;[3.1.3, 4.0.0)&quot;;reso
+ lution:=optional,com.caucho.hessian.client;version=&quot;[3.1.3, 4.0.0)&quot;;r
+ esolution:=optional,com.caucho.hessian.io;version=&quot;[3.1.3, 4.0.0)&quot;;re
+ solution:=optional,com.caucho.hessian.server;version=&quot;[3.1.3, 4.0.0)&quot;
+ ;resolution:=optional,com.sun.net.httpserver;resolution:=optional,jav
+ ax.el;version=&quot;[2.1.0, 3.0.0)&quot;;resolution:=optional,javax.faces.appli
+ cation;version=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.faces.c
+ ontext;version=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.faces.e
+ l;version=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.faces.event;
+ version=&quot;[1.2.0.08, 2.0.0)&quot;;resolution:=optional,javax.jws;resolution
+ :=optional,javax.servlet;version=&quot;[2.4.0, 3.0.0)&quot;,javax.servlet.http;
+ version=&quot;[2.4.0, 3.0.0)&quot;,javax.servlet.jsp;version=&quot;[2.1.0, 3.0.0)&quot;;r
+ esolution:=optional,javax.servlet.jsp.el;version=&quot;[2.1.0, 3.0.0)&quot;;res
+ olution:=optional,javax.servlet.jsp.tagext;version=&quot;[2.1.0, 3.0.0)&quot;;r
+ esolution:=optional,javax.xml.namespace;resolution:=optional,javax.xm
+ l.rpc;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,javax.xml.rpc.enc
+ oding;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,javax.xml.rpc.ser
+ ver;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,javax.xml.rpc.soap;
+ version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,javax.xml.soap;version=
+ &quot;[1.3.0, 2.0.0)&quot;;resolution:=optional,javax.xml.ws;version=&quot;[2.1.1, 3
+ .0.0)&quot;;resolution:=optional,javax.xml.ws.handler;version=&quot;[2.1.1, 3.0
+ .0)&quot;;resolution:=optional,javax.xml.ws.soap;version=&quot;[2.1.1, 3.0.0)&quot;;
+ resolution:=optional,org.aopalliance.aop;version=&quot;[1.0.0, 2.0.0)&quot;;res
+ olution:=optional,org.aopalliance.intercept;version=&quot;[1.0.0, 2.0.0)&quot;;
+ resolution:=optional,org.apache.axis.encoding.ser;version=&quot;[1.4.0, 2.
+ 0.0)&quot;;resolution:=optional,org.apache.commons.httpclient;version=&quot;[3.
+ 1.0, 4.0.0)&quot;;resolution:=optional,org.apache.commons.httpclient.metho
+ ds;version=&quot;[3.1.0, 4.0.0)&quot;;resolution:=optional,org.apache.commons.h
+ ttpclient.params;version=&quot;[3.1.0, 4.0.0)&quot;;resolution:=optional,org.ap
+ ache.commons.logging;version=&quot;[1.0.4, 2.0.0)&quot;,org.apache.log4j;versio
+ n=&quot;[1.2.15, 2.0.0)&quot;;resolution:=optional,org.apache.taglibs.standard.
+ lang.support;version=&quot;[1.1.2, 2.0.0)&quot;;resolution:=optional,org.spring
+ framework.aop.framework;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional
+ ,org.springframework.aop.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:
+ =optional,org.springframework.beans;version=&quot;[2.5.6, 2.5.6]&quot;;resoluti
+ on:=optional,org.springframework.beans.factory;version=&quot;[2.5.6, 2.5.6
+ ]&quot;;resolution:=optional,org.springframework.beans.factory.access;vers
+ ion=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.beans.f
+ actory.access.el;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.sp
+ ringframework.beans.factory.annotation;version=&quot;[2.5.6, 2.5.6]&quot;;resol
+ ution:=optional,org.springframework.beans.factory.config;version=&quot;[2.
+ 5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.beans.factory.s
+ upport;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframew
+ ork.beans.factory.xml;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,o
+ rg.springframework.context;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optio
+ nal,org.springframework.context.access;version=&quot;[2.5.6, 2.5.6]&quot;;resol
+ ution:=optional,org.springframework.context.i18n;version=&quot;[2.5.6, 2.5
+ .6]&quot;;resolution:=optional,org.springframework.context.support;version
+ =&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.core;versi
+ on=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.core.io;
+ version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.cor
+ e.io.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.spring
+ framework.core.task;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org
+ .springframework.core.task.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolutio
+ n:=optional,org.springframework.remoting;version=&quot;[2.5.6, 2.5.6]&quot;;res
+ olution:=optional,org.springframework.remoting.rmi;version=&quot;[2.5.6, 2
+ .5.6]&quot;;resolution:=optional,org.springframework.remoting.soap;version
+ =&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.remoting.s
+ upport;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframew
+ ork.ui;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframew
+ ork.ui.context;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.spri
+ ngframework.ui.context.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=o
+ ptional,org.springframework.util;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:
+ =optional,org.xml.sax;resolution:=optional
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for RoleManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/authz/RoleManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.authz;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.interceptor.ExcludeDefaultInterceptors;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.authz.Role;
+import org.rhq.core.domain.criteria.RoleCriteria;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.authz.RoleManagerLocal;
+import org.rhq.enterprise.server.authz.RoleManagerRemote;
+
+@Stateless
+public class RoleManagerBean implements RoleManagerLocal, RoleManagerRemote {
+   private final Log log = LogFactory.getLog(RoleManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+
+   @ExcludeDefaultInterceptors
+   public PageList findRolesBySubject(int subjectId, PageControl pc) {
+      Subject subject = (Subject)this.entityManager.find(Subject.class, Integer.valueOf(subjectId));
+      PageList roles = PersistenceUtility.createPaginationFilter(this.entityManager, subject.getRoles(), pc);
+      if(roles != null) {
+         Iterator i$ = roles.iterator();
+
+         while(i$.hasNext()) {
+            Role role = (Role)i$.next();
+            role.getMemberCount();
+         }
+      }
+
+      return roles;
+   }
+
+   public PageList findRoles(PageControl pc) {
+      pc.initDefaultOrderingField(&quot;r.name&quot;);
+      String queryName = &quot;Role.findAll&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      Object roles = query.getResultList();
+      if(roles != null) {
+         Iterator i$ = ((List)roles).iterator();
+
+         while(i$.hasNext()) {
+            Role role = (Role)i$.next();
+            role.getMemberCount();
+         }
+      } else {
+         roles = new ArrayList();
+      }
+
+      return new PageList((Collection)roles, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public Role createRole(Subject subject, Role newRole) {
+      this.processDependentPermissions(newRole);
+      this.entityManager.persist(newRole);
+      return newRole;
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void deleteRoles(Subject subject, Integer[] doomedRoleIds) {
+      if(doomedRoleIds != null) {
+         Integer[] arr$ = doomedRoleIds;
+         int len$ = doomedRoleIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer roleId = arr$[i$];
+            Role doomedRole = (Role)this.entityManager.find(Role.class, roleId);
+            Query deleteNotificationQuery = this.entityManager.createQuery(&quot;DELETE FROM RoleNotification rn WHERE rn.role.id = :roleId&quot;);
+            deleteNotificationQuery.setParameter(&quot;roleId&quot;, roleId);
+            deleteNotificationQuery.executeUpdate();
+            HashSet subjectsToUnhook = new HashSet(doomedRole.getSubjects());
+            Iterator groupsToUnhook = subjectsToUnhook.iterator();
+
+            while(groupsToUnhook.hasNext()) {
+               Subject i$1 = (Subject)groupsToUnhook.next();
+               doomedRole.removeSubject(i$1);
+               this.entityManager.merge(i$1);
+            }
+
+            HashSet var13 = new HashSet(doomedRole.getResourceGroups());
+            Iterator var14 = var13.iterator();
+
+            while(var14.hasNext()) {
+               ResourceGroup doomedResourceGroupRelationship = (ResourceGroup)var14.next();
+               doomedRole.removeResourceGroup(doomedResourceGroupRelationship);
+               this.entityManager.merge(doomedResourceGroupRelationship);
+            }
+
+            doomedRole = (Role)this.entityManager.merge(doomedRole);
+            if(doomedRole.getFsystem().booleanValue()) {
+               throw new PermissionException(&quot;You cannot delete an internal system role&quot;);
+            }
+
+            this.entityManager.remove(doomedRole);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void addRolesToSubject(Subject subject, int subjectId, int[] roleIds) {
+      if(roleIds != null) {
+         Subject subjectToModify = this.subjectManager.getSubjectById(subjectId);
+         if(subjectToModify == null) {
+            throw new IllegalArgumentException(&quot;Could not find subject[&quot; + subjectId + &quot;] to add roles to&quot;);
+         }
+
+         if(subjectToModify.getFsystem() || this.authorizationManager.isSystemSuperuser(subjectToModify)) {
+            throw new PermissionException(&quot;You cannot assign roles to user [&quot; + subjectToModify.getName() + &quot;] - roles are fixed for this user&quot;);
+         }
+
+         subjectToModify.getRoles().size();
+         int[] arr$ = roleIds;
+         int len$ = roleIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer roleId = Integer.valueOf(arr$[i$]);
+            Role role = (Role)this.entityManager.find(Role.class, roleId);
+            if(role == null) {
+               throw new IllegalArgumentException(&quot;Tried to add role[&quot; + roleId + &quot;] to subject[&quot; + subjectId + &quot;], but role was not found&quot;);
+            }
+
+            role.addSubject(subjectToModify);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void addSubjectsToRole(Subject subject, int roleId, int[] subjectIds) {
+      if(subjectIds != null) {
+         Role role = this.getRoleById(Integer.valueOf(roleId));
+         if(role == null) {
+            throw new IllegalArgumentException(&quot;Could not find role[&quot; + roleId + &quot;] to add subjects to&quot;);
+         }
+
+         int[] arr$ = subjectIds;
+         int len$ = subjectIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer subjectId = Integer.valueOf(arr$[i$]);
+            Subject newSubject = (Subject)this.entityManager.find(Subject.class, subjectId);
+            if(newSubject == null) {
+               throw new IllegalArgumentException(&quot;Tried to add subject[&quot; + subjectId + &quot;] to role[&quot; + roleId + &quot;], but subject was not found&quot;);
+            }
+
+            if(newSubject.getFsystem() || this.authorizationManager.isSystemSuperuser(newSubject)) {
+               throw new PermissionException(&quot;You cannot alter the roles for user [&quot; + newSubject.getName() + &quot;] - roles are fixed for this user&quot;);
+            }
+
+            role.addSubject(newSubject);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void removeRolesFromSubject(Subject subject, int subjectId, int[] roleIds) {
+      if(roleIds != null) {
+         Subject subjectToModify = this.subjectManager.getSubjectById(subjectId);
+         if(subjectToModify.getFsystem() || this.authorizationManager.isSystemSuperuser(subjectToModify)) {
+            throw new PermissionException(&quot;You cannot remove roles from user [&quot; + subjectToModify.getName() + &quot;] - roles are fixed for this user&quot;);
+         }
+
+         int[] arr$ = roleIds;
+         int len$ = roleIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer roleId = Integer.valueOf(arr$[i$]);
+            Role role = (Role)this.entityManager.find(Role.class, roleId);
+            if(role != null) {
+               role.removeSubject(subjectToModify);
+            }
+         }
+      }
+
+   }
+
+   public Role getRoleById(Integer roleId) {
+      Role role = (Role)this.entityManager.find(Role.class, roleId);
+      return role;
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void setPermissions(Subject subject, Integer roleId, Set permissions) {
+      Role role = (Role)this.entityManager.find(Role.class, roleId);
+      Set rolePermissions = role.getPermissions();
+      rolePermissions.clear();
+      rolePermissions.addAll(permissions);
+      this.entityManager.merge(role);
+      this.entityManager.flush();
+   }
+
+   public Set getPermissions(Integer roleId) {
+      Role role = (Role)this.entityManager.find(Role.class, roleId);
+      Set rolePermissions = role.getPermissions();
+      return rolePermissions;
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public Role updateRole(Subject subject, Role role) {
+      this.processDependentPermissions(role);
+      return (Role)this.entityManager.merge(role);
+   }
+
+   public PageList findSubjectsByRole(Subject subject, Integer roleId, PageControl pc) {
+      return this.findSubjectsByRole(roleId, pc);
+   }
+
+   public PageList findSubjectsByRole(Integer roleId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;s.name&quot;);
+      String queryName = &quot;Subject.getSubjectsAssignedToRole&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;id&quot;, roleId);
+      query.setParameter(&quot;id&quot;, roleId);
+      long count = ((Long)queryCount.getSingleResult()).longValue();
+      List subjects = query.getResultList();
+      return new PageList(subjects, (int)count, pc);
+   }
+
+   public PageList findRolesByIds(Integer[] roleIds, PageControl pc) {
+      if(roleIds != null &amp;&amp; roleIds.length != 0) {
+         pc.initDefaultOrderingField(&quot;r.name&quot;);
+         String queryName = &quot;Role.findByIds&quot;;
+         Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+         Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+         List roleIdsList = Arrays.asList(roleIds);
+         queryCount.setParameter(&quot;ids&quot;, roleIdsList);
+         query.setParameter(&quot;ids&quot;, roleIdsList);
+         long count = ((Long)queryCount.getSingleResult()).longValue();
+         List roles = query.getResultList();
+         Iterator i$ = roles.iterator();
+
+         while(i$.hasNext()) {
+            Role role = (Role)i$.next();
+            role.getMemberCount();
+         }
+
+         return new PageList(roles, (int)count, pc);
+      } else {
+         return new PageList(pc);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public PageList findAvailableRolesForSubject(Subject subject, Integer subjectId, Integer[] pendingRoleIds, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;r.name&quot;);
+      String queryName;
+      if(pendingRoleIds != null &amp;&amp; pendingRoleIds.length != 0) {
+         queryName = &quot;Role.findAvailableRolesWithExcludes&quot;;
+      } else {
+         queryName = &quot;Role.findAvailableRoles&quot;;
+      }
+
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName, &quot;distinct r&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;subjectId&quot;, subjectId);
+      query.setParameter(&quot;subjectId&quot;, subjectId);
+      if(pendingRoleIds != null &amp;&amp; pendingRoleIds.length &gt; 0) {
+         List count = Arrays.asList(pendingRoleIds);
+         queryCount.setParameter(&quot;excludes&quot;, count);
+         query.setParameter(&quot;excludes&quot;, count);
+      }
+
+      long count1 = ((Long)queryCount.getSingleResult()).longValue();
+      List roles = query.getResultList();
+      Iterator i$ = roles.iterator();
+
+      while(i$.hasNext()) {
+         Role role = (Role)i$.next();
+         role.getMemberCount();
+      }
+
+      return new PageList(roles, (int)count1, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public PageList findSubjectUnassignedRoles(Subject subject, int subjectId, PageControl pc) {
+      return this.findAvailableRolesForSubject(subject, Integer.valueOf(subjectId), (Integer[])null, pc);
+   }
+
+   public PageList findAvailableRolesForAlertDefinition(Subject subject, Integer alertDefinitionId, Integer[] pendingRoleIds, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;r.name&quot;);
+      String queryName;
+      if(pendingRoleIds != null &amp;&amp; pendingRoleIds.length != 0) {
+         queryName = &quot;Role.findAvailableRolesForAlertDefinitionWithExcludes&quot;;
+      } else {
+         queryName = &quot;Role.findAvailableRolesForAlertDefinition&quot;;
+      }
+
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName, &quot;distinct r&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      query.setParameter(&quot;alertDefinitionId&quot;, alertDefinitionId);
+      if(pendingRoleIds != null &amp;&amp; pendingRoleIds.length &gt; 0) {
+         List count = Arrays.asList(pendingRoleIds);
+         queryCount.setParameter(&quot;excludes&quot;, count);
+         query.setParameter(&quot;excludes&quot;, count);
+      }
+
+      long count1 = ((Long)queryCount.getSingleResult()).longValue();
+      List roles = query.getResultList();
+      Iterator i$ = roles.iterator();
+
+      while(i$.hasNext()) {
+         Role role = (Role)i$.next();
+         role.getMemberCount();
+      }
+
+      return new PageList(roles, (int)count1, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void addResourceGroupsToRole(Subject subject, int roleId, int[] groupIds) {
+      if(groupIds != null &amp;&amp; groupIds.length &gt; 0) {
+         Role role = (Role)this.entityManager.find(Role.class, Integer.valueOf(roleId));
+         if(role == null) {
+            throw new IllegalArgumentException(&quot;Could not find role[&quot; + roleId + &quot;] to add resourceGroups to&quot;);
+         }
+
+         role.getResourceGroups().size();
+         int[] arr$ = groupIds;
+         int len$ = groupIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer groupId = Integer.valueOf(arr$[i$]);
+            ResourceGroup group = (ResourceGroup)this.entityManager.find(ResourceGroup.class, groupId);
+            if(role == null) {
+               throw new IllegalArgumentException(&quot;Tried to add resourceGroup[&quot; + groupId + &quot;] to role[&quot; + roleId + &quot;], but resourceGroup was not found&quot;);
+            }
+
+            role.addResourceGroup(group);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void removeResourceGroupsFromRole(Subject subject, int roleId, int[] groupIds) {
+      if(groupIds != null &amp;&amp; groupIds.length &gt; 0) {
+         Role role = (Role)this.entityManager.find(Role.class, Integer.valueOf(roleId));
+         if(role == null) {
+            throw new IllegalArgumentException(&quot;Could not find role[&quot; + roleId + &quot;] to remove resourceGroups from&quot;);
+         }
+
+         role.getResourceGroups().size();
+         int[] arr$ = groupIds;
+         int len$ = groupIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer groupId = Integer.valueOf(arr$[i$]);
+            ResourceGroup doomedGroup = (ResourceGroup)this.entityManager.find(ResourceGroup.class, groupId);
+            if(doomedGroup == null) {
+               throw new IllegalArgumentException(&quot;Tried to remove doomedGroup[&quot; + groupId + &quot;] from role[&quot; + roleId + &quot;], but subject was not found&quot;);
+            }
+
+            role.removeResourceGroup(doomedGroup);
+         }
+      }
+
+   }
+
+   private void processDependentPermissions(Role role) {
+      if(role.getPermissions().contains(Permission.MANAGE_SECURITY)) {
+         role.getPermissions().addAll(Arrays.asList(Permission.values()));
+      }
+
+   }
+
+   public PageList findSubjectAssignedRoles(Subject subject, int subjectId, PageControl pc) {
+      PageList assignedRoles = this.findRolesBySubject(subjectId, pc);
+      return assignedRoles;
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void removeSubjectsFromRole(Subject subject, int roleId, int[] subjectIds) {
+      if(subjectIds != null &amp;&amp; subjectIds.length &gt; 0) {
+         Role role = (Role)this.entityManager.find(Role.class, Integer.valueOf(roleId));
+         if(role == null) {
+            throw new IllegalArgumentException(&quot;Could not find role[&quot; + roleId + &quot;] to remove subjects from&quot;);
+         }
+
+         role.getSubjects().size();
+         int[] arr$ = subjectIds;
+         int len$ = subjectIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer subjectId = Integer.valueOf(arr$[i$]);
+            Subject doomedSubject = (Subject)this.entityManager.find(Subject.class, subjectId);
+            if(doomedSubject == null) {
+               throw new IllegalArgumentException(&quot;Tried to remove subject[&quot; + subjectId + &quot;] from role[&quot; + roleId + &quot;], but subject was not found&quot;);
+            }
+
+            role.removeSubject(doomedSubject);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void removeRolesFromResourceGroup(Subject subject, int groupId, int[] roleIds) {
+      if(roleIds != null &amp;&amp; roleIds.length &gt; 0) {
+         ResourceGroup group = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(groupId));
+         if(group == null) {
+            throw new IllegalArgumentException(&quot;Could not find resourceGroup[&quot; + groupId + &quot;] to remove roles from&quot;);
+         }
+
+         group.getRoles().size();
+         int[] arr$ = roleIds;
+         int len$ = roleIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer roleId = Integer.valueOf(arr$[i$]);
+            Role doomedRole = (Role)this.entityManager.find(Role.class, roleId);
+            if(doomedRole == null) {
+               throw new IllegalArgumentException(&quot;Tried to remove role[&quot; + roleId + &quot;] from resourceGroup[&quot; + groupId + &quot;], but role was not found&quot;);
+            }
+
+            group.removeRole(doomedRole);
+         }
+      }
+
+   }
+
+   public Role getRole(Subject subject, int roleId) {
+      return (Role)this.entityManager.find(Role.class, Integer.valueOf(roleId));
+   }
+
+   @RequiredPermission(Permission.MANAGE_SECURITY)
+   public void addRolesToResourceGroup(Subject subject, int groupId, int[] roleIds) {
+      if(roleIds != null &amp;&amp; roleIds.length &gt; 0) {
+         ResourceGroup group = (ResourceGroup)this.entityManager.find(ResourceGroup.class, Integer.valueOf(groupId));
+         if(group == null) {
+            throw new IllegalArgumentException(&quot;Could not find resourceGroup[&quot; + groupId + &quot;] to add roles to&quot;);
+         }
+
+         group.getRoles().size();
+         int[] arr$ = roleIds;
+         int len$ = roleIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer roleId = Integer.valueOf(arr$[i$]);
+            Role role = (Role)this.entityManager.find(Role.class, roleId);
+            if(role == null) {
+               throw new IllegalArgumentException(&quot;Tried to add role[&quot; + roleId + &quot;] to resourceGroup[&quot; + groupId + &quot;], but role was not found&quot;);
+            }
+
+            group.addRole(role);
+         }
+      }
+
+   }
+
+   public PageList findRolesByCriteria(Subject subject, RoleCriteria criteria) {
+      if(criteria.isSecurityManagerRequired() &amp;&amp; !this.authorizationManager.hasGlobalPermission(subject, Permission.MANAGE_SECURITY)) {
+         throw new PermissionException(&quot;Subject [&quot; + subject.getName() + &quot;] requires SecurityManager permission for requested query criteria.&quot;);
+      } else {
+         CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+         Query query = generator.getQuery(this.entityManager);
+         Query countQuery = generator.getCountQuery(this.entityManager);
+         long count = ((Long)countQuery.getSingleResult()).longValue();
+         List roles = query.getResultList();
+         return new PageList(roles, (int)count, criteria.getPageControl());
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

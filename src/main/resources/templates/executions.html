@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/StandardPage}">
+
+<head>
+    <title>RHAMT Example !</title>
+</head>
+
+<body>
+<th:block layout:fragment="content">
+    <p></p>
+ <table border="solid 1 navy" style="width:80%;">
+     <thead>
+        <th>id</th>
+        <th>When Executed</th>
+        <th>Reports</th>
+     </thead>
+     <tbody>
+        <tr>
+            <td>00001</td>
+            <td>30 Oct 2017 @ 11:40:23</td>
+            <td><a href="/selectExecution/1">View</a></td>
+        </tr>
+        <tr>
+            <td>00002</td>
+            <td>10 Nov 2017 @ 11:40:23</td>
+            <td><a href="/selectExecution/2">View</a></td>
+        </tr>
+        <tr>
+            <td>00003</td>
+            <td>20 Nov 2017 @ 11:42:23</td>
+            <td><a href="/selectExecution/3">View</a></td>
+        </tr>
+     </tbody>
+ </table>
+</th:block>
+
+
+</body>
+</html>

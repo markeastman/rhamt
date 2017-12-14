@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for EventManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/event/EventManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.event;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.ejb.TransactionTimeout;
+import org.jetbrains.annotations.NotNull;
+import org.rhq.core.db.DatabaseType;
+import org.rhq.core.db.DatabaseTypeFactory;
+import org.rhq.core.db.H2DatabaseType;
+import org.rhq.core.db.OracleDatabaseType;
+import org.rhq.core.db.PostgresqlDatabaseType;
+import org.rhq.core.db.SQLServerDatabaseType;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.criteria.EventCriteria;
+import org.rhq.core.domain.event.Event;
+import org.rhq.core.domain.event.EventDefinition;
+import org.rhq.core.domain.event.EventSeverity;
+import org.rhq.core.domain.event.EventSource;
+import org.rhq.core.domain.event.composite.EventComposite;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.domain.util.CriteriaQueryGenerator.AuthorizationTokenType;
+import org.rhq.core.util.jdbc.JDBCUtil;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheStats;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.event.EventException;
+import org.rhq.enterprise.server.event.EventManagerLocal;
+import org.rhq.enterprise.server.event.EventManagerRemote;
+import org.rhq.enterprise.server.measurement.instrumentation.MeasurementMonitor;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+
+@Stateless
+@Resource(
+   name = &quot;RHQ_DS&quot;,
+   mappedName = &quot;java:/RHQDS&quot;
+)
+public class EventManagerBean implements EventManagerLocal, EventManagerRemote {
+   private static final String EVENT_SOURCE_INSERT_STMT = &quot;INSERT INTO RHQ_Event_Source (id, event_def_id, resource_id, location) SELECT %s, (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)), ?, ? FROM RHQ_Numbers WHERE i = 42 AND NOT EXISTS (SELECT * FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?)&quot;;
+   private static final String EVENT_SOURCE_INSERT_STMT_AUTOINC = &quot;INSERT INTO RHQ_Event_Source (event_def_id, resource_id, location) SELECT (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)), ?, ? FROM RHQ_Numbers WHERE i = 42 AND NOT EXISTS (SELECT * FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?)&quot;;
+   private static final String EVENT_INSERT_STMT = &quot;INSERT INTO RHQ_Event (id, event_source_id, timestamp, severity, detail) VALUES (%s, (SELECT id FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?), ?, ?, ?)&quot;;
+   private static final String EVENT_INSERT_STMT_AUTOINC = &quot;INSERT INTO RHQ_Event (event_source_id, timestamp, severity, detail) VALUES ((SELECT id FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?), ?, ?, ?)&quot;;
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;
+   )
+   private DataSource rhqDs;
+   private DatabaseType dbType;
+   @EJB
+   private AlertConditionCacheManagerLocal alertConditionCacheManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private ResourceGroupManagerLocal resGrpMgr;
+   Log log = LogFactory.getLog(EventManagerBean.class);
+
+   @PostConstruct
+   public void init() {
+      Connection conn = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         this.dbType = DatabaseTypeFactory.getDatabaseType(conn);
+      } catch (Exception var6) {
+         throw new RuntimeException(var6);
+      } finally {
+         JDBCUtil.safeClose(conn);
+      }
+
+   }
+
+   public void addEventData(Map events) {
+      if(events != null &amp;&amp; events.size() != 0) {
+         Connection conn = null;
+         PreparedStatement ps = null;
+
+         try {
+            conn = this.rhqDs.getConnection();
+            DatabaseType t = DatabaseTypeFactory.getDatabaseType(conn);
+            String statementSql;
+            String i$;
+            if(!(t instanceof PostgresqlDatabaseType) &amp;&amp; !(t instanceof OracleDatabaseType) &amp;&amp; !(t instanceof H2DatabaseType)) {
+               if(!(t instanceof SQLServerDatabaseType)) {
+                  throw new IllegalArgumentException(&quot;Unknown database type, can\'t continue: &quot; + t);
+               }
+
+               statementSql = &quot;INSERT INTO RHQ_Event_Source (event_def_id, resource_id, location) SELECT (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)), ?, ? FROM RHQ_Numbers WHERE i = 42 AND NOT EXISTS (SELECT * FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?)&quot;;
+            } else {
+               i$ = JDBCUtil.getNextValSql(conn, &quot;RHQ_EVENT_SOURCE&quot;);
+               statementSql = String.format(&quot;INSERT INTO RHQ_Event_Source (id, event_def_id, resource_id, location) SELECT %s, (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)), ?, ? FROM RHQ_Numbers WHERE i = 42 AND NOT EXISTS (SELECT * FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?)&quot;, new Object[]{i$});
+            }
+
+            ps = conn.prepareStatement(statementSql);
+
+            EventSource eventSource;
+            Iterator var30;
+            try {
+               var30 = events.keySet().iterator();
+
+               while(var30.hasNext()) {
+                  eventSource = (EventSource)var30.next();
+                  byte eventData = 1;
+                  int var31 = eventData + 1;
+                  ps.setString(eventData, eventSource.getEventDefinition().getName());
+                  ps.setString(var31++, eventSource.getEventDefinition().getResourceType().getName());
+                  ps.setString(var31++, eventSource.getEventDefinition().getResourceType().getPlugin());
+                  ps.setInt(var31++, eventSource.getResource().getId());
+                  ps.setString(var31++, eventSource.getLocation());
+                  ps.setString(var31++, eventSource.getEventDefinition().getName());
+                  ps.setString(var31++, eventSource.getEventDefinition().getResourceType().getName());
+                  ps.setString(var31++, eventSource.getEventDefinition().getResourceType().getPlugin());
+                  ps.setInt(var31++, eventSource.getResource().getId());
+                  ps.setString(var31++, eventSource.getLocation());
+                  ps.addBatch();
+               }
+
+               ps.executeBatch();
+            } finally {
+               JDBCUtil.safeClose(ps);
+            }
+
+            if(!(t instanceof PostgresqlDatabaseType) &amp;&amp; !(t instanceof OracleDatabaseType) &amp;&amp; !(t instanceof H2DatabaseType)) {
+               if(!(t instanceof SQLServerDatabaseType)) {
+                  throw new IllegalArgumentException(&quot;Unknown database type, can\'t continue: &quot; + t);
+               }
+
+               statementSql = &quot;INSERT INTO RHQ_Event (event_source_id, timestamp, severity, detail) VALUES ((SELECT id FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?), ?, ?, ?)&quot;;
+            } else {
+               i$ = JDBCUtil.getNextValSql(conn, &quot;RHQ_EVENT&quot;);
+               statementSql = String.format(&quot;INSERT INTO RHQ_Event (id, event_source_id, timestamp, severity, detail) VALUES (%s, (SELECT id FROM RHQ_Event_Source WHERE event_def_id = (SELECT id FROM RHQ_Event_Def WHERE name = ? AND resource_type_id = (SELECT id FROM RHQ_Resource_Type WHERE name = ? AND plugin = ?)) AND resource_id = ? AND location = ?), ?, ?, ?)&quot;, new Object[]{i$});
+            }
+
+            ps = conn.prepareStatement(statementSql);
+
+            try {
+               var30 = events.keySet().iterator();
+
+               while(var30.hasNext()) {
+                  eventSource = (EventSource)var30.next();
+                  Set var33 = (Set)events.get(eventSource);
+                  Iterator i$1 = var33.iterator();
+
+                  while(i$1.hasNext()) {
+                     Event event = (Event)i$1.next();
+                     byte paramIndex = 1;
+                     int var32 = paramIndex + 1;
+                     ps.setString(paramIndex, eventSource.getEventDefinition().getName());
+                     ps.setString(var32++, eventSource.getEventDefinition().getResourceType().getName());
+                     ps.setString(var32++, eventSource.getEventDefinition().getResourceType().getPlugin());
+                     ps.setInt(var32++, eventSource.getResource().getId());
+                     ps.setString(var32++, eventSource.getLocation());
+                     ps.setLong(var32++, event.getTimestamp());
+                     ps.setString(var32++, event.getSeverity().toString());
+                     ps.setString(var32++, event.getDetail());
+                     ps.addBatch();
+                  }
+
+                  this.notifyAlertConditionCacheManager(&quot;addEventData&quot;, eventSource, (Event[])var33.toArray(new Event[var33.size()]));
+               }
+
+               ps.executeBatch();
+            } finally {
+               JDBCUtil.safeClose(ps);
+            }
+         } catch (Throwable var28) {
+            this.log.warn(&quot;addEventData: Insert of events failed : &quot; + var28.getMessage());
+         } finally {
+            JDBCUtil.safeClose(conn);
+         }
+
+      }
+   }
+
+   private void notifyAlertConditionCacheManager(String callingMethod, EventSource source, Event... events) {
+      AlertConditionCacheStats stats = this.alertConditionCacheManager.checkConditions(source, events);
+      this.log.debug(callingMethod + &quot;: &quot; + stats.toString());
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(21600)
+   public int purgeEventData(Date deleteUpToTime) throws SQLException {
+      Query q = this.entityManager.createQuery(&quot;DELETE FROM Event e WHERE e.timestamp &lt; :cutOff&quot;);
+      q.setParameter(&quot;cutOff&quot;, Long.valueOf(deleteUpToTime.getTime()));
+      long startTime = System.currentTimeMillis();
+      int deleted = q.executeUpdate();
+      MeasurementMonitor.getMBean().incrementPurgeTime(System.currentTimeMillis() - startTime);
+      MeasurementMonitor.getMBean().setPurgedEvents((long)deleted);
+      return deleted;
+   }
+
+   @NotNull
+   public List findEventsForResources(Subject subject, List resources, long startDate, long endDate) {
+      if(resources != null &amp;&amp; resources.size() != 0) {
+         Query q = this.entityManager.createNamedQuery(&quot;Event.FIND_EVENTS_FOR_RESOURCES_AND_TIME&quot;);
+         q.setParameter(&quot;resources&quot;, resources);
+         q.setParameter(&quot;start&quot;, Long.valueOf(startDate));
+         q.setParameter(&quot;end&quot;, Long.valueOf(endDate));
+         List ret = q.getResultList();
+         return ret;
+      } else {
+         return new ArrayList();
+      }
+   }
+
+   public PageList findEventsForAutoGroup(Subject subject, int parent, int type, long begin, long endDate, EventSeverity[] severities, PageControl pc) {
+      List resources = this.resGrpMgr.findResourcesForAutoGroup(subject, parent, type);
+      int[] resourceIds = new int[resources.size()];
+      int i = 0;
+
+      org.rhq.core.domain.resource.Resource res;
+      for(Iterator comp = resources.iterator(); comp.hasNext(); resourceIds[i++] = res.getId()) {
+         res = (org.rhq.core.domain.resource.Resource)comp.next();
+      }
+
+      PageList var15 = this.findEvents(subject, resourceIds, begin, endDate, severities, (String)null, (String)null, pc);
+      return var15;
+   }
+
+   public PageList findEventsForAutoGroup(Subject subject, int parent, int type, long begin, long endDate, EventSeverity[] severities, String source, String searchString, PageControl pc) {
+      List resources = this.resGrpMgr.findResourcesForAutoGroup(subject, parent, type);
+      Iterator resourceIds = resources.iterator();
+
+      while(resourceIds.hasNext()) {
+         org.rhq.core.domain.resource.Resource i = (org.rhq.core.domain.resource.Resource)resourceIds.next();
+         if(!this.authorizationManager.canViewResource(subject, i.getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view event history for autoGroup[parentResourceId=&quot; + parent + &quot;, resourceTypeId=&quot; + type + &quot;], root cause: missing permission to view resource[id=&quot; + i.getId() + &quot;]&quot;);
+         }
+      }
+
+      int[] var17 = new int[resources.size()];
+      int var18 = 0;
+
+      org.rhq.core.domain.resource.Resource res;
+      for(Iterator comp = resources.iterator(); comp.hasNext(); var17[var18++] = res.getId()) {
+         res = (org.rhq.core.domain.resource.Resource)comp.next();
+      }
+
+      PageList var19 = this.findEvents(subject, var17, begin, endDate, severities, source, searchString, pc);
+      return var19;
+   }
+
+   public PageList findEventsForCompGroup(Subject subject, int groupId, long begin, long endDate, EventSeverity[] severities, PageControl pc) {
+      List resources = this.resGrpMgr.findResourcesForResourceGroup(subject, groupId, GroupCategory.COMPATIBLE);
+      int[] resourceIds = new int[resources.size()];
+      int i = 0;
+
+      org.rhq.core.domain.resource.Resource res;
+      for(Iterator comp = resources.iterator(); comp.hasNext(); resourceIds[i++] = res.getId()) {
+         res = (org.rhq.core.domain.resource.Resource)comp.next();
+      }
+
+      PageList var14 = this.findEvents(subject, resourceIds, begin, endDate, severities, (String)null, (String)null, pc);
+      return var14;
+   }
+
+   public PageList findEventsForCompGroup(Subject subject, int groupId, long begin, long endDate, EventSeverity[] severities, String source, String searchString, PageControl pc) {
+      List resources = this.resGrpMgr.findResourcesForResourceGroup(subject, groupId, GroupCategory.COMPATIBLE);
+      int[] resourceIds = new int[resources.size()];
+      int i = 0;
+
+      org.rhq.core.domain.resource.Resource res;
+      for(Iterator comp = resources.iterator(); comp.hasNext(); resourceIds[i++] = res.getId()) {
+         res = (org.rhq.core.domain.resource.Resource)comp.next();
+      }
+
+      PageList var16 = this.findEvents(subject, resourceIds, begin, endDate, severities, source, searchString, pc);
+      return var16;
+   }
+
+   public int[] getEventCounts(Subject subject, int resourceId, long begin, long end, int numBuckets) {
+      int[] buckets = new int[numBuckets];
+      PageList events = this.findEventsForResource(subject, resourceId, begin, end, (EventSeverity[])null, (PageControl)null);
+      long timeDiff = end - begin;
+      long timePerBucket = timeDiff / (long)numBuckets;
+
+      int bucket;
+      for(Iterator i$ = events.iterator(); i$.hasNext(); ++buckets[bucket]) {
+         EventComposite event = (EventComposite)i$.next();
+         long evTime = event.getTimestamp().getTime();
+         evTime -= begin;
+         bucket = (int)(evTime / timePerBucket);
+      }
+
+      return buckets;
+   }
+
+   public EventSeverity[] getSeverityBuckets(Subject subject, int resourceId, long begin, long end, int numBuckets) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view event buckets for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         try {
+            org.rhq.core.domain.resource.Resource nre = (org.rhq.core.domain.resource.Resource)this.entityManager.find(org.rhq.core.domain.resource.Resource.class, Integer.valueOf(resourceId));
+            ArrayList resources = new ArrayList(1);
+            resources.add(nre);
+            return this.getSeverityBucketsForResources(subject, resources, begin, end, numBuckets);
+         } catch (NoResultException var10) {
+            return new EventSeverity[numBuckets];
+         }
+      }
+   }
+
+   public EventSeverity[] getSeverityBucketsForAutoGroup(Subject subject, int parentId, int type, long begin, long end, int numBuckets) {
+      List resources = this.resGrpMgr.findResourcesForAutoGroup(subject, parentId, type);
+      Iterator i$ = resources.iterator();
+
+      org.rhq.core.domain.resource.Resource res;
+      do {
+         if(!i$.hasNext()) {
+            return this.getSeverityBucketsForResources(subject, resources, begin, end, numBuckets);
+         }
+
+         res = (org.rhq.core.domain.resource.Resource)i$.next();
+      } while(this.authorizationManager.canViewResource(subject, res.getId()));
+
+      throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view event buckets for autoGroup[parentResourceId=&quot; + parentId + &quot;, resourceTypeId=&quot; + type + &quot;], root cause: missing permission to view resource[id=&quot; + res.getId() + &quot;]&quot;);
+   }
+
+   public EventSeverity[] getSeverityBucketsForCompGroup(Subject subject, int groupId, long begin, long end, int numBuckets) {
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view event buckets for resourceGroup[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         List resources = this.resGrpMgr.findResourcesForResourceGroup(subject, groupId, GroupCategory.COMPATIBLE);
+         return this.getSeverityBucketsForResources(subject, resources, begin, end, numBuckets);
+      }
+   }
+
+   private EventSeverity[] getSeverityBucketsForResources(Subject subject, List resources, long begin, long end, int numBuckets) {
+      EventSeverity[] buckets = new EventSeverity[numBuckets];
+      if(resources != null &amp;&amp; resources.size() != 0) {
+         List events = this.findEventsForResources(subject, resources, begin, end);
+         long timeDiff = end - begin;
+         long timePerBucket = timeDiff / (long)numBuckets;
+         Iterator i$ = events.iterator();
+
+         while(i$.hasNext()) {
+            Event event = (Event)i$.next();
+            long evTime = event.getTimestamp();
+            evTime -= begin;
+            int bucket = (int)(evTime / timePerBucket);
+            if(event.getSeverity().isMoreSevereThan(buckets[bucket])) {
+               buckets[bucket] = event.getSeverity();
+            }
+         }
+
+         return buckets;
+      } else {
+         return buckets;
+      }
+   }
+
+   @NotNull
+   public PageList findEventsForResource(Subject subject, int resourceId, long startDate, long endDate, EventSeverity[] severities, PageControl pc) {
+      PageList comp = this.findEvents(subject, new int[]{resourceId}, startDate, endDate, severities, (String)null, (String)null, pc);
+      return comp;
+   }
+
+   public PageList findEvents(Subject subject, int[] resourceIds, long begin, long end, EventSeverity[] severities, String source, String searchString, PageControl pc) {
+      if(pc == null) {
+         pc = new PageControl();
+      }
+
+      PageList pl = new PageList(pc);
+      if(resourceIds != null &amp;&amp; resourceIds.length != 0) {
+         String query = this.setupEventsQuery(resourceIds, severities, source, searchString, pc, false);
+         this.runEventsQuery(resourceIds, begin, end, severities, source, searchString, pc, pl, query);
+         query = this.setupEventsQuery(resourceIds, severities, source, searchString, pc, true);
+         int totals = this.runEventsCountQuery(resourceIds, begin, end, severities, source, searchString, pc, pl, query);
+         pl.setTotalSize(totals);
+         return pl;
+      } else {
+         return pl;
+      }
+   }
+
+   private void runEventsQuery(int[] resourceIds, long begin, long end, EventSeverity[] severities, String source, String searchString, PageControl pc, PageList pl, String query) {
+      Connection conn = null;
+      PreparedStatement stm = null;
+      ResultSet rs = null;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         stm = conn.prepareStatement(query);
+         byte sq = 1;
+         JDBCUtil.bindNTimes(stm, resourceIds, sq);
+         int var22 = sq + resourceIds.length;
+         stm.setLong(var22++, begin);
+         stm.setLong(var22++, end);
+         if(severities != null) {
+            for(int ec = 0; ec &lt; severities.length; ++ec) {
+               stm.setString(var22++, severities[ec].toString());
+            }
+         }
+
+         if(this.isFilled(searchString)) {
+            stm.setString(var22++, PersistenceUtility.formatSearchParameter(searchString));
+         }
+
+         if(this.isFilled(source)) {
+            stm.setString(var22++, PersistenceUtility.formatSearchParameter(source));
+         }
+
+         rs = stm.executeQuery();
+
+         while(rs.next()) {
+            EventComposite var23 = new EventComposite(rs.getString(1), rs.getInt(6), rs.getString(7), rs.getInt(2), EventSeverity.valueOf(rs.getString(4)), rs.getString(3), Long.valueOf(rs.getLong(5)));
+            pl.add(var23);
+         }
+      } catch (SQLException var20) {
+         this.log.error(&quot;runEventsQuery: Error retrieving events: &quot; + var20.getMessage(), var20);
+         this.log.error(&quot;query is [&quot; + query + &quot;].&quot;);
+         this.log.error(&quot;resourceIds[] has [&quot; + resourceIds.length + &quot;] members.&quot;);
+         this.log.error(&quot;severities are [&quot; + (null == severities?severities:Arrays.asList(severities)) + &quot;].&quot;);
+         this.log.error(&quot;source is [&quot; + source + &quot;].&quot;);
+         this.log.error(&quot;searchString is [&quot; + searchString + &quot;].&quot;);
+         this.log.error(&quot;PageControl is [&quot; + pc + &quot;].&quot;);
+      } finally {
+         JDBCUtil.safeClose(conn, stm, rs);
+      }
+
+   }
+
+   private int runEventsCountQuery(int[] resourceIds, long begin, long end, EventSeverity[] severities, String source, String searchString, PageControl pc, PageList pl, String query) {
+      Connection conn = null;
+      PreparedStatement stm = null;
+      ResultSet rs = null;
+      int num = 0;
+
+      try {
+         conn = this.rhqDs.getConnection();
+         stm = conn.prepareStatement(query);
+         byte sq = 1;
+         JDBCUtil.bindNTimes(stm, resourceIds, sq);
+         int var23 = sq + resourceIds.length;
+         stm.setLong(var23++, begin);
+         stm.setLong(var23++, end);
+         if(severities != null) {
+            for(int j = 0; j &lt; severities.length; ++j) {
+               stm.setString(var23++, severities[j].toString());
+            }
+         }
+
+         if(this.isFilled(searchString)) {
+            stm.setString(var23++, PersistenceUtility.formatSearchParameter(searchString));
+         }
+
+         if(this.isFilled(source)) {
+            stm.setString(var23++, PersistenceUtility.formatSearchParameter(source));
+         }
+
+         for(rs = stm.executeQuery(); rs.next(); num = rs.getInt(1)) {
+            ;
+         }
+      } catch (SQLException var21) {
+         this.log.error(&quot;runEventsCountQuery: Error retrieving events: &quot; + var21.getMessage(), var21);
+      } finally {
+         JDBCUtil.safeClose(conn, stm, rs);
+      }
+
+      return num;
+   }
+
+   private String setupEventsQuery(int[] resourceIds, EventSeverity[] severities, String source, String searchString, PageControl pc, boolean isCountQuery) {
+      String query;
+      if(isCountQuery) {
+         query = &quot;SELECT count(ev.id) &quot;;
+      } else {
+         query = &quot;SELECT ev.detail, ev.id AS evid, evs.location, ev.severity, ev.timestamp, res.id AS resid, res.name &quot;;
+      }
+
+      query = query + &quot; FROM RHQ_Event ev &quot;;
+      query = query + &quot; INNER JOIN RHQ_Event_Source evs ON evs.id = ev.event_source_id &quot;;
+      if(!isCountQuery) {
+         query = query + &quot; LEFT JOIN rhq_resource res ON evs.resource_id = res.id &quot;;
+      }
+
+      query = query + &quot; WHERE evs.resource_id IN ( &quot;;
+      query = query + JDBCUtil.generateInBinds(resourceIds.length);
+      query = query + &quot; ) &quot;;
+      query = query + &quot; AND ev.timestamp BETWEEN ? AND ? &quot;;
+      if(severities != null) {
+         query = query + &quot; AND ev.severity IN ( &quot;;
+         query = query + JDBCUtil.generateInBinds(severities.length);
+         query = query + &quot; ) &quot;;
+      }
+
+      if(this.isFilled(searchString)) {
+         query = query + &quot; AND upper(ev.detail) LIKE ? &quot;;
+      }
+
+      if(this.isFilled(source)) {
+         query = query + &quot; AND upper(evs.location) LIKE ? &quot;;
+      }
+
+      if(!isCountQuery) {
+         pc.initDefaultOrderingField(&quot;ev.timestamp&quot;, PageOrdering.DESC);
+         if(this.dbType instanceof PostgresqlDatabaseType) {
+            query = PersistenceUtility.addPostgresNativePagingSortingToQuery(query, pc);
+         } else if(this.dbType instanceof OracleDatabaseType) {
+            query = PersistenceUtility.addOracleNativePagingSortingToQuery(query, pc);
+         } else if(this.dbType instanceof H2DatabaseType) {
+            query = PersistenceUtility.addH2NativePagingSortingToQuery(query, pc);
+         } else {
+            if(!(this.dbType instanceof SQLServerDatabaseType)) {
+               throw new RuntimeException(&quot;Unknown database type : &quot; + this.dbType);
+            }
+
+            query = PersistenceUtility.addSQLServerNativePagingSortingToQuery(query, pc, true);
+         }
+      }
+
+      return query;
+   }
+
+   public EventComposite getEventDetailForEventId(Subject subject, int eventId) throws EventException {
+      Query q = this.entityManager.createNamedQuery(&quot;Event.GET_DETAILS_FOR_EVENT_IDS&quot;);
+      ArrayList eventIds = new ArrayList(1);
+      eventIds.add(Integer.valueOf(eventId));
+      q.setParameter(&quot;eventIds&quot;, eventIds);
+      List composites = q.getResultList();
+      if(composites.size() == 1) {
+         return (EventComposite)composites.get(0);
+      } else {
+         throw new EventException(&quot;No event found for eventId[&quot; + eventId + &quot;]&quot;);
+      }
+   }
+
+   public void deleteEventSourcesForDefinition(EventDefinition def) {
+      Query q = this.entityManager.createNamedQuery(&quot;EventSource.deletebyEventDefinition&quot;);
+      q.setParameter(&quot;definition&quot;, def);
+      List sources = q.getResultList();
+      Iterator i$ = sources.iterator();
+
+      while(i$.hasNext()) {
+         EventSource source = (EventSource)i$.next();
+         this.entityManager.remove(source);
+      }
+
+   }
+
+   public int getEventDefinitionCountForResourceType(int resourceTypeId) {
+      Query query = PersistenceUtility.createCountQuery(this.entityManager, &quot;EventDefinition.findByResourceTypeId&quot;);
+      query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+      long result = ((Long)query.getSingleResult()).longValue();
+      return (int)result;
+   }
+
+   private boolean isFilled(String in) {
+      return in != null &amp;&amp; !in.equals(&quot;&quot;);
+   }
+
+   public int deleteEvents(Subject subject, List eventIds) {
+      if(eventIds != null &amp;&amp; eventIds.size() != 0) {
+         Query q = this.entityManager.createNamedQuery(&quot;Event.deleteByEventIds&quot;);
+         q.setParameter(&quot;eventIds&quot;, eventIds);
+         int deletedCount = q.executeUpdate();
+         return deletedCount;
+      } else {
+         return 0;
+      }
+   }
+
+   public int deleteAllEventsForResource(Subject subject, int resourceId) {
+      Query q = this.entityManager.createNamedQuery(&quot;Event.deleteAllByResource&quot;);
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      int deletedCount = q.executeUpdate();
+      return deletedCount;
+   }
+
+   public int deleteAllEventsForCompatibleGroup(Subject subject, int groupId) {
+      Query q = this.entityManager.createNamedQuery(&quot;Event.deleteAllByResourceGroup&quot;);
+      q.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      int deletedCount = q.executeUpdate();
+      return deletedCount;
+   }
+
+   public Map getEventCountsBySeverity(Subject subject, int resourceId, long startDate, long endDate) {
+      HashMap results = new HashMap();
+      Query q = this.entityManager.createNamedQuery(&quot;Event.eventCountsBySeverity&quot;);
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      q.setParameter(&quot;start&quot;, Long.valueOf(startDate));
+      q.setParameter(&quot;end&quot;, Long.valueOf(endDate));
+      List rawResults = q.getResultList();
+      Iterator i$ = rawResults.iterator();
+
+      while(i$.hasNext()) {
+         Object[] rawResult = (Object[])i$.next();
+         EventSeverity severity = (EventSeverity)rawResult[0];
+         long count = ((Long)rawResult[1]).longValue();
+         results.put(severity, Integer.valueOf((int)count));
+      }
+
+      return results;
+   }
+
+   public PageList findEventsForResource(Subject subject, int resourceId, long startDate, long endDate, EventSeverity severity, String source, String detail, PageControl pc) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view event history for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         EventSeverity[] severities = new EventSeverity[]{severity};
+         PageList comp = this.findEvents(subject, new int[]{resourceId}, startDate, endDate, severities, source, detail, pc);
+         return comp;
+      }
+   }
+
+   public PageList findEventsForCompGroup(Subject subject, int groupId, long begin, long endDate, EventSeverity severity, String source, String searchString, PageControl pc) {
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view event history for resourceGroup[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         EventSeverity[] severities = new EventSeverity[]{severity};
+         return this.findEventsForCompGroup(subject, groupId, begin, endDate, severities, source, searchString, pc);
+      }
+   }
+
+   public PageList findEventsForAutoGroup(Subject subject, int parentResourceId, int resourceTypeId, long begin, long end, EventSeverity severity, String source, String detail, PageControl pc) {
+      EventSeverity[] severities = new EventSeverity[]{severity};
+      PageList comp = this.findEventsForAutoGroup(subject, parentResourceId, resourceTypeId, begin, end, severities, source, detail, pc);
+      return comp;
+   }
+
+   public PageList findEventsByCriteria(Subject subject, EventCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      if(!this.authorizationManager.isInventoryManager(subject)) {
+         generator.setAuthorizationResourceFragment(AuthorizationTokenType.RESOURCE, &quot;source.resource&quot;, subject.getId());
+      }
+
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, criteria.getPageControl());
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

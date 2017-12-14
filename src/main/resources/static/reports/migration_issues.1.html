@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+                RHQ Enterprise Server EAR -
+            Issues
+        </title>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+        <link href="resources/css/windup.css" rel="stylesheet" media="screen">
+        <link href="resources/css/windup.java.css" rel="stylesheet" media="screen">
+        <link href="resources/css/jquery-ui.min.css" rel="stylesheet" media="screen">
+        <link href="resources/img/rhamt-icon-128.png" rel="shortcut icon" type="image/x-icon"/>
+        <style>
+            .table-bordered { border: 1px solid #222222;  border-collapse: collapse;}
+            .table-bordered>tfoot>tr>th, .table-bordered>tfoot>tr>td .table-bordered>tbody>tr>th,  .table-bordered>thead>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td {
+              border: 1px inset #dddddd
+            }
+            .fileSummary {
+                background-color: #f5f5f5;
+            }
+            /* Only horizontal lines. */
+            .migration-issues-table.table-bordered > thead > tr > th,
+            .migration-issues-table.table-bordered > tbody > tr > td {
+                border-left-style: none;
+                border-right-style: none;
+            }
+
+            /* Light yellow bg for the issue info box. */
+            .hint-detail-panel > .panel-heading {
+                border-color: #c2c2c2;
+                background-color: #fbf4b1;
+            }
+            .hint-detail-panel {
+                border-color: #c2c2c2;
+                background-color: #fffcdc;
+            }
+            /* Reduce the padding, default is too big. */
+            .hint-detail-panel > .panel-body { padding-bottom: 0; }
+
+            /* Colors of various effort levels. */
+            /* Commented out for now (jsight - 2016/02/15)
+            tr.problemSummary.effortINFO td.level { color: #1B540E; }
+            tr.problemSummary.effortTRIVIAL td.level { color: #50A40E; }
+            tr.problemSummary.effortCOMPLEX td.level { color: #0065AC; }
+            tr.problemSummary.effortREDESIGN td.level { color: #C67D00; }
+            tr.problemSummary.effortARCHITECTURAL td.level { color: #C42F0E; }
+            tr.problemSummary.effortUNKNOWN td.level { color: #C42F0E; }
+            */
+        </style>
+    </head>
+    <body role="document">
+        <!-- Navbar -->
+        <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="active">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+                </div><!-- /.nav-collapse -->
+        </div>
+        <!-- / Navbar -->
+
+        <div class="container-fluid" role="main" id="report-content">
+            <div class="row">
+                <div class="page-header page-header-no-border">
+                    <h1>
+                        <div class="main">Issues</div>
+                            <div class="path">rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear</div>
+                    </h1>
+                    <div class="desc">
+                        This report provides a concise summary of all issues sorted by category.
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+        	<div class="container-fluid theme-showcase" role="main">
+                <!-- HEAD -->
+<!--            <div class="panel panel-default panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Analysis Detail</h3>
+                    </div>
+
+
+                    <div class="panel-body">
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Migration Mandatory</b>
+                                    </td>
+                                    <td class="text-right">111</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">227</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JSF Seam 2 UI control s:defaultAction
+            </a>
+        </td>
+        <td class="text-right">22</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">66</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="606711be-413d-428c-a310-fbae5a59204a">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                JMX MBean object name (javax.management.ObjectName)
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="5e66dcf6-e315-4587-aac0-99487fa0c06c">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Name
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="31035674-4d1d-4dbf-8517-3fb69505cf88">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Scope
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="9b60b3c5-ce0c-4cfc-b428-d68646eb626b">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.In
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="038b48f8-824f-491d-9bda-7066c7c8060d">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JBoss EJB @Service annotation
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="4083c329-6f53-4a22-ab6a-15c8d5f7147d">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JBoss EJB @Management annotation
+            </a>
+        </td>
+        <td class="text-right">4</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">12</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="5bb5ab86-299c-41a0-a582-10e938aff674">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Call of JNDI lookup
+            </a>
+        </td>
+        <td class="text-right">11</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">11</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="9f0fb86c-ef3d-40d4-b4ad-b9f0a7cd1907">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Create
+            </a>
+        </td>
+        <td class="text-right">4</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">4</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="22c8070f-d7b5-49be-b31e-49b7c3cad796">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.End
+            </a>
+        </td>
+        <td class="text-right">6</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">6</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="411ba1dc-c4d8-4b41-8d2c-fd167efc21d8">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.contexts.Contexts
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="9c38370b-47e0-479d-ac48-bd1fa4f79c8c">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.core.Conversation
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="ce796087-6da3-40f8-8f0f-b96f0895d786">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Begin
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="4dc65682-4d89-4ac6-a5ee-fd8ec39b3699">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Proprietary InitialContext initialization
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="b63240dc-5a7e-45bd-a0ad-7b13ce143858">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Seam 2 embedded library
+            </a>
+        </td>
+        <td class="text-right">8</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">40</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="07736f54-5da3-4cca-8d79-7a79cc13220c">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                JSF Seam 2.x tag library usage
+            </a>
+        </td>
+        <td class="text-right">21</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">21</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="1c1e31e8-cbda-416f-b4aa-c1600632fe2f">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Seam API
+            </a>
+        </td>
+        <td class="text-right">7</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">35</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="eccc5744-96c1-472e-b558-ed508278622b">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JBoss legacy EJB XML (jboss.xml)
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="7853f1d1-3424-4329-86f6-21e323bef52d">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Migration Optional</b>
+                                    </td>
+                                    <td class="text-right">81</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">10</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Dynamic class instantiation
+            </a>
+        </td>
+        <td class="text-right">29</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="b86ae404-d5e8-4d2f-9fb0-72ed69b60c18">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Maven POM (pom.xml)
+            </a>
+        </td>
+        <td class="text-right">44</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="1036ca15-65f9-4c2e-9641-5b79fee43fab">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                EJB XML
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="a143e4e2-7fd7-4423-9289-92f2df05e398">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Embedded library - JDBC
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="11214d4c-9047-4510-8452-fa4988ef1dc3">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Web XML
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="0a73068c-aae9-4e36-9b5a-a0717856ddb7">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                JBoss Seam Components (components.xml)
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="79ebb921-0ca0-4ddf-b583-ebe8cb4eaf85">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                JBoss Seam Pages (pages.xml)
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="37af3166-529a-4dc3-9bd8-1dbeb035096c">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Cloud Mandatory</b>
+                                    </td>
+                                    <td class="text-right">31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">37</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Hard-coded IP address
+            </a>
+        </td>
+        <td class="text-right">21</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">21</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="88aaf269-64ef-4e0e-8311-cf05b7b08ee9">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                File system - java.net.URL/URI
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="cfcf971b-17f5-4c89-8cc1-4ea6577b2e45">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                File system - Java IO
+            </a>
+        </td>
+        <td class="text-right">4</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">4</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="231ecec2-2759-4b96-9b25-18c7b5355c09">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                File system - Java NIO
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="df97efd3-c0f2-4729-a2f6-c23d44a350bc">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                Java Remote Method Invocation (RMI) API
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">9</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="712976e4-3d95-46d8-af73-84e654b622fc">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable">Issue by Category</th>
+                                    <th class="sortable-right text-right">Incidents Found</th>
+                                    <th class="sortable-right text-right">Story Points per Incident</th>
+                                    <th>Level of Effort</th>
+                                    <th class="sortable-right text-right">Total Story Points</th>
+                                </tr>
+                                <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                                    <td>
+                                        <b>Cloud Optional</b>
+                                    </td>
+                                    <td class="text-right">163</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right">681</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                HTTP Session data storage
+            </a>
+        </td>
+        <td class="text-right">44</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">132</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="34ee32c1-7a19-4456-b0fe-4fe98e68689b">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                Java Mail API
+            </a>
+        </td>
+        <td class="text-right">23</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">69</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="aa61b0f2-386b-4ec5-8af4-8e058ba0ab46">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Socket communication
+            </a>
+        </td>
+        <td class="text-right">77</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">385</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="1b399198-8eff-4332-a096-38c133a99699">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Java NIO channel
+            </a>
+        </td>
+        <td class="text-right">19</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">95</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="87a95b30-f0f4-4367-93b2-217bfe5bbe78">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                ======= -->
+                  <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                      <thead>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(0, 140, 186);color: #FFFFFF; font-size: 14pt;">
+                              <td style="border: 0px; padding: 10px 15px"><b>Migration Mandatory</b></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                          </tr>
+                          <tr style="background: rgb(212, 230, 233);">
+                              <th class="sortable">Issue by Category</th>
+                              <th class="sortable-right text-right">Incidents Found</th>
+                              <th class="sortable-right text-right">Story Points per Incident</th>
+                              <th>Level of Effort</th>
+                              <th class="sortable-right text-right">Total Story Points</th>
+                          </tr>
+                      </thead>
+                      <tfoot>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">111</td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">227</td>
+                          </tr>
+                      </tfoot>
+                      <tbody>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JSF Seam 2 UI control s:defaultAction
+            </a>
+        </td>
+        <td class="text-right">22</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">66</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="835cb6f7-b354-4151-83a5-30a2b5f61b34">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                JMX MBean object name (javax.management.ObjectName)
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="174e372a-c66e-476d-970f-8d819f0c2d64">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Name
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="ae3073db-4c9a-4c99-bb2a-2b0098ec990f">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Scope
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="02417abf-3d15-4a4f-accc-63bc3df75461">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.In
+            </a>
+        </td>
+        <td class="text-right">5</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="67262e9d-465b-49c8-a99f-b58e06b24f8b">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JBoss EJB @Service annotation
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="e2433e9d-e778-474d-8d0b-ff29997380a5">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JBoss EJB @Management annotation
+            </a>
+        </td>
+        <td class="text-right">4</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">12</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="4150efcf-2878-44d1-a2eb-a9fc8907c56e">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Call of JNDI lookup
+            </a>
+        </td>
+        <td class="text-right">11</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">11</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="d794710f-dda9-4ef3-a986-d3c895fc1c4a">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Create
+            </a>
+        </td>
+        <td class="text-right">4</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">4</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="c443f7bb-440d-4367-90e0-97016c92baae">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.End
+            </a>
+        </td>
+        <td class="text-right">6</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">6</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="96bccf65-e681-45f7-b962-8f46f8fc969a">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.contexts.Contexts
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="c733a66e-ba4d-48e9-9882-84b05038c7b2">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.core.Conversation
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="493cbf30-b713-4114-85b6-3690b278a63d">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Seam API - org.jboss.seam.annotations.Begin
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="87caf63f-09c5-4715-aa0c-fbee6cb3aaf4">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Proprietary InitialContext initialization
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="cfff15b5-7a21-4229-bc68-52a94bc5dd1e">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Seam 2 embedded library
+            </a>
+        </td>
+        <td class="text-right">8</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">40</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="b2118b6d-9a3f-4e82-a85c-facb1a64abc5">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                JSF Seam 2.x tag library usage
+            </a>
+        </td>
+        <td class="text-right">21</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">21</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="28f57413-ce1d-433f-b44c-aef88aae4882">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Seam API
+            </a>
+        </td>
+        <td class="text-right">7</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">35</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="f7d9942d-eb62-4711-a7c7-977118e7be15">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                JBoss legacy EJB XML (jboss.xml)
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">3</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="a3790285-6289-42c2-8481-6c30804626d1">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                      </tbody>
+                  </table>
+                  <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                      <thead>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(0, 140, 186);color: #FFFFFF; font-size: 14pt;">
+                              <td style="border: 0px; padding: 10px 15px"><b>Migration Optional</b></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                          </tr>
+                          <tr style="background: rgb(212, 230, 233);">
+                              <th class="sortable">Issue by Category</th>
+                              <th class="sortable-right text-right">Incidents Found</th>
+                              <th class="sortable-right text-right">Story Points per Incident</th>
+                              <th>Level of Effort</th>
+                              <th class="sortable-right text-right">Total Story Points</th>
+                          </tr>
+                      </thead>
+                      <tfoot>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">81</td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">10</td>
+                          </tr>
+                      </tfoot>
+                      <tbody>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Dynamic class instantiation
+            </a>
+        </td>
+        <td class="text-right">29</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="1e9b250c-d03e-4b24-a3e7-f2e7bde487c8">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Maven POM (pom.xml)
+            </a>
+        </td>
+        <td class="text-right">44</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="38e14098-4c6d-4530-9083-c5f7a0ae5fc5">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                EJB XML
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="4d03a4e6-0b0a-4858-9748-c68b7e02656a">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Embedded library - JDBC
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="cd99aa8f-324e-4617-81d0-b49f1cc1cc70">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortINFO">
+        <td>
+            <a href="#" class="toggle">
+                Web XML
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">0</td>
+        <td class="level">Info</td>
+        <td class="text-right">0</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="e5f0989d-5c80-4e52-a9e2-8cb22a70f61d">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                JBoss Seam Components (components.xml)
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="8e8f121f-c027-4901-b03e-b6a7ee011033">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                JBoss Seam Pages (pages.xml)
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">5</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="18789026-2cc0-4340-bc0a-32d6cafe2812">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                      </tbody>
+                  </table>
+                  <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                      <thead>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(0, 140, 186);color: #FFFFFF; font-size: 14pt;">
+                              <td style="border: 0px; padding: 10px 15px"><b>Cloud Mandatory</b></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                          </tr>
+                          <tr style="background: rgb(212, 230, 233);">
+                              <th class="sortable">Issue by Category</th>
+                              <th class="sortable-right text-right">Incidents Found</th>
+                              <th class="sortable-right text-right">Story Points per Incident</th>
+                              <th>Level of Effort</th>
+                              <th class="sortable-right text-right">Total Story Points</th>
+                          </tr>
+                      </thead>
+                      <tfoot>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">31</td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">37</td>
+                          </tr>
+                      </tfoot>
+                      <tbody>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                Hard-coded IP address
+            </a>
+        </td>
+        <td class="text-right">21</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">21</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="3c912739-b847-40d5-98da-a773aea98c34">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                File system - java.net.URL/URI
+            </a>
+        </td>
+        <td class="text-right">1</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">1</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="7dd03f1e-5128-46dd-b571-a10b2d02d564">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                File system - Java IO
+            </a>
+        </td>
+        <td class="text-right">4</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">4</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="f85a01af-2a39-4090-958b-6528caa89964">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortTRIVIAL">
+        <td>
+            <a href="#" class="toggle">
+                File system - Java NIO
+            </a>
+        </td>
+        <td class="text-right">2</td>
+        <td class="text-right">1</td>
+        <td class="level">Trivial change or 1-1 library swap</td>
+        <td class="text-right">2</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="5df4aaef-ce62-437a-a45d-888bfcfa1d70">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                Java Remote Method Invocation (RMI) API
+            </a>
+        </td>
+        <td class="text-right">3</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">9</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="72e94b9e-4dd5-4370-ba17-2f416186f4e5">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                      </tbody>
+                  </table>
+                  <table class="table table-bordered table-condensed tablesorter migration-issues-table">
+                      <thead>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(0, 140, 186);color: #FFFFFF; font-size: 14pt;">
+                              <td style="border: 0px; padding: 10px 15px"><b>Cloud Optional</b></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                          </tr>
+                          <tr style="background: rgb(212, 230, 233);">
+                              <th class="sortable">Issue by Category</th>
+                              <th class="sortable-right text-right">Incidents Found</th>
+                              <th class="sortable-right text-right">Story Points per Incident</th>
+                              <th>Level of Effort</th>
+                              <th class="sortable-right text-right">Total Story Points</th>
+                          </tr>
+                      </thead>
+                      <tfoot>
+                          <tr class="tablesorter-ignoreRow" style="background: rgb(212, 230, 233);">
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">163</td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px"></td>
+                              <td style="border: 0px" class="text-right">681</td>
+                          </tr>
+                      </tfoot>
+                      <tbody>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                HTTP Session data storage
+            </a>
+        </td>
+        <td class="text-right">44</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">132</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="e5fc9874-5467-42b0-b068-2169cd9c5611">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortCOMPLEX">
+        <td>
+            <a href="#" class="toggle">
+                Java Mail API
+            </a>
+        </td>
+        <td class="text-right">23</td>
+        <td class="text-right">3</td>
+        <td class="level">Complex change with documented solution</td>
+        <td class="text-right">69</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="ddd10576-c97e-41fb-b583-6fe9e27be76f">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Socket communication
+            </a>
+        </td>
+        <td class="text-right">77</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">385</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="cc725cab-ee5b-4c6e-90a8-61b30a783c47">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+    <tr class="problemSummary effortREDESIGN">
+        <td>
+            <a href="#" class="toggle">
+                Java NIO channel
+            </a>
+        </td>
+        <td class="text-right">19</td>
+        <td class="text-right">5</td>
+        <td class="level">Requires re-design or library change</td>
+        <td class="text-right">95</td>
+    </tr>
+    <tr class="tablesorter-childRow bg-info" data-summary-id="f7b5e888-5568-4ee3-8dc6-4e2d2c6757b2">
+        <td><div class="indent"><strong>File</strong></div></td>
+        <td class="text-right"><strong>Incidents Found</strong></td>
+        <td colspan="3"><strong>Hint</strong></td>
+    </tr>
+                      </tbody>
+                  </table>
+              <!-- 4c47fc7cb... Several style fixes to make the reports more consistent -->
+	    	</div>
+        </div>
+        </div>
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+        <script src="resources/js/jquery-1.10.1.min.js"></script>
+        <script src="resources/js/jquery-ui.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/jquery.tablesorter.min.js"></script>
+        <script src="resources/js/jquery.tablesorter.widgets.min.js"></script>
+        <script src="resources/libraries/handlebars/handlebars.4.0.5.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var $table = $('.tablesorter');
+
+                // hide child rows & make draggable
+                $table.find('.tablesorter-childRow')
+                    .find('td')
+                    .droppable({
+                        accept: '.draggingSiblings',
+                        drop: function(event, ui) {
+                            if ($(this).closest('tr').length){
+                                $(this).closest('tr').before(
+                                    ui.draggable
+                                        .css({ left: 0, top: 0 })
+                                        .parent()
+                                        .removeClass('draggingRow')
+                                    );
+                                $table
+                                    .find('.draggingSiblingsRow')
+                                    .removeClass('draggingSiblingsRow')
+                                    .find('.draggingSiblings')
+                                    .removeClass('draggingSiblings');
+                                $table.trigger('update');
+                            } else {
+                                return false;
+                            }
+                        }
+                    })
+                    .draggable({
+                        revert: "invalid",
+                        start: function( event, ui ) {
+                            $(this)
+                                .parent()
+                                .addClass('draggingRow')
+                                .prevUntil('.tablesorter-hasChildRow')
+                                .nextUntil('tr:not(.tablesorter-childRow)')
+                                .addClass('draggingSiblingsRow')
+                                .find('td')
+                                .addClass('draggingSiblings');
+                        }
+                    })
+                    .hide();
+
+                // we need these parsers because we are using comma to separate thousands and are also sorting links
+                $.tablesorter.addParser({
+                     id: 'thousands',
+                     is: function(s) { return true; },
+                     format: function(s) {
+                         return s.replace('$','').replace(/,/g,'');
+                     },
+                     type: 'numeric'
+                });
+                $.tablesorter.addParser({
+                    id: 'a-elements',
+                    is: function(s) { return true; },
+                    format: function(s)
+                    {
+                        // format your data for normalization
+                        return s.replace(new RegExp(/<.*?>/),"");
+                    },
+                    parsed: true,
+                    type: 'text'
+                });
+
+                $table
+                    .tablesorter({
+                        // this is the default setting
+                        cssChildRow: "tablesorter-childRow",
+                        sortList: [[1,1]],
+                        headers: {
+                            0: {sorter: 'a-elements'},
+                            1: {sorter: 'thousands'},
+                            2: {sorter: 'thousands'},
+                            3: {sorter: false},
+                            4: {sorter: 'thousands'},
+                        }
+                    })
+                    .delegate('.toggle', 'click' ,function(){
+                        $(this)
+                            .closest('tr')
+                            .nextUntil('tr.tablesorter-hasChildRow')
+                            .find('td').first().each(function(index, element) { showDetails(element) });
+                        return false;
+                    });
+
+            });
+
+       	    function resizeTables()
+            {
+                var tableArr = document.getElementsByClassName('migration-issues-table');
+                var cellWidths = new Array();
+
+                // get widest
+                for(i = 0; i < tableArr.length; i++)
+                {
+                    for(j = 0; j < tableArr[i].rows[0].cells.length; j++)
+                    {
+                       var cell = tableArr[i].rows[0].cells[j];
+
+                       if(!cellWidths[j] || cellWidths[j] < cell.clientWidth)
+                            cellWidths[j] = cell.clientWidth;
+                    }
+                }
+
+                // set all columns to the widest width found
+                for(i = 0; i < tableArr.length; i++)
+                {
+                    for(j = 0; j < tableArr[i].rows[0].cells.length; j++)
+                    {
+                        tableArr[i].rows[0].cells[j].style.width = cellWidths[j]+'px';
+                    }
+                }
+            }
+
+            window.onload = resizeTables;
+
+        </script>
+
+        <!#-- We are using short variable names because they repeat a lot in the generated HTML
+              and using short reduces the file sizes significantly.
+              
+              {l} - label
+              {oc} - occurences
+              {h} - href
+              {t} - link title
+
+              The actual data are generated lower into MIGRATION_ISSUES_DETAILS[] .
+        -->
+        <script id="detail-row-template" type="text/x-handlebars-template">
+            {{#each problemSummaries}}
+                {{#each files}}
+                    <tr class="fileSummary tablesorter-childRow fileSummary_id_{{../problemSummaryID}}">
+                        <td>
+                            <div class="indent">
+                                {{{l}}}
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            {{oc}}
+                        </td>
+
+                        {{#if @first}}
+                            <td colspan="3" rowspan="{{../files.length}}">
+                                <div class="panel panel-default hint-detail-panel">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title pull-left">Issue Detail: {{../issueName}}</h4>
+                                        {{#if ../ruleID}}
+                                            <div class="pull-right">
+                                                <a class="sh_url" title="{{../ruleID}}" href="windup_ruleproviders.html#{{../ruleID}}">Show Rule</a>
+                                            </div>
+                                        {{/if}}
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        {{{../description}}}
+                                    </div>
+
+                                    {{#if ../resourceLinks}}
+                                        <div class="panel-body">
+                                            <ul>
+                                                {{#each ../resourceLinks}}
+                                                    <li><a href="{{h}}" target="_blank">{{t}}</a></li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                    {{/if}}
+                                </div>
+                            </td>
+                        {{/if}}
+                    </tr>
+                {{/each}}
+            {{/each}}
+        </script>
+
+        <script type="text/javascript">
+            var issueDataLoaded = [];
+
+            function showDetails(element) {
+                var problemSummaryID = $(element).parent().attr("data-summary-id")
+                var tr = $(element).parent();
+
+                var issueDataArray = MIGRATION_ISSUES_DETAILS[problemSummaryID];
+                if (!issueDataLoaded[problemSummaryID]) {
+                    // append it and try again in a second
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "data/problem_summary_" + problemSummaryID + ".js";
+                    document.body.appendChild(script);
+
+                    issueDataLoaded[problemSummaryID] = true;
+                    setTimeout(function() { showDetails(element); }, 25);
+                    return;
+                } else if (issueDataArray == null) {
+                    setTimeout(function() { showDetails(element); }, 25);
+                    return;
+                }
+
+                function toggleRow () {
+                    $(tr).find("td").toggle();
+                    var issuesTable = $(element).parent().parent().parent();
+                    $(issuesTable).trigger("update", [true]);
+                }
+
+                $(".fileSummary_id_" + problemSummaryID).remove();
+                if ($(element).is(":visible")) {
+                    toggleRow();
+                    return;
+                }
+
+                var source   = $("#detail-row-template").html();
+                var template = Handlebars.compile(source);
+                var html = template({problemSummaries: issueDataArray});
+
+                $(html).insertAfter(tr);
+
+                toggleRow();
+            }
+
+            // summary in JS should go here
+            var MIGRATION_ISSUES_DETAILS = [];
+        </script>
+
+    </body>
+</html>

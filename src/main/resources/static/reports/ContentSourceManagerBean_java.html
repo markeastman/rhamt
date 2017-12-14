@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ContentSourceManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/content/ContentSourceManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.content;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.ejb.TransactionTimeout;
+import org.jboss.util.StringPropertyReplacer;
+import org.rhq.core.clientapi.server.plugin.content.ContentSourcePackageDetails;
+import org.rhq.core.clientapi.server.plugin.content.ContentSourcePackageDetailsKey;
+import org.rhq.core.clientapi.server.plugin.content.PackageSyncReport;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.configuration.Configuration;
+import org.rhq.core.domain.content.Architecture;
+import org.rhq.core.domain.content.Channel;
+import org.rhq.core.domain.content.ChannelContentSource;
+import org.rhq.core.domain.content.ChannelPackageVersion;
+import org.rhq.core.domain.content.ContentSource;
+import org.rhq.core.domain.content.ContentSourceSyncResults;
+import org.rhq.core.domain.content.ContentSourceSyncStatus;
+import org.rhq.core.domain.content.ContentSourceType;
+import org.rhq.core.domain.content.DownloadMode;
+import org.rhq.core.domain.content.Package;
+import org.rhq.core.domain.content.PackageBits;
+import org.rhq.core.domain.content.PackageDetailsKey;
+import org.rhq.core.domain.content.PackageType;
+import org.rhq.core.domain.content.PackageVersion;
+import org.rhq.core.domain.content.PackageVersionContentSource;
+import org.rhq.core.domain.content.PackageVersionContentSourcePK;
+import org.rhq.core.domain.content.ProductVersionPackageVersion;
+import org.rhq.core.domain.content.composite.LoadedPackageBitsComposite;
+import org.rhq.core.domain.content.composite.PackageVersionFile;
+import org.rhq.core.domain.resource.ProductVersion;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.MD5Generator;
+import org.rhq.core.util.exception.ThrowableUtil;
+import org.rhq.core.util.stream.StreamUtil;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.content.ContentManagerHelper;
+import org.rhq.enterprise.server.content.ContentManagerLocal;
+import org.rhq.enterprise.server.content.ContentSourceException;
+import org.rhq.enterprise.server.content.ContentSourceManagerLocal;
+import org.rhq.enterprise.server.content.ContentSourceManagerRemote;
+import org.rhq.enterprise.server.plugin.content.ContentSourceAdapterManager;
+import org.rhq.enterprise.server.plugin.content.ContentSourcePluginContainer;
+import org.rhq.enterprise.server.resource.ProductVersionManagerLocal;
+
+@Stateless
+public class ContentSourceManagerBean implements ContentSourceManagerLocal, ContentSourceManagerRemote {
+   private final Log log = LogFactory.getLog(ContentSourceManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;,
+      mappedName = &quot;java:/RHQDS&quot;
+   )
+   private DataSource dataSource;
+   @EJB
+   private ContentSourceManagerLocal contentSourceManager;
+   @EJB
+   private ContentManagerLocal contentManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private ProductVersionManagerLocal productVersionManager;
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void purgeOrphanedPackageVersions(Subject subject) {
+      Query q = this.entityManager.createNamedQuery(&quot;PackageVersion.findOrphanedExtraProps&quot;);
+      List pvs = q.getResultList();
+      Iterator pvFiles = pvs.iterator();
+
+      while(pvFiles.hasNext()) {
+         PackageVersion count = (PackageVersion)pvFiles.next();
+         this.entityManager.remove(count.getExtraProperties());
+         count.setExtraProperties((Configuration)null);
+      }
+
+      q = this.entityManager.createNamedQuery(&quot;PackageVersion.findOrphanedFiles&quot;);
+      List pvFiles1 = q.getResultList();
+      this.entityManager.flush();
+      this.entityManager.clear();
+      this.entityManager.createNamedQuery(&quot;PackageVersion.deletePVPVIfNoContentSourcesOrChannels&quot;).executeUpdate();
+      int count1 = this.entityManager.createNamedQuery(&quot;PackageVersion.deleteIfNoContentSourcesOrChannels&quot;).executeUpdate();
+      this.entityManager.createNamedQuery(&quot;PackageBits.deleteIfNoPackageVersion&quot;).executeUpdate();
+      this.entityManager.flush();
+      this.entityManager.clear();
+      Iterator i$ = pvFiles1.iterator();
+
+      while(i$.hasNext()) {
+         PackageVersionFile pvFile = (PackageVersionFile)i$.next();
+
+         try {
+            File e = this.getPackageBitsLocalFilesystemFile(pvFile.getPackageVersionId(), pvFile.getFileName());
+            if(e.exists()) {
+               e.delete();
+            }
+         } catch (Exception var9) {
+            this.log.warn(&quot;Cannot purge orphaned package version file [&quot; + pvFile.getFileName() + &quot;] (&quot; + pvFile.getPackageVersionId() + &quot;)&quot;);
+         }
+      }
+
+      this.log.info(&quot;User [&quot; + subject + &quot;] purged [&quot; + count1 + &quot;] orphaned package versions&quot;);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void deleteContentSource(Subject subject, int contentSourceId) {
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is deleting content source [&quot; + contentSourceId + &quot;]&quot;);
+      this.entityManager.flush();
+      this.entityManager.clear();
+      this.entityManager.createNamedQuery(&quot;ChannelContentSource.deleteByContentSourceId&quot;).setParameter(&quot;contentSourceId&quot;, Integer.valueOf(contentSourceId)).executeUpdate();
+      this.entityManager.createNamedQuery(&quot;PackageVersionContentSource.deleteByContentSourceId&quot;).setParameter(&quot;contentSourceId&quot;, Integer.valueOf(contentSourceId)).executeUpdate();
+      ContentSource cs = (ContentSource)this.entityManager.find(ContentSource.class, Integer.valueOf(contentSourceId));
+      if(cs != null) {
+         if(cs.getConfiguration() != null) {
+            this.entityManager.remove(cs.getConfiguration());
+         }
+
+         this.entityManager.remove(cs);
+         this.log.debug(&quot;User [&quot; + subject + &quot;] deleted content source [&quot; + cs + &quot;]&quot;);
+
+         try {
+            ContentSourcePluginContainer e = ContentManagerHelper.getPluginContainer();
+            e.unscheduleSyncJob(cs);
+            e.getAdapterManager().shutdownAdapter(cs);
+         } catch (Exception var5) {
+            this.log.warn(&quot;Failed to shutdown adapter for [&quot; + cs + &quot;]&quot;, var5);
+         }
+      } else {
+         this.log.debug(&quot;Content Source ID [&quot; + contentSourceId + &quot;] doesn\'t exist - nothing to delete&quot;);
+      }
+
+      this.purgeOrphanedPackageVersions(subject);
+   }
+
+   public Set getAllContentSourceTypes() {
+      Query q = this.entityManager.createNamedQuery(&quot;ContentSourceType.findAll&quot;);
+      List resultList = q.getResultList();
+      return new HashSet(resultList);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getAllContentSources(Subject subject, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;cs.name&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ContentSource.findAllWithConfig&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ContentSource.findAll&quot;);
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getAvailableContentSourcesForChannel(Subject subject, Integer channelId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;cs.name&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ContentSource.findAvailableByChannelId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ContentSource.findAvailableByChannelId&quot;);
+      query.setParameter(&quot;channelId&quot;, channelId);
+      countQuery.setParameter(&quot;channelId&quot;, channelId);
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   public ContentSourceType getContentSourceType(String name) {
+      Query q = this.entityManager.createNamedQuery(&quot;ContentSourceType.findByNameWithConfigDef&quot;);
+      q.setParameter(&quot;name&quot;, name);
+      ContentSourceType type = (ContentSourceType)q.getSingleResult();
+      return type;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ContentSource getContentSource(Subject subject, int contentSourceId) {
+      Query q = this.entityManager.createNamedQuery(&quot;ContentSource.findByIdWithConfig&quot;);
+      q.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      ContentSource contentSource = null;
+
+      try {
+         contentSource = (ContentSource)q.getSingleResult();
+      } catch (NoResultException var6) {
+         ;
+      }
+
+      return contentSource;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ContentSource getContentSourceByNameAndType(Subject subject, String name, String typeName) {
+      Query q = this.entityManager.createNamedQuery(&quot;ContentSource.findByNameAndTypeName&quot;);
+      q.setParameter(&quot;name&quot;, name);
+      q.setParameter(&quot;typeName&quot;, typeName);
+      ContentSource cs = null;
+
+      try {
+         cs = (ContentSource)q.getSingleResult();
+      } catch (NoResultException var7) {
+         ;
+      }
+
+      return cs;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getAssociatedChannels(Subject subject, int contentSourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;c.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Channel.findByContentSourceId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Channel.findByContentSourceId&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      countQuery.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getContentSourceSyncResults(Subject subject, int contentSourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;cssr.startTime&quot;, PageOrdering.DESC);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ContentSourceSyncResults.getAllByCSId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ContentSourceSyncResults.getAllByCSId&quot;);
+      query.setParameter(&quot;contentSourceId&quot;, Integer.valueOf(contentSourceId));
+      countQuery.setParameter(&quot;contentSourceId&quot;, Integer.valueOf(contentSourceId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void deleteContentSourceSyncResults(Subject subject, int[] ids) {
+      if(ids != null) {
+         int[] arr$ = ids;
+         int len$ = ids.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            int id = arr$[i$];
+            ContentSourceSyncResults doomed = (ContentSourceSyncResults)this.entityManager.getReference(ContentSourceSyncResults.class, Integer.valueOf(id));
+            this.entityManager.remove(doomed);
+         }
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ContentSource createContentSource(Subject subject, String name, String description, String typeName, Configuration configuration, boolean lazyLoad, DownloadMode downloadMode) throws ContentSourceException {
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is creating a content source [&quot; + name + &quot;] of type [&quot; + typeName + &quot;]&quot;);
+      Query q = this.entityManager.createNamedQuery(&quot;ContentSourceType.findByName&quot;);
+      q.setParameter(&quot;name&quot;, typeName);
+      ContentSourceType type = (ContentSourceType)q.getSingleResult();
+      if(downloadMode == null) {
+         downloadMode = type.getDefaultDownloadMode();
+      }
+
+      ContentSource source = new ContentSource(name, type);
+      source.setDescription(description);
+      source.setConfiguration(configuration);
+      source.setLazyLoad(lazyLoad);
+      source.setDownloadMode(downloadMode);
+      this.validateContentSource(source);
+      source = this.createContentSource(subject, source);
+      return source;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ContentSource createContentSource(Subject subject, ContentSource contentSource) throws ContentSourceException {
+      this.validateContentSource(contentSource);
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is creating content source [&quot; + contentSource + &quot;]&quot;);
+      contentSource.setSyncResults((List)null);
+      this.entityManager.persist(contentSource);
+      this.log.debug(&quot;User [&quot; + subject + &quot;] created content source [&quot; + contentSource + &quot;]&quot;);
+
+      try {
+         ContentSourcePluginContainer e = ContentManagerHelper.getPluginContainer();
+         e.getAdapterManager().startAdapter(contentSource);
+         e.scheduleSyncJob(contentSource);
+      } catch (Exception var4) {
+         this.log.warn(&quot;Failed to start adapter for [&quot; + contentSource + &quot;]&quot;, var4);
+      }
+
+      return contentSource;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public ContentSource updateContentSource(Subject subject, ContentSource contentSource) throws ContentSourceException {
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is updating content source [&quot; + contentSource + &quot;]&quot;);
+      ContentSource loaded = (ContentSource)this.entityManager.find(ContentSource.class, Integer.valueOf(contentSource.getId()));
+      if(contentSource.getConfiguration() == null &amp;&amp; loaded.getConfiguration() != null) {
+         this.entityManager.remove(loaded.getConfiguration());
+      }
+
+      ContentSourcePluginContainer e;
+      if(!loaded.getName().equals(contentSource.getName())) {
+         this.log.info(&quot;Content source [&quot; + loaded.getName() + &quot;] is being renamed to [&quot; + contentSource.getName() + &quot;].  Will now unschedule the old sync job&quot;);
+
+         try {
+            e = ContentManagerHelper.getPluginContainer();
+            e.unscheduleSyncJob(loaded);
+         } catch (Exception var6) {
+            this.log.warn(&quot;Failed to unschedule obsolete content source sync job for [&quot; + loaded + &quot;]&quot;, var6);
+         }
+      }
+
+      contentSource = (ContentSource)this.entityManager.merge(contentSource);
+      this.log.debug(&quot;User [&quot; + subject + &quot;] updated content source [&quot; + contentSource + &quot;]&quot;);
+
+      try {
+         e = ContentManagerHelper.getPluginContainer();
+         e.unscheduleSyncJob(contentSource);
+         e.getAdapterManager().restartAdapter(contentSource);
+         e.scheduleSyncJob(contentSource);
+         e.syncNow(contentSource);
+      } catch (Exception var5) {
+         this.log.warn(&quot;Failed to restart adapter for [&quot; + contentSource + &quot;]&quot;, var5);
+      }
+
+      return contentSource;
+   }
+
+   private void validateContentSource(ContentSource cs) throws ContentSourceException {
+      String name = cs.getName();
+      ContentSourceType type = cs.getContentSourceType();
+      if(name != null &amp;&amp; !name.trim().equals(&quot;&quot;)) {
+         Query q = this.entityManager.createNamedQuery(&quot;ContentSource.findByNameAndTypeName&quot;);
+         q.setParameter(&quot;name&quot;, name);
+         q.setParameter(&quot;typeName&quot;, type.getName());
+         List existingMatchingContentSources = q.getResultList();
+         if(existingMatchingContentSources.size() &gt; 0) {
+            throw new ContentSourceException(&quot;Content source with name [&quot; + name + &quot;] and of type [&quot; + type.getName() + &quot;] already exists, please specify a different name.&quot;);
+         }
+      } else {
+         throw new ContentSourceException(&quot;ContentSource name attribute is required&quot;);
+      }
+   }
+
+   public boolean testContentSourceConnection(int contentSourceId) {
+      try {
+         ContentSourcePluginContainer e = ContentManagerHelper.getPluginContainer();
+         return e.getAdapterManager().testConnection(contentSourceId);
+      } catch (Exception var3) {
+         this.log.info(&quot;Failed to test connection to [&quot; + contentSourceId + &quot;]. Cause: &quot; + ThrowableUtil.getAllMessages(var3));
+         this.log.debug(&quot;Content source test connection failure stack follows for [&quot; + contentSourceId + &quot;]&quot;, var3);
+         return false;
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void synchronizeAndLoadContentSource(Subject subject, int contentSourceId) {
+      try {
+         ContentSourcePluginContainer e = ContentManagerHelper.getPluginContainer();
+         ContentSource contentSource = (ContentSource)this.entityManager.find(ContentSource.class, Integer.valueOf(contentSourceId));
+         if(contentSource != null) {
+            e.syncNow(contentSource);
+         } else {
+            this.log.warn(&quot;Asked to synchronize a non-existing content source [&quot; + contentSourceId + &quot;]&quot;);
+         }
+
+      } catch (Exception var5) {
+         throw new RuntimeException(&quot;Could not spawn the sync job for content source [&quot; + contentSourceId + &quot;]&quot;);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getPackageVersionsFromContentSource(Subject subject, int contentSourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;pvcs.contentSource.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PackageVersionContentSource.findByContentSourceId&quot;, pc);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      List results = query.getResultList();
+      long count = this.getPackageVersionCountFromContentSource(subject, contentSourceId);
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public long getPackageVersionCountFromContentSource(Subject subject, int contentSourceId) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PackageVersionContentSource.findByContentSourceIdCount&quot;);
+      countQuery.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      Long count = (Long)countQuery.getSingleResult();
+      return count.longValue();
+   }
+
+   public long getPackageBitsLength(int resourceId, PackageDetailsKey packageDetailsKey) {
+      Query q = this.entityManager.createNamedQuery(&quot;PackageVersion.getPkgBitsLengthByPkgDetailsAndResId&quot;);
+      q.setParameter(&quot;packageName&quot;, packageDetailsKey.getName());
+      q.setParameter(&quot;packageTypeName&quot;, packageDetailsKey.getPackageTypeName());
+      q.setParameter(&quot;version&quot;, packageDetailsKey.getVersion());
+      q.setParameter(&quot;architectureName&quot;, packageDetailsKey.getArchitectureName());
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      Long count = (Long)q.getSingleResult();
+      return count.longValue();
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getPackageVersionsFromContentSources(Subject subject, int[] contentSourceIds, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;pvcs.contentSource.id&quot;);
+      ArrayList idList = new ArrayList(contentSourceIds.length);
+      int[] query = contentSourceIds;
+      int countQuery = contentSourceIds.length;
+
+      for(int results = 0; results &lt; countQuery; ++results) {
+         Integer count = Integer.valueOf(query[results]);
+         idList.add(count);
+      }
+
+      Query var10 = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PackageVersionContentSource.findByAllContentSourceIds&quot;, pc);
+      Query var11 = PersistenceUtility.createCountQuery(this.entityManager, &quot;PackageVersionContentSource.findByAllContentSourceIdsCount&quot;);
+      var10.setParameter(&quot;ids&quot;, idList);
+      var11.setParameter(&quot;ids&quot;, idList);
+      List var12 = var10.getResultList();
+      long var13 = ((Long)var11.getSingleResult()).longValue();
+      return new PageList(var12, (int)var13, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList getUnloadedPackageVersionsFromContentSource(Subject subject, int contentSourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;pvcs.contentSource.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PackageVersionContentSource.findByCSIdAndNotLoaded&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PackageVersionContentSource.findByCSIdAndNotLoadedCount&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      countQuery.setParameter(&quot;id&quot;, Integer.valueOf(contentSourceId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(2700)
+   public PackageBits downloadPackageBits(Subject subject, PackageVersionContentSource pvcs) {
+      PackageVersionContentSourcePK pk = pvcs.getPackageVersionContentSourcePK();
+      int contentSourceId = pk.getContentSource().getId();
+      int packageVersionId = pk.getPackageVersion().getId();
+      String packageVersionLocation = pvcs.getLocation();
+      switch(ContentSourceManagerBean.SyntheticClass_1.$SwitchMap$org$rhq$core$domain$content$DownloadMode[pk.getContentSource().getDownloadMode().ordinal()]) {
+      case 1:
+         return null;
+      case 2:
+         this.log.debug(&quot;Downloading package bits to DB for package located at [&quot; + packageVersionLocation + &quot;] on content source [&quot; + contentSourceId + &quot;]&quot;);
+         break;
+      case 3:
+         this.log.debug(&quot;Downloading package bits to filesystem for package located at [&quot; + packageVersionLocation + &quot;] on content source [&quot; + contentSourceId + &quot;]&quot;);
+         break;
+      default:
+         throw new IllegalStateException(&quot; Unknown download mode - this is a bug, please report it: &quot; + pvcs);
+      }
+
+      InputStream bitsStream = null;
+      PackageBits packageBits = null;
+
+      try {
+         ContentSourcePluginContainer t = ContentManagerHelper.getPluginContainer();
+         bitsStream = t.getAdapterManager().loadPackageBits(contentSourceId, packageVersionLocation);
+         Connection conn = null;
+         PreparedStatement ps = null;
+
+         try {
+            packageBits = new PackageBits();
+            this.entityManager.persist(packageBits);
+            PackageVersion pv = (PackageVersion)this.entityManager.find(PackageVersion.class, Integer.valueOf(packageVersionId));
+            pv.setPackageBits(packageBits);
+            this.entityManager.flush();
+            if(pk.getContentSource().getDownloadMode() == DownloadMode.DATABASE) {
+               conn = this.dataSource.getConnection();
+               ps = conn.prepareStatement(&quot;UPDATE RHQ_PACKAGE_BITS SET BITS = ? WHERE ID = ?&quot;);
+               ps.setBinaryStream(1, bitsStream, pv.getFileSize().intValue());
+               ps.setInt(2, packageBits.getId());
+               if(ps.executeUpdate() != 1) {
+                  throw new Exception(&quot;Did not download the package bits to the DB for [&quot; + pv + &quot;]&quot;);
+               }
+            } else {
+               File outputFile = this.getPackageBitsLocalFilesystemFile(pv.getId(), pv.getFileName());
+               if(outputFile.exists()) {
+                  String expectedMD5 = pv.getMD5() != null?pv.getMD5():&quot;&lt;unspecified MD5&gt;&quot;;
+                  String actualMD5 = MD5Generator.getDigestString(outputFile);
+                  if(!expectedMD5.trim().toLowerCase().equals(actualMD5.toLowerCase())) {
+                     throw new Exception(&quot;Already have package bits for [&quot; + pv + &quot;] located at [&quot; + outputFile + &quot;] but the MD5 hashcodes do not match. Expected MD5=[&quot; + expectedMD5 + &quot;], Actual MD5=[&quot; + actualMD5 + &quot;]&quot;);
+                  }
+
+                  this.log.info(&quot;Asked to download package bits but we already have it at [&quot; + outputFile + &quot;] with matching MD5 of [&quot; + actualMD5 + &quot;]&quot;);
+               } else {
+                  StreamUtil.copy(bitsStream, new FileOutputStream(outputFile), true);
+                  bitsStream = null;
+               }
+            }
+         } finally {
+            if(ps != null) {
+               try {
+                  ps.close();
+               } catch (Exception var41) {
+                  this.log.warn(&quot;Failed to close prepared statement for package bits [&quot; + packageVersionLocation + &quot;] on content source [&quot; + contentSourceId + &quot;]&quot;);
+               }
+            }
+
+            if(conn != null) {
+               try {
+                  conn.close();
+               } catch (Exception var40) {
+                  this.log.warn(&quot;Failed to close connection for package bits [&quot; + packageVersionLocation + &quot;] on content source [&quot; + contentSourceId + &quot;]&quot;);
+               }
+            }
+
+         }
+      } catch (Throwable var43) {
+         throw new RuntimeException(&quot;Did not download the package bits for [&quot; + pvcs + &quot;]. Cause: &quot; + ThrowableUtil.getAllMessages(var43), var43);
+      } finally {
+         if(bitsStream != null) {
+            try {
+               bitsStream.close();
+            } catch (Exception var39) {
+               this.log.warn(&quot;Failed to close stream to package bits located at [&quot; + packageVersionLocation + &quot;] on content source [&quot; + contentSourceId + &quot;]&quot;);
+            }
+         }
+
+      }
+
+      return packageBits;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.NEVER)
+   public boolean internalSynchronizeContentSource(int contentSourceId) throws Exception {
+      ContentSourcePluginContainer pc = ContentManagerHelper.getPluginContainer();
+      return pc.getAdapterManager().synchronizeContentSource(contentSourceId);
+   }
+
+   public ContentSourceSyncResults persistContentSourceSyncResults(ContentSourceSyncResults results) {
+      Query q = this.entityManager.createNamedQuery(&quot;ContentSourceSyncResults.getInProgressByCSId&quot;);
+      q.setParameter(&quot;contentSourceId&quot;, Integer.valueOf(results.getContentSource().getId()));
+      List inprogressList = q.getResultList();
+      boolean alreadyInProgress = false;
+      if(inprogressList.size() &gt; 0) {
+         if(results.getStatus() == ContentSourceSyncStatus.INPROGRESS &amp;&amp; System.currentTimeMillis() - ((ContentSourceSyncResults)inprogressList.get(0)).getStartTime() &lt; 86400000L) {
+            alreadyInProgress = true;
+            inprogressList.remove(0);
+         }
+
+         Iterator persistedResults = inprogressList.iterator();
+
+         while(persistedResults.hasNext()) {
+            ContentSourceSyncResults inprogress = (ContentSourceSyncResults)persistedResults.next();
+            inprogress.setStatus(ContentSourceSyncStatus.FAILURE);
+            inprogress.setEndTime(Long.valueOf(System.currentTimeMillis()));
+            inprogress.setResults(&quot;This synchronization seems to have stalled or ended abnormally.&quot;);
+         }
+      }
+
+      ContentSourceSyncResults persistedResults1 = null;
+      if(!alreadyInProgress) {
+         this.entityManager.persist(results);
+         persistedResults1 = results;
+      }
+
+      return persistedResults1;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public ContentSourceSyncResults mergeContentSourceSyncResults(ContentSourceSyncResults results) {
+      return (ContentSourceSyncResults)this.entityManager.merge(results);
+   }
+
+   public ContentSourceSyncResults getContentSourceSyncResults(int resultsId) {
+      return (ContentSourceSyncResults)this.entityManager.find(ContentSourceSyncResults.class, Integer.valueOf(resultsId));
+   }
+
+   @TransactionAttribute(TransactionAttributeType.SUPPORTS)
+   public ContentSourceSyncResults mergeContentSourceSyncReport(ContentSource contentSource, PackageSyncReport report, Map previous, ContentSourceSyncResults syncResults) {
+      try {
+         StringBuilder t = new StringBuilder();
+         if(syncResults.getResults() != null) {
+            t.append(syncResults.getResults());
+         }
+
+         syncResults = this.contentSourceManager._mergeContentSourceSyncReportREMOVE(contentSource, report, previous, syncResults, t);
+         ArrayList errorMsg1 = new ArrayList(report.getNewPackages());
+         short chunkSize = 200;
+         int fromIndex = 0;
+         int toIndex = chunkSize;
+         int newPackageCount = errorMsg1.size();
+         int addedCount = 0;
+         t.append(new Date()).append(&quot;: &quot;).append(&quot;Adding&quot;);
+         syncResults.setResults(t.toString());
+
+         for(syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults); fromIndex &lt; newPackageCount; toIndex += chunkSize) {
+            if(toIndex &gt; newPackageCount) {
+               toIndex = newPackageCount;
+            }
+
+            List pkgs = errorMsg1.subList(fromIndex, toIndex);
+            syncResults = this.contentSourceManager._mergeContentSourceSyncReportADD(contentSource, pkgs, previous, syncResults, t, fromIndex);
+            addedCount += pkgs.size();
+            fromIndex += chunkSize;
+         }
+
+         t.append(&quot;...&quot;).append(addedCount).append('\n');
+         syncResults.setResults(t.toString());
+         syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+         syncResults = this.contentSourceManager._mergeContentSourceSyncReportUPDATE(contentSource, report, previous, syncResults, t);
+         if(report.getNewPackages().size() &gt; 0 || report.getUpdatedPackages().size() &gt; 0 || report.getDeletedPackages().size() &gt; 0) {
+            this.contentSourceManager._mergeContentSourceSyncReportUpdateChannel(contentSource.getId());
+         }
+
+         t.append(new Date()).append(&quot;: &quot;).append(&quot;MERGE COMPLETE.\n&quot;);
+         syncResults.setResults(t.toString());
+         syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+         return syncResults;
+      } catch (Throwable var13) {
+         String errorMsg = &quot;Could not process sync report from [&quot; + contentSource + &quot;]. Cause: &quot; + ThrowableUtil.getAllMessages(var13);
+         this.log.error(errorMsg);
+         throw new RuntimeException(errorMsg, var13);
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void _mergeContentSourceSyncReportUpdateChannel(int contentSourceId) {
+      long now = System.currentTimeMillis();
+      ContentSource contentSource = (ContentSource)this.entityManager.find(ContentSource.class, Integer.valueOf(contentSourceId));
+      Set ccss = contentSource.getChannelContentSources();
+      Iterator i$ = ccss.iterator();
+
+      while(i$.hasNext()) {
+         ChannelContentSource ccs = (ChannelContentSource)i$.next();
+         ccs.getChannelContentSourcePK().getChannel().setLastModifiedDate(now);
+      }
+
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public ContentSourceSyncResults _mergeContentSourceSyncReportREMOVE(ContentSource contentSource, PackageSyncReport report, Map previous, ContentSourceSyncResults syncResults, StringBuilder progress) {
+      progress.append(new Date()).append(&quot;: &quot;).append(&quot;Removing&quot;);
+      syncResults.setResults(progress.toString());
+      syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+      int flushCount = 0;
+      int removeCount = 0;
+      Iterator i$ = report.getDeletedPackages().iterator();
+
+      while(i$.hasNext()) {
+         ContentSourcePackageDetails doomedDetails = (ContentSourcePackageDetails)i$.next();
+         ContentSourcePackageDetailsKey doomedDetailsKey = doomedDetails.getContentSourcePackageDetailsKey();
+         PackageVersionContentSource doomedPvcs = (PackageVersionContentSource)previous.get(doomedDetailsKey);
+         doomedPvcs = (PackageVersionContentSource)this.entityManager.find(PackageVersionContentSource.class, doomedPvcs.getPackageVersionContentSourcePK());
+         if(doomedPvcs != null) {
+            this.entityManager.remove(doomedPvcs);
+         }
+
+         PackageVersion doomedPv = doomedPvcs.getPackageVersionContentSourcePK().getPackageVersion();
+         Query q = this.entityManager.createNamedQuery(&quot;PackageVersion.findByIdIfNoContentSourcesOrChannels&quot;);
+         q.setParameter(&quot;id&quot;, Integer.valueOf(doomedPv.getId()));
+
+         try {
+            doomedPv = (PackageVersion)q.getSingleResult();
+            this.entityManager.remove(doomedPv);
+         } catch (NoResultException var15) {
+            ;
+         }
+
+         ++flushCount;
+         if(flushCount % 200 == 0) {
+            this.entityManager.flush();
+            this.entityManager.clear();
+         }
+
+         ++removeCount;
+         if(removeCount % 200 == 0) {
+            progress.append(&quot;...&quot;).append(removeCount);
+            syncResults.setResults(progress.toString());
+            syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+         }
+      }
+
+      progress.append(&quot;...&quot;).append(removeCount).append('\n');
+      syncResults.setResults(progress.toString());
+      syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+      return syncResults;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public ContentSourceSyncResults _mergeContentSourceSyncReportADD(ContentSource contentSource, Collection newPackages, Map previous, ContentSourceSyncResults syncResults, StringBuilder progress, int addCount) {
+      int flushCount = 0;
+      HashMap knownResourceTypes = new HashMap();
+      HashMap knownPackageTypes = new HashMap();
+      HashMap knownArchitectures = new HashMap();
+      List associatedChannels = null;
+      HashMap knownProductVersions = new HashMap();
+      Iterator i$ = newPackages.iterator();
+
+      while(true) {
+         Query q;
+         ContentSourcePackageDetails newDetails;
+         ResourceType rt;
+         PackageType pt;
+         while(true) {
+            ContentSourcePackageDetailsKey key;
+            while(true) {
+               if(!i$.hasNext()) {
+                  return syncResults;
+               }
+
+               newDetails = (ContentSourcePackageDetails)i$.next();
+               key = newDetails.getContentSourcePackageDetailsKey();
+               rt = new ResourceType();
+               rt.setName(key.getResourceTypeName());
+               rt.setPlugin(key.getResourceTypePluginName());
+               if(knownResourceTypes.containsKey(rt)) {
+                  rt = (ResourceType)knownResourceTypes.get(rt);
+                  break;
+               }
+
+               q = this.entityManager.createNamedQuery(&quot;ResourceType.findByNameAndPlugin&quot;);
+               q.setParameter(&quot;name&quot;, rt.getName());
+               q.setParameter(&quot;plugin&quot;, rt.getPlugin());
+
+               try {
+                  rt = (ResourceType)q.getSingleResult();
+                  knownResourceTypes.put(rt, rt);
+                  knownProductVersions.put(rt, new HashMap());
+                  break;
+               } catch (NoResultException var31) {
+                  this.log.warn(&quot;Content source adapter found a package for an unknown resource type [&quot; + key.getResourceTypeName() + &quot;|&quot; + key.getResourceTypePluginName() + &quot;] Skipping it.&quot;);
+               }
+            }
+
+            pt = new PackageType(key.getPackageTypeName(), rt);
+            if(knownPackageTypes.containsKey(pt)) {
+               pt = (PackageType)knownPackageTypes.get(pt);
+               break;
+            }
+
+            q = this.entityManager.createNamedQuery(&quot;PackageType.findByResourceTypeIdAndName&quot;);
+            q.setParameter(&quot;typeId&quot;, Integer.valueOf(rt.getId()));
+            q.setParameter(&quot;name&quot;, pt.getName());
+
+            try {
+               pt = (PackageType)q.getSingleResult();
+               pt.setResourceType(rt);
+               knownPackageTypes.put(pt, pt);
+               break;
+            } catch (NoResultException var32) {
+               this.log.warn(&quot;Content source adapter found a package of an unknown package type [&quot; + key.getPackageTypeName() + &quot;|&quot; + rt + &quot;] Skipping it.&quot;);
+            }
+         }
+
+         q = this.entityManager.createNamedQuery(&quot;Package.findByNamePkgTypeResourceType&quot;);
+         q.setParameter(&quot;name&quot;, newDetails.getName());
+         q.setParameter(&quot;packageTypeName&quot;, newDetails.getPackageTypeName());
+         q.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(rt.getId()));
+
+         Package pkg;
+         try {
+            pkg = (Package)q.getSingleResult();
+         } catch (NoResultException var30) {
+            pkg = new Package(newDetails.getName(), pt);
+            pkg.setClassification(newDetails.getClassification());
+            pkg = this.contentManager.persistOrMergePackageSafely(pkg);
+         }
+
+         Architecture arch = new Architecture(newDetails.getArchitectureName());
+         if(!knownArchitectures.containsKey(arch)) {
+            q = this.entityManager.createNamedQuery(&quot;Architecture.findByName&quot;);
+            q.setParameter(&quot;name&quot;, arch.getName());
+
+            try {
+               arch = (Architecture)q.getSingleResult();
+               knownArchitectures.put(arch, arch);
+            } catch (NoResultException var29) {
+               this.log.info(&quot;Content source adapter found a previously unknown architecture [&quot; + arch + &quot;] - it will be added to the list of known architectures&quot;);
+            }
+         } else {
+            arch = (Architecture)knownArchitectures.get(arch);
+         }
+
+         PackageVersion pv = new PackageVersion(pkg, newDetails.getVersion(), arch);
+         pv.setDisplayName(newDetails.getDisplayName());
+         pv.setDisplayVersion(newDetails.getDisplayVersion());
+         pv.setExtraProperties(newDetails.getExtraProperties());
+         pv.setFileCreatedDate(newDetails.getFileCreatedDate());
+         pv.setFileName(newDetails.getFileName());
+         pv.setFileSize(newDetails.getFileSize());
+         pv.setLicenseName(newDetails.getLicenseName());
+         pv.setLicenseVersion(newDetails.getLicenseVersion());
+         pv.setLongDescription(newDetails.getLongDescription());
+         pv.setMD5(newDetails.getMD5());
+         pv.setMetadata(newDetails.getMetadata());
+         pv.setSHA256(newDetails.getSHA256());
+         pv.setShortDescription(newDetails.getShortDescription());
+         q = this.entityManager.createNamedQuery(&quot;PackageVersion.findByPackageDetailsKey&quot;);
+         q.setParameter(&quot;packageName&quot;, newDetails.getName());
+         q.setParameter(&quot;packageTypeName&quot;, pt.getName());
+         q.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(rt.getId()));
+         q.setParameter(&quot;architectureName&quot;, arch.getName());
+         q.setParameter(&quot;version&quot;, newDetails.getVersion());
+
+         try {
+            PackageVersion resourceVersions = (PackageVersion)q.getSingleResult();
+            this.packageVersionAttributeCheck(resourceVersions, resourceVersions.getExtraProperties(), pv, pv.getExtraProperties(), &quot;ExtraProps&quot;);
+            this.packageVersionAttributeCheck(resourceVersions, resourceVersions.getFileSize(), pv, pv.getFileSize(), &quot;FileSize&quot;);
+            this.packageVersionAttributeCheck(resourceVersions, resourceVersions.getFileName(), pv, pv.getFileName(), &quot;FileName&quot;);
+            this.packageVersionAttributeCheck(resourceVersions, resourceVersions.getMD5(), pv, pv.getMD5(), &quot;MD5&quot;);
+            this.packageVersionAttributeCheck(resourceVersions, resourceVersions.getSHA256(), pv, pv.getSHA256(), &quot;SHA256&quot;);
+            pv = resourceVersions;
+         } catch (NoResultException var28) {
+            ;
+         }
+
+         pv = this.contentManager.persistOrMergePackageVersionSafely(pv);
+         Set var33 = newDetails.getResourceVersions();
+         Iterator i$1;
+         if(var33 != null) {
+            Map newPvcs = (Map)knownProductVersions.get(rt);
+            i$1 = var33.iterator();
+
+            while(i$1.hasNext()) {
+               String associatedChannel = (String)i$1.next();
+               ProductVersion mapping = (ProductVersion)newPvcs.get(associatedChannel);
+               if(mapping == null) {
+                  mapping = this.productVersionManager.addProductVersion(rt, associatedChannel);
+                  newPvcs.put(associatedChannel, mapping);
+               }
+
+               ProductVersionPackageVersion mapping1 = new ProductVersionPackageVersion(mapping, pv);
+               this.entityManager.merge(mapping1);
+            }
+         }
+
+         PackageVersionContentSource var34 = new PackageVersionContentSource(pv, contentSource, newDetails.getLocation());
+         var34 = (PackageVersionContentSource)this.entityManager.merge(var34);
+         if(associatedChannels == null) {
+            q = this.entityManager.createNamedQuery(&quot;Channel.findByContentSourceIdFetchCCS&quot;);
+            q.setParameter(&quot;id&quot;, Integer.valueOf(contentSource.getId()));
+            associatedChannels = q.getResultList();
+         }
+
+         i$1 = associatedChannels.iterator();
+
+         while(i$1.hasNext()) {
+            Channel var35 = (Channel)i$1.next();
+            ChannelPackageVersion var36 = new ChannelPackageVersion(var35, pv);
+            this.entityManager.merge(var36);
+         }
+
+         ++flushCount;
+         if(flushCount % 100 == 0) {
+            knownResourceTypes.clear();
+            knownPackageTypes.clear();
+            knownArchitectures.clear();
+            associatedChannels = null;
+            knownProductVersions.clear();
+            this.entityManager.flush();
+            this.entityManager.clear();
+         }
+
+         ++addCount;
+         if(addCount % 100 == 0) {
+            progress.append(&quot;...&quot;).append(addCount);
+            syncResults.setResults(progress.toString());
+            syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+         }
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public ContentSourceSyncResults _mergeContentSourceSyncReportUPDATE(ContentSource contentSource, PackageSyncReport report, Map previous, ContentSourceSyncResults syncResults, StringBuilder progress) {
+      progress.append(new Date()).append(&quot;: &quot;).append(&quot;Updating&quot;);
+      syncResults.setResults(progress.toString());
+      syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+      int flushCount = 0;
+      int updateCount = 0;
+      Iterator i$ = report.getUpdatedPackages().iterator();
+
+      while(i$.hasNext()) {
+         ContentSourcePackageDetails updatedDetails = (ContentSourcePackageDetails)i$.next();
+         ContentSourcePackageDetailsKey key = updatedDetails.getContentSourcePackageDetailsKey();
+         PackageVersionContentSource previousPvcs = (PackageVersionContentSource)previous.get(key);
+         PackageVersionContentSource attachedPvcs = (PackageVersionContentSource)this.entityManager.find(PackageVersionContentSource.class, previousPvcs.getPackageVersionContentSourcePK());
+         if(attachedPvcs == null) {
+            this.log.warn(&quot;Content source adapter reported that a non-existing package was updated, adding it [&quot; + key + &quot;]&quot;);
+            this.entityManager.persist(previousPvcs);
+            attachedPvcs = previousPvcs;
+         }
+
+         PackageVersion pv = previousPvcs.getPackageVersionContentSourcePK().getPackageVersion();
+         pv.setDisplayName(updatedDetails.getDisplayName());
+         pv.setDisplayVersion(updatedDetails.getDisplayVersion());
+         pv.setExtraProperties(updatedDetails.getExtraProperties());
+         pv.setFileCreatedDate(updatedDetails.getFileCreatedDate());
+         pv.setFileName(updatedDetails.getFileName());
+         pv.setFileSize(updatedDetails.getFileSize());
+         pv.setLicenseName(updatedDetails.getLicenseName());
+         pv.setLicenseVersion(updatedDetails.getLicenseVersion());
+         pv.setLongDescription(updatedDetails.getLongDescription());
+         pv.setMD5(updatedDetails.getMD5());
+         pv.setMetadata(updatedDetails.getMetadata());
+         pv.setSHA256(updatedDetails.getSHA256());
+         pv.setShortDescription(updatedDetails.getShortDescription());
+         this.contentManager.persistOrMergePackageVersionSafely(pv);
+         attachedPvcs.setLocation(updatedDetails.getLocation());
+         ++flushCount;
+         if(flushCount % 200 == 0) {
+            this.entityManager.flush();
+            this.entityManager.clear();
+         }
+
+         ++updateCount;
+         if(updateCount % 200 == 0) {
+            progress.append(&quot;...&quot;).append(updateCount);
+            syncResults.setResults(progress.toString());
+            syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+         }
+      }
+
+      progress.append(&quot;...&quot;).append(updateCount).append('\n');
+      syncResults.setResults(progress.toString());
+      syncResults = this.contentSourceManager.mergeContentSourceSyncResults(syncResults);
+      return syncResults;
+   }
+
+   public PageList getPackageVersionMetadata(int resourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;pv.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PackageVersion.findMetadataByResourceId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PackageVersion.findMetadataByResourceId&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      countQuery.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   public String getResourceSubscriptionMD5(int resourceId) {
+      MD5Generator md5Generator = new MD5Generator();
+      Query q = this.entityManager.createNamedQuery(&quot;Channel.findChannelsByResourceId&quot;);
+      q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List channels = q.getResultList();
+      Iterator digestString = channels.iterator();
+
+      while(digestString.hasNext()) {
+         Channel channel = (Channel)digestString.next();
+         long modifiedTimestamp = channel.getLastModifiedDate();
+         Date modifiedDate = new Date(modifiedTimestamp);
+         md5Generator.add(Integer.toString(modifiedDate.hashCode()).getBytes());
+      }
+
+      String digestString1 = md5Generator.getDigestString();
+      return digestString1;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(2700)
+   public long outputPackageVersionBitsGivenResource(int resourceId, PackageDetailsKey packageDetailsKey, OutputStream outputStream) {
+      return this.outputPackageVersionBitsRangeGivenResource(resourceId, packageDetailsKey, outputStream, 0L, -1L);
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(2700)
+   public long outputPackageBitsForChildResource(int parentResourceId, String resourceTypeName, PackageDetailsKey packageDetailsKey, OutputStream outputStream) {
+      org.rhq.core.domain.resource.Resource parentResource = (org.rhq.core.domain.resource.Resource)this.entityManager.find(org.rhq.core.domain.resource.Resource.class, Integer.valueOf(parentResourceId));
+      ResourceType parentResourceType = parentResource.getResourceType();
+      Query query = this.entityManager.createNamedQuery(&quot;ResourceType.findByParentAndName&quot;);
+      query.setParameter(&quot;parent&quot;, parentResourceType);
+      query.setParameter(&quot;name&quot;, resourceTypeName);
+      ResourceType childResourceType = (ResourceType)query.getSingleResult();
+      query = this.entityManager.createNamedQuery(&quot;PackageVersion.findByPackageDetailsKey&quot;);
+      query.setParameter(&quot;packageName&quot;, packageDetailsKey.getName());
+      query.setParameter(&quot;packageTypeName&quot;, packageDetailsKey.getPackageTypeName());
+      query.setParameter(&quot;architectureName&quot;, packageDetailsKey.getArchitectureName());
+      query.setParameter(&quot;version&quot;, packageDetailsKey.getVersion());
+      query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(childResourceType.getId()));
+      PackageVersion packageVersion = (PackageVersion)query.getSingleResult();
+      return this.outputPackageVersionBitsRangeHelper(parentResourceId, packageDetailsKey, outputStream, 0L, -1L, packageVersion.getId());
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(2700)
+   public long outputPackageVersionBitsRangeGivenResource(int resourceId, PackageDetailsKey packageDetailsKey, OutputStream outputStream, long startByte, long endByte) {
+      if(startByte &lt; 0L) {
+         throw new IllegalArgumentException(&quot;startByte[&quot; + startByte + &quot;] &lt; 0&quot;);
+      } else if(endByte &gt; -1L &amp;&amp; endByte &lt; startByte) {
+         throw new IllegalArgumentException(&quot;endByte[&quot; + endByte + &quot;] &lt; startByte[&quot; + startByte + &quot;]&quot;);
+      } else {
+         Query query = this.entityManager.createNamedQuery(&quot;PackageVersion.findIdByPackageDetailsKeyAndResId&quot;);
+         query.setParameter(&quot;packageName&quot;, packageDetailsKey.getName());
+         query.setParameter(&quot;packageTypeName&quot;, packageDetailsKey.getPackageTypeName());
+         query.setParameter(&quot;architectureName&quot;, packageDetailsKey.getArchitectureName());
+         query.setParameter(&quot;version&quot;, packageDetailsKey.getVersion());
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         int packageVersionId = ((Integer)query.getSingleResult()).intValue();
+         return this.outputPackageVersionBitsRangeHelper(resourceId, packageDetailsKey, outputStream, startByte, endByte, packageVersionId);
+      }
+   }
+
+   private long outputPackageVersionBitsRangeHelper(int resourceId, PackageDetailsKey packageDetailsKey, OutputStream outputStream, long startByte, long endByte, int packageVersionId) {
+      Query query = this.entityManager.createNamedQuery(&quot;PackageBits.isLoaded&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(packageVersionId));
+      LoadedPackageBitsComposite composite = (LoadedPackageBitsComposite)query.getSingleResult();
+      boolean packageBitsAreAvailable = composite.isPackageBitsAvailable();
+      if(packageBitsAreAvailable &amp;&amp; !composite.isPackageBitsInDatabase()) {
+         try {
+            File pvcs = this.getPackageBitsLocalFilesystemFile(composite.getPackageVersionId(), composite.getFileName());
+            if(!pvcs.exists()) {
+               this.log.warn(&quot;Package version [&quot; + packageDetailsKey + &quot;] has had its bits file [&quot; + pvcs + &quot;] deleted. Will attempt to download it again.&quot;);
+               packageBitsAreAvailable = false;
+            }
+         } catch (Exception var45) {
+            throw new RuntimeException(&quot;Package version [&quot; + packageDetailsKey + &quot;] has had its bits file deleted but cannot download it again.&quot;, var45);
+         }
+      }
+
+      PackageVersionContentSource pvcs1 = null;
+      if(!packageBitsAreAvailable) {
+         if(resourceId == -1) {
+            throw new IllegalStateException(&quot;Package bits must be inserted prior to the agent asking for them during a cotent-based resource creation&quot;);
+         }
+
+         Query conn = this.entityManager.createNamedQuery(&quot;PackageVersionContentSource.findByPkgVerIdAndResId&quot;);
+         conn.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         conn.setParameter(&quot;packageVersionId&quot;, Integer.valueOf(packageVersionId));
+         List ps = conn.getResultList();
+         if(ps.size() == 0) {
+            throw new RuntimeException(&quot;Resource [&quot; + resourceId + &quot;] cannot access package version [&quot; + packageDetailsKey + &quot;] - no content source exists to deliver it&quot;);
+         }
+
+         pvcs1 = (PackageVersionContentSource)ps.get(0);
+         PackageBits results = null;
+         results = this.contentSourceManager.downloadPackageBits(this.subjectManager.getOverlord(), pvcs1);
+         if(results != null) {
+            query.setParameter(&quot;id&quot;, Integer.valueOf(pvcs1.getPackageVersionContentSourcePK().getPackageVersion().getId()));
+            composite = (LoadedPackageBitsComposite)query.getSingleResult();
+            if(!composite.isPackageBitsAvailable()) {
+               throw new RuntimeException(&quot;Failed to download package bits [&quot; + packageDetailsKey + &quot;] for resource [&quot; + resourceId + &quot;]&quot;);
+            }
+         } else {
+            composite = null;
+         }
+      }
+
+      Connection conn1 = null;
+      PreparedStatement ps1 = null;
+      ResultSet results1 = null;
+      Object bitsStream = null;
+
+      long closeError2;
+      try {
+         if(composite == null) {
+            ContentSourcePluginContainer e = ContentManagerHelper.getPluginContainer();
+            ContentSourceAdapterManager adapterMgr = e.getAdapterManager();
+            int closeError = pvcs1.getPackageVersionContentSourcePK().getContentSource().getId();
+            bitsStream = adapterMgr.loadPackageBits(closeError, pvcs1.getLocation());
+         } else if(composite.isPackageBitsInDatabase()) {
+            conn1 = this.dataSource.getConnection();
+            ps1 = conn1.prepareStatement(&quot;SELECT BITS FROM RHQ_PACKAGE_BITS WHERE ID = ?&quot;);
+            ps1.setInt(1, composite.getPackageBitsId().intValue());
+            results1 = ps1.executeQuery();
+            results1.next();
+            bitsStream = results1.getBinaryStream(1);
+            if(bitsStream == null) {
+               throw new RuntimeException(&quot;Got null for package bits stream from DB for [&quot; + packageDetailsKey + &quot;]&quot;);
+            }
+         } else {
+            File e1 = this.getPackageBitsLocalFilesystemFile(composite.getPackageVersionId(), composite.getFileName());
+            if(!e1.exists()) {
+               throw new RuntimeException(&quot;Package bits at [&quot; + e1 + &quot;] are missing for [&quot; + packageDetailsKey + &quot;]&quot;);
+            }
+
+            bitsStream = new FileInputStream(e1);
+         }
+
+         long e2;
+         if(endByte &lt; 0L) {
+            if(startByte &gt; 0L) {
+               ((InputStream)bitsStream).skip(startByte);
+            }
+
+            e2 = StreamUtil.copy((InputStream)bitsStream, outputStream, false);
+         } else {
+            BufferedInputStream closeError1 = new BufferedInputStream((InputStream)bitsStream);
+            long length = endByte - startByte + 1L;
+            e2 = StreamUtil.copy(closeError1, outputStream, startByte, length);
+         }
+
+         try {
+            ((InputStream)bitsStream).close();
+         } catch (Exception var42) {
+            this.log.warn(&quot;Failed to close the bits stream&quot;, var42);
+         }
+
+         bitsStream = null;
+         this.log.debug(&quot;Retrieved and sent [&quot; + e2 + &quot;] bytes for [&quot; + packageDetailsKey + &quot;]&quot;);
+         closeError2 = e2;
+      } catch (SQLException var43) {
+         throw new RuntimeException(&quot;Did not download the package bits to the DB for [&quot; + packageDetailsKey + &quot;]&quot;, var43);
+      } catch (Exception var44) {
+         throw new RuntimeException(&quot;Could not stream package bits for [&quot; + packageDetailsKey + &quot;]&quot;, var44);
+      } finally {
+         if(bitsStream != null) {
+            try {
+               ((InputStream)bitsStream).close();
+            } catch (IOException var41) {
+               this.log.warn(&quot;Failed to close bits stream for: &quot; + packageDetailsKey);
+            }
+         }
+
+         if(results1 != null) {
+            try {
+               results1.close();
+            } catch (SQLException var40) {
+               this.log.warn(&quot;Failed to close result set from jdbc blob query for: &quot; + packageDetailsKey);
+            }
+         }
+
+         if(ps1 != null) {
+            try {
+               ps1.close();
+            } catch (SQLException var39) {
+               this.log.warn(&quot;Failed to close prepared statement from jdbc blob query for: &quot; + packageDetailsKey);
+            }
+         }
+
+         if(conn1 != null) {
+            try {
+               conn1.close();
+            } catch (SQLException var38) {
+               this.log.warn(&quot;Failed to close prepared statement from jdbc blob query for: &quot; + packageDetailsKey);
+            }
+         }
+
+      }
+
+      return closeError2;
+   }
+
+   private boolean packageVersionAttributeCheck(PackageVersion pv1, Object o1, PackageVersion pv2, Object o2, String logMsg) {
+      boolean same;
+      if(o1 == null) {
+         same = o2 == null;
+      } else {
+         same = o1.equals(o2);
+      }
+
+      if(!same) {
+         StringBuilder str = new StringBuilder();
+         str.append(&quot;A new package version has data that is different than a previous package version. &quot;);
+         str.append(&quot;The new package version data will take effect and overwrite the old version: &quot;);
+         str.append(logMsg);
+         str.append(&quot;: package-version1=[&quot;).append(pv1);
+         str.append(&quot;] value1=[&quot;).append(o1);
+         str.append(&quot;; package-version2=[&quot;).append(pv2);
+         str.append(&quot;] value2=[&quot;).append(o2);
+         str.append(&quot;]&quot;);
+         this.log.warn(str.toString());
+      }
+
+      return same;
+   }
+
+   private File getPackageBitsLocalFilesystemFile(int packageVersionId, String fileName) throws Exception {
+      String filesystemProperty = &quot;rhq.server.content.filesystem&quot;;
+      String filesystem = System.getProperty(&quot;rhq.server.content.filesystem&quot;);
+      if(filesystem == null) {
+         throw new IllegalStateException(&quot;Server is misconfigured - missing system property \'rhq.server.content.filesystem\'. Don\'t know where package bits are stored.&quot;);
+      } else {
+         filesystem = StringPropertyReplacer.replaceProperties(filesystem);
+         String idGroup = String.valueOf(packageVersionId / 2000);
+         StringBuilder bitsFileName = new StringBuilder();
+         bitsFileName.append(packageVersionId).append('-').append(fileName);
+         if(bitsFileName.length() &gt; 255) {
+            bitsFileName.setLength(255);
+         }
+
+         File parentDir = new File(filesystem, idGroup);
+         File packageBitsFile = new File(parentDir, bitsFileName.toString());
+         if(!parentDir.isDirectory()) {
+            if(!parentDir.exists()) {
+               parentDir.mkdirs();
+            }
+
+            if(!parentDir.isDirectory()) {
+               throw new Exception(&quot;Cannot create content filesystem directory [&quot; + parentDir + &quot;] for package bits storage.&quot;);
+            }
+         }
+
+         return packageBitsFile;
+      }
+   }
+
+   // $FF: synthetic class
+   static class SyntheticClass_1 {
+      // $FF: synthetic field
+      static final int[] $SwitchMap$org$rhq$core$domain$content$DownloadMode = new int[DownloadMode.values().length];
+
+      static {
+         try {
+            $SwitchMap$org$rhq$core$domain$content$DownloadMode[DownloadMode.NEVER.ordinal()] = 1;
+         } catch (NoSuchFieldError var3) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$core$domain$content$DownloadMode[DownloadMode.DATABASE.ordinal()] = 2;
+         } catch (NoSuchFieldError var2) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$core$domain$content$DownloadMode[DownloadMode.FILESYSTEM.ordinal()] = 3;
+         } catch (NoSuchFieldError var1) {
+            ;
+         }
+
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

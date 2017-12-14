@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pom.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4150272">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.4.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Base_Perspective_War.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4150272">
+                            rhq-enterprise-server-base-perspective-war-3.0.0.B04.war/WEB-INF/lib/rhq-enterprise-server-3.0.0.B04.jar/META-INF/maven/org.rhq/rhq-enterprise-server/pom.xml
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Maven XML</span>
+                            </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Maven POM (pom.xml)</em>
+<a title='View Rule: DiscoverMavenProjectsRuleProvider_1' href='windup_ruleproviders.html#DiscoverMavenProjectsRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Maven Project Object Model (POM) File</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+
+   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+   &lt;parent&gt;
+      &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+      &lt;artifactId&gt;rhq-parent&lt;/artifactId&gt;
+      &lt;version&gt;3.0.0.B04&lt;/version&gt;
+   &lt;/parent&gt;
+
+   &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+   &lt;artifactId&gt;rhq-enterprise-server&lt;/artifactId&gt;
+   &lt;packaging&gt;ejb&lt;/packaging&gt;
+
+   &lt;name&gt;RHQ Enterprise Server JAR&lt;/name&gt;
+   &lt;description&gt;RHQ enterprise server main JAR&lt;/description&gt;
+
+   &lt;scm&gt;
+      &lt;connection&gt;scm:git:ssh://git.fedorahosted.org/git/rhq.git/modules/enterprise/server/jar/&lt;/connection&gt;
+      &lt;developerConnection&gt;scm:git:ssh://git.fedorahosted.org/git/rhq.git/modules/enterprise/server/jar/&lt;/developerConnection&gt;
+   &lt;/scm&gt;
+
+   &lt;properties&gt;
+      &lt;scm.module.path&gt;modules/enterprise/server/jar/&lt;/scm.module.path&gt;
+      &lt;rhq.server.datasource&gt;java:/RHQDS&lt;/rhq.server.datasource&gt;
+      &lt;rhq.server.ds-mapping&gt;PostgreSQL&lt;/rhq.server.ds-mapping&gt;
+
+      &lt;!-- dependency versions --&gt;
+      &lt;jboss-embeddable-ejb3.version&gt;1.0.0.Alpha9&lt;/jboss-embeddable-ejb3.version&gt;
+   &lt;/properties&gt;
+
+   &lt;dependencies&gt;
+
+      &lt;!-- Internal Deps --&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+         &lt;artifactId&gt;rhq-enterprise-comm&lt;/artifactId&gt;
+         &lt;version&gt;${project.version}&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+         &lt;artifactId&gt;rhq-enterprise-server-xml-schemas&lt;/artifactId&gt;
+         &lt;version&gt;${project.version}&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+         &lt;artifactId&gt;rhq-core-domain&lt;/artifactId&gt;
+         &lt;version&gt;${project.version}&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by ear --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+         &lt;artifactId&gt;rhq-core-client-api&lt;/artifactId&gt;
+         &lt;version&gt;${project.version}&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+         &lt;artifactId&gt;rhq-core-dbutils&lt;/artifactId&gt;
+         &lt;version&gt;${project.version}&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.rhq&lt;/groupId&gt;
+         &lt;artifactId&gt;safe-invoker&lt;/artifactId&gt;
+         &lt;version&gt;${project.version}&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- 3rd Party Deps --&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;ant&lt;/groupId&gt;
+         &lt;artifactId&gt;ant&lt;/artifactId&gt;
+         &lt;version&gt;1.6.5&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Required by a couple APL and Lather classes - TODO: Remove this once APL and Lather have been excised. --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;commons-beanutils&lt;/groupId&gt;
+         &lt;artifactId&gt;commons-beanutils&lt;/artifactId&gt;
+         &lt;version&gt;1.6.1&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Required by a couple APL classes - TODO: Remove this once APL has been removed. --&gt;
+      &lt;!-- also required by EJB3 Embedded (test scope) --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;commons-collections&lt;/groupId&gt;
+         &lt;artifactId&gt;commons-collections&lt;/artifactId&gt;
+         &lt;version&gt;3.2&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;commons-httpclient&lt;/groupId&gt;
+         &lt;artifactId&gt;commons-httpclient&lt;/artifactId&gt;
+         &lt;version&gt;3.0.1&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Required by a couple APL classes - TODO: Remove this once APL has been removed. --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;commons-validator&lt;/groupId&gt;
+         &lt;artifactId&gt;commons-validator&lt;/artifactId&gt;
+         &lt;version&gt;1.1.4&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- required by RHQ server classes, as well as EJB3 Embedded --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;dom4j&lt;/groupId&gt;
+         &lt;artifactId&gt;dom4j&lt;/artifactId&gt;
+         &lt;version&gt;1.6.1-jboss&lt;/version&gt;
+         &lt;scope&gt;runtime&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;gnu-getopt&lt;/groupId&gt;
+         &lt;artifactId&gt;getopt&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;hibernate&lt;/groupId&gt;
+         &lt;artifactId&gt;hibernate3&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;hibernate-annotations&lt;/groupId&gt;
+         &lt;artifactId&gt;hibernate-annotations&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;javax.mail&lt;/groupId&gt;
+         &lt;artifactId&gt;mail&lt;/artifactId&gt;
+         &lt;version&gt;1.3.1&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;javax.persistence&lt;/groupId&gt;
+         &lt;artifactId&gt;persistence-api&lt;/artifactId&gt;
+         &lt;version&gt;1.0&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+         &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;
+         &lt;version&gt;2.4&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+         &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;
+         &lt;version&gt;2.0&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-annotations-ejb3&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-cache&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;compile&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-common&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-ejb3x&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-j2ee&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-jmx&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-system&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jbosssx&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;jbpm&lt;/artifactId&gt;
+         &lt;version&gt;3.1.1&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- for the transaction interrupt EJB3 interceptor --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.jboss.transaction&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-jta&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS --&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- TODO: remove this - tests should all be moved under the test source tree --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;junit&lt;/groupId&gt;
+         &lt;artifactId&gt;junit&lt;/artifactId&gt;
+         &lt;version&gt;3.8.1&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.opensymphony.quartz&lt;/groupId&gt;
+         &lt;artifactId&gt;quartz&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS itself, which the container build has packaged with 1.6.5 --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.opensymphony.quartz&lt;/groupId&gt;
+         &lt;artifactId&gt;quartz-oracle&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;provided&lt;/scope&gt; &lt;!-- by JBossAS itself, which the container build has packaged with 1.6.5 --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.easymock&lt;/groupId&gt;
+         &lt;artifactId&gt;easymockclassextension&lt;/artifactId&gt;
+         &lt;version&gt;2.2&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+         &lt;!-- somehow this is needed otherwise the hibernate stuff doesn't initialize in our tests --&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.snmp4j&lt;/groupId&gt;
+         &lt;artifactId&gt;snmp4j&lt;/artifactId&gt;
+         &lt;version&gt;1.8.2&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- required by RHQ server classes, as well as EJB3 Embedded --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;oswego-concurrent&lt;/groupId&gt;
+         &lt;artifactId&gt;concurrent&lt;/artifactId&gt;
+         &lt;version&gt;1.3.4&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- TODO: Why is this needed? --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;postgresql&lt;/groupId&gt;
+         &lt;artifactId&gt;postgresql&lt;/artifactId&gt;
+         &lt;!--&lt;scope&gt;test&lt;/scope&gt;--&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;rss4j&lt;/groupId&gt;
+         &lt;artifactId&gt;rss4j&lt;/artifactId&gt;
+         &lt;version&gt;0.92-on.2&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;tomcat&lt;/groupId&gt;
+         &lt;artifactId&gt;catalina&lt;/artifactId&gt;
+         &lt;version&gt;5.5.20&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;tomcat&lt;/groupId&gt;
+         &lt;artifactId&gt;tomcat-jk&lt;/artifactId&gt;
+         &lt;version&gt;4.1.31&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- Needed by com.jboss.jbossnetwork.apl.actions.xml.XPathProcessor; TODO: Remove once APL has been excised. --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;xalan&lt;/groupId&gt;
+         &lt;artifactId&gt;xalan&lt;/artifactId&gt;
+         &lt;version&gt;2.5.1&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!--================ Test Deps ================--&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss.jboss-embeddable-ejb3&lt;/groupId&gt;
+         &lt;artifactId&gt;jboss-ejb3-all&lt;/artifactId&gt;
+         &lt;version&gt;${jboss-embeddable-ejb3.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- NOTE: The remaining test deps correspond to the classes contained in hibernate-all.jar and thirdparty-all.jar. --&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;antlr&lt;/groupId&gt;
+         &lt;artifactId&gt;antlr&lt;/artifactId&gt;
+         &lt;version&gt;2.7.7&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      
+      &lt;dependency&gt;
+        &lt;groupId&gt;commons-lang&lt;/groupId&gt;
+         &lt;artifactId&gt;commons-lang&lt;/artifactId&gt;
+         &lt;version&gt;2.4&lt;/version&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;hibernate-entitymanager&lt;/groupId&gt;
+         &lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;jboss&lt;/groupId&gt;
+         &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+         &lt;!-- NOTE: The version is defined in the root POM's dependencyManagement section. --&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;trove&lt;/groupId&gt;
+         &lt;artifactId&gt;trove&lt;/artifactId&gt;
+         &lt;version&gt;1.0.2&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;dependency&gt;
+         &lt;groupId&gt;xerces&lt;/groupId&gt;
+         &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;
+         &lt;version&gt;2.8.1&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+       &lt;dependency&gt;
+          &lt;groupId&gt;${groupId}&lt;/groupId&gt;
+          &lt;artifactId&gt;test-utils&lt;/artifactId&gt;
+          &lt;version&gt;${version}&lt;/version&gt;
+       &lt;/dependency&gt;
+       
+       &lt;dependency&gt;
+          &lt;groupId&gt;org.antlr&lt;/groupId&gt;
+          &lt;artifactId&gt;antlr&lt;/artifactId&gt;
+          &lt;version&gt;3.2&lt;/version&gt;
+          
+       &lt;/dependency&gt;
+   &lt;/dependencies&gt;
+
+   &lt;build&gt;
+      &lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;
+
+      &lt;testResources&gt;
+         &lt;testResource&gt;
+            &lt;directory&gt;src/test/resources&lt;/directory&gt;
+            &lt;filtering&gt;true&lt;/filtering&gt;
+         &lt;/testResource&gt;
+      &lt;/testResources&gt;
+
+      &lt;plugins&gt;
+
+         &lt;plugin&gt;
+            &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
+            &lt;executions&gt;
+
+               &lt;execution&gt;
+                  &lt;phase&gt;process-classes&lt;/phase&gt;
+                  &lt;configuration&gt;
+                     &lt;tasks&gt;
+                        &lt;!-- generate the I18N resource bundles --&gt;
+                        &lt;taskdef name=&quot;i18n&quot; classpathref=&quot;maven.runtime.classpath&quot; classname=&quot;mazz.i18n.ant.I18NAntTask&quot; /&gt;
+
+                        &lt;i18n outputdir=&quot;${project.build.outputDirectory}&quot; defaultlocale=&quot;en&quot; verbose=&quot;false&quot; append=&quot;false&quot; verify=&quot;true&quot;&gt;
+                           &lt;classpath refid=&quot;maven.runtime.classpath&quot; /&gt;
+                           &lt;classfileset dir=&quot;${project.build.outputDirectory}&quot;&gt;
+                              &lt;include name=&quot;**/ServerI18NResourceKeys.class&quot; /&gt;
+                              &lt;include name=&quot;**/AlertI18NResourceKeys.class&quot; /&gt;
+                           &lt;/classfileset&gt;
+                        &lt;/i18n&gt;
+
+                        &lt;!-- create our rhq-server-version.properties file that goes in our jar --&gt;
+                        &lt;tstamp&gt;
+                           &lt;format property=&quot;build.time&quot; pattern=&quot;dd.MMM.yyyy HH.mm.ss z&quot; /&gt;
+                        &lt;/tstamp&gt;
+
+                        &lt;echo file=&quot;${project.build.outputDirectory}/rhq-server-version.properties&quot; append=&quot;false&quot;&gt;Product-Name=${rhq.product.name}
+                           Product-Version=${project.version}
+                           Module-Name=${pom.name}
+                           Module-Version=${pom.version}
+                           Build-Number=${buildNumber}
+                           Build-Date=${build.time}
+                           Build-Jdk-Vendor=${java.vendor}
+                           Build-Jdk=${java.version}
+                           Build-OS-Name=${os.name}
+                           Build-OS-Version=${os.version}
+                        &lt;/echo&gt;
+                     &lt;/tasks&gt;
+                  &lt;/configuration&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;run&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+            &lt;!-- Everything but the web service tests, this is the standard test execution --&gt;
+            &lt;configuration&gt;
+               &lt;excludes&gt;
+                  &lt;exclude&gt;com/**/*.java&lt;/exclude&gt;
+               &lt;/excludes&gt;
+               &lt;excludedGroups&gt;${rhq.testng.excludedGroups}&lt;/excludedGroups&gt;
+               &lt;systemProperties&gt;
+                  &lt;property&gt;
+                     &lt;name&gt;embeddedDeployment&lt;/name&gt;
+                     &lt;value&gt;true&lt;/value&gt;
+                  &lt;/property&gt;
+                  &lt;property&gt;
+                     &lt;name&gt;deploymentDirectory&lt;/name&gt;
+                     &lt;value&gt;target/classes&lt;/value&gt;
+                  &lt;/property&gt;
+                  &lt;property&gt;
+                     &lt;name&gt;hibernate.dialect&lt;/name&gt;
+                     &lt;value&gt;${rhq.test.ds.hibernate-dialect}&lt;/value&gt;
+                  &lt;/property&gt;
+               &lt;/systemProperties&gt;
+               &lt;additionalClasspathElements&gt;
+                  &lt;!-- The below is required for tests to run against Oracle. --&gt;
+                  &lt;additionalClasspathElement&gt;${settings.localRepository}/com/oracle/ojdbc5/${ojdbc5.version}/ojdbc5-${ojdbc5.version}.jar&lt;/additionalClasspathElement&gt;
+               &lt;/additionalClasspathElements&gt;
+            &lt;/configuration&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;groupId&gt;org.antlr&lt;/groupId&gt;
+            &lt;artifactId&gt;antlr3-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.2&lt;/version&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;phase&gt;generate-sources&lt;/phase&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;antlr&lt;/goal&gt;
+                  &lt;/goals&gt;
+                  &lt;configuration&gt;
+                     &lt;conversionTimeout&gt;30000&lt;/conversionTimeout&gt;
+                     &lt;debug&gt;false&lt;/debug&gt;
+                     &lt;dfa&gt;false&lt;/dfa&gt;
+                     &lt;nfa&gt;false&lt;/nfa&gt;
+                     &lt;excludes&gt;
+                        
+                     &lt;/excludes&gt;
+                     &lt;includes&gt;
+                        
+                     &lt;/includes&gt;
+                     &lt;libDirectory&gt;src/main/antlr3/imports&lt;/libDirectory&gt;
+                     &lt;messageFormat&gt;antlr&lt;/messageFormat&gt;
+                     &lt;outputDirectory&gt;target/generated-sources/antlr3&lt;/outputDirectory&gt;
+                     &lt;printGrammar&gt;false&lt;/printGrammar&gt;
+                     &lt;profile&gt;false&lt;/profile&gt;
+                     &lt;report&gt;false&lt;/report&gt;
+                     &lt;sourceDirectory&gt;src/main/antlr3&lt;/sourceDirectory&gt;
+                     &lt;trace&gt;false&lt;/trace&gt;
+                     &lt;verbose&gt;true&lt;/verbose&gt;
+                  &lt;/configuration&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+      &lt;/plugins&gt;
+   &lt;/build&gt;
+
+   &lt;profiles&gt;
+
+      &lt;profile&gt;
+         &lt;id&gt;dev&lt;/id&gt;
+
+         &lt;properties&gt;
+            &lt;rhq.rootDir&gt;../../../..&lt;/rhq.rootDir&gt;
+            &lt;rhq.containerDir&gt;${rhq.rootDir}/${rhq.defaultDevContainerPath}&lt;/rhq.containerDir&gt;
+            &lt;rhq.deploymentName&gt;${project.build.finalName}-ejb3.jar&lt;/rhq.deploymentName&gt;
+            &lt;rhq.deploymentDir&gt;${rhq.containerDir}/jbossas/server/default/deploy/${rhq.earName}/${rhq.deploymentName}&lt;/rhq.deploymentDir&gt;
+         &lt;/properties&gt;
+
+         &lt;build&gt;
+            &lt;plugins&gt;
+
+               &lt;plugin&gt;
+                  &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
+                  &lt;version&gt;1.1&lt;/version&gt;
+                  &lt;executions&gt;
+
+                     &lt;execution&gt;
+                        &lt;id&gt;deploy&lt;/id&gt;
+                        &lt;phase&gt;compile&lt;/phase&gt;
+                        &lt;configuration&gt;
+                           &lt;tasks&gt;
+                              &lt;property name=&quot;deployment.dir&quot; location=&quot;${rhq.deploymentDir}&quot; /&gt;
+                              &lt;echo&gt;*** Copying updated files from target/classes to ${deployment.dir}...&lt;/echo&gt;
+                              &lt;copy todir=&quot;${deployment.dir}&quot; verbose=&quot;${rhq.verbose}&quot;&gt;
+                                 &lt;fileset dir=&quot;target/classes&quot; /&gt;
+                              &lt;/copy&gt;
+                           &lt;/tasks&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;run&lt;/goal&gt;
+                        &lt;/goals&gt;
+                     &lt;/execution&gt;
+
+                     &lt;!--
+                        NOTE: The below execution is necessary to make sure the META-INF/MANIFEST.MF and
+                        META-INF/maven/** files, which get created by the ejb plugin during the package phase, get
+                        copied over to the deployment dir.
+                     --&gt;
+                     &lt;execution&gt;
+                        &lt;id&gt;deploy-jar-meta-inf&lt;/id&gt;
+                        &lt;phase&gt;package&lt;/phase&gt;
+                        &lt;configuration&gt;
+                           &lt;tasks&gt;
+                              &lt;unjar src=&quot;${project.build.directory}/${project.build.finalName}.jar&quot; dest=&quot;${rhq.deploymentDir}&quot; overwrite=&quot;false&quot;&gt;
+                                 &lt;patternset&gt;
+                                    &lt;include name=&quot;META-INF/**&quot; /&gt;
+                                 &lt;/patternset&gt;
+                              &lt;/unjar&gt;
+                           &lt;/tasks&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;run&lt;/goal&gt;
+                        &lt;/goals&gt;
+                     &lt;/execution&gt;
+
+                     &lt;execution&gt;
+                        &lt;id&gt;undeploy&lt;/id&gt;
+                        &lt;phase&gt;clean&lt;/phase&gt;
+                        &lt;configuration&gt;
+                           &lt;tasks&gt;
+                              &lt;property name=&quot;deployment.dir&quot; location=&quot;${rhq.deploymentDir}&quot; /&gt;
+                              &lt;echo&gt;*** Deleting ${deployment.dir}${file.separator}...&lt;/echo&gt;
+                              &lt;delete dir=&quot;${deployment.dir}&quot; /&gt;
+                           &lt;/tasks&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;run&lt;/goal&gt;
+                        &lt;/goals&gt;
+                     &lt;/execution&gt;
+
+                  &lt;/executions&gt;
+               &lt;/plugin&gt;
+
+            &lt;/plugins&gt;
+         &lt;/build&gt;
+      &lt;/profile&gt;
+
+      &lt;!--  Add dependencies need for jdk5 builds. Remove when we stop supporting jdk5 --&gt;
+      &lt;profile&gt;
+         &lt;id&gt;java-5-dependencies&lt;/id&gt;
+         &lt;activation&gt;
+            &lt;jdk&gt;1.5&lt;/jdk&gt;
+            &lt;property&gt;
+               &lt;name&gt;java5.home&lt;/name&gt;
+            &lt;/property&gt;
+         &lt;/activation&gt;
+
+         &lt;dependencies&gt;
+            &lt;dependency&gt;
+               &lt;groupId&gt;jboss.jbossws&lt;/groupId&gt;
+               &lt;artifactId&gt;jboss-jaxws&lt;/artifactId&gt;
+               &lt;!-- NOTE: This version is old but is good enough to resolve the build dependency. --&gt;
+               &lt;version&gt;3.0.1-native-2.0.4.GA&lt;/version&gt;
+               &lt;scope&gt;provided&lt;/scope&gt;
+            &lt;/dependency&gt;
+         &lt;/dependencies&gt;
+      &lt;/profile&gt;
+   
+      &lt;profile&gt;
+         &lt;id&gt;javadoc&lt;/id&gt;
+         &lt;activation&gt;
+            &lt;property&gt;
+               &lt;name&gt;javadoc.outputDirectory&lt;/name&gt;
+            &lt;/property&gt;
+         &lt;/activation&gt;
+
+         &lt;build&gt;
+            &lt;plugins&gt;
+               &lt;plugin&gt;
+                  &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
+                  &lt;version&gt;1.1&lt;/version&gt;
+                  &lt;executions&gt;
+
+                     &lt;execution&gt;
+                        &lt;id&gt;javadoc-remote-api&lt;/id&gt;
+                        &lt;phase&gt;compile&lt;/phase&gt;
+                        &lt;configuration&gt;
+                           &lt;tasks&gt;
+                              &lt;property name=&quot;javadoc.outputDirectory&quot; value=&quot;${javadoc.outputDirectory}&quot; /&gt;
+                              &lt;property name=&quot;project.dir&quot; value=&quot;./src/main/java/org/rhq/enterprise/server&quot; /&gt;
+                              &lt;property name=&quot;maven.compile.classpath&quot; refid=&quot;maven.compile.classpath&quot; /&gt;
+
+                              &lt;javadoc destdir=&quot;${javadoc.outputDirectory}/remote-api&quot; author=&quot;true&quot; version=&quot;true&quot; windowtitle=&quot;Remote API&quot; noindex=&quot;false&quot;&gt;
+                                 &lt;classpath&gt;
+                                    &lt;pathelement path=&quot;${maven.compile.classpath}&quot; /&gt;
+                                 &lt;/classpath&gt;
+                                 &lt;fileset dir=&quot;${project.dir}&quot; defaultexcludes=&quot;yes&quot;&gt;
+                                    &lt;include name=&quot;**/*Remote.java&quot; /&gt;
+                                 &lt;/fileset&gt;
+                                 &lt;link href=&quot;../domain&quot; /&gt;
+                                 &lt;link href=&quot;../plugin-api&quot; /&gt;
+                                 &lt;link href=&quot;http://java.sun.com/j2se/1.5.0/docs/api/&quot; /&gt;
+                                 &lt;bottom&gt;&lt;![CDATA[Copyright &amp;#169; 2008-2009 &lt;a href=&quot;http://rhq-project.org/&quot;&gt;Red Hat, Inc.&lt;/a&gt;. All Rights Reserved.]]&gt;&lt;/bottom&gt;
+                              &lt;/javadoc&gt;
+                           &lt;/tasks&gt;
+                        &lt;/configuration&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;run&lt;/goal&gt;
+                        &lt;/goals&gt;
+                     &lt;/execution&gt;
+
+                  &lt;/executions&gt;
+               &lt;/plugin&gt;
+            &lt;/plugins&gt;
+         &lt;/build&gt;
+
+      &lt;/profile&gt;   
+
+   &lt;/profiles&gt;
+   
+&lt;/project&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4150272;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ViewChartFormPrepareAction.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/classes/org/rhq/enterprise/gui/legacy/action/resource/common/monitor/visibility/ViewChartFormPrepareAction.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">9</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.gui.legacy.action.resource.common.monitor.visibility;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.tiles.ComponentContext;
+import org.rhq.core.clientapi.util.ArrayUtil;
+import org.rhq.core.clientapi.util.StringUtil;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.measurement.MeasurementBaseline;
+import org.rhq.core.domain.measurement.MeasurementDefinition;
+import org.rhq.core.domain.measurement.MeasurementSchedule;
+import org.rhq.core.domain.measurement.MeasurementUnits;
+import org.rhq.core.domain.measurement.NumericType;
+import org.rhq.core.domain.measurement.composite.MeasurementDataNumericHighLowComposite;
+import org.rhq.core.domain.measurement.util.MeasurementConverter;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.enterprise.gui.common.servlet.HighLowMetricValue;
+import org.rhq.enterprise.gui.legacy.WebUser;
+import org.rhq.enterprise.gui.legacy.WebUserPreferences;
+import org.rhq.enterprise.gui.legacy.WebUserPreferences.SavedChartsPortletPreferences;
+import org.rhq.enterprise.gui.legacy.action.resource.common.monitor.visibility.MetricDisplayRangeFormPrepareAction;
+import org.rhq.enterprise.gui.legacy.action.resource.common.monitor.visibility.MetricRange;
+import org.rhq.enterprise.gui.legacy.action.resource.common.monitor.visibility.ViewChartForm;
+import org.rhq.enterprise.gui.legacy.beans.ChartDataBean;
+import org.rhq.enterprise.gui.legacy.beans.ChartedMetricBean;
+import org.rhq.enterprise.gui.legacy.beans.NumericMetricDataPoint;
+import org.rhq.enterprise.gui.legacy.exception.ParameterNotFoundException;
+import org.rhq.enterprise.gui.legacy.util.MonitorUtils;
+import org.rhq.enterprise.gui.legacy.util.RequestUtils;
+import org.rhq.enterprise.gui.legacy.util.SessionUtils;
+import org.rhq.enterprise.gui.util.WebUtility;
+import org.rhq.enterprise.server.auth.SessionNotFoundException;
+import org.rhq.enterprise.server.measurement.AvailabilityManagerLocal;
+import org.rhq.enterprise.server.measurement.AvailabilityPoint;
+import org.rhq.enterprise.server.measurement.BaselineCreationException;
+import org.rhq.enterprise.server.measurement.MeasurementBaselineManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementChartsManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementDataManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementDefinitionManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementNotFoundException;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerLocal;
+import org.rhq.enterprise.server.measurement.uibean.BaseMetricDisplay;
+import org.rhq.enterprise.server.measurement.uibean.MetricDisplaySummary;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceTypeManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+public class ViewChartFormPrepareAction extends MetricDisplayRangeFormPrepareAction {
+   private static final int NUMBER_OF_DATA_POINTS = 60;
+   private static final int DEFAULT_MAX_RESOURCES = 10;
+   private final Log log = LogFactory.getLog(ViewChartFormPrepareAction.class);
+   MeasurementDataManagerLocal dataManager;
+   MeasurementScheduleManagerLocal scheduleManager;
+   MeasurementChartsManagerLocal chartsManager;
+   ResourceManagerLocal resMgr;
+   ResourceGroupManagerLocal resGrpMgr;
+   ResourceTypeManagerLocal resTypeMgr;
+   private static final ViewChartFormPrepareAction.BaseMetricDisplayComparator comp = new ViewChartFormPrepareAction.BaseMetricDisplayComparator();
+
+   public ActionForward workflow(ComponentContext cc, ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      super.workflow(cc, mapping, form, request, response);
+      ViewChartForm chartForm = (ViewChartForm)form;
+      Subject subject = WebUtility.getSubject(request);
+      int groupId = -1;
+      Resource resource = RequestUtils.getResource(request);
+      int parent = WebUtility.getOptionalIntRequestParameter(request, &quot;parent&quot;, -1);
+      int type = WebUtility.getOptionalIntRequestParameter(request, &quot;type&quot;, -1);
+      if(resource == null) {
+         groupId = WebUtility.getOptionalIntRequestParameter(request, &quot;groupId&quot;, -1);
+         if(groupId == -1 &amp;&amp; parent == 1) {
+            return this.removeBadDashboardLink(request);
+         }
+      }
+
+      this.dataManager = LookupUtil.getMeasurementDataManager();
+      this.scheduleManager = LookupUtil.getMeasurementScheduleManager();
+      this.chartsManager = LookupUtil.getMeasurementChartsManager();
+      this.resMgr = LookupUtil.getResourceManager();
+      this.resGrpMgr = LookupUtil.getResourceGroupManager();
+      this.resTypeMgr = LookupUtil.getResourceTypeManager();
+      int resources;
+      Resource allResources;
+      if(resource != null) {
+         chartForm.setId(Integer.valueOf(resource.getId()));
+         chartForm.setCategory(resource.getResourceType().getCategory().name());
+
+         try {
+            resources = WebUtility.getChildResourceTypeId(request);
+            chartForm.setCtype(Integer.valueOf(resources));
+            chartForm.setType(Integer.valueOf(resources));
+         } catch (ParameterNotFoundException var28) {
+            ;
+         }
+      } else if(groupId &gt; 0 || parent &gt; 0) {
+         resources = WebUtility.getOptionalIntRequestParameter(request, &quot;definitionId&quot;, -1);
+         if(resources &gt; 0) {
+            chartForm.setM(new Integer[]{Integer.valueOf(resources)});
+         }
+
+         if(parent &gt; 0) {
+            chartForm.setCtype(Integer.valueOf(type));
+            chartForm.setParent(parent);
+            allResources = this.resMgr.getResourceById(subject, parent);
+            ResourceType r = this.resTypeMgr.getResourceTypeById(subject, type);
+            String resourceIdsParam = allResources.getName() + &quot;/&quot; + r.getName();
+            chartForm.setChartName(resourceIdsParam);
+         }
+
+         if(groupId &gt; 0) {
+            chartForm.setGroupId(groupId);
+            ResourceGroup var30 = this.resGrpMgr.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+            chartForm.setChartName(var30.getName());
+         }
+      }
+
+      this._setupDateRange(request, chartForm);
+      this._setupMetricIds(request, chartForm);
+      Object var29 = null;
+      allResources = null;
+      String[] var32 = request.getParameterValues(&quot;r&quot;);
+      String[] var33 = request.getParameterValues(&quot;resourceIds&quot;);
+      Object var31;
+      if(resource != null) {
+         var29 = this._setupResources(request, chartForm, resource, subject);
+         var31 = (List)((List)var29).get(0);
+      } else {
+         int len$;
+         int i$;
+         if(groupId &lt;= 0 &amp;&amp; parent &lt;= 0) {
+            if((var32 == null || var32.length &lt;= 0) &amp;&amp; (var33 == null || var33.length &lt;= 0)) {
+               var29 = new ArrayList(2);
+               var31 = new ArrayList();
+               ((List)var29).add(var31);
+               ((List)var29).add(var31);
+            } else {
+               if(var33 != null &amp;&amp; var32 == null) {
+                  var32 = var33;
+               }
+
+               int var34 = var32.length;
+               var29 = new ArrayList(2);
+               int[] var36 = new int[var34];
+
+               for(int var37 = 0; var37 &lt; var34; ++var37) {
+                  var36[var37] = Integer.parseInt(var32[var37]);
+               }
+
+               var31 = this.resMgr.findResourceByIds(subject, var36, false, PageControl.getUnlimitedInstance());
+               ((List)var29).add(var31);
+               ArrayList var38 = new ArrayList(((List)var31).size());
+               if(var33 != null &amp;&amp; var33.length &gt; 0) {
+                  String[] var39 = var33;
+                  len$ = var33.length;
+
+                  for(i$ = 0; i$ &lt; len$; ++i$) {
+                     String var42 = var39[i$];
+                     int id = Integer.parseInt(var42);
+                     Iterator i$1 = ((List)var31).iterator();
+
+                     while(i$1.hasNext()) {
+                        Resource re = (Resource)i$1.next();
+                        if(re.getId() == id) {
+                           var38.add(re);
+                           break;
+                        }
+                     }
+                  }
+               } else {
+                  var38.addAll((Collection)var31);
+               }
+
+               ((List)var29).add(var38);
+               request.setAttribute(&quot;resources&quot;, ((List)var31).toArray(new Resource[((List)var31).size()]));
+               request.setAttribute(&quot;resourcesSize&quot;, Integer.valueOf(((List)var31).size()));
+               request.setAttribute(&quot;checkedResources&quot;, var38.toArray(new Resource[var38.size()]));
+               request.setAttribute(&quot;checkedResourcesSize&quot;, Integer.valueOf(var38.size()));
+            }
+         } else {
+            if(groupId &gt; 0) {
+               var31 = this.resGrpMgr.findResourcesForResourceGroup(subject, groupId, GroupCategory.COMPATIBLE);
+            } else {
+               var31 = this.resGrpMgr.findResourcesForAutoGroup(subject, parent, type);
+            }
+
+            ArrayList e = new ArrayList(10);
+            int resIds = 0;
+            Integer[] checked = chartForm.getResourceIds();
+            Object arr$;
+            if(checked != null) {
+               arr$ = Arrays.asList(checked);
+            } else {
+               if(null != var32 &amp;&amp; var32.length &gt; 0) {
+                  checked = new Integer[var32.length];
+                  arr$ = new ArrayList();
+
+                  for(len$ = 0; len$ &lt; var32.length; ++len$) {
+                     if(len$ &lt; 10) {
+                        Integer var41 = Integer.valueOf(0);
+
+                        try {
+                           var41 = Integer.valueOf(var32[len$]);
+                        } catch (NumberFormatException var27) {
+                           var41 = Integer.valueOf(-1);
+                        }
+
+                        ((List)arr$).add(var41);
+                        checked[len$] = var41;
+                     }
+                  }
+               } else {
+                  len$ = ((List)var31).size();
+                  checked = new Integer[len$];
+                  arr$ = new ArrayList();
+
+                  for(i$ = 0; i$ &lt; len$; ++i$) {
+                     if(i$ &lt; 10) {
+                        Integer tmp = Integer.valueOf(((Resource)((List)var31).get(i$)).getId());
+                        ((List)arr$).add(tmp);
+                        checked[i$] = tmp;
+                     }
+                  }
+               }
+
+               chartForm.setResourceIds(checked);
+            }
+
+            Iterator var40 = ((List)var31).iterator();
+
+            while(var40.hasNext()) {
+               Resource var43 = (Resource)var40.next();
+               if(resIds &gt;= 10) {
+                  break;
+               }
+
+               if(((List)arr$).contains(Integer.valueOf(var43.getId()))) {
+                  e.add(var43);
+                  ++resIds;
+               }
+            }
+
+            var29 = new ArrayList(2);
+            ((List)var29).add(var31);
+            ((List)var29).add(e);
+            request.setAttribute(&quot;resources&quot;, ((List)var31).toArray(new Resource[((List)var31).size()]));
+            request.setAttribute(&quot;resourcesSize&quot;, Integer.valueOf(((List)var31).size()));
+            request.setAttribute(&quot;checkedResources&quot;, e.toArray(new Resource[e.size()]));
+            request.setAttribute(&quot;checkedResourcesSize&quot;, Integer.valueOf(e.size()));
+         }
+      }
+
+      if(((List)var31).isEmpty()) {
+         return this.removeBadDashboardLink(request);
+      } else {
+         try {
+            List var35 = (List)((List)var29).get(1);
+            this._setupMetricData(request, chartForm, var35, subject);
+         } catch (MeasurementNotFoundException var26) {
+            return this.removeBadDashboardLink(request);
+         }
+
+         request.setAttribute(&quot;canSaveChart&quot;, &quot;true&quot;);
+         this._setupPageData(request, chartForm, (List)var31, subject);
+         this._setupBaselineExpectedRange(request, chartForm, (List)var31, subject);
+         this._setupParentResources(request, subject);
+         return null;
+      }
+   }
+
+   private void _setupParentResources(HttpServletRequest request, Subject subject) {
+      Resource[] resources = (Resource[])((Resource[])request.getAttribute(&quot;resources&quot;));
+
+      for(int i = 0; i &lt; resources.length; ++i) {
+         Resource resource = resources[i];
+         Resource parent = this.resMgr.getParentResource(resource.getId());
+         resource.setParentResource(parent);
+      }
+
+   }
+
+   private ActionForward removeBadDashboardLink(HttpServletRequest request) throws Exception, SessionNotFoundException {
+      String query = request.getQueryString();
+      WebUser user = SessionUtils.getWebUser(request.getSession());
+      WebUserPreferences preferences = user.getWebPreferences();
+      SavedChartsPortletPreferences savedCharts = preferences.getSavedChartsPortletPreferences();
+      savedCharts.removeByURL(query);
+      return null;
+   }
+
+   private void _setupDateRange(HttpServletRequest request, ViewChartForm chartForm) {
+      MetricRange range = (MetricRange)request.getAttribute(&quot;metricRange&quot;);
+      if(null == range) {
+         range = new MetricRange();
+         range.setBegin(Long.valueOf(chartForm.getStartDate().getTime()));
+         range.setEnd(Long.valueOf(chartForm.getEndDate().getTime()));
+         range.shiftNow();
+         request.setAttribute(&quot;metricRange&quot;, range);
+      }
+
+      chartForm.synchronizeDisplayRange();
+   }
+
+   private void _setupMetricIds(HttpServletRequest request, ViewChartForm chartForm) {
+      String[] m = request.getParameterValues(&quot;m&quot;);
+      Integer[] metricIds = ArrayUtil.stringToInteger(m);
+      chartForm.setM(metricIds);
+      String[] origM = request.getParameterValues(&quot;origM&quot;);
+      if(origM != null &amp;&amp; origM.length != 0) {
+         Integer[] originallySelectedMetricIds = ArrayUtil.stringToInteger(origM);
+         chartForm.setOrigM(originallySelectedMetricIds);
+      } else {
+         chartForm.setOrigM((Integer[])chartForm.getM().clone());
+      }
+
+   }
+
+   private List _setupResources(HttpServletRequest request, ViewChartForm chartForm, Resource resource, Subject subject) throws Exception {
+      ArrayList resources = new ArrayList();
+      ArrayList allResources = new ArrayList();
+      resources.add(allResources);
+      ArrayList checkedResources = new ArrayList();
+      resources.add(checkedResources);
+      Integer[] arr$;
+      if(chartForm.getCtype() != null &amp;&amp; chartForm.getCtype().intValue() != -1) {
+         ArrayList resourceIds = new ArrayList();
+         arr$ = RequestUtils.getResourceIds(request);
+         if(arr$ != null) {
+            this.log.debug(&quot;r=&quot; + StringUtil.arrayToString(arr$));
+            Iterator len$ = resourceIds.iterator();
+
+            while(len$.hasNext()) {
+               Resource i$ = (Resource)len$.next();
+               boolean resourceId = false;
+               Integer[] i$1 = arr$;
+               int aResource = arr$.length;
+
+               for(int i$2 = 0; i$2 &lt; aResource; ++i$2) {
+                  Integer resourceId1 = i$1[i$2];
+                  if(i$.getId() == resourceId1.intValue()) {
+                     resourceId = true;
+                     break;
+                  }
+               }
+
+               if(!resourceId) {
+                  this.log.debug(&quot;removing resource: &quot; + i$.getId());
+                  resourceIds.remove(i$);
+               }
+            }
+         }
+      } else {
+         allResources.add(resource);
+      }
+
+      request.setAttribute(&quot;resources&quot;, allResources.toArray(new Resource[allResources.size()]));
+      request.setAttribute(&quot;resourcesSize&quot;, Integer.valueOf(allResources.size()));
+      Integer[] var17 = RequestUtils.getResourceIds(request);
+      chartForm.setResourceIds(var17);
+      int var21;
+      if(null != var17 &amp;&amp; var17.length != 0) {
+         arr$ = var17;
+         int var20 = var17.length;
+
+         for(var21 = 0; var21 &lt; var20; ++var21) {
+            Integer var22 = arr$[var21];
+            Iterator var23 = allResources.iterator();
+
+            while(var23.hasNext()) {
+               Resource var24 = (Resource)var23.next();
+               if(var24.getId() == var22.intValue()) {
+                  checkedResources.add(resource);
+               }
+            }
+         }
+
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;resourceIds specified: &quot; + StringUtil.arrayToString(var17));
+         }
+      } else {
+         int var18 = this._getMaxResources(request, allResources.size());
+         this.log.debug(&quot;maxResources=&quot; + var18);
+         checkedResources.addAll(allResources.subList(0, var18));
+         Integer[] var19 = new Integer[checkedResources.size()];
+
+         for(var21 = 0; var21 &lt; var19.length; ++var21) {
+            var19[var21] = Integer.valueOf(((Resource)checkedResources.get(var21)).getId());
+         }
+
+         chartForm.setResourceIds(var19);
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;no resourceIds specified: &quot; + StringUtil.arrayToString(var19));
+         }
+      }
+
+      request.setAttribute(&quot;checkedResources&quot;, checkedResources.toArray(new Resource[checkedResources.size()]));
+      request.setAttribute(&quot;checkedResourcesSize&quot;, Integer.valueOf(checkedResources.size()));
+      return resources;
+   }
+
+   private void _setupMetricData(HttpServletRequest request, ViewChartForm chartForm, List resources, Subject subject) throws Exception {
+      AvailabilityManagerLocal availabilityManager = LookupUtil.getAvailabilityManager();
+      Integer[] metricDefIds = chartForm.getM();
+      if(this.log.isTraceEnabled()) {
+         this.log.trace(&quot;number of metrics: &quot; + metricDefIds.length);
+         this.log.trace(&quot;number of resources: &quot; + resources.size());
+      }
+
+      String[] chartKeys = new String[metricDefIds.length];
+      ArrayList chartDataPointsListList = new ArrayList(metricDefIds.length);
+      boolean displayAvailability = false;
+      ArrayList availabilityChartDataPointsList = new ArrayList();
+      ArrayList metricDefIdList = new ArrayList();
+
+      int startDate;
+      for(int metricDefinitionIds = 0; metricDefinitionIds &lt; metricDefIds.length; ++metricDefinitionIds) {
+         startDate = metricDefIds[metricDefinitionIds].intValue();
+         ArrayList chartDataPointsList = new ArrayList(resources.size());
+         chartKeys[metricDefinitionIds] = String.valueOf(System.currentTimeMillis()) + startDate;
+         request.getSession().setAttribute(chartKeys[metricDefinitionIds], new ChartDataBean(chartDataPointsList));
+         metricDefIdList.add(Integer.valueOf(startDate));
+         chartDataPointsListList.add(chartDataPointsList);
+      }
+
+      int[] var27 = new int[metricDefIdList.size()];
+
+      for(startDate = 0; startDate &lt; metricDefIdList.size(); ++startDate) {
+         var27[startDate] = ((Integer)metricDefIdList.get(startDate)).intValue();
+      }
+
+      long var28 = chartForm.getStartDate().getTime();
+      long endDate = chartForm.getEndDate().getTime();
+      Iterator i$ = resources.iterator();
+
+      while(i$.hasNext()) {
+         Resource resource = (Resource)i$.next();
+         List metricDataPointsList = this.dataManager.findDataForResource(subject, resource.getId(), var27, var28, endDate, 60);
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;Found &quot; + metricDataPointsList.size() + &quot; data points.&quot;);
+            if(this.log.isTraceEnabled()) {
+               this.log.trace(&quot;data: &quot; + metricDataPointsList);
+            }
+         }
+
+         if(displayAvailability) {
+            List i = availabilityManager.findAvailabilitiesForResource(subject, resource.getId(), var28, endDate, 60, false);
+            ArrayList metricDataPoints = new ArrayList(i.size());
+            Iterator metricId = i.iterator();
+
+            while(metricId.hasNext()) {
+               AvailabilityPoint chartDataPoints = (AvailabilityPoint)metricId.next();
+               NumericMetricDataPoint chartDataPointsList1 = new NumericMetricDataPoint(chartDataPoints);
+               metricDataPoints.add(chartDataPointsList1);
+            }
+
+            availabilityChartDataPointsList.add(metricDataPoints);
+         }
+
+         for(int var29 = 0; var29 &lt; metricDataPointsList.size(); ++var29) {
+            List var30 = (List)metricDataPointsList.get(var29);
+            int var31 = var27[var29];
+            if(this.log.isDebugEnabled()) {
+               this.log.debug(&quot;mtid=&quot; + var31 + &quot;, rid=&quot; + resource.getId() + &quot;, startDate=&quot; + var28 + &quot;, endDate=&quot; + endDate);
+            }
+
+            ArrayList var32 = new ArrayList(var30.size());
+            Iterator var33 = var30.iterator();
+
+            while(var33.hasNext()) {
+               MeasurementDataNumericHighLowComposite metricDataPoint = (MeasurementDataNumericHighLowComposite)var33.next();
+               HighLowMetricValue chartDataPoint = new HighLowMetricValue(metricDataPoint);
+               var32.add(chartDataPoint);
+            }
+
+            List var34 = (List)chartDataPointsListList.get(var29);
+            var34.add(var32);
+         }
+      }
+
+      request.getSession().setAttribute(&quot;chartDataKeys&quot;, chartKeys);
+      request.getSession().setAttribute(&quot;chartDataKeysSize&quot;, Integer.valueOf(chartKeys.length));
+   }
+
+   private void _setupPageData(HttpServletRequest request, ViewChartForm chartForm, List resources, Subject subject) throws Exception {
+      int[] metricDefinitionIds = new int[chartForm.getOrigM().length];
+
+      for(int allMetricSummaries = 0; allMetricSummaries &lt; chartForm.getOrigM().length; ++allMetricSummaries) {
+         metricDefinitionIds[allMetricSummaries] = chartForm.getOrigM()[allMetricSummaries].intValue();
+      }
+
+      ArrayList var13 = new ArrayList();
+      Iterator chartedMetrics = resources.iterator();
+
+      while(chartedMetrics.hasNext()) {
+         Resource i = (Resource)chartedMetrics.next();
+         int[] i$ = new int[metricDefinitionIds.length];
+
+         for(int metricSummary = 0; metricSummary &lt; metricDefinitionIds.length; ++metricSummary) {
+            int units = metricDefinitionIds[metricSummary];
+            MeasurementSchedule schedule = this.scheduleManager.getSchedule(subject, i.getId(), units, false);
+            i$[metricSummary] = schedule.getId();
+         }
+
+         List var17 = this.chartsManager.getMetricDisplaySummariesForResource(subject, i.getId(), i$, chartForm.getStartDate().getTime(), chartForm.getEndDate().getTime());
+         MonitorUtils.formatMetrics(var17, request.getLocale(), this.getResources(request));
+         var13.addAll(var17);
+      }
+
+      Collections.sort(var13, comp);
+      request.setAttribute(&quot;metricSummaries&quot;, var13);
+      request.setAttribute(&quot;metricSummariesSize&quot;, Integer.valueOf(var13.size()));
+      ChartedMetricBean[] var14 = new ChartedMetricBean[chartForm.getM().length];
+
+      for(int var15 = 0; var15 &lt; var14.length; ++var15) {
+         Iterator var16 = var13.iterator();
+
+         while(var16.hasNext()) {
+            MetricDisplaySummary var18 = (MetricDisplaySummary)var16.next();
+            if(var18.getDefinitionId().equals(chartForm.getM()[var15])) {
+               MeasurementUnits var19 = MeasurementUnits.valueOf(var18.getUnits());
+               var14[var15] = new ChartedMetricBean(var18.getLabel(), var19, var18.getCollectionType().intValue());
+               break;
+            }
+         }
+      }
+
+      request.setAttribute(&quot;chartedMetrics&quot;, var14);
+   }
+
+   private void _setupBaselineExpectedRange(HttpServletRequest request, ViewChartForm chartForm, List resources, Subject subject) throws Exception {
+      MeasurementDefinitionManagerLocal definitionManager = LookupUtil.getMeasurementDefinitionManager();
+      MeasurementScheduleManagerLocal scheduleManager = LookupUtil.getMeasurementScheduleManager();
+      MeasurementBaselineManagerLocal baselineManager = LookupUtil.getMeasurementBaselineManager();
+      int metricId = chartForm.getM()[0].intValue();
+      MeasurementBaseline baselineIfEqual;
+      if(chartForm.getMode().equals(&quot;chartSingleMetricSingleResource&quot;) &amp;&amp; metricId != 0) {
+         Resource definition1 = (Resource)resources.get(0);
+         MeasurementSchedule newBaseline1 = scheduleManager.getSchedule(subject, definition1.getId(), metricId, true);
+         if(newBaseline1.getDefinition().getNumericType() != NumericType.DYNAMIC) {
+            chartForm.setSuppressBaselineSection(true);
+            return;
+         }
+
+         baselineIfEqual = null;
+
+         try {
+            baselineIfEqual = baselineManager.calculateAutoBaseline(subject, Integer.valueOf(newBaseline1.getId()), chartForm.getStartDate().getTime(), chartForm.getEndDate().getTime(), false);
+         } catch (BaselineCreationException var14) {
+            this.log.debug(&quot;Baseline could not be calculated, possibly  due to lack of data&quot;, var14);
+         }
+
+         if(baselineIfEqual != null) {
+            chartForm.setNewBaseline(MeasurementConverter.format(baselineIfEqual.getMean(), newBaseline1.getDefinition().getUnits(), true));
+            chartForm.setNewBaselineRaw(String.valueOf(baselineIfEqual.getMean()));
+         }
+
+         this.setBaselineValues(newBaseline1.getDefinition(), newBaseline1.getBaseline(), chartForm);
+         this.postProcessBaselines(request, chartForm);
+      } else if(chartForm.getMode().equals(&quot;chartSingleMetricMultiResource&quot;) &amp;&amp; metricId != 0) {
+         MeasurementDefinition definition = definitionManager.getMeasurementDefinition(subject, metricId);
+         if(definition.getNumericType() != NumericType.DYNAMIC) {
+            chartForm.setSuppressBaselineSection(true);
+            return;
+         }
+
+         MeasurementBaseline newBaseline = null;
+
+         try {
+            newBaseline = baselineManager.calculateAutoBaseline(LookupUtil.getSubjectManager().getOverlord(), chartForm.getGroupId(), chartForm.getM()[0].intValue(), chartForm.getStartDate().getTime(), chartForm.getEndDate().getTime(), false);
+         } catch (BaselineCreationException var13) {
+            this.log.debug(&quot;Baseline could not be calculated, possibly  due to lack of data&quot;, var13);
+         }
+
+         if(newBaseline != null) {
+            chartForm.setNewBaseline(MeasurementConverter.format(newBaseline.getMean(), definition.getUnits(), true));
+            chartForm.setNewBaselineRaw(String.valueOf(newBaseline.getMean()));
+         }
+
+         baselineIfEqual = baselineManager.getBaselineIfEqual(subject, chartForm.getGroupId(), metricId);
+         this.setBaselineValues(definition, baselineIfEqual, chartForm);
+         this.postProcessBaselines(request, chartForm);
+      }
+
+   }
+
+   private void setBaselineValues(MeasurementDefinition definition, MeasurementBaseline baseline, ViewChartForm chartForm) {
+      if(baseline != null) {
+         if(baseline.getMean() != null) {
+            if(Math.abs(baseline.getMean().doubleValue() + 1.0D) &lt; 1.0E-9D) {
+               chartForm.setBaseline(&quot;Multiple Values&quot;);
+               chartForm.setBaselineRaw(&quot;Multiple Values&quot;);
+            } else {
+               chartForm.setBaseline(MeasurementConverter.format(baseline.getMean(), definition.getUnits(), true));
+               chartForm.setBaselineRaw(String.valueOf(baseline.getMean()));
+            }
+         }
+
+         if(baseline.getMax() != null) {
+            if(Math.abs(baseline.getMax().doubleValue() + 1.0D) &lt; 1.0E-9D) {
+               chartForm.setHighRange(&quot;Multiple Values&quot;);
+               chartForm.setHighRangeRaw(&quot;Multiple Values&quot;);
+            } else {
+               chartForm.setHighRange(MeasurementConverter.format(baseline.getMax(), definition.getUnits(), true));
+               chartForm.setHighRangeRaw(String.valueOf(baseline.getMax()));
+            }
+         }
+
+         if(baseline.getMin() != null) {
+            if(Math.abs(baseline.getMin().doubleValue() + 1.0D) &lt; 1.0E-9D) {
+               chartForm.setLowRange(&quot;Multiple Values&quot;);
+               chartForm.setLowRangeRaw(&quot;Multiple Values&quot;);
+            } else {
+               chartForm.setLowRange(MeasurementConverter.format(baseline.getMin(), definition.getUnits(), true));
+               chartForm.setLowRangeRaw(String.valueOf(baseline.getMin()));
+            }
+         }
+      }
+
+   }
+
+   private void postProcessBaselines(HttpServletRequest request, ViewChartForm chartForm) {
+      Boolean justSavedLowRange;
+      if(chartForm.getBaseline() != null &amp;&amp; chartForm.getBaseline().length() != 0) {
+         justSavedLowRange = (Boolean)request.getAttribute(&quot;justSavedBaseline&quot;);
+         if(justSavedLowRange != null &amp;&amp; justSavedLowRange.booleanValue()) {
+            chartForm.setShowBaseline(true);
+            Boolean baselineWasNull = (Boolean)request.getAttribute(&quot;baselineWasNull&quot;);
+            if(baselineWasNull != null &amp;&amp; baselineWasNull.booleanValue()) {
+               chartForm.setShowLowRange(true);
+               chartForm.setShowHighRange(true);
+            }
+         }
+      } else {
+         chartForm.setShowBaseline(false);
+      }
+
+      if(chartForm.getHighRange() != null &amp;&amp; chartForm.getHighRange().length() != 0) {
+         justSavedLowRange = (Boolean)request.getAttribute(&quot;justSavedHighRange&quot;);
+         if(justSavedLowRange != null &amp;&amp; justSavedLowRange.booleanValue()) {
+            chartForm.setShowHighRange(true);
+         }
+      } else {
+         chartForm.setShowHighRange(false);
+      }
+
+      if(chartForm.getLowRange() != null &amp;&amp; chartForm.getLowRange().length() != 0) {
+         justSavedLowRange = (Boolean)request.getAttribute(&quot;justSavedLowRange&quot;);
+         if(justSavedLowRange != null &amp;&amp; justSavedLowRange.booleanValue()) {
+            chartForm.setShowLowRange(true);
+         }
+      } else {
+         chartForm.setShowLowRange(false);
+      }
+
+   }
+
+   private int _getMaxResources(HttpServletRequest request, int allResourcesLength) {
+      int maxResources = 10;
+      String maxResourcesS = RequestUtils.message(request, &quot;resource.common.monitor.visibility.chart.MaxResources&quot;);
+      if(null != maxResourcesS &amp;&amp; !maxResourcesS.startsWith(&quot;???&quot;)) {
+         try {
+            maxResources = Integer.parseInt(maxResourcesS);
+         } catch (NumberFormatException var6) {
+            this.log.trace(&quot;invalid resource.common.monitor.visibility.chart.MaxResources resource: &quot; + maxResourcesS);
+         }
+      }
+
+      if(maxResources &gt; allResourcesLength) {
+         maxResources = allResourcesLength;
+      }
+
+      return maxResources;
+   }
+
+   // $FF: synthetic class
+   static class SyntheticClass_1 {
+   }
+
+   private static final class BaseMetricDisplayComparator implements Comparator {
+      private BaseMetricDisplayComparator() {
+      }
+
+      public int compare(BaseMetricDisplay bmd1, BaseMetricDisplay bmd2) {
+         return bmd1.getLabel().compareTo(bmd2.getLabel());
+      }
+
+      // $FF: synthetic method
+      BaseMetricDisplayComparator(ViewChartFormPrepareAction.SyntheticClass_1 x0) {
+         this();
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:19 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "495,496,435" });
+
+            $("<div id='495-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(495)');
+            $("<div id='496-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(496)');
+            $("<div id='435-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(435)');
+
+
+$("<a name='12441344' class='windup-file-location'></a><div class='inline-source-comment green tag-clustering'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>HTTP Session data storage</strong><a title='View Rule: session-00001' href='windup_ruleproviders.html#session-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The servlet container uses HttpSession to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user. <code>HttpSession.setAttribute<\/code> method allows user information to persist across multiple user connections Warning: As of Java Servlet Version 2.2, the <code>javax.http.HTTPSession.putValue(java.lang.String name,java.lang.Object value)<\/code> method is deprecated and replaced by <code>javax.http.HttpSession.setAttribute(java.lang.String, java.lang.Object)<\/code><\/p><p>In a cloud environment it has to be considered that the data in the memory of a running container can be wiped out by a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location)[1]. Consider storing HTTPSession data to a cache backing service[2][3][4][5] This approach has some benefits:<\/p>\n<ul>\n  <li>Increased application scalability and elasticity. By offloading the session data off to a remote Data Grid, the application tier itself can be more scalable and elastic.<\/li>\n  <li>Session Persistence. By offloading session data to a remote data grid, the application itself will be able to survive EAP node failures since the a JVM failure will not cause the session data to be lost.<\/li>\n  <li>Session Data Sharing. If you have a requirement for multiple applications to be able to share session data, this solution might be able to solve that use case as well.<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/processes\" target=\"_blank\">Twelve-factor app - Processes<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_high_availability#externalize-http-sessions-to-jdg\" target=\"_blank\">JBoss EAP - Externalize HTTP Sessions to JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://developers.redhat.com/blog/2015/11/23/externalize-http-session-data-to-jboss-data-grid/\" target=\"_blank\">Developer blog post - Externalize HTTP Session Data to the JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html/red_hat_jboss_data_grid_for_openshift/\" target=\"_blank\">Red Hat JBoss Data Grid for OpenShift<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#495-inlines');
+
+$("<a name='12445696' class='windup-file-location'></a><div class='inline-source-comment green tag-clustering'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>HTTP Session data storage</strong><a title='View Rule: session-00001' href='windup_ruleproviders.html#session-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The servlet container uses HttpSession to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user. <code>HttpSession.setAttribute<\/code> method allows user information to persist across multiple user connections Warning: As of Java Servlet Version 2.2, the <code>javax.http.HTTPSession.putValue(java.lang.String name,java.lang.Object value)<\/code> method is deprecated and replaced by <code>javax.http.HttpSession.setAttribute(java.lang.String, java.lang.Object)<\/code><\/p><p>In a cloud environment it has to be considered that the data in the memory of a running container can be wiped out by a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location)[1]. Consider storing HTTPSession data to a cache backing service[2][3][4][5] This approach has some benefits:<\/p>\n<ul>\n  <li>Increased application scalability and elasticity. By offloading the session data off to a remote Data Grid, the application tier itself can be more scalable and elastic.<\/li>\n  <li>Session Persistence. By offloading session data to a remote data grid, the application itself will be able to survive EAP node failures since the a JVM failure will not cause the session data to be lost.<\/li>\n  <li>Session Data Sharing. If you have a requirement for multiple applications to be able to share session data, this solution might be able to solve that use case as well.<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/processes\" target=\"_blank\">Twelve-factor app - Processes<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_high_availability#externalize-http-sessions-to-jdg\" target=\"_blank\">JBoss EAP - Externalize HTTP Sessions to JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://developers.redhat.com/blog/2015/11/23/externalize-http-session-data-to-jboss-data-grid/\" target=\"_blank\">Developer blog post - Externalize HTTP Session Data to the JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html/red_hat_jboss_data_grid_for_openshift/\" target=\"_blank\">Red Hat JBoss Data Grid for OpenShift<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#496-inlines');
+
+$("<a name='12446976' class='windup-file-location'></a><div class='inline-source-comment green tag-clustering'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>HTTP Session data storage</strong><a title='View Rule: session-00001' href='windup_ruleproviders.html#session-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The servlet container uses HttpSession to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user. <code>HttpSession.setAttribute<\/code> method allows user information to persist across multiple user connections Warning: As of Java Servlet Version 2.2, the <code>javax.http.HTTPSession.putValue(java.lang.String name,java.lang.Object value)<\/code> method is deprecated and replaced by <code>javax.http.HttpSession.setAttribute(java.lang.String, java.lang.Object)<\/code><\/p><p>In a cloud environment it has to be considered that the data in the memory of a running container can be wiped out by a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location)[1]. Consider storing HTTPSession data to a cache backing service[2][3][4][5] This approach has some benefits:<\/p>\n<ul>\n  <li>Increased application scalability and elasticity. By offloading the session data off to a remote Data Grid, the application tier itself can be more scalable and elastic.<\/li>\n  <li>Session Persistence. By offloading session data to a remote data grid, the application itself will be able to survive EAP node failures since the a JVM failure will not cause the session data to be lost.<\/li>\n  <li>Session Data Sharing. If you have a requirement for multiple applications to be able to share session data, this solution might be able to solve that use case as well.<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/processes\" target=\"_blank\">Twelve-factor app - Processes<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_high_availability#externalize-http-sessions-to-jdg\" target=\"_blank\">JBoss EAP - Externalize HTTP Sessions to JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://developers.redhat.com/blog/2015/11/23/externalize-http-session-data-to-jboss-data-grid/\" target=\"_blank\">Developer blog post - Externalize HTTP Session Data to the JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html/red_hat_jboss_data_grid_for_openshift/\" target=\"_blank\">Red Hat JBoss Data Grid for OpenShift<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#435-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

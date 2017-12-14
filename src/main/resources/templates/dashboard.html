@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/StandardPage}">
+
+<head>
+    <title>RHAMT Example !</title>
+    <link href="/reports/resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/snippet/jquery.snippet.min.css" />
+    <link href="/reports/resources/css/windup.java.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/sausage/sausage.css" />
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/flot/plot.css" />
+    <style>
+        .report-index-row {
+            margin: 10px -32px 0px 5px;
+            margin-bottom: 25px;
+        }
+    </style></head>
+
+<body>
+<th:block layout:fragment="content">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="/execution/1/reports/report_index_RHQ_Enterprise_Server_EAR.html">Dashboard</a></li>
+        <li><a href="/execution/1/reports/migration_issues.1.html">Issues</a></li>
+        <li><a href="/execution/1/reports/ApplicationDetails_RHQ_Enterprise_Server_EAR.html">Details</a></li>
+        <li><a href="/execution/1/reports/dependency_report_RHQ_Enterprise_Server_EAR.html">Dependencies</a></li>
+        <li><a href="/execution/1/reports/remotereport_RHQ_Enterprise_Server_EAR.html">Remote Services</a></li>
+        <li><a href="/execution/1/reports/ejbreport_RHQ_Enterprise_Server_EAR.html">EJBs</a></li>
+        <li><a href="/execution/1/reports/jpa_RHQ_Enterprise_Server_EAR.html">JPA</a></li>
+        <li><a href="/execution/1/reports/server_resources_RHQ_Enterprise_Server_EAR.html">Server Resources</a></li>
+        <li><a href="/execution/1/reports/hardcoded_ipsRHQ_Enterprise_Server_EAR.html">Hardcoded IPS</a></li>
+        <li><a href="/execution/1/reports/ignoredfiles_RHQ_Enterprise_Server_EAR.html">Ignored Files</a></li>
+    </ul>
+
+    <div id="reportContent">
+
+    </div>
+
+    <script type="text/javascript" src="/reports/data/issue_summaries.js"></script>
+
+    <div id="reportData">
+    </div>
+
+    <script th:inline="javascript">
+        var url = [[${app_name}]];
+        console.log(url);
+        $('#reportData').load('/reports/report_index_'+url+'.html #report-data', function(response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: ";
+                alert(msg + xhr.status + " " + xhr.statusText);
+            }
+        });
+        $('#reportContent').load('/reports/report_index_'+url+'.html #report-content', function(response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: ";
+                alert(msg + xhr.status + " " + xhr.statusText);
+            }
+        });
+        function getWindupIssueSummaries() {
+            var dataOffset = $('#DATA_OFFSET').val();
+            console.log(dataOffset);
+            return WINDUP_ISSUE_SUMMARIES[dataOffset];
+        }
+    </script>
+
+    <script src="/reports/resources/js/jquery.color-2.1.2.min.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.pie.min.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.valuelabels.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.axislabels.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.resize.js"></script>
+
+    <script type="text/javascript" src="/reports/resources/js/report-index-graphs.js"></script>
+
+    <script type='text/javascript'>$('#application_pie').parent().remove()</script>
+    <script type="text/javascript">
+        var tbodyElement = $("#javaIncidentsByPackageTBody");
+
+        if (typeof(WINDUP_PACKAGE_PIE_DATA) !== 'undefined') {
+            var rows = "";
+            for (var i = 0; i < WINDUP_PACKAGE_PIE_DATA['application_pie'].length; i++) {
+                var row = "";
+                row += "<tr>";
+                row += "<td>" + WINDUP_PACKAGE_PIE_DATA['application_pie'][i].label + "</td>";
+                row += "<td class='numeric-column'>" + WINDUP_PACKAGE_PIE_DATA['application_pie'][i].data + "</td>";
+                row += "</tr>";
+                rows += row;
+            }
+            tbodyElement.prepend(rows);
+        } else {
+            $("#javaIncidentsByPackageRow").remove();
+        }
+    </script>
+
+</th:block>
+
+</body>
+</html>

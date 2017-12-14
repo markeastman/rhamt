@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for GenericAddress.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/lib/snmp4j-1.8.2.jar/org/snmp4j/smi/GenericAddress.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.snmp4j.smi;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Enumeration;
+import java.util.Map;
+import java.util.Properties;
+import java.util.TreeMap;
+import org.snmp4j.SNMP4JSettings;
+import org.snmp4j.asn1.BERInputStream;
+import org.snmp4j.log.LogAdapter;
+import org.snmp4j.log.LogFactory;
+import org.snmp4j.smi.Address;
+import org.snmp4j.smi.IpAddress;
+import org.snmp4j.smi.OID;
+import org.snmp4j.smi.SMIAddress;
+import org.snmp4j.smi.TcpAddress;
+import org.snmp4j.smi.UdpAddress;
+import org.snmp4j.smi.Variable;
+
+public class GenericAddress extends SMIAddress {
+   static final long serialVersionUID = -6102594326202231511L;
+   public static final String TYPE_UDP = &quot;udp&quot;;
+   public static final String TYPE_TCP = &quot;tcp&quot;;
+   public static final String TYPE_IP = &quot;ip&quot;;
+   public static final String ADDRESS_TYPES_PROPERTIES = &quot;org.snmp4j.addresses&quot;;
+   private static final String ADDRESS_TYPES_PROPERTIES_DEFAULT = &quot;address.properties&quot;;
+   private static final LogAdapter logger;
+   private SMIAddress address;
+   private static Map knownAddressTypes;
+
+   public GenericAddress() {
+   }
+
+   public GenericAddress(SMIAddress var1) {
+      this.address = var1;
+   }
+
+   public int getSyntax() {
+      return this.address.getSyntax();
+   }
+
+   public boolean isValid() {
+      return this.address == null?false:this.address.isValid();
+   }
+
+   public String toString() {
+      return this.address.toString();
+   }
+
+   public int hashCode() {
+      return this.address.hashCode();
+   }
+
+   public int compareTo(Object var1) {
+      return this.address.compareTo(var1);
+   }
+
+   public boolean equals(Object var1) {
+      return this.address.equals(var1);
+   }
+
+   public void decodeBER(BERInputStream var1) throws IOException {
+      throw new UnsupportedOperationException();
+   }
+
+   public void encodeBER(OutputStream var1) throws IOException {
+      this.address.encodeBER(var1);
+   }
+
+   public int getBERLength() {
+      return this.address.getBERLength();
+   }
+
+   public void setAddress(SMIAddress var1) {
+      this.address = var1;
+   }
+
+   public Address getAddress() {
+      return this.address;
+   }
+
+   private static synchronized void registerAddressTypes() {
+      if(SNMP4JSettings.isExtensibilityEnabled()) {
+         String var0 = System.getProperty(&quot;org.snmp4j.addresses&quot;, &quot;address.properties&quot;);
+         InputStream var1 = Variable.class.getResourceAsStream(var0);
+         if(var1 == null) {
+            throw new InternalError(&quot;Could not read \'&quot; + var0 + &quot;\' from classpath!&quot;);
+         }
+
+         Properties var2 = new Properties();
+
+         try {
+            var2.load(var1);
+            TreeMap var3 = new TreeMap();
+            Enumeration var20 = var2.propertyNames();
+
+            while(var20.hasMoreElements()) {
+               String var5 = (String)var20.nextElement();
+               String var6 = var2.getProperty(var5);
+
+               try {
+                  Class var7 = Class.forName(var6);
+                  var3.put(var5, var7);
+               } catch (ClassNotFoundException var16) {
+                  logger.error(var16);
+               }
+            }
+
+            knownAddressTypes = var3;
+         } catch (IOException var17) {
+            String var4 = &quot;Could not read \'&quot; + var0 + &quot;\': &quot; + var17.getMessage();
+            logger.error(var4);
+            throw new InternalError(var4);
+         } finally {
+            try {
+               var1.close();
+            } catch (IOException var15) {
+               logger.warn(var15);
+            }
+
+         }
+      } else {
+         TreeMap var19 = new TreeMap();
+         var19.put(&quot;udp&quot;, UdpAddress.class);
+         var19.put(&quot;tcp&quot;, TcpAddress.class);
+         var19.put(&quot;ip&quot;, IpAddress.class);
+         knownAddressTypes = var19;
+      }
+
+   }
+
+   public static Address parse(String var0) {
+      if(knownAddressTypes == null) {
+         registerAddressTypes();
+      }
+
+      String var1 = &quot;udp&quot;;
+      int var2 = var0.indexOf(58);
+      if(var2 &gt; 0) {
+         var1 = var0.substring(0, var2);
+         var0 = var0.substring(var2 + 1);
+      }
+
+      var1 = var1.toLowerCase();
+      Class var3 = (Class)knownAddressTypes.get(var1);
+      if(var3 == null) {
+         throw new IllegalArgumentException(&quot;Address type &quot; + var1 + &quot; unknown&quot;);
+      } else {
+         try {
+            Address var4 = (Address)var3.newInstance();
+            return var4.parseAddress(var0)?var4:null;
+         } catch (Exception var5) {
+            logger.warn(var5);
+            return null;
+         }
+      }
+   }
+
+   public boolean parseAddress(String var1) {
+      Address var2 = parse(var1);
+      if(var2 instanceof SMIAddress) {
+         this.setAddress((SMIAddress)var2);
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   public Object clone() {
+      return new GenericAddress(this.address);
+   }
+
+   public int toInt() {
+      throw new UnsupportedOperationException();
+   }
+
+   public long toLong() {
+      throw new UnsupportedOperationException();
+   }
+
+   public OID toSubIndex(boolean var1) {
+      throw new UnsupportedOperationException();
+   }
+
+   public void fromSubIndex(OID var1, boolean var2) {
+      throw new UnsupportedOperationException();
+   }
+
+   public void setValue(String var1) {
+      if(!this.parseAddress(var1)) {
+         throw new IllegalArgumentException(var1 + &quot; cannot be parsed by &quot; + this.getClass().getName());
+      }
+   }
+
+   static {
+      logger = LogFactory.getLogger(GenericAddress.class);
+      knownAddressTypes = null;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "104" });
+
+            $("<div id='104-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(104)');
+
+
+$("<a name='12223488' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#104-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

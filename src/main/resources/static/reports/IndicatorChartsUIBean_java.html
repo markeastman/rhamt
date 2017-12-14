@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for IndicatorChartsUIBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/classes/org/rhq/enterprise/gui/measurement/graphs/IndicatorChartsUIBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">6</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.gui.measurement.graphs;
+
+import java.text.StringCharacterIterator;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.gui.util.FacesContextUtility;
+import org.rhq.enterprise.gui.legacy.WebUser;
+import org.rhq.enterprise.gui.legacy.action.resource.common.monitor.visibility.IndicatorViewsForm;
+import org.rhq.enterprise.gui.legacy.util.MonitorUtils;
+import org.rhq.enterprise.gui.legacy.util.RequestUtils;
+import org.rhq.enterprise.gui.legacy.util.SessionUtils;
+import org.rhq.enterprise.gui.util.EnterpriseFacesContextUtility;
+import org.rhq.enterprise.gui.util.MetricsDisplayMode;
+import org.rhq.enterprise.gui.util.WebUtility;
+import org.rhq.enterprise.server.auth.SessionNotFoundException;
+import org.rhq.enterprise.server.auth.SessionTimeoutException;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.common.EntityContext;
+import org.rhq.enterprise.server.common.EntityContext.Category;
+import org.rhq.enterprise.server.measurement.MeasurementChartsManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementPreferences;
+import org.rhq.enterprise.server.measurement.MeasurementViewException;
+import org.rhq.enterprise.server.measurement.MeasurementViewManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementPreferences.MetricRangePreferences;
+import org.rhq.enterprise.server.measurement.MeasurementPreferences.MetricViewData;
+import org.rhq.enterprise.server.measurement.uibean.MetricDisplaySummary;
+import org.rhq.enterprise.server.measurement.util.MeasurementUtils;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+public class IndicatorChartsUIBean {
+   private static final Log log = LogFactory.getLog(IndicatorChartsUIBean.class);
+   private MeasurementChartsManagerLocal chartsManager = LookupUtil.getMeasurementChartsManager();
+   private MeasurementViewManagerLocal viewManager = LookupUtil.getMeasurementViewManager();
+   EntityContext context;
+   List data = new ArrayList();
+   List views;
+   String view;
+
+   public EntityContext getContext() {
+      return this.context;
+   }
+
+   public List getData() {
+      return this.data;
+   }
+
+   public List getViews() {
+      return this.views;
+   }
+
+   public String getView() {
+      return this.view;
+   }
+
+   public IndicatorChartsUIBean() {
+      log.debug(&quot;Creating &quot; + IndicatorChartsUIBean.class.getSimpleName());
+      WebUser user = EnterpriseFacesContextUtility.getWebUser();
+      Subject subject = user.getSubject();
+
+      try {
+         HttpServletRequest i$ = FacesContextUtility.getRequest();
+         this.context = WebUtility.getEntityContext(i$);
+         this.view = this.viewManager.getSelectedView(subject, this.context);
+         this.views = this.viewManager.getViewNames(subject, this.context);
+         if(this.context.category == Category.Resource) {
+            this.data = this.chartsManager.getMetricDisplaySummariesForResource(subject, this.context.resourceId, this.view);
+         } else if(this.context.category == Category.ResourceGroup) {
+            this.data = this.chartsManager.getMetricDisplaySummariesForCompatibleGroup(subject, this.context.groupId, this.view);
+         } else if(this.context.category == Category.AutoGroup) {
+            this.data = this.chartsManager.getMetricDisplaySummariesForAutoGroup(subject, this.context.parentResourceId, this.context.resourceTypeId, this.view);
+         }
+
+         if(this.data != null) {
+            MetricViewData summary = new MetricViewData();
+            summary.charts = new ArrayList();
+            Iterator i$1 = this.data.iterator();
+
+            while(i$1.hasNext()) {
+               MetricDisplaySummary mds = (MetricDisplaySummary)i$1.next();
+               String chart = this.getContextKeyChart(this.context, mds);
+               log.debug(&quot;Chart was &quot; + chart);
+               summary.charts.add(chart);
+            }
+
+            this.viewManager.saveCharts(subject, this.context, this.view, summary.charts);
+         }
+      } catch (Exception var8) {
+         log.error(&quot;Error while looking up metric chart data for &quot; + this.context, var8);
+      }
+
+      Iterator i$2 = this.data.iterator();
+
+      while(i$2.hasNext()) {
+         MetricDisplaySummary summary1 = (MetricDisplaySummary)i$2.next();
+         summary1.setMetricToken(this.getContextKeyChart(this.context, summary1));
+         MonitorUtils.formatSimpleMetrics(summary1, (Locale)null);
+      }
+
+   }
+
+   private String getContextKeyChart(MetricDisplaySummary summary) {
+      MetricsDisplayMode mode = this.getDisplayModeForSummary(summary);
+      switch(IndicatorChartsUIBean.SyntheticClass_1.$SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[mode.ordinal()]) {
+      case 1:
+         if(summary.getScheduleId() != null) {
+            return summary.getResourceId() + &quot;,&quot; + summary.getScheduleId().toString();
+         }
+
+         throw new IllegalStateException(&quot;MetricsDisplayMode was \'RESOURCE\', but the scheduleId was null&quot;);
+      case 2:
+         return &quot;cg,&quot; + summary.getGroupId() + &quot;,&quot; + summary.getDefinitionId();
+      case 3:
+         return &quot;ag,&quot; + summary.getParentId() + &quot;,&quot; + summary.getDefinitionId() + &quot;,&quot; + summary.getChildTypeId();
+      default:
+         throw new IllegalArgumentException(&quot;Unknown or unsupported MetricsDisplayMode \'&quot; + mode + &quot;\'&quot;);
+      }
+   }
+
+   private String getContextKeyChart(EntityContext context, MetricDisplaySummary summary) {
+      if(context.category == Category.Resource) {
+         if(summary.getScheduleId() != null) {
+            return context.getResourceId() + &quot;,&quot; + summary.getScheduleId().toString();
+         } else {
+            throw new IllegalStateException(&quot;MetricsDisplayMode was \'RESOURCE\', but the scheduleId was null&quot;);
+         }
+      } else if(context.category == Category.ResourceGroup) {
+         return &quot;cg,&quot; + context.getGroupId() + &quot;,&quot; + summary.getDefinitionId();
+      } else if(context.category == Category.AutoGroup) {
+         return &quot;ag,&quot; + context.getParentResourceId() + &quot;,&quot; + summary.getDefinitionId() + &quot;,&quot; + context.getResourceTypeId();
+      } else {
+         throw new IllegalArgumentException(&quot;Unknown or unsupported context \'&quot; + context + &quot;\'&quot;);
+      }
+   }
+
+   private void storeMetricsInSession(HttpServletRequest request, List metrics, IndicatorViewsForm form) throws ServletException, SessionTimeoutException, SessionNotFoundException {
+      request.setAttribute(&quot;chartDataKeys&quot;, metrics);
+      String[] scheduleIds = new String[metrics.size()];
+      int i = 0;
+
+      MetricDisplaySummary key;
+      for(Iterator context = metrics.iterator(); context.hasNext(); scheduleIds[i++] = this.getContextKeyChart(key)) {
+         key = (MetricDisplaySummary)context.next();
+      }
+
+      form.setMetric(scheduleIds);
+      EntityContext var9 = new EntityContext(form.getId(), Integer.valueOf(form.getGroupId()), Integer.valueOf(form.getParent()), form.getCtype());
+      String var10 = var9.getLegacyKey() + &quot;.&quot; + form.getView();
+      HttpSession session = request.getSession();
+      session.setAttribute(var10, metrics);
+      session.setAttribute(&quot;metricKey&quot;, var10);
+      this.storeMetricsInUserPreferences(request, metrics, form);
+   }
+
+   private List retrieveMetricsFromSession(HttpServletRequest request, IndicatorViewsForm form) throws SessionNotFoundException, SessionTimeoutException, PermissionException, ServletException {
+      Object metrics = new ArrayList();
+      Subject subject = WebUtility.getSubject(request);
+
+      try {
+         String e = form.getView();
+         EntityContext context = null;
+
+         try {
+            context = new EntityContext(form.getId(), Integer.valueOf(form.getGroupId()), Integer.valueOf(form.getParent()), form.getCtype());
+         } catch (IllegalArgumentException var8) {
+            context = WebUtility.getEntityContext();
+         }
+
+         if(context.category == Category.Resource) {
+            metrics = this.chartsManager.getMetricDisplaySummariesForResource(subject, context.resourceId, e);
+         } else if(context.category == Category.ResourceGroup) {
+            metrics = this.chartsManager.getMetricDisplaySummariesForCompatibleGroup(subject, context.groupId, e);
+         } else {
+            if(context.category != Category.AutoGroup) {
+               throw new IllegalArgumentException(&quot;Unknown or unsupported context: &quot; + context);
+            }
+
+            metrics = this.chartsManager.getMetricDisplaySummariesForAutoGroup(subject, context.parentResourceId, context.resourceTypeId, e);
+         }
+      } catch (Exception var9) {
+         log.error(&quot;Error loading metrics (they were not found in the session)&quot;, var9);
+      }
+
+      return (List)metrics;
+   }
+
+   public ActionForward fresh(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; fresh&quot;);
+      HttpSession session = request.getSession();
+      WebUser user = SessionUtils.getWebUser(session);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      String viewName = ivf.getView();
+      Object metrics = new ArrayList();
+      EntityContext context = WebUtility.getEntityContext(request);
+
+      try {
+         List i$1 = this.viewManager.getCharts(user.getSubject(), context, viewName);
+         Iterator summary1 = i$1.iterator();
+
+         while(summary1.hasNext()) {
+            String token = (String)summary1.next();
+            MetricDisplaySummary tmp = MeasurementUtils.parseMetricToken(token);
+            ((List)metrics).add(tmp);
+         }
+
+         List metrics1 = this.reloadMetrics(request, (List)metrics, true);
+         this.storeMetricsInSession(request, metrics1, ivf);
+         return mapping.findForward(&quot;success&quot;);
+      } catch (MeasurementViewException var15) {
+         if(log.isDebugEnabled()) {
+            log.debug(&quot;Error getting charts: &quot; + var15.getMessage());
+         }
+
+         Iterator i$;
+         MetricDisplaySummary summary;
+         if(context.category == Category.Resource) {
+            metrics = this.chartsManager.getMetricDisplaySummariesForResource(user.getSubject(), context.resourceId, viewName);
+            i$ = ((List)metrics).iterator();
+
+            while(i$.hasNext()) {
+               summary = (MetricDisplaySummary)i$.next();
+               summary.setMetricToken(this.getContextKeyChart(summary));
+               MonitorUtils.formatSimpleMetrics(summary, (Locale)null);
+            }
+         } else if(context.category == Category.ResourceGroup) {
+            metrics = this.chartsManager.getMetricDisplaySummariesForCompatibleGroup(user.getSubject(), context.groupId, viewName);
+            i$ = ((List)metrics).iterator();
+
+            while(i$.hasNext()) {
+               summary = (MetricDisplaySummary)i$.next();
+               summary.setMetricToken(this.getContextKeyChart(summary));
+               MonitorUtils.formatSimpleMetrics(summary, (Locale)null);
+            }
+
+            request.setAttribute(&quot;chartDataKeys&quot;, metrics);
+         } else if(context.category == Category.AutoGroup) {
+            metrics = this.chartsManager.getMetricDisplaySummariesForAutoGroup(user.getSubject(), context.parentResourceId, context.resourceTypeId, viewName);
+            i$ = ((List)metrics).iterator();
+
+            while(i$.hasNext()) {
+               summary = (MetricDisplaySummary)i$.next();
+               summary.setMetricToken(this.getContextKeyChart(summary));
+               MonitorUtils.formatSimpleMetrics(summary, (Locale)null);
+            }
+
+            request.setAttribute(&quot;chartDataKeys&quot;, metrics);
+         }
+
+         this.storeMetricsInSession(request, (List)metrics, ivf);
+         return mapping.findForward(&quot;success&quot;);
+      }
+   }
+
+   private List reloadMetrics(HttpServletRequest request, List metrics, boolean force) {
+      HttpSession session = request.getSession();
+      WebUser user = SessionUtils.getWebUser(session);
+      MeasurementPreferences preferences = user.getMeasurementPreferences();
+      MetricRangePreferences rangePreferences = preferences.getMetricRangePreferences();
+      long begin = rangePreferences.begin.longValue();
+      long end = rangePreferences.end.longValue();
+      ArrayList ret = new ArrayList(metrics.size());
+      Locale userLocale = request.getLocale();
+      Iterator i$ = metrics.iterator();
+
+      while(true) {
+         while(i$.hasNext()) {
+            MetricDisplaySummary sum = (MetricDisplaySummary)i$.next();
+            MetricsDisplayMode mode = this.getDisplayModeForSummary(sum);
+            List tmpList;
+            switch(IndicatorChartsUIBean.SyntheticClass_1.$SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[mode.ordinal()]) {
+            case 1:
+               tmpList = this.chartsManager.getMetricDisplaySummariesForResource(user.getSubject(), sum.getResourceId(), new int[]{sum.getScheduleId().intValue()}, begin, end);
+               break;
+            case 2:
+               tmpList = this.chartsManager.getMetricDisplaySummariesForCompatibleGroup(user.getSubject(), sum.getGroupId(), new int[]{sum.getDefinitionId().intValue()}, begin, end, false);
+               break;
+            case 3:
+               tmpList = this.chartsManager.getMetricDisplaySummariesForAutoGroup(user.getSubject(), sum.getParentId(), sum.getChildTypeId(), new int[]{sum.getDefinitionId().intValue()}, begin, end, false);
+               break;
+            default:
+               tmpList = null;
+            }
+
+            if(tmpList != null &amp;&amp; tmpList.size() &gt; 0) {
+               MetricDisplaySummary tmp = (MetricDisplaySummary)tmpList.get(0);
+               tmp.setMetricToken(this.getContextKeyChart(tmp));
+               if(tmp.getMetricKeys().length &gt; 0) {
+                  MonitorUtils.formatSimpleMetrics(tmp, userLocale);
+               }
+
+               ret.add(tmp);
+            } else if(log.isDebugEnabled()) {
+               log.debug(&quot;We did not get a result back for &quot; + sum);
+            }
+         }
+
+         return ret;
+      }
+   }
+
+   public ActionForward refresh(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; refresh&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      List metrics = this.retrieveMetricsFromSession(request, ivf);
+      metrics = this.reloadMetrics(request, metrics, false);
+      this.storeMetricsInSession(request, metrics, ivf);
+      return mapping.findForward(&quot;success&quot;);
+   }
+
+   public ActionForward add(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; add&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      List metrics = this.retrieveMetricsFromSession(request, ivf);
+      if(metrics == null) {
+         return mapping.findForward(&quot;failure&quot;);
+      } else {
+         String newMetric = ivf.getAddMetric();
+         MetricDisplaySummary newSummary = MeasurementUtils.parseMetricToken(newMetric);
+         MetricsDisplayMode mode = this.getDisplayModeForSummary(newSummary);
+         boolean found = false;
+         Iterator newSummaries = metrics.iterator();
+
+         while(newSummaries.hasNext()) {
+            MetricDisplaySummary user = (MetricDisplaySummary)newSummaries.next();
+            Integer preferences = user.getDefinitionId();
+            switch(IndicatorChartsUIBean.SyntheticClass_1.$SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[mode.ordinal()]) {
+            case 1:
+               Integer rangePreferences = user.getScheduleId();
+               if(rangePreferences != null &amp;&amp; rangePreferences.equals(newSummary.getScheduleId())) {
+                  found = true;
+               }
+               break;
+            case 2:
+               if(user.getGroupId() == newSummary.getGroupId() &amp;&amp; preferences == newSummary.getDefinitionId()) {
+                  found = true;
+               }
+               break;
+            case 3:
+               int begin = user.getParentId();
+               int type = user.getChildTypeId();
+               if(begin == newSummary.getParentId() &amp;&amp; type == newSummary.getChildTypeId() &amp;&amp; preferences == newSummary.getDefinitionId()) {
+                  found = true;
+               }
+               break;
+            default:
+               throw new IllegalArgumentException(mode + &quot; not valid here&quot;);
+            }
+         }
+
+         Object newSummaries1 = new ArrayList();
+         if(!found) {
+            WebUser user1 = SessionUtils.getWebUser(request.getSession());
+            MeasurementPreferences preferences1 = user1.getMeasurementPreferences();
+            MetricRangePreferences rangePreferences1 = preferences1.getMetricRangePreferences();
+            long begin1 = rangePreferences1.begin.longValue();
+            long end = rangePreferences1.end.longValue();
+            switch(IndicatorChartsUIBean.SyntheticClass_1.$SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[mode.ordinal()]) {
+            case 1:
+               newSummaries1 = this.chartsManager.getMetricDisplaySummariesForResource(user1.getSubject(), newSummary.getResourceId(), new int[]{newSummary.getScheduleId().intValue()}, begin1, end);
+               break;
+            case 2:
+               newSummaries1 = this.chartsManager.getMetricDisplaySummariesForCompatibleGroup(user1.getSubject(), newSummary.getGroupId(), new int[]{newSummary.getDefinitionId().intValue()}, begin1, end, false);
+               break;
+            case 3:
+               newSummaries1 = this.chartsManager.getMetricDisplaySummariesForAutoGroup(user1.getSubject(), newSummary.getParentId(), newSummary.getChildTypeId(), new int[]{newSummary.getDefinitionId().intValue()}, begin1, end, false);
+               break;
+            default:
+               throw new IllegalArgumentException(mode + &quot; not valid here&quot;);
+            }
+         }
+
+         metrics.addAll((Collection)newSummaries1);
+         this.storeMetricsInSession(request, metrics, ivf);
+         return this.refresh(mapping, form, request, response);
+      }
+   }
+
+   public ActionForward remove(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; remove&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      Subject subject = WebUtility.getSubject(request);
+      EntityContext context = new EntityContext(ivf.getId(), Integer.valueOf(ivf.getGroupId()), Integer.valueOf(ivf.getParent()), ivf.getCtype());
+      this.viewManager.removeChart(subject, context, ivf.getView(), ivf.getMetric()[0]);
+      List metrics = this.retrieveMetricsFromSession(request, ivf);
+      this.storeMetricsInSession(request, metrics, ivf);
+      return mapping.findForward(&quot;ajax&quot;);
+   }
+
+   public ActionForward moveUp(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; moveUp&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      Subject subject = WebUtility.getSubject(request);
+      EntityContext context = new EntityContext(ivf.getId(), Integer.valueOf(ivf.getGroupId()), Integer.valueOf(ivf.getParent()), ivf.getCtype());
+      this.viewManager.moveChartUp(subject, context, ivf.getView(), ivf.getMetric()[0]);
+      List metrics = this.retrieveMetricsFromSession(request, ivf);
+      this.storeMetricsInSession(request, metrics, ivf);
+      return mapping.findForward(&quot;ajax&quot;);
+   }
+
+   public ActionForward moveDown(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; moveDown&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      Subject subject = WebUtility.getSubject(request);
+      EntityContext context = new EntityContext(ivf.getId(), Integer.valueOf(ivf.getGroupId()), Integer.valueOf(ivf.getParent()), ivf.getCtype());
+      this.viewManager.moveChartDown(subject, context, ivf.getView(), ivf.getMetric()[0]);
+      List metrics = this.retrieveMetricsFromSession(request, ivf);
+      this.storeMetricsInSession(request, metrics, ivf);
+      return mapping.findForward(&quot;ajax&quot;);
+   }
+
+   public ActionForward go(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; go&quot;);
+      return mapping.findForward(&quot;currentHealth&quot;);
+   }
+
+   private static int indexOfSpecialChars(String aTagFragment) {
+      StringCharacterIterator iterator = new StringCharacterIterator(aTagFragment);
+      int i = 0;
+      char character = iterator.current();
+
+      while(character != '\uffff') {
+         switch(character) {
+         case '\&quot;':
+         case '&amp;':
+         case '\'':
+         case '&lt;':
+         case '&gt;':
+         case '?':
+         case '\\':
+         case '|':
+            return i;
+         default:
+            character = iterator.next();
+            ++i;
+         }
+      }
+
+      return -1;
+   }
+
+   public ActionForward create(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; create&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      WebUser user = SessionUtils.getWebUser(request.getSession());
+      MeasurementPreferences preferences = user.getMeasurementPreferences();
+      String newViewName = ivf.getView();
+      if(newViewName.length() == 0) {
+         RequestUtils.setError(request, &quot;resource.common.monitor.visibility.view.error.empty&quot;);
+         return mapping.findForward(&quot;currentHealth&quot;);
+      } else if(indexOfSpecialChars(newViewName) &gt; -1) {
+         RequestUtils.setError(request, &quot;error.input.badchars&quot;);
+         return mapping.findForward(&quot;currentHealth&quot;);
+      } else {
+         EntityContext context = new EntityContext(ivf.getId(), Integer.valueOf(ivf.getGroupId()), Integer.valueOf(ivf.getParent()), ivf.getCtype());
+
+         try {
+            this.viewManager.createView(user.getSubject(), context, newViewName);
+         } catch (MeasurementViewException var11) {
+            RequestUtils.setError(request, &quot;resource.common.monitor.visibility.view.error.exists&quot;);
+            return mapping.findForward(&quot;currentHealth&quot;);
+         }
+
+         List viewNames = this.viewManager.getViewNames(user.getSubject(), context);
+         ivf.setViews((String[])viewNames.toArray(new String[viewNames.size()]));
+         return this.update(mapping, ivf, request, response);
+      }
+   }
+
+   public ActionForward update(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; update&quot;);
+      this.refresh(mapping, form, request, response);
+      return mapping.findForward(&quot;currentHealth&quot;);
+   }
+
+   private void storeMetricsInUserPreferences(HttpServletRequest request, List metrics, IndicatorViewsForm ivf) throws SessionNotFoundException, SessionTimeoutException, ServletException {
+      MetricViewData data = new MetricViewData();
+      data.charts = new ArrayList();
+      Iterator subject = metrics.iterator();
+
+      while(subject.hasNext()) {
+         MetricDisplaySummary context = (MetricDisplaySummary)subject.next();
+         String chart = this.getContextKeyChart(context);
+         data.charts.add(chart);
+      }
+
+      Subject subject1 = WebUtility.getSubject(request);
+      EntityContext context1 = new EntityContext(ivf.getId(), Integer.valueOf(ivf.getGroupId()), Integer.valueOf(ivf.getParent()), ivf.getCtype());
+      this.viewManager.saveCharts(subject1, context1, ivf.getView(), data.charts);
+   }
+
+   public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+      log.debug(&quot;Calling &quot; + IndicatorChartsUIBean.class.getSimpleName() + &quot; delete&quot;);
+      IndicatorViewsForm ivf = (IndicatorViewsForm)form;
+      Subject subject = WebUtility.getSubject(request);
+      String doomedView = ivf.getUpdate();
+      EntityContext context = new EntityContext(ivf.getId(), Integer.valueOf(ivf.getGroupId()), Integer.valueOf(ivf.getParent()), ivf.getCtype());
+      this.viewManager.deleteView(subject, context, doomedView);
+      return mapping.findForward(&quot;currentHealth&quot;);
+   }
+
+   private MetricsDisplayMode getDisplayModeForSummary(MetricDisplaySummary summary) {
+      if(summary.getResourceId() &gt; 0) {
+         return MetricsDisplayMode.RESOURCE;
+      } else if(summary.getGroupId() &gt; 0) {
+         return MetricsDisplayMode.COMPGROUP;
+      } else if(summary.getParentId() &gt; 0 &amp;&amp; summary.getChildTypeId() &gt; 0) {
+         return MetricsDisplayMode.AUTOGROUP;
+      } else {
+         log.debug(&quot;Mode could not be determined for &quot; + summary);
+         return MetricsDisplayMode.UNSET;
+      }
+   }
+
+   public String processAction() {
+      Subject subject = EnterpriseFacesContextUtility.getSubject();
+      HttpServletRequest request = FacesContextUtility.getRequest();
+      EntityContext context = WebUtility.getEntityContext(request);
+      String action = WebUtility.getOptionalRequestParameter(request, &quot;action&quot;, (String)null);
+      String viewName = WebUtility.getOptionalRequestParameter(request, &quot;view&quot;, (String)null);
+      if(action != null) {
+         if(action.equals(&quot;create&quot;)) {
+            try {
+               if(viewName != null &amp;&amp; !viewName.equals(&quot;&quot;)) {
+                  this.viewManager.createView(subject, context, viewName);
+                  this.viewManager.setSelectedView(subject, context, viewName);
+               }
+            } catch (MeasurementViewException var9) {
+               ;
+            }
+         } else if(action.equals(&quot;delete&quot;)) {
+            try {
+               this.viewManager.deleteView(subject, context, this.view);
+            } catch (Exception var8) {
+               log.error(&quot;Error deleting view &quot; + this.view + &quot; for &quot; + context.toShortString(), var8);
+            }
+
+            List remainingViews = this.viewManager.getViewNames(subject, context);
+            String newSelectedView = (String)remainingViews.get(0);
+            this.viewManager.setSelectedView(subject, context, newSelectedView);
+            this.view = newSelectedView;
+         } else if(action.equals(&quot;go&quot;)) {
+            this.viewManager.setSelectedView(subject, context, viewName);
+         }
+      }
+
+      return &quot;success&quot;;
+   }
+
+   // $FF: synthetic class
+   static class SyntheticClass_1 {
+      // $FF: synthetic field
+      static final int[] $SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode = new int[MetricsDisplayMode.values().length];
+
+      static {
+         try {
+            $SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[MetricsDisplayMode.RESOURCE.ordinal()] = 1;
+         } catch (NoSuchFieldError var3) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[MetricsDisplayMode.COMPGROUP.ordinal()] = 2;
+         } catch (NoSuchFieldError var2) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$enterprise$gui$util$MetricsDisplayMode[MetricsDisplayMode.AUTOGROUP.ordinal()] = 3;
+         } catch (NoSuchFieldError var1) {
+            ;
+         }
+
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "163,162" });
+
+            $("<div id='163-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(163)');
+            $("<div id='162-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(162)');
+
+
+$("<a name='12440832' class='windup-file-location'></a><div class='inline-source-comment green tag-clustering'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>HTTP Session data storage</strong><a title='View Rule: session-00001' href='windup_ruleproviders.html#session-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The servlet container uses HttpSession to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user. <code>HttpSession.setAttribute<\/code> method allows user information to persist across multiple user connections Warning: As of Java Servlet Version 2.2, the <code>javax.http.HTTPSession.putValue(java.lang.String name,java.lang.Object value)<\/code> method is deprecated and replaced by <code>javax.http.HttpSession.setAttribute(java.lang.String, java.lang.Object)<\/code><\/p><p>In a cloud environment it has to be considered that the data in the memory of a running container can be wiped out by a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location)[1]. Consider storing HTTPSession data to a cache backing service[2][3][4][5] This approach has some benefits:<\/p>\n<ul>\n  <li>Increased application scalability and elasticity. By offloading the session data off to a remote Data Grid, the application tier itself can be more scalable and elastic.<\/li>\n  <li>Session Persistence. By offloading session data to a remote data grid, the application itself will be able to survive EAP node failures since the a JVM failure will not cause the session data to be lost.<\/li>\n  <li>Session Data Sharing. If you have a requirement for multiple applications to be able to share session data, this solution might be able to solve that use case as well.<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/processes\" target=\"_blank\">Twelve-factor app - Processes<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_high_availability#externalize-http-sessions-to-jdg\" target=\"_blank\">JBoss EAP - Externalize HTTP Sessions to JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://developers.redhat.com/blog/2015/11/23/externalize-http-session-data-to-jboss-data-grid/\" target=\"_blank\">Developer blog post - Externalize HTTP Session Data to the JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html/red_hat_jboss_data_grid_for_openshift/\" target=\"_blank\">Red Hat JBoss Data Grid for OpenShift<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#163-inlines');
+
+$("<a name='12442112' class='windup-file-location'></a><div class='inline-source-comment green tag-clustering'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>HTTP Session data storage</strong><a title='View Rule: session-00001' href='windup_ruleproviders.html#session-00001'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The servlet container uses HttpSession to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user. <code>HttpSession.setAttribute<\/code> method allows user information to persist across multiple user connections Warning: As of Java Servlet Version 2.2, the <code>javax.http.HTTPSession.putValue(java.lang.String name,java.lang.Object value)<\/code> method is deprecated and replaced by <code>javax.http.HttpSession.setAttribute(java.lang.String, java.lang.Object)<\/code><\/p><p>In a cloud environment it has to be considered that the data in the memory of a running container can be wiped out by a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location)[1]. Consider storing HTTPSession data to a cache backing service[2][3][4][5] This approach has some benefits:<\/p>\n<ul>\n  <li>Increased application scalability and elasticity. By offloading the session data off to a remote Data Grid, the application tier itself can be more scalable and elastic.<\/li>\n  <li>Session Persistence. By offloading session data to a remote data grid, the application itself will be able to survive EAP node failures since the a JVM failure will not cause the session data to be lost.<\/li>\n  <li>Session Data Sharing. If you have a requirement for multiple applications to be able to share session data, this solution might be able to solve that use case as well.<\/li>\n<\/ul><p>References:<\/p>\n<ol>\n  <li><a href=\"https://12factor.net/processes\" target=\"_blank\">Twelve-factor app - Processes<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_high_availability#externalize-http-sessions-to-jdg\" target=\"_blank\">JBoss EAP - Externalize HTTP Sessions to JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://developers.redhat.com/blog/2015/11/23/externalize-http-session-data-to-jboss-data-grid/\" target=\"_blank\">Developer blog post - Externalize HTTP Session Data to the JBoss Data Grid<\/a><\/li>\n  <li><a href=\"https://12factor.net/backing-services\" target=\"_blank\">Twelve-factor app - Backing services<\/a><\/li>\n  <li><a href=\"https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html/red_hat_jboss_data_grid_for_openshift/\" target=\"_blank\">Red Hat JBoss Data Grid for OpenShift<\/a><\/li>\n<\/ol></div></div></div>").appendTo('#162-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

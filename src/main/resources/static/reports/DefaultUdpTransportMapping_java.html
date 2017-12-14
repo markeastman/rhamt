@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for DefaultUdpTransportMapping.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/lib/snmp4j-1.8.2.jar/org/snmp4j/transport/DefaultUdpTransportMapping.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">145</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.snmp4j.transport;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.PortUnreachableException;
+import java.net.SocketAddress;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import java.nio.ByteBuffer;
+import org.snmp4j.SNMP4JSettings;
+import org.snmp4j.log.LogAdapter;
+import org.snmp4j.log.LogFactory;
+import org.snmp4j.smi.Address;
+import org.snmp4j.smi.OctetString;
+import org.snmp4j.smi.UdpAddress;
+import org.snmp4j.transport.UdpTransportMapping;
+
+public class DefaultUdpTransportMapping extends UdpTransportMapping {
+   private static final LogAdapter logger;
+   protected DatagramSocket socket = null;
+   protected DefaultUdpTransportMapping.ListenThread listener;
+   private int socketTimeout = 1000;
+   private int receiveBufferSize = 0;
+
+   public DefaultUdpTransportMapping() throws IOException {
+      super(new UdpAddress(InetAddress.getLocalHost(), 0));
+      this.socket = new DatagramSocket(this.udpAddress.getPort());
+   }
+
+   public DefaultUdpTransportMapping(UdpAddress var1, boolean var2) throws IOException {
+      super(var1);
+      this.socket = new DatagramSocket((SocketAddress)null);
+      this.socket.setReuseAddress(var2);
+      InetSocketAddress var3 = new InetSocketAddress(var1.getInetAddress(), var1.getPort());
+      this.socket.bind(var3);
+   }
+
+   public DefaultUdpTransportMapping(UdpAddress var1) throws IOException {
+      super(var1);
+      this.socket = new DatagramSocket(var1.getPort(), var1.getInetAddress());
+   }
+
+   public void sendMessage(Address var1, byte[] var2) throws IOException {
+      InetSocketAddress var3 = new InetSocketAddress(((UdpAddress)var1).getInetAddress(), ((UdpAddress)var1).getPort());
+      if(logger.isDebugEnabled()) {
+         logger.debug(&quot;Sending message to &quot; + var1 + &quot; with length &quot; + var2.length + &quot;: &quot; + (new OctetString(var2)).toHexString());
+      }
+
+      this.socket.send(new DatagramPacket(var2, var2.length, var3));
+   }
+
+   public void close() throws IOException {
+      DefaultUdpTransportMapping.ListenThread var1 = this.listener;
+      if(var1 != null) {
+         var1.close();
+         var1.interrupt();
+         if(this.socketTimeout &gt; 0) {
+            try {
+               var1.join();
+            } catch (InterruptedException var3) {
+               logger.warn(var3);
+            }
+         }
+
+         this.listener = null;
+      }
+
+      if(!this.socket.isClosed()) {
+         this.socket.disconnect();
+         this.socket.close();
+      }
+
+   }
+
+   public synchronized void listen() throws IOException {
+      if(this.listener != null) {
+         throw new SocketException(&quot;Port already listening&quot;);
+      } else {
+         this.listener = new DefaultUdpTransportMapping.ListenThread();
+         this.listener.setDaemon(true);
+         this.listener.start();
+      }
+   }
+
+   public void setPriority(int var1) {
+      DefaultUdpTransportMapping.ListenThread var2 = this.listener;
+      if(var2 != null) {
+         var2.setPriority(var1);
+      }
+
+   }
+
+   public int getPriority() {
+      DefaultUdpTransportMapping.ListenThread var1 = this.listener;
+      return var1 != null?var1.getPriority():5;
+   }
+
+   public void setThreadName(String var1) {
+      DefaultUdpTransportMapping.ListenThread var2 = this.listener;
+      if(var2 != null) {
+         var2.setName(var1);
+      }
+
+   }
+
+   public String getThreadName() {
+      DefaultUdpTransportMapping.ListenThread var1 = this.listener;
+      return var1 != null?var1.getName():null;
+   }
+
+   public void setMaxInboundMessageSize(int var1) {
+      this.maxInboundMessageSize = var1;
+   }
+
+   public int getSocketTimeout() {
+      return this.socketTimeout;
+   }
+
+   public int getReceiveBufferSize() {
+      return this.receiveBufferSize;
+   }
+
+   public void setReceiveBufferSize(int var1) {
+      if(var1 &lt;= 0) {
+         throw new IllegalArgumentException(&quot;Receive buffer size must be &gt; 0&quot;);
+      } else {
+         this.receiveBufferSize = var1;
+      }
+   }
+
+   public void setSocketTimeout(int var1) {
+      this.socketTimeout = var1;
+   }
+
+   public boolean isListening() {
+      return this.listener != null;
+   }
+
+   static {
+      logger = LogFactory.getLogger(DefaultUdpTransportMapping.class);
+   }
+
+   class ListenThread extends Thread {
+      private byte[] buf = new byte[DefaultUdpTransportMapping.this.getMaxInboundMessageSize()];
+      private volatile boolean stop = false;
+
+      public ListenThread() throws SocketException {
+         this.setName(&quot;DefaultUDPTransportMapping_&quot; + DefaultUdpTransportMapping.this.getAddress());
+      }
+
+      public void run() {
+         try {
+            DefaultUdpTransportMapping.this.socket.setSoTimeout(DefaultUdpTransportMapping.this.getSocketTimeout());
+            if(DefaultUdpTransportMapping.this.receiveBufferSize &gt; 0) {
+               DefaultUdpTransportMapping.this.socket.setReceiveBufferSize(Math.max(DefaultUdpTransportMapping.this.receiveBufferSize, DefaultUdpTransportMapping.this.maxInboundMessageSize));
+            }
+
+            if(DefaultUdpTransportMapping.logger.isInfoEnabled()) {
+               DefaultUdpTransportMapping.logger.info(&quot;UDP receive buffer size for socket &quot; + DefaultUdpTransportMapping.this.getAddress() + &quot; is set to: &quot; + DefaultUdpTransportMapping.this.socket.getReceiveBufferSize());
+            }
+         } catch (SocketException var8) {
+            DefaultUdpTransportMapping.logger.error(var8);
+            DefaultUdpTransportMapping.this.setSocketTimeout(0);
+         }
+
+         while(!this.stop) {
+            DatagramPacket var1 = new DatagramPacket(this.buf, this.buf.length, DefaultUdpTransportMapping.this.udpAddress.getInetAddress(), DefaultUdpTransportMapping.this.udpAddress.getPort());
+
+            try {
+               DefaultUdpTransportMapping.this.socket.receive(var1);
+               if(DefaultUdpTransportMapping.logger.isDebugEnabled()) {
+                  DefaultUdpTransportMapping.logger.debug(&quot;Received message from &quot; + var1.getAddress() + &quot;/&quot; + var1.getPort() + &quot; with length &quot; + var1.getLength() + &quot;: &quot; + (new OctetString(var1.getData(), 0, var1.getLength())).toHexString());
+               }
+
+               ByteBuffer var2;
+               if(DefaultUdpTransportMapping.this.isAsyncMsgProcessingSupported()) {
+                  byte[] var13 = new byte[var1.getLength()];
+                  System.arraycopy(var1.getData(), 0, var13, 0, var13.length);
+                  var2 = ByteBuffer.wrap(var13);
+               } else {
+                  var2 = ByteBuffer.wrap(var1.getData());
+               }
+
+               DefaultUdpTransportMapping.this.fireProcessMessage(new UdpAddress(var1.getAddress(), var1.getPort()), var2);
+            } catch (SocketTimeoutException var9) {
+               ;
+            } catch (PortUnreachableException var10) {
+               DefaultUdpTransportMapping var3 = DefaultUdpTransportMapping.this;
+               synchronized(DefaultUdpTransportMapping.this) {
+                  DefaultUdpTransportMapping.this.listener = null;
+               }
+
+               DefaultUdpTransportMapping.logger.error(var10);
+               if(DefaultUdpTransportMapping.logger.isDebugEnabled()) {
+                  var10.printStackTrace();
+               }
+
+               if(SNMP4JSettings.isFowardRuntimeExceptions()) {
+                  throw new RuntimeException(var10);
+               }
+               break;
+            } catch (IOException var11) {
+               DefaultUdpTransportMapping.logger.warn(var11);
+               if(DefaultUdpTransportMapping.logger.isDebugEnabled()) {
+                  var11.printStackTrace();
+               }
+
+               if(SNMP4JSettings.isFowardRuntimeExceptions()) {
+                  throw new RuntimeException(var11);
+               }
+            }
+         }
+
+         DefaultUdpTransportMapping var12 = DefaultUdpTransportMapping.this;
+         synchronized(DefaultUdpTransportMapping.this) {
+            DefaultUdpTransportMapping.this.listener = null;
+            this.stop = true;
+            DefaultUdpTransportMapping.this.socket.close();
+         }
+      }
+
+      public void close() {
+         this.stop = true;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "164,71,47,188,37,156,221,72,52,23,7,173,150,9,5,162,10,38,35,158,80,36,73,43,37,30,11,80,47" });
+
+            $("<div id='164-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(164)');
+            $("<div id='71-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(71)');
+            $("<div id='47-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(47)');
+            $("<div id='188-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(188)');
+            $("<div id='37-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(37)');
+            $("<div id='156-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(156)');
+            $("<div id='221-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(221)');
+            $("<div id='72-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(72)');
+            $("<div id='52-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(52)');
+            $("<div id='23-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(23)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='173-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(173)');
+            $("<div id='150-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(150)');
+            $("<div id='9-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(9)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='162-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(162)');
+            $("<div id='10-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(10)');
+            $("<div id='38-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(38)');
+            $("<div id='35-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(35)');
+            $("<div id='158-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(158)');
+            $("<div id='80-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(80)');
+            $("<div id='36-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(36)');
+            $("<div id='73-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(73)');
+            $("<div id='43-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(43)');
+            $("<div id='37-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(37)');
+            $("<div id='30-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(30)');
+            $("<div id='11-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(11)');
+            $("<div id='80-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(80)');
+            $("<div id='47-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(47)');
+
+
+$("<a name='12391168' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#164-inlines');
+
+$("<a name='12392192' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#71-inlines');
+
+$("<a name='12392704' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#47-inlines');
+
+$("<a name='12393216' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#188-inlines');
+
+$("<a name='12394240' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#37-inlines');
+
+$("<a name='12396288' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#156-inlines');
+
+$("<a name='12399360' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#221-inlines');
+
+$("<a name='12399872' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#72-inlines');
+
+$("<a name='12401408' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#52-inlines');
+
+$("<a name='12403456' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#23-inlines');
+
+$("<a name='12406016' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='12407040' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#173-inlines');
+
+$("<a name='12407552' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#150-inlines');
+
+$("<a name='12408576' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#9-inlines');
+
+$("<a name='12410112' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='12410624' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#162-inlines');
+
+$("<a name='12411136' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#10-inlines');
+
+$("<a name='12411648' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#38-inlines');
+
+$("<a name='12412672' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#35-inlines');
+
+$("<a name='12413184' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#158-inlines');
+
+$("<a name='12413696' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#80-inlines');
+
+$("<a name='12415232' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#36-inlines');
+
+$("<a name='12416768' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#73-inlines');
+
+$("<a name='12417280' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#43-inlines');
+
+$("<a name='12417792' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#37-inlines');
+
+$("<a name='12421888' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#30-inlines');
+
+$("<a name='12422400' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#11-inlines');
+
+$("<a name='12422912' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#80-inlines');
+
+$("<a name='12424960' class='windup-file-location'></a><div class='inline-source-comment green tag-socket'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Socket communication</strong><a title='View Rule: socket-communication-00000' href='windup_ruleproviders.html#socket-communication-00000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Java sockets are internal end-points of two-way communications. They are defined by an IP address, port, and protocol (TCP/UDP).<br/>Direct communication through sockets and channels is an anti-pattern in cloud environment because it is not a reliable and scalable way of interact with other systems.<br/>Java EE standard and loosely coupled protocols like JMS, JAX-RS and JAX-WS are recommended for backing services interactions.<\/p><ul><li><a href='https://12factor.net/backing-services' target='_blank'>Twelve-factor app - Backing services</a></li></ul></div></div></div>").appendTo('#47-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

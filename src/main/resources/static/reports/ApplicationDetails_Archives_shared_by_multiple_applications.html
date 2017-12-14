@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>shared-libs - Application Details</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen">
+    <link href="resources/css/windup.java.css" rel="stylesheet" media="screen">
+    <link href="resources/img/rhamt-icon-128.png" rel="shortcut icon" type="image/x-icon"/>
+    <script src="resources/js/windup-overview-head.js"></script>
+    <style>
+        .desc { z-index: 5000; }
+        
+        /* Light yellow bg for the issue info box. */
+        .hint-detail-panel > .panel-heading {
+            border-color: #c2c2c2;
+            background-color: #fbf4b1;
+        }
+        .hint-detail-panel {
+            border-color: #a8d0e3;
+            background-color: #fffcdc;
+        }
+        /* Reduce the padding, default is too big. */
+        .hint-detail-panel > .panel-body { padding-bottom: 0; }
+    </style>
+</head>
+<body role="document" class="java-application report-Application Details">
+
+    <!-- Navbar -->
+    <div id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_Archives_shared_by_multiple_applications.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.8.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="active">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_Archives_shared_by_multiple_applications.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_Archives_shared_by_multiple_applications.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_Archives_shared_by_multiple_applications.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+        </div><!-- /.nav-collapse -->
+    </div>
+    <!-- / Navbar -->
+
+    <div class="container-fluid" role="main">
+
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Application Details</div>
+                    <div class="path">shared-libs</div>
+                </h1>
+                <div class="desc">
+                    An exhaustive list of all of the information and issues found within the application.
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="row container-fluid">
+            <div class="container mainGraphContainer">
+                <table class="summaryLayout" style="width: 100%;">
+                    <tr>
+                        <td colspan="2">
+                            <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                                <div class="number">23</div>
+                                <div>Story Points</div>
+                            </div>
+                            <div id="treeView-Projects-wrap" class="short">
+                                <div id="overlayFog" class="showMore">
+                                    <span style="position: relative; top: 4ex; left: 4em;" class="hideWhenComputed">Computing...</span>
+                                </div>
+                                <div id="treeView-Projects"></div>
+                                <div class="showButtons hideUntilComputed">
+                                    <a class="showMore" href="#" onclick='$("#treeView-Projects-wrap").removeClass("short")'>Show all &#x21F2;</a>
+                                    <a class="showLess" href="#" onclick='$("#treeView-Projects-wrap").addClass("short")'>Show less &#x21F1;</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="chartBoundary">
+                                <h4>Java Incidents by Package</h4>
+                                <div id="application_pie" class="windupPieGraph"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="chartBoundary">
+                                <h4>Technologies Found - Occurrence Count</h4>
+                                <div id="tagsChartContainer-sum" style="height: 300px; width: 500px;">
+                                    <div class="hideWhenComputed" style="position: relative; top: 4ex; left: 4em;">Computing...</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            // For projects TreeView - used when gathering the projects data to JavaScript.
+            var rootProject = null;
+            var parentProject = null;
+            var thisProject = null;
+        </script>
+
+
+        <div class="row container-fluid">
+            <div class="theme-showcase" role="main">
+                <div>
+                    <a id="collapseAll" href="javascript:collapseAll()">Collapse All</a>
+                    <a id="expandAll" href="javascript:expandAll()">Expand All</a>
+                </div>
+
+    <script>
+
+        thisProject = new ProjectNode("shared-libs", "project_4363776-project_4363776");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4363776 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+    <script>
+
+        thisProject = new ProjectNode("antlr-2.7.7.jar", "project_4353280-project_4353280");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4353280 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("antlr-3.2.jar", "project_4151552-project_4151552");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4151552 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("antlr-runtime-3.2.jar", "project_4152064-project_4152064");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4152064 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("commons-beanutils-1.7.0.jar", "project_4356864-project_4356864");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4356864 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("commons-collections-3.2.jar", "project_4344832-project_4344832");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4344832 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("commons-digester-1.8.1.jar", "project_4193024-project_4193024");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4193024 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("hibernate-annotations-3.2.1.GA.jar", "project_4360448-project_4360448");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4360448 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("i18nlog-1.0.9.jar", "project_4345088-project_4345088");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4345088 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("javassist-3.8.0.GA.jar", "project_4353024-project_4353024");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4353024 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-common-1.2.1.GA.jar", "project_4350720-project_4350720");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4350720 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-el-1.0_02.CR5.jar", "project_4352512-project_4352512");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4352512 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-remoting-2.2.2.SP8.jar", "project_4357632-project_4357632");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4357632 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-seam-2.1.0.SP1.jar", "project_4354560-project_4354560");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4354560 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-seam-debug-2.1.0.SP1.jar", "project_4347904-project_4347904");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4347904 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-seam-jul-2.1.0.SP1.jar", "project_4347392-project_4347392");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4347392 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jboss-seam-ui-2.1.0.SP1.jar", "project_4085248-project_4085248");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4085248 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("jsf-facelets-1.1.15.B1.jar", "project_4360192-project_4360192");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4360192 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("persistence-api-1.0.jar", "project_4352768-project_4352768");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4352768 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <script>
+
+        thisProject = new ProjectNode("stringtemplate-3.2.jar", "project_4359936-project_4359936");
+        thisProject.sourceBased = false;
+        var $tagLabels = $("#project_4359936 .projectFile .tech .label");
+        var $tagWarns = $tagLabels.find(".warning");
+        $tagWarns.add( $tagLabels.find(".danger") );
+        thisProject.warnings = $tagWarns.size();
+        thisProject.tags = []; /// TODO: Need to execute all this after the tag JS analysis.
+
+        if (parentProject == null) {
+            rootProject = thisProject;
+            console.log("Root project set to: " + rootProject.name + ", id: " + rootProject.id);
+        } else {
+            parentProject.addSubproject(thisProject);
+            console.log("Adding child: " + thisProject.name + "," + thisProject.id + " to parent: " + parentProject.name + "," + parentProject.id);
+        }
+        parentProject = thisProject;
+    </script>
+
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+
+    <script>
+        parentProject = parentProject.getParent();
+    </script>
+    <div class="panel panel-primary projectBox" id="project_4363776" data-windup-projectguid="33fcd0a5-6e4d-4c9c-9c7a-e18093ea3796" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Archives shared by multiple applications</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4363776_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4353280" data-windup-projectguid="d91256ed-58ae-4d34-8af0-85fdd08bfeda" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/antlr-2.7.7.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="83cd2cd6">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>antlr-2.7.7.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%2283cd2cd674a217ade95a4bb83a8a14f351f48bd0%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4353280_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.120.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4151552" data-windup-projectguid="adaa36f4-607e-4029-8291-52caae51f9b5" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/antlr-3.2.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="6b0acabe">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.antlr:antlr:3.2 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Antlr
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>ANTLR Grammar Tool</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>3.2</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%226b0acabea7bb3da058200a77178057e47e25cb69%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4151552_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.114.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.161.html?project=4363776">
+                META-INF/maven/org.antlr/antlr/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.57.html?project=4363776">
+                META-INF/maven/org.antlr/antlr/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM (pom.xml)
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4152064" data-windup-projectguid="9da8fbd2-29b7-41ed-88c2-629bf99252a6" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/antlr-runtime-3.2.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="31c74600">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.antlr:antlr-runtime:3.2 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Antlr
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Antlr 3 Runtime</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>3.2</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%2231c746001016c6226bd7356c9f87a6a084ce3715%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        A framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, C++, or Python actions.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4152064_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.112.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.160.html?project=4363776">
+                META-INF/maven/org.antlr/antlr-runtime/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.56.html?project=4363776">
+                META-INF/maven/org.antlr/antlr-runtime/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM (pom.xml)
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4356864" data-windup-projectguid="0911ba99-21e9-44d2-8511-90f00bc1975e" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/commons-beanutils-1.7.0.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="5675fd96">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Jakarta Commons Beanutils</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.6</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%225675fd96b29656504b86029551973d60fb41339b%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4356864_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.93.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4344832" data-windup-projectguid="367e41f7-0656-4808-a680-883102194b5a" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/commons-collections-3.2.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="f951934a">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Commons Collections</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>3.2</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22f951934aa5ae5a88d7e6dfaa6d32307d834a88be%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4344832_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.90.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4193024" data-windup-projectguid="fa170bdb-45ca-43fe-8747-66baecb3f241" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/commons-digester-1.8.1.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="3dec9b9c">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> commons-digester:commons-digester:1.8.1 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Commons Digester</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.8.1</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%223dec9b9c7ea9342d4dbe8c38560080d85b44a015%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        The Digester package lets you configure an XML to Java object mapping module
+    which triggers certain actions called rules whenever a particular 
+    pattern of nested XML elements is recognized.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4193024_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.119.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.162.html?project=4363776">
+                META-INF/maven/commons-digester/commons-digester/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.58.html?project=4363776">
+                META-INF/maven/commons-digester/commons-digester/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM (pom.xml)
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4360448" data-windup-projectguid="a2051508-cf9f-49cc-88ea-f3951e7e3398" data-windup-project-storypoints="3">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/hibernate-annotations-3.2.1.GA.jar</span>
+
+                <span class="storyPoints">(<span class="points">3</span> <span class="legend">story points</span>)</span>
+                <span title="136c1223">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">3</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JBoss</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>4.2.0.GA (build: SVNTag=JBoss_4_2_0_GA date=200705111440)</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22136c1223a1867bb8c953446c15f83c76f2211883%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4360448_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+                <div class="panel panel-default hint-detail-panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left">Issue Detail: Hibernate embedded library</h4>
+                            <div class="pull-right">
+                                <a class="sh_url" title="DiscoverEmbeddedHibernateLibraryRuleProvider_1" href="windup_ruleproviders.html#DiscoverEmbeddedHibernateLibraryRuleProvider_1">Show Rule</a>
+                            </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p>The application has a Hibernate library embedded.<br/>Red Hat JBoss EAP includes Hibernate as a module with a version that has been tested and supported by Red Hat. There are two options for using the Hibernate library: </p>
+<ol>
+  <li>Keep it embedded as it is now. This approach is low effort but the application will not use a tested and supported library.</li>
+  <li>Switch to use the Hibernate library in the EAP module. This will require effort to remove the embedded library and configure the application to use the module's library but then the application will rely on a tested and supported version of the Hibernate library.</li>
+</ol><p>In the links below there are the instructions to enable alternative versions for both EAP 6 and 7.</p>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="https://access.redhat.com/articles/112673" target="_blank">Red Hat JBoss EAP: Component Details</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html/Migration_Guide/sect-Changes_Dependent_on_Your_Application_Architecture_and_Components.html#sect-Hibernate_and_JPA_Changes" target="_blank">Red Hat JBoss EAP 6: Hibernate and JPA Migration Changes</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/migration_guide/application_migration_changes#hibernate_and_jpa_migration_changes" target="_blank">Red Hat JBoss EAP 7: Hibernate and JPA Migration Changes</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.118.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4345088" data-windup-projectguid="8bf2b561-6df4-46e9-8029-87960f490306" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/i18nlog-1.0.9.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="973a1aa5">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>i18nlog-1.0.9.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4345088_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="i18n_anttask_messages_properties.html?project=4363776">
+                i18n-anttask-messages.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="i18n_anttask_messages_en_properties.html?project=4363776">
+                i18n-anttask-messages_en.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.91.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="LoggerFactory_java.html?project=4363776">
+                mazz.i18n.LoggerFactory
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-DecompiledJavaFile "
+          data-windup-tag="Decompiled Java File">
+                    Decompiled Java File 
+    </span>
+                <span class="label label-info tag" data-windup-tag="classloader">classloader</span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount2">
+                <div class="warns">Warnings: 2 items</div>
+                <ul class="notifications">
+                        <li class="warning"> Dynamic class instantiation <small>2&#215;</small></li>
+                </ul>
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4353024" data-windup-projectguid="bf544d8a-d8d3-4406-8cae-06fadd5a1230" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/javassist-3.8.0.GA.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="d41b5be5">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Unknown
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Javassist</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>4.2.3.GA (build: SVNTag=JBoss_4_2_3_GA date=200807181417)</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22d41b5be5d26d4def2e26f996337d512d86509de8%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4353024_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.115.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4350720" data-windup-projectguid="1e5e596b-c16a-4037-9f6c-a648dc2b160e" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-common-1.2.1.GA.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="71139a2b">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                                Apache
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JBoss Common</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.2.1.GA (build: SVNTag=JBossCommon_1_2_1_GA date=200709251905)</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%2271139a2bdec692362fbc8d2cd82e59daa4e25951%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4350720_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.98.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4352512" data-windup-projectguid="ec4df121-946e-476b-aa2f-c84dbb86114d" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-el-1.0_02.CR5.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="1a938e49">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>jboss-el-1.0_02.CR5.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0_02.CR5</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%221a938e49133108e0ac0fef968feb89da97a03ae1%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4352512_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.111.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4357632" data-windup-projectguid="de67b7f3-9f97-48a9-875d-f8d9f9cb88ad" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-remoting-2.2.2.SP8.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="76f29f42">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>JBoss</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>4.2.3.GA (build: SVNTag=JBoss_4_2_3_GA date=200807181417)</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%2276f29f4245f106f70aec6b506a67c251d935fe40%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4357632_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.97.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4354560" data-windup-projectguid="58a1ebcd-5d0a-446d-a2ad-d197833f6650" data-windup-project-storypoints="5">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-seam-2.1.0.SP1.jar</span>
+
+                <span class="storyPoints">(<span class="points">5</span> <span class="legend">story points</span>)</span>
+                <span title="696942c7">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">5</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>jboss-seam</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>2.1.0.SP1</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22696942c7ec1cc85e0780eb25601f963cda2ea754%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4354560_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+                <div class="panel panel-default hint-detail-panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left">Issue Detail: Seam 2 embedded library</h4>
+                            <div class="pull-right">
+                                <a class="sh_url" title="DiscoverEmbeddedSeam2LibraryRuleProvider_1" href="windup_ruleproviders.html#DiscoverEmbeddedSeam2LibraryRuleProvider_1">Show Rule</a>
+                            </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p>The application has a Seam library embedded.<br/>While official support for Seam 2.2 applications was dropped in JBoss EAP 6, it was still possible to configure dependencies for JSF 1.2 and Hibernate 3 to allow Seam 2.2 applications to run on that release. Seam 2.3 should work on JBoss EAP 6 even some framework features and integrations from Seam 2.2 are not supported. </p><p>Red Hat JBoss EAP 7, which now includes JSF 2.2 and Hibernate 5, does not support Seam 2.2 or Seam 2.3 due to end of life of Red Hat JBoss Web Framework Kit. It is recommended that you rewrite your Seam components using CDI beans. </p><p>In the links below there are the instructions to enable alternatives for both EAP 6 and 7.</p>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Migration_Guide/index.html#sect-Migrate_Seam_2.2_Applications" target="_blank">EAP 6 - Migrate Seam 2.2 applications</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#migration23" target="_blank">Red Hat JBoss EAP 6: Migration from 2.2 to 2.3</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#idm54350960" target="_blank">Red Hat JBoss EAP: Migration from Seam 2 to Java EE and alternatives</a></li>
+                            <li><a href="https://access.redhat.com/solutions/2773121" target="_blank">How to use JSF 1.2 with EAP 7?</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.92.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4347904" data-windup-projectguid="e35b23f2-f92a-4ce8-99bf-27673ab352f3" data-windup-project-storypoints="5">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-seam-debug-2.1.0.SP1.jar</span>
+
+                <span class="storyPoints">(<span class="points">5</span> <span class="legend">story points</span>)</span>
+                <span title="20c206b3">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">5</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                                Sun
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>jboss-seam-debug</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>2.1.0.SP1</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%2220c206b3aeb4b681c1abc53dc28303ec2c33feb7%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4347904_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+                <div class="panel panel-default hint-detail-panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left">Issue Detail: Seam 2 embedded library</h4>
+                            <div class="pull-right">
+                                <a class="sh_url" title="DiscoverEmbeddedSeam2LibraryRuleProvider_1" href="windup_ruleproviders.html#DiscoverEmbeddedSeam2LibraryRuleProvider_1">Show Rule</a>
+                            </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p>The application has a Seam library embedded.<br/>While official support for Seam 2.2 applications was dropped in JBoss EAP 6, it was still possible to configure dependencies for JSF 1.2 and Hibernate 3 to allow Seam 2.2 applications to run on that release. Seam 2.3 should work on JBoss EAP 6 even some framework features and integrations from Seam 2.2 are not supported. </p><p>Red Hat JBoss EAP 7, which now includes JSF 2.2 and Hibernate 5, does not support Seam 2.2 or Seam 2.3 due to end of life of Red Hat JBoss Web Framework Kit. It is recommended that you rewrite your Seam components using CDI beans. </p><p>In the links below there are the instructions to enable alternatives for both EAP 6 and 7.</p>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Migration_Guide/index.html#sect-Migrate_Seam_2.2_Applications" target="_blank">EAP 6 - Migrate Seam 2.2 applications</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#migration23" target="_blank">Red Hat JBoss EAP 6: Migration from 2.2 to 2.3</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#idm54350960" target="_blank">Red Hat JBoss EAP: Migration from Seam 2 to Java EE and alternatives</a></li>
+                            <li><a href="https://access.redhat.com/solutions/2773121" target="_blank">How to use JSF 1.2 with EAP 7?</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.95.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4347392" data-windup-projectguid="3cdf59b2-bc6b-4c64-bfde-460710aa9a7b" data-windup-project-storypoints="5">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-seam-jul-2.1.0.SP1.jar</span>
+
+                <span class="storyPoints">(<span class="points">5</span> <span class="legend">story points</span>)</span>
+                <span title="6e2c9550">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">5</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>jboss-seam-jul</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>2.1.0.SP1</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%226e2c955045f7b5023fa9c2ade24f0ab1ec32a801%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4347392_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+                <div class="panel panel-default hint-detail-panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left">Issue Detail: Seam 2 embedded library</h4>
+                            <div class="pull-right">
+                                <a class="sh_url" title="DiscoverEmbeddedSeam2LibraryRuleProvider_1" href="windup_ruleproviders.html#DiscoverEmbeddedSeam2LibraryRuleProvider_1">Show Rule</a>
+                            </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p>The application has a Seam library embedded.<br/>While official support for Seam 2.2 applications was dropped in JBoss EAP 6, it was still possible to configure dependencies for JSF 1.2 and Hibernate 3 to allow Seam 2.2 applications to run on that release. Seam 2.3 should work on JBoss EAP 6 even some framework features and integrations from Seam 2.2 are not supported. </p><p>Red Hat JBoss EAP 7, which now includes JSF 2.2 and Hibernate 5, does not support Seam 2.2 or Seam 2.3 due to end of life of Red Hat JBoss Web Framework Kit. It is recommended that you rewrite your Seam components using CDI beans. </p><p>In the links below there are the instructions to enable alternatives for both EAP 6 and 7.</p>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Migration_Guide/index.html#sect-Migrate_Seam_2.2_Applications" target="_blank">EAP 6 - Migrate Seam 2.2 applications</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#migration23" target="_blank">Red Hat JBoss EAP 6: Migration from 2.2 to 2.3</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#idm54350960" target="_blank">Red Hat JBoss EAP: Migration from Seam 2 to Java EE and alternatives</a></li>
+                            <li><a href="https://access.redhat.com/solutions/2773121" target="_blank">How to use JSF 1.2 with EAP 7?</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.96.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4085248" data-windup-projectguid="f88c84d0-1eeb-4fed-8920-047fd3140595" data-windup-project-storypoints="5">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jboss-seam-ui-2.1.0.SP1.jar</span>
+
+                <span class="storyPoints">(<span class="points">5</span> <span class="legend">story points</span>)</span>
+                <span title="f6d6451a">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">5</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td> org.jboss.seam:jboss-seam-ui:2.1.0.SP1 </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                JBoss
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Seam JSF Controls</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>2.1.0.SP1</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22f6d6451a4f6de11fb0580c92e3270c3318631156%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4085248_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+                <div class="panel panel-default hint-detail-panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left">Issue Detail: Seam 2 embedded library</h4>
+                            <div class="pull-right">
+                                <a class="sh_url" title="DiscoverEmbeddedSeam2LibraryRuleProvider_1" href="windup_ruleproviders.html#DiscoverEmbeddedSeam2LibraryRuleProvider_1">Show Rule</a>
+                            </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p>The application has a Seam library embedded.<br/>While official support for Seam 2.2 applications was dropped in JBoss EAP 6, it was still possible to configure dependencies for JSF 1.2 and Hibernate 3 to allow Seam 2.2 applications to run on that release. Seam 2.3 should work on JBoss EAP 6 even some framework features and integrations from Seam 2.2 are not supported. </p><p>Red Hat JBoss EAP 7, which now includes JSF 2.2 and Hibernate 5, does not support Seam 2.2 or Seam 2.3 due to end of life of Red Hat JBoss Web Framework Kit. It is recommended that you rewrite your Seam components using CDI beans. </p><p>In the links below there are the instructions to enable alternatives for both EAP 6 and 7.</p>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Migration_Guide/index.html#sect-Migrate_Seam_2.2_Applications" target="_blank">EAP 6 - Migrate Seam 2.2 applications</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#migration23" target="_blank">Red Hat JBoss EAP 6: Migration from 2.2 to 2.3</a></li>
+                            <li><a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Web_Framework_Kit/2.7/html-single/Seam_Guide/index.html#idm54350960" target="_blank">Red Hat JBoss EAP: Migration from Seam 2 to Java EE and alternatives</a></li>
+                            <li><a href="https://access.redhat.com/solutions/2773121" target="_blank">How to use JSF 1.2 with EAP 7?</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.94.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_properties.96.html?project=4363776">
+                META-INF/maven/org.jboss.seam/jboss-seam-ui/pom.properties
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Properties "
+          data-windup-tag="Properties">
+                    Properties 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="pom_xml.43.html?project=4363776">
+                META-INF/maven/org.jboss.seam/jboss-seam-ui/pom.xml
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-MavenXML "
+          data-windup-tag="Maven XML">
+                    Maven XML 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount1">
+                    Maven POM (pom.xml)
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4360192" data-windup-projectguid="6c9a884b-f4b2-4e70-8f98-3de90c0c89cd" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/jsf-facelets-1.1.15.B1.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="376ead3b">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Sun
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>jsf-facelets-1.1.15.B1.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.1.15.B1</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%22376ead3b78abaa6baf9a43a128a9d7eb22ed7e90%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4360192_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.117.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4352768" data-windup-projectguid="fb4deabc-7302-4359-ad86-065c4be56dfb" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/persistence-api-1.0.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="5725f578">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Sun
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Java Platform, Persistence  Specification</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td>1.0</td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%225725f57873e05e068803e2bf9d5a8ea3740ffec5%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4352768_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.113.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="panel panel-primary projectBox" id="project_4359936" data-windup-projectguid="14f009e3-ffba-4265-a4a4-9951604d82de" data-windup-project-storypoints="0">
+        <div class="panel-heading panel-collapsed clickable">
+            <span class="pull-left"><i class="glyphicon glyphicon-expand arrowIcon"></i></span>
+            <h3 class="panel-title">
+                    <span class="name">shared-libs/stringtemplate-3.2.jar</span>
+
+                <span class="storyPoints">(<span class="points">0</span> <span class="legend">story points</span>)</span>
+                <span title="6fe2e3bb">&nbsp;</span>
+            </h3>
+        </div>
+        <div class="panel-body" style="display:none">
+        <div class="container-fluid summaryMargin">
+
+            <table class="summaryLayout">
+                <tr>
+                    <td colspan="2">
+                        <!-- Points -->
+                        <div class="points">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <!-- Basic info -->
+                        <div class="basicInfo">
+                            <table class="table">
+                                <tr>
+                                    <th>Maven coordinates</th>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <th>Organization</th>
+                                    <td>
+                                                Antlr
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>stringtemplate-3.2.jar</td>
+                                </tr>
+                                <tr>
+                                    <th>Version</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>
+
+                                            <a href="http://search.maven.org/#search%7Cga%7C1%7C1%3A%226fe2e3bb57daebd1555494818909f9664376dd6c%22">Maven Central</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>
+                                        Not available
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.basicInfo -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Packages pie chart -->
+                        <div class="chartBoundary">
+                            <h4>Java Incidents by Package</h4>
+                            <div id="project_4359936_pie" class="windupPieGraph"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tagsBarChart chartBoundary">
+                            <h4>Technologies found - occurrence count</h4>
+                            <!-- Tags bar chart will be appended here. -->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <table class="subprojects table table-striped table-bordered">
+            <tr>
+                <th>Name</th><th>Technology</th><th>Issues</th><th>Story Points</th>
+            </tr>
+
+    <tr class="projectFile">
+        <td class="path">
+            <a href="MANIFEST_MF.116.html?project=4363776">
+                META-INF/MANIFEST.MF
+            </a>
+        </td>
+        <td class="tech">
+    <span title="INFORMATIONAL" class="label label-info tag-Manifest "
+          data-windup-tag="Manifest">
+                    Manifest 
+    </span>
+            <div style="clear: both;"></div>
+        </td>
+
+        <td class="warnCount0">
+        </td>
+
+        <td>
+            0
+        </td>
+    </tr>
+        </table>
+        </div>
+    </div>
+
+
+            </div> <!-- /container -->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:15 AM</div>        </div>
+
+
+        <script src="resources/js/jquery-1.10.1.min.js"></script>
+        <script src="resources/js/jquery.storageapi.min.js"></script>
+        <script src="resources/js/jquery.color-2.1.2.min.js"></script>
+        <script src="resources/libraries/flot/jquery.flot.min.js"></script>
+        <script src="resources/libraries/flot/jquery.flot.pie.min.js"></script>
+        <link   rel="stylesheet"      href="resources/libraries/jstree/themes/default/style.min.css"/>
+        <script type="text/javascript" src="resources/libraries/jstree/jstree.min.js"></script>
+        <script src="resources/js/windup-overview.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+
+<script type='text/javascript'>
+WINDUP_PACKAGE_PIE_DATA = typeof(WINDUP_PACKAGE_PIE_DATA) == 'undefined' ? {} : WINDUP_PACKAGE_PIE_DATA;
+WINDUP_PACKAGE_PIE_DATA['application_pie'] = [];
+WINDUP_PACKAGE_PIE_DATA['application_pie'].push({label: 'java.lang.*', data: 2});
+$(function () {
+  var data_application_pie = [];
+data_application_pie.push({ label: 'java.lang.* - 2&times;', data: 2 });
+  $.plot($('#application_pie'), data_application_pie, {
+      series: { pie: { show: true,  innerRadius: 0.55, offset: { top: 0, left: -120 } } },
+      colors: $.map( data_application_pie, function(item, index) {
+          var len = data_application_pie.length;
+          return jQuery.Color({
+              hue: ((index*0.95*360/len) + 90/len) % 360,
+              saturation: 0.95,
+              lightness: ((index%4 == 3 ? 1:0)/-4)+0.55, alpha: 1
+          }).toHexString();
+      })
+  });
+});</script>
+
+<script type='text/javascript'>$('#project_4363776_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4353280_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4151552_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4152064_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4356864_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4344832_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4193024_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4360448_pie').parent().remove()</script>
+<script type='text/javascript'>
+WINDUP_PACKAGE_PIE_DATA = typeof(WINDUP_PACKAGE_PIE_DATA) == 'undefined' ? {} : WINDUP_PACKAGE_PIE_DATA;
+WINDUP_PACKAGE_PIE_DATA['project_4345088_pie'] = [];
+WINDUP_PACKAGE_PIE_DATA['project_4345088_pie'].push({label: 'java.lang.*', data: 2});
+$(function () {
+  var data_project_4345088_pie = [];
+data_project_4345088_pie.push({ label: 'java.lang.* - 2&times;', data: 2 });
+  $.plot($('#project_4345088_pie'), data_project_4345088_pie, {
+      series: { pie: { show: true,  innerRadius: 0.55, offset: { top: 0, left: -120 } } },
+      colors: $.map( data_project_4345088_pie, function(item, index) {
+          var len = data_project_4345088_pie.length;
+          return jQuery.Color({
+              hue: ((index*0.95*360/len) + 90/len) % 360,
+              saturation: 0.95,
+              lightness: ((index%4 == 3 ? 1:0)/-4)+0.55, alpha: 1
+          }).toHexString();
+      })
+  });
+});</script>
+<script type='text/javascript'>$('#project_4353024_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4350720_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4352512_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4357632_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4354560_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4347904_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4347392_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4085248_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4360192_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4352768_pie').parent().remove()</script>
+<script type='text/javascript'>$('#project_4359936_pie').parent().remove()</script>
+
+
+        <script>
+            t0 = Date.now();
+            expandMemory();
+            console.log("PERF: expandMemory() took " + (Date.now() - t0) + " ms.");
+
+
+            // Panels toggling - slide up or down.
+            $(document).on("click", ".panel-heading", function(event) {
+                togglePanelSlide.call(this, event);
+            });
+        </script>
+        <script src="resources/tagsData.js"></script>
+        <script>
+            // Tags bar charts.
+            $(document).ready( function() {
+                window.tagService = new TagService();
+                // The hierarchy of tags
+                fillTagService(window.tagService);
+                var chartObjects = {};
+                createTagCharts();
+            })
+
+
+            // Projects TreeView.
+            $(function() {
+                window.setTimeout( function(){
+                    t0 = Date.now();
+                    renderAppTreeView(rootProject);
+                    console.log("PERF: renderAppTreeView() took " + (Date.now() - t0) + " ms.");
+                }, 500 );
+            });
+        </script>
+    </div>
+</body>
+</html>

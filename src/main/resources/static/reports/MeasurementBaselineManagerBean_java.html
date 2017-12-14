@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MeasurementBaselineManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/measurement/MeasurementBaselineManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.measurement;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.db.DatabaseType;
+import org.rhq.core.db.DatabaseTypeFactory;
+import org.rhq.core.db.H2DatabaseType;
+import org.rhq.core.db.OracleDatabaseType;
+import org.rhq.core.db.PostgresqlDatabaseType;
+import org.rhq.core.db.SQLServerDatabaseType;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.measurement.MeasurementBaseline;
+import org.rhq.core.domain.measurement.MeasurementSchedule;
+import org.rhq.core.domain.measurement.NumericType;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.cloud.StatusManagerLocal;
+import org.rhq.enterprise.server.measurement.BaselineCreationException;
+import org.rhq.enterprise.server.measurement.DataNotAvailableException;
+import org.rhq.enterprise.server.measurement.MeasurementAggregate;
+import org.rhq.enterprise.server.measurement.MeasurementBaselineManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementBaselineManagerRemote;
+import org.rhq.enterprise.server.measurement.MeasurementDataManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementNotFoundException;
+import org.rhq.enterprise.server.measurement.MeasurementOOBManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementScheduleManagerLocal;
+import org.rhq.enterprise.server.measurement.instrumentation.MeasurementMonitor;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.system.SystemManagerLocal;
+
+@Stateless
+public class MeasurementBaselineManagerBean implements MeasurementBaselineManagerLocal, MeasurementBaselineManagerRemote {
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;,
+      mappedName = &quot;java:/RHQDS&quot;
+   )
+   private DataSource dataSource;
+   @EJB
+   private StatusManagerLocal agentStatusManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private MeasurementDataManagerLocal dataManager;
+   @EJB
+   private MeasurementScheduleManagerLocal measurementScheduleManager;
+   @EJB
+   private MeasurementBaselineManagerLocal measurementBaselineManager;
+   @EJB
+   private MeasurementOOBManagerLocal oobManager;
+   @EJB
+   private SystemManagerLocal systemManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   private final Log log = LogFactory.getLog(MeasurementBaselineManagerBean.class);
+
+   @TransactionAttribute(TransactionAttributeType.NEVER)
+   public void calculateAutoBaselines() {
+      Properties conf = this.systemManager.getSystemConfiguration();
+      String baselineFrequencyString = conf.getProperty(&quot;CAM_BASELINE_FREQUENCY&quot;);
+      String baselineDataSetString = conf.getProperty(&quot;CAM_BASELINE_DATASET&quot;);
+      this.log.debug(&quot;Found baseline defaults: frequency=&quot; + baselineFrequencyString + &quot; dataset=&quot; + baselineDataSetString);
+      long amountOfData = Long.parseLong(baselineDataSetString);
+      long baselinesOlderThanTime = System.currentTimeMillis() - Long.parseLong(baselineFrequencyString);
+      this.measurementBaselineManager.calculateAutoBaselines(amountOfData, baselinesOlderThanTime);
+      conf = this.systemManager.getSystemConfiguration();
+      this.systemManager.setSystemConfiguration(this.subjectManager.getOverlord(), conf, true);
+   }
+
+   @TransactionAttribute(TransactionAttributeType.NEVER)
+   public long calculateAutoBaselines(long amountOfData, long baselinesOlderThanTime) {
+      try {
+         this.log.info(&quot;Calculating auto baselines&quot;);
+         this.log.info(&quot;Deleting baselines computations older than &quot; + new Date(baselinesOlderThanTime));
+         this.log.info(&quot;Inserting new baselines using last &quot; + amountOfData / 86400000L + &quot; days of 1H data&quot;);
+         long e = System.currentTimeMillis();
+         long computeTime = e;
+         this.log.debug(&quot;computeTime = &quot; + e);
+         int deleted = this.measurementBaselineManager._calculateAutoBaselinesDELETE(baselinesOlderThanTime);
+         this.log.info(&quot;Removed [&quot; + deleted + &quot;] old baselines - they will now be recalculated (&quot; + (System.currentTimeMillis() - e) + &quot;)ms&quot;);
+         e = System.currentTimeMillis();
+         int totalInserted = 0;
+
+         int inserted;
+         do {
+            inserted = this.measurementBaselineManager._calculateAutoBaselinesINSERT(amountOfData);
+            totalInserted += inserted;
+         } while(inserted &gt;= 100000);
+
+         this.log.info(&quot;Calculated and inserted [&quot; + totalInserted + &quot;] new baselines. (&quot; + (System.currentTimeMillis() - e) + &quot;)ms&quot;);
+         MeasurementMonitor.getMBean().incrementBaselineCalculationTime(System.currentTimeMillis() - computeTime);
+         this.agentStatusManager.updateByAutoBaselineCalculationJob();
+         return computeTime;
+      } catch (Exception var12) {
+         this.log.error(&quot;Failed to auto-calculate baselines&quot;, var12);
+         throw new RuntimeException(&quot;Auto-calculation failure&quot;, var12);
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public int _calculateAutoBaselinesDELETE(long olderThanTime) throws Exception {
+      Query query = this.entityManager.createNamedQuery(&quot;MeasurementBaseline.deleteByComputeTime&quot;);
+      query.setParameter(&quot;timestamp&quot;, Long.valueOf(olderThanTime));
+      int rowsAffected = query.executeUpdate();
+      return rowsAffected;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public int _calculateAutoBaselinesINSERT(long amountOfData) throws Exception {
+      long now = System.currentTimeMillis();
+      long computeTime = now;
+      long endTime = now;
+      long startTime = now - amountOfData;
+      Connection conn = null;
+      PreparedStatement insertQuery = null;
+
+      int var15;
+      try {
+         conn = this.dataSource.getConnection();
+         DatabaseType dbType = DatabaseTypeFactory.getDatabaseType(conn);
+         if(!(dbType instanceof PostgresqlDatabaseType) &amp;&amp; !(dbType instanceof H2DatabaseType)) {
+            if(dbType instanceof OracleDatabaseType) {
+               insertQuery = conn.prepareStatement(MeasurementBaseline.NATIVE_QUERY_CALC_FIRST_AUTOBASELINE_ORACLE);
+               insertQuery.setLong(1, computeTime);
+               insertQuery.setLong(2, startTime);
+               insertQuery.setLong(3, endTime);
+               insertQuery.setLong(4, startTime);
+            } else {
+               if(!(dbType instanceof SQLServerDatabaseType)) {
+                  throw new IllegalArgumentException(&quot;Unknown database type, can\'t continue: &quot; + dbType);
+               }
+
+               insertQuery = conn.prepareStatement(MeasurementBaseline.NATIVE_QUERY_CALC_FIRST_AUTOBASELINE_SQLSERVER);
+               insertQuery.setLong(1, computeTime);
+               insertQuery.setLong(2, startTime);
+               insertQuery.setLong(3, endTime);
+               insertQuery.setLong(4, startTime);
+            }
+         } else {
+            insertQuery = conn.prepareStatement(MeasurementBaseline.NATIVE_QUERY_CALC_FIRST_AUTOBASELINE_POSTGRES);
+            insertQuery.setLong(1, computeTime);
+            insertQuery.setLong(2, startTime);
+            insertQuery.setLong(3, endTime);
+            insertQuery.setLong(4, startTime);
+         }
+
+         int inserted = insertQuery.executeUpdate();
+         var15 = inserted;
+      } finally {
+         if(insertQuery != null) {
+            try {
+               insertQuery.close();
+            } catch (Exception var25) {
+               ;
+            }
+         }
+
+         if(conn != null) {
+            try {
+               conn.close();
+            } catch (Exception var24) {
+               ;
+            }
+         }
+
+      }
+
+      return var15;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   private int _calculateAutoBaselinesDELETE_HQL(long startTime, long endTime) throws Exception {
+      Query query = this.entityManager.createNamedQuery(&quot;MeasurementBaseline.deleteExistingAutoBaseline&quot;);
+      query.setParameter(&quot;startTime&quot;, Long.valueOf(startTime));
+      query.setParameter(&quot;endTime&quot;, Long.valueOf(endTime));
+      int rowsModified = query.executeUpdate();
+      return rowsModified;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   private int _calculateAutoBaselinesINSERT_HQL(long startTime, long endTime, long computeTime) throws Exception {
+      Query query = this.entityManager.createNamedQuery(&quot;MeasurementBaseline.calcFirstAutoBaseline&quot;);
+      query.setParameter(&quot;startTime&quot;, Long.valueOf(startTime));
+      query.setParameter(&quot;endTime&quot;, Long.valueOf(endTime));
+      int rowsModified = query.executeUpdate();
+      return rowsModified;
+   }
+
+   public MeasurementBaseline getBaselineIfEqual(Subject subject, int groupId, int definitionId) {
+      Query query = this.entityManager.createQuery(&quot;SELECT MIN(mb.baselineMin),  MAX(mb.baselineMin),        MIN(mb.baselineMean), MAX(mb.baselineMean),        MIN(mb.baselineMax),  MAX(mb.baselineMax),        COUNT(mb.id)   FROM MeasurementBaseline mb   JOIN mb.schedule ms   JOIN ms.resource res   JOIN res.implicitGroups rg  WHERE rg.id = :groupId    AND ms.definition.id = :definitionId &quot;);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      query.setParameter(&quot;definitionId&quot;, Integer.valueOf(definitionId));
+      Object[] results = (Object[])((Object[])query.getSingleResult());
+      MeasurementBaseline baseline = new MeasurementBaseline();
+      if(((Long)results[6]).longValue() == 0L) {
+         return null;
+      } else {
+         if(results[0] != null &amp;&amp; results[1] != null) {
+            if(Math.abs(((Double)results[0]).doubleValue() - ((Double)results[1]).doubleValue()) &lt; 1.0E-9D) {
+               baseline.setMin((Double)results[0]);
+            } else {
+               baseline.setMin(Double.valueOf(-1.0D));
+            }
+         } else {
+            baseline.setMin((Double)null);
+         }
+
+         if(results[2] != null &amp;&amp; results[3] != null) {
+            if(Math.abs(((Double)results[2]).doubleValue() - ((Double)results[3]).doubleValue()) &lt; 1.0E-9D) {
+               baseline.setMean((Double)results[2]);
+            } else {
+               baseline.setMean(Double.valueOf(-1.0D));
+            }
+         } else {
+            baseline.setMean((Double)null);
+         }
+
+         if(results[4] != null &amp;&amp; results[5] != null) {
+            if(Math.abs(((Double)results[4]).doubleValue() - ((Double)results[5]).doubleValue()) &lt; 1.0E-9D) {
+               baseline.setMax((Double)results[4]);
+            } else {
+               baseline.setMax(Double.valueOf(-1.0D));
+            }
+         } else {
+            baseline.setMax((Double)null);
+         }
+
+         return baseline;
+      }
+   }
+
+   public MeasurementBaseline calculateAutoBaseline(Subject subject, Integer measurementScheduleId, long startDate, long endDate, boolean save) throws BaselineCreationException, MeasurementNotFoundException {
+      MeasurementSchedule sched = (MeasurementSchedule)this.entityManager.find(MeasurementSchedule.class, measurementScheduleId);
+      if(sched != null) {
+         org.rhq.core.domain.resource.Resource e = sched.getResource();
+         if(save &amp;&amp; !this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_MEASUREMENTS, e.getId())) {
+            this.log.error(&quot;Cannot calculate baseline - permission denied. resource=&quot; + e + &quot;; user=&quot; + subject + &quot;; perm=&quot; + Permission.MANAGE_MEASUREMENTS);
+            throw new PermissionException(&quot;Cannot calculate baseline - you do not have permission on this resource&quot;);
+         } else {
+            try {
+               MeasurementBaseline baseline = this.calculateBaseline(sched, true, startDate, endDate, save);
+               if(save) {
+                  this.oobManager.removeOOBsForSchedule(subject, sched);
+               }
+
+               return baseline;
+            } catch (DataNotAvailableException var11) {
+               throw new BaselineCreationException(&quot;Error fetching data for baseline calculation for measurementSchedule[id=&quot; + measurementScheduleId + &quot;]&quot;);
+            }
+         }
+      } else {
+         throw new MeasurementNotFoundException(&quot;Scheduled measurement [&quot; + measurementScheduleId + &quot;] not found&quot;);
+      }
+   }
+
+   public MeasurementBaseline calculateAutoBaseline(Subject subject, int groupId, int definitionId, long startDate, long endDate, boolean save) throws BaselineCreationException, MeasurementNotFoundException {
+      if(save &amp;&amp; !this.authorizationManager.hasGroupPermission(subject, Permission.MANAGE_MEASUREMENTS, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to calculate and set baselines for group[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         try {
+            MeasurementBaseline baseline = this.calculateBaseline(groupId, definitionId, true, startDate, endDate, save);
+            if(save) {
+               this.oobManager.removeOOBsForGroupAndDefinition(subject, groupId, definitionId);
+            }
+
+            return baseline;
+         } catch (DataNotAvailableException var11) {
+            throw new BaselineCreationException(&quot;Error fetching data for baseline calculation for group[id=&quot; + groupId + &quot;], definition[id=&quot; + definitionId + &quot;]&quot;);
+         }
+      }
+   }
+
+   public void enableAutoBaselineCalculation(Subject subject, Integer[] resourceIds, Integer[] definitionIds) {
+      if(resourceIds.length &gt;= 1 &amp;&amp; definitionIds.length &gt;= 1) {
+         List bList = this.getBaselinesForResourcesAndDefinitionIds(resourceIds, definitionIds);
+         Iterator i$ = bList.iterator();
+
+         while(i$.hasNext()) {
+            MeasurementBaseline bl = (MeasurementBaseline)i$.next();
+            if(!this.authorizationManager.hasResourcePermission(subject, Permission.MANAGE_MEASUREMENTS, bl.getSchedule().getResource().getId())) {
+               throw new PermissionException(&quot;Cannot enable baseline [&quot; + bl + &quot;] - you do not have permission&quot;);
+            }
+
+            bl.setUserEntered(false);
+         }
+
+      }
+   }
+
+   public MeasurementBaseline findBaselineForResourceAndMeasurementDefinition(Subject subject, Integer resourceId, Integer measurementDefinitionId) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId.intValue())) {
+         throw new PermissionException(&quot;Cannot view the baseline for resourceId=&quot; + resourceId + &quot;] - you do not have permission&quot;);
+      } else {
+         List baselines = this.getBaselinesForResourcesAndDefinitionIds(new Integer[]{resourceId}, new Integer[]{measurementDefinitionId});
+         if(baselines != null &amp;&amp; baselines.size() &gt; 0) {
+            return (MeasurementBaseline)baselines.get(0);
+         } else {
+            Subject overlord = this.subjectManager.getOverlord();
+
+            try {
+               MeasurementSchedule bce = this.measurementScheduleManager.getSchedule(overlord, resourceId.intValue(), measurementDefinitionId.intValue(), true);
+               MeasurementBaseline baseline = this.calculateAutoBaseline(overlord, Integer.valueOf(bce.getId()), 0L, System.currentTimeMillis(), true);
+               return baseline;
+            } catch (MeasurementNotFoundException var8) {
+               this.log.error(&quot;Could not find measurement schedule for resourceId=&quot; + resourceId + &quot;, &quot; + &quot;measurementDefinitionId=&quot; + measurementDefinitionId, var8);
+            } catch (BaselineCreationException var9) {
+               this.log.error(&quot;Could not calculate baseline for resourceId=&quot; + resourceId + &quot;, &quot; + &quot;measurementDefinitionId=&quot; + measurementDefinitionId, var9);
+            }
+
+            return null;
+         }
+      }
+   }
+
+   private List getBaselinesForResourcesAndDefinitionIds(Integer[] resourceIds, Integer[] definitionIds) {
+      Query q = this.entityManager.createNamedQuery(&quot;MeasurementBaseline.findBaselineForResourceIdsAndDefinitionIds&quot;);
+      q.setParameter(&quot;resourceIds&quot;, Arrays.asList(resourceIds));
+      q.setParameter(&quot;definitionIds&quot;, Arrays.asList(definitionIds));
+      List bList = q.getResultList();
+      return bList;
+   }
+
+   private MeasurementBaseline calculateBaseline(MeasurementSchedule schedule, boolean userEntered, long startDate, long endDate, boolean save) throws DataNotAvailableException, BaselineCreationException {
+      if(schedule.getDefinition().getNumericType() != NumericType.DYNAMIC) {
+         throw new BaselineCreationException(&quot;Baseline calculation is only valid for a dynamic measurement&quot;);
+      } else {
+         MeasurementAggregate agg = this.dataManager.getAggregate(this.subjectManager.getOverlord(), schedule.getId(), startDate, endDate);
+         schedule = (MeasurementSchedule)this.entityManager.merge(schedule);
+         MeasurementBaseline baseline = null;
+         if(save &amp;&amp; schedule.getBaseline() != null) {
+            baseline = schedule.getBaseline();
+         } else {
+            baseline = new MeasurementBaseline();
+            if(save) {
+               baseline.setSchedule(schedule);
+            }
+         }
+
+         baseline.setUserEntered(userEntered);
+         baseline.setMean(agg.getAvg());
+         baseline.setMin(agg.getMin());
+         baseline.setMax(agg.getMax());
+         if(save) {
+            this.entityManager.persist(baseline);
+            this.entityManager.merge(schedule);
+            this.notifyAlertConditionCacheManager(&quot;calculateBaseline&quot;, baseline);
+         }
+
+         return baseline;
+      }
+   }
+
+   public MeasurementBaseline calculateBaseline(int groupId, int definitionId, boolean userEntered, long startDate, long endDate, boolean save) throws DataNotAvailableException, BaselineCreationException {
+      MeasurementAggregate agg = this.dataManager.getAggregate(this.subjectManager.getOverlord(), groupId, definitionId, startDate, endDate);
+      Subject overlord = this.subjectManager.getOverlord();
+      List resourceIds = this.resourceManager.findImplicitResourceIdsByResourceGroup(groupId);
+      List schedules = this.measurementScheduleManager.findSchedulesByResourceIdsAndDefinitionId(overlord, ArrayUtils.unwrapCollection(resourceIds), definitionId);
+      MeasurementBaseline baseline = null;
+      Iterator i$ = schedules.iterator();
+
+      while(i$.hasNext()) {
+         MeasurementSchedule schedule = (MeasurementSchedule)i$.next();
+         schedule = (MeasurementSchedule)this.entityManager.merge(schedule);
+         if(save &amp;&amp; schedule.getBaseline() != null) {
+            baseline = schedule.getBaseline();
+         } else {
+            baseline = new MeasurementBaseline();
+            if(save) {
+               baseline.setSchedule(schedule);
+            }
+         }
+
+         baseline.setUserEntered(userEntered);
+         baseline.setMean(agg.getAvg());
+         baseline.setMin(agg.getMin());
+         baseline.setMax(agg.getMax());
+         if(save) {
+            this.entityManager.persist(baseline);
+            this.entityManager.merge(schedule);
+            this.notifyAlertConditionCacheManager(&quot;calculateBaseline&quot;, baseline);
+         }
+      }
+
+      return baseline;
+   }
+
+   private void notifyAlertConditionCacheManager(String callingMethod, MeasurementBaseline baseline) {
+      this.agentStatusManager.updateByMeasurementBaseline(baseline.getId());
+      this.log.debug(&quot;Invoking... &quot; + callingMethod);
+   }
+
+   public List findBaselinesForResource(Subject subject, int resourceId) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot; ] does not have permission to view baselines for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         Query query = this.entityManager.createNamedQuery(&quot;MeasurementBaseline.findBaselinesForResource&quot;);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         List results = query.getResultList();
+         return results;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

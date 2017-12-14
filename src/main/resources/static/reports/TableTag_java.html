@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for TableTag.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-portal.war/WEB-INF/classes/org/rhq/enterprise/gui/legacy/taglib/display/TableTag.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.gui.legacy.taglib.display;
+
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URLEncoder;
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.StringTokenizer;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpUtils;
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspTagException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.PageContext;
+import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.util.RequestUtils;
+import org.apache.taglibs.standard.tag.common.core.NullAttributeException;
+import org.apache.taglibs.standard.tag.el.core.ExpressionUtil;
+import org.rhq.core.domain.util.OrderingField;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.enterprise.gui.legacy.Constants;
+import org.rhq.enterprise.gui.legacy.DefaultConstants;
+import org.rhq.enterprise.gui.legacy.taglib.display.ColumnDecorator;
+import org.rhq.enterprise.gui.legacy.taglib.display.ColumnTag;
+import org.rhq.enterprise.gui.legacy.taglib.display.Decorator;
+import org.rhq.enterprise.gui.legacy.taglib.display.LocalizedColumnTag;
+import org.rhq.enterprise.gui.legacy.taglib.display.StringUtil;
+import org.rhq.enterprise.gui.legacy.taglib.display.TablePropertyTag;
+import org.rhq.enterprise.gui.legacy.util.TaglibUtils;
+
+public class TableTag extends TablePropertyTag {
+   private List columns = new ArrayList();
+   private int currentNumCols = 0;
+   private int numCols = 0;
+   private Decorator dec = null;
+   private static Properties prop = null;
+   private int pageNumber;
+   private int pageSize;
+   private int offSet;
+   private PageList masterList;
+   private String postfix;
+   private List viewableList;
+   private Iterator iterator;
+   private HttpServletResponse res;
+   private JspWriter out;
+   private HttpServletRequest req;
+   private StringBuilder buf;
+   protected Hashtable previousRow;
+   protected Hashtable nextRow;
+   private ColumnDecorator[] colDecorators;
+   private Object row;
+   private String onlyForProperty;
+   private boolean started;
+   int rowcnt;
+   String tableUid;
+   private String footer;
+   private final Log log;
+
+   public TableTag() {
+      this.pageNumber = DefaultConstants.PAGENUM_DEFAULT.intValue();
+      this.pageSize = DefaultConstants.PAGESIZE_DEFAULT.intValue();
+      this.postfix = &quot;&quot;;
+      this.buf = new StringBuilder(8192);
+      this.previousRow = new Hashtable(10);
+      this.nextRow = new Hashtable(10);
+      this.started = false;
+      this.rowcnt = 0;
+      this.tableUid = Long.toString(System.currentTimeMillis());
+      this.log = LogFactory.getLog(TableTag.class.getName());
+   }
+
+   public void release() {
+      this.log.debug(&quot;releasing values&quot;);
+      super.release();
+      this.columns = new ArrayList(10);
+      this.currentNumCols = 0;
+      this.numCols = 0;
+      this.pageNumber = DefaultConstants.PAGENUM_DEFAULT.intValue();
+      this.pageSize = DefaultConstants.PAGESIZE_DEFAULT.intValue();
+      this.buf = new StringBuilder(8192);
+      this.previousRow = new Hashtable(10);
+      this.nextRow = new Hashtable(10);
+      this.colDecorators = null;
+      this.started = false;
+      this.rowcnt = 0;
+      this.tableUid = Long.toString(System.currentTimeMillis());
+      this.footer = null;
+      this.postfix = &quot;&quot;;
+   }
+
+   public void addColumn(ColumnTag obj) {
+      this.columns.add(obj);
+      if(!this.started) {
+         ++this.currentNumCols;
+      }
+
+   }
+
+   private void resetColumns() {
+      this.columns = new ArrayList(10);
+      this.currentNumCols = 0;
+   }
+
+   public int doStartTag() throws JspException {
+      this.log.debug(&quot;beginning of doStartTag()&quot;);
+      prop = (Properties)this.pageContext.getServletContext().getAttribute(&quot;display&quot;);
+      this.req = (HttpServletRequest)this.pageContext.getRequest();
+      this.res = (HttpServletResponse)this.pageContext.getResponse();
+      this.out = this.pageContext.getOut();
+      this.evaluateAttributes();
+      this.dec = this.loadDecorator();
+      if(this.dec != null) {
+         this.log.debug(&quot;table decorator found: &quot; + this.dec);
+         this.dec.init(this.pageContext, this.viewableList);
+      }
+
+      return super.doStartTag();
+   }
+
+   public int doAfterBody() throws JspException {
+      String var4;
+      if(!this.started) {
+         this.numCols = this.currentNumCols;
+         this.colDecorators = new ColumnDecorator[this.currentNumCols];
+
+         for(int tmpvar = 0; tmpvar &lt; this.currentNumCols; ++tmpvar) {
+            ColumnTag tmpTag = (ColumnTag)this.columns.get(tmpvar);
+            ColumnDecorator coldec = tmpTag.getDecorator();
+            this.colDecorators[tmpvar] = coldec;
+            if(this.colDecorators[tmpvar] != null) {
+               if(this.log.isDebugEnabled()) {
+                  this.log.debug(&quot;adding column decorator: &quot; + this.colDecorators[tmpvar]);
+               }
+
+               this.colDecorators[tmpvar].setColumnTag(tmpTag);
+               this.colDecorators[tmpvar].init(this.pageContext, this.masterList);
+            }
+         }
+
+         this.viewableList = this.getViewableData();
+         this.buf.append(this.getTableHeader());
+         this.iterator = this.viewableList.iterator();
+         this.started = true;
+         if(this.iterator.hasNext()) {
+            this.row = this.iterator.next();
+            var4 = this.getVar();
+            if(var4 != null) {
+               this.pageContext.setAttribute(var4, this.row);
+               TaglibUtils.setScopedVariable(this.pageContext, &quot;request&quot;, var4, this.row);
+            }
+
+            ++this.rowcnt;
+            this.resetColumns();
+            return 2;
+         }
+      } else {
+         this.buf.append(this.generateRow(this.row, this.rowcnt));
+         ++this.rowcnt;
+         this.resetColumns();
+         if(this.iterator.hasNext()) {
+            this.row = this.iterator.next();
+            var4 = this.getVar();
+            if(var4 != null) {
+               this.pageContext.setAttribute(var4, this.row);
+               TaglibUtils.setScopedVariable(this.pageContext, &quot;request&quot;, var4, this.row);
+            }
+
+            this.resetColumns();
+            return 2;
+         }
+      }
+
+      this.resetColumns();
+      return 0;
+   }
+
+   public int doEndTag() throws JspException {
+      this.buf.append(this.getTableFooter());
+      this.buf.append(&quot;&lt;/table&gt;\n&quot;);
+      this.write(this.buf);
+      this.started = false;
+      this.buf = new StringBuilder(8192);
+      this.rowcnt = 0;
+      this.release();
+      return 6;
+   }
+
+   public List getViewableData() throws JspException {
+      return this.pageSize == Constants.PAGESIZE_ALL.intValue()?this.masterList:this.masterList;
+   }
+
+   protected StringBuffer generateRow(Object row, int rowcnt) throws JspException {
+      this.log.trace(&quot;generating row with count: &quot; + rowcnt);
+      if(this.onlyForProperty != null) {
+         try {
+            Object buf = PropertyUtils.getProperty(row, this.onlyForProperty);
+            if(!(buf instanceof Boolean)) {
+               throw new JspException(&quot;Property &quot; + this.onlyForProperty + &quot; is not boolean&quot;);
+            }
+
+            Boolean showHideDivId = (Boolean)buf;
+            if(showHideDivId == null || !showHideDivId.booleanValue()) {
+               return new StringBuffer();
+            }
+         } catch (Exception var26) {
+            throw new JspException(&quot;Error when accssing property &quot; + this.onlyForProperty + &quot;: &quot; + var26.getMessage());
+         }
+      }
+
+      StringBuffer var27 = new StringBuffer(8192);
+      String var28;
+      if(this.dec != null) {
+         var28 = this.dec.initRow(row, rowcnt, rowcnt + this.offSet);
+         if(var28 != null) {
+            var27.append(var28);
+         }
+      }
+
+      try {
+         for(int var29 = 0; var29 &lt; this.numCols; ++var29) {
+            if(this.colDecorators[var29] != null) {
+               this.log.trace(&quot;initializing decorator: &quot; + this.colDecorators[var29]);
+               this.colDecorators[var29].initRow(row, rowcnt, rowcnt + this.pageSize * (this.pageNumber - 1));
+            }
+         }
+      } catch (Throwable var25) {
+         throw new JspException(var25);
+      }
+
+      this.pageContext.setAttribute(&quot;smartRow&quot;, row);
+      var27.append(&quot;&lt;tr&quot;);
+      if(rowcnt % 2 == 0) {
+         var27.append(&quot; class=\&quot;tableRowOdd\&quot;&quot;);
+      } else {
+         var27.append(&quot; class=\&quot;tableRowEven\&quot;&quot;);
+      }
+
+      var27.append(&quot;&gt;\n&quot;);
+      if(this.isLeftSidebar()) {
+         var27.append(&quot;&lt;td class=\&quot;ListCellLine\&quot;&gt;&lt;img src=\&quot;&quot;);
+         var27.append(this.spacerImg());
+         var27.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+      }
+
+      var28 = this.tableUid + rowcnt;
+      this.pageContext.setAttribute(&quot;showHideDivId&quot;, var28);
+
+      int c;
+      for(c = 0; c &lt; this.numCols; ++c) {
+         ColumnTag tag = (ColumnTag)this.columns.get(c);
+         ColumnDecorator colDecorator = this.colDecorators[c];
+         Object showHideValue = null;
+         if(tag.getShowHideProperty() != null) {
+            String value = tag.getShowHideProperty();
+            if(value != null &amp;&amp; !value.equals(&quot;null&quot;)) {
+               showHideValue = this.lookup(this.pageContext, &quot;smartRow&quot;, value, (String)null, true);
+            }
+         }
+
+         if(tag.getIsShowHideColumn() &amp;&amp; showHideValue != null &amp;&amp; !showHideValue.equals(&quot;&quot;)) {
+            var27.append(&quot;&lt;td &quot;);
+            var27.append(tag.getCellAttributes());
+            var27.append(&quot;&gt;&quot;);
+            var27.append(&quot;&lt;div onClick=\&quot;expandcontent(this, \'&quot;);
+            var27.append(var28);
+            var27.append(&quot;\')\&quot; class=\&quot;showHideSwitch\&quot;&gt;&lt;span class=\&quot;showstate\&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&quot;);
+         } else {
+            var27.append(&quot;&lt;td &quot;);
+            var27.append(tag.getCellAttributes());
+            var27.append(&quot;&gt;&quot;);
+            Object var31;
+            if(tag.getValue() != null) {
+               try {
+                  var31 = tag.getValue();
+                  var31 = this.applyDecorator(colDecorator, var31);
+               } catch (NullAttributeException var24) {
+                  throw new JspException(&quot;bean &quot; + tag.getValue() + &quot; not found&quot;);
+               }
+            } else if(tag.getProperty() == null) {
+               var31 = this.pageContext.getAttribute(this.getVar());
+               var31 = this.applyDecorator(colDecorator, var31);
+            } else if(&quot;ff&quot;.equals(tag.getProperty())) {
+               var31 = String.valueOf(rowcnt);
+            } else if(tag.getProperty().equals(&quot;null&quot;)) {
+               var31 = &quot;&quot;;
+            } else {
+               try {
+                  var31 = this.lookup(this.pageContext, &quot;smartRow&quot;, tag.getProperty(), (String)null, true);
+                  var31 = this.applyDecorator(colDecorator, var31);
+               } catch (Throwable var23) {
+                  this.log.warn(&quot;Exception during processing of TableTag: &quot; + var23);
+                  var31 = null;
+               }
+            }
+
+            if(var31 == null || &quot;&quot;.equals(var31.toString().trim())) {
+               if(tag.getNulls() == null &amp;&amp; prop.getProperty(&quot;basic.htmlNullValue&quot;) != null) {
+                  var31 = prop.getProperty(&quot;basic.htmlNullValue&quot;);
+               } else {
+                  var31 = tag.getNulls();
+               }
+            }
+
+            String leftover = &quot;&quot;;
+            boolean chopped = false;
+            String tempValue = &quot;&quot;;
+            if(var31 != null) {
+               tempValue = var31.toString();
+            }
+
+            if(tag.getMaxLength() &gt; 0 &amp;&amp; tempValue.length() &gt; tag.getMaxLength()) {
+               leftover = &quot;...&quot; + tempValue.substring(tag.getMaxLength(), tempValue.length());
+               var31 = tempValue.substring(0, tag.getMaxLength()) + &quot;...&quot;;
+               chopped = true;
+            } else if(tag.getMaxWords() &gt; 0) {
+               StringBuffer href = new StringBuffer();
+               StringTokenizer name = new StringTokenizer(tempValue);
+               int param = name.countTokens();
+               if(param &gt; tag.getMaxWords()) {
+                  for(int paramId = 0; name.hasMoreTokens() &amp;&amp; paramId &lt; tag.getMaxWords(); ++paramId) {
+                     href.append(name.nextToken() + &quot; &quot;);
+                  }
+
+                  leftover = &quot;...&quot; + tempValue.substring(href.length(), tempValue.length());
+                  href.append(&quot;...&quot;);
+                  var31 = href;
+                  chopped = true;
+               }
+            }
+
+            if(tag.getAutolink() != null &amp;&amp; tag.getAutolink().equals(&quot;true&quot;)) {
+               var31 = this.autoLink(var31.toString());
+            }
+
+            String var32 = null;
+            if(tag.getHref() != null) {
+               try {
+                  var32 = (String)this.evalAttr(&quot;href&quot;, tag.getHref(), String.class);
+               } catch (NullAttributeException var22) {
+                  throw new JspException(&quot;bean &quot; + tag.getHref() + &quot; not found&quot;);
+               }
+
+               if(tag.getParamId() != null) {
+                  String var33 = tag.getParamName();
+                  if(var33 == null) {
+                     var33 = &quot;smartRow&quot;;
+                  }
+
+                  Object var34 = this.lookup(this.pageContext, var33, tag.getParamProperty(), tag.getParamScope(), true);
+                  String tmp = var34 instanceof String?(String)var34:var34.toString();
+
+                  String paramVal;
+                  String var35;
+                  try {
+                     var35 = URLEncoder.encode(tag.getParamId(), &quot;UTF-8&quot;);
+                     paramVal = URLEncoder.encode(tmp, &quot;UTF-8&quot;);
+                  } catch (UnsupportedEncodingException var21) {
+                     throw new JspException(&quot;could not encode ActionForward path parameters because the JVM does not support UTF-8!?&quot;, var21);
+                  }
+
+                  int index = var32.indexOf(63);
+                  String separator = index == -1?&quot;?&quot;:&quot;&amp;&quot;;
+                  if(chopped) {
+                     var31 = &quot;&lt;a href=\&quot;&quot; + var32 + separator + var35 + &quot;=&quot; + paramVal + &quot;\&quot; title=\&quot;&quot; + leftover + &quot;\&quot;&gt;&quot; + var31 + &quot;&lt;/a&gt;&quot;;
+                  } else {
+                     var31 = &quot;&lt;a href=\&quot;&quot; + var32 + separator + var35 + &quot;=&quot; + paramVal + &quot;\&quot;&gt;&quot; + var31 + &quot;&lt;/a&gt;&quot;;
+                  }
+               } else if(chopped) {
+                  var31 = &quot;&lt;a href=\&quot;&quot; + var32 + &quot;\&quot; title=\&quot;&quot; + leftover + &quot;\&quot;&gt;&quot; + var31 + &quot;&lt;/a&gt;&quot;;
+               } else {
+                  var31 = &quot;&lt;a href=\&quot;&quot; + var32 + &quot;\&quot;&gt;&quot; + var31 + &quot;&lt;/a&gt;&quot;;
+               }
+            }
+
+            if(chopped &amp;&amp; var32 == null) {
+               var27.append(var31.toString().substring(0, var31.toString().length() - 3));
+               var27.append(&quot;&lt;a style=\&quot;cursor: help;\&quot; title=\&quot;&quot; + leftover + &quot;\&quot;&gt;&quot;);
+               var27.append(var31.toString().substring(var31.toString().length() - 3, var31.toString().length()) + &quot;&lt;/a&gt;&quot;);
+            } else {
+               var27.append(var31);
+            }
+
+            if(showHideValue != null &amp;&amp; !showHideValue.equals(&quot;&quot;)) {
+               showHideValue = this.applyDecorator(colDecorator, showHideValue);
+               var27.append(&quot;&lt;div id=\&quot;&quot;);
+               var27.append(var28);
+               var27.append(&quot;\&quot; class=\&quot;switchcontent\&quot;&gt;&quot;);
+               var27.append(showHideValue.toString());
+               var27.append(&quot;&lt;/div&gt;&quot;);
+            }
+
+            var27.append(&quot;&lt;/td&gt;\n&quot;);
+         }
+      }
+
+      if(this.numCols == 0) {
+         var27.append(&quot;&lt;td class=\&quot;tableCell\&quot;&gt;&quot;);
+         var27.append(row.toString());
+         var27.append(&quot;&lt;/td&gt;&quot;);
+      }
+
+      if(this.isRightSidebar()) {
+         var27.append(&quot;&lt;td class=\&quot;ListCellLine\&quot;&gt;&lt;img src=\&quot;&quot;);
+         var27.append(this.spacerImg());
+         var27.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+      }
+
+      var27.append(&quot;&lt;/tr&gt;\n&quot;);
+      if(this.dec != null) {
+         String var30 = this.dec.finishRow();
+         if(var30 != null) {
+            var27.append(var30);
+         }
+      }
+
+      for(c = 0; c &lt; this.numCols; ++c) {
+         if(this.colDecorators[c] != null) {
+            this.colDecorators[c].finishRow();
+         }
+      }
+
+      if(this.dec != null) {
+         this.dec.finish();
+      }
+
+      this.dec = null;
+
+      for(c = 0; c &lt; this.numCols; ++c) {
+         if(this.colDecorators[c] != null) {
+            this.colDecorators[c].finish();
+         }
+      }
+
+      return var27;
+   }
+
+   private Object applyDecorator(ColumnDecorator colDecorator, Object value) throws JspException {
+      if(colDecorator != null) {
+         try {
+            value = colDecorator.decorate(value);
+         } catch (RuntimeException var4) {
+            this.log.warn(&quot;Exception decorating column&quot;, var4);
+            throw new JspException(&quot;Decorator &quot; + colDecorator + &quot; encountered a problem: &quot;, var4);
+         } catch (Exception var5) {
+            throw new JspException(&quot;Decorator &quot; + colDecorator + &quot; encountered a problem: &quot;, var5);
+         }
+      }
+
+      return value;
+   }
+
+   private String spacerImg() {
+      return this.req.getContextPath() + &quot;/images/spacer.gif&quot;;
+   }
+
+   private String makeUrl(boolean makeQueryStringOpenEnded, boolean removePageControlParams) throws JspException {
+      HttpServletRequest request = (HttpServletRequest)this.pageContext.getRequest();
+      String url = this.getAction() != null?this.getAction():request.getRequestURI();
+      Map params = RequestUtils.computeParameters(this.pageContext, this.getParamId(), this.getParamName(), this.getParamProperty(), this.getParamScope(), (String)null, (String)null, (String)null, false);
+
+      try {
+         url = RequestUtils.computeURL(this.pageContext, (String)null, url, (String)null, (String)null, params, (String)null, false);
+      } catch (Exception var7) {
+         throw new JspException(&quot;Couldn\'t compute URL:&quot; + var7);
+      }
+
+      if(removePageControlParams) {
+         url = this.removePageControlParams(url);
+      }
+
+      if(makeQueryStringOpenEnded) {
+         url = this.makeQueryStringOpenEnded(url);
+      }
+
+      return url;
+   }
+
+   private String removePageControlParams(String url) {
+      int index = url.indexOf(63);
+      if(index != -1) {
+         String base = url.substring(0, index);
+         StringBuilder buf = new StringBuilder(base);
+         String queryString = url.substring(index + 1);
+         Hashtable params = HttpUtils.parseQueryString(queryString);
+         params.remove(&quot;sc&quot;);
+         params.remove(&quot;so&quot;);
+         params.remove(&quot;ps&quot;);
+         params.remove(&quot;pn&quot;);
+         if(!params.isEmpty()) {
+            buf.append('?').append(convertMapToQueryString(params));
+         }
+
+         url = buf.toString();
+      }
+
+      return url;
+   }
+
+   private String makeQueryStringOpenEnded(String url) {
+      if(url.indexOf(63) == -1) {
+         url = url + '?';
+      } else if(!url.endsWith(&quot;&amp;&quot;)) {
+         url = url + '&amp;';
+      }
+
+      return url;
+   }
+
+   protected String getTableHeader() throws JspException {
+      this.log.trace(&quot;generating table header&quot;);
+      StringBuilder buf = new StringBuilder(1024);
+      HttpServletRequest req = (HttpServletRequest)this.pageContext.getRequest();
+      String url = this.makeUrl(true, true);
+      buf.append(&quot;&lt;table &quot;);
+      buf.append(this.getTableAttributes());
+      buf.append(&quot;&gt;\n&quot;);
+      if(prop.getProperty(&quot;basic.show.header&quot;) != null &amp;&amp; !prop.getProperty(&quot;basic.show.header&quot;).equals(&quot;true&quot;)) {
+         return buf.toString();
+      } else {
+         buf.append(&quot;&lt;tr class=\&quot;tableRowHeader\&quot;&gt;\n&quot;);
+         if(this.isLeftSidebar()) {
+            buf.append(&quot;&lt;td class=\&quot;ListCellLineEmpty\&quot;&gt;&lt;img src=\&quot;&quot;);
+            buf.append(this.spacerImg());
+            buf.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+         }
+
+         int colsToSkip = 0;
+
+         for(int ret = 0; ret &lt; this.currentNumCols; ++ret) {
+            LocalizedColumnTag tag = (LocalizedColumnTag)this.columns.get(ret);
+            if(colsToSkip &gt; 0) {
+               --colsToSkip;
+            } else {
+               if(tag.getHeaderColspan() != null) {
+                  Integer sortAttr;
+                  try {
+                     sortAttr = (Integer)this.evalAttr(&quot;headerColspan&quot;, tag.getHeaderColspan(), Integer.class);
+                  } catch (NullAttributeException var17) {
+                     throw new JspException(&quot;bean &quot; + tag.getHeaderColspan() + &quot; not found&quot;);
+                  }
+
+                  colsToSkip = sortAttr.intValue();
+               }
+
+               String var19 = tag.getSortAttr();
+               buf.append(&quot;&lt;th&quot;);
+               if(tag.getWidth() != null) {
+                  buf.append(&quot; width=\&quot;&quot; + tag.getWidth() + &quot;\&quot;&quot;);
+               }
+
+               if(tag.getAlign() != null) {
+                  buf.append(&quot; align=\&quot;&quot; + tag.getAlign() + &quot;\&quot;&quot;);
+               }
+
+               if(this.getNowrapHeader() != null) {
+                  buf.append(&quot; nowrap=\&quot;true\&quot;&quot;);
+               }
+
+               if(colsToSkip &gt; 0) {
+                  buf.append(&quot; colspan=\&quot;&quot; + colsToSkip + &quot;\&quot;&quot;);
+                  --colsToSkip;
+               }
+
+               String header;
+               try {
+                  header = (String)this.evalAttr(&quot;title&quot;, tag.getTitle(), String.class);
+               } catch (NullAttributeException var16) {
+                  throw new JspException(&quot;bean &quot; + tag.getTitle() + &quot; not found&quot;);
+               }
+
+               if(header == null) {
+                  if(tag.getIsLocalizedTitle()) {
+                     header = StringUtil.toUpperCaseAt(tag.getProperty(), 0);
+                  } else {
+                     header = &quot;&lt;img src=\&quot;&quot; + this.spacerImg() + &quot;\&quot; width=\&quot;1\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;/&gt;&quot;;
+                  }
+               }
+
+               buf.append(&quot; class=\&quot;tableRowInactive\&quot;&gt;&quot;);
+               PageControl pc = this.masterList.getPageControl();
+               int sortIndex = 0;
+               String sortimg = null;
+               String newSortOrder = &quot;asc&quot;;
+               boolean wasSortedOn = false;
+               if(var19 != null) {
+                  Iterator i$ = pc.getOrderingFields().iterator();
+
+                  while(i$.hasNext()) {
+                     OrderingField field = (OrderingField)i$.next();
+                     ++sortIndex;
+                     if(field.getField().equals(var19)) {
+                        if(field.getOrdering().equals(PageOrdering.ASC)) {
+                           newSortOrder = &quot;desc&quot;;
+                           if(sortIndex == 1) {
+                              sortimg = &quot;/images/tb_sortup.gif&quot;;
+                           } else {
+                              sortimg = &quot;/images/tb_sortup_inactive.gif&quot;;
+                           }
+                        } else {
+                           newSortOrder = &quot;asc&quot;;
+                           if(sortIndex == 1) {
+                              sortimg = &quot;/images/tb_sortdown.gif&quot;;
+                           } else {
+                              sortimg = &quot;/images/tb_sortdown_inactive.gif&quot;;
+                           }
+                        }
+
+                        wasSortedOn = true;
+                        break;
+                     }
+                  }
+
+                  buf.append(&quot;&lt;a href=\&quot;&quot;);
+                  buf.append(url);
+                  buf.append(&quot;so&quot;).append(this.postfix);
+                  buf.append(&quot;=&quot;).append(newSortOrder);
+                  buf.append(&quot;&amp;&quot;);
+                  buf.append(&quot;sc&quot;).append(this.postfix);
+                  buf.append(&quot;=&quot;).append(var19);
+                  buf.append(&quot;&amp;&quot;);
+                  buf.append(&quot;ps&quot;).append(this.postfix);
+                  buf.append(&quot;=&quot;).append(this.masterList.getPageControl().getPageSize());
+                  buf.append(&quot;&amp;&quot;);
+                  buf.append(&quot;pn&quot;).append(this.postfix);
+                  buf.append(&quot;=&quot;).append(this.masterList.getPageControl().getPageNumber());
+                  buf.append(&quot;\&quot;&gt;&quot;);
+                  buf.append(header);
+                  if(sortimg != null) {
+                     buf.append(&quot;&lt;img border=\&quot;0\&quot; src=\&quot;&quot;);
+                     buf.append(req.getContextPath());
+                     buf.append(sortimg);
+                     buf.append(&quot;\&quot; &gt;&quot;);
+                  }
+
+                  if(wasSortedOn) {
+                     buf.append(&quot; &quot; + String.valueOf(sortIndex));
+                  }
+
+                  buf.append(&quot;&lt;/a&gt;&quot;);
+               } else {
+                  buf.append(header);
+               }
+
+               buf.append(&quot;&lt;/th&gt;\n&quot;);
+            }
+         }
+
+         if(this.currentNumCols == 0) {
+            buf.append(&quot;&lt;td&gt;&lt;b&gt;&quot; + prop.getProperty(&quot;error.msg.no_column_tags&quot;) + &quot;&lt;/b&gt;&lt;/td&gt;&quot;);
+         }
+
+         if(this.isRightSidebar()) {
+            buf.append(&quot;&lt;td class=\&quot;ListCellLineEmpty\&quot;&gt;&lt;img src=\&quot;&quot;);
+            buf.append(this.spacerImg());
+            buf.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+         }
+
+         buf.append(&quot;&lt;/tr&gt;\n&quot;);
+         if(this.footer != null) {
+            buf.append(&quot;&lt;tfoot&gt;&quot;);
+            buf.append(this.footer);
+            buf.append(&quot;&lt;/tfoot&gt;&quot;);
+            this.footer = null;
+         }
+
+         String var18 = buf.toString();
+         return var18;
+      }
+   }
+
+   protected String getTableFooter() throws JspException {
+      this.log.trace(&quot;generating footer&quot;);
+      StringBuilder buf = new StringBuilder(1024);
+      String url = this.makeUrl(true, false);
+      String tmpEmptyMsg;
+      if(this.getExport() != null) {
+         buf.append(&quot;&lt;tr&gt;&lt;td align=\&quot;left\&quot; width=\&quot;100%\&quot; colspan=\&quot;&quot;).append(this.currentNumCols).append(&quot;\&quot;&gt;&quot;);
+         buf.append(&quot;&lt;table width=\&quot;100%\&quot; border=\&quot;0\&quot; cellspacing=\&quot;0\&quot; &quot;);
+         buf.append(&quot;cellpadding=0&gt;&lt;tr class=\&quot;tableRowAction\&quot;&gt;&quot;);
+         buf.append(&quot;&lt;td align=\&quot;left\&quot; valign=\&quot;bottom\&quot; class=\&quot;&quot;);
+         buf.append(&quot;tableCellAction\&quot;&gt;&quot;);
+         tmpEmptyMsg = &quot;&quot;;
+         if(prop.getProperty(&quot;export.csv&quot;) != null &amp;&amp; prop.getProperty(&quot;export.csv&quot;).equals(&quot;true&quot;)) {
+            tmpEmptyMsg = tmpEmptyMsg + &quot;&lt;a href=\&quot;&quot; + url + &quot;exportType=1\&quot;&gt;&quot; + prop.getProperty(&quot;export.csv.label&quot;) + &quot;&lt;/a&gt;\n&quot;;
+         }
+
+         if(prop.getProperty(&quot;export.excel&quot;) != null &amp;&amp; prop.getProperty(&quot;export.excel&quot;).equals(&quot;true&quot;)) {
+            if(!tmpEmptyMsg.equals(&quot;&quot;)) {
+               tmpEmptyMsg = tmpEmptyMsg + prop.getProperty(&quot;export.banner.sepchar&quot;);
+            }
+
+            tmpEmptyMsg = tmpEmptyMsg + &quot;&lt;a href=\&quot;&quot; + url + &quot;exportType=2\&quot;&gt;&quot; + prop.getProperty(&quot;export.excel.label&quot;) + &quot;&lt;/a&gt;\n&quot;;
+         }
+
+         if(prop.getProperty(&quot;export.xml&quot;) != null &amp;&amp; prop.getProperty(&quot;export.xml&quot;).equals(&quot;true&quot;)) {
+            if(!tmpEmptyMsg.equals(&quot;&quot;)) {
+               tmpEmptyMsg = tmpEmptyMsg + prop.getProperty(&quot;export.banner.sepchar&quot;);
+            }
+
+            tmpEmptyMsg = tmpEmptyMsg + &quot;&lt;a href=\&quot;&quot; + url + &quot;exportType=3\&quot;&gt;&quot; + prop.getProperty(&quot;export.xml.label&quot;) + &quot;&lt;/a&gt;\n&quot;;
+         }
+
+         Object[] tmpstr = new Object[]{tmpEmptyMsg};
+         if(prop.getProperty(&quot;export.banner&quot;) != null) {
+            buf.append(MessageFormat.format(prop.getProperty(&quot;export.banner&quot;), tmpstr));
+         }
+
+         buf.append(&quot;&lt;/td&gt;&lt;/tr&gt;&quot;);
+         buf.append(&quot;&lt;/table&gt;\n&quot;);
+         buf.append(&quot;&lt;/td&gt;&lt;/tr&gt;&quot;);
+      }
+
+      tmpEmptyMsg = this.getEmptyMsg();
+      String var9;
+      if(this.isPadRows()) {
+         int var8 = this.pageSize;
+         if(var8 &lt; 1) {
+            var8 = Constants.PAGESIZE_DEFAULT.intValue();
+         }
+
+         if(var8 &gt; this.rowcnt) {
+            String j = this.spacerImg();
+
+            for(int i = this.rowcnt; i &lt; var8; ++i) {
+               buf.append(&quot;&lt;tr class=\&quot;ListRow\&quot;&gt;\n&quot;);
+               if(this.isLeftSidebar()) {
+                  buf.append(&quot;&lt;td class=\&quot;ListCellLine\&quot;&gt;&lt;img src=\&quot;&quot;);
+                  buf.append(j);
+                  buf.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+               }
+
+               for(int j1 = 0; j1 &lt; this.numCols; ++j1) {
+                  buf.append(&quot;&lt;td class=\&quot;ListCell\&quot;&gt;&amp;nbsp;&lt;/td&gt;\n&quot;);
+               }
+
+               if(this.isRightSidebar()) {
+                  buf.append(&quot;&lt;td class=\&quot;ListCellLine\&quot;&gt;&lt;img src=\&quot;&quot;);
+                  buf.append(j);
+                  buf.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+               }
+
+               buf.append(&quot;&lt;/tr&gt;\n&quot;);
+            }
+         }
+      } else if(tmpEmptyMsg != null &amp;&amp; this.rowcnt == 0) {
+         var9 = this.spacerImg();
+         buf.append(&quot;&lt;tr class=\&quot;ListRow\&quot;&gt;\n&quot;);
+         if(this.isLeftSidebar()) {
+            buf.append(&quot;&lt;td class=\&quot;ListCellLine\&quot;&gt;&lt;img src=\&quot;&quot;);
+            buf.append(var9);
+            buf.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+         }
+
+         for(int var10 = 0; var10 &lt; this.numCols; ++var10) {
+            buf.append(&quot;&lt;td class=\&quot;ListCell\&quot;&quot;);
+            if(var10 == 1) {
+               buf.append(&quot; nowrap=\&quot;true\&quot;&gt;&lt;i&gt;&quot;).append(tmpEmptyMsg).append(&quot;&lt;/i&gt;&quot;);
+            } else {
+               buf.append(&quot;&gt;&amp;nbsp;&quot;);
+            }
+
+            buf.append(&quot;&lt;/td&gt;\n&quot;);
+         }
+
+         if(this.isRightSidebar()) {
+            buf.append(&quot;&lt;td class=\&quot;ListCellLine\&quot;&gt;&lt;img src=\&quot;&quot;);
+            buf.append(var9);
+            buf.append(&quot;\&quot; width=\&quot;5\&quot; height=\&quot;1\&quot; border=\&quot;0\&quot;&gt;&lt;/td&gt;\n&quot;);
+         }
+
+         buf.append(&quot;&lt;/tr&gt;\n&quot;);
+      }
+
+      var9 = buf.toString();
+      return var9;
+   }
+
+   protected String group(String value, int group) {
+      if(group == 1 &amp;&amp; this.nextRow.size() &gt; 0) {
+         this.previousRow.clear();
+         this.previousRow.putAll(this.nextRow);
+         this.nextRow.clear();
+      }
+
+      if(!this.nextRow.containsKey(new Integer(group))) {
+         this.nextRow.put(Integer.valueOf(group), value);
+      }
+
+      if(this.previousRow.containsKey(new Integer(group))) {
+         for(int x = 1; x &lt;= group; ++x) {
+            if(!this.previousRow.get(new Integer(x)).equals(this.nextRow.get(new Integer(x)))) {
+               return value;
+            }
+         }
+      }
+
+      return this.previousRow.size() == 0?value:&quot;&lt;!-- returning from table tag --&gt;&quot;;
+   }
+
+   protected String getTableAttributes() {
+      StringBuffer results = new StringBuffer();
+      if(this.getStyleClass() != null) {
+         results.append(&quot; class=\&quot;&quot;);
+         results.append(this.getStyleClass());
+         results.append(&quot;\&quot;&quot;);
+      } else {
+         results.append(&quot; class=\&quot;table\&quot;&quot;);
+      }
+
+      if(this.getStyleId() != null) {
+         results.append(&quot; id=\&quot;&quot;);
+         results.append(this.getStyleId());
+         results.append(&quot;\&quot;&quot;);
+      } else {
+         results.append(&quot; class=\&quot;table\&quot;&quot;);
+      }
+
+      if(this.getWidth() != null) {
+         results.append(&quot; width=\&quot;&quot;);
+         results.append(this.getWidth());
+         results.append(&quot;\&quot;&quot;);
+      } else {
+         results.append(&quot; width=\&quot;100%\&quot;&quot;);
+      }
+
+      if(this.getBorder() != null) {
+         results.append(&quot; border=\&quot;&quot;);
+         results.append(this.getBorder());
+         results.append(&quot;\&quot;&quot;);
+      } else {
+         results.append(&quot; border=\&quot;0\&quot;&quot;);
+      }
+
+      if(this.getCellspacing() != null) {
+         results.append(&quot; cellspacing=\&quot;&quot;);
+         results.append(this.getCellspacing());
+         results.append(&quot;\&quot;&quot;);
+      } else {
+         results.append(&quot; cellspacing=\&quot;1\&quot;&quot;);
+      }
+
+      if(this.getCellpadding() != null) {
+         results.append(&quot; cellpadding=\&quot;&quot;);
+         results.append(this.getCellpadding());
+         results.append(&quot;\&quot;&quot;);
+      } else {
+         results.append(&quot; cellpadding=\&quot;2\&quot;&quot;);
+      }
+
+      if(this.getAlign() != null) {
+         results.append(&quot; align=\&quot;&quot;);
+         results.append(this.getAlign());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getBackground() != null) {
+         results.append(&quot; background=\&quot;&quot;);
+         results.append(this.getBackground());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getBgcolor() != null) {
+         results.append(&quot; bgcolor=\&quot;&quot;);
+         results.append(this.getBgcolor());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getFrame() != null) {
+         results.append(&quot; frame=\&quot;&quot;);
+         results.append(this.getFrame());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getHeight() != null) {
+         results.append(&quot; height=\&quot;&quot;);
+         results.append(this.getHeight());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getHspace() != null) {
+         results.append(&quot; hspace=\&quot;&quot;);
+         results.append(this.getHspace());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getRules() != null) {
+         results.append(&quot; rules=\&quot;&quot;);
+         results.append(this.getRules());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getSummary() != null) {
+         results.append(&quot; summary=\&quot;&quot;);
+         results.append(this.getSummary());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      if(this.getVspace() != null) {
+         results.append(&quot; vspace=\&quot;&quot;);
+         results.append(this.getVspace());
+         results.append(&quot;\&quot;&quot;);
+      }
+
+      return results.toString();
+   }
+
+   public Object lookup(PageContext pageContext, String name, String scope) throws JspException {
+      this.log.trace(&quot;looking up: &quot; + name + &quot; in scope: &quot; + scope);
+      Object bean;
+      if(scope == null) {
+         bean = pageContext.findAttribute(name);
+      } else if(scope.equalsIgnoreCase(&quot;page&quot;)) {
+         bean = pageContext.getAttribute(name, 1);
+      } else if(scope.equalsIgnoreCase(&quot;request&quot;)) {
+         bean = pageContext.getAttribute(name, 2);
+      } else if(scope.equalsIgnoreCase(&quot;session&quot;)) {
+         bean = pageContext.getAttribute(name, 3);
+      } else {
+         if(!scope.equalsIgnoreCase(&quot;application&quot;)) {
+            Object[] objs = new Object[]{name, scope};
+            if(prop.getProperty(&quot;error.msg.cant_find_bean&quot;) != null) {
+               String msg = MessageFormat.format(prop.getProperty(&quot;error.msg.cant_find_bean&quot;), objs);
+               throw new JspException(msg);
+            }
+
+            throw new JspException(&quot;Could not find &quot; + name + &quot; in scope &quot; + scope);
+         }
+
+         bean = pageContext.getAttribute(name, 4);
+      }
+
+      return bean;
+   }
+
+   public Object lookup(PageContext pageContext, String name, String property, String scope, boolean useDecorator) throws JspException {
+      this.log.trace(&quot;looking up: &quot; + name + &quot;:&quot; + property + &quot; in scope: &quot; + scope);
+      Object[] e;
+      if(useDecorator &amp;&amp; this.dec != null) {
+         try {
+            return property == null?this.dec:PropertyUtils.getProperty(this.dec, property);
+         } catch (IllegalAccessException var9) {
+            this.log.debug(&quot;bean access failed:&quot;, var9);
+            e = new Object[]{name, this.dec};
+            if(prop.getProperty(&quot;error.msg.illegal_access_exception&quot;) != null) {
+               throw new JspException(MessageFormat.format(prop.getProperty(&quot;error.msg.illegal_access_exception&quot;), e));
+            } else {
+               throw new JspException(&quot;IllegalAccessException trying to fetch property &quot; + name + &quot; from bean &quot; + this.dec);
+            }
+         } catch (InvocationTargetException var10) {
+            this.log.debug(&quot;bean invocation failed:&quot;, var10);
+            e = new Object[]{name, this.dec};
+            if(prop.getProperty(&quot;error.msg.invocation_target_exception&quot;) != null) {
+               throw new JspException(MessageFormat.format(prop.getProperty(&quot;error.msg.invocation_target_exception&quot;), e));
+            } else {
+               throw new JspException(&quot;InvocationTargetException trying to fetch property &quot; + name + &quot; from bean &quot; + this.dec);
+            }
+         } catch (NoSuchMethodException var11) {
+            this.log.debug(&quot;bean getter property access failed:&quot;, var11);
+            throw new JspException(&quot; bean property getter not found&quot;);
+         }
+      } else {
+         Object bean = this.lookup(pageContext, name, scope);
+         if(property == null) {
+            return bean;
+         } else if(bean == null) {
+            this.log.debug(&quot;expected bean was null&quot;);
+            e = new Object[]{name, scope};
+            if(prop.getProperty(&quot;error.msg.cant_find_bean&quot;) != null) {
+               throw new JspException(MessageFormat.format(prop.getProperty(&quot;error.msg.cant_find_bean&quot;), e));
+            } else {
+               throw new JspException(&quot;Could not find bean &quot; + name + &quot;in scope &quot; + scope);
+            }
+         } else {
+            Object[] objs;
+            try {
+               return PropertyUtils.getProperty(bean, property);
+            } catch (IllegalAccessException var12) {
+               objs = new Object[]{property, name};
+               this.log.debug(&quot;bean access failed:&quot;, var12);
+               if(prop.getProperty(&quot;error.msg.illegal_access_exception&quot;) != null) {
+                  throw new JspException(MessageFormat.format(prop.getProperty(&quot;error.msg.illegal_access_exception&quot;), objs));
+               } else {
+                  throw new JspException(&quot;IllegalAccessException trying to fetch property &quot; + property + &quot; from bean &quot; + name);
+               }
+            } catch (InvocationTargetException var13) {
+               objs = new Object[]{property, name};
+               if(prop.getProperty(&quot;error.msg.invocation_target_exception&quot;) != null) {
+                  throw new JspException(MessageFormat.format(prop.getProperty(&quot;error.msg.invocation_target_exception&quot;), objs));
+               } else {
+                  throw new JspException(&quot;InvocationTargetException trying to fetch property &quot; + name + &quot; from bean &quot; + this.dec);
+               }
+            } catch (NoSuchMethodException var14) {
+               this.log.debug(&quot;bean getter property access failed:&quot;, var14);
+               throw new JspException(&quot; bean getter for property &quot; + property + &quot;  not found in bean &quot; + name);
+            }
+         }
+      }
+   }
+
+   protected Decorator loadDecorator() throws JspException {
+      this.log.trace(&quot;loading decorator&quot;);
+      if(this.getDecorator() != null &amp;&amp; this.getDecorator().length() != 0) {
+         try {
+            Class e = Class.forName(this.getDecorator());
+            if(!Class.forName(&quot;org.rhq.enterprise.gui.legacy.taglib.display.Decorator&quot;).isAssignableFrom(e)) {
+               throw new JspException(&quot;invalid decorator&quot;);
+            } else {
+               Decorator d = (Decorator)e.newInstance();
+               this.log.debug(&quot;found decorator: &quot; + d);
+               return d;
+            }
+         } catch (Exception var3) {
+            this.log.debug(&quot;loading and instantiating decorator failed: &quot;, var3);
+            throw new JspException(&quot;failure loading and instanting decorator &quot; + var3.toString());
+         }
+      } else {
+         return null;
+      }
+   }
+
+   protected String autoLink(String data) {
+      String work = data;
+      String results = &quot;&quot;;
+      if(data != null &amp;&amp; data.length() != 0) {
+         int index;
+         int end;
+         int url;
+         while((index = work.indexOf(&quot;@&quot;)) != -1) {
+            end = 0;
+            url = work.length() - 1;
+
+            int email;
+            for(email = index; email &gt;= 0; --email) {
+               if(Character.isWhitespace(work.charAt(email))) {
+                  end = email + 1;
+                  break;
+               }
+            }
+
+            for(email = index; email &lt;= url; ++email) {
+               if(Character.isWhitespace(work.charAt(email))) {
+                  url = email - 1;
+                  break;
+               }
+            }
+
+            String var9 = work.substring(end, url - end + 1);
+            results = results + work.substring(0, end) + &quot;&lt;a href=\&quot;mailto:&quot; + var9 + &quot;\&quot;&gt;&quot; + var9 + &quot;&lt;/a&gt;&quot;;
+            if(url == work.length()) {
+               work = &quot;&quot;;
+            } else {
+               work = work.substring(url + 1);
+            }
+         }
+
+         work = results + work;
+         results = &quot;&quot;;
+
+         while((index = work.indexOf(&quot;http://&quot;)) != -1) {
+            end = work.length() - 1;
+
+            for(url = index; url &lt;= end; ++url) {
+               if(Character.isWhitespace(work.charAt(url))) {
+                  end = url - 1;
+                  break;
+               }
+            }
+
+            String var8 = work.substring(index, end - index + 1);
+            results = results + work.substring(0, index) + &quot;&lt;a href=\&quot;&quot; + var8 + &quot;\&quot;&gt;&quot; + var8 + &quot;&lt;/a&gt;&quot;;
+            if(end == work.length()) {
+               work = &quot;&quot;;
+            } else {
+               work = work.substring(end + 1);
+            }
+         }
+
+         results = results + work;
+         return results;
+      } else {
+         return data;
+      }
+   }
+
+   public void setProperty(String name, String value) {
+      prop.setProperty(name, value);
+   }
+
+   public void setFooter(String string) {
+      this.footer = string;
+   }
+
+   protected boolean isFirstIteration() {
+      if(this.log.isDebugEnabled()) {
+         this.log.debug(&quot;[&quot; + this.getId() + &quot;] first iteration=&quot; + (this.rowcnt == 0) + &quot; (row number=&quot; + this.rowcnt + &quot;)&quot;);
+      }
+
+      return this.rowcnt == 0;
+   }
+
+   private Object evalAttr(String name, String value, Class type) throws JspTagException {
+      try {
+         return ExpressionUtil.evalNotNull(&quot;display&quot;, name, value, type, this, this.pageContext);
+      } catch (NullAttributeException var5) {
+         throw new JspTagException(&quot;Attribute &quot; + name + &quot; not found in TableTag&quot;);
+      } catch (JspException var6) {
+         throw new JspTagException(var6.toString());
+      }
+   }
+
+   protected void evaluateAttributes() throws JspTagException {
+      this.masterList = this.getItems();
+      this.offSet = ((Integer)this.evalAttr(&quot;offset&quot;, this.getOffset(), Integer.class)).intValue();
+      this.pageNumber = this.masterList.getPageControl().getPageNumber();
+      this.pageSize = this.masterList.getPageControl().getPageSize();
+   }
+
+   public String getPostfix() {
+      return this.postfix;
+   }
+
+   public void setPostfix(String postfix) {
+      this.postfix = postfix;
+   }
+
+   private static String convertMapToQueryString(Map params) {
+      if(params != null &amp;&amp; !params.isEmpty()) {
+         StringBuilder buf = new StringBuilder();
+         Iterator i$ = params.keySet().iterator();
+
+         while(true) {
+            while(i$.hasNext()) {
+               String paramName = (String)i$.next();
+               Object paramValueObj = params.get(paramName);
+               if(paramValueObj instanceof String[]) {
+                  String[] paramValues = (String[])((String[])paramValueObj);
+                  String[] arr$ = paramValues;
+                  int len$ = paramValues.length;
+
+                  for(int i$1 = 0; i$1 &lt; len$; ++i$1) {
+                     String paramValue = arr$[i$1];
+                     buf.append(paramName).append('=').append(paramValue).append('&amp;');
+                  }
+               } else {
+                  buf.append(paramName).append('=');
+                  if(paramValueObj != null &amp;&amp; !paramValueObj.getClass().isArray()) {
+                     buf.append(paramValueObj);
+                  }
+
+                  buf.append('&amp;');
+               }
+            }
+
+            buf.deleteCharAt(buf.length() - 1);
+            return buf.toString();
+         }
+      } else {
+         return &quot;&quot;;
+      }
+   }
+
+   public String getOnlyForProperty() {
+      return this.onlyForProperty;
+   }
+
+   public void setOnlyForProperty(String onlyForProperty) {
+      this.onlyForProperty = onlyForProperty;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "1015,1014" });
+
+            $("<div id='1015-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(1015)');
+            $("<div id='1014-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(1014)');
+
+
+$("<a name='12222464' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#1015-inlines');
+
+$("<a name='12222976' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#1014-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

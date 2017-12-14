@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ChannelManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/content/ChannelManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.content;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.content.Channel;
+import org.rhq.core.domain.content.ChannelContentSource;
+import org.rhq.core.domain.content.ChannelPackageVersion;
+import org.rhq.core.domain.content.ContentSource;
+import org.rhq.core.domain.content.PackageVersion;
+import org.rhq.core.domain.content.PackageVersionContentSource;
+import org.rhq.core.domain.content.ResourceChannel;
+import org.rhq.core.domain.criteria.ChannelCriteria;
+import org.rhq.core.domain.criteria.PackageVersionCriteria;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.authz.RequiredPermission;
+import org.rhq.enterprise.server.content.ChannelException;
+import org.rhq.enterprise.server.content.ChannelManagerLocal;
+import org.rhq.enterprise.server.content.ChannelManagerRemote;
+import org.rhq.enterprise.server.content.ContentManagerHelper;
+import org.rhq.enterprise.server.content.ContentSourceManagerLocal;
+import org.rhq.enterprise.server.plugin.content.ContentSourcePluginContainer;
+
+@Stateless
+public class ChannelManagerBean implements ChannelManagerLocal, ChannelManagerRemote {
+   private final Log log = LogFactory.getLog(ChannelManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AuthorizationManagerLocal authzManager;
+   @EJB
+   private ContentSourceManagerLocal contentSourceManager;
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void deleteChannel(Subject subject, int channelId) {
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is deleting channel [&quot; + channelId + &quot;]&quot;);
+      this.entityManager.flush();
+      this.entityManager.clear();
+      this.entityManager.createNamedQuery(&quot;ResourceChannel.deleteByChannelId&quot;).setParameter(&quot;channelId&quot;, Integer.valueOf(channelId)).executeUpdate();
+      this.entityManager.createNamedQuery(&quot;ChannelContentSource.deleteByChannelId&quot;).setParameter(&quot;channelId&quot;, Integer.valueOf(channelId)).executeUpdate();
+      this.entityManager.createNamedQuery(&quot;ChannelPackageVersion.deleteByChannelId&quot;).setParameter(&quot;channelId&quot;, Integer.valueOf(channelId)).executeUpdate();
+      Channel channel = (Channel)this.entityManager.find(Channel.class, Integer.valueOf(channelId));
+      if(channel != null) {
+         this.entityManager.remove(channel);
+         this.log.debug(&quot;User [&quot; + subject + &quot;] deleted channel [&quot; + channel + &quot;]&quot;);
+      } else {
+         this.log.debug(&quot;Channel ID [&quot; + channelId + &quot;] doesn\'t exist - nothing to delete&quot;);
+      }
+
+      this.contentSourceManager.purgeOrphanedPackageVersions(subject);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findChannels(Subject subject, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;c.name&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Channel.findAll&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Channel.findAll&quot;);
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public Channel getChannel(Subject subject, int channelId) {
+      Channel channel = (Channel)this.entityManager.find(Channel.class, Integer.valueOf(channelId));
+      if(channel != null &amp;&amp; channel.getChannelContentSources() != null) {
+         channel.getChannelContentSources().size();
+      }
+
+      return channel;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findAssociatedContentSources(Subject subject, int channelId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;cs.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;ContentSource.findByChannelId&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;ContentSource.findByChannelId&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(channelId));
+      countQuery.setParameter(&quot;id&quot;, Integer.valueOf(channelId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findSubscribedResources(Subject subject, int channelId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;rc.resource.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Channel.findSubscriberResources&quot;, pc);
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;Channel.findSubscriberResources&quot;);
+      query.setParameter(&quot;id&quot;, Integer.valueOf(channelId));
+      countQuery.setParameter(&quot;id&quot;, Integer.valueOf(channelId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   public PageList findResourceSubscriptions(Subject subject, int resourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;c.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Channel.findChannelCompositesByResourceId&quot;, pc);
+      Query countQuery = this.entityManager.createNamedQuery(&quot;Channel.findChannelCompositesByResourceId_count&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      countQuery.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findAvailableResourceSubscriptions(Subject subject, int resourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;c.id&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;Channel.findAvailableChannelCompositesByResourceId&quot;, pc);
+      Query countQuery = this.entityManager.createNamedQuery(&quot;Channel.findAvailableChannelCompositesByResourceId_count&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      countQuery.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List results = query.getResultList();
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      return new PageList(results, (int)count, pc);
+   }
+
+   public List findResourceSubscriptions(int resourceId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Channel.findChannelCompositesByResourceId&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List results = query.getResultList();
+      return results;
+   }
+
+   public List findAvailableResourceSubscriptions(int resourceId) {
+      Query query = this.entityManager.createNamedQuery(&quot;Channel.findAvailableChannelCompositesByResourceId&quot;);
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      List results = query.getResultList();
+      return results;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findPackageVersionsInChannel(Subject subject, int channelId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;pv.generalPackage.name, pv.version&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PackageVersion.findByChannelIdWithPackage&quot;, pc);
+      query.setParameter(&quot;channelId&quot;, Integer.valueOf(channelId));
+      List results = query.getResultList();
+      long count = this.getPackageVersionCountFromChannel(subject, (String)null, channelId);
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findPackageVersionsInChannel(Subject subject, int channelId, String filter, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;pv.generalPackage.name, pv.version&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;PackageVersion.findByChannelIdWithPackageFiltered&quot;, pc);
+      query.setParameter(&quot;channelId&quot;, Integer.valueOf(channelId));
+      query.setParameter(&quot;filter&quot;, PersistenceUtility.formatSearchParameter(filter));
+      List results = query.getResultList();
+      long count = this.getPackageVersionCountFromChannel(subject, filter, channelId);
+      return new PageList(results, (int)count, pc);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public Channel updateChannel(Subject subject, Channel channel) throws ChannelException {
+      if(channel.getName() != null &amp;&amp; !channel.getName().trim().equals(&quot;&quot;)) {
+         this.log.debug(&quot;User [&quot; + subject + &quot;] is updating channel [&quot; + channel + &quot;]&quot;);
+         channel = (Channel)this.entityManager.merge(channel);
+         this.log.debug(&quot;User [&quot; + subject + &quot;] updated channel [&quot; + channel + &quot;]&quot;);
+         return channel;
+      } else {
+         throw new ChannelException(&quot;Channel name is required&quot;);
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public Channel createChannel(Subject subject, Channel channel) throws ChannelException {
+      this.validateChannel(channel);
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is creating channel [&quot; + channel + &quot;]&quot;);
+      this.entityManager.persist(channel);
+      this.log.debug(&quot;User [&quot; + subject + &quot;] created channel [&quot; + channel + &quot;]&quot;);
+      return channel;
+   }
+
+   private void validateChannel(Channel c) throws ChannelException {
+      if(c.getName() != null &amp;&amp; !c.getName().trim().equals(&quot;&quot;)) {
+         List channels = this.getChannelByName(c.getName());
+         if(channels.size() != 0) {
+            throw new ChannelException(&quot;There is already a channel with the name of [&quot; + c.getName() + &quot;]&quot;);
+         }
+      } else {
+         throw new ChannelException(&quot;Channel name is required&quot;);
+      }
+   }
+
+   private List getChannelByName(String name) {
+      Query query = this.entityManager.createNamedQuery(&quot;Channel.findByName&quot;);
+      query.setParameter(&quot;name&quot;, name);
+      List results = query.getResultList();
+      return results;
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void addContentSourcesToChannel(Subject subject, int channelId, int[] contentSourceIds) throws Exception {
+      Channel channel = (Channel)this.entityManager.find(Channel.class, Integer.valueOf(channelId));
+      if(channel == null) {
+         throw new Exception(&quot;There is no channel with an ID [&quot; + channelId + &quot;]&quot;);
+      } else {
+         channel.setLastModifiedDate(System.currentTimeMillis());
+         this.log.debug(&quot;User [&quot; + subject + &quot;] is adding content sources to channel [&quot; + channel + &quot;]&quot;);
+         ContentSourcePluginContainer pc = ContentManagerHelper.getPluginContainer();
+         Query q = this.entityManager.createNamedQuery(&quot;PackageVersionContentSource.findByContentSourceIdNoFetch&quot;);
+         int[] arr$ = contentSourceIds;
+         int len$ = contentSourceIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            int id = arr$[i$];
+            ContentSource cs = (ContentSource)this.entityManager.find(ContentSource.class, Integer.valueOf(id));
+            if(cs == null) {
+               throw new Exception(&quot;There is no content source with id [&quot; + id + &quot;]&quot;);
+            }
+
+            ChannelContentSource ccsmapping = channel.addContentSource(cs);
+            this.entityManager.persist(ccsmapping);
+            HashSet alreadyAssociatedPVs = new HashSet(channel.getPackageVersions());
+            q.setParameter(&quot;id&quot;, Integer.valueOf(cs.getId()));
+            List pvcss = q.getResultList();
+            Iterator i$1 = pvcss.iterator();
+
+            while(i$1.hasNext()) {
+               PackageVersionContentSource pvcs = (PackageVersionContentSource)i$1.next();
+               PackageVersion pv = pvcs.getPackageVersionContentSourcePK().getPackageVersion();
+               if(!alreadyAssociatedPVs.contains(pv)) {
+                  ChannelPackageVersion mapping = new ChannelPackageVersion(channel, pv);
+                  this.entityManager.persist(mapping);
+               }
+            }
+
+            this.entityManager.flush();
+            this.entityManager.clear();
+            pc.syncNow(cs);
+         }
+
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void addPackageVersionsToChannel(Subject subject, int channelId, int[] packageVersionIds) {
+      Channel channel = (Channel)this.entityManager.find(Channel.class, Integer.valueOf(channelId));
+      int[] arr$ = packageVersionIds;
+      int len$ = packageVersionIds.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         int packageVersionId = arr$[i$];
+         PackageVersion packageVersion = (PackageVersion)this.entityManager.find(PackageVersion.class, Integer.valueOf(packageVersionId));
+         ChannelPackageVersion mapping = new ChannelPackageVersion(channel, packageVersion);
+         this.entityManager.persist(mapping);
+      }
+
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public void removeContentSourcesFromChannel(Subject subject, int channelId, int[] contentSourceIds) throws ChannelException {
+      Channel channel = this.getChannel(subject, channelId);
+      this.log.debug(&quot;User [&quot; + subject + &quot;] is removing content sources from channel [&quot; + channel + &quot;]&quot;);
+      Set currentSet = channel.getChannelContentSources();
+      if(currentSet != null &amp;&amp; currentSet.size() &gt; 0) {
+         HashSet toBeRemoved = new HashSet();
+         Iterator i$ = currentSet.iterator();
+
+         while(true) {
+            ChannelContentSource doomed;
+            while(i$.hasNext()) {
+               doomed = (ChannelContentSource)i$.next();
+               int[] arr$ = contentSourceIds;
+               int len$ = contentSourceIds.length;
+
+               for(int i$1 = 0; i$1 &lt; len$; ++i$1) {
+                  int id = arr$[i$1];
+                  if(id == doomed.getChannelContentSourcePK().getContentSource().getId()) {
+                     toBeRemoved.add(doomed);
+                     break;
+                  }
+               }
+            }
+
+            i$ = toBeRemoved.iterator();
+
+            while(i$.hasNext()) {
+               doomed = (ChannelContentSource)i$.next();
+               this.entityManager.remove(doomed);
+            }
+
+            currentSet.removeAll(toBeRemoved);
+            break;
+         }
+      }
+
+   }
+
+   public void subscribeResourceToChannels(Subject subject, int resourceId, int[] channelIds) {
+      if(channelIds != null &amp;&amp; channelIds.length != 0) {
+         if(!this.authzManager.hasResourcePermission(subject, Permission.MANAGE_CONTENT, resourceId)) {
+            throw new PermissionException(&quot;[&quot; + subject + &quot;] does not have permission to subscribe this resource to channels&quot;);
+         } else {
+            Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+            if(resource == null) {
+               throw new RuntimeException(&quot;There is no resource with the ID [&quot; + resourceId + &quot;]&quot;);
+            } else {
+               Query q = this.entityManager.createNamedQuery(&quot;Channel.findByIds&quot;);
+               ArrayList idList = new ArrayList(channelIds.length);
+               int[] channels = channelIds;
+               int i$ = channelIds.length;
+
+               for(int channel = 0; channel &lt; i$; ++channel) {
+                  Integer mapping = Integer.valueOf(channels[channel]);
+                  idList.add(mapping);
+               }
+
+               q.setParameter(&quot;ids&quot;, idList);
+               List var12 = q.getResultList();
+               if(var12.size() != channelIds.length) {
+                  throw new RuntimeException(&quot;One or more of the channels do not exist [&quot; + idList + &quot;]-&gt;[&quot; + var12 + &quot;]&quot;);
+               } else {
+                  Iterator var13 = var12.iterator();
+
+                  while(var13.hasNext()) {
+                     Channel var14 = (Channel)var13.next();
+                     ResourceChannel var11 = var14.addResource(resource);
+                     this.entityManager.persist(var11);
+                  }
+
+               }
+            }
+         }
+      }
+   }
+
+   public void unsubscribeResourceFromChannels(Subject subject, int resourceId, int[] channelIds) {
+      if(channelIds != null &amp;&amp; channelIds.length != 0) {
+         if(!this.authzManager.hasResourcePermission(subject, Permission.MANAGE_CONTENT, resourceId)) {
+            throw new PermissionException(&quot;[&quot; + subject + &quot;] does not have permission to unsubscribe this resource from channels&quot;);
+         } else {
+            Resource resource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+            if(resource == null) {
+               throw new RuntimeException(&quot;There is no resource with the ID [&quot; + resourceId + &quot;]&quot;);
+            } else {
+               Query q = this.entityManager.createNamedQuery(&quot;Channel.findByIds&quot;);
+               ArrayList idList = new ArrayList(channelIds.length);
+               int[] channels = channelIds;
+               int i$ = channelIds.length;
+
+               for(int channel = 0; channel &lt; i$; ++channel) {
+                  Integer mapping = Integer.valueOf(channels[channel]);
+                  idList.add(mapping);
+               }
+
+               q.setParameter(&quot;ids&quot;, idList);
+               List var12 = q.getResultList();
+               if(var12.size() != channelIds.length) {
+                  throw new RuntimeException(&quot;One or more of the channels do not exist [&quot; + idList + &quot;]-&gt;[&quot; + var12 + &quot;]&quot;);
+               } else {
+                  Iterator var13 = var12.iterator();
+
+                  while(var13.hasNext()) {
+                     Channel var14 = (Channel)var13.next();
+                     ResourceChannel var11 = var14.removeResource(resource);
+                     this.entityManager.remove(var11);
+                  }
+
+               }
+            }
+         }
+      }
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public long getPackageVersionCountFromChannel(Subject subject, String filter, int channelId) {
+      Query countQuery = PersistenceUtility.createCountQuery(this.entityManager, &quot;PackageVersion.findByChannelIdFiltered&quot;);
+      countQuery.setParameter(&quot;channelId&quot;, Integer.valueOf(channelId));
+      countQuery.setParameter(&quot;filter&quot;, filter == null?null:&quot;%&quot; + filter.toUpperCase() + &quot;%&quot;);
+      return ((Long)countQuery.getSingleResult()).longValue();
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public long getPackageVersionCountFromChannel(Subject subject, int channelId) {
+      return this.getPackageVersionCountFromChannel(subject, (String)null, channelId);
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findChannelsByCriteria(Subject subject, ChannelCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List channels = query.getResultList();
+      return new PageList(channels, (int)count, criteria.getPageControl());
+   }
+
+   @RequiredPermission(Permission.MANAGE_INVENTORY)
+   public PageList findPackageVersionsInChannelByCriteria(Subject subject, PackageVersionCriteria criteria) {
+      Integer channelId = criteria.getFilterChannelId();
+      if(null != channelId &amp;&amp; channelId.intValue() &gt;= 1) {
+         CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+         Query query = generator.getQuery(this.entityManager);
+         Query countQuery = generator.getCountQuery(this.entityManager);
+         long count = ((Long)countQuery.getSingleResult()).longValue();
+         List packageVersions = query.getResultList();
+         return new PageList(packageVersions, (int)count, criteria.getPageControl());
+      } else {
+         throw new IllegalArgumentException(&quot;Illegal filterResourceId: &quot; + channelId);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/StandardPage}">
+
+<head>
+    <title>RHAMT Example !</title>
+    <link href="/reports/resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/snippet/jquery.snippet.min.css" />
+    <link href="/reports/resources/css/windup.java.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/sausage/sausage.css" />
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/flot/plot.css" />
+    <script src="/reports/resources/js/windup-overview-head.js"></script>
+    <style>
+        .desc { z-index: 5000; }
+
+        /* Light yellow bg for the issue info box. */
+        .hint-detail-panel > .panel-heading {
+            border-color: #c2c2c2;
+            background-color: #fbf4b1;
+        }
+        .hint-detail-panel {
+            border-color: #a8d0e3;
+            background-color: #fffcdc;
+        }
+        /* Reduce the padding, default is too big. */
+        .hint-detail-panel > .panel-body { padding-bottom: 0; }
+    </style>
+</head>
+
+<body class="java-application report-Application Details">
+<th:block layout:fragment="content">
+    <ul class="nav nav-tabs">
+        <li><a href="/execution/1/reports/report_index_RHQ_Enterprise_Server_EAR.html">Dashboard</a></li>
+        <li><a href="/execution/1/reports/migration_issues.1.html">Issues</a></li>
+        <li class="active"><a href="/execution/1/reports/ApplicationDetails_RHQ_Enterprise_Server_EAR.html">Details</a></li>
+        <li><a href="/execution/1/reports/dependency_report_RHQ_Enterprise_Server_EAR.html">Dependencies</a></li>
+        <li><a href="/execution/1/reports/remotereport_RHQ_Enterprise_Server_EAR.html">Remote Services</a></li>
+        <li><a href="/execution/1/reports/ejbreport_RHQ_Enterprise_Server_EAR.html">EJBs</a></li>
+        <li><a href="/execution/1/reports/jpa_RHQ_Enterprise_Server_EAR.html">JPA</a></li>
+        <li><a href="/execution/1/reports/server_resources_RHQ_Enterprise_Server_EAR.html">Server Resources</a></li>
+        <li><a href="/execution/1/reports/hardcoded_ipsRHQ_Enterprise_Server_EAR.html">Hardcoded IPS</a></li>
+        <li><a href="/execution/1/reports/ignoredfiles_RHQ_Enterprise_Server_EAR.html">Ignored Files</a></li>
+    </ul>
+
+    <div id="reportContent">
+
+    </div>
+
+    <script type="text/javascript" src="/reports/data/issue_summaries.js"></script>
+
+    <div id="reportData">
+    </div>
+
+    <script th:inline="javascript">
+        var url = [[${app_name}]];
+        console.log(url);
+        $('#reportContent').load('/reports/ApplicationDetails_'+url+'.html #report-content', function(response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: ";
+                alert(msg + xhr.status + " " + xhr.statusText);
+            }
+        });
+    </script>
+
+    <script src="/reports/resources/js/jquery.storageapi.min.js"></script>
+    <script src="/reports/resources/js/jquery.color-2.1.2.min.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.min.js"></script>
+    <script src="/reports/resources/libraries/flot/jquery.flot.pie.min.js"></script>
+    <link   rel="stylesheet"      href="/reports/resources/libraries/jstree/themes/default/style.min.css"/>
+    <script type="text/javascript" src="/reports/resources/libraries/jstree/jstree.min.js"></script>
+    <script src="/reports/resources/js/windup-overview.js"></script>
+
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for ContentSourceAdapterManager.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/plugin/content/ContentSourceAdapterManager.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.plugin.content;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.clientapi.server.plugin.content.ContentSourceAdapter;
+import org.rhq.core.clientapi.server.plugin.content.ContentSourcePackageDetails;
+import org.rhq.core.clientapi.server.plugin.content.ContentSourcePackageDetailsKey;
+import org.rhq.core.clientapi.server.plugin.content.PackageSyncReport;
+import org.rhq.core.clientapi.server.plugin.content.metadata.ContentSourcePluginMetadataManager;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.content.ContentSource;
+import org.rhq.core.domain.content.ContentSourceSyncResults;
+import org.rhq.core.domain.content.ContentSourceSyncStatus;
+import org.rhq.core.domain.content.ContentSourceType;
+import org.rhq.core.domain.content.Package;
+import org.rhq.core.domain.content.PackageVersion;
+import org.rhq.core.domain.content.PackageVersionContentSource;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.content.ContentSourceManagerLocal;
+import org.rhq.enterprise.server.content.metadata.ContentSourceMetadataManagerLocal;
+import org.rhq.enterprise.server.plugin.content.ContentSourcePluginContainerConfiguration;
+import org.rhq.enterprise.server.plugin.content.ContentSourcePluginEnvironment;
+import org.rhq.enterprise.server.plugin.content.ContentSourcePluginManager;
+import org.rhq.enterprise.server.util.LookupUtil;
+
+public class ContentSourceAdapterManager {
+   private static final Log log = LogFactory.getLog(ContentSourceAdapterManager.class);
+   private ContentSourcePluginContainerConfiguration configuration;
+   private ContentSourcePluginManager pluginManager;
+   private Map adapters;
+   private Object synchronizeContentSourceLock = new Object();
+
+   public InputStream loadPackageBits(int contentSourceId, String location) throws Exception {
+      ContentSourceAdapter adapter = this.getIsolatedContentSourceAdapter(contentSourceId);
+      InputStream inputStream = adapter.getInputStream(location);
+      if(inputStream == null) {
+         throw new Exception(&quot;Adapter for content source [&quot; + contentSourceId + &quot;] failed to give us a stream to the package at location [&quot; + location + &quot;]&quot;);
+      } else {
+         return inputStream;
+      }
+   }
+
+   public boolean synchronizeContentSource(int contentSourceId) throws Exception {
+      ContentSourceManagerLocal manager = LookupUtil.getContentSourceManager();
+      ContentSourceAdapter adapter = this.getIsolatedContentSourceAdapter(contentSourceId);
+      ContentSourceSyncResults results = null;
+      SubjectManagerLocal subjMgr = LookupUtil.getSubjectManager();
+      StringBuilder progress = new StringBuilder();
+
+      boolean reloadedResults2;
+      try {
+         ContentSource t = manager.getContentSource(subjMgr.getOverlord(), contentSourceId);
+         if(t == null) {
+            throw new Exception(&quot;Cannot sync a non-existing content source [&quot; + contentSourceId + &quot;]&quot;);
+         }
+
+         Object reloadedResults1 = this.synchronizeContentSourceLock;
+         synchronized(this.synchronizeContentSourceLock) {
+            progress.append(new Date()).append(&quot;: &quot;);
+            progress.append(&quot;Start synchronization of content source [&quot; + t.getName() + &quot;]&quot;);
+            progress.append('\n');
+            progress.append(new Date()).append(&quot;: &quot;);
+            progress.append(&quot;Getting currently known list of content source packages...&quot;);
+            results = new ContentSourceSyncResults(t);
+            results.setResults(progress.toString());
+            results = manager.persistContentSourceSyncResults(results);
+         }
+
+         if(results != null) {
+            long start = System.currentTimeMillis();
+            PackageSyncReport reloadedResults3 = new PackageSyncReport();
+            PageControl pc = PageControl.getUnlimitedInstance();
+            PageList baos1 = manager.getPackageVersionsFromContentSource(subjMgr.getOverlord(), t.getId(), pc);
+            int existingCount = baos1.size();
+            HashMap keyPVCSMap = new HashMap(existingCount);
+            HashSet allDetails = new HashSet(existingCount);
+            Iterator i$ = baos1.iterator();
+
+            while(i$.hasNext()) {
+               PackageVersionContentSource pvcs = (PackageVersionContentSource)i$.next();
+               PackageVersion pv = pvcs.getPackageVersionContentSourcePK().getPackageVersion();
+               Package p = pv.getGeneralPackage();
+               ResourceType rt = p.getPackageType().getResourceType();
+               ContentSourcePackageDetailsKey key = new ContentSourcePackageDetailsKey(p.getName(), pv.getVersion(), p.getPackageType().getName(), pv.getArchitecture().getName(), rt.getName(), rt.getPlugin());
+               ContentSourcePackageDetails details = new ContentSourcePackageDetails(key);
+               details.setClassification(pv.getGeneralPackage().getClassification());
+               details.setDisplayName(pv.getDisplayName());
+               details.setDisplayVersion(pv.getDisplayVersion());
+               details.setExtraProperties(pv.getExtraProperties());
+               details.setFileCreatedDate(pv.getFileCreatedDate());
+               details.setFileName(pv.getFileName());
+               details.setFileSize(pv.getFileSize());
+               details.setLicenseName(pv.getLicenseName());
+               details.setLicenseVersion(pv.getLicenseVersion());
+               details.setLocation(pvcs.getLocation());
+               details.setLongDescription(pv.getLongDescription());
+               details.setMD5(pv.getMD5());
+               details.setMetadata(pv.getMetadata());
+               details.setSHA256(pv.getSHA256());
+               details.setShortDescription(pv.getShortDescription());
+               allDetails.add(details);
+               keyPVCSMap.put(key, pvcs);
+            }
+
+            log.info(&quot;synchronizeContentSource: [&quot; + t.getName() + &quot;]: loaded existing list of size=[&quot; + existingCount + &quot;] (&quot; + (System.currentTimeMillis() - start) + &quot;)ms&quot;);
+            progress.append(existingCount).append('\n');
+            progress.append(new Date()).append(&quot;: &quot;);
+            progress.append(&quot;Asking content source to update the list of packages...&quot;);
+            results.setResults(progress.toString());
+            results = manager.mergeContentSourceSyncResults(results);
+            start = System.currentTimeMillis();
+            adapter.synchronizePackages(reloadedResults3, allDetails);
+            log.info(&quot;synchronizeContentSource: [&quot; + t.getName() + &quot;]: got sync report from adapter=[&quot; + reloadedResults3 + &quot;] (&quot; + (System.currentTimeMillis() - start) + &quot;)ms&quot;);
+            progress.append(&quot;new=&quot;).append(reloadedResults3.getNewPackages().size());
+            progress.append(&quot;, updated=&quot;).append(reloadedResults3.getUpdatedPackages().size());
+            progress.append(&quot;, deleted=&quot;).append(reloadedResults3.getDeletedPackages().size());
+            progress.append('\n');
+            progress.append(new Date()).append(&quot;: &quot;);
+            progress.append(&quot;FULL SUMMARY FOLLOWS:&quot;);
+            progress.append('\n');
+            progress.append(reloadedResults3.getSummary());
+            progress.append('\n');
+            progress.append(new Date()).append(&quot;: &quot;);
+            progress.append(&quot;Merging the updated list of packages to database&quot;);
+            progress.append('\n');
+            results.setResults(progress.toString());
+            results = manager.mergeContentSourceSyncResults(results);
+            start = System.currentTimeMillis();
+            results = manager.mergeContentSourceSyncReport(t, reloadedResults3, keyPVCSMap, results);
+            progress.setLength(0);
+            progress.append(results.getResults());
+            log.info(&quot;synchronizeContentSource: [&quot; + t.getName() + &quot;]: report has been merged (&quot; + (System.currentTimeMillis() - start) + &quot;)ms&quot;);
+            progress.append(new Date()).append(&quot;: &quot;).append(&quot;DONE.&quot;);
+            results.setResults(progress.toString());
+            results.setStatus(ContentSourceSyncStatus.SUCCESS);
+            results = manager.mergeContentSourceSyncResults(results);
+            return true;
+         }
+
+         log.info(&quot;Content source [&quot; + t.getName() + &quot;] is already currently being synchronized, this sync request will be ignored&quot;);
+         reloadedResults2 = false;
+      } catch (Throwable var29) {
+         if(results != null) {
+            ContentSourceSyncResults reloadedResults = manager.getContentSourceSyncResults(results.getId());
+            if(reloadedResults != null) {
+               results = reloadedResults;
+               if(reloadedResults.getResults() != null) {
+                  progress = new StringBuilder(reloadedResults.getResults());
+               }
+            }
+
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            var29.printStackTrace(new PrintStream(baos));
+            progress.append(new Date()).append(&quot;: &quot;);
+            progress.append(&quot;SYNCHRONIZATION ERROR - STACK TRACE FOLLOWS:\n&quot;);
+            progress.append(baos.toString());
+            results.setResults(progress.toString());
+            results.setStatus(ContentSourceSyncStatus.FAILURE);
+         }
+
+         throw new Exception(&quot;Failed to sync content source [&quot; + contentSourceId + &quot;]&quot;, var29);
+      } finally {
+         if(results != null) {
+            results.setEndTime(new Long(System.currentTimeMillis()));
+            manager.mergeContentSourceSyncResults(results);
+         }
+
+      }
+
+      return reloadedResults2;
+   }
+
+   public boolean testConnection(int contentSourceId) throws Exception {
+      ContentSourceAdapter adapter = this.getIsolatedContentSourceAdapter(contentSourceId);
+
+      try {
+         adapter.testConnection();
+         return true;
+      } catch (Throwable var4) {
+         return false;
+      }
+   }
+
+   public Set getAllContentSources() {
+      Map var1 = this.adapters;
+      synchronized(this.adapters) {
+         return new HashSet(this.adapters.keySet());
+      }
+   }
+
+   public void startAdapter(ContentSource contentSource) {
+      Map t = this.adapters;
+      synchronized(this.adapters) {
+         if(this.adapters.containsKey(contentSource)) {
+            return;
+         }
+      }
+
+      this.instantiateAdapter(contentSource);
+
+      try {
+         log.info(&quot;Initializing content source adapter for [&quot; + contentSource + &quot;] of type [&quot; + contentSource.getContentSourceType() + &quot;]&quot;);
+         ContentSourceAdapter t1 = this.getIsolatedContentSourceAdapter(contentSource);
+         t1.initialize(contentSource.getConfiguration());
+      } catch (Throwable var4) {
+         log.warn(&quot;Failed to initialize adapter for content source [&quot; + contentSource.getName() + &quot;]&quot;, var4);
+      }
+
+   }
+
+   public void shutdownAdapter(ContentSource contentSource) {
+      Map t = this.adapters;
+      synchronized(this.adapters) {
+         if(!this.adapters.containsKey(contentSource)) {
+            return;
+         }
+      }
+
+      try {
+         log.info(&quot;Shutting down content source adapter for [&quot; + contentSource + &quot;] of type [&quot; + contentSource.getContentSourceType() + &quot;]&quot;);
+         ContentSourceAdapter t1 = this.getIsolatedContentSourceAdapter(contentSource);
+         t1.shutdown();
+      } catch (Throwable var9) {
+         log.warn(&quot;Failed to shutdown adapter for content source [&quot; + contentSource.getName() + &quot;]&quot;, var9);
+      } finally {
+         this.adapters.remove(contentSource);
+      }
+
+   }
+
+   public void restartAdapter(ContentSource contentSource) {
+      this.shutdownAdapter(contentSource);
+      this.startAdapter(contentSource);
+   }
+
+   protected void setConfiguration(ContentSourcePluginContainerConfiguration config) {
+      this.configuration = config;
+   }
+
+   protected void initialize(ContentSourcePluginManager pluginManager) {
+      this.pluginManager = pluginManager;
+      ContentSourceMetadataManagerLocal metadataManager = LookupUtil.getContentSourceMetadataManager();
+      ContentSourceManagerLocal contentSourceManager = LookupUtil.getContentSourceManager();
+      ContentSourcePluginMetadataManager pluginMetadataManager = this.pluginManager.getMetadataManager();
+      Set allTypes = pluginMetadataManager.getAllContentSourceTypes();
+      metadataManager.registerTypes(allTypes);
+      this.createInitialAdaptersMap();
+      PageControl pc = PageControl.getUnlimitedInstance();
+      Subject overlord = LookupUtil.getSubjectManager().getOverlord();
+      PageList contentSources = contentSourceManager.getAllContentSources(overlord, pc);
+      if(contentSources != null) {
+         Iterator i$ = contentSources.iterator();
+
+         while(i$.hasNext()) {
+            ContentSource contentSource = (ContentSource)i$.next();
+            this.startAdapter(contentSource);
+         }
+      }
+
+   }
+
+   protected void shutdown() {
+      Map i$ = this.adapters;
+      HashMap adaptersCopy;
+      synchronized(this.adapters) {
+         adaptersCopy = new HashMap(this.adapters);
+      }
+
+      Iterator i$1 = adaptersCopy.keySet().iterator();
+
+      while(i$1.hasNext()) {
+         ContentSource contentSource = (ContentSource)i$1.next();
+         this.shutdownAdapter(contentSource);
+      }
+
+      i$ = this.adapters;
+      synchronized(this.adapters) {
+         this.adapters.clear();
+      }
+   }
+
+   protected void createInitialAdaptersMap() {
+      this.adapters = new HashMap();
+   }
+
+   private ContentSourceAdapter instantiateAdapter(ContentSource contentSource) {
+      ContentSourceAdapter adapter = null;
+      String apiClassName = &quot;?&quot;;
+      String pluginName = &quot;?&quot;;
+
+      try {
+         ContentSourceType t = contentSource.getContentSourceType();
+         apiClassName = t.getContentSourceApiClass();
+         pluginName = this.pluginManager.getMetadataManager().getPluginNameFromContentSourceType(t);
+         ContentSourcePluginEnvironment pluginEnv = this.pluginManager.getPlugin(pluginName);
+         ClassLoader pluginClassloader = pluginEnv.getClassLoader();
+         ClassLoader startingClassLoader = Thread.currentThread().getContextClassLoader();
+
+         try {
+            Thread.currentThread().setContextClassLoader(pluginClassloader);
+            Class apiClass = Class.forName(apiClassName, true, pluginClassloader);
+            if(ContentSourceAdapter.class.isAssignableFrom(apiClass)) {
+               adapter = (ContentSourceAdapter)apiClass.newInstance();
+            } else {
+               log.warn(&quot;The API class [&quot; + apiClassName + &quot;] does not implement [&quot; + ContentSourceAdapter.class.getName() + &quot;] in plugin [&quot; + pluginName + &quot;]&quot;);
+            }
+         } finally {
+            Thread.currentThread().setContextClassLoader(startingClassLoader);
+         }
+      } catch (Throwable var18) {
+         log.warn(&quot;Failed to create the API class [&quot; + apiClassName + &quot;] for plugin [&quot; + pluginName + &quot;]&quot;, var18);
+      }
+
+      if(adapter != null) {
+         Map t1 = this.adapters;
+         synchronized(this.adapters) {
+            this.adapters.put(contentSource, adapter);
+         }
+      }
+
+      return adapter;
+   }
+
+   private ContentSourceAdapter getIsolatedContentSourceAdapter(int contentSourceId) throws RuntimeException {
+      Map var2 = this.adapters;
+      synchronized(this.adapters) {
+         Iterator i$ = this.adapters.keySet().iterator();
+
+         ContentSource contentSource;
+         do {
+            if(!i$.hasNext()) {
+               throw new RuntimeException(&quot;Content source ID [&quot; + contentSourceId + &quot;] doesn\'t exist; can\'t get adapter&quot;);
+            }
+
+            contentSource = (ContentSource)i$.next();
+         } while(contentSource.getId() != contentSourceId);
+
+         return this.getIsolatedContentSourceAdapter(contentSource);
+      }
+   }
+
+   private ContentSourceAdapter getIsolatedContentSourceAdapter(ContentSource contentSource) throws RuntimeException {
+      Map env = this.adapters;
+      ContentSourceAdapter adapter;
+      synchronized(this.adapters) {
+         adapter = (ContentSourceAdapter)this.adapters.get(contentSource);
+      }
+
+      if(adapter == null) {
+         throw new RuntimeException(&quot;There is no adapter for content source [&quot; + adapter + &quot;]&quot;);
+      } else {
+         ContentSourcePluginEnvironment env1 = this.pluginManager.getPlugin(contentSource.getContentSourceType());
+         if(env1 == null) {
+            throw new RuntimeException(&quot;There is no plugin env. for content source [&quot; + contentSource + &quot;]&quot;);
+         } else {
+            ClassLoader classLoader = env1.getClassLoader();
+            ContentSourceAdapterManager.IsolatedInvocationHandler handler = new ContentSourceAdapterManager.IsolatedInvocationHandler(adapter, classLoader);
+            Class[] ifaces = new Class[]{ContentSourceAdapter.class};
+            return (ContentSourceAdapter)Proxy.newProxyInstance(classLoader, ifaces, handler);
+         }
+      }
+   }
+
+   private class IsolatedInvocationHandler implements InvocationHandler {
+      private final Object instance;
+      private final ClassLoader classLoader;
+
+      public IsolatedInvocationHandler(Object obj, ClassLoader cl) {
+         this.instance = obj;
+         this.classLoader = cl;
+      }
+
+      public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+         ClassLoader startingClassLoader = Thread.currentThread().getContextClassLoader();
+
+         Object var5;
+         try {
+            Thread.currentThread().setContextClassLoader(this.classLoader);
+            var5 = method.invoke(this.instance, args);
+         } finally {
+            Thread.currentThread().setContextClassLoader(startingClassLoader);
+         }
+
+         return var5;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:18 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "316" });
+
+            $("<div id='316-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(316)');
+
+
+$("<a name='12218880' class='windup-file-location'></a><div class='inline-source-comment green tag-classloader'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>Dynamic class instantiation</strong><a title='View Rule: environment-dependent-calls-01000' href='windup_ruleproviders.html#environment-dependent-calls-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>The class is dynamically loaded within application. During the migration, multiple classes that are provided on classpath by a different server may not be present anymore.<\/p><p>Please review the class-loading mechanisms and ensure that the dynamically loaded class is available in JBoss EAP.<\/p><ul><li><a href='https://access.redhat.com/solutions/361343' target='_blank'>Classloading in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#316-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

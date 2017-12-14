@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/StandardPage}">
+
+<head>
+    <title>RHAMT Example !</title>
+    <link href="/reports/resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/snippet/jquery.snippet.min.css" />
+    <link href="/reports/resources/css/windup.java.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/sausage/sausage.css" />
+    <link rel="stylesheet" type="text/css" href="/reports/resources/libraries/flot/plot.css" />
+
+    <style>
+        .table-bordered { border: 1px solid #222222;  border-collapse: collapse;}
+        .table-bordered>tfoot>tr>th, .table-bordered>tfoot>tr>td .table-bordered>tbody>tr>th,  .table-bordered>thead>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td {
+            border: 1px inset #dddddd
+        }
+        .fileSummary {
+            background-color: #f5f5f5;
+        }
+        /* Only horizontal lines. */
+        .migration-issues-table.table-bordered > thead > tr > th,
+        .migration-issues-table.table-bordered > tbody > tr > td {
+            border-left-style: none;
+            border-right-style: none;
+        }
+
+        /* Light yellow bg for the issue info box. */
+        .hint-detail-panel > .panel-heading {
+            border-color: #c2c2c2;
+            background-color: #fbf4b1;
+        }
+        .hint-detail-panel {
+            border-color: #c2c2c2;
+            background-color: #fffcdc;
+        }
+        /* Reduce the padding, default is too big. */
+        .hint-detail-panel > .panel-body { padding-bottom: 0; }
+
+        /* Colors of various effort levels. */
+        /* Commented out for now (jsight - 2016/02/15)
+        tr.problemSummary.effortINFO td.level { color: #1B540E; }
+        tr.problemSummary.effortTRIVIAL td.level { color: #50A40E; }
+        tr.problemSummary.effortCOMPLEX td.level { color: #0065AC; }
+        tr.problemSummary.effortREDESIGN td.level { color: #C67D00; }
+        tr.problemSummary.effortARCHITECTURAL td.level { color: #C42F0E; }
+        tr.problemSummary.effortUNKNOWN td.level { color: #C42F0E; }
+        */
+    </style>
+
+</head>
+
+<body>
+<th:block layout:fragment="content">
+    <ul class="nav nav-tabs">
+        <li><a href="/execution/1/reports/report_index_RHQ_Enterprise_Server_EAR.html">Dashboard</a></li>
+        <li class="active"><a href="/execution/1/reports/migration_issues.1.html">Issues</a></li>
+        <li><a href="/execution/1/reports/ApplicationDetails_RHQ_Enterprise_Server_EAR.html">Details</a></li>
+        <li><a href="/execution/1/reports/dependency_report_RHQ_Enterprise_Server_EAR.html">Dependencies</a></li>
+        <li><a href="/execution/1/reports/remotereport_RHQ_Enterprise_Server_EAR.html">Remote Services</a></li>
+        <li><a href="/execution/1/reports/ejbreport_RHQ_Enterprise_Server_EAR.html">EJBs</a></li>
+        <li><a href="/execution/1/reports/jpa_RHQ_Enterprise_Server_EAR.html">JPA</a></li>
+        <li><a href="/execution/1/reports/server_resources_RHQ_Enterprise_Server_EAR.html">Server Resources</a></li>
+        <li><a href="/execution/1/reports/hardcoded_ipsRHQ_Enterprise_Server_EAR.html">Hardcoded IPS</a></li>
+        <li><a href="/execution/1/reports/ignoredfiles_RHQ_Enterprise_Server_EAR.html">Ignored Files</a></li>
+    </ul>
+
+    <div id="reportContent">
+
+    </div>
+
+    <script type="text/javascript" src="/reports/data/issue_summaries.js"></script>
+
+    <script th:inline="javascript">
+        var url = [[${app_name}]];
+        console.log(url);
+        $('#reportContent').load('/reports/migration_issues.'+url+' #report-content', function(response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: ";
+                alert(msg + xhr.status + " " + xhr.statusText);
+            }
+        });
+    </script>
+
+    <script src="/reports/resources/js/jquery.tablesorter.min.js"></script>
+    <script src="/reports/resources/js/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/reports/resources/libraries/handlebars/handlebars.4.0.5.min.js"></script>
+
+    <script type="text/javascript" th:inline="none">
+
+        $(document).ready(function() {
+
+            var $table = $('.tablesorter');
+
+            // hide child rows & make draggable
+            $table.find('.tablesorter-childRow')
+                .find('td')
+                .droppable({
+                    accept: '.draggingSiblings',
+                    drop: function(event, ui) {
+                        if ($(this).closest('tr').length){
+                            $(this).closest('tr').before(
+                                ui.draggable
+                                    .css({ left: 0, top: 0 })
+                                    .parent()
+                                    .removeClass('draggingRow')
+                            );
+                            $table
+                                .find('.draggingSiblingsRow')
+                                .removeClass('draggingSiblingsRow')
+                                .find('.draggingSiblings')
+                                .removeClass('draggingSiblings');
+                            $table.trigger('update');
+                        } else {
+                            return false;
+                        }
+                    }
+                })
+                .draggable({
+                    revert: "invalid",
+                    start: function( event, ui ) {
+                        $(this)
+                            .parent()
+                            .addClass('draggingRow')
+                            .prevUntil('.tablesorter-hasChildRow')
+                            .nextUntil('tr:not(.tablesorter-childRow)')
+                            .addClass('draggingSiblingsRow')
+                            .find('td')
+                            .addClass('draggingSiblings');
+                    }
+                })
+                .hide();
+
+            // we need these parsers because we are using comma to separate thousands and are also sorting links
+            $.tablesorter.addParser({
+                id: 'thousands',
+                is: function(s) { return true; },
+                format: function(s) {
+                    return s.replace('$','').replace(/,/g,'');
+                },
+                type: 'numeric'
+            });
+            $.tablesorter.addParser({
+                id: 'a-elements',
+                is: function(s) { return true; },
+                format: function(s)
+                {
+                    // format your data for normalization
+                    return s.replace(new RegExp(/<.*?>/),"");
+                },
+                parsed: true,
+                type: 'text'
+            });
+
+            $table
+                .tablesorter({
+                    // this is the default setting
+                    cssChildRow: "tablesorter-childRow",
+                    sortList: [[1,1]],
+                    headers: {
+                        0: {sorter: 'a-elements'},
+                        1: {sorter: 'thousands'},
+                        2: {sorter: 'thousands'},
+                        3: {sorter: false},
+                        4: {sorter: 'thousands'},
+                    }
+                })
+                .delegate('.toggle', 'click' ,function(){
+                    $(this)
+                        .closest('tr')
+                        .nextUntil('tr.tablesorter-hasChildRow')
+                        .find('td').first().each(function(index, element) { showDetails(element) });
+                    return false;
+                });
+
+        });
+
+        function resizeTables()
+        {
+            var tableArr = document.getElementsByClassName('migration-issues-table');
+            var cellWidths = new Array();
+
+            // get widest
+            for(i = 0; i < tableArr.length; i++)
+            {
+                for(j = 0; j < tableArr[i].rows[0].cells.length; j++)
+                {
+                    var cell = tableArr[i].rows[0].cells[j];
+
+                    if(!cellWidths[j] || cellWidths[j] < cell.clientWidth)
+                        cellWidths[j] = cell.clientWidth;
+                }
+            }
+
+            // set all columns to the widest width found
+            for(i = 0; i < tableArr.length; i++)
+            {
+                for(j = 0; j < tableArr[i].rows[0].cells.length; j++)
+                {
+                    tableArr[i].rows[0].cells[j].style.width = cellWidths[j]+'px';
+                }
+            }
+        }
+
+        window.onload = resizeTables;
+
+    </script>
+
+    <script id="detail-row-template" type="text/x-handlebars-template">
+        {{#each problemSummaries}}
+        {{#each files}}
+        <tr class="fileSummary tablesorter-childRow fileSummary_id_{{../problemSummaryID}}">
+            <td>
+                <div class="indent">
+                    {{{l}}}
+                </div>
+            </td>
+            <td class="text-right">
+                {{oc}}
+            </td>
+
+            {{#if @first}}
+            <td colspan="3" rowspan="{{../files.length}}">
+                <div class="panel panel-default hint-detail-panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left">Issue Detail: {{../issueName}}</h4>
+                        {{#if ../ruleID}}
+                        <div class="pull-right">
+                            <a class="sh_url" title="{{../ruleID}}" href="windup_ruleproviders.html#{{../ruleID}}">Show Rule</a>
+                        </div>
+                        {{/if}}
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        {{{../description}}}
+                    </div>
+
+                    {{#if ../resourceLinks}}
+                    <div class="panel-body">
+                        <ul>
+                            {{#each ../resourceLinks}}
+                            <li><a href="{{h}}" target="_blank">{{t}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+            </td>
+            {{/if}}
+        </tr>
+        {{/each}}
+        {{/each}}
+    </script>
+
+    <script type="text/javascript">
+        var issueDataLoaded = [];
+
+        function showDetails(element) {
+            var problemSummaryID = $(element).parent().attr("data-summary-id")
+            var tr = $(element).parent();
+
+            var issueDataArray = MIGRATION_ISSUES_DETAILS[problemSummaryID];
+            if (!issueDataLoaded[problemSummaryID]) {
+                // append it and try again in a second
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "data/problem_summary_" + problemSummaryID + ".js";
+                document.body.appendChild(script);
+
+                issueDataLoaded[problemSummaryID] = true;
+                setTimeout(function() { showDetails(element); }, 25);
+                return;
+            } else if (issueDataArray == null) {
+                setTimeout(function() { showDetails(element); }, 25);
+                return;
+            }
+
+            function toggleRow () {
+                $(tr).find("td").toggle();
+                var issuesTable = $(element).parent().parent().parent();
+                $(issuesTable).trigger("update", [true]);
+            }
+
+            $(".fileSummary_id_" + problemSummaryID).remove();
+            if ($(element).is(":visible")) {
+                toggleRow();
+                return;
+            }
+
+            var source   = $("#detail-row-template").html();
+            var template = Handlebars.compile(source);
+            var html = template({problemSummaries: issueDataArray});
+
+            $(html).insertAfter(tr);
+
+            toggleRow();
+        }
+
+        // summary in JS should go here
+        var MIGRATION_ISSUES_DETAILS = [];
+    </script>
+
+</th:block>
+
+</body>
+</html>

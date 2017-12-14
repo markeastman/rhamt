@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for GroupAlertDefinitionManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/alert/GroupAlertDefinitionManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.alert;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.rhq.core.domain.alert.AlertDefinition;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.resource.InventoryStatus;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.enterprise.server.alert.AlertDefinitionCreationException;
+import org.rhq.enterprise.server.alert.AlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.alert.AlertDefinitionUpdateException;
+import org.rhq.enterprise.server.alert.GroupAlertDefinitionManagerLocal;
+import org.rhq.enterprise.server.alert.InvalidAlertDefinitionException;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+
+@Stateless
+public class GroupAlertDefinitionManagerBean implements GroupAlertDefinitionManagerLocal {
+   private static final Log LOG = LogFactory.getLog(GroupAlertDefinitionManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private AlertDefinitionManagerLocal alertDefinitionManager;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+
+   public PageList findGroupAlertDefinitions(Subject subject, int resourceGroupId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;ctime&quot;, PageOrdering.DESC);
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, &quot;AlertDefinition.findByResourceGroup&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;AlertDefinition.findByResourceGroup&quot;, pageControl);
+      queryCount.setParameter(&quot;groupId&quot;, Integer.valueOf(resourceGroupId));
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(resourceGroupId));
+      long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+      List list = query.getResultList();
+      return new PageList(list, (int)totalCount, pageControl);
+   }
+
+   private List getChildrenAlertDefinitionIds(Subject subject, int groupAlertDefinitionId) {
+      Query query = this.entityManager.createNamedQuery(&quot;AlertDefinition.findByGroupAlertDefinitionId&quot;);
+      query.setParameter(&quot;groupAlertDefinitionId&quot;, Integer.valueOf(groupAlertDefinitionId));
+      List list = query.getResultList();
+      return list;
+   }
+
+   public int removeGroupAlertDefinitions(Subject subject, Integer[] groupAlertDefinitionIds) {
+      if(groupAlertDefinitionIds != null &amp;&amp; groupAlertDefinitionIds.length != 0) {
+         int modified = 0;
+         ArrayList allChildDefinitionIds = new ArrayList();
+         Subject overlord = this.subjectManager.getOverlord();
+         Integer[] breakLinksQuery = groupAlertDefinitionIds;
+         int len$ = groupAlertDefinitionIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer groupAlertDefinitionId = breakLinksQuery[i$];
+            List childDefinitions = this.getChildrenAlertDefinitionIds(subject, groupAlertDefinitionId.intValue());
+            allChildDefinitionIds.addAll(childDefinitions);
+            modified += this.alertDefinitionManager.removeAlertDefinitions(subject, new Integer[]{groupAlertDefinitionId});
+            this.alertDefinitionManager.removeAlertDefinitions(overlord, (Integer[])childDefinitions.toArray(new Integer[childDefinitions.size()]));
+         }
+
+         if(allChildDefinitionIds.size() &gt; 0) {
+            Query var11 = this.entityManager.createNamedQuery(&quot;AlertDefinition.updateSetParentsNull&quot;);
+            var11.setParameter(&quot;childrenDefinitionIds&quot;, allChildDefinitionIds);
+            var11.executeUpdate();
+         }
+
+         return modified;
+      } else {
+         return 0;
+      }
+   }
+
+   public void updateAlertDefinitionsForResource(Subject subject, AlertDefinition groupAlertDefinition, Integer resourceId) throws AlertDefinitionCreationException, InvalidAlertDefinitionException {
+      if(!this.authorizationManager.isOverlord(subject)) {
+         throw new AlertDefinitionCreationException(&quot;Updating the alert definitions for a resource is an implicit system operation and must only be performed by the overlord&quot;);
+      } else {
+         AlertDefinition childAlertDefinition = new AlertDefinition(groupAlertDefinition);
+         childAlertDefinition.setGroupAlertDefinition(groupAlertDefinition);
+         this.alertDefinitionManager.createAlertDefinition(subject, childAlertDefinition, resourceId);
+      }
+   }
+
+   private List getCommittedResourceIdsNeedingGroupAlertDefinitionApplication(Subject subject, int groupAlertDefinitionId, int resourceGroupId) {
+      Query query = this.entityManager.createNamedQuery(&quot;AlertDefinition.findResourceIdsNeedingGroupApplication&quot;);
+      query.setParameter(&quot;groupAlertDefinitionId&quot;, Integer.valueOf(groupAlertDefinitionId));
+      query.setParameter(&quot;resourceGroupId&quot;, Integer.valueOf(resourceGroupId));
+      query.setParameter(&quot;inventoryStatus&quot;, InventoryStatus.COMMITTED);
+      List list = query.getResultList();
+      return list;
+   }
+
+   public int createGroupAlertDefinitions(Subject subject, AlertDefinition groupAlertDefinition, Integer resourceGroupId) throws InvalidAlertDefinitionException {
+      ResourceGroup group = (ResourceGroup)this.entityManager.find(ResourceGroup.class, resourceGroupId);
+      groupAlertDefinition.setResourceGroup(group);
+      int groupAlertDefinitionId = this.alertDefinitionManager.createAlertDefinition(subject, groupAlertDefinition, (Integer)null);
+      group = (ResourceGroup)this.entityManager.merge(group);
+      int definitionCount = 0;
+      Subject overlord = this.subjectManager.getOverlord();
+      List resourceIdsForGroup = this.getCommittedResourceIdsNeedingGroupAlertDefinitionApplication(subject, groupAlertDefinitionId, resourceGroupId.intValue());
+      Iterator i$ = resourceIdsForGroup.iterator();
+
+      while(i$.hasNext()) {
+         Integer resourceId = (Integer)i$.next();
+
+         try {
+            this.updateAlertDefinitionsForResource(overlord, groupAlertDefinition, resourceId);
+            ++definitionCount;
+            if(definitionCount % 250 == 0) {
+               this.entityManager.flush();
+               this.entityManager.clear();
+            }
+         } catch (AlertDefinitionCreationException var12) {
+            LOG.error(var12);
+         }
+      }
+
+      return groupAlertDefinitionId;
+   }
+
+   public int disableGroupAlertDefinitions(Subject subject, Integer[] groupAlertDefinitionIds) {
+      if(groupAlertDefinitionIds != null &amp;&amp; groupAlertDefinitionIds.length != 0) {
+         int modified = 0;
+         Subject overlord = this.subjectManager.getOverlord();
+         Integer[] arr$ = groupAlertDefinitionIds;
+         int len$ = groupAlertDefinitionIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer groupAlertDefinitionId = arr$[i$];
+            List alertDefinitions = this.getChildrenAlertDefinitionIds(subject, groupAlertDefinitionId.intValue());
+            modified += this.alertDefinitionManager.disableAlertDefinitions(subject, new Integer[]{groupAlertDefinitionId});
+            this.alertDefinitionManager.disableAlertDefinitions(overlord, (Integer[])alertDefinitions.toArray(new Integer[alertDefinitions.size()]));
+         }
+
+         return modified;
+      } else {
+         return 0;
+      }
+   }
+
+   public int enableGroupAlertDefinitions(Subject subject, Integer[] groupAlertDefinitionIds) {
+      if(groupAlertDefinitionIds != null &amp;&amp; groupAlertDefinitionIds.length != 0) {
+         int modified = 0;
+         Subject overlord = this.subjectManager.getOverlord();
+         Integer[] arr$ = groupAlertDefinitionIds;
+         int len$ = groupAlertDefinitionIds.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            Integer groupAlertDefinitionId = arr$[i$];
+            List alertDefinitions = this.getChildrenAlertDefinitionIds(subject, groupAlertDefinitionId.intValue());
+            modified += this.alertDefinitionManager.enableAlertDefinitions(subject, new Integer[]{groupAlertDefinitionId});
+            this.alertDefinitionManager.enableAlertDefinitions(overlord, (Integer[])alertDefinitions.toArray(new Integer[alertDefinitions.size()]));
+         }
+
+         return modified;
+      } else {
+         return 0;
+      }
+   }
+
+   public AlertDefinition updateGroupAlertDefinitions(Subject subject, AlertDefinition groupAlertDefinition, boolean purgeInternals) throws InvalidAlertDefinitionException {
+      AlertDefinition updatedTemplate = null;
+
+      try {
+         updatedTemplate = this.alertDefinitionManager.updateAlertDefinition(subject, groupAlertDefinition.getId(), groupAlertDefinition, purgeInternals);
+      } catch (AlertDefinitionUpdateException var12) {
+         LOG.error(&quot;Attempt to update a deleted groupAlertDefinition &quot; + groupAlertDefinition.toSimpleString());
+      }
+
+      Subject overlord = this.subjectManager.getOverlord();
+      int definitionCount = 0;
+      List alertDefinitions = this.getChildrenAlertDefinitionIds(overlord, groupAlertDefinition.getId());
+      Iterator resourceIds = alertDefinitions.iterator();
+
+      while(resourceIds.hasNext()) {
+         Integer adce = (Integer)resourceIds.next();
+
+         try {
+            this.alertDefinitionManager.updateAlertDefinition(overlord, adce.intValue(), groupAlertDefinition, purgeInternals);
+         } catch (AlertDefinitionUpdateException var11) {
+            LOG.error(&quot;Attempt to update a deleted template &quot; + groupAlertDefinition.toSimpleString());
+         }
+
+         ++definitionCount;
+         if(definitionCount % 250 == 0) {
+            this.entityManager.flush();
+            this.entityManager.clear();
+         }
+      }
+
+      List var14 = this.getCommittedResourceIdsNeedingGroupAlertDefinitionApplication(overlord, groupAlertDefinition.getId(), this.getResourceGroupIdAlertTemplateId(groupAlertDefinition.getId()));
+
+      try {
+         Iterator var15 = var14.iterator();
+
+         while(var15.hasNext()) {
+            Integer resourceId = (Integer)var15.next();
+            this.updateAlertDefinitionsForResource(overlord, groupAlertDefinition, resourceId);
+            ++definitionCount;
+            if(definitionCount % 250 == 0) {
+               this.entityManager.flush();
+               this.entityManager.clear();
+            }
+         }
+      } catch (AlertDefinitionCreationException var13) {
+         LOG.error(var13);
+      }
+
+      return updatedTemplate;
+   }
+
+   public void addGroupAlertDefinitions(Subject subject, int resourceGroupId, int[] resourcesIdsToAdd) {
+      if(resourcesIdsToAdd != null &amp;&amp; resourcesIdsToAdd.length != 0) {
+         PageList groupAlertDefinitions = this.findGroupAlertDefinitions(subject, resourceGroupId, PageControl.getUnlimitedInstance());
+         int definitionCount = 0;
+         Subject overlord = this.subjectManager.getOverlord();
+         Iterator i$ = groupAlertDefinitions.iterator();
+
+         while(i$.hasNext()) {
+            AlertDefinition groupAlertDefinition = (AlertDefinition)i$.next();
+            int[] arr$ = resourcesIdsToAdd;
+            int len$ = resourcesIdsToAdd.length;
+
+            for(int i$1 = 0; i$1 &lt; len$; ++i$1) {
+               Integer resourceId = Integer.valueOf(arr$[i$1]);
+
+               try {
+                  this.updateAlertDefinitionsForResource(overlord, groupAlertDefinition, resourceId);
+                  ++definitionCount;
+                  if(definitionCount % 250 == 0) {
+                     this.entityManager.flush();
+                     this.entityManager.clear();
+                  }
+               } catch (AlertDefinitionCreationException var14) {
+                  LOG.error(var14);
+               } catch (InvalidAlertDefinitionException var15) {
+                  LOG.error(var15);
+               }
+            }
+         }
+
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void purgeAllGroupAlertDefinitions(Subject subject, int resourceGroupId) {
+      PageList groupAlertDefinitions = this.findGroupAlertDefinitions(subject, resourceGroupId, PageControl.getUnlimitedInstance());
+      int i = 0;
+      Integer[] groupAlertDefinitionIds = new Integer[groupAlertDefinitions.size()];
+
+      AlertDefinition groupAlertDefinition;
+      for(Iterator i$ = groupAlertDefinitions.iterator(); i$.hasNext(); groupAlertDefinitionIds[i++] = Integer.valueOf(groupAlertDefinition.getId())) {
+         groupAlertDefinition = (AlertDefinition)i$.next();
+      }
+
+      this.removeGroupAlertDefinitions(subject, groupAlertDefinitionIds);
+   }
+
+   public void removeGroupAlertDefinitions(Subject subject, int resourceGroupId, int[] resourceIdsToRemove) {
+      if(resourceIdsToRemove != null &amp;&amp; resourceIdsToRemove.length != 0) {
+         PageList groupAlertDefinitions = this.findGroupAlertDefinitions(subject, resourceGroupId, PageControl.getUnlimitedInstance());
+         ArrayList allChildrenDefinitionIds = new ArrayList();
+         Subject overlord = this.subjectManager.getOverlord();
+         Iterator breakLinksQuery = groupAlertDefinitions.iterator();
+
+         while(breakLinksQuery.hasNext()) {
+            AlertDefinition groupAlertDefinition = (AlertDefinition)breakLinksQuery.next();
+            List childDefinitions = this.getChildrenAlertDefinitionIds(subject, groupAlertDefinition.getId());
+            allChildrenDefinitionIds.addAll(childDefinitions);
+            this.alertDefinitionManager.removeAlertDefinitions(overlord, (Integer[])childDefinitions.toArray(new Integer[childDefinitions.size()]));
+         }
+
+         if(allChildrenDefinitionIds.size() &gt; 0) {
+            Query breakLinksQuery1 = this.entityManager.createNamedQuery(&quot;AlertDefinition.updateSetParentsNull&quot;);
+            breakLinksQuery1.setParameter(&quot;childrenDefinitionIds&quot;, allChildrenDefinitionIds);
+            breakLinksQuery1.executeUpdate();
+         }
+
+      }
+   }
+
+   private int getResourceGroupIdAlertTemplateId(int groupAlertDefinitionId) {
+      Query query = this.entityManager.createQuery(&quot;SELECT groupAlertDefinition.resourceGroup.id   FROM AlertDefinition groupAlertDefinition  WHERE groupAlertDefinition.id = :groupAlertDefinitionId&quot;);
+      query.setParameter(&quot;groupAlertDefinitionId&quot;, Integer.valueOf(groupAlertDefinitionId));
+      int groupId = ((Number)query.getSingleResult()).intValue();
+      return groupId;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

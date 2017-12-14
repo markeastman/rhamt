@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MeasurementDataManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/measurement/MeasurementDataManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.measurement;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.FlushModeType;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.sql.DataSource;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jboss.annotation.IgnoreDependency;
+import org.jboss.annotation.ejb.TransactionTimeout;
+import org.jetbrains.annotations.Nullable;
+import org.rhq.core.db.DatabaseType;
+import org.rhq.core.db.DatabaseTypeFactory;
+import org.rhq.core.db.Postgresql83DatabaseType;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.measurement.DataType;
+import org.rhq.core.domain.measurement.DisplayType;
+import org.rhq.core.domain.measurement.MeasurementData;
+import org.rhq.core.domain.measurement.MeasurementDataNumeric;
+import org.rhq.core.domain.measurement.MeasurementDataTrait;
+import org.rhq.core.domain.measurement.MeasurementDefinition;
+import org.rhq.core.domain.measurement.MeasurementReport;
+import org.rhq.core.domain.measurement.MeasurementSchedule;
+import org.rhq.core.domain.resource.Agent;
+import org.rhq.core.domain.resource.ResourceType;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.OrderingField;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.util.collection.ArrayUtils;
+import org.rhq.core.util.exception.ThrowableUtil;
+import org.rhq.core.util.jdbc.JDBCUtil;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.alert.AlertManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheStats;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.jaxb.adapter.MeasurementDataNumericHighLowCompositeAdapter;
+import org.rhq.enterprise.server.measurement.CallTimeDataManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementAggregate;
+import org.rhq.enterprise.server.measurement.MeasurementDataManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementDataManagerRemote;
+import org.rhq.enterprise.server.measurement.MeasurementDefinitionManagerLocal;
+import org.rhq.enterprise.server.measurement.MeasurementException;
+import org.rhq.enterprise.server.measurement.MeasurementStorageException;
+import org.rhq.enterprise.server.measurement.instrumentation.MeasurementMonitor;
+import org.rhq.enterprise.server.measurement.uibean.MetricDisplaySummary;
+import org.rhq.enterprise.server.measurement.util.MeasurementDataManagerUtility;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+
+@Stateless
+@Resource(
+   name = &quot;RHQ_DS&quot;,
+   mappedName = &quot;java:/RHQDS&quot;
+)
+public class MeasurementDataManagerBean implements MeasurementDataManagerLocal, MeasurementDataManagerRemote {
+   private static final String TRAIT_INSERT_STATEMENT = &quot;INSERT INTO RHQ_measurement_data_trait \n  SELECT ?, ?, ?  FROM RHQ_numbers n \n  WHERE n.i = 42 \n    AND NOT EXISTS \n      ( \n      SELECT 1 \n      FROM (SELECT dt2.value as v \n            FROM RHQ_measurement_data_trait dt2 \n      WHERE dt2.schedule_id = ? \n        AND dt2.time_stamp = \n          (SELECT max(dt3.time_stamp) FROM RHQ_measurement_data_trait dt3 WHERE dt3.schedule_id = ?))  lastValue \n      WHERE NOT ((? is null AND lastValue.v is not null) \n        OR (? is not null AND lastValue.v is null) \n              OR (? is not null AND lastValue.v is not null AND ? &lt;&gt; lastValue.v)) \n      )&quot;;
+   private final Log log = LogFactory.getLog(MeasurementDataManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @Resource(
+      name = &quot;RHQ_DS&quot;
+   )
+   private DataSource rhqDs;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private AlertConditionCacheManagerLocal alertConditionCacheManager;
+   @EJB
+   private AlertManagerLocal alertManager;
+   @EJB
+   @IgnoreDependency
+   private AgentManagerLocal agentClientManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private CallTimeDataManagerLocal callTimeDataManager;
+   @EJB
+   private MeasurementDataManagerLocal measurementDataManager;
+   @EJB
+   @IgnoreDependency
+   private MeasurementDefinitionManagerLocal measurementDefinitionManager;
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   @TransactionTimeout(21600)
+   public int purgeTraits(long oldest) {
+      Connection conn = null;
+      PreparedStatement stmt = null;
+
+      int var8;
+      try {
+         conn = this.rhqDs.getConnection();
+         stmt = conn.prepareStatement(&quot;DELETE FROM rhq_measurement_data_trait WHERE EXISTS   (SELECT t2.schedule_id, t2.time_stamp    FROM rhq_measurement_data_trait t2,      (SELECT max(t4.time_stamp) as mx, t4.schedule_id as schedule_id       FROM rhq_measurement_data_trait t4       WHERE t4.time_stamp &lt; ?       GROUP BY t4.schedule_id) t3    WHERE t2.schedule_id = t3.schedule_id    AND t2.time_stamp &lt; t3.mx    AND rhq_measurement_data_trait.time_stamp = t2.time_stamp    AND rhq_measurement_data_trait.schedule_id = t2.schedule_id) &quot;);
+         stmt.setLong(1, oldest);
+         long e = System.currentTimeMillis();
+         int deleted = stmt.executeUpdate();
+         MeasurementMonitor.getMBean().incrementPurgeTime(System.currentTimeMillis() - e);
+         MeasurementMonitor.getMBean().setPurgedMeasurementTraits((long)deleted);
+         var8 = deleted;
+      } catch (Exception var13) {
+         throw new RuntimeException(&quot;Failed to purge traits older than [&quot; + oldest + &quot;]&quot;, var13);
+      } finally {
+         JDBCUtil.safeClose(conn, stmt, (ResultSet)null);
+      }
+
+      return var8;
+   }
+
+   @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+   public void mergeMeasurementReport(MeasurementReport report) {
+      long start = System.currentTimeMillis();
+      if(report.getNumericData() != null &amp;&amp; !report.getNumericData().isEmpty()) {
+         this.measurementDataManager.addNumericData(report.getNumericData());
+      }
+
+      if(report.getTraitData() != null &amp;&amp; !report.getTraitData().isEmpty()) {
+         this.measurementDataManager.addTraitData(report.getTraitData());
+      }
+
+      if(report.getCallTimeData() != null &amp;&amp; !report.getCallTimeData().isEmpty()) {
+         this.callTimeDataManager.addCallTimeData(report.getCallTimeData());
+      }
+
+      long time = System.currentTimeMillis() - start;
+      MeasurementMonitor.getMBean().incrementMeasurementInsertTime(time);
+      MeasurementMonitor.getMBean().incrementMeasurementsInserted(report.getDataCount());
+      if(this.log.isDebugEnabled()) {
+         this.log.debug(&quot;Measurement storage for [&quot; + report.getDataCount() + &quot;] took &quot; + time + &quot;ms&quot;);
+      }
+
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void addNumericData(Set data) {
+      if(data != null &amp;&amp; !data.isEmpty()) {
+         int expectedCount = data.size();
+         Connection conn = null;
+         DatabaseType dbType = null;
+         HashMap statements = new HashMap();
+
+         try {
+            conn = this.rhqDs.getConnection();
+            dbType = DatabaseTypeFactory.getDatabaseType(conn);
+            if(dbType instanceof Postgresql83DatabaseType) {
+               Statement e = null;
+
+               try {
+                  e = conn.createStatement();
+                  e.execute(&quot;SET synchronous_commit = off&quot;);
+               } finally {
+                  JDBCUtil.safeClose(e);
+               }
+            }
+
+            Iterator var30 = data.iterator();
+
+            while(true) {
+               while(var30.hasNext()) {
+                  MeasurementDataNumeric i$ = (MeasurementDataNumeric)var30.next();
+                  if(i$.getValue() != null &amp;&amp; !Double.isNaN(i$.getValue().doubleValue())) {
+                     String ps = MeasurementDataManagerUtility.getTable(i$.getTimestamp());
+                     PreparedStatement res = (PreparedStatement)statements.get(ps);
+                     if(res == null) {
+                        String arr$ = &quot;INSERT  /*+ APPEND */ INTO &quot; + ps + &quot;(schedule_id,time_stamp,value) VALUES(?,?,?)&quot;;
+                        res = conn.prepareStatement(arr$);
+                        statements.put(ps, res);
+                     }
+
+                     res.setInt(1, i$.getScheduleId());
+                     res.setLong(2, i$.getTimestamp());
+                     res.setDouble(3, i$.getValue().doubleValue());
+                     res.addBatch();
+                  } else {
+                     --expectedCount;
+                  }
+               }
+
+               int var31 = 0;
+               Iterator var32 = statements.values().iterator();
+
+               while(var32.hasNext()) {
+                  PreparedStatement var33 = (PreparedStatement)var32.next();
+                  int[] var34 = var33.executeBatch();
+                  int[] var35 = var34;
+                  int len$ = var34.length;
+
+                  for(int i$1 = 0; i$1 &lt; len$; ++i$1) {
+                     int updates = var35[i$1];
+                     if(updates != 1 &amp;&amp; updates != -2) {
+                        throw new MeasurementStorageException(&quot;Unexpected batch update size [&quot; + updates + &quot;]&quot;);
+                     }
+
+                     ++var31;
+                  }
+               }
+
+               if(var31 != expectedCount) {
+                  throw new MeasurementStorageException(&quot;Failure to store measurement data.&quot;);
+               }
+
+               this.notifyAlertConditionCacheManager(&quot;mergeMeasurementReport&quot;, (MeasurementData[])data.toArray(new MeasurementData[data.size()]));
+               break;
+            }
+         } catch (SQLException var27) {
+            this.log.warn(&quot;Failure saving measurement numeric data:\n&quot; + ThrowableUtil.getAllMessages(var27));
+         } catch (Exception var28) {
+            this.log.error(&quot;Error persisting numeric data&quot;, var28);
+         } finally {
+            Iterator i$2 = statements.values().iterator();
+
+            while(i$2.hasNext()) {
+               PreparedStatement ps1 = (PreparedStatement)i$2.next();
+               JDBCUtil.safeClose(ps1);
+            }
+
+            JDBCUtil.safeClose(conn);
+         }
+
+      }
+   }
+
+   @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+   public void addTraitData(Set data) {
+      if(data != null &amp;&amp; !data.isEmpty()) {
+         Connection conn = null;
+         PreparedStatement ps = null;
+
+         try {
+            conn = this.rhqDs.getConnection();
+            ps = conn.prepareStatement(&quot;INSERT INTO RHQ_measurement_data_trait \n  SELECT ?, ?, ?  FROM RHQ_numbers n \n  WHERE n.i = 42 \n    AND NOT EXISTS \n      ( \n      SELECT 1 \n      FROM (SELECT dt2.value as v \n            FROM RHQ_measurement_data_trait dt2 \n      WHERE dt2.schedule_id = ? \n        AND dt2.time_stamp = \n          (SELECT max(dt3.time_stamp) FROM RHQ_measurement_data_trait dt3 WHERE dt3.schedule_id = ?))  lastValue \n      WHERE NOT ((? is null AND lastValue.v is not null) \n        OR (? is not null AND lastValue.v is null) \n              OR (? is not null AND lastValue.v is not null AND ? &lt;&gt; lastValue.v)) \n      )&quot;);
+            Iterator e = data.iterator();
+
+            while(e.hasNext()) {
+               MeasurementDataTrait aData = (MeasurementDataTrait)e.next();
+               ps.setLong(1, aData.getTimestamp());
+               ps.setInt(2, aData.getScheduleId());
+               ps.setString(3, aData.getValue());
+               ps.setInt(4, aData.getScheduleId());
+               ps.setInt(5, aData.getScheduleId());
+               ps.setString(6, aData.getValue());
+               ps.setString(7, aData.getValue());
+               ps.setString(8, aData.getValue());
+               ps.setString(9, aData.getValue());
+               ps.addBatch();
+            }
+
+            int[] e1 = ps.executeBatch();
+            if(e1.length != data.size()) {
+               throw new MeasurementStorageException(&quot;Failure to store measurement trait data.&quot;);
+            }
+
+            this.notifyAlertConditionCacheManager(&quot;mergeMeasurementReport&quot;, (MeasurementData[])data.toArray(new MeasurementData[data.size()]));
+         } catch (SQLException var11) {
+            this.log.warn(&quot;Failure saving measurement trait data:\n&quot; + ThrowableUtil.getAllMessages(var11));
+         } catch (Exception var12) {
+            this.log.error(&quot;Error persisting trait data&quot;, var12);
+         } finally {
+            JDBCUtil.safeClose(conn, ps, (ResultSet)null);
+         }
+
+      }
+   }
+
+   public List findDataForSiblingResources(Subject subject, int[] resourceIds, int measurementDefinitionId, long beginTime, long endTime, int numberOfDataPoints) {
+      return MeasurementDataManagerUtility.getInstance(this.rhqDs).getMeasurementDataForSiblingResources(beginTime, endTime, resourceIds, measurementDefinitionId);
+   }
+
+   private List findDataAggregatesForSiblingResources(Subject subject, int[] resourceIds, int measurementDefinitionId, long beginTime, long endTime, int numberOfDataPoints) {
+      return MeasurementDataManagerUtility.getInstance(this.rhqDs).getMeasurementDataAggregatesForSiblingResources(beginTime, endTime, resourceIds, measurementDefinitionId);
+   }
+
+   public List findDataForAutoGroup(Subject subject, int autoGroupParentResourceId, int autoGroupChildResourceTypeId, int measurementDefinitionId, long beginTime, long endTime, int numberOfDataPoints, boolean aggregateOverAutoGroup) {
+      if(!this.authorizationManager.canViewResource(subject, autoGroupParentResourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view measurement data for autogroup[resourceId=&quot; + autoGroupParentResourceId + &quot;, typeId=&quot; + autoGroupChildResourceTypeId + &quot;]&quot;);
+      } else {
+         List resources = this.resourceGroupManager.findResourcesForAutoGroup(subject, autoGroupParentResourceId, autoGroupChildResourceTypeId);
+         int[] resourceIds = new int[resources.size()];
+         int i = 0;
+
+         for(Iterator ret = resources.iterator(); ret.hasNext(); ++i) {
+            org.rhq.core.domain.resource.Resource res = (org.rhq.core.domain.resource.Resource)ret.next();
+            resourceIds[i] = res.getId();
+         }
+
+         List var16;
+         if(aggregateOverAutoGroup) {
+            var16 = this.findDataAggregatesForSiblingResources(subject, resourceIds, measurementDefinitionId, beginTime, endTime, numberOfDataPoints);
+         } else {
+            var16 = this.findDataForSiblingResources(subject, resourceIds, measurementDefinitionId, beginTime, endTime, numberOfDataPoints);
+         }
+
+         return var16;
+      }
+   }
+
+   public Map findNarrowedMetricDisplaySummariesForResourcesAndParent(Subject subject, int resourceTypeId, int parentId, List resourceIds, long begin, long end) {
+      HashMap sumMap = new HashMap();
+      if(parentId &gt; 0 &amp;&amp; resourceIds != null &amp;&amp; !resourceIds.isEmpty() &amp;&amp; end &gt;= begin) {
+         Query q = this.entityManager.createNamedQuery(&quot;MeasurementSchedule.FIND_ENABLED_BY_ResourceIds_AND_RESOURCE_TYPE&quot;);
+         q.setFlushMode(FlushModeType.COMMIT);
+         q.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+         q.setParameter(&quot;resourceIds&quot;, resourceIds);
+         List triples = q.getResultList();
+         HashMap resDefSchedMap = new HashMap();
+         ArrayList scheduleIds = new ArrayList(triples.size());
+
+         int defMap;
+         int resourceId;
+         Object summaries;
+         for(Iterator alerts = triples.iterator(); alerts.hasNext(); ((Map)summaries).put(Integer.valueOf(resourceId), Integer.valueOf(defMap))) {
+            Object[] definitions = (Object[])alerts.next();
+            defMap = ((Integer)definitions[0]).intValue();
+            scheduleIds.add(Integer.valueOf(defMap));
+            int i$ = ((Integer)definitions[1]).intValue();
+            resourceId = ((Integer)definitions[2]).intValue();
+            if(!resDefSchedMap.containsKey(Integer.valueOf(i$))) {
+               summaries = new HashMap();
+               resDefSchedMap.put(Integer.valueOf(i$), summaries);
+            } else {
+               summaries = (Map)resDefSchedMap.get(Integer.valueOf(i$));
+            }
+         }
+
+         Map alerts1 = this.alertManager.getAlertCountForSchedules(begin, end, scheduleIds);
+         List definitions1 = this.measurementDefinitionManager.findMeasurementDefinitionsByResourceType(subject, resourceTypeId, DataType.MEASUREMENT, (DisplayType)null);
+         HashMap defMap1 = new HashMap(definitions1.size());
+         Iterator i$2 = definitions1.iterator();
+
+         while(i$2.hasNext()) {
+            MeasurementDefinition resourceId1 = (MeasurementDefinition)i$2.next();
+            defMap1.put(Integer.valueOf(resourceId1.getId()), resourceId1);
+         }
+
+         ArrayList summaries1;
+         for(i$2 = resourceIds.iterator(); i$2.hasNext(); sumMap.put(Integer.valueOf(resourceId), summaries1)) {
+            resourceId = ((Integer)i$2.next()).intValue();
+            summaries1 = new ArrayList();
+            if(resDefSchedMap.containsKey(Integer.valueOf(resourceId))) {
+               Map defSchedMap = (Map)resDefSchedMap.get(Integer.valueOf(resourceId));
+               Iterator i$1 = defSchedMap.keySet().iterator();
+
+               while(i$1.hasNext()) {
+                  int defId = ((Integer)i$1.next()).intValue();
+                  if(defMap1.get(Integer.valueOf(defId)) != null) {
+                     int sid = ((Integer)defSchedMap.get(Integer.valueOf(defId))).intValue();
+                     MetricDisplaySummary mds = new MetricDisplaySummary();
+                     mds.setAlertCount(((Integer)alerts1.get(Integer.valueOf(sid))).intValue());
+                     mds.setBeginTimeFrame(Long.valueOf(begin));
+                     mds.setEndTimeFrame(Long.valueOf(end));
+                     mds.setDefinitionId(Integer.valueOf(defId));
+                     mds.setLabel(((MeasurementDefinition)defMap1.get(Integer.valueOf(defId))).getDisplayName());
+                     mds.setParentId(parentId);
+                     mds.setChildTypeId(resourceTypeId);
+                     summaries1.add(mds);
+                  }
+               }
+            }
+         }
+
+         return sumMap;
+      } else {
+         return sumMap;
+      }
+   }
+
+   public Map findNarrowedMetricsDisplaySummariesForCompGroup(Subject subject, ResourceGroup group, long beginTime, long endTime) {
+      group = (ResourceGroup)this.entityManager.merge(group);
+      Set resources = group.getExplicitResources();
+      Map resMap = this.findNarrowedMetricDisplaySummariesForCompatibleResources(subject, resources, beginTime, endTime);
+      Iterator i$ = resMap.values().iterator();
+
+      while(i$.hasNext()) {
+         List summaries = (List)i$.next();
+         Iterator i$1 = summaries.iterator();
+
+         while(i$1.hasNext()) {
+            MetricDisplaySummary sum = (MetricDisplaySummary)i$1.next();
+            sum.setGroupId(group.getId());
+         }
+      }
+
+      return resMap;
+   }
+
+   public Map findNarrowedMetricsDisplaySummariesForAutoGroup(Subject subject, int parentId, int cType, long beginTime, long endTime) {
+      List resources = this.resourceGroupManager.findResourcesForAutoGroup(subject, parentId, cType);
+      HashSet resSet = new HashSet(resources.size());
+      Map resMap = this.findNarrowedMetricDisplaySummariesForCompatibleResources(subject, resSet, beginTime, endTime);
+      Iterator i$ = resMap.values().iterator();
+
+      while(i$.hasNext()) {
+         List summaries = (List)i$.next();
+         Iterator i$1 = summaries.iterator();
+
+         while(i$1.hasNext()) {
+            MetricDisplaySummary sum = (MetricDisplaySummary)i$1.next();
+            sum.setChildTypeId(cType);
+            sum.setParentId(parentId);
+         }
+      }
+
+      return resMap;
+   }
+
+   public Map findNarrowedMetricDisplaySummariesForCompatibleResources(Subject subject, Collection resources, long beginTime, long endTime) {
+      HashMap resMap = new HashMap();
+      if(resources != null &amp;&amp; !resources.isEmpty()) {
+         Iterator it = resources.iterator();
+         ResourceType type = ((org.rhq.core.domain.resource.Resource)it.next()).getResourceType();
+         boolean found = false;
+
+         while(it.hasNext()) {
+            ResourceType defs = ((org.rhq.core.domain.resource.Resource)it.next()).getResourceType();
+            if(defs != type) {
+               found = true;
+               break;
+            }
+         }
+
+         if(found) {
+            throw new IllegalArgumentException(&quot;Resources were of different type: &quot; + resources);
+         } else {
+            Set defs1 = type.getMetricDefinitions();
+            Query q = this.entityManager.createNamedQuery(&quot;MeasurementSchedule.FIND_ENABLED_BY_ResourcesS_AND_RESOURCE_TYPE&quot;);
+            q.setFlushMode(FlushModeType.COMMIT);
+            q.setParameter(&quot;resourceType&quot;, type);
+            q.setParameter(&quot;resources&quot;, resources);
+            q.setParameter(&quot;dataType&quot;, DataType.MEASUREMENT);
+            List schedules = q.getResultList();
+            HashMap resDefSchedMap = new HashMap();
+            ArrayList scheduleIds = new ArrayList(schedules.size());
+
+            int res;
+            int i$1;
+            Object def;
+            for(Iterator alerts = schedules.iterator(); alerts.hasNext(); ((Map)def).put(Integer.valueOf(i$1), Integer.valueOf(res))) {
+               Object[] i$ = (Object[])alerts.next();
+               res = ((Integer)i$[0]).intValue();
+               scheduleIds.add(Integer.valueOf(res));
+               int summaries = ((Integer)i$[1]).intValue();
+               i$1 = ((Integer)i$[2]).intValue();
+               if(!resDefSchedMap.containsKey(Integer.valueOf(summaries))) {
+                  def = new HashMap();
+                  resDefSchedMap.put(Integer.valueOf(summaries), def);
+               } else {
+                  def = (Map)resDefSchedMap.get(Integer.valueOf(summaries));
+               }
+            }
+
+            Map alerts1 = this.alertManager.getAlertCountForSchedules(beginTime, endTime, scheduleIds);
+            Iterator i$2 = resources.iterator();
+
+            while(i$2.hasNext()) {
+               org.rhq.core.domain.resource.Resource res1 = (org.rhq.core.domain.resource.Resource)i$2.next();
+               ArrayList summaries1 = new ArrayList();
+               Iterator i$3 = defs1.iterator();
+
+               while(i$3.hasNext()) {
+                  MeasurementDefinition def1 = (MeasurementDefinition)i$3.next();
+                  MetricDisplaySummary sum = new MetricDisplaySummary();
+                  sum.setDefinitionId(Integer.valueOf(def1.getId()));
+                  sum.setLabel(def1.getDisplayName());
+                  sum.setBeginTimeFrame(Long.valueOf(beginTime));
+                  sum.setEndTimeFrame(Long.valueOf(endTime));
+                  int resId = res1.getId();
+                  if(resDefSchedMap.containsKey(Integer.valueOf(resId))) {
+                     Map defSched = (Map)resDefSchedMap.get(Integer.valueOf(resId));
+                     if(defSched.containsKey(Integer.valueOf(def1.getId()))) {
+                        int sid = ((Integer)defSched.get(Integer.valueOf(def1.getId()))).intValue();
+                        sum.setScheduleId(Integer.valueOf(sid));
+                        sum.setAlertCount(((Integer)alerts1.get(Integer.valueOf(sid))).intValue());
+                        summaries1.add(sum);
+                     }
+                  }
+               }
+
+               resMap.put(Integer.valueOf(res1.getId()), summaries1);
+            }
+
+            return resMap;
+         }
+      } else {
+         return resMap;
+      }
+   }
+
+   private MeasurementDataTrait fillMeasurementDataTraitFromObjectArray(Object[] objs) {
+      if(objs == null) {
+         return null;
+      } else {
+         MeasurementDataTrait mdt = (MeasurementDataTrait)objs[0];
+         String name = (String)objs[1];
+         mdt.setName(name);
+         return mdt;
+      }
+   }
+
+   @Nullable
+   public MeasurementDataTrait getCurrentTraitForSchedule(int scheduleId) {
+      Query q = this.entityManager.createNamedQuery(&quot;MeasurementDataTrait.FIND_CURRENT_FOR_SCHEDULES&quot;);
+      q.setParameter(&quot;scheduleIds&quot;, Collections.singletonList(Integer.valueOf(scheduleId)));
+
+      try {
+         Object[] res = (Object[])((Object[])q.getSingleResult());
+         MeasurementDataTrait nre = this.fillMeasurementDataTraitFromObjectArray(res);
+         return nre;
+      } catch (NoResultException var5) {
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;No current trait data for schedule with id [&quot; + scheduleId + &quot;] found&quot;);
+         }
+
+         return null;
+      }
+   }
+
+   @Nullable
+   public MeasurementDataNumeric getCurrentNumericForSchedule(int scheduleId) {
+      return MeasurementDataManagerUtility.getInstance(this.rhqDs).getLatestValueForSchedule(scheduleId);
+   }
+
+   private void notifyAlertConditionCacheManager(String callingMethod, MeasurementData[] data) {
+      AlertConditionCacheStats stats = this.alertConditionCacheManager.checkConditions(data);
+      this.log.debug(callingMethod + &quot;: &quot; + stats.toString());
+   }
+
+   public MeasurementAggregate getAggregate(Subject subject, int scheduleId, long startTime, long endTime) {
+      MeasurementSchedule schedule = (MeasurementSchedule)this.entityManager.find(MeasurementSchedule.class, Integer.valueOf(scheduleId));
+      if(schedule == null) {
+         throw new MeasurementException(&quot;Could not fine MeasurementSchedule with the id[&quot; + scheduleId + &quot;]&quot;);
+      } else if(!this.authorizationManager.canViewResource(subject, schedule.getResource().getId())) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view schedule[id=&quot; + scheduleId + &quot;]&quot;);
+      } else if(schedule.getDefinition().getDataType() != DataType.MEASUREMENT) {
+         throw new IllegalArgumentException(schedule + &quot; is not about numerical values. Can\'t compute aggregates&quot;);
+      } else if(startTime &gt; endTime) {
+         throw new IllegalArgumentException(&quot;Start date &quot; + startTime + &quot; is not before &quot; + endTime);
+      } else {
+         MeasurementDataManagerUtility utility = MeasurementDataManagerUtility.getInstance(this.rhqDs);
+         MeasurementAggregate aggregate = utility.getAggregateByScheduleId(startTime, endTime, (long)schedule.getId());
+         return aggregate;
+      }
+   }
+
+   public MeasurementAggregate getAggregate(Subject subject, int groupId, int definitionId, long startTime, long endTime) {
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to calculate measurement aggregate for group[id=&quot; + groupId + &quot;], definition[id=&quot; + definitionId + &quot;]&quot;);
+      } else {
+         MeasurementDefinition def = this.measurementDefinitionManager.getMeasurementDefinition(subject, definitionId);
+         if(def.getDataType() != DataType.MEASUREMENT) {
+            throw new IllegalArgumentException(def + &quot; is not about numerical values. Can\'t compute aggregates&quot;);
+         } else if(startTime &gt; endTime) {
+            throw new IllegalArgumentException(&quot;Start date &quot; + startTime + &quot; is not before &quot; + endTime);
+         } else {
+            MeasurementDataManagerUtility utility = MeasurementDataManagerUtility.getInstance(this.rhqDs);
+            MeasurementAggregate aggregate = utility.getAggregateByGroupAndDefinition(startTime, endTime, groupId, definitionId);
+            return aggregate;
+         }
+      }
+   }
+
+   public List findCurrentTraitsForResource(Subject subject, int resourceId, DisplayType displayType) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view traits for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         Query query;
+         if(displayType == null) {
+            query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;MeasurementDataTrait.FindCurrentForResource&quot;, new OrderingField[]{new OrderingField(&quot;d.displayOrder&quot;, PageOrdering.ASC)});
+         } else {
+            query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;MeasurementDataTrait.FindCurrentForResourceAndDislayType&quot;, new OrderingField[]{new OrderingField(&quot;d.displayOrder&quot;, PageOrdering.ASC)});
+            query.setParameter(&quot;displayType&quot;, displayType);
+         }
+
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         List qres = query.getResultList();
+         ArrayList result = new ArrayList(qres.size());
+         Iterator i$ = qres.iterator();
+
+         while(i$.hasNext()) {
+            Object[] objs = (Object[])i$.next();
+            MeasurementDataTrait mdt = this.fillMeasurementDataTraitFromObjectArray(objs);
+            result.add(mdt);
+         }
+
+         if(this.log.isDebugEnabled()) {
+            this.log.debug(&quot;getCurrentTraitsForResource(&quot; + resourceId + &quot;) -&gt; result is &quot; + result);
+         }
+
+         return result;
+      }
+   }
+
+   @XmlJavaTypeAdapter(MeasurementDataNumericHighLowCompositeAdapter.class)
+   public List findDataForCompatibleGroup(Subject subject, int groupId, int definitionId, long beginTime, long endTime, int numPoints, boolean groupAggregateOnly) {
+      if(!this.authorizationManager.canViewGroup(subject, groupId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view measurement data for resourceGroup[id=&quot; + groupId + &quot;]&quot;);
+      } else {
+         ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, groupId, GroupCategory.COMPATIBLE);
+         Set resources = group.getExplicitResources();
+         int[] resourceIds = new int[resources.size()];
+         int i = 0;
+
+         for(Iterator ret = resources.iterator(); ret.hasNext(); ++i) {
+            org.rhq.core.domain.resource.Resource res = (org.rhq.core.domain.resource.Resource)ret.next();
+            resourceIds[i] = res.getId();
+         }
+
+         List var16;
+         if(groupAggregateOnly) {
+            var16 = this.findDataAggregatesForSiblingResources(subject, resourceIds, definitionId, beginTime, endTime, numPoints);
+         } else {
+            var16 = this.findDataForSiblingResources(subject, resourceIds, definitionId, beginTime, endTime, numPoints);
+         }
+
+         return var16;
+      }
+   }
+
+   public List findDataForResource(Subject subject, int resourceId, int[] definitionIds, long beginTime, long endTime, int numPoints) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view measurement data for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         return MeasurementDataManagerUtility.getInstance(this.rhqDs).getMeasurementDataForResource(beginTime, endTime, resourceId, definitionIds);
+      }
+   }
+
+   public Set findLiveData(Subject subject, int resourceId, int[] definitionIds) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view live measurement data for resource[id=&quot; + resourceId + &quot;]&quot;);
+      } else {
+         org.rhq.core.domain.resource.Resource resource = (org.rhq.core.domain.resource.Resource)this.entityManager.find(org.rhq.core.domain.resource.Resource.class, Integer.valueOf(resourceId));
+         Agent agent = resource.getAgent();
+         Query q = this.entityManager.createNamedQuery(&quot;MeasurementDefinition.findByIds&quot;);
+         q.setParameter(&quot;ids&quot;, ArrayUtils.wrapInList(definitionIds));
+         List definitions = q.getResultList();
+         String[] names = new String[definitions.size()];
+         int i = 0;
+
+         MeasurementDefinition values;
+         for(Iterator ac = definitions.iterator(); ac.hasNext(); names[i++] = values.getName()) {
+            values = (MeasurementDefinition)ac.next();
+         }
+
+         AgentClient var12 = this.agentClientManager.getAgentClient(agent);
+         Set var13 = var12.getMeasurementAgentService().getRealTimeMeasurementValue(resourceId, DataType.MEASUREMENT, names);
+         return var13;
+      }
+   }
+
+   public List findTraits(Subject subject, int resourceId, int definitionId) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User[&quot; + subject.getName() + &quot;] does not have permission to view trait data for resource[id=&quot; + resourceId + &quot;] and definition[id=&quot; + definitionId + &quot;]&quot;);
+      } else {
+         Query q = this.entityManager.createNamedQuery(&quot;MeasurementDataTrait.FIND_ALL_FOR_RESOURCE_AND_DEFINITION&quot;);
+         q.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         q.setParameter(&quot;definitionId&quot;, Integer.valueOf(definitionId));
+         List queryResult = q.getResultList();
+         ArrayList result = new ArrayList(queryResult.size());
+         Iterator i$ = queryResult.iterator();
+
+         while(i$.hasNext()) {
+            Object[] objs = (Object[])i$.next();
+            MeasurementDataTrait mdt = this.fillMeasurementDataTraitFromObjectArray(objs);
+            result.add(mdt);
+         }
+
+         return result;
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:16 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

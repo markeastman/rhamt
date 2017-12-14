@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-webdav.war/WEB-INF/lib/spring-context-2.5.6.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Export-Package: org.springframework.context;version=&quot;2.5.6&quot;;uses:=&quot;org
+ .springframework.beans,org.springframework.beans.factory.config,org.s
+ pringframework.core.io&quot;,org.springframework.context.access;version=&quot;2
+ .5.6&quot;;uses:=&quot;org.springframework.beans,org.springframework.beans.fact
+ ory,org.springframework.beans.factory.access,org.springframework.cont
+ ext&quot;,org.springframework.context.annotation;version=&quot;2.5.6&quot;;uses:=&quot;or
+ g.springframework.beans,org.springframework.beans.factory,org.springf
+ ramework.beans.factory.annotation,org.springframework.beans.factory.c
+ onfig,org.springframework.beans.factory.support,org.springframework.b
+ eans.factory.xml,org.springframework.core.io,org.springframework.core
+ .type,org.springframework.core.type.classreading,org.springframework.
+ core.type.filter,org.w3c.dom&quot;,org.springframework.context.config;vers
+ ion=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans.factory.config,org.sprin
+ gframework.beans.factory.support,org.springframework.beans.factory.xm
+ l,org.w3c.dom&quot;,org.springframework.context.event;version=&quot;2.5.6&quot;;uses
+ :=&quot;org.aopalliance.intercept,org.springframework.context,org.springfr
+ amework.core.task&quot;,org.springframework.context.i18n;version=&quot;2.5.6&quot;,o
+ rg.springframework.context.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springf
+ ramework.beans,org.springframework.beans.factory,org.springframework.
+ beans.factory.config,org.springframework.beans.factory.support,org.sp
+ ringframework.beans.factory.xml,org.springframework.context,org.sprin
+ gframework.core.io,org.springframework.core.io.support,org.springfram
+ ework.util&quot;,org.springframework.context.weaving;version=&quot;2.5.6&quot;;uses:
+ =&quot;org.springframework.beans,org.springframework.beans.factory,org.spr
+ ingframework.beans.factory.config,org.springframework.instrument.clas
+ sloading&quot;,org.springframework.ejb.access;version=&quot;2.5.6&quot;;uses:=&quot;javax
+ .ejb,javax.naming,org.aopalliance.intercept&quot;,org.springframework.ejb.
+ config;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans.factory.suppo
+ rt,org.springframework.beans.factory.xml,org.w3c.dom&quot;,org.springframe
+ work.ejb.interceptor;version=&quot;2.5.6&quot;;uses:=&quot;javax.interceptor,org.spr
+ ingframework.beans.factory,org.springframework.beans.factory.access,o
+ rg.springframework.beans.factory.annotation&quot;,org.springframework.ejb.
+ support;version=&quot;2.5.6&quot;;uses:=&quot;javax.ejb,org.springframework.beans,or
+ g.springframework.beans.factory,org.springframework.beans.factory.acc
+ ess&quot;,org.springframework.instrument.classloading;version=&quot;2.5.6&quot;,org.
+ springframework.instrument.classloading.glassfish;version=&quot;2.5.6&quot;;use
+ s:=&quot;com.sun.enterprise.loader&quot;,org.springframework.instrument.classlo
+ ading.oc4j;version=&quot;2.5.6&quot;;uses:=&quot;oracle.classloader.util&quot;,org.spring
+ framework.instrument.classloading.weblogic;version=&quot;2.5.6&quot;,org.spring
+ framework.jmx;version=&quot;2.5.6&quot;,org.springframework.jmx.access;version=
+ &quot;2.5.6&quot;;uses:=&quot;javax.management,javax.management.remote,org.aopallian
+ ce.intercept,org.springframework.jmx&quot;,org.springframework.jmx.export;
+ version=&quot;2.5.6&quot;;uses:=&quot;javax.management,javax.management.modelmbean,o
+ rg.springframework.beans.factory,org.springframework.jmx.export.assem
+ bler,org.springframework.jmx.export.naming&quot;,org.springframework.jmx.e
+ xport.annotation;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.jmx.expor
+ t.metadata&quot;,org.springframework.jmx.export.assembler;version=&quot;2.5.6&quot;;
+ uses:=&quot;javax.management,javax.management.modelmbean,org.springframewo
+ rk.jmx.export.metadata&quot;,org.springframework.jmx.export.metadata;versi
+ on=&quot;2.5.6&quot;;uses:=&quot;javax.management.modelmbean,org.springframework.met
+ adata&quot;,org.springframework.jmx.export.naming;version=&quot;2.5.6&quot;;uses:=&quot;j
+ avax.management,org.springframework.core.io,org.springframework.jmx.e
+ xport.metadata&quot;,org.springframework.jmx.export.notification;version=&quot;
+ 2.5.6&quot;;uses:=&quot;javax.management,javax.management.modelmbean&quot;,org.sprin
+ gframework.jmx.support;version=&quot;2.5.6&quot;;uses:=&quot;javax.management,javax.
+ management.remote,org.springframework.jmx&quot;,org.springframework.jndi;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.naming,org.aopalliance.intercept&quot;,org.spr
+ ingframework.jndi.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.
+ beans,org.springframework.beans.factory&quot;,org.springframework.remoting
+ ;version=&quot;2.5.6&quot;,org.springframework.remoting.rmi;version=&quot;2.5.6&quot;;use
+ s:=&quot;javax.naming,org.aopalliance.intercept,org.omg.CORBA,org.omg.CORB
+ A.portable,org.springframework.jndi,org.springframework.remoting,org.
+ springframework.remoting.support&quot;,org.springframework.remoting.soap;v
+ ersion=&quot;2.5.6&quot;;uses:=&quot;javax.xml.namespace&quot;,org.springframework.remoti
+ ng.support;version=&quot;2.5.6&quot;;uses:=&quot;com.sun.net.httpserver,org.aopallia
+ nce.intercept,org.springframework.core.task&quot;,org.springframework.sche
+ duling;version=&quot;2.5.6&quot;,org.springframework.scheduling.backportconcurr
+ ent;version=&quot;2.5.6&quot;;uses:=&quot;edu.emory.mathcs.backport.java.util.concur
+ rent&quot;,org.springframework.scheduling.concurrent;version=&quot;2.5.6&quot;,org.s
+ pringframework.scheduling.support;version=&quot;2.5.6&quot;,org.springframework
+ .scheduling.timer;version=&quot;2.5.6&quot;,org.springframework.scripting;versi
+ on=&quot;2.5.6&quot;,org.springframework.scripting.bsh;version=&quot;2.5.6&quot;;uses:=&quot;b
+ sh,org.springframework.scripting&quot;,org.springframework.scripting.confi
+ g;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.beans.factory.config,org
+ .springframework.beans.factory.support,org.springframework.beans.fact
+ ory.xml,org.w3c.dom&quot;,org.springframework.scripting.groovy;version=&quot;2.
+ 5.6&quot;;uses:=&quot;groovy.lang,org.springframework.beans,org.springframework
+ .beans.factory,org.springframework.scripting&quot;,org.springframework.scr
+ ipting.jruby;version=&quot;2.5.6&quot;;uses:=&quot;org.jruby,org.jruby.ast,org.jruby
+ .exceptions,org.jruby.runtime.builtin,org.springframework.scripting&quot;,
+ org.springframework.scripting.support;version=&quot;2.5.6&quot;;uses:=&quot;org.spri
+ ngframework.aop,org.springframework.beans.factory,org.springframework
+ .beans.factory.config,org.springframework.core.io,org.springframework
+ .scripting&quot;,org.springframework.stereotype;version=&quot;2.5.6&quot;,org.spring
+ framework.ui;version=&quot;2.5.6&quot;,org.springframework.ui.context;version=&quot;
+ 2.5.6&quot;;uses:=&quot;org.springframework.context&quot;,org.springframework.ui.con
+ text.support;version=&quot;2.5.6&quot;;uses:=&quot;org.springframework.context,org.s
+ pringframework.ui.context&quot;,org.springframework.validation;version=&quot;2.
+ 5.6&quot;;uses:=&quot;org.springframework.beans,org.springframework.core&quot;,org.s
+ pringframework.validation.support;version=&quot;2.5.6&quot;
+Implementation-Title: Spring Framework
+Spring-Version: 2.5.6
+Implementation-Version: 2.5.6
+Bundle-Name: Spring Context
+Created-By: 10.0-b23 (Sun Microsystems Inc.)
+Ant-Version: Apache Ant 1.7.0
+Bundle-Vendor: SpringSource
+Bundle-Version: 2.5.6
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.springframework.context
+Import-Package: bsh;version=&quot;[2.0.0.b4, 3.0.0)&quot;;resolution:=optional,c
+ om.ibm.websphere.management;resolution:=optional,com.sun.enterprise.l
+ oader;version=&quot;[1.0.0, 2.0.0)&quot;;resolution:=optional,com.sun.net.https
+ erver;resolution:=optional,edu.emory.mathcs.backport.java.util.concur
+ rent;version=&quot;[3.0.0, 4.0.0)&quot;;resolution:=optional,groovy.lang;versio
+ n=&quot;[1.5.1, 2.0.0)&quot;;resolution:=optional,javax.annotation;version=&quot;[1.
+ 0.0, 2.0.0)&quot;;resolution:=optional,javax.ejb;version=&quot;[3.0.0, 4.0.0)&quot;;
+ resolution:=optional,javax.interceptor;version=&quot;[3.0.0, 4.0.0)&quot;;resol
+ ution:=optional,javax.jms;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=option
+ al,javax.management;resolution:=optional,javax.management.modelmbean;
+ resolution:=optional,javax.management.openmbean;resolution:=optional,
+ javax.management.remote;resolution:=optional,javax.naming;resolution:
+ =optional,javax.persistence;version=&quot;[1.0.0, 2.0.0)&quot;;resolution:=opti
+ onal,javax.persistence.spi;version=&quot;[1.0.0, 2.0.0)&quot;;resolution:=optio
+ nal,javax.rmi;resolution:=optional,javax.rmi.CORBA;resolution:=option
+ al,javax.xml.namespace;resolution:=optional,javax.xml.ws;version=&quot;[2.
+ 1.1, 3.0.0)&quot;;resolution:=optional,net.sf.cglib.asm;version=&quot;[2.1.3, 2
+ .2.0)&quot;;resolution:=optional,net.sf.cglib.core;version=&quot;[2.1.3, 2.2.0)
+ &quot;;resolution:=optional,net.sf.cglib.proxy;version=&quot;[2.1.3, 2.2.0)&quot;;re
+ solution:=optional,oracle.classloader.util;version=&quot;[10.1.3.1, 10.2.0
+ .0)&quot;;resolution:=optional,org.aopalliance.aop;version=&quot;[1.0.0, 2.0.0)
+ &quot;;resolution:=optional,org.aopalliance.intercept;version=&quot;[1.0.0, 2.0
+ .0)&quot;;resolution:=optional,org.apache.commons.logging;version=&quot;[1.0.4,
+  2.0.0)&quot;,org.aspectj.weaver.loadtime;version=&quot;[1.5.4, 2.0.0)&quot;;resolut
+ ion:=optional,org.codehaus.groovy.control;version=&quot;[1.5.1, 2.0.0)&quot;;re
+ solution:=optional,org.jruby;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=opt
+ ional,org.jruby.ast;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,org
+ .jruby.exceptions;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,org.j
+ ruby.javasupport;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,org.jr
+ uby.runtime;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,org.jruby.r
+ untime.builtin;version=&quot;[1.1.0, 2.0.0)&quot;;resolution:=optional,org.omg.
+ CORBA;resolution:=optional,org.omg.CORBA.portable;resolution:=optiona
+ l,org.omg.CORBA_2_3.portable;resolution:=optional,org.springframework
+ .aop;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframewor
+ k.aop.framework;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.spr
+ ingframework.aop.framework.adapter;version=&quot;[2.5.6, 2.5.6]&quot;;resolutio
+ n:=optional,org.springframework.aop.scope;version=&quot;[2.5.6, 2.5.6]&quot;;re
+ solution:=optional,org.springframework.aop.support;version=&quot;[2.5.6, 2
+ .5.6]&quot;;resolution:=optional,org.springframework.aop.target;version=&quot;[
+ 2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.aop.target.dy
+ namic;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframewo
+ rk.beans;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springfram
+ ework.beans.annotation;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,
+ org.springframework.beans.factory;version=&quot;[2.5.6, 2.5.6]&quot;;resolution
+ :=optional,org.springframework.beans.factory.access;version=&quot;[2.5.6, 
+ 2.5.6]&quot;;resolution:=optional,org.springframework.beans.factory.annota
+ tion;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframewor
+ k.beans.factory.config;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,
+ org.springframework.beans.factory.parsing;version=&quot;[2.5.6, 2.5.6]&quot;;re
+ solution:=optional,org.springframework.beans.factory.support;version=
+ &quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.beans.facto
+ ry.xml;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframew
+ ork.beans.propertyeditors;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=option
+ al,org.springframework.beans.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolut
+ ion:=optional,org.springframework.core;version=&quot;[2.5.6, 2.5.6]&quot;;resol
+ ution:=optional,org.springframework.core.annotation;version=&quot;[2.5.6, 
+ 2.5.6]&quot;;resolution:=optional,org.springframework.core.io;version=&quot;[2.
+ 5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.core.io.support
+ ;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.co
+ re.task;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframe
+ work.core.task.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,
+ org.springframework.core.type;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=op
+ tional,org.springframework.core.type.classreading;version=&quot;[2.5.6, 2.
+ 5.6]&quot;;resolution:=optional,org.springframework.core.type.filter;versi
+ on=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.instrume
+ nt;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springframework.
+ metadata;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,org.springfram
+ ework.orm.jpa.support;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional,o
+ rg.springframework.util;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=optional
+ ,org.springframework.util.xml;version=&quot;[2.5.6, 2.5.6]&quot;;resolution:=op
+ tional,org.w3c.dom;resolution:=optional,org.xml.sax;resolution:=optio
+ nal
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:14 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>

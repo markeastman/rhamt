@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for OperationManagerBean.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/rhamt-icon-128.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-default navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Red Hat Application Migration Toolkit</strong>
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="4062208">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.1.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-compressed"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="hardcoded_ipsRHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                      Hard-coded IP Addresses
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_RHQ_Enterprise_Server_EAR.html">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report</div>
+
+                        <div class="path project-specific" data-project-id="4062208">
+                            rhq-enterprise-server-ear-1.3.0.EmbJopr.1.3.0-4.ear/rhq-enterprise-server-ejb3.jar/org/rhq/enterprise/server/operation/OperationManagerBean.java
+                        </div>
+                </h1>
+                <div class="desc">
+                    This report displays what Red Hat Application Migration Toolkit found in individual files.
+                    Each item is shown below the line it was found on,
+                    and next to it, you may find a link to the rule which it was found by.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+                            <h4>Technologies</h4>
+                            <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                    <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                            </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package org.rhq.enterprise.server.operation;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jetbrains.annotations.Nullable;
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+import org.quartz.SchedulerException;
+import org.quartz.SimpleTrigger;
+import org.quartz.Trigger;
+import org.rhq.core.clientapi.agent.operation.CancelResults;
+import org.rhq.core.clientapi.agent.operation.CancelResults.InterruptedState;
+import org.rhq.core.domain.auth.Subject;
+import org.rhq.core.domain.authz.Permission;
+import org.rhq.core.domain.configuration.Configuration;
+import org.rhq.core.domain.configuration.PropertySimple;
+import org.rhq.core.domain.criteria.GroupOperationHistoryCriteria;
+import org.rhq.core.domain.criteria.OperationDefinitionCriteria;
+import org.rhq.core.domain.criteria.ResourceOperationHistoryCriteria;
+import org.rhq.core.domain.operation.GroupOperationHistory;
+import org.rhq.core.domain.operation.GroupOperationScheduleEntity;
+import org.rhq.core.domain.operation.HistoryJobId;
+import org.rhq.core.domain.operation.JobId;
+import org.rhq.core.domain.operation.OperationDefinition;
+import org.rhq.core.domain.operation.OperationHistory;
+import org.rhq.core.domain.operation.OperationRequestStatus;
+import org.rhq.core.domain.operation.OperationScheduleEntity;
+import org.rhq.core.domain.operation.ResourceOperationHistory;
+import org.rhq.core.domain.operation.ResourceOperationScheduleEntity;
+import org.rhq.core.domain.operation.ScheduleJobId;
+import org.rhq.core.domain.operation.composite.GroupOperationScheduleComposite;
+import org.rhq.core.domain.operation.composite.ResourceOperationScheduleComposite;
+import org.rhq.core.domain.resource.Resource;
+import org.rhq.core.domain.resource.group.GroupCategory;
+import org.rhq.core.domain.resource.group.ResourceGroup;
+import org.rhq.core.domain.util.CriteriaQueryGenerator;
+import org.rhq.core.domain.util.PageControl;
+import org.rhq.core.domain.util.PageList;
+import org.rhq.core.domain.util.PageOrdering;
+import org.rhq.core.domain.util.PersistenceUtility;
+import org.rhq.core.domain.util.CriteriaQueryGenerator.AuthorizationTokenType;
+import org.rhq.enterprise.server.agentclient.AgentClient;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheManagerLocal;
+import org.rhq.enterprise.server.alert.engine.AlertConditionCacheStats;
+import org.rhq.enterprise.server.auth.SubjectManagerLocal;
+import org.rhq.enterprise.server.authz.AuthorizationManagerLocal;
+import org.rhq.enterprise.server.authz.PermissionException;
+import org.rhq.enterprise.server.configuration.ConfigurationManagerLocal;
+import org.rhq.enterprise.server.core.AgentManagerLocal;
+import org.rhq.enterprise.server.exception.ScheduleException;
+import org.rhq.enterprise.server.exception.UnscheduleException;
+import org.rhq.enterprise.server.operation.GroupOperationJob;
+import org.rhq.enterprise.server.operation.GroupOperationSchedule;
+import org.rhq.enterprise.server.operation.OperationDefinitionNotFoundException;
+import org.rhq.enterprise.server.operation.OperationManagerLocal;
+import org.rhq.enterprise.server.operation.OperationManagerRemote;
+import org.rhq.enterprise.server.operation.ResourceOperationJob;
+import org.rhq.enterprise.server.operation.ResourceOperationSchedule;
+import org.rhq.enterprise.server.resource.ResourceManagerLocal;
+import org.rhq.enterprise.server.resource.ResourceNotFoundException;
+import org.rhq.enterprise.server.resource.group.ResourceGroupManagerLocal;
+import org.rhq.enterprise.server.resource.group.ResourceGroupNotFoundException;
+import org.rhq.enterprise.server.scheduler.SchedulerLocal;
+
+@Stateless
+public class OperationManagerBean implements OperationManagerLocal, OperationManagerRemote {
+   private static final Log LOG = LogFactory.getLog(OperationManagerBean.class);
+   @PersistenceContext(
+      unitName = &quot;rhqpu&quot;
+   )
+   private EntityManager entityManager;
+   @EJB
+   private AgentManagerLocal agentManager;
+   @EJB
+   private AlertConditionCacheManagerLocal alertConditionCacheManager;
+   @EJB
+   private AuthorizationManagerLocal authorizationManager;
+   @EJB
+   private ConfigurationManagerLocal configurationManager;
+   @EJB
+   private ResourceGroupManagerLocal resourceGroupManager;
+   @EJB
+   private ResourceManagerLocal resourceManager;
+   @EJB
+   private SchedulerLocal scheduler;
+   @EJB
+   private SubjectManagerLocal subjectManager;
+
+   public List getResourceNameOptionItems(int groupId) {
+      String queryName = &quot;ResourceGroup.findResourceNamesByGroupId&quot;;
+      PageControl pc = PageControl.getUnlimitedInstance();
+      pc.addDefaultOrderingField(&quot;res.name&quot;);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      List results = query.getResultList();
+      return results;
+   }
+
+   public ResourceOperationSchedule scheduleResourceOperation(Subject subject, int resourceId, String operationName, long delay, long repeatInterval, int repeatCount, int timeout, Configuration parameters, String notes) throws ScheduleException {
+      try {
+         SimpleTrigger e = new SimpleTrigger();
+         if(delay &lt; 0L) {
+            delay = 0L;
+         }
+
+         e.setRepeatCount(repeatCount &lt; 0?-1:repeatCount);
+         e.setRepeatInterval(repeatInterval &lt; 0L?0L:repeatInterval);
+         e.setStartTime(new Date(System.currentTimeMillis() + delay));
+         if((long)timeout &gt; 0L) {
+            if(null == parameters) {
+               parameters = new Configuration();
+            }
+
+            parameters.put(new PropertySimple(&quot;rhq.timeout&quot;, Integer.valueOf(timeout)));
+         }
+
+         return this.scheduleResourceOperation(subject, resourceId, operationName, parameters, e, notes);
+      } catch (Exception var13) {
+         throw new ScheduleException(var13);
+      }
+   }
+
+   public ResourceOperationSchedule scheduleResourceOperation(Subject subject, int resourceId, String operationName, Configuration parameters, Trigger trigger, String notes) throws SchedulerException {
+      Resource resource = this.getResourceIfAuthorized(subject, resourceId);
+      this.ensureControlPermission(subject, resource);
+      String uniqueJobId = this.createUniqueJobName(resource, operationName);
+      JobDataMap jobDataMap = new JobDataMap();
+      jobDataMap.put(&quot;operationName&quot;, operationName);
+      this.putDisplayName(jobDataMap, resource.getResourceType().getId(), operationName);
+      if(parameters != null) {
+         if(parameters.getId() == 0) {
+            this.entityManager.persist(parameters);
+         }
+
+         jobDataMap.putAsString(&quot;parametersId&quot;, parameters.getId());
+      }
+
+      jobDataMap.putAsString(&quot;subjectId&quot;, subject.getId());
+      jobDataMap.putAsString(&quot;resourceId&quot;, resource.getId());
+      JobDetail jobDetail = new JobDetail();
+      jobDetail.setName(uniqueJobId);
+      jobDetail.setGroup(this.createJobGroupName(resource));
+      jobDetail.setDescription(notes);
+      jobDetail.setVolatility(false);
+      jobDetail.setDurability(false);
+      jobDetail.setRequestsRecovery(false);
+      jobDetail.setJobClass(ResourceOperationJob.class);
+      jobDetail.setJobDataMap(jobDataMap);
+      trigger.setName(jobDetail.getName());
+      trigger.setGroup(jobDetail.getGroup());
+      trigger.setJobName(jobDetail.getName());
+      trigger.setJobGroup(jobDetail.getGroup());
+      ResourceOperationScheduleEntity schedule = new ResourceOperationScheduleEntity(jobDetail.getName(), jobDetail.getGroup(), trigger.getStartTime(), resource);
+      this.entityManager.persist(schedule);
+      Date next = this.scheduler.scheduleJob(jobDetail, trigger);
+      ResourceOperationSchedule newSchedule = this.getResourceOperationSchedule(subject, jobDetail);
+      LOG.debug(&quot;Scheduled resource operation [&quot; + newSchedule + &quot;] - next fire time is [&quot; + next + &quot;]&quot;);
+      return newSchedule;
+   }
+
+   private void putDisplayName(JobDataMap jobDataMap, int resourceTypeId, String operationName) {
+      try {
+         OperationDefinition odnfe = this.getOperationDefinitionByResourceTypeAndName(resourceTypeId, operationName, false);
+         jobDataMap.put(&quot;operationDisplayName&quot;, odnfe.getDisplayName());
+      } catch (OperationDefinitionNotFoundException var5) {
+         jobDataMap.put(&quot;operationDisplayName&quot;, operationName);
+      }
+
+   }
+
+   public GroupOperationSchedule scheduleGroupOperation(Subject subject, int compatibleGroupId, int[] executionOrderResourceIds, boolean haltOnFailure, String operationName, Configuration parameters, Trigger trigger, String notes) throws SchedulerException {
+      ResourceGroup group = this.getCompatibleGroupIfAuthorized(subject, compatibleGroupId);
+      this.ensureControlPermission(subject, group);
+      JobDataMap jobDataMap = new JobDataMap();
+      jobDataMap.put(&quot;operationName&quot;, operationName);
+      this.putDisplayName(jobDataMap, group.getResourceType().getId(), operationName);
+      if(parameters != null) {
+         if(parameters.getId() == 0) {
+            this.entityManager.persist(parameters);
+         }
+
+         jobDataMap.putAsString(&quot;parametersId&quot;, parameters.getId());
+      }
+
+      jobDataMap.putAsString(&quot;subjectId&quot;, subject.getId());
+      jobDataMap.putAsString(&quot;groupId&quot;, group.getId());
+      jobDataMap.putAsString(&quot;haltOnFailure&quot;, haltOnFailure);
+      if(executionOrderResourceIds != null &amp;&amp; executionOrderResourceIds.length &gt; 0) {
+         StringBuilder jobDetail = new StringBuilder();
+         jobDetail.append(executionOrderResourceIds[0]);
+
+         for(int schedule = 1; schedule &lt; executionOrderResourceIds.length; ++schedule) {
+            jobDetail.append(',');
+            jobDetail.append(executionOrderResourceIds[schedule]);
+         }
+
+         jobDataMap.put(&quot;executionOrder&quot;, jobDetail.toString());
+      }
+
+      JobDetail var15 = new JobDetail();
+      var15.setName(this.createUniqueJobName(group, operationName));
+      var15.setGroup(this.createJobGroupName(group));
+      var15.setDescription(notes);
+      var15.setVolatility(false);
+      var15.setDurability(false);
+      var15.setRequestsRecovery(false);
+      var15.setJobClass(GroupOperationJob.class);
+      var15.setJobDataMap(jobDataMap);
+      trigger.setName(var15.getName());
+      trigger.setGroup(var15.getGroup());
+      trigger.setJobName(var15.getName());
+      trigger.setJobGroup(var15.getGroup());
+      GroupOperationScheduleEntity var16 = new GroupOperationScheduleEntity(var15.getName(), var15.getGroup(), trigger.getStartTime(), group);
+      this.entityManager.persist(var16);
+      Date next = this.scheduler.scheduleJob(var15, trigger);
+      GroupOperationSchedule newSchedule = this.getGroupOperationSchedule(subject, var15);
+      LOG.debug(&quot;Scheduled group operation [&quot; + newSchedule + &quot;] - next fire time is [&quot; + next + &quot;]&quot;);
+      return newSchedule;
+   }
+
+   public void unscheduleResourceOperation(Subject subject, String jobId, int resourceId) throws UnscheduleException {
+      try {
+         Resource e = this.getResourceIfAuthorized(subject, resourceId);
+         this.ensureControlPermission(subject, e);
+         ResourceOperationSchedule schedule = this.getResourceOperationSchedule(subject, jobId);
+         if(schedule.getParameters() != null) {
+            Integer jobIdObject = Integer.valueOf(schedule.getParameters().getId());
+            Configuration jobName = this.configurationManager.getConfigurationById(jobIdObject.intValue());
+            this.entityManager.remove(jobName);
+         }
+
+         ScheduleJobId jobIdObject1 = new ScheduleJobId(jobId);
+         String jobName1 = jobIdObject1.getJobName();
+         String jobGroup = jobIdObject1.getJobGroup();
+         boolean deleted = this.scheduler.deleteJob(jobName1, jobGroup);
+         if(deleted) {
+            this.deleteOperationScheduleEntity(jobIdObject1);
+         }
+
+      } catch (Exception var10) {
+         throw new UnscheduleException(var10);
+      }
+   }
+
+   public void unscheduleGroupOperation(Subject subject, String jobId, int resourceGroupId) throws UnscheduleException {
+      try {
+         ResourceGroup e = this.resourceGroupManager.getResourceGroupById(subject, resourceGroupId, GroupCategory.COMPATIBLE);
+         this.ensureControlPermission(subject, e);
+         this.getCompatibleGroupIfAuthorized(subject, resourceGroupId);
+         GroupOperationSchedule schedule = this.getGroupOperationSchedule(subject, jobId);
+         if(schedule.getParameters() != null) {
+            Integer jobIdObject = Integer.valueOf(schedule.getParameters().getId());
+            Configuration jobName = this.configurationManager.getConfigurationById(jobIdObject.intValue());
+            this.entityManager.remove(jobName);
+         }
+
+         ScheduleJobId jobIdObject1 = new ScheduleJobId(jobId);
+         String jobName1 = jobIdObject1.getJobName();
+         String jobGroup = jobIdObject1.getJobGroup();
+         boolean deleted = this.scheduler.deleteJob(jobName1, jobGroup);
+         if(deleted) {
+            this.deleteOperationScheduleEntity(jobIdObject1);
+         }
+
+      } catch (Exception var10) {
+         throw new UnscheduleException(var10);
+      }
+   }
+
+   public void deleteOperationScheduleEntity(ScheduleJobId jobId) {
+      OperationScheduleEntity doomed = this.findOperationScheduleEntity(jobId);
+      if(doomed != null) {
+         LOG.debug(&quot;Deleting schedule entity: &quot; + jobId);
+         this.entityManager.remove(doomed);
+      } else {
+         LOG.info(&quot;Asked to delete unknown schedule - ignoring: &quot; + jobId);
+      }
+
+   }
+
+   public void updateOperationScheduleEntity(ScheduleJobId jobId, long nextFireTime) {
+      OperationScheduleEntity sched = this.findOperationScheduleEntity(jobId);
+      sched.setNextFireTime(Long.valueOf(nextFireTime));
+      LOG.debug(&quot;Scheduled job has a new next-fire-time: &quot; + sched);
+   }
+
+   public List findScheduledResourceOperations(Subject subject, int resourceId) throws SchedulerException {
+      Resource resource = this.getResourceIfAuthorized(subject, resourceId);
+      ArrayList operationSchedules = new ArrayList();
+      String groupName = this.createJobGroupName(resource);
+      String[] jobNames = this.scheduler.getJobNames(groupName);
+      String[] arr$ = jobNames;
+      int len$ = jobNames.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         String jobName = arr$[i$];
+         JobDetail jobDetail = this.scheduler.getJobDetail(jobName, groupName);
+         ResourceOperationSchedule sched = this.getResourceOperationSchedule(subject, jobDetail);
+         if(resourceId != sched.getResource().getId()) {
+            throw new IllegalStateException(&quot;Somehow a different resource [&quot; + sched.getResource() + &quot;] was scheduled in the same job group as resource [&quot; + resource + &quot;]&quot;);
+         }
+
+         operationSchedules.add(sched);
+      }
+
+      return operationSchedules;
+   }
+
+   public List findScheduledGroupOperations(Subject subject, int groupId) throws SchedulerException {
+      ResourceGroup group = this.getCompatibleGroupIfAuthorized(subject, groupId);
+      ArrayList operationSchedules = new ArrayList();
+      String groupName = this.createJobGroupName(group);
+      String[] jobNames = this.scheduler.getJobNames(groupName);
+      String[] arr$ = jobNames;
+      int len$ = jobNames.length;
+
+      for(int i$ = 0; i$ &lt; len$; ++i$) {
+         String jobName = arr$[i$];
+         JobDetail jobDetail = this.scheduler.getJobDetail(jobName, groupName);
+         GroupOperationSchedule sched = this.getGroupOperationSchedule(subject, jobDetail);
+         if(groupId != sched.getGroup().getId()) {
+            throw new IllegalStateException(&quot;Somehow a different group [&quot; + sched.getGroup() + &quot;] was scheduled in the same job group as group [&quot; + group + &quot;]&quot;);
+         }
+
+         operationSchedules.add(sched);
+      }
+
+      return operationSchedules;
+   }
+
+   public ResourceOperationSchedule getResourceOperationSchedule(Subject subject, JobDetail jobDetail) {
+      JobDataMap jobDataMap = jobDetail.getJobDataMap();
+      String description = jobDetail.getDescription();
+      String operationName = jobDataMap.getString(&quot;operationName&quot;);
+      String displayName = jobDataMap.getString(&quot;operationDisplayName&quot;);
+      int subjectId = jobDataMap.getIntFromString(&quot;subjectId&quot;);
+      Configuration parameters = null;
+      int resourceId;
+      if(jobDataMap.containsKey(&quot;parametersId&quot;)) {
+         resourceId = jobDataMap.getIntFromString(&quot;parametersId&quot;);
+         parameters = (Configuration)this.entityManager.find(Configuration.class, Integer.valueOf(resourceId));
+      }
+
+      resourceId = jobDataMap.getIntFromString(&quot;resourceId&quot;);
+      Resource resource = this.getResourceIfAuthorized(subject, resourceId);
+      ResourceOperationSchedule sched = new ResourceOperationSchedule();
+      sched.setJobName(jobDetail.getName());
+      sched.setJobGroup(jobDetail.getGroup());
+      sched.setResource(resource);
+      sched.setOperationName(operationName);
+      sched.setOperationDisplayName(displayName);
+      sched.setSubject(this.subjectManager.getSubjectById(subjectId));
+      sched.setParameters(parameters);
+      sched.setDescription(description);
+      return sched;
+   }
+
+   public ResourceOperationSchedule getResourceOperationSchedule(Subject subject, String jobId) throws SchedulerException {
+      JobId jobIdObject = new JobId(jobId);
+      JobDetail jobDetail = this.scheduler.getJobDetail(jobIdObject.getJobName(), jobIdObject.getJobGroup());
+      return this.getResourceOperationSchedule(subject, jobDetail);
+   }
+
+   public GroupOperationSchedule getGroupOperationSchedule(Subject subject, JobDetail jobDetail) {
+      JobDataMap jobDataMap = jobDetail.getJobDataMap();
+      String description = jobDetail.getDescription();
+      String operationName = jobDataMap.getString(&quot;operationName&quot;);
+      String displayName = jobDataMap.getString(&quot;operationDisplayName&quot;);
+      int subjectId = jobDataMap.getIntFromString(&quot;subjectId&quot;);
+      Configuration parameters = null;
+      int groupId;
+      if(jobDataMap.containsKey(&quot;parametersId&quot;)) {
+         groupId = jobDataMap.getIntFromString(&quot;parametersId&quot;);
+         parameters = (Configuration)this.entityManager.find(Configuration.class, Integer.valueOf(groupId));
+      }
+
+      groupId = jobDataMap.getIntFromString(&quot;groupId&quot;);
+      ResourceGroup group = this.getCompatibleGroupIfAuthorized(subject, groupId);
+      ArrayList executionOrder = null;
+      if(jobDataMap.containsKey(&quot;executionOrder&quot;)) {
+         String sched = jobDataMap.getString(&quot;executionOrder&quot;);
+         String[] orderArray = sched.split(&quot;,&quot;);
+         String[] arr$ = orderArray;
+         int len$ = orderArray.length;
+
+         for(int i$ = 0; i$ &lt; len$; ++i$) {
+            String resourceIdString = arr$[i$];
+            int resourceId = Integer.parseInt(resourceIdString);
+            Resource memberResource = (Resource)this.entityManager.find(Resource.class, Integer.valueOf(resourceId));
+            if(memberResource != null) {
+               if(executionOrder == null) {
+                  executionOrder = new ArrayList();
+               }
+
+               if(!executionOrder.contains(memberResource)) {
+                  executionOrder.add(memberResource);
+               }
+            } else {
+               LOG.debug(&quot;Resource [&quot; + resourceId + &quot;] looks like it was deleted and is no longer a member of group [&quot; + group + &quot;] - ignoring it&quot;);
+            }
+         }
+      }
+
+      GroupOperationSchedule var20 = new GroupOperationSchedule();
+      var20.setJobName(jobDetail.getName());
+      var20.setJobGroup(jobDetail.getGroup());
+      var20.setGroup(group);
+      var20.setOperationName(operationName);
+      var20.setOperationDisplayName(displayName);
+      var20.setSubject(this.subjectManager.getSubjectById(subjectId));
+      var20.setParameters(parameters);
+      var20.setExecutionOrder(executionOrder);
+      var20.setDescription(description);
+      var20.setHaltOnFailure(jobDataMap.getBooleanValueFromString(&quot;haltOnFailure&quot;));
+      return var20;
+   }
+
+   public GroupOperationSchedule getGroupOperationSchedule(Subject subject, String jobId) throws SchedulerException {
+      JobId jobIdObject = new JobId(jobId);
+      JobDetail jobDetail = this.scheduler.getJobDetail(jobIdObject.getJobName(), jobIdObject.getJobGroup());
+      return this.getGroupOperationSchedule(subject, jobDetail);
+   }
+
+   public OperationHistory getOperationHistoryByHistoryId(Subject subject, int historyId) {
+      OperationHistory history = (OperationHistory)this.entityManager.find(OperationHistory.class, Integer.valueOf(historyId));
+      if(history == null) {
+         throw new RuntimeException(&quot;Cannot get history - it does not exist: &quot; + historyId);
+      } else {
+         if(history.getParameters() != null) {
+            history.getParameters().getId();
+         }
+
+         if(history instanceof ResourceOperationHistory) {
+            ResourceOperationHistory resourceHistory = (ResourceOperationHistory)history;
+            if(resourceHistory.getResults() != null) {
+               resourceHistory.getResults().getId();
+            }
+         }
+
+         this.ensureViewPermission(subject, history);
+         return history;
+      }
+   }
+
+   public PageList findResourceOperationHistoriesByGroupHistoryId(Subject subject, int historyId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;h.createdTime&quot;, PageOrdering.DESC);
+      String queryName = &quot;ResourceOperationHistory.findByGroupOperationHistoryId&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;groupHistoryId&quot;, Integer.valueOf(historyId));
+      query.setParameter(&quot;groupHistoryId&quot;, Integer.valueOf(historyId));
+      long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+      List list = query.getResultList();
+      PageList pagedResourceHistories = new PageList(list, (int)totalCount, pc);
+      return pagedResourceHistories;
+   }
+
+   public OperationHistory getOperationHistoryByJobId(Subject subject, String historyJobId) {
+      HistoryJobId jobIdObject = new HistoryJobId(historyJobId);
+      Query query = this.entityManager.createNamedQuery(&quot;OperationHistory.findByJobId&quot;);
+      query.setParameter(&quot;jobName&quot;, jobIdObject.getJobName());
+      query.setParameter(&quot;jobGroup&quot;, jobIdObject.getJobGroup());
+      query.setParameter(&quot;createdTime&quot;, Long.valueOf(jobIdObject.getCreatedTime()));
+
+      OperationHistory history;
+      try {
+         history = (OperationHistory)query.getSingleResult();
+      } catch (Exception var7) {
+         history = null;
+      }
+
+      if(history == null) {
+         throw new RuntimeException(&quot;Cannot get history - it does not exist: &quot; + historyJobId);
+      } else {
+         this.ensureViewPermission(subject, history);
+         return history;
+      }
+   }
+
+   public PageList findCompletedResourceOperationHistories(Subject subject, int resourceId, Long beginDate, Long endDate, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;h.createdTime&quot;, PageOrdering.DESC);
+      String queryName = &quot;ResourceOperationHistory.findByResourceIdAndNotStatus&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      queryCount.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      query.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      queryCount.setParameter(&quot;beginTime&quot;, beginDate);
+      query.setParameter(&quot;beginTime&quot;, beginDate);
+      queryCount.setParameter(&quot;endTime&quot;, endDate);
+      query.setParameter(&quot;endTime&quot;, endDate);
+      long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+      List list = query.getResultList();
+      if(list != null &amp;&amp; list.size() &gt; 0) {
+         ResourceOperationHistory pageList = (ResourceOperationHistory)list.get(0);
+         this.ensureViewPermission(subject, pageList);
+      }
+
+      PageList pageList1 = new PageList(list, (int)totalCount, pc);
+      return pageList1;
+   }
+
+   public PageList findPendingResourceOperationHistories(Subject subject, int resourceId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;h.createdTime&quot;, PageOrdering.ASC);
+      String queryName = &quot;ResourceOperationHistory.findByResourceIdAndStatus&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+      queryCount.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      query.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+      List list = query.getResultList();
+      if(list != null &amp;&amp; list.size() &gt; 0) {
+         ResourceOperationHistory pageList = (ResourceOperationHistory)list.get(0);
+         this.ensureViewPermission(subject, pageList);
+      }
+
+      PageList pageList1 = new PageList(list, (int)totalCount, pc);
+      return pageList1;
+   }
+
+   public PageList findCompletedGroupOperationHistories(Subject subject, int groupId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;h.createdTime&quot;, PageOrdering.DESC);
+      String queryName = &quot;GroupOperationHistory.findByGroupIdAndNotStatus&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      queryCount.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      query.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+      List list = query.getResultList();
+      if(list != null &amp;&amp; list.size() &gt; 0) {
+         GroupOperationHistory pageList = (GroupOperationHistory)list.get(0);
+         this.ensureViewPermission(subject, pageList);
+      }
+
+      PageList pageList1 = new PageList(list, (int)totalCount, pc);
+      return pageList1;
+   }
+
+   public PageList findPendingGroupOperationHistories(Subject subject, int groupId, PageControl pc) {
+      pc.initDefaultOrderingField(&quot;h.createdTime&quot;, PageOrdering.ASC);
+      String queryName = &quot;GroupOperationHistory.findByGroupIdAndStatus&quot;;
+      Query queryCount = PersistenceUtility.createCountQuery(this.entityManager, queryName);
+      Query query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, queryName, pc);
+      queryCount.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      query.setParameter(&quot;groupId&quot;, Integer.valueOf(groupId));
+      queryCount.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      query.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+      long totalCount = ((Long)queryCount.getSingleResult()).longValue();
+      List list = query.getResultList();
+      if(list != null &amp;&amp; list.size() &gt; 0) {
+         GroupOperationHistory pageList = (GroupOperationHistory)list.get(0);
+         this.ensureViewPermission(subject, pageList);
+      }
+
+      PageList pageList1 = new PageList(list, (int)totalCount, pc);
+      return pageList1;
+   }
+
+   public OperationHistory updateOperationHistory(Subject subject, OperationHistory history) {
+      if(!this.authorizationManager.isOverlord(subject)) {
+         this.ensureControlPermission(subject, history);
+      }
+
+      Configuration parameters = history.getParameters();
+      if(parameters != null &amp;&amp; parameters.getId() == 0) {
+         this.entityManager.persist(parameters);
+      }
+
+      history = (OperationHistory)this.entityManager.merge(history);
+      if(history.getParameters() != null) {
+         history.getParameters().getId();
+      }
+
+      this.notifyAlertConditionCacheManager(&quot;updateOperationHistory&quot;, history);
+      return history;
+   }
+
+   public void cancelOperationHistory(Subject subject, int historyId, boolean ignoreAgentErrors) {
+      OperationHistory doomedHistory = this.getOperationHistoryByHistoryId(subject, historyId);
+      this.ensureControlPermission(subject, doomedHistory);
+      if(doomedHistory instanceof GroupOperationHistory) {
+         this.cancelGroupOperation(subject, (GroupOperationHistory)doomedHistory, ignoreAgentErrors);
+      } else {
+         this.cancelResourceOperation(subject, (ResourceOperationHistory)doomedHistory, ignoreAgentErrors);
+      }
+
+   }
+
+   private void cancelGroupOperation(Subject subject, GroupOperationHistory doomedHistory, boolean ignoreAgentErrors) {
+      if(doomedHistory.getStatus() != OperationRequestStatus.INPROGRESS) {
+         throw new IllegalStateException(&quot;The group job is no longer in-progress - cannot cancel it: &quot; + doomedHistory);
+      } else {
+         boolean hadAgentError = false;
+         List doomedResourceHistories = doomedHistory.getResourceOperationHistories();
+         Iterator i$ = doomedResourceHistories.iterator();
+
+         while(i$.hasNext()) {
+            ResourceOperationHistory doomedResourceHistory = (ResourceOperationHistory)i$.next();
+
+            try {
+               CancelResults ignore = this.cancelResourceOperation(subject, doomedResourceHistory, ignoreAgentErrors);
+               if(ignore == null) {
+                  hadAgentError = true;
+               }
+            } catch (IllegalStateException var9) {
+               ;
+            }
+         }
+
+         if(!hadAgentError || ignoreAgentErrors) {
+            doomedHistory.setStatus(OperationRequestStatus.CANCELED);
+            this.notifyAlertConditionCacheManager(&quot;cancelGroupOperation&quot;, doomedHistory);
+         }
+
+      }
+   }
+
+   private CancelResults cancelResourceOperation(Subject subject, ResourceOperationHistory doomedHistory, boolean ignoreAgentErrors) throws IllegalStateException {
+      if(doomedHistory.getStatus() != OperationRequestStatus.INPROGRESS) {
+         throw new IllegalStateException(&quot;The job is no longer in-progress - cannot cancel it: &quot; + doomedHistory);
+      } else {
+         String jobIdString = doomedHistory.getJobId().toString();
+         int resourceId = doomedHistory.getResource().getId();
+         CancelResults results = null;
+         AgentClient agent = null;
+         boolean canceled = false;
+
+         try {
+            agent = this.agentManager.getAgentClient(resourceId);
+            if(agent.ping(5000L)) {
+               results = agent.getOperationAgentService().cancelOperation(jobIdString);
+               InterruptedState t = results.getInterruptedState();
+               switch(OperationManagerBean.SyntheticClass_1.$SwitchMap$org$rhq$core$clientapi$agent$operation$CancelResults$InterruptedState[t.ordinal()]) {
+               case 1:
+                  LOG.debug(&quot;Agent already finished the operation so it cannot be canceled. agent=[&quot; + agent + &quot;], op=[&quot; + doomedHistory + &quot;]&quot;);
+                  break;
+               case 2:
+                  canceled = true;
+                  LOG.debug(&quot;Cancel successful. Agent dequeued the operation and will not invoke it. agent=[&quot; + agent + &quot;], op=[&quot; + doomedHistory + &quot;]&quot;);
+                  break;
+               case 3:
+                  canceled = true;
+                  LOG.debug(&quot;Agent attempted to cancel the operation - it interrupted the operation while it was running. agent=[&quot; + agent + &quot;], op=[&quot; + doomedHistory + &quot;]&quot;);
+                  break;
+               case 4:
+                  canceled = true;
+                  LOG.debug(&quot;Agent does not know about the operation. Nothing to cancel. agent=[&quot; + agent + &quot;], op=[&quot; + doomedHistory + &quot;]&quot;);
+                  break;
+               default:
+                  throw new RuntimeException(&quot;Please report this bug - bad state: &quot; + t);
+               }
+            } else {
+               LOG.warn(&quot;Agent down? Cannot cancel operation. agent=[&quot; + agent + &quot;], op=[&quot; + doomedHistory + &quot;]&quot;);
+            }
+         } catch (Throwable var10) {
+            LOG.warn(&quot;Cannot tell the agent to cancel operation. agent=[&quot; + agent + &quot;], op=[&quot; + doomedHistory + &quot;]&quot;, var10);
+         }
+
+         if(canceled || results == null &amp;&amp; ignoreAgentErrors) {
+            doomedHistory.setStatus(OperationRequestStatus.CANCELED);
+            this.notifyAlertConditionCacheManager(&quot;cancelResourceOperation&quot;, doomedHistory);
+         }
+
+         return results;
+      }
+   }
+
+   public void deleteOperationHistory(Subject subject, int historyId, boolean purgeInProgress) {
+      OperationHistory doomedHistory = this.getOperationHistoryByHistoryId(subject, historyId);
+      this.ensureControlPermission(subject, doomedHistory);
+      if(doomedHistory.getStatus() == OperationRequestStatus.INPROGRESS &amp;&amp; !purgeInProgress) {
+         throw new IllegalStateException(&quot;The job is still in the in-progress state. Please wait for it to complete: &quot; + doomedHistory);
+      } else {
+         if(doomedHistory instanceof GroupOperationHistory) {
+            List resourceHistories = ((GroupOperationHistory)doomedHistory).getResourceOperationHistories();
+            Iterator i$ = resourceHistories.iterator();
+
+            while(i$.hasNext()) {
+               ResourceOperationHistory child = (ResourceOperationHistory)i$.next();
+               this.deleteOperationHistory_helper(child.getId());
+            }
+         }
+
+         this.deleteOperationHistory_helper(doomedHistory.getId());
+      }
+   }
+
+   private void deleteOperationHistory_helper(int historyId) {
+      Query historyArgumentsQuery = this.entityManager.createNamedQuery(&quot;OperationHistory.getParameterConfigurationIds&quot;);
+      Query historyResultsQuery = this.entityManager.createNamedQuery(&quot;OperationHistory.getResultConfigurationIds&quot;);
+      historyArgumentsQuery.setParameter(&quot;historyId&quot;, Integer.valueOf(historyId));
+      historyResultsQuery.setParameter(&quot;historyId&quot;, Integer.valueOf(historyId));
+      List historyArgumentConfigurationIds = historyArgumentsQuery.getResultList();
+      List historyResultConfigurationIds = historyResultsQuery.getResultList();
+      Query operationHistoryDeleteQuery = this.entityManager.createNamedQuery(&quot;OperationHistory.deleteByHistoryIds&quot;);
+      operationHistoryDeleteQuery.setParameter(&quot;historyId&quot;, Integer.valueOf(historyId));
+      operationHistoryDeleteQuery.executeUpdate();
+      ArrayList allConfigurationIdsToDelete = new ArrayList(historyArgumentConfigurationIds.size() + historyResultConfigurationIds.size());
+      this.configurationManager.deleteConfigurations(allConfigurationIdsToDelete);
+   }
+
+   public List findSupportedResourceOperations(Subject subject, int resourceId, boolean eagerLoaded) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view resource [&quot; + resourceId + &quot;]&quot;);
+      } else {
+         try {
+            String e = eagerLoaded?&quot;OperationDefinition.findByResourceAndName&quot;:&quot;OperationDefinition.findLightWeightByResourceAndName&quot;;
+            Query query = this.entityManager.createNamedQuery(e);
+            query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+            query.setParameter(&quot;operationName&quot;, (Object)null);
+            List results = query.getResultList();
+            return results;
+         } catch (Exception var7) {
+            throw new RuntimeException(&quot;Cannot get support operations for resource [&quot; + resourceId + &quot;]: &quot; + var7, var7);
+         }
+      }
+   }
+
+   public List findSupportedResourceTypeOperations(Subject subject, int resourceTypeId, boolean eagerLoaded) {
+      try {
+         String e = eagerLoaded?&quot;OperationDefinition.findByTypeAndName&quot;:&quot;OperationDefinition.findLightWeightByTypeAndName&quot;;
+         Query query = this.entityManager.createNamedQuery(e);
+         query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+         query.setParameter(&quot;operationName&quot;, (Object)null);
+         List results = query.getResultList();
+         return results;
+      } catch (Exception var7) {
+         throw new RuntimeException(&quot;Cannot get support operations for resourceType [&quot; + resourceTypeId + &quot;]: &quot; + var7, var7);
+      }
+   }
+
+   public List findSupportedGroupOperations(Subject subject, int compatibleGroupId, boolean eagerLoaded) {
+      if(!this.authorizationManager.canViewGroup(subject, compatibleGroupId)) {
+         throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view group [&quot; + compatibleGroupId + &quot;]&quot;);
+      } else {
+         try {
+            String e = eagerLoaded?&quot;OperationDefinition.findByGroupAndName&quot;:&quot;OperationDefinition.findLightWeightByGroupAndName&quot;;
+            Query query = this.entityManager.createNamedQuery(e);
+            query.setParameter(&quot;groupId&quot;, Integer.valueOf(compatibleGroupId));
+            query.setParameter(&quot;operationName&quot;, (Object)null);
+            List results = query.getResultList();
+            return results;
+         } catch (Exception var7) {
+            throw new RuntimeException(&quot;Cannot get support operations for group [&quot; + compatibleGroupId + &quot;]: &quot; + var7, var7);
+         }
+      }
+   }
+
+   public OperationDefinition getSupportedResourceOperation(Subject subject, int resourceId, String operationName, boolean eagerLoaded) {
+      if(!this.authorizationManager.canViewResource(subject, resourceId)) {
+         throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view resource [&quot; + resourceId + &quot;]&quot;);
+      } else {
+         String queryName = eagerLoaded?&quot;OperationDefinition.findByResourceAndName&quot;:&quot;OperationDefinition.findLightWeightByResourceAndName&quot;;
+         Query query = this.entityManager.createNamedQuery(queryName);
+         query.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         query.setParameter(&quot;operationName&quot;, operationName);
+         List results = query.getResultList();
+         if(results.size() != 1) {
+            throw new RuntimeException(&quot;Found &quot; + results.size() + &quot; operations called [&quot; + operationName + &quot;] for resource [&quot; + resourceId + &quot;]: &quot;);
+         } else {
+            return (OperationDefinition)results.get(0);
+         }
+      }
+   }
+
+   public OperationDefinition getSupportedGroupOperation(Subject subject, int compatibleGroupId, String operationName, boolean eagerLoaded) {
+      if(!this.authorizationManager.canViewGroup(subject, compatibleGroupId)) {
+         throw new PermissionException(&quot;User [&quot; + subject + &quot;] does not have permission to view group [&quot; + compatibleGroupId + &quot;]&quot;);
+      } else {
+         String queryName = eagerLoaded?&quot;OperationDefinition.findByGroupAndName&quot;:&quot;OperationDefinition.findLightWeightByGroupAndName&quot;;
+         Query query = this.entityManager.createNamedQuery(queryName);
+         query.setParameter(&quot;groupId&quot;, Integer.valueOf(compatibleGroupId));
+         query.setParameter(&quot;operationName&quot;, operationName);
+         List results = query.getResultList();
+         if(results.size() != 1) {
+            throw new RuntimeException(&quot;Found &quot; + results.size() + &quot; operations called [&quot; + operationName + &quot;] for group [&quot; + compatibleGroupId + &quot;]: &quot;);
+         } else {
+            return (OperationDefinition)results.get(0);
+         }
+      }
+   }
+
+   public boolean isResourceOperationSupported(Subject subject, int resourceId) {
+      Resource resource;
+      try {
+         resource = this.getResourceIfAuthorized(subject, resourceId);
+      } catch (PermissionException var5) {
+         LOG.debug(&quot;isOperationSupported: User cannot control resource: &quot; + resourceId);
+         return false;
+      } catch (Exception var6) {
+         LOG.debug(&quot;isOperationSupported: Resource does not exist: &quot; + resourceId);
+         return false;
+      }
+
+      Set defs = resource.getResourceType().getOperationDefinitions();
+      return defs != null &amp;&amp; defs.size() &gt; 0;
+   }
+
+   public boolean isGroupOperationSupported(Subject subject, int resourceGroupId) {
+      ResourceGroup group;
+      try {
+         group = this.resourceGroupManager.getResourceGroupById(subject, resourceGroupId, (GroupCategory)null);
+         if(group.getGroupCategory() == GroupCategory.MIXED) {
+            return false;
+         }
+      } catch (ResourceGroupNotFoundException var5) {
+         LOG.debug(&quot;isGroupOperationSupported: group does not exist: &quot; + resourceGroupId);
+         return false;
+      } catch (PermissionException var6) {
+         LOG.debug(&quot;isGroupOperationSupported: User cannot view (and thus) control group: &quot; + resourceGroupId);
+         return false;
+      }
+
+      if(!this.authorizationManager.hasGroupPermission(subject, Permission.CONTROL, group.getId())) {
+         LOG.debug(&quot;isGroupOperationSupported: User cannot control group: &quot; + group);
+         return false;
+      } else {
+         Set defs = group.getResourceType().getOperationDefinitions();
+         return defs != null &amp;&amp; defs.size() &gt; 0;
+      }
+   }
+
+   public void checkForTimedOutOperations(Subject subject) {
+      LOG.debug(&quot;Scanning operation histories to see if any in-progress executions have timed out...&quot;);
+      if(!this.authorizationManager.isOverlord(subject)) {
+         LOG.debug(&quot;Unauthorized user &quot; + subject + &quot; tried to execute checkForTimedOutOperations: &quot; + &quot;only the overlord may execute this system operation&quot;);
+      } else {
+         Query t;
+         List groupHistories;
+         Iterator i$;
+         long groupStatus;
+         try {
+            t = this.entityManager.createNamedQuery(&quot;ResourceOperationHistory.findAllInStatus&quot;);
+            t.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+            groupHistories = t.getResultList();
+            i$ = groupHistories.iterator();
+
+            while(i$.hasNext()) {
+               ResourceOperationHistory groupHistory = (ResourceOperationHistory)i$.next();
+               groupStatus = this.getOperationTimeout(groupHistory.getOperationDefinition(), groupHistory.getParameters());
+               long resourceHistory = groupHistory.getDuration();
+               if(resourceHistory &gt; groupStatus) {
+                  LOG.info(&quot;Operation execution seems to have been orphaned - timing it out: &quot; + groupHistory);
+                  groupHistory.setErrorMessage(&quot;Timed out : did not complete after &quot; + resourceHistory + &quot; ms&quot; + &quot; (the timeout period was &quot; + groupStatus + &quot; ms)&quot;);
+                  groupHistory.setStatus(OperationRequestStatus.FAILURE);
+                  this.notifyAlertConditionCacheManager(&quot;checkForTimedOutOperations&quot;, groupHistory);
+                  this.checkForCompletedGroupOperation(groupHistory.getId());
+               }
+            }
+         } catch (Throwable var13) {
+            LOG.warn(&quot;Failed to check for timed out resource operations. Cause: &quot; + var13);
+         }
+
+         GroupOperationHistory groupHistory1;
+         try {
+            t = this.entityManager.createNamedQuery(&quot;GroupOperationHistory.findActiveInProgress&quot;);
+            t.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+            groupHistories = t.getResultList();
+            i$ = groupHistories.iterator();
+
+            label86:
+            while(true) {
+               do {
+                  if(!i$.hasNext()) {
+                     break label86;
+                  }
+
+                  groupHistory1 = (GroupOperationHistory)i$.next();
+                  groupStatus = this.getOperationTimeout(groupHistory1.getOperationDefinition(), groupHistory1.getParameters());
+               } while(groupHistory1.getDuration() &lt; groupStatus);
+
+               Iterator resourceHistory2 = groupHistory1.getResourceOperationHistories().iterator();
+
+               while(resourceHistory2.hasNext()) {
+                  ResourceOperationHistory resourceHistory1 = (ResourceOperationHistory)resourceHistory2.next();
+                  if(resourceHistory1.getStatus() == OperationRequestStatus.INPROGRESS) {
+                     this.cancelOperationHistory(subject, resourceHistory1.getId(), true);
+                     break;
+                  }
+               }
+
+               groupHistory1.setErrorMessage(&quot;This group operation timed out before all child resource operations could complete normally, those still in progress will attempt to be canceled.&quot;);
+               groupHistory1.setStatus(OperationRequestStatus.FAILURE);
+            }
+         } catch (Throwable var12) {
+            LOG.warn(&quot;Failed to check for completed group operations. Cause: &quot; + var12);
+         }
+
+         try {
+            t = this.entityManager.createNamedQuery(&quot;GroupOperationHistory.findAbandonedInProgress&quot;);
+            t.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+            groupHistories = t.getResultList();
+
+            OperationRequestStatus groupStatus1;
+            for(i$ = groupHistories.iterator(); i$.hasNext(); groupHistory1.setStatus(groupStatus1)) {
+               groupHistory1 = (GroupOperationHistory)i$.next();
+               groupStatus1 = OperationRequestStatus.SUCCESS;
+               Iterator i$1 = groupHistory1.getResourceOperationHistories().iterator();
+
+               while(i$1.hasNext()) {
+                  ResourceOperationHistory resourceHistory3 = (ResourceOperationHistory)i$1.next();
+                  if(resourceHistory3.getStatus() != OperationRequestStatus.SUCCESS) {
+                     groupStatus1 = OperationRequestStatus.FAILURE;
+                     break;
+                  }
+               }
+
+               if(groupStatus1 != OperationRequestStatus.SUCCESS) {
+                  groupHistory1.setErrorMessage(&quot;One or more resource operations timed out and/or did not complete&quot;);
+               }
+            }
+         } catch (Throwable var11) {
+            LOG.warn(&quot;Failed to check for completed group operations. Cause: &quot; + var11);
+         }
+
+         try {
+            t = this.entityManager.createNamedQuery(&quot;GroupOperationHistory.findMemberlessInProgress&quot;);
+            t.setParameter(&quot;status&quot;, OperationRequestStatus.INPROGRESS);
+            groupHistories = t.getResultList();
+            i$ = groupHistories.iterator();
+
+            while(i$.hasNext()) {
+               groupHistory1 = (GroupOperationHistory)i$.next();
+               groupHistory1.setStatus(OperationRequestStatus.SUCCESS);
+            }
+         } catch (Throwable var10) {
+            LOG.warn(&quot;Failed to check for memberless group operations. Cause: &quot; + var10);
+         }
+
+      }
+   }
+
+   public PageList findRecentlyCompletedResourceOperations(Subject subject, Integer resourceId, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;ro.createdTime&quot;, PageOrdering.ASC);
+      Query query;
+      Query count;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationHistory.getRecentlyCompletedResource_admin&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationHistory.getRecentlyCompletedResource_admin&quot;);
+      } else {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationHistory.getRecentlyCompletedResource&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationHistory.getRecentlyCompletedResource&quot;);
+         query.setParameter(&quot;subject&quot;, subject);
+         count.setParameter(&quot;subject&quot;, subject);
+      }
+
+      query.setParameter(&quot;resourceId&quot;, resourceId);
+      count.setParameter(&quot;resourceId&quot;, resourceId);
+      int totalCount = ((Number)count.getSingleResult()).intValue();
+      List results = query.getResultList();
+      return new PageList(results, totalCount, pageControl);
+   }
+
+   public PageList findRecentlyCompletedGroupOperations(Subject subject, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;go.createdTime&quot;, PageOrdering.ASC);
+      Query query;
+      Query count;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationHistory.getRecentlyCompletedGroup_admin&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationHistory.getRecentlyCompletedGroup_admin&quot;);
+      } else {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationHistory.getRecentlyCompletedGroup&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationHistory.getRecentlyCompletedGroup&quot;);
+         query.setParameter(&quot;subject&quot;, subject);
+         count.setParameter(&quot;subject&quot;, subject);
+      }
+
+      int totalCount = ((Number)count.getSingleResult()).intValue();
+      List results = query.getResultList();
+      return new PageList(results, totalCount, pageControl);
+   }
+
+   public PageList findCurrentlyScheduledResourceOperations(Subject subject, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;ro.nextFireTime&quot;, PageOrdering.DESC);
+      Query query;
+      Query count;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationScheduleEntity.getScheduleResource_admin&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationScheduleEntity.getScheduleResource_admin&quot;);
+      } else {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationScheduleEntity.getScheduleResource&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationScheduleEntity.getScheduleResource&quot;);
+         query.setParameter(&quot;subject&quot;, subject);
+         count.setParameter(&quot;subject&quot;, subject);
+      }
+
+      int totalCount = ((Number)count.getSingleResult()).intValue();
+      List results = query.getResultList();
+      Subject overlord = this.subjectManager.getOverlord();
+      Iterator i$ = results.iterator();
+
+      while(i$.hasNext()) {
+         ResourceOperationScheduleComposite composite = (ResourceOperationScheduleComposite)i$.next();
+
+         try {
+            ResourceOperationSchedule e = this.getResourceOperationSchedule(subject, composite.getOperationJobId().toString());
+            OperationDefinition def = this.getSupportedResourceOperation(overlord, composite.getResourceId(), e.getOperationName(), false);
+            composite.setOperationName(def.getDisplayName() != null?def.getDisplayName():e.getOperationName());
+         } catch (SchedulerException var12) {
+            LOG.error(&quot;A schedule entity is out of sync with the scheduler - there is no job scheduled: &quot; + composite, var12);
+         } catch (Exception var13) {
+            LOG.error(&quot;A scheduled operation has an invalid name - did a plugin change its operation metadata? : &quot; + composite, var13);
+         }
+      }
+
+      return new PageList(results, totalCount, pageControl);
+   }
+
+   public PageList findCurrentlyScheduledGroupOperations(Subject subject, PageControl pageControl) {
+      pageControl.initDefaultOrderingField(&quot;go.nextFireTime&quot;, PageOrdering.DESC);
+      Query query;
+      Query count;
+      if(this.authorizationManager.isInventoryManager(subject)) {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationScheduleEntity.getScheduleGroup_admin&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationScheduleEntity.getScheduleGroup_admin&quot;);
+      } else {
+         query = PersistenceUtility.createQueryWithOrderBy(this.entityManager, &quot;OperationScheduleEntity.getScheduleGroup&quot;, pageControl);
+         count = PersistenceUtility.createCountQuery(this.entityManager, &quot;OperationScheduleEntity.getScheduleGroup&quot;);
+         query.setParameter(&quot;subject&quot;, subject);
+         count.setParameter(&quot;subject&quot;, subject);
+      }
+
+      int totalCount = ((Number)count.getSingleResult()).intValue();
+      List results = query.getResultList();
+      Subject overlord = this.subjectManager.getOverlord();
+      Iterator i$ = results.iterator();
+
+      while(i$.hasNext()) {
+         GroupOperationScheduleComposite composite = (GroupOperationScheduleComposite)i$.next();
+
+         try {
+            GroupOperationSchedule e = this.getGroupOperationSchedule(subject, composite.getOperationJobId().toString());
+            OperationDefinition def = this.getSupportedGroupOperation(overlord, composite.getGroupId(), e.getOperationName(), false);
+            composite.setOperationName(def.getDisplayName() != null?def.getDisplayName():e.getOperationName());
+         } catch (SchedulerException var12) {
+            LOG.error(&quot;A schedule entity is out of sync with the scheduler - there is no job scheduled: &quot; + composite, var12);
+         } catch (Exception var13) {
+            LOG.error(&quot;A scheduled operation has an invalid name - did a plugin change its operation metadata? : &quot; + composite, var13);
+         }
+      }
+
+      return new PageList(results, totalCount, pageControl);
+   }
+
+   public void checkForCompletedGroupOperation(int historyId) {
+      OperationHistory history = (OperationHistory)this.entityManager.find(OperationHistory.class, Integer.valueOf(historyId));
+      if(history instanceof ResourceOperationHistory) {
+         if(history.getStatus() != OperationRequestStatus.INPROGRESS) {
+            GroupOperationHistory groupHistory = ((ResourceOperationHistory)history).getGroupOperationHistory();
+            if(groupHistory != null) {
+               List allResourceHistories = groupHistory.getResourceOperationHistories();
+               boolean stillInProgress = false;
+               OperationRequestStatus groupStatus = OperationRequestStatus.SUCCESS;
+               StringBuilder groupErrorMessage = null;
+               Iterator i$ = allResourceHistories.iterator();
+
+               label43:
+               while(true) {
+                  ResourceOperationHistory resourceHistory;
+                  do {
+                     if(!i$.hasNext()) {
+                        break label43;
+                     }
+
+                     resourceHistory = (ResourceOperationHistory)i$.next();
+                     if(resourceHistory.getStatus() == OperationRequestStatus.INPROGRESS) {
+                        stillInProgress = true;
+                        break label43;
+                     }
+                  } while(resourceHistory.getStatus() != OperationRequestStatus.FAILURE &amp;&amp; resourceHistory.getStatus() != OperationRequestStatus.CANCELED);
+
+                  groupStatus = OperationRequestStatus.FAILURE;
+                  if(groupErrorMessage == null) {
+                     groupErrorMessage = new StringBuilder(&quot;The following resources failed to invoke the operation: &quot;);
+                  } else {
+                     groupErrorMessage.append(',');
+                  }
+
+                  groupErrorMessage.append(resourceHistory.getResource().getName());
+               }
+
+               if(!stillInProgress) {
+                  groupHistory.setErrorMessage(groupErrorMessage == null?null:groupErrorMessage.toString());
+                  groupHistory.setStatus(groupStatus);
+                  this.notifyAlertConditionCacheManager(&quot;checkForCompletedGroupOperation&quot;, groupHistory);
+               }
+            }
+
+         }
+      }
+   }
+
+   private long getOperationTimeout(OperationDefinition operationDefinition, Configuration parameters) {
+      Integer timeout = null;
+      if(parameters != null) {
+         PropertySimple timeoutProperty = parameters.getSimple(&quot;rhq.timeout&quot;);
+         if(timeoutProperty != null) {
+            timeout = timeoutProperty.getIntegerValue();
+         }
+      }
+
+      if(timeout == null) {
+         timeout = operationDefinition.getTimeout();
+         if(timeout == null) {
+            timeout = this.scheduler.getDefaultOperationTimeout();
+         }
+      }
+
+      if(timeout == null) {
+         timeout = Integer.valueOf(3600);
+      }
+
+      return (long)timeout.intValue() * 1000L;
+   }
+
+   private Resource getResourceIfAuthorized(Subject subject, int resourceId) {
+      try {
+         Resource resource = this.resourceManager.getResourceById(subject, resourceId);
+         return resource;
+      } catch (ResourceNotFoundException var5) {
+         throw new RuntimeException(&quot;Cannot get support operations for unknown resource [&quot; + resourceId + &quot;]: &quot; + var5, var5);
+      }
+   }
+
+   private ResourceGroup getCompatibleGroupIfAuthorized(Subject subject, int compatibleGroupId) {
+      try {
+         ResourceGroup group = this.resourceGroupManager.getResourceGroupById(subject, compatibleGroupId, GroupCategory.COMPATIBLE);
+         return group;
+      } catch (ResourceGroupNotFoundException var5) {
+         throw new RuntimeException(&quot;Cannot get support operations for unknown group [&quot; + compatibleGroupId + &quot;]: &quot; + var5, var5);
+      }
+   }
+
+   private void ensureControlPermission(Subject subject, OperationHistory history) throws PermissionException {
+      if(history instanceof GroupOperationHistory) {
+         ResourceGroup resource = ((GroupOperationHistory)history).getGroup();
+         this.ensureControlPermission(subject, resource);
+      } else {
+         Resource resource1 = ((ResourceOperationHistory)history).getResource();
+         this.ensureControlPermission(subject, resource1);
+      }
+
+   }
+
+   private void ensureControlPermission(Subject subject, ResourceGroup group) throws PermissionException {
+      if(!this.authorizationManager.hasGroupPermission(subject, Permission.CONTROL, group.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to control group [&quot; + group + &quot;]&quot;);
+      }
+   }
+
+   private void ensureControlPermission(Subject subject, Resource resource) throws PermissionException {
+      if(!this.authorizationManager.hasResourcePermission(subject, Permission.CONTROL, resource.getId())) {
+         throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to control resource [&quot; + resource + &quot;]&quot;);
+      }
+   }
+
+   private void ensureViewPermission(Subject subject, OperationHistory history) throws PermissionException {
+      if(history instanceof GroupOperationHistory) {
+         ResourceGroup resource = ((GroupOperationHistory)history).getGroup();
+         if(!this.authorizationManager.canViewGroup(subject, resource.getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view operation history for group [&quot; + resource + &quot;]&quot;);
+         }
+      } else {
+         Resource resource1 = ((ResourceOperationHistory)history).getResource();
+         if(!this.authorizationManager.canViewResource(subject, resource1.getId())) {
+            throw new PermissionException(&quot;User [&quot; + subject.getName() + &quot;] does not have permission to view operation history for resource [&quot; + resource1 + &quot;]&quot;);
+         }
+      }
+
+   }
+
+   private String createUniqueJobName(Resource resource, String operationName) {
+      return ResourceOperationJob.createUniqueJobName(resource, operationName);
+   }
+
+   private String createUniqueJobName(ResourceGroup group, String operationName) {
+      return GroupOperationJob.createUniqueJobName(group, operationName);
+   }
+
+   private String createJobGroupName(Resource resource) {
+      return ResourceOperationJob.createJobGroupName(resource);
+   }
+
+   private String createJobGroupName(ResourceGroup group) {
+      return GroupOperationJob.createJobGroupName(group);
+   }
+
+   @Nullable
+   public ResourceOperationHistory getLatestCompletedResourceOperation(Subject subject, int resourceId) {
+      LOG.debug(&quot;Getting latest completed operation for resource [&quot; + resourceId + &quot;]&quot;);
+
+      ResourceOperationHistory result;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;ResourceOperationHistory.findLatestCompletedOperation&quot;);
+         nre.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         result = (ResourceOperationHistory)nre.getSingleResult();
+      } catch (NoResultException var5) {
+         result = null;
+      }
+
+      return result;
+   }
+
+   @Nullable
+   public ResourceOperationHistory getOldestInProgressResourceOperation(Subject subject, int resourceId) {
+      LOG.debug(&quot;Getting oldest in-progress operation for resource [&quot; + resourceId + &quot;]&quot;);
+
+      ResourceOperationHistory result;
+      try {
+         Query nre = this.entityManager.createNamedQuery(&quot;ResourceOperationHistory.findOldestInProgressOperation&quot;);
+         nre.setParameter(&quot;resourceId&quot;, Integer.valueOf(resourceId));
+         result = (ResourceOperationHistory)nre.getSingleResult();
+      } catch (NoResultException var5) {
+         result = null;
+      }
+
+      return result;
+   }
+
+   public OperationDefinition getOperationDefinition(Subject subject, int operationId) {
+      OperationDefinition operationDefinition = (OperationDefinition)this.entityManager.find(OperationDefinition.class, Integer.valueOf(operationId));
+      if(operationDefinition == null) {
+         throw new RuntimeException(&quot;Cannot get operation definition - it does not exist: &quot; + operationId);
+      } else {
+         return operationDefinition;
+      }
+   }
+
+   public OperationDefinition getOperationDefinitionByResourceTypeAndName(int resourceTypeId, String operationName, boolean eagerLoaded) throws OperationDefinitionNotFoundException {
+      String queryName = eagerLoaded?&quot;OperationDefinition.findByTypeAndName&quot;:&quot;OperationDefinition.findLightWeightByTypeAndName&quot;;
+      Query query = this.entityManager.createNamedQuery(queryName);
+      query.setParameter(&quot;resourceTypeId&quot;, Integer.valueOf(resourceTypeId));
+      query.setParameter(&quot;operationName&quot;, operationName);
+      List results = query.getResultList();
+      if(results.size() != 1) {
+         throw new OperationDefinitionNotFoundException(&quot;There were &quot; + results.size() + &quot; operations called &quot; + operationName + &quot; for resourceType[id=&quot; + resourceTypeId + &quot;]&quot;);
+      } else {
+         return (OperationDefinition)results.get(0);
+      }
+   }
+
+   private void notifyAlertConditionCacheManager(String callingMethod, OperationHistory operationHistory) {
+      AlertConditionCacheStats stats = this.alertConditionCacheManager.checkConditions(operationHistory);
+      LOG.debug(callingMethod + &quot;: &quot; + stats.toString());
+   }
+
+   private OperationScheduleEntity findOperationScheduleEntity(ScheduleJobId jobId) {
+      OperationScheduleEntity entity = (OperationScheduleEntity)this.entityManager.find(OperationScheduleEntity.class, jobId);
+      return entity;
+   }
+
+   public GroupOperationSchedule scheduleGroupOperation(Subject subject, int groupId, int[] executionOrderResourceIds, boolean haltOnFailure, String operationName, Configuration parameters, long delay, long repeatInterval, int repeatCount, int timeout, String description) throws ScheduleException {
+      try {
+         SimpleTrigger e = new SimpleTrigger();
+         if(delay &lt; 0L) {
+            delay = 0L;
+         }
+
+         e.setRepeatCount(repeatCount &lt; 0?-1:repeatCount);
+         e.setRepeatInterval(repeatInterval &lt; 0L?0L:repeatInterval);
+         e.setStartTime(new Date(System.currentTimeMillis() + delay));
+         if((long)timeout &gt; 0L) {
+            if(null == parameters) {
+               parameters = new Configuration();
+            }
+
+            parameters.put(new PropertySimple(&quot;rhq.timeout&quot;, Integer.valueOf(timeout)));
+         }
+
+         return this.scheduleGroupOperation(subject, groupId, executionOrderResourceIds, haltOnFailure, operationName, parameters, e, description);
+      } catch (Exception var15) {
+         throw new ScheduleException(var15);
+      }
+   }
+
+   public List findOperationDefinitionsByCriteria(Subject subject, OperationDefinitionCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, criteria.getPageControl());
+   }
+
+   public PageList findResourceOperationHistoriesByCriteria(Subject subject, ResourceOperationHistoryCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      if(!this.authorizationManager.isInventoryManager(subject)) {
+         generator.setAuthorizationResourceFragment(AuthorizationTokenType.RESOURCE, subject.getId());
+      }
+
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, criteria.getPageControl());
+   }
+
+   public PageList findGroupOperationHistoriesByCriteria(Subject subject, GroupOperationHistoryCriteria criteria) {
+      CriteriaQueryGenerator generator = new CriteriaQueryGenerator(criteria);
+      if(!this.authorizationManager.isInventoryManager(subject)) {
+         generator.setAuthorizationResourceFragment(AuthorizationTokenType.GROUP, subject.getId());
+      }
+
+      Query query = generator.getQuery(this.entityManager);
+      Query countQuery = generator.getCountQuery(this.entityManager);
+      long count = ((Long)countQuery.getSingleResult()).longValue();
+      List results = query.getResultList();
+      return new PageList(results, (int)count, criteria.getPageControl());
+   }
+
+   // $FF: synthetic class
+   static class SyntheticClass_1 {
+      // $FF: synthetic field
+      static final int[] $SwitchMap$org$rhq$core$clientapi$agent$operation$CancelResults$InterruptedState = new int[InterruptedState.values().length];
+
+      static {
+         try {
+            $SwitchMap$org$rhq$core$clientapi$agent$operation$CancelResults$InterruptedState[InterruptedState.FINISHED.ordinal()] = 1;
+         } catch (NoSuchFieldError var4) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$core$clientapi$agent$operation$CancelResults$InterruptedState[InterruptedState.QUEUED.ordinal()] = 2;
+         } catch (NoSuchFieldError var3) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$core$clientapi$agent$operation$CancelResults$InterruptedState[InterruptedState.RUNNING.ordinal()] = 3;
+         } catch (NoSuchFieldError var2) {
+            ;
+         }
+
+         try {
+            $SwitchMap$org$rhq$core$clientapi$agent$operation$CancelResults$InterruptedState[InterruptedState.UNKNOWN.ordinal()] = 4;
+         } catch (NoSuchFieldError var1) {
+            ;
+         }
+
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 8, 2017 11:31:17 AM</div>
+    <script src="resources/js/jquery-1.10.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 4062208;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+
+</body>
+</html>
